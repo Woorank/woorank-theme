@@ -1,0 +1,32 @@
+.form-control {
+  .box-shadow(none);
+  &:focus {
+    .box-shadow(none);
+    .placeholder(#BBBBBB);
+  }
+}
+
+.btn {
+  .btn-shadow(@color) {
+    .box-shadow(inset 0 -2px 0 @color);
+  }
+  &.btn-primary {
+    .btn-shadow(#3876AC);
+  }
+  &.btn-warning {
+    .btn-shadow(#D3860C);
+  }
+  &.btn-danger {
+    .btn-shadow(#B94743);
+  }
+  &.btn-success {
+    .btn-shadow(#4E9D4E);
+  }
+  &:hover {
+    .box-shadow(none);
+  }
+  &:active {
+    .box-shadow(inset 0 1px 3px rgba(0, 0, 0, 0.6));
+  }
+}
+
