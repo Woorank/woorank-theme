@@ -1,0 +1,84 @@
+/*
+Buttons
+
+Styleguide 1
+*/
+
+/*
+Options
+
+Use any of the available button classes to quickly create a styled button.
+
+Markup:
+<button type="button" class="btn {$modifiers}">Button Text</button>
+
+.btn-default - Standard button
+.btn-primary - Provides extra visual weight and identifies the primary action in a set of buttons
+.btn-success - Indicates a successful or positive action
+.btn-info    - Contextual button for informational alert messages
+.btn-warning - Indicates caution should be taken with this action
+.btn-danger  - Indicates a dangerous or potentially negative action
+.btn-link    - Deemphasize a button by making it look like a link while maintaining button behavior
+
+Styleguide 1.1
+*/
+
+/*
+Sizes
+
+Fancy larger or smaller buttons? Add `.btn-lg`, `.btn-sm`, or `.btn-xs` for additional sizes.
+
+Markup:
+<button type="button" class="btn btn-primary {$modifiers}">Button Text</button>
+<button type="button" class="btn btn-default {$modifiers}">Button Text</button>
+
+.btn-lg - Large button
+        - Normal button
+.btn-sm - Small button
+.btn-xs - Extra small button
+.btn-block - Block level buttons (spanning the full width of a parent)
+
+Styleguide 1.2
+*/
+
+/*
+States
+
+Styleguide 1.3
+*/
+
+/*
+Active
+
+Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active.
+For <button> elements, this is done via :active. For a elements, it's done with .active.
+However, you may use .active on buttons (and include the aria-pressed="true" attribute) should you need to replicate the active state programmatically.
+
+Markup:
+<button type="button" class="btn btn-primary {$modifiers}">Button Text</button>
+<button type="button" class="btn btn-default {$modifiers}">Button Text</button>
+<a type="button" class="btn btn-primary active">Button Text</a>
+<a type="button" class="btn btn-default active">Button Text</a>
+
+:active - Active pseudo class
+
+Styleguide 1.3.1
+*/
+
+/*
+Disabled
+
+Add the disabled attribute to buttons abd the .disabled class to anchors.
+
+Markup:
+<button type="button" class="btn btn-primary" disabled="disabled">
+  Button Text
+</button>
+<button type="button" class="btn btn-default" disabled="disabled">
+  Button Text
+</button>
+<a type="button" class="btn btn-primary disabled">Button Text</a>
+<a type="button" class="btn btn-default disabled">Button Text</a>
+
+Styleguide 1.3.1
+*/
