@@ -24,7 +24,7 @@ Markup:
 <h5>h5. Bootstrap heading <small>Secondary text</small></h5>
 <h6>h6. Bootstrap heading <small>Secondary text</small></h6>
 
-Styleguide 2.01
+Styleguide 2.1
 */
 
 /*
@@ -47,7 +47,7 @@ Markup:
   luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
 </p>
 
-Styleguide 2.02
+Styleguide 2.2
 */
 
 /*
@@ -59,13 +59,13 @@ Markup:
   Duis mollis, est non commodo luctus.
 </p>
 
-Styleguide 2.03
+Styleguide 2.3
 */
 
 /*
 Inline Text
 
-Styleguide 2.04
+Styleguide 2.4
 */
 
 /*
@@ -76,7 +76,7 @@ For highlighting a run of text due to its relevance in another context, use the 
 Markup:
 You can use the mark tag to <mark>highlight</mark> text.
 
-Styleguide 2.04.1
+Styleguide 2.4.1
 */
 
 /*
@@ -89,7 +89,7 @@ Markup:
   This line of text is meant to be treated as deleted text.
 </del>
 
-Styleguide 2.04.2
+Styleguide 2.4.2
 */
 
 /*
@@ -102,7 +102,7 @@ Markup:
   This line of text is meant to be treated as no longer accurate.
 </s>
 
-Styleguide 2.04.3
+Styleguide 2.4.3
 */
 
 /*
@@ -115,7 +115,7 @@ Markup:
   This line of text is meant to be treated as an addition to the document.
 </ins>
 
-Styleguide 2.04.4
+Styleguide 2.4.4
 */
 
 /*
@@ -126,7 +126,7 @@ To underline text use the u tag.
 Markup:
 <u>This line of text will render as underlined</u>
 
-Styleguide 2.04.5
+Styleguide 2.4.5
 */
 
 /*
@@ -140,7 +140,7 @@ Markup:
   This line of text is meant to be treated as fine print.
 </small>
 
-Styleguide 2.04.6
+Styleguide 2.4.6
 */
 
 /*
@@ -151,7 +151,7 @@ For emphasizing a snippet of text with a heavier font-weight.
 Markup:
 The following snippet of text is <strong>rendered as bold text</strong>
 
-Styleguide 2.04.7
+Styleguide 2.4.7
 */
 
 /*
@@ -162,7 +162,23 @@ For emphasizing a snippet of text with italics.
 Markup:
 The following snippet of text is <em>rendered as italicized text</em>
 
-Styleguide 2.04.8
+Styleguide 2.4.8
+*/
+
+/*
+Emphasis classes
+
+.text-muted   - Muted text
+.text-primary - Primary text
+.text-success - Successful text
+.text-info    - Info text
+.text-warning - Warning text
+.text-danger  - Danger text
+
+Markup:
+<p class="{$modifiers}">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+Styleguide 2.4.9
 */
 
 /*
@@ -177,7 +193,7 @@ Markup:
 <p class="text-justify">Justified text.</p>
 <p class="text-nowrap">No wrap text.</p>
 
-Styleguide 2.05
+Styleguide 2.5
 */
 
 /*
@@ -190,7 +206,7 @@ Markup:
 <p class="text-uppercase">Uppercased text.</p>
 <p class="text-capitalize">Capitalized text.</p>
 
-Styleguide 2.06
+Styleguide 2.6
 */
 
 /*
@@ -207,7 +223,7 @@ Markup:
   is the best thing since sliced bread.
 </p>
 
-Styleguide 2.07
+Styleguide 2.7
 */
 
 /*
@@ -228,13 +244,13 @@ Markup:
   <a href="mailto:#">first.last@example.com</a>
 </address>
 
-Styleguide 2.08
+Styleguide 2.8
 */
 
 /*
 Blockquote
 
-Styleguide 2.09
+Styleguide 2.9
 */
 
 /*
@@ -248,7 +264,7 @@ Markup:
   </p>
 </blockquote>
 
-Styleguide 2.09.1
+Styleguide 2.9.1
 */
 
 /*
@@ -265,7 +281,7 @@ Markup:
   </footer>
 </blockquote>
 
-Styleguide 2.09.2
+Styleguide 2.9.2
 */
 
 /*
@@ -282,7 +298,7 @@ Markup:
   </footer>
 </blockquote>
 
-Styleguide 2.09.3
+Styleguide 2.9.3
 */
 
 /*
@@ -318,6 +334,28 @@ Markup:
 Styleguide 2.10.1
 */
 
+ul {
+  padding-left: 0;
+
+  li {
+    list-style: none;
+  }
+
+  li:before {
+    padding-right: 30px;
+    content: "•";
+    font-size: 13px;
+    color: #888888;
+  }
+
+  ul &, ol & {
+    margin: 18px 0 18px 30px;
+    li:before {
+      content: "◦";
+    }
+  }
+}
+
 /*
 Ordered
 
@@ -337,6 +375,11 @@ Markup:
 
 Styleguide 2.10.2
 */
+
+ol {
+  padding-left: 0;
+  margin-left: 20px;
+}
 
 /*
 Unstyled
@@ -362,6 +405,13 @@ Markup:
 
 Styleguide 2.10.3
 */
+
+.list-unstyled, .list-inline {
+  li:before {
+    padding-right: 0;
+    content: "";
+  }
+}
 
 /*
 Inline
@@ -389,8 +439,8 @@ Markup:
   <dd>A description list is perfect for defining terms.</dd>
   <dt>Euismod</dt>
   <dd>
-    Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec
-    elit. Donec id elit non mi porta gravida at eget metus.
+    Vestibulum id ligula porta felis euismod semper eget lacinia odio sem
+    nec elit. Donec id elit non mi porta gravida at eget metus.
   </dd>
   <dt>Malesuada porta</dt>
   <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
@@ -398,7 +448,6 @@ Markup:
 
 Styleguide 2.10.5
 */
-
 
 /*
 Horizontal description
@@ -411,8 +460,8 @@ Markup:
   <dd>A description list is perfect for defining terms.</dd>
   <dt>Euismod</dt>
   <dd>
-    Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec
-    elit. Donec id elit non mi porta gravida at eget metus.
+    Vestibulum id ligula porta felis euismod semper eget lacinia odio sem
+    nec elit. Donec id elit non mi porta gravida at eget metus.
   </dd>
   <dt>Malesuada porta</dt>
   <dd>Etiam porta sem malesuada magna mollis euismod.</dd>

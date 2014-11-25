@@ -11,10 +11,10 @@ var sassOptions = {
 };
 
 var styleguideOptions = {
-  title: 'My Styleguide',
+  title: 'WooRank Styleguide',
   overviewPath: './overview.md',
   styleVariables: './lib/_variables.scss',
-  extraHead: [],
+  commonClass: 'woo-theme',
   sass: sassOptions
 };
 
@@ -25,7 +25,14 @@ gulp.task('build', function () {
     .pipe(gulp.dest('./dist'));
 });
 
+gulp.task('build-styleguide', function() {
+  return gulp.src('./lib/**/*.scss')
+    .pipe(styleguide(styleguideOptions))
+    .pipe(gulp.dest('./styleguide'));
+});
+
 gulp.task('develop', function() {
+  gulp.watch('./lib/**/*.scss', ['build-styleguide']);
   styleguideOptions.server = true;
   styleguideOptions.rootPath = './styleguide/';
   return gulp.src('./lib/**/*.scss')
@@ -33,21 +40,14 @@ gulp.task('develop', function() {
     .pipe(gulp.dest(styleguideOptions.rootPath));
 });
 
-gulp.task('build-styleguide', function() {
-  return gulp.src('./lib/**/*.scss')
-    .pipe(styleguide(styleguideOptions))
-    .pipe(gulp.dest('./styleguide'));
-});
-
-
 gulp.task('publish-styleguide', [ 'build-styleguide' ], function() {
   var awsConfig = require('./awsConfig');
   return gulp.src('./styleguide/**/*')
     .pipe(s3(awsConfig));
 });
 
-gulp.task('watch-styleguide', ['build-styleguide'], function () {
-  return gulp.watch('./lib/**/*.scss', ['build-styleguide']);
+gulp.task('watch-styleguide', [ 'build-styleguide' ], function () {
+  return gulp.watch('./lib/**/*.scss', [ 'build-styleguide' ]);
 });
 
 gulp.task('default', ['build']);

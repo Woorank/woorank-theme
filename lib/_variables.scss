@@ -19,11 +19,11 @@ $gray:                   lighten($gray-base, 33.5%); // #555
 $gray-light:             lighten($gray-base, 46.7%); // #777
 $gray-lighter:           lighten($gray-base, 93.5%); // #eee
 
-$brand-primary:         darken(#428bca, 6.5%);
-$brand-success:         #5cb85c;
-$brand-info:            #5bc0de;
-$brand-warning:         #f0ad4e;
-$brand-danger:          #d9534f;
+$brand-primary:         #428BCA;
+$brand-success:         #5CB85C;
+$brand-info:            #46B8DA;
+$brand-warning:         #F89D0E;
+$brand-danger:          #D9534F;
 
 
 //== Scaffolding
@@ -47,32 +47,33 @@ $link-hover-decoration: underline;
 //undefined
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif:  "Open Sans", Helvetica, Arial, sans-serif;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family-monospace:   Courier, "Courier New", monospace;
 $font-family-base:        $font-family-sans-serif;
 
-$font-size-base:          14px;
-$font-size-large:         ceil($font-size-base * 1.25); // ~18px
-$font-size-small:         ceil($font-size-base * 0.85); // ~12px
+$font-size-base:          15px;
+$font-size-large:         ceil($font-size-base * 1.10); // ~17px
+$font-size-small:         ceil($font-size-base * 0.85); // ~13px
+$font-size-xs:         ceil($font-size-base * 0.70); // ~11px
 
-$font-size-h1:            floor($font-size-base * 2.6); // ~36px
-$font-size-h2:            floor($font-size-base * 2.15); // ~30px
-$font-size-h3:            ceil($font-size-base * 1.7); // ~24px
-$font-size-h4:            ceil($font-size-base * 1.25); // ~18px
+$font-size-h1:            floor($font-size-base * 2.54); // ~38px
+$font-size-h2:            floor($font-size-base * 2.15); // ~32px
+$font-size-h3:            ceil($font-size-base * 1.6); // ~24px
+$font-size-h4:            ceil($font-size-base * 1.2); // ~18px
 $font-size-h5:            $font-size-base;
-$font-size-h6:            ceil($font-size-base * 0.85); // ~12px
+$font-size-h6:            ceil($font-size-base * 0.8); // ~12px
 
 //** Unit-less `line-height` for use in components like buttons.
-$line-height-base:        1.428571429; // 20/14
+$line-height-base:        1.6; // 24/15
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-$line-height-computed:    floor($font-size-base * $line-height-base); // ~20px
+$line-height-computed:    floor($font-size-base * $line-height-base); // ~24px
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    inherit;
 $headings-font-weight:    500;
-$headings-line-height:    1.1;
+$headings-line-height:    1.37;
 $headings-color:          inherit;
 
 
@@ -110,8 +111,8 @@ $padding-xs-horizontal:     5px;
 $line-height-large:         1.33;
 $line-height-small:         1.5;
 
-$border-radius-base:        4px;
-$border-radius-large:       6px;
+$border-radius-base:        3px;
+$border-radius-large:       3px;
 $border-radius-small:       3px;
 
 //** Global color for active items (e.g., navs or dropdowns).
@@ -150,11 +151,11 @@ $table-border-color:            #dddddd;
 //undefined
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-font-weight:                normal;
+$btn-font-weight:                600;
 
 $btn-default-color:              #333333;
 $btn-default-bg:                 #ffffff;
-$btn-default-border:             #cccccc;
+$btn-default-border:             #CCCCCC;
 
 $btn-primary-color:              #ffffff;
 $btn-primary-bg:                 $brand-primary;
@@ -191,7 +192,7 @@ $input-bg-disabled:              $gray-lighter;
 //** Text color for `<input>`s
 $input-color:                    $gray;
 //** `<input>` border color
-$input-border:                   #cccccc;
+$input-border:                   #D2D2D2;
 
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -202,10 +203,11 @@ $input-border-radius-large:      $border-radius-large;
 $input-border-radius-small:      $border-radius-small;
 
 //** Border color for inputs on focus
-$input-border-focus:             #66afe9;
+$input-border-focus:             $brand-primary;
 
 //** Placeholder text color
-$input-color-placeholder:        #999999;
+$input-color-placeholder:        #888888;
+$input-color-placeholder-focus:  #CCCCCC;
 
 //** Default `.form-control` height
 $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2);
@@ -493,21 +495,21 @@ $jumbotron-font-size:            ceil($font-size-base * 1.5);
 //undefined
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             #3c763d;
-$state-success-bg:               #dff0d8;
-$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%);
+$state-success-text:             #4E9D4E;
+$state-success-bg:               #EEF8EE;
+$state-success-border:           #ADDBAD;
 
-$state-info-text:                #31708f;
+$state-info-text:                #3876AC;
 $state-info-bg:                  #d9edf7;
 $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%);
 
-$state-warning-text:             #8a6d3b;
-$state-warning-bg:               #fcf8e3;
-$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%);
+$state-warning-text:             #D3860C;
+$state-warning-bg:               #FEF5E6;
+$state-warning-border:           #FBCE86;
 
-$state-danger-text:              #a94442;
-$state-danger-bg:                #f2dede;
-$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%);
+$state-danger-text:              #B94743;
+$state-danger-bg:                #FBEDED;
+$state-danger-border:            #ECA9A7;
 
 
 //== Tooltips
@@ -845,7 +847,7 @@ $pre-scrollable-max-height:   340px;
 //** Horizontal offset for forms and lists.
 $component-offset-horizontal: 180px;
 //** Text muted color
-$text-muted:                  $gray-light;
+$text-muted:                  #999999;
 //** Abbreviations and acronyms border color
 $abbr-border-color:           $gray-light;
 //** Headings small color
