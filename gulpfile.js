@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     s3 = require("gulp-s3"),
     debug = require('gulp-debug'),
+    svgSprite = require('gulp-svg-sprites'),
     styleguide = require('sc5-styleguide');
 
 
@@ -15,6 +16,10 @@ var styleguideOptions = {
   overviewPath: './overview.md',
   styleVariables: './lib/_variables.scss',
   commonClass: 'woo-theme',
+  extraHead: [
+    '<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>',
+    '<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>'
+  ],
   sass: sassOptions
 };
 
@@ -49,5 +54,12 @@ gulp.task('publish-styleguide', [ 'build-styleguide' ], function() {
 gulp.task('watch-styleguide', [ 'build-styleguide' ], function () {
   return gulp.watch('./lib/**/*.scss', [ 'build-styleguide' ]);
 });
+
+gulp.task('sprite', function () {
+  return gulp.src(require('./lib/icons/include'))
+    .pipe(svgSprite({mode: "symbols"}))
+    .pipe(gulp.dest('./dist'));
+});
+
 
 gulp.task('default', ['build']);

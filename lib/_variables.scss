@@ -36,7 +36,7 @@ $body-bg:               #ffffff;
 $text-color:            $gray-dark;
 
 //** Global textual link color.
-$link-color:            $brand-primary;
+$link-color:            #3876AC;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%);
 //** Link hover decoration.
@@ -357,24 +357,24 @@ $container-lg:                 $container-large-desktop;
 //##
 
 // Basics of a navbar
-$navbar-height:                    50px;
+$navbar-height:                    60px;
 $navbar-margin-bottom:             $line-height-computed;
-$navbar-border-radius:             $border-radius-base;
+$navbar-border-radius:             4px;
 $navbar-padding-horizontal:        floor($grid-gutter-width / 2);
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2);
 $navbar-collapse-max-height:       340px;
 
 $navbar-default-color:             #777777;
-$navbar-default-bg:                #f8f8f8;
-$navbar-default-border:            darken($navbar-default-bg, 6.5%);
+$navbar-default-bg:                #FFFFFF;
+$navbar-default-border:            #CCCCCC;
 
 // Navbar links
-$navbar-default-link-color:                #777777;
+$navbar-default-link-color:                #333333;
 $navbar-default-link-hover-color:          #333333;
-$navbar-default-link-hover-bg:             transparent;
-$navbar-default-link-active-color:         #555555;
-$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%);
-$navbar-default-link-disabled-color:       #cccccc;
+$navbar-default-link-hover-bg:             #F6F6F6;
+$navbar-default-link-active-color:         $navbar-default-link-hover-color;
+$navbar-default-link-active-bg:            $navbar-default-link-hover-bg;
+$navbar-default-link-disabled-color:       #AAAAAA;
 $navbar-default-link-disabled-bg:          transparent;
 
 // Navbar brand label
@@ -587,19 +587,19 @@ $label-link-hover-color:      #ffffff;
 //##
 
 //** Padding applied to the modal body
-$modal-inner-padding:         15px;
+$modal-inner-padding:         21px;
 
 //** Padding applied to the modal title
-$modal-title-padding:         15px;
+$modal-title-padding:         17px;
 //** Modal title line-height
 $modal-title-line-height:     $line-height-base;
 
 //** Background color of modal content area
 $modal-content-bg:                             #ffffff;
 //** Modal content border color
-$modal-content-border-color:                   rgba(0,0,0,.2);
+$modal-content-border-color:                   #CCCCCC;
 //** Modal content border color **for IE8**
-$modal-content-fallback-border-color:          #999999;
+$modal-content-fallback-border-color:          #CCCCCC;
 
 //** Modal backdrop background color
 $modal-backdrop-bg:           #000000;

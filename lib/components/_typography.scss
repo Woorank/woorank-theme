@@ -313,13 +313,13 @@ Unordered
 A list of items in which the order does not explicitly matter.
 
 Markup:
-<ul>
+<ul class="ul">
   <li>Lorem ipsum dolor sit amet</li>
   <li>Consectetur adipiscing elit</li>
   <li>Integer molestie lorem at massa</li>
   <li>Facilisis in pretium nisl aliquet</li>
   <li>Nulla volutpat aliquam velit
-    <ul>
+    <ul class="ul">
       <li>Phasellus iaculis neque</li>
       <li>Purus sodales ultricies</li>
       <li>Vestibulum laoreet porttitor sem</li>
@@ -334,7 +334,7 @@ Markup:
 Styleguide 2.10.1
 */
 
-ul {
+.ul {
   padding-left: 0;
 
   li {
@@ -348,7 +348,7 @@ ul {
     color: #888888;
   }
 
-  ul &, ol & {
+  .ul &, .ol & {
     margin: 18px 0 18px 30px;
     li:before {
       content: "◦";
@@ -362,7 +362,7 @@ Ordered
 A list of items in which the order does explicitly matter.
 
 Markup:
-<ol>
+<ol class="ol">
   <li>Lorem ipsum dolor sit amet</li>
   <li>Consectetur adipiscing elit</li>
   <li>Integer molestie lorem at massa</li>
@@ -376,7 +376,7 @@ Markup:
 Styleguide 2.10.2
 */
 
-ol {
+.ol {
   padding-left: 0;
   margin-left: 20px;
 }
@@ -388,7 +388,7 @@ Remove the default list-style and left margin on list items (immediate children 
 This only applies to immediate children list items, meaning you will need to add the class for any nested lists as well.
 
 Markup:
-<ul class="list-unstyled">
+<ul class="ul list-unstyled">
   <li>Lorem ipsum dolor sit amet</li>
   <li>Consectetur adipiscing elit</li>
   <li>Integer molestie lorem at massa</li>
@@ -419,7 +419,7 @@ Inline
 Place all list items on a single line with display: inline-block; and some light padding.
 
 Markup:
-<ul class="list-inline">
+<ul class="ul list-inline">
   <li>Lorem ipsum</li>
   <li>Phasellus iaculis</li>
   <li>Nulla volutpat</li>

@@ -16,6 +16,7 @@
     "gulp-debug": "^1.0.1",
     "gulp-s3": "^0.3.0",
     "gulp-sass": "^1.2.3",
+    "gulp-svg-sprites": "^1.1.0",
     "sc5-styleguide": "^0.2.9"
   }
 }

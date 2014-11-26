@@ -84,7 +84,7 @@ Styleguide 4.3
 Validation
 
 Markup:
-<div class="form-group with-help {$modifiers}">
+<div class="form-group has-validation-message {$modifiers}">
   <label class="control-label">Input</label>
   <input type="text" class="form-control" placeholder="placeholder">
   <span class="help-block">Help message</span>
@@ -119,15 +119,15 @@ Styleguide 4.4
   }
 }
 
-.with-help.has-success {
+.has-validation-message.has-success {
   @include woo-help-block($state-success-bg, $state-success-border);
 }
 
-.with-help.has-warning {
+.has-validation-message.has-warning {
   @include woo-help-block($state-warning-bg, $state-warning-border);
 }
 
-.with-help.has-error {
+.has-validation-message.has-error {
   @include woo-help-block($state-danger-bg, $state-danger-border);
 }
 
