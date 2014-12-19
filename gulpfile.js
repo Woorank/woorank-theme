@@ -16,6 +16,7 @@ var styleguideOptions = {
   overviewPath: './overview.md',
   styleVariables: './lib/_variables.scss',
   commonClass: 'woo-theme',
+  port: 3005,
   extraHead: [
     '<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>',
     '<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>'
