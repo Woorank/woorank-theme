@@ -4,3 +4,9 @@
 @import "components/forms.scss";
 @import "components/navbar.scss";
 @import "components/modal.scss";
+@import "components/icons.scss";
+
+.woo-theme {
+  @extend body;
+}
+

@@ -23,11 +23,20 @@ var styleguideOptions = {
   sass: sassOptions
 };
 
-gulp.task('build', function () {
+
+gulp.task('sprite', ['build-styleguide'], function () {
+  return gulp.src(require('./lib/icons/include'))
+    .pipe(svgSprite({mode: "symbols"}))
+    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./styleguide/woorank'));
+});
+
+gulp.task('build', ['build-styleguide'], function () {
   return gulp.src('./lib/woorank-theme.scss')
     .pipe(sass(sassOptions))
     .pipe(autoprefixer())
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./styleguide/woorank'));
 });
 
 gulp.task('build-styleguide', function() {
@@ -36,8 +45,8 @@ gulp.task('build-styleguide', function() {
     .pipe(gulp.dest('./styleguide'));
 });
 
-gulp.task('develop', function() {
-  gulp.watch('./lib/**/*.scss', ['build-styleguide']);
+gulp.task('develop', ['sprite', 'build'], function() {
+  gulp.watch('./lib/**/*.scss', ['sprite', 'build']);
   styleguideOptions.server = true;
   styleguideOptions.rootPath = './styleguide/';
   return gulp.src('./lib/**/*.scss')
@@ -53,12 +62,6 @@ gulp.task('publish-styleguide', [ 'build-styleguide' ], function() {
 
 gulp.task('watch-styleguide', [ 'build-styleguide' ], function () {
   return gulp.watch('./lib/**/*.scss', [ 'build-styleguide' ]);
-});
-
-gulp.task('sprite', function () {
-  return gulp.src(require('./lib/icons/include'))
-    .pipe(svgSprite({mode: "symbols"}))
-    .pipe(gulp.dest('./dist'));
 });
 
 

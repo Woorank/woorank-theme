@@ -1,0 +1,39 @@
+/*
+Icons
+
+Styleguide 7
+*/
+
+/*
+Bullets
+
+Markup:
+<svg class="icon bullet"><use xlink:href="/woorank/svg/symbols.svg{$modifiers}"></use></svg>
+
+#bullet-plain   - plain bullet
+#bullet-info    - info bullet
+#bullet-success - success bullet
+#bullet-warning - warning bullet
+#bullet-danger  - danger bullet
+
+Styleguide 7.1
+*/
+
+.icon.bullet {
+  width: 20px;
+  height: 16px;
+}
+
+/*
+Logo
+
+Markup:
+<svg class="icon logo"><use xlink:href="/woorank/svg/symbols.svg#logo"></use></svg>
+
+Styleguide 7.2
+*/
+
+.icon.logo {
+  width: 110px;
+  height: 20px;
+}
