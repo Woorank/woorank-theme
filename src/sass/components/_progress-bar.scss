@@ -1,0 +1,38 @@
+.progress-container {
+  overflow: hidden;
+}
+
+.progress-label,
+.progress {
+  vertical-align: center;
+  display: inline-block;
+}
+
+.progress-label {
+  padding: 0 10px;
+  color: $gray-light;
+}
+
+.progress {
+  &.progress-marine .progress-bar {
+    background-color: $marine;
+  }
+
+  &.progress-xs {
+    height: 6px;
+
+    .progress-bar {
+      height: 6px;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .progress-value {
+      display: none;
+    }
+  }
+
+  .progress-value {
+    display: inline;
+  }
+
+}

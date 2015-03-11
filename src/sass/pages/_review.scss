@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+// Review specifics
+
+#dashboard-tasks-bars {
+  border-top: 1px solid #E6E6E6;
+  clear: both;
+  margin-top: 18px;
+  overflow: hidden;
+  padding-left: 65px;
+  padding-top: 18px;
+  position: relative;
+
+  .icn-bullet-result-info {
+    color: #315D86;
+    font-size: 20px;
+    left: 0;
+    line-height: 0;
+    margin-right: 14px;
+    position: absolute;
+    top: 26px;
+    vertical-align: -5px;
+  }
+
+  .progress-container {
+    width: 100%;
+  }
+
+  .progress {
+    margin-bottom: 0;
+    width: 40%;
+  }
+
+  .progress-label {
+    color: #444;
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  @include breakpoint('805px') {
+    padding-left: 26px;
+
+    .progress-label {
+      font-size: 12px;
+      padding: 0 10px;
+      font-weight: normal;
+    }
+  }
+}

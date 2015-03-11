@@ -1,0 +1,34 @@
+$default: #DDD;
+
+.label {
+  font-size: .8em;
+  font-weight: 400;
+  padding: .1em .4em .2em;
+  position: relative;
+  top: -.1em;
+
+  &.label-default {
+    background-color: $default;
+    color: $gray-medium;
+  }
+
+  &.label-primary {
+    background-color: $blue-lighter;
+    color: $blue-dark;
+  }
+
+  &.label-success {
+    background-color: $green-lighter;
+    color: $green-dark;
+  }
+
+  &.label-warning {
+    background-color: $orange-lighter;
+    color: $orange-dark;
+  }
+
+  &.label-danger {
+    background-color: $red-lighter;
+    color: $red-dark;
+  }
+}

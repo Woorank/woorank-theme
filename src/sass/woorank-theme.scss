@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+// Utils assets
+@import "utils/fonts.scss";
+@import "utils/mixins.scss";
+@import "utils/variables.scss";
+
+// Bootstrap styles
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+// Basics overrides
+@import "base/typography.scss";
+
+// Generics Components
+@import "components/buttons.scss";
+@import "components/forms.scss";
+@import "components/icons.scss";
+@import "components/tables.scss";
+@import "components/breadcrumb.scss";
+@import "components/dropdown.scss";
+@import "components/label.scss";
+@import "components/modal.scss";
+@import "components/navbar.scss";
+@import "components/popover.scss";
+@import "components/progress-bar.scss";
+
+// Super Components
+@import "super-components/marketing-checklist.scss";
+
+// Review components
+@import "components/review-left-menu.scss";
+
+// Layouts specifics
+@import "layout/body.scss";
+@import "layout/header.scss";
+@import "layout/content.scss";
+@import "layout/footer.scss";
+
+// Static pages
+@import "pages/about.scss";
+@import "pages/developers.scss";
+@import "pages/jobs.scss";
+@import "pages/privacy.scss";
+@import "pages/recent.scss";
+@import "pages/review.scss";
+@import "pages/tos.scss";
+
+/*
+  DELETE THIS AFTER REMOVE OLD LESS STYLES
+*/
+
+.woo-theme {
+  @extend body;
+  height: auto;
+  min-height: 0;
+}
+
+/* Bootstrap box-sizing changes -> Focus on new design only */
+* {
+  box-sizing: content-box;
+}
+
+$newFrameworkPages: ('about', 'tos', 'privacy', 'jobs', 'developers', 'recent');
+
+#top * {
+  box-sizing: border-box;
+}
+
+@each $page in $newFrameworkPages {
+  .#{$page} .container,
+  .#{$page} .container * {
+    box-sizing: border-box;
+  }
+}
+
+
+$newFrameworkComponents: ('marketing-checklist', 'popover', 'dropdown');
+
+@each $component in $newFrameworkComponents {
+  .#{$component},
+  .#{$component} * {
+    box-sizing: border-box;
+  }
+}

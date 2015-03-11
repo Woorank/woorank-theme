@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+/*
+Icons
+
+Styleguide 7
+*/
+
+.icon {
+	background-image: none;
+	height: 20px;
+	width: 20px;
+
+	&.icon-xs {
+		height: 10px;
+		width: 10px;
+	}
+
+	&.icon-sm {
+		height: 30px;
+		width: 30px;
+	}
+
+	&.icon-md {
+		height: 60px;
+		width: 60px;
+	}
+
+	&.icon-lg {
+		height: 90px;
+		width: 90px;
+	}
+
+	&.icon-hidden {
+		display: none;
+	}
+}
+
+/*
+Logo
+
+Markup:
+<svg class="icon logo"><use xlink:href="woorank/svg/symbols.svg#logo"></use></svg>
+
+Styleguide 7.1
+*/
+
+.icon.logo {
+  height: 20px;
+  width: 110px;
+}
+
+
+/*
+Bullets
+
+Markup:
+<svg class="icon bullet"><use xlink:href="woorank/svg/symbols.svg{$modifiers}"></use></svg>
+
+#bullet-plain   - plain bullet
+#bullet-info    - info bullet
+#bullet-success - success bullet
+#bullet-warning - warning bullet
+#bullet-danger  - danger bullet
+
+Styleguide 7.2
+*/
+
+.icon.bullet {
+  height: 16px;
+  width: 20px;
+}
+
+/*
+Arrows & Chevrons
+
+Markup:
+<svg class="icon arrow"><use xlink:href="woorank/svg/symbols.svg{$modifiers}"></use></svg>
+
+#arrow-up      - Arrow up
+#chevron-right - Chevron right
+
+Styleguide 7.3
+*/
+
+/*
+Repport Icons
+
+Markup:
+<svg class="icon {$modifiers}"><use xlink:href="woorank/svg/symbols.svg{$modifiers}"></use></svg>
+
+#checked       - Checkbox checked
+#folder        - Opened Folder
+#hashtag       - Hash Tag
+#links         - Links
+#local         - Localisation
+#mobile        - Mobile
+#search        - Search
+#social        - Social
+#technologies  - Technologies
+#time          - Time
+#usability     - Usability
+#visitor       - Visitor
+
+Styleguide 7.4
+*/
+
+.icon-email {
+	height: 25px;
+	width: 25px;
+}

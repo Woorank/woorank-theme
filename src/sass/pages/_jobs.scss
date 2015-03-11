@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+// Jobs page
+
+body.jobs {
+  background-color: $white;
+}
+
+
+.jobs {
+  .title-spaced {
+    padding: 50px 0 20px 0;
+  }
+
+  .btn-group-spaced {
+    padding: 30px 0;
+  }
+}

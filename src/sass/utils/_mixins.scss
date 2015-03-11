@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+/* BASES MIXINS*/
+
+@mixin breakpoint($size: $screen-lg, $reverse: false) {
+  @if($reverse) {
+    @media screen and (max-width: #{$size}) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: #{$size}) {
+      @content;
+    }
+  }
+}
+
+@mixin calc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
