@@ -1,12 +1,6 @@
 @charset "UTF-8";
 
 /*
-Typography
-
-Styleguide 2
-*/
-
-/*
 Headings
 
 All HTML headings, h1 through h6, are available. .h1 through .h6 classes are also available,
@@ -26,7 +20,7 @@ Markup:
 <h5>h5. Bootstrap heading <small>Secondary text</small></h5>
 <h6>h6. Bootstrap heading <small>Secondary text</small></h6>
 
-Styleguide 2.1
+Styleguide Typography.Headings
 */
 
 h1, .h1,
@@ -54,7 +48,7 @@ Markup:
 <p><strong>This text is strong</strong></p>
 
 
-Styleguide 2.2
+Styleguide Typography.Body Copy
 */
 
 p {
@@ -72,7 +66,7 @@ Markup:
   <p><strong>This text is strong</strong></p>
 </div>
 
-Styleguide 2.2.1
+Styleguide Typography.Logged in Pages & Reviews
 */
 
 .logged {
@@ -93,6 +87,7 @@ Markup:
   }
 </pre>
 
+Styleguide Typography.Code in body
 */
 
 /*
@@ -104,13 +99,13 @@ Markup:
   Duis mollis, est non commodo luctus.
 </p>
 
-Styleguide 2.3
+Styleguide Typography.Lead Body Copy
 */
 
 /*
 Inline Text
 
-Styleguide 2.4
+Styleguide Typography.Inline Text
 */
 
 /*
@@ -121,7 +116,7 @@ For highlighting a run of text due to its relevance in another context, use the 
 Markup:
 You can use the mark tag to <mark>highlight</mark> text.
 
-Styleguide 2.4.1
+Styleguide Typography.Marked text
 */
 
 /*
@@ -134,7 +129,7 @@ Markup:
   This line of text is meant to be treated as deleted text.
 </del>
 
-Styleguide 2.4.2
+Styleguide Typography.Deleted text
 */
 
 /*
@@ -147,7 +142,7 @@ Markup:
   This line of text is meant to be treated as no longer accurate.
 </s>
 
-Styleguide 2.4.3
+Styleguide Typography.Strikethrough text
 */
 
 /*
@@ -160,7 +155,7 @@ Markup:
   This line of text is meant to be treated as an addition to the document.
 </ins>
 
-Styleguide 2.4.4
+Styleguide Typography.Strikethrough text
 */
 
 /*
@@ -171,7 +166,7 @@ To underline text use the u tag.
 Markup:
 <u>This line of text will render as underlined</u>
 
-Styleguide 2.4.5
+Styleguide Typography.Underlined text
 */
 
 /*
@@ -185,7 +180,7 @@ Markup:
   This line of text is meant to be treated as fine print.
 </small>
 
-Styleguide 2.4.6
+Styleguide Typography.Small text
 */
 
 /*
@@ -196,7 +191,7 @@ For emphasizing a snippet of text with a heavier font-weight.
 Markup:
 The following snippet of text is <strong>rendered as bold text</strong>
 
-Styleguide 2.4.7
+Styleguide Typography.Bold
 */
 
 /*
@@ -207,7 +202,7 @@ For emphasizing a snippet of text with italics.
 Markup:
 The following snippet of text is <em>rendered as italicized text</em>
 
-Styleguide 2.4.8
+Styleguide Typography.Italics
 */
 
 /*
@@ -223,7 +218,7 @@ Emphasis classes
 Markup:
 <p class="{$modifiers}">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 
-Styleguide 2.4.9
+Styleguide Typography.Emphasis classes
 */
 
 /*
@@ -238,7 +233,7 @@ Markup:
 <p class="text-justify">Justified text.</p>
 <p class="text-nowrap">No wrap text.</p>
 
-Styleguide 2.5
+Styleguide Typography.Alignment
 */
 
 /*
@@ -251,7 +246,7 @@ Markup:
 <p class="text-uppercase">Uppercased text.</p>
 <p class="text-capitalize">Capitalized text.</p>
 
-Styleguide 2.6
+Styleguide Typography.Transformation
 */
 
 /*
@@ -268,7 +263,7 @@ Markup:
   is the best thing since sliced bread.
 </p>
 
-Styleguide 2.7
+Styleguide Typography.Abbreviation
 */
 
 /*
@@ -289,13 +284,13 @@ Markup:
   <a href="mailto:#">first.last@example.com</a>
 </address>
 
-Styleguide 2.8
+Styleguide Typography.Addresses
 */
 
 /*
 Blockquote
 
-Styleguide 2.9
+Styleguide Typography.Bloquote
 */
 
 /*
@@ -309,7 +304,7 @@ Markup:
   </p>
 </blockquote>
 
-Styleguide 2.9.1
+Styleguide Typography.Bloquote.Default
 */
 
 /*
@@ -326,7 +321,7 @@ Markup:
   </footer>
 </blockquote>
 
-Styleguide 2.9.2
+Styleguide Typography.Bloquote.Naming a source
 */
 
 /*
@@ -343,13 +338,13 @@ Markup:
   </footer>
 </blockquote>
 
-Styleguide 2.9.3
+Styleguide Typography.Bloquote.Alternate displays
 */
 
 /*
 Lists
 
-Styleguide 2.10
+Styleguide Typography.Lists
 */
 
 /*
@@ -376,7 +371,7 @@ Markup:
   <li>Eget porttitor lorem</li>
 </ul>
 
-Styleguide 2.10.1
+Styleguide Typography.Lists.Unodered
 */
 
 .ul {
@@ -427,7 +422,7 @@ Markup:
   </ul>
 </div>
 
-Styleguide 2.10.1.1
+Styleguide Typography.Lists.Lists in Logged Pages & Reviews
 */
 
 .logged {
@@ -455,7 +450,7 @@ Markup:
   <li>Eget porttitor lorem</li>
 </ol>
 
-Styleguide 2.10.2
+Styleguide Typography.Lists.Ordered
 */
 
 .ol {
@@ -485,7 +480,7 @@ Markup:
   <li>Eget porttitor lorem</li>
 </ul>
 
-Styleguide 2.10.3
+Styleguide Typography.Lists.Unstyled
 */
 
 .list-unstyled, .list-inline {
@@ -507,7 +502,7 @@ Markup:
   <li>Nulla volutpat</li>
 </ul>
 
-Styleguide 2.10.4
+Styleguide Typography.Lists.Inline
 */
 
 /*
@@ -528,7 +523,7 @@ Markup:
   <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
 </dl>
 
-Styleguide 2.10.5
+Styleguide Typography.Lists.Description
 */
 
 /*
@@ -549,5 +544,5 @@ Markup:
   <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
 </dl>
 
-Styleguide 2.10.6
+Styleguide Typography.Lists.Horizontal description
 */

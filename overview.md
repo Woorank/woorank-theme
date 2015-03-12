@@ -1,1 +1,0 @@
-# WooRank theme styleguide

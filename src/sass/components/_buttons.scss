@@ -3,16 +3,9 @@
 /*
 Buttons
 
-Styleguide 1
-*/
-
-/*
-Options
-
 Use any of the available button classes to quickly create a styled button.
 
-Markup:
-<button class="btn {$modifiers}">Button Text</button>
+Markup: markup/buttons.hbs
 
 .btn-default - Standard button
 .btn-primary - Provides extra visual weight and identifies the primary action in a set of buttons
@@ -22,7 +15,7 @@ Markup:
 .btn-danger  - Indicates a dangerous or potentially negative action
 .btn-link    - Deemphasize a button by making it look like a link while maintaining button behavior
 
-Styleguide 1.1
+Styleguide Components.Buttons
 */
 
 @mixin woo-button-variant($border, $shadow-alpha) {
@@ -65,9 +58,7 @@ Sizes
 
 Fancy larger or smaller buttons? Add `.btn-lg`, `.btn-sm`, or `.btn-xs` for additional sizes.
 
-Markup:
-<button class="btn btn-primary {$modifiers}">Button Text</button>
-<button class="btn btn-default {$modifiers}">Button Text</button>
+Markup: markup/buttons-sizes.hbs
 
 .btn-lg - Large button
         - Normal button
@@ -75,7 +66,7 @@ Markup:
 .btn-xs - Extra small button
 .btn-block - Block level buttons (spanning the full width of a parent)
 
-Styleguide 1.2
+Styleguide Components.Buttons.Sizes
 */
 
 .btn-xs {
@@ -83,23 +74,15 @@ Styleguide 1.2
 }
 
 /*
-States
-
-Styleguide 1.3
-*/
-
-/*
 Active/Hover
 
-Markup:
-<button class="btn btn-primary {$modifiers}">Button Text</button>
-<button class="btn btn-default {$modifiers}">Button Text</button>
+Markup: markup/buttons-states.hbs
 
         - Normal state
 :hover  - Hover state
 :active - Active pseudo class
 
-Styleguide 1.3.1
+Styleguide Components.Buttons.Status
 */
 
 /*
@@ -115,7 +98,7 @@ Markup:
   Button Text
 </button>
 
-Styleguide 1.3.2
+Styleguide Components.Buttons.Disabled
 */
 
 /*
@@ -127,66 +110,18 @@ Markup:
 <a class="btn btn-primary disabled">Button Text</a>
 <a class="btn btn-default disabled">Button Text</a>
 
-Styleguide 1.3.3
+Styleguide Components.Buttons.Links
 */
 
 /*
-Button groups
+Buttons Groups
 
-Styleguide 1.4
-*/
-
-/*
-Basic
-
-Markup:
-<div class="btn-group">
-  <button class="btn btn-default {$modifiers}">Left</button>
-  <button class="btn btn-default">Middle</button>
-  <button class="btn btn-default">Right</button>
-</div>
-<div class="btn-group">
-  <button class="btn btn-default">Left</button>
-  <button class="btn btn-default {$modifiers}">Middle</button>
-  <button class="btn btn-default">Right</button>
-</div>
-<div class="btn-group">
-  <button class="btn btn-default">Left</button>
-  <button class="btn btn-default">Middle</button>
-  <button class="btn btn-default {$modifiers}">Right</button>
-</div>
-<sg:wrapper>
-<div class="btn-toolbar">
-  <sg:wrapper-content/>
-</div>
-</sg:wrapper>
+Markup: markup/buttons-group.hbs
 
 :hover  - hover
 :active - active
 
-Styleguide 1.4.1
-*/
-
-/*
-Multiple groups (toolbar)
-
-Markup:
-<div class="btn-toolbar">
-  <div class="btn-group">
-    <button class="btn btn-default">1</button>
-    <button class="btn btn-default">2</button>
-  </div>
-  <div class="btn-group">
-    <button class="btn btn-default">4</button>
-    <button class="btn btn-default">5</button>
-    <button class="btn btn-default">6</button>
-  </div>
-  <div class="btn-group">
-    <button class="btn btn-default">7</button>
-  </div>
-</div>
-
-Styleguide 1.4.2
+Styleguide Components.Buttons.Groups
 */
 
 

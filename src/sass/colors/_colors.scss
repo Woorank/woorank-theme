@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+//## Gray and brand colors for use across Bootstrap.
+$black:                  #000000;
+$white:                  #ffffff;
+
+$gray-base:              $black;
+$gray-darker:            #222;
+$gray-dark:              #333;
+$gray-medium-dark:       #444;
+$gray:                   #555;
+$gray-medium:            #666;
+$gray-light:             #777;
+$gray-light-variant:     #808080;
+$gray-border:            #ccc;
+$gray-lighter:           #eee;
+
+// reference: Bootstrap Sketch Theme by Pierre
+
+$blue-dark:              #3876AC;
+$blue:                   #428BCA;
+$blue-light:             #A0C5E4;
+$blue-lighter:           #CFE2F2;
+$blue-pale:              #ECF3FA;
+
+$green-dark:             #4E9D4E;
+$green:                  #5CB85C;
+$green-light:            #ADDBAD;
+$green-lighter:          #D7EDD6;
+$green-pale:             #EEF8EE;
+
+$orange-dark:            #D3860C;
+$orange:                 #F89D0E;
+$orange-light:           #FBCE86;
+$orange-lighter:         #FEE6C8;
+$orange-pale:            #FEF5E6;
+
+$red-dark:               #B94743;
+$red:                    #D9534F;
+$red-light:              #ECA9A7;
+$red-lighter:            #F6D4D4;
+$red-pale:               #FBEDED;
+
+$turquoize-dark:         #29494A;
+$turquoize:              #539597;
+$turquoize-light:        #AFE5E7;
+$turquoize-lighter:      lighten($turquoize, 20%);
+$turquoize-pale:         lighten($turquoize, 40%);
+
+
+$brand-primary:        	$blue;
+$brand-success:         $green;
+$brand-info:            $turquoize;
+$brand-warning:         $orange;
+$brand-danger:          $red;
+
+$marine:                #315d86;
+
+
+//== Scaffolding
+//undefined
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               $white;
+//** Global text color on `<body>`.
+$text-color:            $gray-dark;
+
+//** Global textual link color.
+$link-color:            $blue-dark;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%);

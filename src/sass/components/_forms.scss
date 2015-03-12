@@ -3,19 +3,13 @@
 /*
 Forms
 
-Styleguide 4
-*/
-
-/*
-Basic
-
 Markup:
 <input type="text" class="form-control {$modifiers}" placeholder="Text">
 
        - Plain input
 :focus - Focussed input
 
-Styleguide 4.1
+Styleguide Components.Forms
 */
 
 .form-control {
@@ -53,7 +47,7 @@ Markup:
   </div>
 </form>
 
-Styleguide 4.2
+Styleguide Components.Forms.Input Groups
 */
 
 
@@ -80,7 +74,7 @@ Markup:
   </div>
 </div>
 
-Styleguide 4.3
+Styleguide Components.Forms.Checkbox and radio addons
 */
 
 /*
@@ -98,7 +92,7 @@ Markup:
 .has-warning - success
 .has-error   - success
 
-Styleguide 4.4
+Styleguide Components.Forms.Validation
 */
 
 @mixin woo-help-block($bg, $border: $input-border) {

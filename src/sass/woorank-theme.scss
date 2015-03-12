@@ -1,84 +1,91 @@
 @charset "UTF-8";
 
-// Utils assets
-@import "utils/fonts.scss";
-@import "utils/mixins.scss";
-@import "utils/variables.scss";
+/*
+Colors
 
-// Bootstrap styles
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-
-// Basics overrides
-@import "base/typography.scss";
-
-// Generics Components
-@import "components/buttons.scss";
-@import "components/forms.scss";
-@import "components/icons.scss";
-@import "components/tables.scss";
-@import "components/breadcrumb.scss";
-@import "components/dropdown.scss";
-@import "components/label.scss";
-@import "components/modal.scss";
-@import "components/navbar.scss";
-@import "components/popover.scss";
-@import "components/progress-bar.scss";
-
-// Super Components
-@import "super-components/marketing-checklist.scss";
-
-// Review components
-@import "components/review-left-menu.scss";
-
-// Layouts specifics
-@import "layout/body.scss";
-@import "layout/header.scss";
-@import "layout/content.scss";
-@import "layout/footer.scss";
-
-// Static pages
-@import "pages/about.scss";
-@import "pages/developers.scss";
-@import "pages/jobs.scss";
-@import "pages/privacy.scss";
-@import "pages/recent.scss";
-@import "pages/review.scss";
-@import "pages/tos.scss";
+Styleguide Colors
+*/
+@import "colors/colors";
 
 /*
-  DELETE THIS AFTER REMOVE OLD LESS STYLES
+Utils assets
 */
+@import "utils/fonts";
+@import "utils/mixins";
+@import "utils/variables";
 
-.woo-theme {
-  @extend body;
-  height: auto;
-  min-height: 0;
-}
+/*
+Bootstrap styles
+*/
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-/* Bootstrap box-sizing changes -> Focus on new design only */
-* {
-  box-sizing: content-box;
-}
+/*
+Typography
 
-$newFrameworkPages: ('about', 'tos', 'privacy', 'jobs', 'developers', 'recent');
+Styleguide Typography
+*/
+@import "typography/typography";
 
-#top * {
-  box-sizing: border-box;
-}
+/*
+Icons
 
-@each $page in $newFrameworkPages {
-  .#{$page} .container,
-  .#{$page} .container * {
-    box-sizing: border-box;
-  }
-}
+Styleguide Icons
+*/
+@import "icons/icons";
 
+/*
+Components
 
-$newFrameworkComponents: ('marketing-checklist', 'popover', 'dropdown');
+Styleguide Components
+*/
+@import "components/buttons";
+@import "components/forms";
+@import "components/tables";
+@import "components/breadcrumb";
+@import "components/dropdown";
+@import "components/label";
+@import "components/modal";
+@import "components/navbar";
+@import "components/popover";
+@import "components/progress-bar";
+@import "components/review-left-menu";
 
-@each $component in $newFrameworkComponents {
-  .#{$component},
-  .#{$component} * {
-    box-sizing: border-box;
-  }
-}
+/*
+Patterns
+
+Styleguide Patterns
+*/
+@import "patterns/marketing-checklist";
+
+/*
+Structures
+
+Styleguide Structures
+*/
+@import "structures/landing";
+@import "structures/static";
+@import "structures/app";
+
+/*
+Layouts specifics
+*/
+@import "layout/body";
+@import "layout/header";
+@import "layout/content";
+@import "layout/footer";
+
+/*
+Static pages
+*/
+@import "pages/about";
+@import "pages/developers";
+@import "pages/jobs";
+@import "pages/privacy";
+@import "pages/recent";
+@import "pages/review";
+@import "pages/tos";
+
+/*
+Less overwrite
+*/
+@import "utils/less-overwrite";

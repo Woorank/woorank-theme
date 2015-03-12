@@ -4,43 +4,54 @@ var debug         = require('gulp-debug');
 var s3            = require('gulp-s3');
 var sass          = require('gulp-sass');
 var svgSprite     = require('gulp-svg-sprites');
+var connect       = require('gulp-connect');
+var exec          = require('child_process').exec;
 
 var paths = {
   sass:          'src/sass',
-  less:          'src/less',
   css:           'src/css',
   svg:           'src/svg',
-  js:            'src/js',
   build: {
-    css:         'assets/style',
-    js:          'assets/script',
-    svg:         'assets/svg',
-    img:         'assets/img'
+    img:         'styleguide/assets/img',
+    css:         'styleguide/assets/style',
+    svg:         'styleguide/assets/svg'
   }
 };
 
-gulp.task('default',
-  [
-    'sprite',
-    'sass',
-    'less'
-  ]
-);
+gulp.task('default', ['sprite', 'sass', 'kss', 'connect', 'watch']);
 
 gulp.task('watch', function () {
-  gulp.watch(paths.sass + '/**/*.scss', ['sass']);
-  gulp.watch(paths.svg + '/**/*.svg', ['sprite']);
+  gulp.watch(paths.sass + '/**/*.scss', ['sass', 'kss']);
+  gulp.watch(paths.sass + '/**/*.hbs', ['kss']);
+  gulp.watch(paths.svg + '/**/*.svg', ['sprite', 'kss']);
 });
+
+gulp.task('connect', function () {
+  connect.server({
+    root: 'styleguide',
+    livereload: true
+  });
+});
+
+gulp.task('kss', ['sass'], function (cb) {
+  exec('kss-node --config=kss-config.json', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+}),
 
 gulp.task('sass', function () {
   return gulp.src(paths.sass + '/*.scss')
+    .pipe(debug())
     .pipe(sass({
       imagePath: paths.build.img,
       style: 'expanded',
       includePaths: '/node_modules/bootstrap-sass/assets/stylesheets/'
     }))
     .pipe(autoprefixer())
-    .pipe(gulp.dest(paths.build.css));
+    .pipe(gulp.dest(paths.build.css))
+    .pipe(connect.reload());
 });
 
 gulp.task('sprite', function () {

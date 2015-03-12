@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-/*
-Icons
-
-Styleguide 7
-*/
-
 .icon {
 	background-image: none;
 	height: 20px;
@@ -42,7 +36,7 @@ Logo
 Markup:
 <svg class="icon logo"><use xlink:href="woorank/svg/symbols.svg#logo"></use></svg>
 
-Styleguide 7.1
+Styleguide Icons.Logo
 */
 
 .icon.logo {
@@ -55,7 +49,7 @@ Styleguide 7.1
 Bullets
 
 Markup:
-<svg class="icon bullet"><use xlink:href="woorank/svg/symbols.svg{$modifiers}"></use></svg>
+<svg class="icon bullet"><use xlink:href="woorank/svg/symbols.svg{{modifier_class}}"></use></svg>
 
 #bullet-plain   - plain bullet
 #bullet-info    - info bullet
@@ -63,7 +57,7 @@ Markup:
 #bullet-warning - warning bullet
 #bullet-danger  - danger bullet
 
-Styleguide 7.2
+Styleguide Icons.Bullets
 */
 
 .icon.bullet {
@@ -75,19 +69,19 @@ Styleguide 7.2
 Arrows & Chevrons
 
 Markup:
-<svg class="icon arrow"><use xlink:href="woorank/svg/symbols.svg{$modifiers}"></use></svg>
+<svg class="icon arrow"><use xlink:href="woorank/svg/symbols.svg{{modifier_class}}"></use></svg>
 
 #arrow-up      - Arrow up
 #chevron-right - Chevron right
 
-Styleguide 7.3
+Styleguide Icons.Arrows & Chevrons
 */
 
 /*
 Repport Icons
 
 Markup:
-<svg class="icon {$modifiers}"><use xlink:href="woorank/svg/symbols.svg{$modifiers}"></use></svg>
+<svg class="icon {$modifiers}"><use xlink:href="woorank/svg/symbols.svg{{modifier_class}}"></use></svg>
 
 #checked       - Checkbox checked
 #folder        - Opened Folder
@@ -102,7 +96,7 @@ Markup:
 #usability     - Usability
 #visitor       - Visitor
 
-Styleguide 7.4
+Styleguide Icons.Repport Icons
 */
 
 .icon-email {

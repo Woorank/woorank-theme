@@ -2,6 +2,7 @@
 	"source": [
 		"src/sass"
 	],
+	"css": "assets/style/woorank-theme.css",
 	"destination": "styleguide",
 	"template": "src/woorank-template"
 }

@@ -1,3 +1,13 @@
+@charset "UTF-8";
+
+/*
+Progress Bar
+
+Markup: markup/_dropdown.hbs
+
+Styleguide Components.Progress Bar
+*/
+
 .progress-container {
   overflow: hidden;
 }
@@ -34,5 +44,4 @@
   .progress-value {
     display: inline;
   }
-
 }

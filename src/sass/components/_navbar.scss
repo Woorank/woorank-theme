@@ -3,12 +3,6 @@
 /*
 Navbar
 
-Styleguide 5
-*/
-
-/*
-Default
-
 Markup:
 <nav class="navbar" role="navigation">
   <div class="container-fluid">
@@ -77,7 +71,7 @@ Markup:
   </div><!-- /.container-fluid -->
 </nav>
 
-Styleguide 5.1
+Styleguide Components.Navbar
 */
 
 
@@ -259,7 +253,7 @@ Markup:
   </div>
 </nav>
 
-Styleguide 5.2
+Styleguide Components.Navbar.Buttons
 */
 
 .navbar {
@@ -272,7 +266,7 @@ Styleguide 5.2
 }
 
 /*
-Buttons
+Buttons Sizes
 
 Markup:
 <nav class="navbar navbar-default" role="navigation">
@@ -289,7 +283,7 @@ Markup:
   </div>
 </nav>
 
-Styleguide 5.3
+Styleguide Components.Navbar.Buttons Sizes
 */
 
 .navbar-text.small {
@@ -315,5 +309,5 @@ Markup:
   </div>
 </nav>
 
-Styleguide 5.4
+Styleguide Components.Navbar.Signed Right
 */
