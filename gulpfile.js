@@ -82,7 +82,7 @@ gulp.task('sprite', function () {
     .pipe(gulp.dest(paths.build.svg));
 });
 
-gulp.task('publish', ['styleguide'], function () {
+gulp.task('publish', ['kss'], function () {
   var awsConfig = require('./awsConfig');
   return gulp.src('./styleguide/**/*')
     .pipe(s3(awsConfig));
