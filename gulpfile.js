@@ -9,12 +9,15 @@ var exec          = require('child_process').exec;
 
 var paths = {
   sass:          'src/sass',
+  sassKss:       'src/woorank-template/sass-kss',
   css:           'src/css',
   svg:           'src/svg',
   build: {
     img:         'styleguide/assets/img',
     css:         'styleguide/assets/style',
-    svg:         'styleguide/assets/svg'
+    svg:         'styleguide/assets/svg',
+    cssKss:      'src/woorank-template/public',
+    imgKss:      'src/woorank-template/puclic/img'
   }
 };
 
@@ -23,6 +26,7 @@ gulp.task('default', ['sprite', 'sass', 'kss', 'connect', 'watch']);
 gulp.task('watch', function () {
   gulp.watch(paths.sass + '/**/*.scss', ['sass', 'kss']);
   gulp.watch(paths.sass + '/**/*.hbs', ['kss']);
+  gulp.watch(paths.sassKss + '/**/*.scss', ['sass-kss', 'kss']);
   gulp.watch(paths.svg + '/**/*.svg', ['sprite', 'kss']);
 });
 
@@ -33,13 +37,15 @@ gulp.task('connect', function () {
   });
 });
 
-gulp.task('kss', ['sass'], function (cb) {
+gulp.task('kss', ['sass', 'sass-kss'], function (cb) {
   exec('kss-node --config=kss-config.json', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
     cb(err);
+    gulp.src('*').pipe(connect.reload());
   });
-}),
+});
+
 
 gulp.task('sass', function () {
   return gulp.src(paths.sass + '/*.scss')
@@ -50,8 +56,18 @@ gulp.task('sass', function () {
       includePaths: '/node_modules/bootstrap-sass/assets/stylesheets/'
     }))
     .pipe(autoprefixer())
-    .pipe(gulp.dest(paths.build.css))
-    .pipe(connect.reload());
+    .pipe(gulp.dest(paths.build.css));
+});
+
+gulp.task('sass-kss', function () {
+  return gulp.src(paths.sassKss + '/*.scss')
+    .pipe(debug())
+    .pipe(sass({
+      imagePath: paths.build.imgKss,
+      style: 'expanded'
+    }))
+    .pipe(autoprefixer())
+    .pipe(gulp.dest(paths.build.cssKss));
 });
 
 gulp.task('sprite', function () {

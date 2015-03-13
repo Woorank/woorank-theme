@@ -34,7 +34,7 @@
 Logo
 
 Markup:
-<svg class="icon logo"><use xlink:href="woorank/svg/symbols.svg#logo"></use></svg>
+<svg class="icon logo"><use xlink:href="./assets/svg/symbols.svg#logo"></use></svg>
 
 Styleguide Icons.Logo
 */
@@ -49,7 +49,7 @@ Styleguide Icons.Logo
 Bullets
 
 Markup:
-<svg class="icon bullet"><use xlink:href="woorank/svg/symbols.svg{{modifier_class}}"></use></svg>
+<svg class="icon bullet"><use xlink:href="./assets/svg/symbols.svg{{modifier_class}}"></use></svg>
 
 #bullet-plain   - plain bullet
 #bullet-info    - info bullet
@@ -69,7 +69,7 @@ Styleguide Icons.Bullets
 Arrows & Chevrons
 
 Markup:
-<svg class="icon arrow"><use xlink:href="woorank/svg/symbols.svg{{modifier_class}}"></use></svg>
+<svg class="icon arrow"><use xlink:href="./assets/svg/symbols.svg{{modifier_class}}"></use></svg>
 
 #arrow-up      - Arrow up
 #chevron-right - Chevron right
@@ -81,7 +81,7 @@ Styleguide Icons.Arrows & Chevrons
 Repport Icons
 
 Markup:
-<svg class="icon {$modifiers}"><use xlink:href="woorank/svg/symbols.svg{{modifier_class}}"></use></svg>
+<svg class="icon --icon-class-here--"><use xlink:href="./assets/svg/symbols.svg{{modifier_class}}"></use></svg>
 
 #checked       - Checkbox checked
 #folder        - Opened Folder
