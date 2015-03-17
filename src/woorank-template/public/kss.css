@@ -1,3 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+/* BASES MIXINS*/
+.custom-mobile-nav {
+  display: block; }
+  @media screen and (min-width: 768px) {
+    #kss-node .custom-mobile-nav {
+      display: none !important; } }
+
+.custom-navbar-group {
+  position: absolute;
+  top: 13px;
+  display: none;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%); }
+  @media screen and (min-width: 768px) {
+    .custom-navbar-group {
+      display: block;
+      min-width: 525px; } }
+  .custom-navbar-group .btn-group {
+    display: inline-block; }
+  .custom-navbar-group .btn.btn-default {
+    font-weight: 300;
+    color: #888;
+    border-color: #ccc;
+    padding: 5px 15px; }
+    .custom-navbar-group .btn.btn-default.active {
+      background: #ECF3FA;
+      border-color: #428BCA;
+      color: #3876AC; }
+
 /* Pretty printing styles. Used with prettify.js. */
 /* SPAN elements with the classes below are added by prettyprint. */
 .pln {

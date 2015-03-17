@@ -1,0 +1,47 @@
+
+$btn-border: #ccc;
+$btn-border-active: #428BCA;
+$btn-bg-active: #ECF3FA;
+$btn-color: #888;
+$btn-color-active: #3876AC;
+
+.custom-mobile-nav {
+  display: block;
+
+  #kss-node & {
+    @include breakpoint($screen-sm) {
+      display: none !important;
+    }
+  }
+}
+
+.custom-navbar-group {
+  position: absolute;
+  top: 13px;
+  display: none;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+
+  @include breakpoint($screen-sm) {
+    display: block;
+    min-width: 525px;
+  }
+
+  .btn-group {
+    display: inline-block;
+  }
+
+  .btn.btn-default {
+    font-weight: 300;
+    color: $btn-color;
+    border-color: $btn-border;
+    padding: 5px 15px;
+
+    &.active {
+      background: $btn-bg-active;
+      border-color: $btn-border-active;
+      color: $btn-color-active;
+    }
+  }
+}
