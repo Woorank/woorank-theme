@@ -1,7 +1,7 @@
-var mobileNav = function mobileNav() {
+(function mobileNav() {
   var $navbar = $('#top .header.navbar');
 
-  var togglePanel = function togglePanel(status) {
+  var togglePanel = function togglePanel (status) {
     if (status) {
       $(window).scrollTop(0);
     }
@@ -10,21 +10,22 @@ var mobileNav = function mobileNav() {
     $('body').toggleClass('navbar-open', status);
   };
 
-  $(document).on('click', function(event) {
-    if (!$(event.target).parents('.navbar-header').length && $('body').hasClass('navbar-open')) {
+  $(document).on('click', function (event) {
+    if (
+      !$(event.target).parents('.navbar-header').length
+      && $('body').hasClass('navbar-open')
+    ) {
       togglePanel(false);
     }
   });
 
-  $navbar.find('.navbar-toggle').on('click', function(event) {
+  $navbar.find('.navbar-toggle').on('click', function (event) {
     togglePanel(!$('body').hasClass('navbar-open'));
   });
 
-  $(window).on('resize', function() {
+  $(window).on('resize', function () {
     if ($('body').hasClass('navbar-open')) {
       togglePanel(false);
     }
   });
-};
-
-module.exports = mobileNav;
+})();
