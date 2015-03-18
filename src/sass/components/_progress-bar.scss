@@ -24,14 +24,14 @@ Styleguide Components.Progress Bar
 }
 
 .progress {
-  &.progress-marine .progress-bar {
-    background-color: $marine;
-  }
+  box-shadow: none;
+  background-color: $progress-bg-gray;
 
   &.progress-xs {
     height: 6px;
 
     .progress-bar {
+      box-shadow: none;
       height: 6px;
       border-radius: 0 3px 3px 0;
     }
@@ -39,6 +39,10 @@ Styleguide Components.Progress Bar
     .progress-value {
       display: none;
     }
+  }
+
+  .progress-bar-marine {
+    background-color: $marine;
   }
 
   .progress-value {

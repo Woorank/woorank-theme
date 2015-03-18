@@ -2,17 +2,20 @@
 
 // Review specifics
 
-#dashboard-tasks-bars {
-  border-top: 1px solid #E6E6E6;
+.dashboard-bars {
   clear: both;
-  margin-top: 18px;
   overflow: hidden;
-  padding-left: 65px;
-  padding-top: 18px;
   position: relative;
+  padding-top: 18px;
 
-  .icn-bullet-result-info {
-    color: #315D86;
+  .section {
+    clear: both;
+    padding-left: 32px;
+    margin-bottom: 8px;
+    position: relative;
+  }
+
+  .icn {
     font-size: 20px;
     left: 0;
     line-height: 0;
@@ -20,6 +23,22 @@
     position: absolute;
     top: 26px;
     vertical-align: -5px;
+  }
+
+  .icn-bullet-result-check {
+    color: #5FBF02;
+  }
+
+  .icn-bullet-result-warning {
+    color: #e3611e;
+  }
+
+  .icn-bullet-result-cross {
+    color: #c4392f;
+  }
+
+  .icn-bullet-result-info {
+    color: #315D86;
   }
 
   .progress-container {
@@ -45,6 +64,34 @@
       font-size: 12px;
       padding: 0 10px;
       font-weight: normal;
+    }
+  }
+}
+
+#dashboard-bars {
+  position: relative;
+  padding-left: 0;
+
+  .icn {
+    top: 8px;
+  }
+
+  .progress-label {
+    width: 40%;
+    line-height: 22px;
+    font-size: 13px;
+    color: #858585;
+
+    @include breakpoint('805px') {
+      width: 90px;
+    }
+  }
+
+  .progress {
+    width: 40%;
+
+    @include breakpoint('805px') {
+      width: 150px;
     }
   }
 }
