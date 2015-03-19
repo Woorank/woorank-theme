@@ -13,7 +13,7 @@ $popoverContext: ('marketing-checklist');
 
 @each $context in $popoverContext {
   .#{$context} .popover {
-    border-color: $gray-border;
+    border-color: $border-color;
 
     &.bottom {
 
@@ -24,7 +24,7 @@ $popoverContext: ('marketing-checklist');
         top: -5px;
 
         &:after {
-          border-bottom-color: $gray-border;
+          border-bottom-color: $border-color;
           border-width: 0 5px 5px;
           left: 0;
           margin-left: -5px;
@@ -34,7 +34,7 @@ $popoverContext: ('marketing-checklist');
     }
 
     .popover-content {
-      color: $gray-darker;
+      color: $grey-darker;
       font-size: 13px;
       text-align: center;
     }

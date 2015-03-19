@@ -127,7 +127,7 @@ Styleguide Components.Repport Navigation
   width: 170px;
 
   &.border-nav {
-    border: 1px solid $gray-light-variant;
+    border: 1px solid $grey-light;
     padding-bottom: 5px;
     padding-top: 5px;
 
@@ -149,7 +149,7 @@ Styleguide Components.Repport Navigation
 
   a {
     border-radius: 3px;
-    color: $gray-dark;
+    color: $grey-dark;
     display: block;
     margin: 0;
     padding: 5px 15px;
@@ -165,7 +165,7 @@ Styleguide Components.Repport Navigation
     }
 
     .icon {
-      fill: $gray-dark;
+      fill: $grey-dark;
       margin-right: 5px;
 
       &.pull-right {
@@ -175,12 +175,12 @@ Styleguide Components.Repport Navigation
   }
 
   .active {
-    background-color: $blue-pale;
-    border: 1px solid $blue-light;
-    color: $blue-dark;
+    background-color: $primary-smoke;
+    border: 1px solid $primary-light;
+    color: $primary-dark;
 
     a {
-      color: $blue-dark;
+      color: $primary-dark;
     }
 
     ul {
@@ -192,20 +192,20 @@ Styleguide Components.Repport Navigation
       border: none;
 
       a {
-        color: $gray-dark;
+        color: $grey-dark;
       }
 
       &.active {
-        border-left: 1px solid $blue-light;
+        border-left: 1px solid $primary-light;
 
         a {
-          color: $blue-dark;
+          color: $primary-dark;
         }
       }
     }
 
     .icon {
-      fill: $blue-dark;
+      fill: $primary-dark;
     }
 
     .icon-hidden {
@@ -214,7 +214,7 @@ Styleguide Components.Repport Navigation
   }
 
   .nav-section {
-    border-bottom: 1px solid $gray-lighter;
+    border-bottom: 1px solid $grey-lighter;
     clear: both;
     display: block;
     padding-bottom: 5px;
@@ -222,7 +222,7 @@ Styleguide Components.Repport Navigation
   }
 
   .nav-title {
-    color: $blue-dark;
+    color: $primary-dark;
     font-size: 11px;
     font-weight: normal;
     padding-left: 10px;

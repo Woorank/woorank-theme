@@ -6,8 +6,6 @@ markup: <span class="label {{modifier_class}}">label {{modifier_class}}</span>
 Styleguide Components.Labels
 */
 
-$default: #DDD;
-
 .label {
   font-size: .8em;
   font-weight: 400;
@@ -16,27 +14,27 @@ $default: #DDD;
   top: -.1em;
 
   &.label-default {
-    background-color: $default;
-    color: $gray-medium;
+    background-color: $grey-smoke;
+    color: $grey-lighter;
   }
 
   &.label-primary {
-    background-color: $blue-lighter;
-    color: $blue-dark;
+    background-color: $primary-lighter;
+    color: $primary-dark;
   }
 
   &.label-success {
-    background-color: $green-lighter;
-    color: $green-dark;
+    background-color: $success-lighter;
+    color: $success-dark;
   }
 
   &.label-warning {
-    background-color: $orange-lighter;
-    color: $orange-dark;
+    background-color: $warning-lighter;
+    color: $warning-dark;
   }
 
   &.label-danger {
-    background-color: $red-lighter;
-    color: $red-dark;
+    background-color: $error-lighter;
+    color: $error-dark;
   }
 }

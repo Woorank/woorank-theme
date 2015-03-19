@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 /*
 Buttons
 
@@ -8,6 +6,7 @@ Use any of the available button classes to quickly create a styled button.
 Markup: markup/buttons.hbs
 
 .btn-default - Standard button
+.btn-black   - Black variant
 .btn-primary - Provides extra visual weight and identifies the primary action in a set of buttons
 .btn-success - Indicates a successful or positive action
 .btn-info    - Contextual button for informational alert messages
@@ -30,7 +29,7 @@ Styleguide Components.Buttons
 }
 
 .btn-default {
-  @include woo-button-variant(1px solid $btn-default-border, 0.05);
+  @include woo-button-variant(1px solid $btn-default-border, 0);
 }
 
 .btn-primary {
@@ -51,6 +50,11 @@ Styleguide Components.Buttons
 
 .btn-danger {
   @include woo-button-variant(none, 0.2);
+}
+
+.btn-black {
+  background-color: $black;
+  color: $white;
 }
 
 /*
@@ -91,9 +95,6 @@ Disabled
 Add the disabled attribute to buttons and the .disabled class to anchors.
 
 Markup:
-<button class="btn btn-primary" disabled="disabled">
-  Button Text
-</button>
 <button class="btn btn-default" disabled="disabled">
   Button Text
 </button>
@@ -105,10 +106,10 @@ Styleguide Components.Buttons.Disabled
 Links
 
 Markup:
-<a class="btn btn-primary active">Button Text</a>
-<a class="btn btn-default active">Button Text</a>
-<a class="btn btn-primary disabled">Button Text</a>
-<a class="btn btn-default disabled">Button Text</a>
+<a  href="#" class="btn btn-primary active">Button Text</a>
+<a  href="#" class="btn btn-default active">Button Text</a>
+<a  href="#" class="btn btn-primary disabled">Button Text</a>
+<a  href="#" class="btn btn-default disabled">Button Text</a>
 
 Styleguide Components.Buttons.Links
 */
@@ -118,20 +119,5 @@ Buttons Groups
 
 Markup: markup/buttons-group.hbs
 
-:hover  - hover
-:active - active
-
 Styleguide Components.Buttons.Groups
 */
-
-
-/*
-  New colours
-*/
-
-.btn {
-  &.btn-black {
-    background-color: $black;
-    color: $white;
-  }
-}

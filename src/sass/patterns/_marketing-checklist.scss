@@ -40,7 +40,7 @@ $marketingContext: ('#content');
 
           .btn {
             background-color: transparent;
-            /* color: $blue; */
+            /* color: $primary; */
             color: #315D86; /*use old darker blue until review update*/
             text-decoration: none;
           }
@@ -83,7 +83,7 @@ $marketingContext: ('#content');
       .marketing-checklist-list,
       .marketing-checklist-list-alldone {
         clear: both;
-        border-top: 1px solid $gray-border;
+        border-top: 1px solid $grey-light;
 
         .filtered-out {
           display: none;
@@ -112,8 +112,8 @@ $marketingContext: ('#content');
 
       .marketing-checklist-item {
         background-color: $white;
-        border-bottom: 1px solid $gray-border;
-        color: $gray-dark;
+        border-bottom: 1px solid $grey-light;
+        color: $grey-dark;
         display: block;
         padding: 15px 10px;
         text-decoration: none !important;
@@ -121,7 +121,7 @@ $marketingContext: ('#content');
 
         &:focus,
         &:hover {
-          background-color: $gray-lighter;
+          background-color: $grey-lighter;
           transition: background-color 100ms ease-in;
 
           .icn-box {
@@ -151,7 +151,7 @@ $marketingContext: ('#content');
 
       .task-container {
         padding: 0 10px;
-        border-bottom: 1px solid $gray-border;
+        border-bottom: 1px solid $grey-light;
 
         &:hover {
           background-color: #f4f7f9;
@@ -248,7 +248,7 @@ $marketingContext: ('#content');
 
         .icn-plus,
         .icn-minus {
-          color: $gray;
+          color: $grey;
           max-height: 16px;
           position: absolute;
           right: 0;
@@ -326,7 +326,7 @@ $marketingContext: ('#content');
         }
 
         .task-data {
-          border-bottom: 1px solid $gray-lighter;
+          border-bottom: 1px solid $grey-lighter;
           padding: 2px 0 10px;
 
           .icns {
@@ -357,7 +357,7 @@ $marketingContext: ('#content');
 
         .task-sumary {
           @include breakpoint($screen-sm) {
-            border-right: 1px solid $gray-lighter;
+            border-right: 1px solid $grey-lighter;
             float: left;
             padding: 0 40px 40px 0;
             width: calc(50% + 1px);
@@ -367,7 +367,7 @@ $marketingContext: ('#content');
         .task-text,
         .task-links {
           @include breakpoint($screen-sm) {
-            border-left: 1px solid $gray-lighter;
+            border-left: 1px solid $grey-lighter;
             float: right;
             margin-left: -1px;
             padding: 0 12px 20px 40px;

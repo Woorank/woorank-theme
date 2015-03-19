@@ -34,7 +34,7 @@ Styleguide Components.Dropdown
 
         &:hover {
           .badge {
-            background-color: $gray-lighter;
+            background-color: $grey-lighter;
           }
         }
       }
@@ -46,21 +46,21 @@ Styleguide Components.Dropdown
 
         &.disabled a {
           cursor: default;
-          color: $gray-light;
+          color: $grey-light;
           opacity: .7;
         }
 
         &.active {
           a {
-            background-color: $blue-pale;
-            border-bottom: 1px solid $blue-light;
-            border-top: 1px solid $blue-light;
-            color: $blue;
+            background-color: $primary-smoke;
+            border-bottom: 1px solid $primary-light;
+            border-top: 1px solid $primary-light;
+            color: $primary;
           }
 
           .badge {
-            background-color: $blue-lighter;
-            color: $blue;
+            background-color: $primary-lighter;
+            color: $primary;
           }
         }
       }
@@ -79,7 +79,7 @@ Styleguide Components.Dropdown
 
     .arrow {
       display: none;
-      border-bottom-color: $gray-border;
+      border-bottom-color: $border-color;
       left: 50%;
       margin-left: -5px;
       top: 100%;
@@ -96,8 +96,8 @@ Styleguide Components.Dropdown
     }
 
     .badge {
-      background-color: $gray-lighter;
-      color: $gray-light;
+      background-color: $grey-lighter;
+      color: $grey-light;
       font-weight: 400;
       font-size: 12px;
     }

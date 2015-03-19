@@ -20,12 +20,12 @@ Styleguide Components.Progress Bar
 
 .progress-label {
   padding: 0 10px;
-  color: $gray-light;
+  color: $grey-light;
 }
 
 .progress {
   box-shadow: none;
-  background-color: $progress-bg-gray;
+  background-color: $grey-smoke;
 
   &.progress-xs {
     height: 6px;
@@ -42,7 +42,7 @@ Styleguide Components.Progress Bar
   }
 
   .progress-bar-marine {
-    background-color: $marine;
+    background-color: #315D86; //old front marine color
   }
 
   .progress-value {

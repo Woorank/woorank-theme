@@ -1,70 +1,56 @@
-@charset "UTF-8";
+$black            : #000000;
+$white            : #ffffff;
 
-$black:                  #000000;
-$white:                  #ffffff;
+$grey-smoke       : #F5F7FA;
+$grey-lighter     : #E6E9ED;
+$grey-light       : #CCD1D9;
+$grey             : #AAB2BD;
+$grey-medium      : #656D78;
+$grey-dark        : #434A54;
+$grey-darker      : #353B48;
 
-$gray-base:              $black;
-$gray-darker:            #222;
-$gray-dark:              #333;
-$gray-medium-dark:       #444;
-$gray:                   #555;
-$gray-medium:            #666;
-$gray-light:             #777;
-$gray-light-variant:     #808080;
-$gray-border:            #ccc;
-$gray-lighter:           #eee;
+$primary-dark     : #3876AC;
+$primary          : #428BCA;
+$primary-light    : #A0C5E4;
+$primary-lighter  : #CFE2F2;
+$primary-smoke    : #ECF3FA;
 
-$progress-bg-gray:       #EAEEF3;
+$success-dark     : #4E9D4E;
+$success          : #5CB85C;
+$success-light    : #ADDBAD;
+$success-lighter  : #D7EDD6;
+$success-smoke    : #EEF8EE;
 
-$blue-dark:              #3876AC;
-$blue:                   #428BCA;
-$blue-light:             #A0C5E4;
-$blue-lighter:           #CFE2F2;
-$blue-pale:              #ECF3FA;
+$warning-dark     : #D3860C;
+$warning          : #F89D0E;
+$warning-light    : #FBCE86;
+$warning-lighter  : #FEE6C8;
+$warning-smoke    : #FEF5E6;
 
-$green-dark:             #4E9D4E;
-$green:                  #5CB85C;
-$green-light:            #ADDBAD;
-$green-lighter:          #D7EDD6;
-$green-pale:             #EEF8EE;
+$error-dark       : #B94743;
+$error            : #D9534F;
+$error-light      : #ECA9A7;
+$error-lighter    : #F6D4D4;
+$error-smoke      : #FBEDED;
 
-$orange-dark:            #D3860C;
-$orange:                 #F89D0E;
-$orange-light:           #FBCE86;
-$orange-lighter:         #FEE6C8;
-$orange-pale:            #FEF5E6;
+$competitor-light : #AFE5E7;
+$competitor       : #539597;
+$competitor-dark  : #29494A;
 
-$red-dark:               #B94743;
-$red:                    #D9534F;
-$red-light:              #ECA9A7;
-$red-lighter:            #F6D4D4;
-$red-pale:               #FBEDED;
+$text-color       : $grey-medium;
+$text-color-light : $grey;
 
-$turquoize-dark:         #29494A;
-$turquoize:              #539597;
-$turquoize-light:        #AFE5E7;
-$turquoize-lighter:      lighten($turquoize, 20%);
-$turquoize-pale:         lighten($turquoize, 40%);
+$link-color       : $primary;
+$link-color-hover : $primary-dark;
 
+$border-color     : $grey-light;
 
-$brand-primary:        	$blue;
-$brand-success:         $green;
-$brand-info:            $turquoize;
-$brand-warning:         $orange;
-$brand-danger:          $red;
+$hover-bg         : $grey-smoke;
+$hover-border     : $grey-lighter;
+$hover-color      : $grey-medium;
 
-$marine:                #315d86;
+$active-bg        : $primary-smoke;
+$active-border    : $primary-lighter;
+$active-color     : $primary-dark;
 
-//== Scaffolding
-//undefined
-//## Settings for some of the most global styles.
-
-//** Background color for `<body>`.
-$body-bg:               $white;
-//** Global text color on `<body>`.
-$text-color:            $gray-dark;
-
-//** Global textual link color.
-$link-color:            $blue-dark;
-//** Link hover color set via `darken()` function.
-$link-hover-color:      darken($link-color, 15%);
+$disabled-color   : $grey-light;
