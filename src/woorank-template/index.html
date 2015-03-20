@@ -35,13 +35,12 @@
       </div>
 
       <div class="custom-navbar-group">
-        <div class="btn-group btn-group-sm">
+        <div class="btn-group btn-group-sm" id="nav-buttons">
           {{#eachRoot}}
-            {{#ifReference ../rootName}}
-              <a href="section-{{referenceURI}}.html" class="btn btn-default active">{{header}}</a>
-            {{else}}
-              <a href="section-{{referenceURI}}.html" class="btn btn-default">{{header}}</a>
-            {{/ifReference}}
+            <a href="section-{{referenceURI}}.html"
+              class="btn btn-default {{#ifReference ../rootName}}active{{/ifReference}}">
+              {{header}}
+            </a>
           {{/eachRoot}}
         </div>
       </div>
@@ -62,87 +61,135 @@
 <!-- END HEADER -->
 
 <!-- MAIN -->
-<article role="main" class="">
-{{#if homepage}}
-  <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
-    {{{homepage}}}
-  </div>
-{{else}}
-
-  {{!
-    Display each section, in order.
-
-    The "root" element comes first in this loop, and can be detected using
-    the "#ifDepth 1" block as seen below.
-  }}
-  {{#eachSection rootName}}
-  <div id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
-
-    <div class="kss-style">
-      <h{{depth}} class="kss-title kss-title--level-{{depth}}">
-        <a class="kss-title__permalink" href="#kssref-{{referenceURI}}">
-          {{header}}
+<article role="main" class="container">
+  {{#if homepage}}
+    <div class="page-header">
+      <h1>
+        <a href="./">
+          Living Style guide
         </a>
-      </h{{depth}}>
-
-    {{#if parameters}}
-      <ul class="kss-parameters">
-      {{#eachParameter}}
-        <li class="kss-parameters__item">
-          <code class="kss-parameters__name">{{name}}</code>
-          <div class="kss-parameters__description">{{{description}}}</div>
-        </li>
-      {{/eachParameter}}
-      </ul>
-    {{/if}}
-
-    {{#if description}}
-      <div class="kss-description">
-        {{{description}}}
-      </div>
-    {{/if}}
+      </h1>
     </div>
+    <div class="content styleguide-home">
+      {{{homepage}}}
+    </div>
+  {{else}}
 
-    {{#if markup}}
-      <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example{{#if modifiers}}s{{/if}}
-        </div>
-      {{#if modifiers}}
-        <div class="kss-modifier__default-name kss-style">
-          Default styling
-        </div>
-      {{/if}}
-        <div class="kss-modifier__example">
-          {{{markup}}}
-        </div>
-      {{#eachModifier}}
-        <div class="kss-modifier__name kss-style">
-          {{name}}
-        </div>
-        <div class="kss-modifier__description kss-style">
-          {{{description}}}
-        </div>
-        <div class="kss-modifier__example">
-          {{{markup}}}
-        </div>
-      {{/eachModifier}}
-      </div>
+    {{#eachSection rootName}}
+      <div id="section-{{slug referenceURI}}" class="section depth-{{depth}}">
 
-      <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">{{markup}}</code></pre>
+        <div class="page-header">
+          <h{{depth}}>
+            <a href="#{{referenceURI}}">
+              {{header}}
+            </a>
+          </h{{depth}}>
+
+          {{#if parameters}}
+            <ul class="parameters">
+              {{#eachParameter}}
+                <li class="parameters__item">
+                  <code class="parameters__name">{{name}}</code>
+                  <div class="parameters__description">{{{description}}}</div>
+                </li>
+              {{/eachParameter}}
+            </ul>
+          {{/if}}
+
+          {{#if description}}
+            <div class="description">
+              {{{paragraphs description 1}}}
+            </div>
+          {{/if}}
+        </div>
+
+        {{#if markup}}
+          <div class="content">
+            <div class="modifier__wrapper">
+
+              <div class="modifier__example">
+                {{{markup}}}
+              </div>
+
+              {{#eachModifier}}
+                {{#equal ../../../rootName "Colors"}}
+
+                  <!-- COLORS ITEM -->
+                  <div class="modifier__item" id="{{slug ../../referenceURI}}-{{slug name}}">
+                    <div class="modifier__example">
+                      {{{markup}}}
+                    </div>
+
+                    <div class="modifier__color__infos">
+                      <div class="modifier__name">
+                        {{name}}
+                      </div>
+                    </div>
+                  </div>
+
+                {{else}}
+                  <div class="modifier__item" id="{{slug ../../referenceURI}}-{{slug name}}">
+                    <div class="modifier__example">
+                      {{{markup}}}
+                    </div>
+
+                    <p class="modifier__name">
+                      {{name}}
+                    </p>
+
+                    <p class="modifier__description">
+                      {{{paragraphs description 1}}}
+                    </p>
+                  </div>
+                {{/equal}}
+              {{/eachModifier}}
+            </div>
+
+            <div class="footer-section">
+              <div class="footer-buttons">
+                {{#moreDesc description}}
+                  <button type="button"
+                    class="btn btn-link btn-sm collapsed info-collapser"
+                    data-toggle="collapse"
+                    data-target="#info-{{slug reference}}">
+                    Info
+                  </button>
+                {{/moreDesc}}
+
+                {{#equal ../../../rootName "Colors"}}
+                {{else}}
+                <button type="button"
+                  class="btn btn-link btn-sm collapsed markup-collapser"
+                  data-toggle="collapse"
+                  data-target="#markup-{{slug reference}}">
+                  HTML
+                </button>
+                {{/equal}}
+              </div>
+
+              <div class="collapse markup" id="markup-{{slug reference}}">
+                <div class="markup">
+                  <pre class="prettyprint linenums lang-html"><code data-language="html">{{markup}}</code></pre>
+                </div>
+              </div>
+
+              <div class="collapse description" id="info-{{slug reference}}">
+                {{{paragraphs description 2}}}
+              </div>
+            </div>
+
+          </div>
+        {{/if}}
       </div>
-    {{/if}}
-  </div>
-  {{/eachSection}}
+    {{/eachSection}}
 {{/if}}
 </article>
 <!-- END MAIN -->
 
 <!-- SCRIPTS -->
-<script src="public/prettify.js"></script>
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="public/prettify.js"></script>
 <script>
   prettyPrint();
 </script>

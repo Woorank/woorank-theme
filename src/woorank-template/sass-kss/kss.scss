@@ -5,10 +5,11 @@
 @import "../../sass/utils/mixins";
 @import "../../sass/utils/variables";
 
-@import "modules/header";
+@import "kss-parts/header";
+@import "kss-parts/content";
+@import "kss-parts/markup";
+
+@import "modules/colors-render";
+@import "modules/buttons-render";
 
 @import "prettify";
-
-#kss-node {
-  background-color: $white;
-}

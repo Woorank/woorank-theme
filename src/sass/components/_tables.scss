@@ -9,26 +9,7 @@ Table
 .table-hover     - To enable a hover state on table rows.
 .table-condensed - To make tables more compact by cutting cell padding in half.
 
-Markup:
-<table class="table {$modifiers}">
-  <caption>Optional Table Caption</caption>
-  <thead>
-    <tr>
-      <th>#</th><th>First Name</th><th>Last Name</th><th>Username</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td><td>Mark</td><td>Otto</td><td>@mdo</td>
-    </tr>
-    <tr>
-      <td>2</td><td>Jacob</td><td>Thornton</td><td>@fat</td>
-    </tr>
-    <tr>
-      <td>3</td><td>Larry</td><td>the Bird</td><td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+Markup: markup/tables.hbs
 
 Styleguide Components.Table
 */
@@ -43,7 +24,7 @@ Contextual classes
 .danger  - Indicates a dangerous or potentially negative action
 
 Markup:
-<tr class={$modifiers}>
+<tr class={{modifier_class}}>
   <td>1</td>
   <td>Mark</td>
   <td>Otto</td>
@@ -51,7 +32,7 @@ Markup:
 </tr>
 <tr>
   <td>1</td>
-  <td class={$modifiers}>Mark</td>
+  <td class={{modifier_class}}>Mark</td>
   <td>Otto</td>
   <td>@mdo</td>
 </tr>

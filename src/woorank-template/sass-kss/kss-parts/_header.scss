@@ -38,6 +38,10 @@ $btn-color-active: #3876AC;
     border-color: $btn-border;
     padding: 5px 15px;
 
+    @include breakpoint($screen-lg) {
+      padding: 5px 20px;
+    }
+
     &.active {
       background: $btn-bg-active;
       border-color: $btn-border-active;

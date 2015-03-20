@@ -1,9 +1,7 @@
 @charset "UTF-8";
 
 /*
-Colors
-
-Styleguide Colors
+  Colors
 */
 @import "colors/colors";
 
@@ -22,6 +20,8 @@ Bootstrap styles
 /*
 Typography
 
+Weight: 5
+
 Styleguide Typography
 */
 @import "typography/typography";
@@ -29,12 +29,16 @@ Styleguide Typography
 /*
 Icons
 
+Weight: 4
+
 Styleguide Icons
 */
 @import "icons/icons";
 
 /*
 Components
+
+Weight: 3
 
 Styleguide Components
 */
@@ -47,18 +51,22 @@ Styleguide Components
 @import "components/modal";
 @import "components/popover";
 @import "components/progress-bar";
-@import "components/review-left-menu";
 
 /*
 Patterns
+
+Weight: 2
 
 Styleguide Patterns
 */
 @import "patterns/marketing-checklist";
 @import "patterns/navbar";
+@import "patterns/review-left-menu";
 
 /*
 Structures
+
+Weight: 1
 
 Styleguide Structures
 */

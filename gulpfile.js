@@ -1,6 +1,5 @@
 var gulp          = require('gulp');
 var autoprefixer  = require('gulp-autoprefixer');
-var browserify    = require('gulp-browserify');
 var debug         = require('gulp-debug');
 var uglify        = require('gulp-uglify');
 var s3            = require('gulp-s3');
@@ -26,7 +25,7 @@ var paths = {
 };
 
 gulp.task('default',
-  ['sprite', 'sass', 'browserify', 'kss', 'connect', 'watch']
+  ['sprite', 'sass', 'kss', 'connect', 'watch']
 );
 
 gulp.task('watch', function () {
@@ -35,7 +34,8 @@ gulp.task('watch', function () {
   gulp.watch('src/woorank-template/**/*.html', ['kss']);
   gulp.watch(paths.sassKss + '/**/*.scss', ['sass-kss', 'kss']);
   gulp.watch(paths.svg + '/**/*.svg', ['sprite', 'kss']);
-  gulp.watch(paths.js + '/**/*.js', ['browserify', 'kss']);
+  gulp.watch(paths.js + '/**/*.js', ['kss']);
+  gulp.watch(paths.build.cssKss + '/**/*.js', ['kss']);
 });
 
 gulp.task('connect', function () {
@@ -45,7 +45,7 @@ gulp.task('connect', function () {
   });
 });
 
-gulp.task('kss', ['sass', 'sass-kss', 'browserify'], function (cb) {
+gulp.task('kss', ['sass', 'sass-kss'], function (cb) {
   exec('kss-node --config=kss-config.json', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
@@ -87,13 +87,6 @@ gulp.task('sprite', function () {
       }
     }))
     .pipe(gulp.dest(paths.build.svg));
-});
-
-gulp.task('browserify', function () {
-  return gulp.src(paths.js + '/*.js')
-    .pipe(browserify())
-    .pipe(uglify())
-    .pipe(gulp.dest(paths.build.js));
 });
 
 gulp.task('publish', ['kss'], function () {
