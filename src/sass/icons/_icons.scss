@@ -1,103 +1,88 @@
 @charset "UTF-8";
+/*
+All Icons
 
+Markup: markup/icons.hbs
+
+bullet-plain   - plain bullet
+bullet-info    - info bullet
+bullet-success - success bullet
+bullet-warning - warning bullet
+bullet-danger  - danger bullet
+arrow-up       - Arrow up
+chevron-right  - Chevron right
+checked        - Checkbox checked
+folder         - Opened Folder
+hashtag        - Hash Tag
+links          - Links
+local          - Localisation
+mobile         - Mobile
+search         - Search
+social         - Social
+technologies   - Technologies
+time           - Time
+usability      - Usability
+visitor        - Visitor
+
+Styleguide Icons.All Icons
+*/
+
+/*
+Icons Sizes
+
+Markup: markup/icon-example.hbs
+
+icon-xs - extra small
+normal  - normal
+icon-sm - small
+icon-md - medium
+icon-lg - large
+
+Styleguide Icons.Icons Sizes
+*/
 .icon {
-	background-image: none;
-	height: 20px;
-	width: 20px;
+  background-image: none;
+  height: 20px;
+  width: 20px;
 
-	&.icon-xs {
-		height: 10px;
-		width: 10px;
-	}
+  &.icon-xs {
+    height: 10px;
+    width: 10px;
+  }
 
-	&.icon-sm {
-		height: 30px;
-		width: 30px;
-	}
+  &.icon-sm {
+    height: 30px;
+    width: 30px;
+  }
 
-	&.icon-md {
-		height: 60px;
-		width: 60px;
-	}
+  &.icon-md {
+    height: 60px;
+    width: 60px;
+  }
 
-	&.icon-lg {
-		height: 90px;
-		width: 90px;
-	}
+  &.icon-lg {
+    height: 90px;
+    width: 90px;
+  }
 
-	&.icon-hidden {
-		display: none;
-	}
+  &.icon-hidden {
+    display: none;
+  }
 }
 
 /*
 Logo
 
-Markup:
-<svg class="icon logo"><use xlink:href="./assets/svg/symbols.svg#logo"></use></svg>
+Markup: markup/icons.hbs
+
+.logo - logo
 
 Styleguide Icons.Logo
 */
-
 .icon.logo {
   height: 20px;
   width: 110px;
 }
-
-
-/*
-Bullets
-
-Markup:
-<svg class="icon bullet"><use xlink:href="./assets/svg/symbols.svg{{modifier_class}}"></use></svg>
-
-#bullet-plain   - plain bullet
-#bullet-info    - info bullet
-#bullet-success - success bullet
-#bullet-warning - warning bullet
-#bullet-danger  - danger bullet
-
-Styleguide Icons.Bullets
-*/
-
-.icon.bullet {
-  height: 16px;
-  width: 20px;
-}
-
-/*
-Arrows & Chevrons
-
-Markup:
-<svg class="icon arrow"><use xlink:href="./assets/svg/symbols.svg{{modifier_class}}"></use></svg>
-
-#arrow-up      - Arrow up
-#chevron-right - Chevron right
-
-Styleguide Icons.Arrows & Chevrons
-*/
-
-/*
-Repport Icons
-
-Markup:
-<svg class="icon --icon-class-here--"><use xlink:href="./assets/svg/symbols.svg{{modifier_class}}"></use></svg>
-
-#checked       - Checkbox checked
-#folder        - Opened Folder
-#hashtag       - Hash Tag
-#links         - Links
-#local         - Localisation
-#mobile        - Mobile
-#search        - Search
-#social        - Social
-#technologies  - Technologies
-#time          - Time
-#usability     - Usability
-#visitor       - Visitor
-
-Styleguide Icons.Repport Icons
-*/
 
 .icon-email {
 	height: 25px;
