@@ -3,7 +3,6 @@
 		"src/sass"
 	],
 	"css": "assets/style/woorank-theme.css",
-	"js": "assets/js/mobile-nav.js",
 	"destination": "styleguide",
 	"template": "src/woorank-template",
 	"helpers": "src/woorank-template/helpers/"
