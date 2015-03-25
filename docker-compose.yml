@@ -1,0 +1,10 @@
+styleguide:
+  build: .
+  ports:
+    - "3005:8080"
+  volumes:
+    - ./styleguide:/opt/gulp/styleguide
+    - ./src:/opt/gulp/src
+    - ./gulpfile.js:/opt/gulp/gulpfile.js
+    - ./kss-config.json:/opt/gulp/kss-config.json
+  command: "gulp connect"
