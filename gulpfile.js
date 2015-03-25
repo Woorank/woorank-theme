@@ -47,7 +47,7 @@ gulp.task('connect', function () {
   });
 });
 
-gulp.task('kss', ['sass', 'sass-kss'], function (cb) {
+gulp.task('kss', ['sprite', 'sass', 'sass-kss'], function (cb) {
   exec('kss-node --config=kss-config.json', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
@@ -105,6 +105,6 @@ gulp.task('sprite', function () {
 
 gulp.task('publish', ['sass-build', 'kss'], function () {
   var awsConfig = require('./awsConfig');
-  return gulp.src('./styleguide/**/*')
+  return gulp.src(['./styleguide/**/*', 'output/**/*'])
     .pipe(s3(awsConfig));
 });

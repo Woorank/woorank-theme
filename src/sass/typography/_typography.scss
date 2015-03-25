@@ -382,7 +382,7 @@ Styleguide Typography.Lists.Unodered
   }
 
   li:before {
-    color: #888888;
+    color: $grey;
     content: "•";
     font-size: 15px;
     padding-right: 30px;
