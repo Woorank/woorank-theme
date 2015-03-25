@@ -70,8 +70,8 @@ $table-cell-padding           : 8px;
 $table-condensed-cell-padding : 5px;
 $table-bg                     : transparent;
 $table-bg-accent              : $grey-smoke;
-$table-bg-hover               : $primary-smoke;
-$table-bg-active              : $primary-lighter;
+$table-bg-hover               : $primary-lighter;
+$table-bg-active              : $active-bg;
 $table-border-color           : $border-color;
 
 // Buttons
@@ -123,10 +123,10 @@ $dropdown-divider-bg          : $grey-lighter;
 
 $dropdown-link-color          : $grey-dark;
 $dropdown-link-hover-color    : $grey-dark;
-$dropdown-link-hover-bg       : $grey-smoke;
+$dropdown-link-hover-bg       : $hover-bg;
 
-$dropdown-link-active-color   : $primary-dark;
-$dropdown-link-active-bg      : $primary-smoke;
+$dropdown-link-active-color   : $active-color;
+$dropdown-link-active-bg      : $active-bg;
 
 $dropdown-link-disabled-color : $grey-light;
 $dropdown-header-color        : $grey;
@@ -217,20 +217,20 @@ $navbar-default-border      : $border-color;
 
 // Navbar links
 $navbar-default-link-color          : $grey-dark;
-$navbar-default-link-hover-color    : $grey-darker;
-$navbar-default-link-hover-bg       : $grey-smoke;
+$navbar-default-link-hover-color    : $hover-color;
+$navbar-default-link-hover-bg       : $hover-bg;
 $navbar-default-link-active-color   : $grey-dark;
-$navbar-default-link-active-bg      : $grey-smoke;
+$navbar-default-link-active-bg      : $hover-bg;
 $navbar-default-link-disabled-color : $grey;
 $navbar-default-link-disabled-bg    : transparent;
 
 // Navbar brand label
 $navbar-default-brand-color         : $grey-dark;
-$navbar-default-brand-hover-color   : $grey;
+$navbar-default-brand-hover-color   : $hover-color;
 $navbar-default-brand-hover-bg      : transparent;
 
 // Navbar toggle
-$navbar-default-toggle-hover-bg     : $grey-smoke;
+$navbar-default-toggle-hover-bg     : $hover-bg;
 $navbar-default-toggle-icon-bar-bg  : $grey;
 $navbar-default-toggle-border-color : $border-color;
 
@@ -261,18 +261,18 @@ $navbar-inverse-toggle-border-color : $grey-dark;
 
 // Navs
 $nav-link-padding              : 10px 15px;
-$nav-link-hover-bg             : $grey-lighter;
+$nav-link-hover-bg             : $hover-bg;
 $nav-disabled-link-color       : $grey-light;
 $nav-disabled-link-hover-color : $grey-light;
 
 // Tabs
 $nav-tabs-border-color                       : $border-color;
-$nav-tabs-link-hover-border-color            : $grey-lighter;
-$nav-tabs-active-link-hover-bg               : $grey-smoke;
-$nav-tabs-active-link-hover-color            : $grey;
+$nav-tabs-link-hover-border-color            : $hover-border;
+$nav-tabs-active-link-hover-bg               : $hover-bg;
+$nav-tabs-active-link-hover-color            : $hover-color;
 $nav-tabs-active-link-hover-border-color     : $grey-dark;
 $nav-tabs-justified-link-border-color        : $primary-dark;
-$nav-tabs-justified-active-link-border-color : $primary-smoke;
+$nav-tabs-justified-active-link-border-color : $active-bg;
 
 // Pills
 $nav-pills-border-radius           : $border-radius-base;
@@ -283,11 +283,11 @@ $nav-pills-active-link-hover-color : $component-active-color;
 $pagination-color           : $grey-darker;
 $pagination-bg              : $white;
 $pagination-border          : $border-color;
-$pagination-hover-color     : $grey-darker;
+$pagination-hover-color     : $hover-color;
 $pagination-hover-bg        : $white;
 $pagination-hover-border    : $primary;
 $pagination-active-color    : $grey-darker;
-$pagination-active-bg       : $primary-smoke;
+$pagination-active-bg       : $active-bg;
 $pagination-active-border   : $primary-light;
 $pagination-disabled-color  : $grey-light;
 $pagination-disabled-bg     : $white;
@@ -298,7 +298,7 @@ $pager-bg             : $white;
 $pager-border         : $border-color;
 $pager-border-radius  : 15px;
 $pager-hover-bg       : $white;
-$pager-active-bg      : $primary-smoke;
+$pager-active-bg      : $active-bg;
 $pager-active-color   : $grey-darker;
 $pager-disabled-color : $grey-light;
 
@@ -353,7 +353,7 @@ $label-success-bg       : $success-smoke;
 $label-warning-bg       : $warning-smoke;
 $label-danger-bg        : $error-smoke;
 $label-color            : $grey-dark;
-$label-link-hover-color : $grey-darker;
+$label-link-hover-color : $hover-color;
 
 // Modals
 $modal-inner-padding                 : 21px;
@@ -408,11 +408,11 @@ $progress-bar-danger-border  : $error;
 $list-group-bg                  : $white;
 $list-group-border              : $border-color;
 $list-group-border-radius       : $border-radius-base;
-$list-group-hover-bg            : $grey-smoke;
-$list-group-active-color        : $primary-dark;
-$list-group-active-bg           : $primary-smoke;
-$list-group-active-border       : $primary-light;
-$list-group-active-text-color   : $primary-dark;
+$list-group-hover-bg            : $hover-bg;
+$list-group-active-color        : $active-color;
+$list-group-active-bg           : $active-bg;
+$list-group-active-border       : $active-border;
+$list-group-active-text-color   : $active-color;
 $list-group-disabled-color      : $grey-light;
 $list-group-disabled-bg         : $grey-lighter;
 $list-group-disabled-text-color : $grey-light;
@@ -461,7 +461,7 @@ $well-border : $border-color;
 
 // Badges
 $badge-color            : $grey-dark;
-$badge-link-hover-color : $grey;
+$badge-link-hover-color : $hover-color;
 $badge-bg               : $grey-smoke;
 $badge-active-color     : $link-color;
 $badge-active-bg        : $white;
@@ -474,7 +474,7 @@ $breadcrumb-padding-vertical   : 8px;
 $breadcrumb-padding-horizontal : 15px;
 $breadcrumb-bg                 : $grey-smoke;
 $breadcrumb-color              : $grey-dark;
-$breadcrumb-active-color       : $primary-dark;
+$breadcrumb-active-color       : $active-color;
 $breadcrumb-separator          : "/";
 
 // Carousel
