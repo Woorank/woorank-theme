@@ -26,9 +26,7 @@ var paths = {
   }
 };
 
-gulp.task('default',
-  ['sprite', 'sass', 'kss', 'connect', 'watch']
-);
+gulp.task('default', ['sprite', 'sass', 'kss', 'connect']);
 
 gulp.task('watch', function () {
   gulp.watch(path.join(paths.sass, '**/*.scss'), ['sass', 'kss']);
@@ -41,19 +39,20 @@ gulp.task('watch', function () {
 });
 
 gulp.task('connect', function () {
-  connect.server({
+  return connect.server({
     root: 'styleguide',
     livereload: true
   });
 });
 
 gulp.task('kss', ['sprite', 'sass', 'sass-kss'], function (cb) {
-  exec('kss-node --config=kss-config.json', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-    gulp.src('*').pipe(connect.reload());
-  });
+  return exec('kss-node --config=kss-config.json',
+    function (err, stdout, stderr) {
+      console.log(stdout);
+      console.log(stderr);
+      cb(err);
+      gulp.src('*').pipe(connect.reload());
+    });
 });
 
 gulp.task('sass', function () {
