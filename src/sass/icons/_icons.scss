@@ -68,23 +68,22 @@ Styleguide Icons.Icons Sizes
   &.icon-hidden {
     display: none;
   }
+
+  &.icon-email {
+  	height: 25px;
+  	width: 25px;
+  }
+
+  &.icon-logo {
+    height: 20px;
+    width: 110px;
+  }
 }
 
 /*
 Logo
 
-Markup: markup/icons.hbs
-
-.logo - logo
+Markup: markup/logo.hbs
 
 Styleguide Icons.Logo
 */
-.icon.logo {
-  height: 20px;
-  width: 110px;
-}
-
-.icon-email {
-	height: 25px;
-	width: 25px;
-}
