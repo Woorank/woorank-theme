@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="17px" viewBox="0 0 22 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>menu</title>
+    <desc>Mobile nav icon</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="menu" sketch:type="MSLayerGroup" fill="#888888">
+            <g id="Page-1" sketch:type="MSShapeGroup">
+                <g id="menu">
+                    <rect id="top" x="0" y="0" width="22" height="3" rx="2"></rect>
+                    <rect id="middle" x="0" y="7" width="22" height="3" rx="2"></rect>
+                    <rect id="bottom" x="0" y="14" width="22" height="3" rx="2"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

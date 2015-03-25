@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+// Recent Reports page
+
+body.recent {
+  background-color: $white;
+
+  .column-list {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline;
+      font-size: 18px;
+    }
+
+    .recent-item {
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}

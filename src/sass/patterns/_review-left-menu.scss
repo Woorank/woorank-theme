@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+/*
+Report Navigation
+
+Markup:
+<nav class="repport-nav">
+  <ul class="nav-section">
+    <li class="active">
+      <a href="#">
+        <svg class="icon icon-xs"><use xlink:href="./assets/svg/symbols.svg#arrow-up"></use></svg>
+        Dashboard
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="./assets/svg/symbols.svg#chevron-right"></use></svg>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg class="icon icon-xs"><use xlink:href="./assets/svg/symbols.svg#time"></use></svg>
+        Latest Changes
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="./assets/svg/symbols.svg#chevron-right"></use></svg>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg class="icon icon-xs"><use xlink:href="./assets/svg/symbols.svg#checked"></use></svg>
+        Marketing Plan
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="./assets/svg/symbols.svg#chevron-right"></use></svg>
+      </a>
+    </li>
+  </ul>
+  <ul class="nav-section">
+    <li>
+      <h6 class="nav-title">Optimize</h6>
+    </li>
+    <li>
+      <a href="#">
+        <svg class="icon icon-xs"><use xlink:href="./assets/svg/symbols.svg#search"></use></svg>
+        SEO
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="./assets/svg/symbols.svg#chevron-right"></use></svg>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg class="icon icon-xs"><use xlink:href="./assets/svg/symbols.svg#mobile"></use></svg>
+        Mobile
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="./assets/svg/symbols.svg#chevron-right"></use></svg>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg class="icon icon-xs"><use xlink:href="./assets/svg/symbols.svg#usability"></use></svg>
+        Usability
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="./assets/svg/symbols.svg#chevron-right"></use></svg>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg class="icon icon-xs"><use xlink:href="./assets/svg/symbols.svg#technologies"></use></svg>
+        Technologies
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="./assets/svg/symbols.svg#chevron-right"></use></svg>
+      </a>
+    </li>
+  </ul>
+  <ul class="nav-section">
+    <li>
+      <h6 class="nav-title">Promote</h6>
+    </li>
+    <li>
+      <a href="#">
+        <svg class="icon icon-xs"><use xlink:href="./assets/svg/symbols.svg#links"></use></svg>
+        Backlinks
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="./assets/svg/symbols.svg#chevron-right"></use></svg>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg class="icon icon-xs"><use xlink:href="./assets/svg/symbols.svg#social"></use></svg>
+        Social
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="./assets/svg/symbols.svg#chevron-right"></use></svg>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg class="icon icon-xs"><use xlink:href="./assets/svg/symbols.svg#local"></use></svg>
+        Local
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="./assets/svg/symbols.svg#chevron-right"></use></svg>
+      </a>
+    </li>
+  </ul>
+  <ul class="nav-section">
+    <li>
+      <h6 class="nav-title">Measure</h6>
+    </li>
+    <li>
+      <a href="#">
+        <svg class="icon icon-xs"><use xlink:href="./assets/svg/symbols.svg#hashtag"></use></svg>
+        Search Ranking
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="./assets/svg/symbols.svg#chevron-right"></use></svg>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <svg class="icon icon-xs"><use xlink:href="./assets/svg/symbols.svg#visitor"></use></svg>
+        Visitors
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="./assets/svg/symbols.svg#chevron-right"></use></svg>
+      </a>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <a href="#">
+        <svg class="icon icon-xs"><use xlink:href="./assets/svg/symbols.svg#folder"></use></svg>
+        Internal Pages
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="./assets/svg/symbols.svg#chevron-right"></use></svg>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+Styleguide Patterns.Report Navigation
+*/
+
+.repport-nav,
+.custom-nav {
+  border-radius: 5px;
+  font-size: 13px;
+  width: 170px;
+
+  &.border-nav {
+    border: 1px solid $grey-light;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+    .active {
+      border-left: none;
+      border-radius: 0;
+      border-right: none;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: block;
+  }
+
+  a {
+    border-radius: 3px;
+    color: $grey-dark;
+    display: block;
+    margin: 0;
+    padding: 5px 15px;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background-color: #eee;
+
+      .icon-hidden {
+        display: block;
+      }
+    }
+
+    .icon {
+      fill: $grey-dark;
+      margin-right: 5px;
+
+      &.pull-right {
+        margin: 5px -5px 0 0;
+      }
+    }
+  }
+
+  .active {
+    background-color: $primary-smoke;
+    border: 1px solid $primary-light;
+    color: $primary-dark;
+
+    a {
+      color: $primary-dark;
+    }
+
+    ul {
+      margin-left: 5px;
+      padding-left: 5px;
+    }
+
+    li {
+      border: none;
+
+      a {
+        color: $grey-dark;
+      }
+
+      &.active {
+        border-left: 1px solid $primary-light;
+
+        a {
+          color: $primary-dark;
+        }
+      }
+    }
+
+    .icon {
+      fill: $primary-dark;
+    }
+
+    .icon-hidden {
+      display: block;
+    }
+  }
+
+  .nav-section {
+    border-bottom: 1px solid $grey-lighter;
+    clear: both;
+    display: block;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+
+  .nav-title {
+    color: $primary-dark;
+    font-size: 11px;
+    font-weight: normal;
+    padding-left: 10px;
+    text-transform: uppercase;
+  }
+}
+
+/*
+Navigaiton block
+
+Markup:
+<div class="custom-nav border-nav">
+  <ul>
+    <li>
+      <h6 class="nav-title">Navigation</h6>
+    </li>
+    <li class="active">
+      <a href="#">Active link</a>
+    </li>
+    <li>
+      <a href="#">Link</a>
+    </li>
+  </ul>
+</div>
+
+Styleguide Patterns.Report Navigation.Navigaiton block
+*/
+
+/*
+Nested Navigaiton block
+
+Markup:
+<div class="custom-nav border-nav">
+  <ul>
+    <li>
+      <h6 class="nav-title">Navigation</h6>
+    </li>
+    <li class="active">
+      <a href="#">Active link</a>
+      <ul>
+        <li>
+          <a href="#">First</a>
+        </li>
+        <li class="active">
+          <a href="#">Active link</a>
+        </li>
+        <li>
+          <a href="#">Last</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Link</a>
+    </li>
+  </ul>
+</div>
+
+Styleguide Patterns.Report Navigation.Nested Navigaiton block
+*/

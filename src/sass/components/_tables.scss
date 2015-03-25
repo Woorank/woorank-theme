@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/*
+Table
+
+                 - Basic table
+.table-striped   - Add zebra-striping to the rows.
+.table-bordered  - For borders on all sides of the table and cells.
+.table-hover     - To enable a hover state on table rows.
+.table-condensed - To make tables more compact by cutting cell padding in half.
+
+Markup: markup/tables.hbs
+
+Styleguide Components.Table
+*/
+
+/*
+Contextual classes
+
+.active  - Applies the hover color to a particular row or cell
+.success - Indicates a successful or positive action
+.info    - Indicates a neutral informative change or action
+.warning - Indicates a warning that might need attention
+.danger  - Indicates a dangerous or potentially negative action
+
+Markup:
+<tr class={{modifier_class}}>
+  <td>1</td>
+  <td>Mark</td>
+  <td>Otto</td>
+  <td>@mdo</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td class={{modifier_class}}>Mark</td>
+  <td>Otto</td>
+  <td>@mdo</td>
+</tr>
+<sg:wrapper>
+<table class="table">
+  <tbody>
+    <sg:wrapper-content/>
+  </tbody>
+</table>
+</sg:wrapper>
+
+Styleguide Components.Contextual classes
+*/

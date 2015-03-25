@@ -1,0 +1,313 @@
+@charset "UTF-8";
+
+/*
+Navbar
+
+Markup:
+<nav class="navbar" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-target="#header-navigation">menu<span class="caret"></span></button>
+      <a class="navbar-brand" href="https://www.woorank.com">
+        <svg class="icon logo"><use xlink:href="./assets/svg/symbols.svg#logo"></use></svg>
+      </a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="header-navigation">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Link</a></li>
+        <li class="active"><a href="#">Link active</a></li>
+        <li class="disabled"><a href="#">Link disabled</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li id="logged-container">
+          <a href="#" data-toggle="dropdown" class="dropdown-toggle" role="button" aria-expanded="false">
+            info@woorank.com
+            <svg class="icon icon-xs chevron-down">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./assets/svg/symbols.svg#chevron-down"></use>
+            </svg>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="#">Upgrade / Downgrade</a>
+            </li>
+            <li>
+              <a href="#">My account</a>
+            </li>
+            <li>
+              <a href="#">Edit PDF Templates</a>
+            </li>
+            <li>
+              <a href="#">Logout</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+            English  <svg class="icon icon-xs chevron-down">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./assets/svg/symbols.svg#chevron-down"></use>
+            </svg>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="#">Español</a>
+              <a href="#">Français</a>
+              <a href="#">Deutsch</a>
+              <a href="#">Português</a>
+              <a href="#">Nederlands</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a id="intercom-box" href="mailto:i6hb7isf@incoming.intercom.io" title="Contactez-nous !">
+            <svg class="icon icon-email">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./assets/svg/symbols.svg#email-reverse"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+Styleguide Patterns.Navbar
+*/
+
+
+.navbar {
+  background-color: $white;
+  border-radius: 0;
+  border: none;
+  box-shadow: 0 0 1px rgba($black, .5);
+  margin-bottom: 0;
+  position: static;
+
+  .btn {
+    color: $grey-dark;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .chevron-down {
+    margin-left: 5px;
+    margin-top: 5px;
+    fill: $grey-medium;
+
+    @include breakpoint($screen-sm, $reverse: true) {
+      margin-top: 8px;
+    }
+  }
+
+  .icon-email {
+    margin-bottom: -5px;
+    margin-top: -3px;
+  }
+
+  .dropdown-menu {
+    font-size: 13px;
+    min-width: 190px;
+    max-height: none;
+  }
+
+  .menu {
+    position: relative;
+    top: 5px;
+  }
+}
+
+.navbar-nav {
+  > li {
+    margin-bottom: 0;
+
+    > button,
+    > a {
+      color: $grey-medium;
+      font-size: 13px;
+
+      &:hover,
+      &:focus {
+        color: $grey-smoke;
+
+        svg {
+          fill: $grey-smoke;
+        }
+      }
+    }
+  }
+}
+
+.navbar-brand {
+  height: auto;
+  line-height: 20px;
+}
+
+.navbar-toggle {
+  margin-bottom: 0;
+  margin-top: 6px;
+}
+
+.navbar-nav {
+  > li {
+    margin-bottom: 0;
+
+    > button,
+    > a {
+      color: $grey-medium;
+      font-size: 13px;
+
+      &:hover,
+      &:focus {
+        .navbar-icon-email {
+          fill: $white;
+        }
+      }
+    }
+  }
+}
+
+.navbar-btn {
+  @include breakpoint($screen-sm, $reverse: true) {
+    width: 95%;
+  }
+}
+
+.navbar-collapse {
+  @include breakpoint($screen-sm, $reverse: true) {
+
+    -webkit-backface-visibility: hidden;
+    @include box-shadow(inset 0 -1px 1px $black);
+    @include transition(all 350ms ease-out);
+    background-color: $grey-dark;
+    bottom: 0;
+    display: block;
+    height: 100% !important;
+    margin: 0 !important;
+    overflow: scroll;
+    padding: 0;
+    position: fixed;
+    right: -($mobile-nav-size);
+    top: 0;
+    visibility: hidden;
+    width: $mobile-nav-size;
+    z-index: 10000;
+
+    &.in,
+    &.collapsing {
+      visibility: visible;
+    }
+
+    .navbar-nav {
+      margin: 0 0 -20px 0;
+      padding: 14px 0;
+
+      a,
+      .dropdown a {
+        background-color: transparent;
+        border-bottom: 1px solid lighten($grey-dark, 5%);
+        color: $white;
+        font-size: 16px;
+        line-height: 1.6;
+
+        &:hover,
+        &:focus,
+        &.open {
+          background-color: lighten($grey-dark, 5%);
+          border-color: lighten($grey-dark, 5%);
+          color: $white;
+
+          svg {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar-icon-email {
+  fill: $grey-lighter;
+}
+
+/*
+Buttons
+
+Markup:
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">menu<span class="caret"></span></button>
+      <a class="navbar-brand" href="https://www.woorank.com">
+        <svg class="icon logo"><use xlink:href="./assets/svg/symbols.svg#logo"></use></svg>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <button class="btn btn-sm btn-default navbar-btn">Sign in</button>
+      <button class="btn btn-sm btn-default navbar-btn pseudo-class-hover">Sign in</button>
+      <button class="btn btn-sm btn-default navbar-btn active">Sign in</button>
+    </div>
+  </div>
+</nav>
+
+Styleguide Patterns.Navbar.Buttons
+*/
+
+.navbar {
+  .navbar-collapse {
+    .btn-sm {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+}
+
+/*
+Buttons Sizes
+
+Markup:
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">menu<span class="caret"></span></button>
+      <a class="navbar-brand" href="https://www.woorank.com">
+        <svg class="icon logo"><use xlink:href="./assets/svg/symbols.svg#logo"></use></svg>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <p class="navbar-text small">Signed in as Pierre Abergel</p>
+    </div>
+  </div>
+</nav>
+
+Styleguide Patterns.Navbar.Buttons Sizes
+*/
+
+.navbar-text.small {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/*
+Signed Right
+
+Markup:
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">menu<span class="caret"></span></button>
+      <a class="navbar-brand" href="https://www.woorank.com">
+        <svg class="icon logo"><use xlink:href="./assets/svg/symbols.svg#logo"></use></svg>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <p class="navbar-text small pull-right">Signed in as <a href="#">Signed in as Pierre Abergel</a></p>
+    </div>
+  </div>
+</nav>
+
+Styleguide Patterns.Navbar.Signed Right
+*/

@@ -1,0 +1,123 @@
+/*
+Buttons
+
+Use any of the available button classes to quickly create a styled button.
+
+Markup: markup/buttons.hbs
+
+.btn-default - Standard button
+.btn-black   - Black variant
+.btn-primary - Provides extra visual weight and identifies the primary action in a set of buttons
+.btn-success - Indicates a successful or positive action
+.btn-info    - Contextual button for informational alert messages
+.btn-warning - Indicates caution should be taken with this action
+.btn-danger  - Indicates a dangerous or potentially negative action
+.btn-link    - Deemphasize a button by making it look like a link while maintaining button behavior
+
+Styleguide Components.Buttons
+*/
+
+@mixin woo-button-variant($border, $shadow-alpha) {
+  @include box-shadow(inset 0 -2px 0 rgba(0, 0, 0, $shadow-alpha));
+  border: $border;
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    @include opacity(.35);
+  }
+}
+
+.btn-default {
+  @include woo-button-variant(1px solid $btn-default-border, 0);
+}
+
+.btn-primary {
+  @include woo-button-variant(none, 0.2);
+}
+
+.btn-success {
+  @include woo-button-variant(none, 0.2);
+}
+
+.btn-info {
+  @include woo-button-variant(none, 0.2);
+}
+
+.btn-warning {
+  @include woo-button-variant(none, 0.2);
+}
+
+.btn-danger {
+  @include woo-button-variant(none, 0.2);
+}
+
+.btn-black {
+  background-color: $black;
+  color: $white;
+}
+
+/*
+Sizes
+
+Fancy larger or smaller buttons? Add `.btn-lg`, `.btn-sm`, or `.btn-xs` for additional sizes.
+
+Markup: markup/buttons-sizes.hbs
+
+.btn-lg - Large button
+        - Normal button
+.btn-sm - Small button
+.btn-xs - Extra small button
+.btn-block - Block level buttons (spanning the full width of a parent)
+
+Styleguide Components.Buttons.Sizes
+*/
+
+.btn-xs {
+  font-size: $font-size-xs;
+}
+
+/*
+Active/Hover
+
+Markup: markup/buttons-states.hbs
+
+        - Normal state
+:hover  - Hover state
+:active - Active pseudo class
+
+Styleguide Components.Buttons.Status
+*/
+
+/*
+Disabled
+
+Add the disabled attribute to buttons and the .disabled class to anchors.
+
+Markup:
+<button class="btn btn-default" disabled="disabled">
+  Button Text
+</button>
+
+Styleguide Components.Buttons.Disabled
+*/
+
+/*
+Links
+
+Markup:
+<a  href="#" class="btn btn-primary active">Button Text</a>
+<a  href="#" class="btn btn-default active">Button Text</a>
+<a  href="#" class="btn btn-primary disabled">Button Text</a>
+<a  href="#" class="btn btn-default disabled">Button Text</a>
+
+Styleguide Components.Buttons.Links
+*/
+
+/*
+Buttons Groups
+
+Markup: markup/buttons-group.hbs
+
+Styleguide Components.Buttons.Groups
+*/

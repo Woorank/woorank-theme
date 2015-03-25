@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+/*
+Popover
+
+Markup:
+<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+
+Styleguide Components.Popover
+*/
+
+$popoverContext: ('marketing-checklist');
+
+@each $context in $popoverContext {
+  .#{$context} .popover {
+    border-color: $border-color;
+
+    &.bottom {
+
+      .arrow {
+        border-bottom-color: $white;
+        border-width: 0 5px 5px;
+        margin-left: -5px;
+        top: -5px;
+
+        &:after {
+          border-bottom-color: $border-color;
+          border-width: 0 5px 5px;
+          left: 0;
+          margin-left: -5px;
+          top: -1px;
+        }
+      }
+    }
+
+    .popover-content {
+      color: $grey-darker;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .popover-note {
+      font-size: 90%;
+      margin: 12px 0 0 !important;
+    }
+  }
+}

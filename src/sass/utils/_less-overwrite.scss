@@ -1,0 +1,36 @@
+/*
+  DELETE THIS AFTER REMOVE OLD LESS STYLES
+*/
+.woo-theme {
+  @extend body;
+  height: auto;
+  min-height: 0;
+}
+
+/* Bootstrap box-sizing changes -> Focus on new design only */
+* {
+  box-sizing: content-box;
+}
+
+$newFrameworkPages: ('about', 'tos', 'privacy', 'jobs', 'developers', 'recent');
+
+#top * {
+  box-sizing: border-box;
+}
+
+@each $page in $newFrameworkPages {
+  .#{$page} .container,
+  .#{$page} .container * {
+    box-sizing: border-box;
+  }
+}
+
+
+$newFrameworkComponents: ('marketing-checklist', 'popover', 'dropdown');
+
+@each $component in $newFrameworkComponents {
+  .#{$component},
+  .#{$component} * {
+    box-sizing: border-box;
+  }
+}

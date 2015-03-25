@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+// Content part
+
+#content {
+  border-radius: 5px;
+  margin-top: 30px;
+
+  .review & {
+    border-radius: 0;
+    margin-top: 20px;
+  }
+}
+
+.page-container {
+  margin-top: 1px;
+  background-color: $white;
+  padding: 0 30px 30px;
+}
+
+.page-narrow {
+  max-width: 720px;
+  margin: 1px auto 0 auto;
+  padding: 40px 0;
+}

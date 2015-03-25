@@ -1,0 +1,102 @@
+/*
+Colors
+
+There the colors used in Woorank.
+
+More infos about colors here.
+
+markup: markup/colors.hbs
+
+.grey-darker      - $grey-darker
+.grey-dark        - $grey-dark
+.grey-medium      - $grey-medium
+.grey             - $grey
+.grey-light       - $grey-light
+.grey-lighter     - $grey-lighter
+.grey-smoke       - $grey-smoke
+.primary-dark     - $primary-dark
+.primary          - $primary
+.primary-light    - $primary-light
+.primary-lighter  - $primary-lighter
+.primary-smoke    - $primary-smoke
+.success-dark     - $success-dark
+.success          - $success
+.success-light    - $success-light
+.success-lighter  - $success-lighter
+.success-smoke    - $success-smoke
+.warning-dark     - $warning-dark
+.warning          - $warning
+.warning-light    - $warning-light
+.warning-lighter  - $warning-lighter
+.warning-smoke    - $warning-smoke
+.error-dark       - $error-dark
+.error            - $error
+.error-light      - $error-light
+.error-lighter    - $error-lighter
+.error-smoke      - $error-smoke
+.competitor-dark  - $competitor-dark
+.competitor       - $competitor
+.competitor-light - $competitor-light
+
+Weight: 6
+
+Styleguide Colors
+*/
+
+
+$black            : #000000;
+$white            : #ffffff;
+
+$grey-smoke       : #F5F7FA;
+$grey-lighter     : #E6E9ED;
+$grey-light       : #CCD1D9;
+$grey             : #AAB2BD;
+$grey-medium      : #656D78;
+$grey-dark        : #434A54;
+$grey-darker      : #353B48;
+
+$primary-dark     : #3876AC;
+$primary          : #428BCA;
+$primary-light    : #A0C5E4;
+$primary-lighter  : #CFE2F2;
+$primary-smoke    : #ECF3FA;
+
+$success-dark     : #4E9D4E;
+$success          : #5CB85C;
+$success-light    : #ADDBAD;
+$success-lighter  : #D7EDD6;
+$success-smoke    : #EEF8EE;
+
+$warning-dark     : #D3860C;
+$warning          : #F89D0E;
+$warning-light    : #FBCE86;
+$warning-lighter  : #FEE6C8;
+$warning-smoke    : #FEF5E6;
+
+$error-dark       : #B94743;
+$error            : #D9534F;
+$error-light      : #ECA9A7;
+$error-lighter    : #F6D4D4;
+$error-smoke      : #FBEDED;
+
+$competitor-light : #AFE5E7;
+$competitor       : #539597;
+$competitor-dark  : #29494A;
+
+$text-color       : $grey-medium;
+$text-color-light : $grey;
+
+$link-color       : $primary;
+$link-color-hover : $primary-dark;
+
+$border-color     : $grey-light;
+
+$hover-bg         : $grey-smoke;
+$hover-border     : $grey-lighter;
+$hover-color      : $grey-medium;
+
+$active-bg        : $primary-smoke;
+$active-border    : $primary-lighter;
+$active-color     : $primary-dark;
+
+$disabled-color   : $grey-light;

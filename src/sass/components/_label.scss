@@ -1,0 +1,40 @@
+/*
+Labels
+
+markup: <span class="label {{modifier_class}}">label {{modifier_class}}</span>
+
+Styleguide Components.Labels
+*/
+
+.label {
+  font-size: .8em;
+  font-weight: 400;
+  padding: .1em .4em .2em;
+  position: relative;
+  top: -.1em;
+
+  &.label-default {
+    background-color: $grey-smoke;
+    color: $grey-lighter;
+  }
+
+  &.label-primary {
+    background-color: $primary-lighter;
+    color: $primary-dark;
+  }
+
+  &.label-success {
+    background-color: $success-lighter;
+    color: $success-dark;
+  }
+
+  &.label-warning {
+    background-color: $warning-lighter;
+    color: $warning-dark;
+  }
+
+  &.label-danger {
+    background-color: $error-lighter;
+    color: $error-dark;
+  }
+}

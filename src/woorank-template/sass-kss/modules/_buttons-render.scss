@@ -1,0 +1,11 @@
+#section-componentsbuttons {
+  .modifier__example {
+    display: none;
+  }
+
+  .modifier__item {
+    .modifier__example {
+      display: block;
+    }
+  }
+}

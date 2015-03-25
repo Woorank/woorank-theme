@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/*
+Progress Bar
+
+Markup: markup/_dropdown.hbs
+
+Styleguide Components.Progress Bar
+*/
+
+.progress-container {
+  overflow: hidden;
+}
+
+.progress-label,
+.progress {
+  vertical-align: center;
+  display: inline-block;
+}
+
+.progress-label {
+  padding: 0 10px;
+  color: $grey-light;
+}
+
+.progress {
+  box-shadow: none;
+  background-color: $grey-smoke;
+
+  &.progress-xs {
+    height: 6px;
+
+    .progress-bar {
+      box-shadow: none;
+      height: 6px;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .progress-value {
+      display: none;
+    }
+  }
+
+  .progress-bar-marine {
+    background-color: #315D86; //old front marine color
+  }
+
+  .progress-value {
+    display: inline;
+  }
+}
