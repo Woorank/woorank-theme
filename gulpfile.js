@@ -7,6 +7,8 @@ var sass          = require('gulp-sass');
 var svgSprite     = require('gulp-svg-sprites');
 var connect       = require('gulp-connect');
 var exec          = require('child_process').exec;
+var pjson         = require('./package.json');
+var path          = require('path');
 
 var paths = {
   sass:          'src/sass',
@@ -29,13 +31,13 @@ gulp.task('default',
 );
 
 gulp.task('watch', function () {
-  gulp.watch(paths.sass + '/**/*.scss', ['sass', 'kss']);
-  gulp.watch(paths.sass + '/**/*.hbs', ['kss']);
+  gulp.watch(path.join(paths.sass, '**/*.scss'), ['sass', 'kss']);
+  gulp.watch(path.join(paths.sass, '**/*.hbs'), ['kss']);
   gulp.watch('src/woorank-template/**/*.html', ['kss']);
-  gulp.watch(paths.sassKss + '/**/*.scss', ['sass-kss', 'kss']);
-  gulp.watch(paths.svg + '/**/*.svg', ['sprite', 'kss']);
-  gulp.watch(paths.js + '/**/*.js', ['kss']);
-  gulp.watch(paths.build.cssKss + '/**/*.js', ['kss']);
+  gulp.watch(path.join(paths.sassKss, '**/*.scss'), ['sass-kss', 'kss']);
+  gulp.watch(path.join(paths.svg, '**/*.svg'), ['sprite', 'kss']);
+  gulp.watch(path.join(paths.js, '**/*.js'), ['kss']);
+  gulp.watch(path.join(paths.build.cssKss, '**/*.js'), ['kss']);
 });
 
 gulp.task('connect', function () {
@@ -55,30 +57,42 @@ gulp.task('kss', ['sass', 'sass-kss'], function (cb) {
 });
 
 gulp.task('sass', function () {
-  return gulp.src(paths.sass + '/*.scss')
+  return gulp.src(path.join(paths.sass, '*.scss'))
     .pipe(debug())
     .pipe(sass({
       imagePath: paths.build.img,
-      style: 'expanded',
+      outputStyle: 'expanded',
       includePaths: '/node_modules/bootstrap-sass/assets/stylesheets/'
     }))
     .pipe(autoprefixer())
     .pipe(gulp.dest(paths.build.css));
 });
 
+gulp.task('sass-build', function () {
+  return gulp.src(path.join(paths.sass, '*.scss'))
+    .pipe(debug())
+    .pipe(sass({
+      imagePath: paths.build.img,
+      outputStyle: 'compressed',
+      includePaths: '/node_modules/bootstrap-sass/assets/stylesheets/'
+    }))
+    .pipe(autoprefixer())
+    .pipe(gulp.dest(path.join('./output/', pjson.version)));
+});
+
 gulp.task('sass-kss', function () {
-  return gulp.src(paths.sassKss + '/*.scss')
+  return gulp.src(path.join(paths.sassKss, '/*.scss'))
     .pipe(debug())
     .pipe(sass({
       imagePath: paths.build.imgKss,
-      style: 'expanded'
+      outputStyle: 'expanded'
     }))
     .pipe(autoprefixer())
     .pipe(gulp.dest(paths.build.cssKss));
 });
 
 gulp.task('sprite', function () {
-  return gulp.src(paths.svg + '/*.svg')
+  return gulp.src(path.join(paths.svg, '*.svg'))
     .pipe(svgSprite({
       mode: 'symbols',
       preview: false,
@@ -89,7 +103,7 @@ gulp.task('sprite', function () {
     .pipe(gulp.dest(paths.build.svg));
 });
 
-gulp.task('publish', ['kss'], function () {
+gulp.task('publish', ['sass-build', 'kss'], function () {
   var awsConfig = require('./awsConfig');
   return gulp.src('./styleguide/**/*')
     .pipe(s3(awsConfig));
