@@ -26,7 +26,7 @@ var paths = {
   }
 };
 
-gulp.task('default', ['sprite', 'sass', 'kss', 'connect']);
+gulp.task('default', ['sprite', 'sass', 'kss', 'connect', 'watch']);
 
 gulp.task('watch', function () {
   gulp.watch(path.join(paths.sass, '**/*.scss'), ['sass', 'kss']);
