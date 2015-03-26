@@ -30,7 +30,9 @@ Markup:
   </ul>
   <ul class="nav-section">
     <li>
-      <h6 class="nav-title">Optimize</h6>
+      <h6 class="nav-title">
+        <a href="#">Optimize</a>
+      </h6>
     </li>
     <li>
       <a href="#">
@@ -63,7 +65,9 @@ Markup:
   </ul>
   <ul class="nav-section">
     <li>
-      <h6 class="nav-title">Promote</h6>
+      <h6 class="nav-title">
+        <a href="#">Promote</a>
+      </h6>
     </li>
     <li>
       <a href="#">
@@ -89,7 +93,9 @@ Markup:
   </ul>
   <ul class="nav-section">
     <li>
-      <h6 class="nav-title">Measure</h6>
+      <h6 class="nav-title">
+        <a href="#">Measure</a>
+      </h6>
     </li>
     <li>
       <a href="#">
@@ -227,6 +233,17 @@ Styleguide Patterns.Report Navigation
     font-weight: normal;
     padding-left: 10px;
     text-transform: uppercase;
+
+    a {
+      padding: 0;
+      color: $primary-dark;
+
+      &:hover,
+      &:focus {
+        color: $primary;
+        background: none;
+      }
+    }
   }
 }
 
@@ -237,7 +254,9 @@ Markup:
 <div class="custom-nav border-nav">
   <ul>
     <li>
-      <h6 class="nav-title">Navigation</h6>
+      <h6 class="nav-title">
+        <a href="#">Navigation</a>
+      </h6>
     </li>
     <li class="active">
       <a href="#">Active link</a>
@@ -258,7 +277,9 @@ Markup:
 <div class="custom-nav border-nav">
   <ul>
     <li>
-      <h6 class="nav-title">Navigation</h6>
+      <h6 class="nav-title">
+        <a href="#">Navigation</a>
+      </h6>
     </li>
     <li class="active">
       <a href="#">Active link</a>

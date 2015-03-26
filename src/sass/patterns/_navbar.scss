@@ -121,20 +121,29 @@ Styleguide Patterns.Navbar
 }
 
 .navbar-nav {
-  > li {
+  li {
     margin-bottom: 0;
 
-    > button,
-    > a {
+  a {
       color: $grey-medium;
       font-size: 13px;
 
+      .icon {
+        fill: $grey;
+
+        &.icon-email {
+          fill: $grey-smoke;
+        }
+      }
+
       &:hover,
       &:focus {
-        color: $grey-smoke;
+        .icon {
+          fill: $grey;
 
-        svg {
-          fill: $grey-smoke;
+          &.icon-email {
+            fill: $white;
+          }
         }
       }
     }
@@ -152,11 +161,10 @@ Styleguide Patterns.Navbar
 }
 
 .navbar-nav {
-  > li {
+  li {
     margin-bottom: 0;
 
-    > button,
-    > a {
+    a {
       color: $grey-medium;
       font-size: 13px;
 
@@ -220,7 +228,7 @@ Styleguide Patterns.Navbar
           border-color: lighten($grey-dark, 5%);
           color: $white;
 
-          svg {
+          .icon {
             fill: $white;
           }
         }

@@ -94,13 +94,11 @@ Styleguide Colors
         color: #AAB2BD;
         font-weight: 300; }
     #kss-node article.container .content {
-      overflow: hidden;
       background: #ffffff;
       border-radius: 5px;
       padding: 30px; }
     #kss-node article.container .modifier__wrapper {
       clear: both;
-      overflow: hidden;
       padding-bottom: 30px; }
   #kss-node .footer-section {
     clear: both;
