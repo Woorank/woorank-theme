@@ -55,6 +55,13 @@ Styleguide Components.Buttons
 .btn-black {
   background-color: $black;
   color: $white;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $grey-dark;
+    color: $white;
+  }
 }
 
 /*

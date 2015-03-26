@@ -93,7 +93,7 @@ Styleguide Patterns.Navbar
     }
   }
 
-  .chevron-down {
+  .icon-chevron-down {
     margin-left: 5px;
     margin-top: 5px;
     fill: $grey-medium;
@@ -123,6 +123,12 @@ Styleguide Patterns.Navbar
 .navbar-nav {
   li {
     margin-bottom: 0;
+
+    &.active {
+      a {
+        font-weight: 600;
+      }
+    }
 
   a {
       color: $grey-medium;
@@ -312,7 +318,7 @@ Markup:
       </a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <p class="navbar-text small pull-right">Signed in as <a href="#">Signed in as Pierre Abergel</a></p>
+      <p class="navbar-text small pull-right">Signed in as <a href="#">Pierre Abergel</a></p>
     </div>
   </div>
 </nav>
