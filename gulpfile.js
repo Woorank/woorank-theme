@@ -76,7 +76,7 @@ gulp.task('sass-build', function () {
       includePaths: '/node_modules/bootstrap-sass/assets/stylesheets/'
     }))
     .pipe(autoprefixer())
-    .pipe(gulp.dest(path.join('./output/', pjson.version)));
+    .pipe(gulp.dest(path.join('./styleguide/build/', pjson.version)));
 });
 
 gulp.task('sass-kss', function () {
@@ -104,6 +104,6 @@ gulp.task('sprite', function () {
 
 gulp.task('publish', ['sass-build', 'kss'], function () {
   var awsConfig = require('./awsConfig');
-  return gulp.src(['./styleguide/**/*', 'output/**/*'])
+  return gulp.src('./styleguide/**/*')
     .pipe(s3(awsConfig));
 });
