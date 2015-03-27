@@ -3,37 +3,65 @@
 /*
 Progress Bar
 
-Markup: markup/_dropdown.hbs
+Markup: markup/progress-bar.hbs
+
+.progress-success - success
+.progress-warning - warning
+.progress-danger - danger
+.progress-md - md
+.progress-sm - sm
+.progress-xs - xs
+.progress-xxs - xxs
 
 Styleguide Components.Progress Bar
 */
 
 .progress-container {
   overflow: hidden;
+
+  &.progress-with-label {
+    .progress {
+      display: inline-block;
+      width: 60%;
+    }
+  }
 }
 
 .progress-label,
 .progress {
-  vertical-align: center;
+  vertical-align: middle;
   display: inline-block;
 }
 
 .progress-label {
+  line-height: 22px;
+  font-size: 13px;
+  font-weight: normal;
   padding: 0 10px;
-  color: $grey-light;
+  color: $grey;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 22px;
+  box-shadow: none;
+  border: 1px solid $primary;
+  border-radius: 0 3px 3px 0;
 }
 
 .progress {
+  display: block;
   box-shadow: none;
+  margin-bottom: 0;
   background-color: $grey-smoke;
 
-  &.progress-xs {
-    height: 6px;
+  // XXS size
+  &.progress-xxs {
+    height: 1px;
 
     .progress-bar {
-      box-shadow: none;
-      height: 6px;
-      border-radius: 0 3px 3px 0;
+      height: 0;
+      border-radius: 0;
     }
 
     .progress-value {
@@ -41,11 +69,74 @@ Styleguide Components.Progress Bar
     }
   }
 
-  .progress-bar-marine {
-    background-color: #315D86; //old front marine color
+  // XS size
+  &.progress-xs {
+    height: 6px;
+
+    .progress-bar {
+      height: 4px;
+    }
+
+    .progress-value {
+      display: none;
+    }
   }
+
+  // SM size
+  &.progress-sm {
+    height: 12px;
+
+    .progress-bar {
+      height: 10px;
+      line-height: 10px;
+      font-size: 10px;
+    }
+  }
+
+  // MD size
+  &.progress-md {
+    height: 18px;
+
+    .progress-bar {
+      height: 16px;
+      line-height: 16px;
+      font-size: 12px;
+    }
+  }
+
 
   .progress-value {
     display: inline;
+  }
+}
+
+// COLORS
+.progress-marine {
+  .progress-bar {
+    background-color: #315D86; //old front marine color
+  }
+}
+
+.progress-success {
+  .progress-bar {
+    background-color: $success-light;
+    border-color: $success;
+    color: $success;
+  }
+}
+
+.progress-warning {
+  .progress-bar {
+    background-color: $warning-light;
+    border-color: $warning;
+    color: $warning;
+  }
+}
+
+.progress-danger {
+  .progress-bar {
+    background-color: $error-light;
+    border-color: $error;
+    color: $error;
   }
 }
