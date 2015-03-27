@@ -10,7 +10,7 @@ Markup:
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-target="#header-navigation">menu<span class="caret"></span></button>
       <a class="navbar-brand" href="https://www.woorank.com">
-        <svg class="icon icon-logo"><use xlink:href="./assets/svg/symbols.svg#logo"></use></svg>
+        <svg class="icon icon-logo"><use xlink:href="#logo"></use></svg>
       </a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -25,7 +25,7 @@ Markup:
           <a href="#" data-toggle="dropdown" class="dropdown-toggle" role="button" aria-expanded="false">
             info@woorank.com
             <svg class="icon icon-xs chevron-down">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./assets/svg/symbols.svg#chevron-down"></use>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-down"></use>
             </svg>
           </a>
           <ul class="dropdown-menu" role="menu">
@@ -46,7 +46,7 @@ Markup:
         <li>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
             English  <svg class="icon icon-xs chevron-down">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./assets/svg/symbols.svg#chevron-down"></use>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-down"></use>
             </svg>
           </a>
           <ul class="dropdown-menu" role="menu">
@@ -62,7 +62,7 @@ Markup:
         <li>
           <a id="intercom-box" href="mailto:i6hb7isf@incoming.intercom.io" title="Contactez-nous !">
             <svg class="icon icon-email">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./assets/svg/symbols.svg#email-reverse"></use>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#email-reverse"></use>
             </svg>
           </a>
         </li>
@@ -256,7 +256,7 @@ Markup:
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">menu<span class="caret"></span></button>
       <a class="navbar-brand" href="https://www.woorank.com">
-        <svg class="icon icon-logo"><use xlink:href="./assets/svg/symbols.svg#logo"></use></svg>
+        <svg class="icon icon-logo"><use xlink:href="#logo"></use></svg>
       </a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -288,7 +288,7 @@ Markup:
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">menu<span class="caret"></span></button>
       <a class="navbar-brand" href="https://www.woorank.com">
-        <svg class="icon icon-logo"><use xlink:href="./assets/svg/symbols.svg#logo"></use></svg>
+        <svg class="icon icon-logo"><use xlink:href="#logo"></use></svg>
       </a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -314,7 +314,7 @@ Markup:
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">menu<span class="caret"></span></button>
       <a class="navbar-brand" href="https://www.woorank.com">
-        <svg class="icon icon-logo"><use xlink:href="./assets/svg/symbols.svg#logo"></use></svg>
+        <svg class="icon icon-logo"><use xlink:href="#logo"></use></svg>
       </a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
