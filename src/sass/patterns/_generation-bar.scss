@@ -1,0 +1,61 @@
+/*
+Generation bar
+
+markup: markup/generation-bar.hbs
+
+Styleguide Patterns.Generation bar
+*/
+
+.generation-bar {
+
+  .form-control,
+  .input-group,
+  .input-group-btn,
+  .input-group-btn .btn {
+    display: block;
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+
+  .input-group {
+    @include breakpoint($screen-sm) {
+      display: table;
+    }
+  }
+
+  .form-control,
+  .form-control:first-child {
+    border-color: $primary;
+    height: auto;
+    padding: 12px;
+    border-radius: 3px 3px 0 0;
+
+    @include breakpoint($screen-sm) {
+      display: table-cell;
+      float: left;
+      border-radius: 3px 0 0 3px;
+    }
+  }
+
+  .input-group-btn {
+    text-align: center;
+
+    @include breakpoint($screen-sm) {
+      text-align: left;
+      display: table-cell;
+      width: 1%;
+    }
+
+    .btn {
+      padding: 13px;
+      border-radius: 0 0 3px 3px;
+
+      @include breakpoint($screen-sm) {
+        border-radius: 0 3px 3px 0;
+      }
+    }
+  }
+
+
+}

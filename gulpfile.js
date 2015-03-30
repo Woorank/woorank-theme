@@ -27,6 +27,7 @@ var paths = {
 };
 
 gulp.task('default', ['sprite', 'sass', 'kss', 'connect', 'watch']);
+gulp.task('docker', ['connect']);
 
 gulp.task('watch', function () {
   gulp.watch(path.join(paths.sass, '**/*.scss'), ['sass', 'kss']);

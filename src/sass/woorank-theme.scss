@@ -49,9 +49,11 @@ Styleguide Components
 @import "components/hero-banner";
 @import "components/label";
 @import "components/modal";
+@import "components/page-header";
 @import "components/popover";
 @import "components/progress-bar";
 @import "components/tables";
+@import "components/tooltip";
 
 /*
 Patterns
@@ -60,10 +62,11 @@ Weight: 2
 
 Styleguide Patterns
 */
+@import "patterns/experts";
+@import "patterns/generation-bar";
 @import "patterns/marketing-checklist";
 @import "patterns/navbar";
 @import "patterns/review-left-menu";
-@import "patterns/experts";
 
 /*
 Structures

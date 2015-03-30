@@ -4,8 +4,8 @@
 
 body.home {
   background-color: $white;
-}
 
-.home-container {}
-.home-content {}
-.home-call-to-action-top {}
+  .tooltip-inner {
+    max-width: none;
+  }
+}

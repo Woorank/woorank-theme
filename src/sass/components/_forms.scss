@@ -13,7 +13,7 @@ Styleguide Components.Forms
 */
 
 .form-control {
-  @include box-shadow(inset 0 1px 1px rgba(0,0,0,.12));
+  @include box-shadow(none);
 
   &:focus {
     @include box-shadow(none);
