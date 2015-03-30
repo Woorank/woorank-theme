@@ -25,6 +25,12 @@ $newFrameworkPages: ('home', 'about', 'tos', 'privacy', 'jobs', 'developers', 'r
   }
 }
 
+.home .home-container {
+  * {
+    box-sizing: border-box;
+  }
+}
+
 
 $newFrameworkComponents: ('marketing-checklist', 'popover', 'dropdown');
 

@@ -17,11 +17,7 @@
       }
     }
 
-    &#colors-primary-dark,
-    &#colors-success-dark,
-    &#colors-warning-dark,
-    &#colors-error-dark,
-    &#colors-competitor-dark {
+    &[id*="-dark-"] {
       clear: left;
     }
 
@@ -34,7 +30,6 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 100%;
       height: auto;
       padding: 5px;
       color: $white;

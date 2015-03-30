@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/*
+Hero Banner
+
+markup: TODO
+
+Styleguide Components.Hero Banner
+*/
+
+.hero-banner {
+  clear: both;
+  height: 365px; // design show 320px height
+  overflow: hidden;
+  position: relative;
+
+  @include breakpoint($screen-sm) {
+    height: 340px;
+  }
+
+  img {
+    display: block;
+    height: 100%;
+    left: 50%;
+    max-width: none;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    width: auto;
+
+    @include breakpoint($screen-sm) {
+      height: auto;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+    }
+  }
+}

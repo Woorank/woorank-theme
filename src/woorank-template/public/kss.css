@@ -8,36 +8,36 @@ More infos about colors here.
 
 markup: markup/colors.hbs
 
-.grey-darker      - $grey-darker
-.grey-dark        - $grey-dark
-.grey-medium      - $grey-medium
-.grey             - $grey
-.grey-light       - $grey-light
-.grey-lighter     - $grey-lighter
-.grey-smoke       - $grey-smoke
-.primary-dark     - $primary-dark
-.primary          - $primary
-.primary-light    - $primary-light
-.primary-lighter  - $primary-lighter
-.primary-smoke    - $primary-smoke
-.success-dark     - $success-dark
-.success          - $success
-.success-light    - $success-light
-.success-lighter  - $success-lighter
-.success-smoke    - $success-smoke
-.warning-dark     - $warning-dark
-.warning          - $warning
-.warning-light    - $warning-light
-.warning-lighter  - $warning-lighter
-.warning-smoke    - $warning-smoke
-.error-dark       - $error-dark
-.error            - $error
-.error-light      - $error-light
-.error-lighter    - $error-lighter
-.error-smoke      - $error-smoke
-.competitor-dark  - $competitor-dark
-.competitor       - $competitor
-.competitor-light - $competitor-light
+grey-darker      #353B48    - $grey-darker
+grey-dark        #434A54    - $grey-dark
+grey-medium      #656D78    - $grey-medium
+grey             #AAB2BD    - $grey
+grey-light       #CCD1D9    - $grey-light
+grey-lighter     #E6E9ED    - $grey-lighter
+grey-smoke       #F5F7FA    - $grey-smoke
+primary-dark     #3876AC    - $primary-dark
+primary          #428BCA    - $primary
+primary-light    #A0C5E4    - $primary-light
+primary-lighter  #CFE2F2    - $primary-lighter
+primary-smoke    #ECF3FA    - $primary-smoke
+success-dark     - $success-dark
+success          - $success
+success-light    - $success-light
+success-lighter  - $success-lighter
+success-smoke    - $success-smoke
+warning-dark     - $warning-dark
+warning          - $warning
+warning-light    - $warning-light
+warning-lighter  - $warning-lighter
+warning-smoke    - $warning-smoke
+error-dark       - $error-dark
+error            - $error
+error-light      - $error-light
+error-lighter    - $error-lighter
+error-smoke      - $error-smoke
+competitor-dark  - $competitor-dark
+competitor       - $competitor
+competitor-light - $competitor-light
 
 Weight: 6
 
@@ -128,7 +128,7 @@ Styleguide Colors
       opacity: 1;
       -webkit-transition: opacity .5s ease;
               transition: opacity .5s ease; }
-    #section-colors .modifier__item#colors-primary-dark, #section-colors .modifier__item#colors-success-dark, #section-colors .modifier__item#colors-warning-dark, #section-colors .modifier__item#colors-error-dark, #section-colors .modifier__item#colors-competitor-dark {
+    #section-colors .modifier__item[id*="-dark-"] {
       clear: left; }
     #section-colors .modifier__item .example-color {
       display: block; }
@@ -137,7 +137,6 @@ Styleguide Colors
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 100%;
       height: auto;
       padding: 5px;
       color: #ffffff;

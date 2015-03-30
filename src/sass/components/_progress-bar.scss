@@ -11,14 +11,13 @@ Markup: markup/progress-bar.hbs
 .progress-md - md
 .progress-sm - sm
 .progress-xs - xs
+.progress-xs.progress-visible-value - xs with value
 .progress-xxs - xxs
+.progress-xxs.progress-visible-value - xxs with value
 
 Styleguide Components.Progress Bar
 */
-
 .progress-container {
-  overflow: hidden;
-
   &.progress-with-label {
     .progress {
       display: inline-block;
@@ -31,6 +30,8 @@ Styleguide Components.Progress Bar
 .progress {
   vertical-align: middle;
   display: inline-block;
+  border-radius: 11px;
+  box-shadow: none;
 }
 
 .progress-label {
@@ -44,9 +45,9 @@ Styleguide Components.Progress Bar
 .progress-bar {
   width: 0%;
   height: 22px;
+  border-radius: 11px;
   box-shadow: none;
   border: 1px solid $primary;
-  border-radius: 0 3px 3px 0;
 }
 
 .progress {
@@ -55,6 +56,10 @@ Styleguide Components.Progress Bar
   margin-bottom: 0;
   background-color: $grey-smoke;
 
+  .progress-value {
+    display: inline;
+  }
+
   // XXS size
   &.progress-xxs {
     height: 1px;
@@ -62,6 +67,8 @@ Styleguide Components.Progress Bar
     .progress-bar {
       height: 0;
       border-radius: 0;
+      position: relative;
+      border-top: none;
     }
 
     .progress-value {
@@ -104,9 +111,23 @@ Styleguide Components.Progress Bar
     }
   }
 
+  &.progress-visible-value {
+    overflow: visible;
 
-  .progress-value {
-    display: inline;
+    .progress-bar {
+      position: relative;
+      overflow: visible;
+    }
+
+    .progress-value {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 1px;
+      width: 1px;
+      box-shadow: 0 0 10px 1px $primary;
+    }
   }
 }
 
