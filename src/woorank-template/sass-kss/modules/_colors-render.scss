@@ -46,38 +46,6 @@
   background: $grey-smoke;
   border: 1px solid $border-color;
 
-  $colors:
-  ('competitor-dark', $competitor-dark),
-  ('competitor', $competitor),
-  ('competitor-light', $competitor-light),
-  ('error-smoke', $error-smoke),
-  ('error-lighter', $error-lighter),
-  ('error-light', $error-light),
-  ('error', $error),
-  ('error-dark', $error-dark),
-  ('warning-smoke', $warning-smoke),
-  ('warning-lighter', $warning-lighter),
-  ('warning-light', $warning-light),
-  ('warning', $warning),
-  ('warning-dark', $warning-dark),
-  ('success-smoke', $success-smoke),
-  ('success-lighter', $success-lighter),
-  ('success-light', $success-light),
-  ('success', $success),
-  ('success-dark', $success-dark),
-  ('primary-smoke', $primary-smoke),
-  ('primary-lighter', $primary-lighter),
-  ('primary-light', $primary-light),
-  ('primary', $primary),
-  ('primary-dark', $primary-dark),
-  ('grey-darker', $grey-darker),
-  ('grey-dark', $grey-dark),
-  ('grey-medium', $grey-medium),
-  ('grey', $grey),
-  ('grey-light', $grey-light),
-  ('grey-lighter', $grey-lighter),
-  ('grey-smoke', $grey-smoke);
-
   @each $colorName, $colorValue in $colors {
     &.#{$colorName} {
       background-color: $colorValue;

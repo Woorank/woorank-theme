@@ -43,7 +43,7 @@ Weight: 6
 Styleguide Colors
 */
 
-
+// Colors values
 $black            : #000000;
 $white            : #ffffff;
 
@@ -83,20 +83,51 @@ $competitor-light : #AFE5E7;
 $competitor       : #539597;
 $competitor-dark  : #29494A;
 
+// Colors Links
 $text-color       : $grey-medium;
 $text-color-light : $grey;
-
 $link-color       : $primary;
 $link-color-hover : $primary-dark;
-
 $border-color     : $grey-light;
-
 $hover-bg         : $grey-smoke;
 $hover-border     : $grey-lighter;
 $hover-color      : $grey-medium;
-
 $active-bg        : $primary-smoke;
 $active-border    : $primary-lighter;
 $active-color     : $primary-dark;
-
 $disabled-color   : $grey-light;
+
+// Colors list
+$colors:
+  ('white', $white),
+  ('black', $black),
+  ('competitor-dark', $competitor-dark),
+  ('competitor', $competitor),
+  ('competitor-light', $competitor-light),
+  ('error-smoke', $error-smoke),
+  ('error-lighter', $error-lighter),
+  ('error-light', $error-light),
+  ('error', $error),
+  ('error-dark', $error-dark),
+  ('warning-smoke', $warning-smoke),
+  ('warning-lighter', $warning-lighter),
+  ('warning-light', $warning-light),
+  ('warning', $warning),
+  ('warning-dark', $warning-dark),
+  ('success-smoke', $success-smoke),
+  ('success-lighter', $success-lighter),
+  ('success-light', $success-light),
+  ('success', $success),
+  ('success-dark', $success-dark),
+  ('primary-smoke', $primary-smoke),
+  ('primary-lighter', $primary-lighter),
+  ('primary-light', $primary-light),
+  ('primary', $primary),
+  ('primary-dark', $primary-dark),
+  ('grey-darker', $grey-darker),
+  ('grey-dark', $grey-dark),
+  ('grey-medium', $grey-medium),
+  ('grey', $grey),
+  ('grey-light', $grey-light),
+  ('grey-lighter', $grey-lighter),
+  ('grey-smoke', $grey-smoke);

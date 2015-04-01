@@ -23,3 +23,10 @@
   margin: 1px auto 0 auto;
   padding: 40px 0;
 }
+
+// Page banner by color
+@each $colorName, $colorValue in $colors {
+  .banner-#{$colorName} {
+    background-color: $colorValue;
+  }
+}

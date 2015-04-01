@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 /*
 Colors
 
@@ -150,6 +149,12 @@ Styleguide Colors
   width: 100px;
   background: #F5F7FA;
   border: 1px solid #CCD1D9; }
+  .example-color.white {
+    background-color: #ffffff;
+    border-color: #e6e6e6; }
+  .example-color.black {
+    background-color: #000000;
+    border-color: black; }
   .example-color.competitor-dark {
     background-color: #29494A;
     border-color: #172929; }

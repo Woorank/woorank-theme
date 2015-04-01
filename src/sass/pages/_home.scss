@@ -3,9 +3,37 @@
 // Home page
 
 body.home {
-  background-color: $white;
+  background-color: $grey-smoke;
 
   .tooltip-inner {
     max-width: none;
+  }
+
+  .generation-bar {
+    .wait {
+      display: none;
+    }
+
+    &.waiting-for-ajax {
+      .ready {
+        display: none;
+      }
+      .wait {
+        display: block;
+      }
+    }
+  }
+
+  .features-container {
+    margin-bottom: 30px;
+  }
+
+  .features-content-col {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .generation-bar-container {
+    padding-bottom: 60px;
   }
 }
