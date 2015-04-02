@@ -1,9 +1,7 @@
-@charset "UTF-8";
-
 // Home page
 
 body.home {
-  background-color: $grey-smoke;
+  background-color: $bg;
 
   .tooltip-inner {
     max-width: none;
@@ -26,11 +24,24 @@ body.home {
 
   .features-container {
     margin-bottom: 30px;
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+
+      @include breakpoint($screen-sm) {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
   }
 
   .features-content-col {
     padding: 15px 30px;
-    border-left: 1px solid $grey-smoke;
+    border-top: 1px solid $border-color-light;
+
+    @include breakpoint($screen-sm) {
+      border-left: 1px solid $border-color-light;
+    }
 
     .icon.icon-chevron-right {
       margin-left: 5px;
@@ -38,13 +49,15 @@ body.home {
 
     .features-title {
       font-size: 20px;
-      color: $grey-darker;
+      color: $title-color;
     }
   }
 
   .features-illustration-col {
-    border-right: 1px solid $grey-smoke;
-    margin-right: -1px;
+    @include breakpoint($screen-sm) {
+      border-right: 1px solid $border-color-light;
+      margin-right: -1px;
+    }
   }
 
   .generation-bar-container {

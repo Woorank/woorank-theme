@@ -89,18 +89,21 @@ $competitor       : #539597;
 $competitor-dark  : #29494A;
 
 // Colors Links
-$text-color       : $grey-medium;
-$text-color-light : $grey;
-$link-color       : $primary;
-$link-color-hover : $primary-dark;
-$border-color     : $grey-light;
-$hover-bg         : $grey-smoke;
-$hover-border     : $grey-lighter;
-$hover-color      : $grey-medium;
-$active-bg        : $primary-smoke;
-$active-border    : $primary-lighter;
-$active-color     : $primary-dark;
-$disabled-color   : $grey-light;
+$active-bg         : $primary-smoke;
+$active-border     : $primary-lighter;
+$active-color      : $primary-dark;
+$bg                : $grey-smoke;
+$border-color      : $grey-light;
+$border-color-light: $grey-lighter;
+$disabled-color    : $grey-light;
+$hover-bg          : $grey-smoke;
+$hover-border      : $grey-lighter;
+$hover-color       : $grey-medium;
+$link-color        : $primary;
+$link-color-hover  : $primary-dark;
+$text-color        : $grey-medium;
+$text-color-light  : $grey;
+$title-color       : $grey-darker;
 
 // Colors list
 $colors:

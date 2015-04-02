@@ -18,6 +18,7 @@ var paths = {
   css:           'src/css',
   svg:           'src/svg',
   js:            'src/js',
+  img:           'src/img',
   build: {
     img:         'styleguide/assets/img',
     css:         'styleguide/assets/style',
@@ -28,8 +29,15 @@ var paths = {
   }
 };
 
-gulp.task('default',
-  ['browserify', 'sprite', 'sass', 'kss', 'connect', 'watch']);
+gulp.task('default', [
+  'move-pictures',
+  'browserify',
+  'sprite',
+  'sass',
+  'kss',
+  'connect',
+  'watch'
+]);
 
 gulp.task('docker', ['connect']);
 
@@ -48,6 +56,11 @@ gulp.task('connect', function () {
     root: 'styleguide',
     livereload: true
   });
+});
+
+gulp.task('move-pictures', function () {
+  return gulp.src(path.join(paths.img, '**/*.*'))
+    .pipe(gulp.dest(paths.build.img));
 });
 
 gulp.task('kss', ['sprite', 'browserify', 'sass', 'sass-kss'], function (cb) {
