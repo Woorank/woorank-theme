@@ -29,8 +29,22 @@ body.home {
   }
 
   .features-content-col {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px 30px;
+    border-left: 1px solid $grey-smoke;
+
+    .icon.icon-chevron-right {
+      margin-left: 5px;
+    }
+
+    .features-title {
+      font-size: 20px;
+      color: $grey-darker;
+    }
+  }
+
+  .features-illustration-col {
+    border-right: 1px solid $grey-smoke;
+    margin-right: -1px;
   }
 
   .generation-bar-container {
