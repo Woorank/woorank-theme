@@ -10,6 +10,26 @@ Styleguide Patterns.Generation bar
   max-width: 640px;
   margin: 0 auto;
 
+  &.generation-bar-small {
+    padding-top: 15px;
+
+    .form-control,
+    .form-control:first-child {
+      height: 30px;
+      border-color: $border-color;
+    }
+
+    .input-group-btn .btn {
+      box-shadow: inset 0 -2px 0 rgba($black, 0.2);
+      padding: 3px 13px;
+      height: 30px;
+
+      &.btn-primary {
+        color: $white;
+      }
+    }    
+  }
+
   .form-control,
   .input-group,
   .input-group-btn,

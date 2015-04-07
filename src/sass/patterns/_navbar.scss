@@ -84,6 +84,19 @@ Styleguide Patterns.Navbar
   position: static;
   border-bottom: 1px solid $border-color;
 
+  &.navbar-fixed-top {
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    transition: opacity 300ms linear, top 300ms linear;
+
+    &.navbar-hidden {
+      opacity: 0;
+      top: -61px;
+      transition: opacity 300ms linear, top 300ms linear;
+    }
+  }
+
   .btn {
     color: $grey-dark;
     box-shadow: none;
