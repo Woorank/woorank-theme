@@ -24,6 +24,25 @@ body.home {
 
   .features-container {
     margin-bottom: 30px;
+
+    &#features {
+      margin-top: 30px;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .score-illustration {
+      position: absolute;
+      right: 5%;
+      top: -10%;
+      width: 25%;
+    }
+
     .container {
       padding-left: 0;
       padding-right: 0;
@@ -36,20 +55,23 @@ body.home {
   }
 
   .features-content-col {
-    padding: 15px 30px;
     border-top: 1px solid $border-color-light;
+    padding: 15px 30px;
 
     @include breakpoint($screen-sm) {
       border-left: 1px solid $border-color-light;
+      border-top: none;
     }
 
     .icon.icon-chevron-right {
       margin-left: 5px;
+      position: relative;
+      top: -1px;
     }
 
     .features-title {
-      font-size: 20px;
       color: $title-color;
+      font-size: 20px;
     }
   }
 

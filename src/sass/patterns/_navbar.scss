@@ -79,9 +79,10 @@ Styleguide Patterns.Navbar
   background-color: $white;
   border-radius: 0;
   border: none;
-  box-shadow: 0 0 1px rgba($black, .5);
+  box-shadow: none;
   margin-bottom: 0;
   position: static;
+  border-bottom: 1px solid $border-color;
 
   .btn {
     color: $grey-dark;
