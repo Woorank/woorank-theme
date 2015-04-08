@@ -41,6 +41,8 @@ gulp.task('default', [
 
 gulp.task('docker', ['connect']);
 
+gulp.task('build', ['browserify-build', 'sass-build']);
+
 gulp.task('watch', function () {
   gulp.watch(path.join(paths.sass, '**/*.scss'), ['sass', 'kss']);
   gulp.watch(path.join(paths.sass, '**/*.hbs'), ['kss']);
@@ -82,13 +84,12 @@ gulp.task('browserify', function () {
 });
 
 gulp.task('browserify-build', function () {
-  return gulp.src(path.join(paths.js, 'woorank-theme.js'))
+  return gulp.src(path.join(paths.js, '*.js'))
     .pipe(browserify())
     .pipe(uglify())
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(path.join('./styleguide/build/', pjson.version)));
 });
-
 
 gulp.task('sass', function () {
   return gulp.src(path.join(paths.sass, '*.scss'))
@@ -138,7 +139,7 @@ gulp.task('sprite', function () {
     .pipe(gulp.dest(paths.build.svg));
 });
 
-gulp.task('publish', ['browserify-build', 'sass-build', 'kss'], function () {
+gulp.task('publish', ['build', 'kss'], function () {
   var awsConfig = require('./awsConfig');
   return gulp.src('./styleguide/**/*')
     .pipe(s3(awsConfig));
