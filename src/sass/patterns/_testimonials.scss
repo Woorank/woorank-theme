@@ -11,6 +11,9 @@ Styleguide Patterns.Testimonials
   padding: 50px 0;
 
   .testimonial {
+    @include breakpoint($screen-sm) {
+      height: 180px;
+    }
   }
 
   .testimonial-protrait {
@@ -20,14 +23,17 @@ Styleguide Patterns.Testimonials
       border-radius: 50%;
       display: block;
       width: 100%;
-      max-width: 70px;
+      width: 70px;
+      height: 70px;
 
       @include breakpoint($screen-sm) {
-        max-width: 80px;
+        width: 80px;
+        height: 80px;
       }
 
       @include breakpoint($screen-md) {
-        max-width: 100px;
+        width: 100px;
+        height: 100px;
       }
     }
   }
@@ -51,7 +57,7 @@ Styleguide Patterns.Testimonials
       position: absolute;
       top: -2px;
       left: 0;
-      content: '"';
+      content: "\"";
       color: $active-color;
       font-size: 15px;
     }
@@ -65,22 +71,26 @@ Styleguide Patterns.Testimonials
 
   .testimonial-author {
     font-size: 13px;
-    margin-top: 0;
-    padding-top: 0;
+    margin: 0;
+    padding: 0;
     border-top: none;
+    width: auto;
 
     &:before {
       display: none;
     }
+
+    span {
+      &[itemprop="name"] {
+        display: block;
+        color: $active-color;
+      }
+
+      &[itemprop="worksFor"] {
+        display: block;
+        color: $text-color-light;
+      }
+    }
   }
 
-  .testimonial-author-name {
-    display: block;
-    color: $active-color;
-  }
-
-  .testimonial-author-function {
-    display: block;
-    color: $text-color-light;
-  }
 }

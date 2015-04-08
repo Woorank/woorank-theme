@@ -8,11 +8,12 @@ var homeScrollAnimations = function homeScrollAnimations() {
     var topOffset = $genBarTop.offset();
     var bottomOffset = $genBarBottom.offset();
     var scroll = document.body.scrollTop;
+    var bodyHeight = $(document.body).height();
 
     // check offsets
     if (topOffset && bottomOffset) {
       topOffset.bottom = $genBarTop.outerHeight() + topOffset.top;
-      if (scroll > topOffset.bottom && scroll < bottomOffset.top) {
+      if (scroll > topOffset.bottom && scroll < bottomOffset.top - bodyHeight) {
         $fixedTopNavBar.removeClass('navbar-hidden');
       } else {
         $fixedTopNavBar.addClass('navbar-hidden');
@@ -22,6 +23,7 @@ var homeScrollAnimations = function homeScrollAnimations() {
 
   if ($fixedTopNavBar) {
     $(document).ready(function () {
+      $fixedTopNavBar.removeClass('hidden');
       showFixedTopNavBar();
     });
 

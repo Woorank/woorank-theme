@@ -3,6 +3,30 @@
 body.home {
   background-color: $bg;
 
+  .navbar {
+    &.navbar-fixed-top {
+      opacity: 1;
+      position: fixed;
+      top: 0;
+      transition: opacity 300ms linear, top 300ms linear;
+
+      &.navbar-hidden {
+        opacity: 0;
+        top: -61px;
+        transition: opacity 300ms linear, top 300ms linear;
+      }
+
+      .ip-blocked-button-container,
+      .cookie-blocked-button-container {
+        padding-top: 15px;
+
+        .btn-warning {
+          color: $white;
+        }
+      }
+    }
+  }
+
   .tooltip-inner {
     max-width: none;
   }
