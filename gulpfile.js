@@ -76,7 +76,7 @@ gulp.task('kss', ['sprite', 'browserify', 'sass', 'sass-kss'], function (cb) {
 });
 
 gulp.task('browserify', function () {
-  return gulp.src(path.join(paths.js, 'woorank-theme.js'))
+  return gulp.src(path.join(paths.js, '*.js'))
     .pipe(browserify({
       debug: true
     }))

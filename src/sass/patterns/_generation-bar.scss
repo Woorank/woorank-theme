@@ -10,11 +10,14 @@ Styleguide Patterns.Generation bar
   max-width: 640px;
   margin: 0 auto;
 
+  .required.error {
+    border-color: $error;
+  }
+
   &.generation-bar-small {
     padding-top: 15px;
 
-    .form-control,
-    .form-control:first-child {
+    .form-control {
       height: 30px;
       border-color: $border-color;
     }
@@ -46,12 +49,18 @@ Styleguide Patterns.Generation bar
     }
   }
 
-  .form-control,
-  .form-control:first-child {
+  .form-control {
     border-color: $primary;
     height: auto;
     padding: 12px;
     border-radius: 3px 3px 0 0;
+
+    &:first-child {
+      border-radius: 3px 3px 0 0;
+      @include breakpoint($screen-sm) {
+        border-radius: 3px 0 0 3px;
+      }
+    }
 
     @include breakpoint($screen-sm) {
       display: table-cell;
