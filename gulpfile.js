@@ -80,7 +80,8 @@ gulp.task('browserify', function () {
     .pipe(browserify({
       debug: true
     }))
-    .pipe(gulp.dest(paths.build.js));
+    .pipe(gulp.dest(paths.build.js))
+    .pipe(gulp.dest(path.join('./styleguide/build/', pjson.version)));
 });
 
 gulp.task('browserify-build', function () {
@@ -100,7 +101,8 @@ gulp.task('sass', function () {
       includePaths: '/node_modules/bootstrap-sass/assets/stylesheets/'
     }))
     .pipe(autoprefixer())
-    .pipe(gulp.dest(paths.build.css));
+    .pipe(gulp.dest(paths.build.css))
+    .pipe(gulp.dest(path.join('./styleguide/build/', pjson.version)));
 });
 
 gulp.task('sass-build', function () {

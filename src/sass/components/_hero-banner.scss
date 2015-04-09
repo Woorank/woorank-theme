@@ -3,18 +3,18 @@
 /*
 Hero Banner
 
-markup: TODO
+markup: markup/hero-banner.hbs
 
 Styleguide Components.Hero Banner
 */
 
 .hero-banner {
   clear: both;
-  height: 365px; // design show 320px height
+  height: 365px;
   overflow: hidden;
   position: relative;
 
-  @include breakpoint($screen-sm) {
+  @include breakpoint($screen-md) {
     height: 340px;
   }
 
@@ -29,7 +29,7 @@ Styleguide Components.Hero Banner
     width: auto;
     z-index: 1;
 
-    @include breakpoint($screen-sm) {
+    @include breakpoint($screen-md) {
       height: auto;
       left: 0;
       right: 0;
@@ -38,7 +38,17 @@ Styleguide Components.Hero Banner
       width: 100%;
     }
   }
+}
 
+/*
+Hero Banner with preview
+
+markup: markup/hero-banner-preview.hbs
+
+Styleguide Components.Hero Banner with preview
+*/
+
+.hero-banner {
   .free-review-site-preview {
     bottom: 0;
     display: block;
@@ -50,10 +60,26 @@ Styleguide Components.Hero Banner
     width: 460px;
     z-index: 2;
 
+    &:after {
+      content: " ";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: rgba($black, 0.1);
+      z-index: 3;
+    }
+
     img {
       position: absolute;
       top: 0;
       left: 0;
+    }
+
+    .hero-missing-img {
+      width: 100%;
+      z-index: 1;
     }
 
     .site-missing-img-title,
@@ -63,7 +89,7 @@ Styleguide Components.Hero Banner
       width: 100%;
       color: $text-color;
       text-align: center;
-      z-index: 1;
+      z-index: 2;
     }
 
     .site-title {

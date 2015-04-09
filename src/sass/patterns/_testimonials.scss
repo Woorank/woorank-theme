@@ -80,16 +80,14 @@ Styleguide Patterns.Testimonials
       display: none;
     }
 
-    span {
-      &[itemprop="name"] {
-        display: block;
-        color: $active-color;
-      }
+    .author-name {
+      display: block;
+      color: $active-color;
+    }
 
-      &[itemprop="worksFor"] {
-        display: block;
-        color: $text-color-light;
-      }
+    .author-worksfor {
+      display: block;
+      color: $text-color-light;
     }
   }
 
