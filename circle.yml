@@ -12,10 +12,9 @@ dependencies:
     - gulp build
 test:
   override:
-    - cat ./styleguide/build/1.0.0/woorank-theme.min.css
-    - cat ./styleguide/build/1.0.0/woorank-theme.min.js
+    - echo 'no tests for styleguide'
 deployment:
   hub:
     branch: master
     commands:
-      - aws s3 sync --acl public-read ./styleguide/build s3://assets.woorank.com/woorank-theme
+      - node deploy.js
