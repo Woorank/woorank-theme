@@ -1,0 +1,20 @@
+general:
+  branches:
+    only:
+      - /release\/.*/
+machine:
+  node:
+    version: 0.10.36
+dependencies:
+  override:
+    - sudo pip install awscli
+    - npm i
+    - gulp build
+test:
+  override:
+    - echo 'no tests for styleguide'
+deployment:
+  hub:
+    branch: master
+    commands:
+      - node deploy.js
