@@ -9,6 +9,7 @@ dependencies:
   override:
     - sudo pip install awscli
     - npm i
+    - npm i gulp -g
     - gulp build
 test:
   override:
