@@ -1,14 +1,16 @@
-var gulp          = require('gulp');
 var autoprefixer  = require('gulp-autoprefixer');
+var browserify    = require('gulp-browserify');
+var connect       = require('gulp-connect');
 var debug         = require('gulp-debug');
-var uglify        = require('gulp-uglify');
+var exec          = require('child_process').exec;
+var gulp          = require('gulp');
+var path          = require('path');
+var pjson         = require('./package.json');
 var s3            = require('gulp-s3');
 var sass          = require('gulp-sass');
 var svgSprite     = require('gulp-svg-sprites');
-var connect       = require('gulp-connect');
-var exec          = require('child_process').exec;
-var pjson         = require('./package.json');
-var path          = require('path');
+var uglify        = require('gulp-uglify');
+var rename        = require('gulp-rename');
 
 var paths = {
   sass:          'src/sass',
@@ -16,17 +18,30 @@ var paths = {
   css:           'src/css',
   svg:           'src/svg',
   js:            'src/js',
+  img:           'src/img',
   build: {
     img:         'styleguide/assets/img',
     css:         'styleguide/assets/style',
     svg:         'styleguide/assets/svg',
-    js:          'styleguide/assets/js',
+    js:          'styleguide/assets/script',
     cssKss:      'src/woorank-template/public',
     imgKss:      'src/woorank-template/puclic/img'
   }
 };
 
-gulp.task('default', ['sprite', 'sass', 'kss', 'connect', 'watch']);
+gulp.task('default', [
+  'move-pictures',
+  'browserify',
+  'sprite',
+  'sass',
+  'kss',
+  'connect',
+  'watch'
+]);
+
+gulp.task('docker', ['connect']);
+
+gulp.task('build', ['browserify-build', 'sass-build']);
 
 gulp.task('watch', function () {
   gulp.watch(path.join(paths.sass, '**/*.scss'), ['sass', 'kss']);
@@ -45,7 +60,12 @@ gulp.task('connect', function () {
   });
 });
 
-gulp.task('kss', ['sprite', 'sass', 'sass-kss'], function (cb) {
+gulp.task('move-pictures', function () {
+  return gulp.src(path.join(paths.img, '**/*.*'))
+    .pipe(gulp.dest(paths.build.img));
+});
+
+gulp.task('kss', ['sprite', 'browserify', 'sass', 'sass-kss'], function (cb) {
   return exec('kss-node --config=kss-config.json',
     function (err, stdout, stderr) {
       console.log(stdout);
@@ -53,6 +73,23 @@ gulp.task('kss', ['sprite', 'sass', 'sass-kss'], function (cb) {
       cb(err);
       gulp.src('*').pipe(connect.reload());
     });
+});
+
+gulp.task('browserify', function () {
+  return gulp.src(path.join(paths.js, '*.js'))
+    .pipe(browserify({
+      debug: true
+    }))
+    .pipe(gulp.dest(paths.build.js))
+    .pipe(gulp.dest(path.join('./styleguide/build/', pjson.version)));
+});
+
+gulp.task('browserify-build', function () {
+  return gulp.src(path.join(paths.js, '*.js'))
+    .pipe(browserify())
+    .pipe(uglify())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest(path.join('./styleguide/build/', pjson.version)));
 });
 
 gulp.task('sass', function () {
@@ -64,7 +101,8 @@ gulp.task('sass', function () {
       includePaths: '/node_modules/bootstrap-sass/assets/stylesheets/'
     }))
     .pipe(autoprefixer())
-    .pipe(gulp.dest(paths.build.css));
+    .pipe(gulp.dest(paths.build.css))
+    .pipe(gulp.dest(path.join('./styleguide/build/', pjson.version)));
 });
 
 gulp.task('sass-build', function () {
@@ -76,6 +114,7 @@ gulp.task('sass-build', function () {
       includePaths: '/node_modules/bootstrap-sass/assets/stylesheets/'
     }))
     .pipe(autoprefixer())
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(path.join('./styleguide/build/', pjson.version)));
 });
 
@@ -102,7 +141,7 @@ gulp.task('sprite', function () {
     .pipe(gulp.dest(paths.build.svg));
 });
 
-gulp.task('publish', ['sass-build', 'kss'], function () {
+gulp.task('publish', ['build', 'kss'], function () {
   var awsConfig = require('./awsConfig');
   return gulp.src('./styleguide/**/*')
     .pipe(s3(awsConfig));

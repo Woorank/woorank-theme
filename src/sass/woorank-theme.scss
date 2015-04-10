@@ -4,13 +4,14 @@
 Colors
 */
 @import "colors/colors";
+@import "colors/colors-helpers";
 
 /*
 Utils assets
 */
-@import "utils/fonts";
 @import "utils/mixins";
 @import "utils/variables";
+@import "utils/animations";
 
 /*
 Bootstrap styles
@@ -42,15 +43,18 @@ Weight: 3
 
 Styleguide Components
 */
-@import "components/buttons";
-@import "components/forms";
-@import "components/tables";
 @import "components/breadcrumb";
+@import "components/buttons";
 @import "components/dropdown";
+@import "components/forms";
+@import "components/hero-banner";
 @import "components/label";
 @import "components/modal";
+@import "components/page-header";
 @import "components/popover";
 @import "components/progress-bar";
+@import "components/tables";
+@import "components/tooltip";
 
 /*
 Patterns
@@ -59,10 +63,12 @@ Weight: 2
 
 Styleguide Patterns
 */
+@import "patterns/experts";
+@import "patterns/generation-bar";
 @import "patterns/marketing-checklist";
 @import "patterns/navbar";
 @import "patterns/review-left-menu";
-@import "patterns/experts";
+@import "patterns/testimonials";
 
 /*
 Structures
@@ -74,27 +80,3 @@ Styleguide Structures
 @import "structures/landing";
 @import "structures/static";
 @import "structures/app";
-
-/*
-Layouts specifics
-*/
-@import "layout/body";
-@import "layout/header";
-@import "layout/content";
-@import "layout/footer";
-
-/*
-Static pages
-*/
-@import "pages/about";
-@import "pages/developers";
-@import "pages/jobs";
-@import "pages/privacy";
-@import "pages/recent";
-@import "pages/review";
-@import "pages/tos";
-
-/*
-Less overwrite
-*/
-@import "utils/less-overwrite";

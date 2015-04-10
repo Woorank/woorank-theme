@@ -18,7 +18,7 @@ Styleguide Components.Buttons
 */
 
 @mixin woo-button-variant($border, $shadow-alpha) {
-  @include box-shadow(inset 0 -2px 0 rgba(0, 0, 0, $shadow-alpha));
+  @include box-shadow(inset 0 -2px 0 rgba($black, $shadow-alpha));
   border: $border;
 
   &.disabled,
@@ -26,6 +26,10 @@ Styleguide Components.Buttons
   fieldset[disabled] & {
     @include opacity(.35);
   }
+}
+
+.btn {
+  font-weight: normal;
 }
 
 .btn-default {
@@ -80,8 +84,15 @@ Markup: markup/buttons-sizes.hbs
 Styleguide Components.Buttons.Sizes
 */
 
-.btn-xs {
+.btn-xs,
+.btn-group-xs > .btn  {
   font-size: $font-size-xs;
+}
+
+.btn-lg,
+.btn-group-lg > .btn {
+  font-size: 15px;
+  padding: 15px 25px;
 }
 
 /*

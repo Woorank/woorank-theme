@@ -1,14 +1,18 @@
 #section-colors {
   text-align: left;
 
+  .modifier__wrapper {
+    overflow: hidden;
+  }
+
   .modifier__item {
-    vertical-align: top;
     display: block;
     float: left;
-    position: relative;
     font-size: 12px;
     margin: 5px;
     overflow: hidden;
+    position: relative;
+    vertical-align: top;
 
     &:hover {
       .modifier__color__infos {
@@ -17,12 +21,15 @@
       }
     }
 
-    &#colors-primary-dark,
-    &#colors-success-dark,
-    &#colors-warning-dark,
-    &#colors-error-dark,
-    &#colors-competitor-dark {
-      clear: left;
+    &#colors-clear {
+      border: none;
+      clear: both;
+      font-size: 0;
+      height: 0;
+      margin: 0;
+      padding: 0;
+      visibility: hidden;
+      width: 0;
     }
 
     .example-color {
@@ -30,58 +37,35 @@
     }
 
     .modifier__color__infos {
-      opacity: 0;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: auto;
-      padding: 5px;
-      color: $white;
       background: rgba($grey-darker, .5);
+      bottom: 0;
+      color: $white;
+      height: auto;
+      left: 0;
+      opacity: 0;
+      padding: 5px;
+      position: absolute;
       transition: opacity 1s ease;
     }
   }
 }
 
 .example-color {
-  display: none;
-  height: 100px;
-  width: 100px;
   background: $grey-smoke;
   border: 1px solid $border-color;
+  display: none;
+  height: 50px;
+  width: 50px;
 
-  $colors:
-  ('competitor-dark', $competitor-dark),
-  ('competitor', $competitor),
-  ('competitor-light', $competitor-light),
-  ('error-smoke', $error-smoke),
-  ('error-lighter', $error-lighter),
-  ('error-light', $error-light),
-  ('error', $error),
-  ('error-dark', $error-dark),
-  ('warning-smoke', $warning-smoke),
-  ('warning-lighter', $warning-lighter),
-  ('warning-light', $warning-light),
-  ('warning', $warning),
-  ('warning-dark', $warning-dark),
-  ('success-smoke', $success-smoke),
-  ('success-lighter', $success-lighter),
-  ('success-light', $success-light),
-  ('success', $success),
-  ('success-dark', $success-dark),
-  ('primary-smoke', $primary-smoke),
-  ('primary-lighter', $primary-lighter),
-  ('primary-light', $primary-light),
-  ('primary', $primary),
-  ('primary-dark', $primary-dark),
-  ('grey-darker', $grey-darker),
-  ('grey-dark', $grey-dark),
-  ('grey-medium', $grey-medium),
-  ('grey', $grey),
-  ('grey-light', $grey-light),
-  ('grey-lighter', $grey-lighter),
-  ('grey-smoke', $grey-smoke);
+  @include breakpoint($screen-sm) {
+    height: 75px;
+    width: 75px;
+  }
+
+  @include breakpoint($screen-md) {
+    height: 100px;
+    width: 100px;
+  }
 
   @each $colorName, $colorValue in $colors {
     &.#{$colorName} {

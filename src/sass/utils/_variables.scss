@@ -393,15 +393,15 @@ $alert-danger-border    : $state-danger-border;
 
 // Progress bars
 $progress-bg                 : $grey-smoke;
-$progress-bar-color          : $white;
+$progress-bar-color          : $primary;
 $progress-border-radius      : $border-radius-base;
-$progress-bar-bg             : $primary-lighter;
+$progress-bar-bg             : $primary-light;
 $progress-bar-border         : $primary;
-$progress-bar-success-bg     : $success-lighter;
+$progress-bar-success-bg     : $success-light;
 $progress-bar-success-border : $success;
-$progress-bar-warning-bg     : $warning-lighter;
+$progress-bar-warning-bg     : $warning-light;
 $progress-bar-warning-border : $warning;
-$progress-bar-danger-bg      : $error-lighter;
+$progress-bar-danger-bg      : $error-light;
 $progress-bar-danger-border  : $error;
 
 // List group

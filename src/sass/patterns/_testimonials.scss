@@ -1,0 +1,94 @@
+/*
+Testimonials
+
+markup: markup/testimonials.hbs
+
+Styleguide Patterns.Testimonials
+*/
+
+.testimonials {
+  clear: both;
+  padding: 50px 0;
+
+  .testimonial {
+    @include breakpoint($screen-sm) {
+      height: 180px;
+    }
+  }
+
+  .testimonial-protrait {
+    float: left;
+
+    img {
+      border-radius: 50%;
+      display: block;
+      width: 100%;
+      width: 70px;
+      height: 70px;
+
+      @include breakpoint($screen-sm) {
+        width: 80px;
+        height: 80px;
+      }
+
+      @include breakpoint($screen-md) {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  .testimonial-blockquote {
+    position: relative;
+    border-left: none;
+    padding-top: 0;
+    padding-left: 10px;
+    margin-left: 80px;
+
+    @include breakpoint($screen-sm) {
+      margin-left: 90px;
+    }
+
+    @include breakpoint($screen-md) {
+      margin-left: 110px;
+    }
+
+    &:before {
+      position: absolute;
+      top: -2px;
+      left: 0;
+      content: "\"";
+      color: $active-color;
+      font-size: 15px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.33;
+      color: $text-color;
+    }
+  }
+
+  .testimonial-author {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    border-top: none;
+    width: auto;
+
+    &:before {
+      display: none;
+    }
+
+    .author-name {
+      display: block;
+      color: $active-color;
+    }
+
+    .author-worksfor {
+      display: block;
+      color: $text-color-light;
+    }
+  }
+
+}

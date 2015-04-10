@@ -1,0 +1,12 @@
+
+@each $color, $colorValue in $colors {
+  .color-#{$color} {
+    color: $colorValue;
+  }
+  .fill-#{$color} {
+    fill: $colorValue;
+  }
+  .background-#{$color} {
+    background-color: $colorValue;
+  }
+}

@@ -12,7 +12,7 @@
   box-sizing: content-box;
 }
 
-$newFrameworkPages: ('about', 'tos', 'privacy', 'jobs', 'developers', 'recent');
+$newFrameworkPages: ('home', 'about', 'tos', 'privacy', 'jobs', 'developers', 'recent', 'styleguide');
 
 #top * {
   box-sizing: border-box;
@@ -24,7 +24,6 @@ $newFrameworkPages: ('about', 'tos', 'privacy', 'jobs', 'developers', 'recent');
     box-sizing: border-box;
   }
 }
-
 
 $newFrameworkComponents: ('marketing-checklist', 'popover', 'dropdown');
 

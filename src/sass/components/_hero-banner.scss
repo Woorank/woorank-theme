@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/*
+Hero Banner
+
+markup: markup/hero-banner.hbs
+
+Styleguide Components.Hero Banner
+*/
+
+.hero-banner {
+  clear: both;
+  height: 365px;
+  overflow: hidden;
+  position: relative;
+
+  @include breakpoint($screen-md) {
+    height: 340px;
+  }
+
+  .hero-img {
+    display: block;
+    height: 100%;
+    left: 50%;
+    max-width: none;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    width: auto;
+    z-index: 1;
+
+    @include breakpoint($screen-md) {
+      height: auto;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+    }
+  }
+}
+
+/*
+Hero Banner with preview
+
+markup: markup/hero-banner-preview.hbs
+
+Styleguide Components.Hero Banner with preview
+*/
+
+.hero-banner {
+  .free-review-site-preview {
+    bottom: 0;
+    display: block;
+    height: 250px;
+    left: 50%;
+    margin-left: -230px;
+    overflow: hidden;
+    position: absolute;
+    width: 460px;
+    z-index: 2;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: rgba($black, 0.1);
+      z-index: 3;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .hero-missing-img {
+      width: 100%;
+      z-index: 1;
+    }
+
+    .site-missing-img-title,
+    .site-title {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      color: $text-color;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .site-title {
+      top: 0;
+      font-size: 9px;
+      line-height: 23px;
+      height: 23px;
+    }
+
+    .site-missing-img-title {
+      bottom: 30px;
+      line-height: 30px;
+      font-size: 30px;
+    }
+
+    .site-img {
+      z-index: 3;
+      top: 23px;
+      width: 100%;
+      height: auto;
+    }
+
+    .site-missing-img {
+      z-index: 2;
+    }
+  }
+}

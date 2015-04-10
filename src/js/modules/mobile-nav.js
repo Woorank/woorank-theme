@@ -1,4 +1,4 @@
-(function mobileNav() {
+var mobileNav = function mobileNav () {
   var $navbar = $('#top .header.navbar');
 
   var togglePanel = function togglePanel (status) {
@@ -28,4 +28,6 @@
       togglePanel(false);
     }
   });
-})();
+};
+
+module.exports = mobileNav;

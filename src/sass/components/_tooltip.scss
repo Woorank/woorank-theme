@@ -1,0 +1,73 @@
+/*
+Tooltip
+
+markup: markup/tooltip-primary-bottom-left.hbs
+
+Styleguide Components.Tooltip
+*/
+.tooltip {
+  z-index: ($zindex-navbar - 1);
+  &.tooltip-visible {
+    opacity: 1;
+  }
+
+  .tooltip-btn-close {
+    padding: 5px;
+    margin: -5px -5px -5px 0;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  &.bottom-left {
+    margin-top: 3px;
+    padding: 5px 0;
+
+    .tooltip-arrow {
+      margin-left: 0;
+      border-width: 0 5px 5px;
+      left: 20px;
+    }
+  }
+
+  &.bottom-right {
+    margin-top: 3px;
+    padding: 5px 0;
+
+    .tooltip-arrow {
+      margin-left: 0;
+      border-width: 0 5px 5px;
+      left: auto;
+      right: 20px;
+    }
+  }
+
+  &.tooltip-primary {
+    .tooltip-inner {
+      border: 1px solid $primary-light;
+      background-color: $primary-smoke;
+      color: $grey-medium;
+    }
+
+    .tooltip-arrow {
+      margin-top: 1px;
+      top: -1px;
+      border-bottom-color: $primary-light;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 0;
+        margin-left: -5px;
+        border-color: rgba($white, 0);
+        border-style: solid;
+        border-width: 0 5px 5px;
+        border-bottom-color: $primary-smoke;
+      }
+    }
+
+    .tooltip-btn-close {
+      color: $primary-light;
+    }
+  }
+}
