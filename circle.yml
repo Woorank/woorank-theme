@@ -1,0 +1,21 @@
+general:
+  branches:
+    only:
+      - /release\/.*/
+machine:
+  node:
+    version: 0.10.36
+dependencies:
+  override:
+    - sudo pip install awscli
+    - npm i
+    - gulp build
+test:
+  override:
+    - cat ./styleguide/build/1.0.0/woorank-theme.min.css
+    - cat ./styleguide/build/1.0.0/woorank-theme.min.js
+deployment:
+  hub:
+    branch: master
+    commands:
+      - aws s3 sync --acl public-read ./styleguide/build s3://assets.woorank.com/woorank-theme
