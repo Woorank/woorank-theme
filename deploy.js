@@ -30,12 +30,12 @@ http.get({
         console.log('Uploaded OK');
         process.exit(0);
       } else {
-        console.error('Uploaded NotOK');
+        console.error('Uploaded Failed');
+        process.exit(1);
       }
     });
   } else {
     console.error('Version already exists on S3!');
+    process.exit(1);
   }
-
-  process.exit(1);
 });
