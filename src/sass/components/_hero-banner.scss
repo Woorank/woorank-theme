@@ -10,12 +10,12 @@ Styleguide Components.Hero Banner
 
 .hero-banner {
   clear: both;
-  height: 365px;
+  height: 358px;
   overflow: hidden;
   position: relative;
 
-  @include breakpoint($screen-md) {
-    height: 340px;
+  @include breakpoint($screen-lg) {
+    height: 560px;
   }
 
   .hero-img {
@@ -29,12 +29,11 @@ Styleguide Components.Hero Banner
     width: auto;
     z-index: 1;
 
-    @include breakpoint($screen-md) {
+    @include breakpoint($screen-sm) {
       height: auto;
+      top: 15%;
       left: 0;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(-15%);
       width: 100%;
     }
   }
@@ -49,6 +48,26 @@ Styleguide Components.Hero Banner with preview
 */
 
 .hero-banner {
+
+  &.hero-banner-preview {
+    background-color: $primary;
+    
+    &:after {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba($primary, 0.70);
+      z-index: 1;
+    }
+
+    .hero-img {
+      filter: blur(3px);
+    }
+  }
+
   .free-review-site-preview {
     bottom: 0;
     display: block;
