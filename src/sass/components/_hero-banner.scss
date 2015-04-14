@@ -8,14 +8,17 @@ markup: markup/hero-banner.hbs
 Styleguide Components.Hero Banner
 */
 
+$heroDefaultHeight: 358px;
+$heroBigHeight: 560px;
+
 .hero-banner {
   clear: both;
-  height: 358px;
+  height: $heroDefaultHeight;
   overflow: hidden;
   position: relative;
 
   @include breakpoint($screen-lg) {
-    height: 560px;
+    height: $heroBigHeight;
   }
 
   .hero-img {
@@ -51,6 +54,10 @@ Styleguide Components.Hero Banner with preview
 
   &.hero-banner-preview {
     background-color: $primary;
+
+    @include breakpoint($screen-lg) {
+      height: $heroDefaultHeight;
+    }
     
     &:after {
       content: " ";
