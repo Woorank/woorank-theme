@@ -10,27 +10,11 @@ Styleguide Patterns.Generation bar
   max-width: 640px;
   margin: 0 auto;
 
-  .required.error {
-    border-color: $error;
-  }
-
-  &.generation-bar-small {
-    padding-top: 15px;
-
+  &.error {
     .form-control {
-      height: 30px;
-      border-color: $border-color;
+      border-color: $error !important;
+      color: $error !important;
     }
-
-    .input-group-btn .btn {
-      box-shadow: inset 0 -2px 0 rgba($black, 0.2);
-      padding: 3px 13px;
-      height: 30px;
-
-      &.btn-primary {
-        color: $white;
-      }
-    }    
   }
 
   .form-control,
@@ -87,6 +71,33 @@ Styleguide Patterns.Generation bar
       }
     }
   }
+}
 
+/*
+Generation bar small
 
+markup: markup/generation-bar-small.hbs
+
+Styleguide Patterns.Generation bar small
+*/
+
+.generation-bar {
+  &.generation-bar-small {
+    padding-top: 15px;
+
+    .form-control {
+      height: 30px;
+      border-color: $border-color;
+    }
+
+    .input-group-btn .btn {
+      box-shadow: inset 0 -2px 0 rgba($black, 0.2);
+      padding: 3px 13px;
+      height: 30px;
+
+      &.btn-primary {
+        color: $white;
+      }
+    }    
+  }
 }
