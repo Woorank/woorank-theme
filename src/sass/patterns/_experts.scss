@@ -1,3 +1,12 @@
+@charset "UTF-8";
+
+/*
+Experts banner
+
+Markup: markup/experts-banner.hbs
+
+Styleguide Patterns.Experts banner
+*/
 
 $expertPhotoSize: 65px;
 $expertBlockSize: 180px;
@@ -5,7 +14,7 @@ $textWidth: 103px;
 $wantedDistanceBetweenTextAndImage: 5px;
 $extraPaddingText: $expertBlockSize - $expertPhotoSize - $textWidth - $wantedDistanceBetweenTextAndImage;
 
-#experts {
+.experts-banner {
     clear: both;
     overflow: hidden;
 
@@ -18,7 +27,7 @@ $extraPaddingText: $expertBlockSize - $expertPhotoSize - $textWidth - $wantedDis
         font-weight: 500;
     }
 
-    .vcard {
+    .expert {
         width: $expertBlockSize;
         margin-right: 7px;
         float: left;
@@ -26,7 +35,7 @@ $extraPaddingText: $expertBlockSize - $expertPhotoSize - $textWidth - $wantedDis
         margin-top: 15px;
         box-sizing: border-box;
 
-        img.photo {
+        .photo {
             width: $expertPhotoSize;
             height: $expertPhotoSize;
             border-radius: $expertPhotoSize / 2;
