@@ -27,6 +27,12 @@ Styleguide Patterns.Generation bar
     width: 100%;
   }
 
+  .input-group-btn .btn {
+    @include breakpoint($screen-sm) {
+      width: auto;
+    }
+  }
+
   .input-group {
     @include breakpoint($screen-sm) {
       display: table;
