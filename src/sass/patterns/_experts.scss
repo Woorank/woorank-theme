@@ -9,78 +9,70 @@ Styleguide Patterns.Experts banner
 */
 
 $expertPhotoSize: 65px;
-$expertBlockSize: 180px;
-$textWidth: 103px;
-$wantedDistanceBetweenTextAndImage: 5px;
-$extraPaddingText: $expertBlockSize - $expertPhotoSize - $textWidth - $wantedDistanceBetweenTextAndImage;
 
 .experts-banner {
-    clear: both;
+  clear: both;
+  overflow: hidden;
+
+  .experts-title {
+    font-size: 13px;
+    line-height: 27px;
+    padding: 12px 0 0px;
+    margin: 20px 0 4px;
+    border-bottom: none;
+    font-weight: 500;
+  }
+
+  .expert {
+    width: 100%;
+    padding: 15px 7px 0 0;
+    float: left;
     overflow: hidden;
-
-    .experts-title {
-        font-size: 13px;
-        line-height: 27px;
-        padding: 12px 0 0px;
-        margin: 20px 0 4px;
-        border-bottom: none;
-        font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    
+    @include breakpoint($screen-sm) {
+      width: 50%;
     }
 
-    .expert {
-        width: $expertBlockSize;
-        margin-right: 7px;
-        float: left;
-        overflow: hidden;
-        margin-top: 15px;
-        box-sizing: border-box;
-
-        .photo {
-            width: $expertPhotoSize;
-            height: $expertPhotoSize;
-            border-radius: $expertPhotoSize / 2;
-            float: left;
-        }
-
-        .fn {
-            padding-top: 5px;
-            width: $textWidth;
-            padding-right: $extraPaddingText;
-            float: right;
-            text-overflow: ellipsis;
-            overflow: hidden;
-        }
-
-        .locality,
-        .country-name,
-        .region {
-            width: $textWidth;
-            padding-right: $extraPaddingText;
-            float: right;
-        }
+    @include breakpoint($screen-md) {
+      width: 25%;
     }
-
-    .no-photo,
+    
     .photo-wrapper {
-        float: left;
-        width: $expertPhotoSize;
-        height: $expertPhotoSize;
-        border-radius: $expertPhotoSize / 2;
-        background-color: #C5DAEE;
+      width: $expertPhotoSize;
+      height: $expertPhotoSize;
+      float: left;
+      border-radius: $expertPhotoSize / 2;
+      overflow: hidden;
+      margin-right: 15px;
+
+      &.no-photo {
+        background-color: $primary-lighter;
+      }
     }
 
-    .see-all-experts {
-        width: $expertBlockSize;
-        float: left;
-        overflow:hidden;
-        margin-top:15px;
-        box-sizing: border-box;
-
-        .link-all {
-            padding-top: 5px;
-            width: $textWidth;
-            padding-right: $extraPaddingText;
-            float: right;
-        }
+    .photo {
+      display: block;
+      width: 100%;
+      height: auto;
     }
+
+    .fn,
+    .adr,
+    .locality,
+    .region,
+    .country-name,
+    .link-all {
+      display: block;
+      padding-right: 5px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .fn,
+    .link-all {
+      padding-top: 5px;
+    }
+  }
 }

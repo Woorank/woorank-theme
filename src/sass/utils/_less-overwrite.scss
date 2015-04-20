@@ -25,7 +25,7 @@ $newFrameworkPages: ('home', 'about', 'tos', 'privacy', 'jobs', 'developers', 'r
   }
 }
 
-$newFrameworkComponents: ('marketing-checklist', 'popover', 'dropdown');
+$newFrameworkComponents: ('marketing-checklist', 'popover', 'dropdown', 'experts-banner');
 
 @each $component in $newFrameworkComponents {
   .#{$component},
