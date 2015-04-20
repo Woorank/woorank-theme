@@ -34,7 +34,7 @@ Markup: markup/icon-example.hbs
 
 icon-xxs - extra-extra small
 icon-xs  - extra small
-normal   - normal
+icon-normal - normal
 icon-sm  - small
 icon-md  - medium
 icon-lg  - large
@@ -45,6 +45,11 @@ Styleguide Icons.Icons Sizes
   background-image: none;
   height: 20px;
   width: 20px;
+
+  &.icon-normal {
+    height: 20px;
+    width: 20px;
+  }
 
   &.icon-xxs {
     height: 5px;

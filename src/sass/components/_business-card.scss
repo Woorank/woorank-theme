@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/*
+Business card
+
+Markup: markup/business-card.hbs
+
+Styleguide Components.Business card
+*/
+
+$businessCardPhotoSize: 65px;
+
+.business-card {
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 18px;
+  
+  .photo-wrapper {
+    width: $businessCardPhotoSize;
+    height: $businessCardPhotoSize;
+    float: left;
+    border-radius: $businessCardPhotoSize / 2;
+    overflow: hidden;
+    margin-right: 15px;
+
+    &.no-photos {
+      background-color: $primary-lighter;
+    }
+  }
+
+  .photo {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .name,
+  .address,
+  .locality,
+  .region,
+  .country-name,
+  .link-all {
+    display: block;
+    padding-right: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .name,
+  .link-all {
+    padding-top: 5px;
+  }
+}
