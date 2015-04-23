@@ -43,7 +43,9 @@ Styleguide Icons.Icons Sizes
 */
 .icon {
   background-image: none;
+  display: inline-block;
   height: 20px;
+  vertical-align: middle;
   width: 20px;
 
   &.icon-normal {
@@ -89,6 +91,16 @@ Styleguide Icons.Icons Sizes
     height: 20px;
     width: 110px;
   }
+
+  &.icon-favicon {
+    height: 16px;
+    width: 16px;
+  }
+}
+
+.icon-text {
+  margin-left: 6px;
+  vertical-align: middle;
 }
 
 /*
