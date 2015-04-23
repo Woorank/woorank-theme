@@ -66,6 +66,13 @@ $primary-light    : #A0C5E4;
 $primary-lighter  : #CFE2F2;
 $primary-smoke    : #ECF3FA;
 
+// Primary alias
+$info-dark        : $primary-dark;
+$info             : $primary;
+$info-light       : $primary-light;
+$info-lighter     : $primary-lighter;
+$info-smoke       : $primary-smoke;
+
 $success-dark     : #4E9D4E;
 $success          : #5CB85C;
 $success-light    : #ADDBAD;
@@ -132,6 +139,11 @@ $colors:
   ('primary-light', $primary-light),
   ('primary', $primary),
   ('primary-dark', $primary-dark),
+  ('info-smoke', $info-smoke),
+  ('info-light', $info-light),
+  ('info-lighter', $info-lighter),
+  ('info', $info),
+  ('info-dark', $info-dark),
   ('grey-darker', $grey-darker),
   ('grey-dark', $grey-dark),
   ('grey-medium', $grey-medium),
