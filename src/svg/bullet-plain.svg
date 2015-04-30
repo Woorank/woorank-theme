@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="20px" height="16px" viewBox="0 0 20 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <title>Bullet - Plain</title>
-    <desc>Arrow like circle</desc>
-    <defs></defs>
-    <g id="Stencil-Bootstrap" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Bullet-Plain" sketch:type="MSLayerGroup">
-            <path d="M0,8 C0,12.311 3.689,16 8,16 C14.59,16 20,8 20,8 C20,8 18.0545215,5.12313711 15.0757519,2.81976607 C13.0871995,1.28209283 10.6381541,0 8,0 C3.689,0 0,3.689 0,8 Z" id="Fill-26" fill="#888888" sketch:type="MSShapeGroup"></path>
-            <path d="M5.5,8 C5.5,6.61916667 6.61916667,5.5 8,5.5 C8.56729819,5.5 9.09043031,5.68890134 9.50993369,6.00724133 C10.1115234,6.46375745 10.5,7.18646485 10.5,8 C10.5,9.38083333 9.38083333,10.5 8,10.5 C6.61916667,10.5 5.5,9.38083333 5.5,8 Z" id="Path-3" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+<svg width="20px" height="16px" viewBox="0 0 20 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" title="Bullet - Plain">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g sketch:type="MSLayerGroup">
+            <path d="M0,8 C0,12.311 3.689,16 8,16 C14.59,16 20,8 20,8 C20,8 18.0545215,5.12313711 15.0757519,2.81976607 C13.0871995,1.28209283 10.6381541,0 8,0 C3.689,0 0,3.689 0,8 Z" fill="#888888" sketch:type="MSShapeGroup"></path>
+            <path d="M5.5,8 C5.5,6.61916667 6.61916667,5.5 8,5.5 C8.56729819,5.5 9.09043031,5.68890134 9.50993369,6.00724133 C10.1115234,6.46375745 10.5,7.18646485 10.5,8 C10.5,9.38083333 9.38083333,10.5 8,10.5 C6.61916667,10.5 5.5,9.38083333 5.5,8 Z" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
         </g>
     </g>
 </svg>

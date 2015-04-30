@@ -34,7 +34,6 @@ Styleguide Patterns.Navbar
 
   .icon-chevron-down {
     margin-left: 5px;
-    margin-top: 5px;
     fill: $grey-medium;
 
     @include breakpoint($screen-sm, $reverse: true) {
@@ -98,6 +97,7 @@ Styleguide Patterns.Navbar
 .navbar-brand {
   height: auto;
   line-height: 20px;
+  max-width: 125px;
 }
 
 .navbar-toggle {

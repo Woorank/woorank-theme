@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 19.988 15.705" style="enable-background:new 0 0 19.988 15.705;" xml:space="preserve">
-	<title>Email icon</title>
-	<desc>Email icon</desc>
-	<defs></defs>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 19.988 15.705" style="enable-background:new 0 0 19.988 15.705;" xml:space="preserve" title="Email icon">
 <path style="fill:#010101;" d="M19.988,13.92c0,0.981-0.803,1.785-1.785,1.785H1.785C0.803,15.705,0,14.902,0,13.92V1.785
 	C0,0.803,0.803,0,1.785,0h16.419c0.981,0,1.785,0.803,1.785,1.785V13.92z M18.204,1.428H1.785c-0.189,0-0.357,0.167-0.357,0.357
 	c0,1.271,0.636,2.376,1.64,3.168C4.562,6.123,6.057,7.306,7.54,8.488c0.591,0.479,1.662,1.506,2.443,1.506h0.011h0.011

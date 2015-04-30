@@ -1,0 +1,332 @@
+/*
+Generation bar header
+
+markup: markup/generation-bar-header.hbs
+
+Styleguide Patterns.Generation bar header
+*/
+
+.generation-bar-in-header-container {
+  padding: 0 5%;
+
+  @include breakpoint($screen-md) {
+    padding: 0 0 0 5%;
+  }
+
+  @include breakpoint($screen-md) {
+    padding: 0 0 0 10%;
+  }
+}
+
+.generation-bar {
+  &.generation-bar-in-header {
+    padding-top: 15px;
+
+    @include breakpoint($screen-sm) {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    @include breakpoint($screen-md) {
+      max-width: 400px;
+    }
+
+    @include breakpoint($screen-lg) {
+      max-width: 500px;
+    }
+
+    &.error {
+      .options-btn {
+        border-color: $error !important;
+      }
+    }
+
+    &:hover {
+      .generation-bar-btn {
+        background-color: $primary-dark;
+        box-shadow: inset 0 -2px 0 rgba($black, 0.2);
+        background-color: $primary;
+        color: $white;
+        transition: background-color 100ms, color 100ms, box-shadow 600ms;
+      }
+    }
+
+    .fake-input-container {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: $white;
+      border: 1px solid $border-color;
+      border-right: none;
+      height: 30px;
+      width: 100%;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .fake-input {
+      display: inline-block;
+      height: 30px;
+      padding-left: 12px;
+      padding-right: 12px;
+      color: $grey;
+      vertical-align: middle;
+    }
+
+    .competitor-tag {
+      display: inline-block;
+      vertical-align: middle;
+      background-color: $grey-smoke;
+      border: 1px solid $border-color;
+      color: $grey-dark;
+      position: relative;
+      border-radius: 3px;
+      padding: 1px 15px 1px 10px;
+      line-height: 0;
+      margin-top: -1px;
+      min-height: 22px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 40px;
+
+      @include breakpoint($screen-md) {
+        width: auto;
+      }
+
+      .competitor-tag-text {
+        padding: 2px 0;
+        font-size: 12px;
+        line-height: 1.33;
+      }
+
+      .corner-indicator {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+      }
+
+      .btn-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    .form-control {
+      border-color: $border-color;
+      border-right: none;
+      height: 30px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .input-group-btn {
+      position: relative;
+      z-index: 2;
+      text-align: right;
+
+      .btn {
+        display: inline-block;
+      }
+
+      .generation-bar-btn {
+        background-color: $white;
+        border-radius: 0 3px 3px 0;
+        border: 1px solid $border-color;
+        box-shadow: none;
+        color: $grey-dark;
+        font-size: 13px;
+        font-weight: 600;
+        height: 30px;
+        padding: 3px 13px;
+        transition: background-color 300ms, color 300ms;
+        
+        &:focus,
+        &:hover,
+        &:active {
+          background-color: $primary-dark;
+          box-shadow: inset 0 -2px 0 rgba($black, 0.2);
+          background-color: $primary;
+          color: $white;
+          transition: background-color 100ms, color 100ms, box-shadow 600ms;
+        }
+      }
+    }
+
+    .generation-bar-options {
+      background-color: $white;
+      display: inline-block;
+      margin-right: -1px;
+      opacity: 0;
+      position: absolute;
+      right: 100%;
+      text-align: left;
+      top: 0;
+      transition: opacity 500ms ease;
+      z-index: 2;
+
+      &:hover,
+      &.forced-visible,
+      &.open {
+        opacity: 1;
+      }
+
+      &.forced-visible {
+        transition: none;
+      }
+
+      &.open {
+        .options-btn {
+          .options-btn-text {
+            display: none;
+          }
+
+          .opened-icon {
+            display: inline-block;
+          }
+
+          .closed-icon {
+            display: none;
+          }
+        }
+
+        .options-content {
+          display: block;
+        }
+      }
+      
+      .options-btn {
+        border-radius: 0;
+        border: 1px solid $border-color;
+        border-left: none;
+        border-right: none;
+        color: $primary;
+        margin: 0;
+        text-decoration: none;
+
+        .opened-icon {
+          display: none;
+        }
+
+        .closed-icon {
+          display: inline-block;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .icon {
+        fill: $primary;
+      }
+    }
+
+    .btn-close {
+      background: none;
+      border-radius: 0;
+      padding: 3px;
+      margin: 0;
+      height: auto;
+      width: auto;
+      line-height: 0;
+
+      &:focus,
+      &:hover,
+      &:active {
+        .icon {
+          fill: $grey;
+        }
+      }
+
+      .icon {
+        fill: $grey-light;
+      }
+    }
+
+    .options-content {
+      background-color: $white;
+      border-radius: 3px;
+      border: 1px solid $border-color;
+      box-shadow: 0 0 3px rgba($black, .15);
+      display: none;
+      font-size: 12px;
+      margin-top: 10px;
+      padding: 25px 20px 20px;
+      position: absolute;
+      top: 100%;
+
+      @include breakpoint($screen-sm) {
+        left: -260px;
+        width: 430px;
+      }
+
+      @include breakpoint($screen-md) {
+        left: -310px;
+      }
+
+      @include breakpoint($screen-lg) {
+        left: -360px;
+      }
+
+      .btn-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+      }
+
+      .input-group {
+        position: relative;
+        overflow: hidden;
+        border-radius: 3px;
+      }
+
+      .corner-indicator {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+      }
+    }
+  }
+}
+
+// make a component
+$default-corner-size: 5px;
+
+.corner-indicator {
+  display: inline-block;
+  vertical-align: top;
+  height: 0;
+  width: 0;
+  border: $default-corner-size solid transparent;
+  border-radius: 3px 0 0 0;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: -($default-corner-size - 1px);
+    left: -($default-corner-size - 1px);
+    border: ($default-corner-size - 2px) solid transparent;
+    border-radius: 3px 0 0 0;
+  }
+
+  &.corner-top-left,
+  &.corner-top-left:after {
+    border-top-color: $border-color;
+    border-left-color: $border-color;
+
+    @each $color, $colorValue in $colors {
+      &.corner-#{$color} {
+        border-top-color: darken($colorValue, 5%);
+        border-left-color: darken($colorValue, 5%);
+      }
+
+      &.corner-#{$color}:after {
+        border-top-color: $colorValue;
+        border-left-color: $colorValue;
+      }
+    }
+  }
+}
