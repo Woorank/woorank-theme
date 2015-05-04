@@ -28,13 +28,21 @@ var genbarOptions = function () {
     tooltipOnSmallScreen();
   });
 
+  if (loadedInputValue.trim().length < 1) {
+    loadedInputValue = $genbarInput.attr('placeholder');
+  }
+
+  // apply default text on fake input
   $fakeInput.find('.js-fake-input')
     .text(loadedInputValue)
     .attr('title', loadedInputValue);
 
-  // open options
+  // open/close options
   $options.on('click', '.js-options-btn', function (event) {
-    $(event.delegateTarget).toggleClass('open');
+    $options.toggleClass('open');
+    if (!$options.hasClass('open') && $fakeInput.is(':visible')) {
+      $options.addClass('hidden');
+    }
   });
 
   // show real input
@@ -43,19 +51,23 @@ var genbarOptions = function () {
         || $(event.target).parents().is('.competitor-tag')) {
       return false;
     }
-    $(this).addClass('hidden');
+    $fakeInput.addClass('hidden');
     $genbarInput.removeClass('hidden').focus();
-    $options.removeClass('open').addClass('forced-visible');
   });
 
   // hide real input
-  $genbarInput.on('blur', function () {
-    if (valueValidation($(this).val())) {
-      $(this).addClass('hidden');
-      $fakeInput.removeClass('hidden');
-      $options.removeClass('forced-visible');
+  $genbarInput.on('blur', function (event) {
+    $fakeInput.removeClass('hidden');
+    $genbarInput.addClass('hidden');
+
+    if (!$(event.relatedTarget).parents().is($options)) {
+      $options.addClass('hidden').removeClass('open');
     }
-    applyErrors($genbar, $genbarInput);
+  });
+
+  // show options on real input focus
+  $genbarInput.on('focus', function () {
+    $options.removeClass('hidden');
   });
 
   // update fake input
@@ -70,6 +82,9 @@ var genbarOptions = function () {
   // close options content popin
   $genbar.find('.js-options-content').on('click', '.btn-close', function () {
     $options.removeClass('open');
+    if ($fakeInput.is(':visible')) {
+      $options.addClass('hidden');
+    }
   });
 
   // update competitor tag from input + validation (not empty after trim)
@@ -88,16 +103,14 @@ var genbarOptions = function () {
       $competitorFrom.addClass('used');
 
       // search for others competitors to show
-      $genbar.find('.js-add-competitors').each(function (index, item) {
-        if (!$(this).hasClass('used')) {
-          $(this).removeClass('hidden', function () {
-            $(this).find('input[type=text]').focus();
-          });
-          return false;
-        } else {
-          $(this).addClass('hidden');
-        }
-      });
+      $genbar.find('.js-add-competitors')
+        .addClass('hidden')
+        .each(function (index, item) {
+          if (!$(this).hasClass('used')) {
+            $(this).removeClass('hidden');
+            return false;
+          }
+        });
     }
   });
 

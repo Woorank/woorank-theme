@@ -52,17 +52,20 @@ Styleguide Patterns.Generation bar header
     }
 
     .fake-input-container {
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
       background-color: $white;
       border: 1px solid $border-color;
-      border-right: none;
       height: 30px;
       width: 100%;
       border-radius: 3px;
       overflow: hidden;
+
+      @include breakpoint($screen-sm) {
+        border-right: none;
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+      }
     }
 
     .fake-input {
@@ -115,9 +118,13 @@ Styleguide Patterns.Generation bar header
 
     .form-control {
       border-color: $border-color;
-      border-right: none;
+      border-radius: 3px 3px 0 0;
       height: 30px;
-      border-radius: 3px 0 0 3px;
+      
+      @include breakpoint($screen-sm) {
+        border-right: none;
+        border-radius: 3px 0 0 3px;
+      }
     }
 
     .input-group-btn {
@@ -131,15 +138,21 @@ Styleguide Patterns.Generation bar header
 
       .generation-bar-btn {
         background-color: $white;
-        border-radius: 0 3px 3px 0;
+        border-radius: 0 0 3px 3px;
         border: 1px solid $border-color;
         box-shadow: none;
         color: $grey-dark;
         font-size: 13px;
         font-weight: 600;
         height: 30px;
+        margin-top: -1px;
         padding: 3px 13px;
         transition: background-color 300ms, color 300ms;
+
+        @include breakpoint($screen-sm) {
+          border-radius: 0 3px 3px 0;
+          margin-top: 0;
+        }
         
         &:focus,
         &:hover,
@@ -156,23 +169,21 @@ Styleguide Patterns.Generation bar header
     .generation-bar-options {
       background-color: $white;
       display: inline-block;
-      margin-right: -1px;
-      opacity: 0;
+      opacity: 1;
       position: absolute;
-      right: 100%;
+      right: 2px;
       text-align: left;
-      top: 0;
+      top: -30px;
       transition: opacity 500ms ease;
       z-index: 2;
 
-      &:hover,
-      &.forced-visible,
-      &.open {
-        opacity: 1;
+      @include breakpoint($screen-sm) {
+        top: 0;
+        right: 100%;
       }
 
-      &.forced-visible {
-        transition: none;
+      &.hidden {
+        opacity: 0;
       }
 
       &.open {
@@ -251,13 +262,17 @@ Styleguide Patterns.Generation bar header
       box-shadow: 0 0 3px rgba($black, .15);
       display: none;
       font-size: 12px;
-      margin-top: 10px;
+      margin-top: -1px;
+      min-width: 300px;
       padding: 25px 20px 20px;
       position: absolute;
-      top: 100%;
+      right: -2px;
+      top: 30px;
 
       @include breakpoint($screen-sm) {
         left: -260px;
+        right: auto;
+        top: 100%;
         width: 430px;
       }
 
@@ -270,22 +285,22 @@ Styleguide Patterns.Generation bar header
       }
 
       .btn-close {
-        position: absolute;
-        top: 0;
-        right: 0;
         padding: 10px;
+        position: absolute;
+        right: 0;
+        top: 0;
       }
 
       .input-group {
-        position: relative;
-        overflow: hidden;
         border-radius: 3px;
+        overflow: hidden;
+        position: relative;
       }
 
       .corner-indicator {
+        left: 0;
         position: absolute;
         top: 0;
-        left: 0;
         z-index: 3;
       }
     }
@@ -296,36 +311,36 @@ Styleguide Patterns.Generation bar header
 $default-corner-size: 5px;
 
 .corner-indicator {
-  display: inline-block;
-  vertical-align: top;
-  height: 0;
-  width: 0;
-  border: $default-corner-size solid transparent;
   border-radius: 3px 0 0 0;
+  border: $default-corner-size solid transparent;
+  display: inline-block;
+  height: 0;
+  vertical-align: top;
+  width: 0;
 
   &:after {
+    border-radius: 3px 0 0 0;
+    border: ($default-corner-size - 2px) solid transparent;
     content: " ";
+    left: -($default-corner-size - 1px);
     position: absolute;
     top: -($default-corner-size - 1px);
-    left: -($default-corner-size - 1px);
-    border: ($default-corner-size - 2px) solid transparent;
-    border-radius: 3px 0 0 0;
   }
 
   &.corner-top-left,
   &.corner-top-left:after {
-    border-top-color: $border-color;
     border-left-color: $border-color;
+    border-top-color: $border-color;
 
     @each $color, $colorValue in $colors {
       &.corner-#{$color} {
-        border-top-color: darken($colorValue, 5%);
         border-left-color: darken($colorValue, 5%);
+        border-top-color: darken($colorValue, 5%);
       }
 
       &.corner-#{$color}:after {
-        border-top-color: $colorValue;
         border-left-color: $colorValue;
+        border-top-color: $colorValue;
       }
     }
   }
