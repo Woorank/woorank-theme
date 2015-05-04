@@ -1,0 +1,189 @@
+/*
+  Corner Indicator
+
+  markup: markup/corner-indicators.hbs
+
+  .corner-xs.corner-top-left.corner-error - Corner Top Left
+  .corner-sm.corner-top-left.corner-error - Corner Top Left
+  .corner-md.corner-top-left.corner-error - Corner Top Left
+  .corner-lg.corner-top-left.corner-error - Corner Top Left
+  .corner-top-right.corner-competitor-light - Corner Top Right
+  .corner-bottom-left.corner-primary - Using a color
+  .corner-bottom-right.corner-success - Using a color
+
+  Styleguide Components.Corner Indicators
+*/
+$default-corner-size: 5px;
+
+$corner-size-xs: 3px;
+$corner-size-sm: $default-corner-size;
+$corner-size-md: 10px;
+$corner-size-lg: 15px;
+
+$darkenEffetBorder: 5%;
+
+.corner-indicator-container {
+  position: relative;
+
+  .corner-indicator {
+    position: absolute;
+
+    &.corner-top-left {
+      top: 0;
+      left: 0;
+    }
+
+    &.corner-bottom-left {
+      bottom: 0;
+      left: 0;
+    }
+
+    &.corner-top-right {
+      top: 0;
+      right: 0;
+    }
+
+    &.corner-bottom-right {
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+.corner-indicator {
+  border: $corner-size-sm solid transparent;
+  display: inline-block;
+  height: 0;
+  vertical-align: top;
+  width: 0;
+
+  &:after {
+    border: ($corner-size-sm - 2px) solid transparent;
+    content: " ";
+    position: absolute;
+  }
+
+  &.corner-xs {
+    border-width: $corner-size-xs;
+    &:after {
+      display: none;
+    }
+  }
+
+  &.corner-md {
+    border-width: $corner-size-md;
+    &:after {
+      border-width: ($corner-size-md - 2px);
+    }
+  }
+
+  &.corner-lg {
+    border-width: $corner-size-lg;
+    &:after {
+      border-width: ($corner-size-lg - 2px);
+    }
+  }
+
+  &.corner-top-left,
+  &.corner-top-left:after {
+    border-radius: 3px 0 0 0;
+    border-left-color: $border-color;
+    border-top-color: $border-color;
+
+    @each $color, $colorValue in $colors {
+      &.corner-#{$color} {
+        border-left-color: darken($colorValue, $darkenEffetBorder);
+        border-top-color: darken($colorValue, $darkenEffetBorder);
+      }
+
+      &.corner-#{$color}:after {
+        border-left-color: $colorValue;
+        border-top-color: $colorValue;
+      }
+    }
+
+    &:after {
+      border-radius: 3px 0 0 0;
+      border: ($corner-size-sm - 2px) solid transparent;
+      left: -($corner-size-sm - 1px);
+      top: -($corner-size-sm - 1px);
+    }
+  }
+
+  &.corner-bottom-left,
+  &.corner-bottom-left:after {
+    border-radius: 0 0 0 3px;
+    border-left-color: $border-color;
+    border-bottom-color: $border-color;
+
+    @each $color, $colorValue in $colors {
+      &.corner-#{$color} {
+        border-left-color: darken($colorValue, $darkenEffetBorder);
+        border-bottom-color: darken($colorValue, $darkenEffetBorder);
+      }
+
+      &.corner-#{$color}:after {
+        border-left-color: $colorValue;
+        border-bottom-color: $colorValue;
+      }
+    }
+
+    &:after {
+      border-radius: 0 0 0 3px;
+      border: ($corner-size-sm - 2px) solid transparent;
+      left: -($corner-size-sm - 1px);
+      bottom: -($corner-size-sm - 1px);
+    }
+  }
+
+  &.corner-top-right,
+  &.corner-top-right:after {
+    border-radius: 0 3px 0 0;
+    border-right-color: $border-color;
+    border-top-color: $border-color;
+
+    @each $color, $colorValue in $colors {
+      &.corner-#{$color} {
+        border-right-color: darken($colorValue, $darkenEffetBorder);
+        border-top-color: darken($colorValue, $darkenEffetBorder);
+      }
+
+      &.corner-#{$color}:after {
+        border-right-color: $colorValue;
+        border-top-color: $colorValue;
+      }
+    }
+
+    &:after {
+      border-radius: 0 3px 0 0;
+      border: ($corner-size-sm - 2px) solid transparent;
+      right: -($corner-size-sm - 1px);
+      top: -($corner-size-sm - 1px);
+    }
+  }
+
+  &.corner-bottom-right,
+  &.corner-bottom-right:after {
+    border-radius: 0 0 3px 0;
+    border-right-color: $border-color;
+    border-bottom-color: $border-color;
+
+    @each $color, $colorValue in $colors {
+      &.corner-#{$color} {
+        border-right-color: darken($colorValue, $darkenEffetBorder);
+        border-bottom-color: darken($colorValue, $darkenEffetBorder);
+      }
+
+      &.corner-#{$color}:after {
+        border-right-color: $colorValue;
+        border-bottom-color: $colorValue;
+      }
+    }
+
+    &:after {
+      border-radius: 0 0 3px 0;
+      bottom: -($corner-size-sm - 1px);
+      right: -($corner-size-sm - 1px);
+    }
+  }
+}
