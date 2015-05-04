@@ -1,0 +1,7 @@
+body {
+  transition: transform 350ms ease-out;
+
+  &.navbar-open {
+    transform: translateX(-($mobile-nav-size));
+  }
+}
