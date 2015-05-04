@@ -35,10 +35,6 @@ Styleguide Patterns.Navbar
   .icon-chevron-down {
     margin-left: 5px;
     fill: $grey-medium;
-
-    @include breakpoint($screen-sm, $reverse: true) {
-      margin-top: 8px;
-    }
   }
 
   .icon-email {

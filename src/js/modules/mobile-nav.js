@@ -13,7 +13,7 @@ var mobileNav = function mobileNav () {
   $(document).on('click', function (event) {
     if (
       !$(event.target).parents('.navbar-header').length
-      && !$(event.target).parents('div[class^="js-"],div[class*=" js-"]').length
+      && !$(event.target).parents('*[class^="js-"],*[class*=" js-"]').length
       && $('body').hasClass('navbar-open')
     ) {
       togglePanel(false);
