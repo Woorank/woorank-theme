@@ -1,3 +1,4 @@
+// Colors helpers
 
 @each $color, $colorValue in $colors {
   .color-#{$color} {
