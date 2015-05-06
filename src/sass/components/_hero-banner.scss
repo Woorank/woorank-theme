@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 /*
 Hero Banner
 
@@ -8,37 +6,16 @@ markup: markup/hero-banner.hbs
 Styleguide Components.Hero Banner
 */
 
-$heroDefaultHeight: 358px;
-$heroBigHeight: 560px;
-
 .hero-banner {
   clear: both;
-  height: $heroDefaultHeight;
   overflow: hidden;
   position: relative;
 
-  @include breakpoint($screen-lg) {
-    height: $heroBigHeight;
-  }
-
   .hero-img {
     display: block;
-    height: 100%;
-    left: 50%;
+    height: auto;
     max-width: none;
-    position: absolute;
-    top: 0;
-    transform: translateX(-50%);
-    width: auto;
-    z-index: 1;
-
-    @include breakpoint($screen-sm) {
-      height: auto;
-      top: 15%;
-      left: 0;
-      transform: translateY(-15%);
-      width: 100%;
-    }
+    width: 100%;
   }
 }
 
@@ -54,10 +31,6 @@ Styleguide Components.Hero Banner with preview
 
   &.hero-banner-preview {
     background-color: $primary;
-
-    @include breakpoint($screen-lg) {
-      height: $heroDefaultHeight;
-    }
     
     &:after {
       content: " ";

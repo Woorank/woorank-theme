@@ -1,6 +1,4 @@
-@charset "UTF-8";
-
-/* BASES MIXINS*/
+// BASES MIXINS
 
 @mixin breakpoint($size: $screen-lg, $reverse: false) {
   @if($reverse) {
