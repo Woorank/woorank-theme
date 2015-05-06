@@ -30,6 +30,11 @@ Styleguide Components.Buttons
 
 .btn {
   font-weight: normal;
+  white-space: normal;
+  
+  @include breakpoint($screen-sm) {
+    white-space: nowrap;
+  }
 }
 
 .btn-default {
