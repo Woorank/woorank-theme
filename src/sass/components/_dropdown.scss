@@ -83,9 +83,9 @@ Styleguide Components.Dropdown
     display: none;
     border-bottom-color: $border-color;
     left: 50%;
-    margin-left: -5px;
     top: 100%;
     z-index: 1001;
+    margin-top: -5px;
 
     &:after {
       border-bottom-color: $white;
