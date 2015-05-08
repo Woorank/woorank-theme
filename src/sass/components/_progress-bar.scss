@@ -19,6 +19,7 @@ Styleguide Components.Progress Bar
   &.progress-with-label {
     .progress {
       display: inline-block;
+      vertical-align: middle;
       width: 60%;
     }
   }
@@ -49,7 +50,8 @@ Styleguide Components.Progress Bar
 }
 
 .progress {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   box-shadow: none;
   margin-bottom: 0;
   background-color: $grey-smoke;
