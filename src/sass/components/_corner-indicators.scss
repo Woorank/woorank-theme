@@ -1,7 +1,7 @@
 /*
   Corner Indicator
 
-  markup: markup/corner-indicators.hbs
+  Markup: markup/corner-indicators.hbs
 
   .corner-xs.corner-top-left.corner-error - Corner Top Left
   .corner-sm.corner-top-left.corner-error - Corner Top Left
@@ -13,6 +13,7 @@
 
   Styleguide Components.Corner Indicators
 */
+
 $default-corner-size: 5px;
 
 $corner-size-xs: 3px;
