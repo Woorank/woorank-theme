@@ -98,9 +98,7 @@ $darkenEffetBorder: 5%;
     @each $color, $colorValue in $colors {
       &.corner-#{$color} {
         border-left-color: darken($colorValue, $darkenEffetBorder);
-        -moz-border-left-color: darken($colorValue, $darkenEffetBorder);
         border-top-color: darken($colorValue, $darkenEffetBorder);
-        -moz-border-top-color: darken($colorValue, $darkenEffetBorder);
         &:after {
           border-left-color: $colorValue;
           border-top-color: $colorValue;
