@@ -1,7 +1,7 @@
 /*
 Generation bar
 
-markup: markup/generation-bar.hbs
+Markup: markup/generation-bar.hbs
 
 Styleguide Patterns.Generation bar
 */
@@ -74,47 +74,6 @@ Styleguide Patterns.Generation bar
 
       @include breakpoint($screen-sm) {
         border-radius: 0 3px 3px 0;
-      }
-    }
-  }
-}
-
-/*
-Generation bar small
-
-markup: markup/generation-bar-small.hbs
-
-Styleguide Patterns.Generation bar small
-*/
-
-.generation-bar {
-  &.generation-bar-in-header,
-  &.generation-bar-small {
-    padding-top: 15px;
-
-    .form-control {
-      border-color: $border-color;
-      height: 30px;
-    }
-
-    .input-group-btn {
-      .btn {
-        padding: 3px 13px;
-        height: 30px;
-      }
-    }
-  }
-}
-
-.generation-bar {
-  &.generation-bar-small {
-    .input-group-btn {
-      .btn {
-        box-shadow: inset 0 -2px 0 rgba($black, 0.2);
-
-        &.btn-primary {
-          color: $white;
-        }
       }
     }
   }

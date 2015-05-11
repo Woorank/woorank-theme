@@ -1,10 +1,11 @@
 /*
 Tooltip
 
-markup: markup/tooltip-primary-bottom-left.hbs
+Markup: markup/tooltip-primary-bottom-left.hbs
 
 Styleguide Components.Tooltip
 */
+
 .tooltip {
   z-index: ($zindex-navbar - 1);
   &.tooltip-visible {
