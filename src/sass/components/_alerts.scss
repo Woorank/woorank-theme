@@ -1,0 +1,26 @@
+/*
+Alerts
+
+Markup: markup/alerts.hbs
+
+               - Default
+.alert-success - Success
+.alert-info    - Info
+.alert-warning - Warning
+.alert-danger  - Danger
+
+Styleguide Components.Alerts
+*/
+
+.alert {
+  &:not([class*="alert-"]) {
+    background-color: $grey-smoke;
+    border-color: $border-color;
+    
+    .alert-link {
+      color: $grey-darker;
+      font-weight: bold;
+    }
+  }
+}
+

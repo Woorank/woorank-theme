@@ -1,0 +1,28 @@
+/*
+Input groups
+
+Markup:
+<form role="form">
+  <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-addon">@</span>
+      <input type="text" class="form-control" placeholder="Username">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+      <input type="text" class="form-control">
+      <span class="input-group-addon">.00</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-addon">$</span>
+      <input type="text" class="form-control">
+      <span class="input-group-addon">.00</span>
+    </div>
+  </div>
+</form>
+
+Styleguide Components.Forms.Input Groups
+*/
