@@ -1,0 +1,96 @@
+/*
+Tags
+
+Markup: markup/tags.hbs
+
+Styleguide Components.Tags
+*/
+
+.tag {
+  background-color: $grey-smoke;
+  border-radius: 3px;
+  border: 1px solid $border-color;
+  color: $grey-dark;
+  display: inline-block;
+  line-height: 0;
+  margin-top: -1px;
+  min-height: 22px;
+  padding: 1px 5px;
+  position: relative;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  width: 40px;
+
+  @include breakpoint($screen-md) {
+    width: auto;
+  }
+
+  &.tag-dismissible {
+    padding-right: 20px;
+  }
+
+  &.tag-corner {
+    padding-left: 10px;
+
+    &.corner-right {
+      padding-left: 5px;
+      padding-right: 10px;
+      
+      &.tag-dismissible {
+        padding-right: 20px;
+      }
+    }
+  }
+
+  .tag-text {
+    font-size: 12px;
+    line-height: 1.33;
+    padding: 2px 0;
+  }
+
+  .corner-indicator {
+    &.corner-top-left {
+      margin-top: -1px;
+      margin-left: -1px;
+    }
+
+    &.corner-top-right {
+      margin-top: -1px;
+      margin-right: -1px;
+    }
+
+    &.corner-bottom-left {
+      margin-bottom: -1px;
+      margin-left: -1px;
+    }
+
+    &.corner-bottom-right {
+      margin-bottom: -1px;
+      margin-right: -1px;
+    }
+  }
+
+  .btn-close {
+    background: none;
+    height: 20px;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+
+    .icon {
+      opacity: .25;
+    }
+
+    &:hover,
+    &:focus {
+      .icon {
+        opacity: .5;
+      }
+    }
+  }
+}
