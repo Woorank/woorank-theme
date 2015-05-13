@@ -8,4 +8,9 @@ Styleguide Components.Forms
 
 .form-control {
   box-shadow: none;
+
+  &:focus {
+    box-shadow: 0 0 5px rgba($primary, .4);
+    border-color: $primary;
+  }
 }

@@ -47,19 +47,20 @@ Styleguide Components
 @import "components/breadcrumb";
 @import "components/business-card";
 @import "components/buttons";
+@import "components/checbox-and-radio-addons";
 @import "components/corner-indicators";
 @import "components/dropdown";
 @import "components/forms";
-@import "components/inputs-groups";
-@import "components/checbox-and-radio-addons";
 @import "components/hero-banner";
 @import "components/hero-banner-preview";
+@import "components/inputs-groups";
 @import "components/label";
 @import "components/modal";
 @import "components/page-header";
 @import "components/popover";
 @import "components/progress-bar";
 @import "components/tables";
+@import "components/tags";
 @import "components/tooltip";
 
 /*
@@ -84,6 +85,6 @@ Weight: 1
 
 Styleguide Structures
 */
+@import "structures/app";
 @import "structures/landing";
 @import "structures/static";
-@import "structures/app";
