@@ -3,6 +3,11 @@ Tags
 
 Markup: markup/tags.hbs
 
+.tag-primary - Primary
+.tag-success - Success
+.tag-warning - Warning
+.tag-error - Error
+
 Styleguide Components.Tags
 */
 
@@ -27,6 +32,14 @@ Styleguide Components.Tags
 
   &.tag-dismissible {
     padding-right: 20px;
+  }
+
+  @each $color, $colorValue in $basicColors {
+    &.tag-#{$color} {
+      background-color: get-variant-color($color, "smoke");
+      border-color: get-variant-color($color, "dark");
+      color: get-variant-color($color, "dark");
+    }
   }
 
   &.tag-corner {

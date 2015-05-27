@@ -16,11 +16,10 @@ Styleguide Components.Alerts
   &:not([class*="alert-"]) {
     background-color: $grey-smoke;
     border-color: $border-color;
-    
-    .alert-link {
-      color: $grey-darker;
-      font-weight: bold;
-    }
+  }
+
+  .alert-link {
+    color: $black;
+    font-weight: normal;
   }
 }
-

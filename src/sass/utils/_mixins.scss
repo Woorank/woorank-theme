@@ -16,3 +16,13 @@
   #{$property}: -webkit-calc(#{$expression});
   #{$property}: calc(#{$expression});
 }
+
+@function get-variant-color($base, $arg) {
+  $composedColor: $base;
+  @each $color, $colorValue in $colors {
+    @if "#{$base}-#{$arg}" == $color {
+      $composedColor: $colorValue;
+    }
+  }
+  @return $composedColor;
+}
