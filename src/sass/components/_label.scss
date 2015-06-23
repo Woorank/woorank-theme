@@ -1,7 +1,13 @@
 /*
 Labels
 
-Markup: <span class="label {{modifier_class}}">label {{modifier_class}}</span>
+Markup: markup/label.hbs
+
+.label-default - default
+.label-primary - primary
+.label-success - success
+.label-warning - warning
+.label-danger  - danger
 
 Styleguide Components.Labels
 */
@@ -9,32 +15,33 @@ Styleguide Components.Labels
 .label {
   font-size: .8em;
   font-weight: 400;
+  line-height: 1.5;
   padding: .1em .4em .2em;
   position: relative;
   top: -.1em;
 
   &.label-default {
     background-color: $grey-smoke;
-    color: $grey-lighter;
+    color: $grey-dark;
   }
 
   &.label-primary {
-    background-color: $primary-lighter;
+    background-color: $primary-smoke;
     color: $primary-dark;
   }
 
   &.label-success {
-    background-color: $success-lighter;
+    background-color: $success-smoke;
     color: $success-dark;
   }
 
   &.label-warning {
-    background-color: $warning-lighter;
+    background-color: $warning-smoke;
     color: $warning-dark;
   }
 
   &.label-danger {
-    background-color: $error-lighter;
+    background-color: $error-smoke;
     color: $error-dark;
   }
 }
