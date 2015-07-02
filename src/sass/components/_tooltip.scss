@@ -1,16 +1,30 @@
 /*
 Tooltip
 
-Markup: markup/tooltip-primary-bottom-left.hbs
+Markup: markup/tooltip.hbs
+
+.top - Top
+.bottom - Bottom
+.left - Left
+.right - Right
+.tooltip-primary.top-left - Primary Color
+.tooltip-success.top-right - Success Color
+.tooltip-warning.bottom-left - Warning Color
+.tooltip-error.bottom-right - Error Color
+.tooltip-grey.bottom-right - Grey Color
+.tooltip-white.top - White Color
+.tooltip-white.left-top - White Color
 
 Styleguide Components.Tooltip
 */
 
+$directions: 'top', 'bottom', 'left', 'right';
+
 .tooltip {
+  display: inline-block;
   z-index: ($zindex-navbar - 1);
-  &.tooltip-visible {
-    opacity: 1;
-  }
+  margin-top: 3px;
+  padding: 5px 0;
 
   .tooltip-btn-close {
     padding: 5px;
@@ -19,56 +33,220 @@ Styleguide Components.Tooltip
     cursor: pointer;
   }
 
-  &.bottom-left {
-    margin-top: 3px;
-    padding: 5px 0;
+  .tooltip-inner {
+    background-color: $grey-dark;
+  }
 
+  .tooltip-btn-close {
+    color: $grey-light;
+  }
+
+  .tooltip-arrow {
+    &:after {
+      border: 5px solid rgba($white, 0);
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &.left {
+    .tooltip-arrow:after {
+      margin-top: -5px;
+      margin-left: -6px;
+    }
+  }
+
+  &.right {
+    .tooltip-arrow:after {
+      margin-top: -5px;
+      margin-left: -4px;
+    }
+  }
+
+  &.top {
+    .tooltip-arrow:after {
+      margin-top: -6px;
+      margin-left: -5px;
+    }
+  }
+
+  &.bottom {
+    .tooltip-arrow:after {
+      margin-top: -4px;
+      margin-left: -5px;
+    }
+  }
+
+  &.bottom-left,
+  &.top-left {
     .tooltip-arrow {
-      margin-left: 0;
-      border-width: 0 5px 5px;
       left: 20px;
     }
   }
 
-  &.bottom-right {
-    margin-top: 3px;
-    padding: 5px 0;
-
+  &.bottom-right,
+  &.top-right {
     .tooltip-arrow {
-      margin-left: 0;
-      border-width: 0 5px 5px;
       left: auto;
       right: 20px;
     }
   }
 
-  &.tooltip-primary {
-    .tooltip-inner {
-      border: 1px solid $primary-light;
-      background-color: $primary-smoke;
-      color: $grey-medium;
-    }
-
+  &.bottom-left,
+  &.bottom-right {
     .tooltip-arrow {
-      margin-top: 1px;
-      top: -1px;
-      border-bottom-color: $primary-light;
+      margin-top: 0;
 
       &:after {
-        content: "";
-        position: absolute;
-        top: 2px;
-        left: 0;
+        margin-top: -4px;
         margin-left: -5px;
-        border-color: rgba($white, 0);
-        border-style: solid;
-        border-width: 0 5px 5px;
-        border-bottom-color: $primary-smoke;
       }
     }
+  }
 
-    .tooltip-btn-close {
-      color: $primary-light;
+  &.top-left,
+  &.top-right {
+    .tooltip-arrow {
+      margin-bottom: 0;
+
+      &:after {
+        margin-top: -6px;
+        margin-left: -5px;
+      }
+    }
+  }
+
+  &.left-top {
+    .tooltip-arrow {
+      top: 20px;
+      left: -10px;
+      border-width: 5px;
+
+      &:after {
+        margin-top: -5px;
+        margin-left: -4px;
+      }
     }
   }
 }
+
+// OPTIONS (colors, white, force visible and styleguide example)
+.tooltip {
+  @each $color, $colorValue in $colors {
+    &.tooltip-#{$color} {
+
+      .tooltip-inner {
+        border: 1px solid get-variant-color($color, "light");
+        background-color: get-variant-color($color, "smoke");
+        color: $colorValue;
+      }
+
+      &.bottom-left,
+      &.bottom-right {
+        .tooltip-arrow {
+          border-bottom-color: get-variant-color($color, "light");
+
+          &:after {
+            border-bottom-color: get-variant-color($color, "smoke");
+          }
+        }
+      }
+
+      &.top-left,
+      &.top-right {
+        .tooltip-arrow {
+          border-top-color: get-variant-color($color, "light");
+
+          &:after {
+            border-top-color: get-variant-color($color, "smoke");
+          }
+        }
+      }
+
+      &.left-top {
+        .tooltip-arrow {
+          border-right-color: get-variant-color($color, "light");
+
+          &:after {
+            border-right-color: get-variant-color($color, "smoke");
+          }
+        }
+      }
+
+      .tooltip-btn-close {
+        color: get-variant-color($color, "light");
+      }
+    }
+  }
+
+  &.tooltip-white {
+    .tooltip-inner {
+      border: 1px solid $border-color;
+      background-color: $white;
+      color: $grey-dark;
+    }
+
+    @each $direction in $directions {
+      &.#{$direction} {
+        .tooltip-arrow {
+          border-#{$direction}-color: $border-color;
+          
+          &:after {
+            border-#{$direction}-color: $white;
+          }
+        }
+      }
+    }
+
+    &.bottom-left,
+    &.bottom-right {
+      .tooltip-arrow {
+        border-bottom-color: $border-color;
+
+        &:after {
+          border-bottom-color: $white;
+        }
+      }
+    }
+
+    &.top-left,
+    &.top-right {
+      .tooltip-arrow {
+        border-top-color: $border-color;
+
+        &:after {
+          border-top-color: $white;
+        }
+      }
+    }
+
+    &.left-top {
+      .tooltip-arrow {
+        border-right-color: $border-color;
+
+        &:after {
+          border-right-color: $white;
+        }
+      }
+    }
+  }
+
+  &.tooltip-visible {
+    opacity: 1;
+  }
+
+  &.styleguide-example {
+    position: relative;
+    margin: 30px;
+  }
+}
+
+/*
+Animated Tooltip
+
+Markup: markup/tooltip-animated.hbs
+
+Styleguide Components.Tooltip.Animated
+*/

@@ -3,29 +3,40 @@ All Icons
 
 Markup: markup/icons.hbs
 
-bullet-plain   - plain bullet
-bullet-info    - info bullet
-bullet-success - success bullet
-bullet-warning - warning bullet
-bullet-danger  - danger bullet
 arrow-up       - Arrow up
-chevron-right  - Chevron right
-chevron-left   - Chevron left
-chevron-down   - Chevron down
-chevron-up     - Chevron up
+box            - Empty Check Box
+box-check      - Checked Box
+bullet-arrow-down - Circle with a arrow down
 checked        - Checkbox checked
+chevron-down   - Chevron down
+chevron-left   - Chevron left
+chevron-right  - Chevron right
+chevron-up     - Chevron up
+clock          - Clock
+conversation   - Chat bubble
+cross          - Cross
+email          - email
 folder         - Opened Folder
+gear           - Gear
 hashtag        - Hash Tag
+impact         - impact
 links          - Links
+loader         - Spin loader
 local          - Localisation
+menu           - Menu
+minus          - Minus sign
 mobile         - Mobile
+options        - Options
+plus           - Plus sign
 search         - Search
 social         - Social
+star-empty     - Empty Star
 technologies   - Technologies
-time           - Time
+triangle-down  - Triangle Down
+triangle-up    - Triangle Up
 usability      - Usability
-visitor        - Visitor
-cross          - Cross
+visitors       - Visitors
+
 
 Styleguide Icons.All Icons
 */
@@ -82,13 +93,18 @@ Styleguide Icons.Icons Sizes
     width: 90px;
   }
 
+  &.icon-xxl {
+    height: 120px;
+    width: 120px;
+  }
+
   &.icon-hidden {
     display: none;
   }
 
   &.icon-email {
-  	height: 25px;
-  	width: 25px;
+    height: 25px;
+    width: 25px;
   }
 
   &.icon-logo {
@@ -111,6 +127,8 @@ Styleguide Icons.Icons Sizes
 Logo
 
 Markup: markup/logo.hbs
+
+Woorank logo - logo
 
 Styleguide Icons.Logo
 */

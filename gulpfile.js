@@ -44,13 +44,13 @@ gulp.task('docker', ['connect']);
 gulp.task('build', ['browserify-build', 'sass-build']);
 
 gulp.task('watch', function () {
-  gulp.watch(path.join(paths.sass, '**/*.scss'), ['sass', 'kss']);
-  gulp.watch(path.join(paths.sass, '**/*.hbs'), ['kss']);
+  gulp.watch(path.join(paths.sass, '**', '*.scss'), ['sass', 'kss']);
+  gulp.watch(path.join(paths.sass, '**', '*.hbs'), ['kss']);
   gulp.watch('src/woorank-template/**/*.html', ['kss']);
-  gulp.watch(path.join(paths.sassKss, '**/*.scss'), ['sass-kss', 'kss']);
-  gulp.watch(path.join(paths.svg, '**/*.svg'), ['sprite', 'kss']);
-  gulp.watch(path.join(paths.js, '**/*.js'), ['kss']);
-  gulp.watch(path.join(paths.build.cssKss, '**/*.js'), ['kss']);
+  gulp.watch(path.join(paths.sassKss, '**', '*.scss'), ['sass-kss', 'kss']);
+  gulp.watch(path.join(paths.svg, '**', '*.svg'), ['sprite', 'kss']);
+  gulp.watch(path.join(paths.js, '**', '*.js'), ['kss']);
+  gulp.watch(path.join(paths.build.cssKss, '**', '*.js'), ['kss']);
 });
 
 gulp.task('connect', function () {
@@ -130,7 +130,7 @@ gulp.task('sass-kss', function () {
 });
 
 gulp.task('sprite', function () {
-  return gulp.src(path.join(paths.svg, '*.svg'))
+  return gulp.src(path.join(paths.svg, '**', '*.svg'))
     .pipe(svgSprite({
       mode: 'symbols',
       preview: false,
