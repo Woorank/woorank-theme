@@ -25,3 +25,36 @@ Markup:
 
 Styleguide Components.Modal
 */
+
+.modal {
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    padding: 10px;
+    line-height: 0;
+  }
+
+  .modal-header {
+    border: none;
+    padding: 20px 0 0 0;
+  }
+
+  .modal-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    color: $grey-darker;
+  }
+
+  .modal-body {
+    .message {
+      font-size: 13px;
+    }
+  }
+
+  .modal-footer {
+    border: none;
+    padding: 0 20px 20px 20px;
+  }
+}

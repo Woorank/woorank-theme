@@ -1,0 +1,22 @@
+div[id^="section-icons"] {
+  font-size: 0;
+
+  .modifier__example {
+    display: none;
+  }
+
+  .modifier__item {
+    display: inline-block;
+    padding: 30px;
+    font-size: 12px;
+    text-align: center;
+    
+    .modifier__example {
+      display: inline-block;
+    }
+
+    .modifier__name {
+      padding-top: 10px;
+    }
+  }
+}

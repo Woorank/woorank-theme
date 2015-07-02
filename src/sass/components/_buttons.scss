@@ -74,6 +74,48 @@ Styleguide Components.Buttons
 }
 
 /*
+Special Rounded Buttons
+
+Special case for buttons.
+
+btn-circle.btn-default - Circle button
+
+Markup: markup/buttons-special.hbs
+
+Styleguide Components.Buttons.Special
+*/
+
+$button-circle-size: 30px;
+
+.btn-circle {
+  height: $button-circle-size;
+  width: $button-circle-size;
+  border-radius: ($button-circle-size / 2);
+  border: 1px solid $border-color;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: $grey-medium;
+  padding: 0;
+  letter-spacing: -0.1em;
+
+  .icon {
+    fill: $grey-medium;
+    height: 10px;
+    width: 10px;
+  }
+
+  &:active,
+  &:focus:active,
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+/*
 Sizes
 
 Fancy larger or smaller buttons? Add `.btn-lg`, `.btn-sm`, or `.btn-xs` for additional sizes.
@@ -128,11 +170,7 @@ Styleguide Components.Buttons.Disabled
 /*
 Links
 
-Markup:
-<a  href="#" class="btn btn-primary active">Button Text</a>
-<a  href="#" class="btn btn-default active">Button Text</a>
-<a  href="#" class="btn btn-primary disabled">Button Text</a>
-<a  href="#" class="btn btn-default disabled">Button Text</a>
+Markup: markup/buttons-links.hbs
 
 Styleguide Components.Buttons.Links
 */
