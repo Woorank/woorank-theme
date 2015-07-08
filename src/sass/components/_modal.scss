@@ -27,6 +27,15 @@ Styleguide Components.Modal
 */
 
 .modal {
+  &.modal-wide {
+    .modal-dialog {
+      @include breakpoint($screen-sm) {
+        width: 90%;
+        max-width: 890px;
+      }
+    }
+  }
+
   .close {
     position: absolute;
     top: 15px;
