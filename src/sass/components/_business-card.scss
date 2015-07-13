@@ -20,6 +20,9 @@ $businessCardPhotoSize: 65px;
     border-radius: $businessCardPhotoSize / 2;
     overflow: hidden;
     margin-right: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 
     &.no-photos {
       background-color: $primary-lighter;
