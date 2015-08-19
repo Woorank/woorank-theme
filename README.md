@@ -11,6 +11,10 @@ $ docker-compose build
 $ docker-compose up
 ```
 
+```bash
+$ docker-compose run --rm styleguide gulp
+```
+
 # Using gulp (fast developement)
 
 In another terminal window/tab
