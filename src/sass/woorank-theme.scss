@@ -13,9 +13,9 @@ Utils assets
 @import "utils/generics";
 
 /*
-Bootstrap styles
+Bootstrap styles (local copy of bootstrap-sass 3.3.4 without print components)
 */
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "bootstrap-sass/bootstrap";
 
 /*
 Typography
