@@ -1,4 +1,8 @@
-var mobileNav = function mobileNav () {
+'use strict';
+
+var $ = window.$;
+
+function mobileNav () {
   var $navbar = $('#top .header.navbar');
 
   var togglePanel = function togglePanel (status) {
@@ -12,9 +16,9 @@ var mobileNav = function mobileNav () {
 
   $(document).on('click', function (event) {
     if (
-      !$(event.target).parents('.navbar-header').length
-      && !$(event.target).parents('*[class^="js-"],*[class*=" js-"]').length
-      && $('body').hasClass('navbar-open')
+      !$(event.target).parents('.navbar-header').length &&
+      !$(event.target).parents('*[class^="js-"],*[class*=" js-"]').length &&
+      $('body').hasClass('navbar-open')
     ) {
       togglePanel(false);
     }
@@ -29,6 +33,6 @@ var mobileNav = function mobileNav () {
       togglePanel(false);
     }
   });
-};
+}
 
 module.exports = mobileNav;

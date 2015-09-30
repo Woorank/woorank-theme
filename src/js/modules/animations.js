@@ -1,5 +1,8 @@
-var animations = function animations() {
+'use strict';
 
+var $ = window.$;
+
+function animations () {
   var checkAnimationLoop = function checkAnimationLoop ($elem, loopLeft) {
     if (loopLeft-- <= 0) {
       return true;
@@ -10,7 +13,7 @@ var animations = function animations() {
     }
 
     return false;
-  }
+  };
 
   var animationLoop = function animationLoop ($elem, name, loop, delay) {
     var loopLeft = Number($elem.attr('data-animation-loop-left'));
@@ -48,6 +51,6 @@ var animations = function animations() {
     $(this).attr('data-animation-loop-left', loop);
     animationLoop($(this), name, loop, delay);
   });
-};
+}
 
 module.exports = animations;
