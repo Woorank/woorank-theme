@@ -157,3 +157,54 @@ $basicColors:
   ('success', $success),
   ('warning', $warning),
   ('error', $error);
+
+$lighterColors: (
+  'primary-lighter', 'primary-smoke',
+  'success-lighter', 'success-smoke',
+  'warning-lighter', 'warning-smoke',
+  'error-lighter', 'error-smoke',
+  'grey-lighter', 'grey-smoke'
+);
+
+$primaryColors: (
+  'primary',
+  'success',
+  'warning',
+  'error',
+  'grey'
+);
+
+$colorsMap: (
+  primary: (
+    "primary-dark": $primary-dark,
+    "primary-light": $primary-light,
+    "primary-lighter": $primary-lighter,
+    "primary-smoke": $primary-smoke
+  ),
+  success: (
+    "success-dark": $success-dark,
+    "success-light": $success-light,
+    "success-lighter": $success-lighter,
+    "success-smoke": $success-smoke
+  ),
+  warning: (
+    "warning-dark": $warning-dark,
+    "warning-light": $warning-light,
+    "warning-lighter": $warning-lighter,
+    "warning-smoke": $warning-smoke
+  ),
+  error: (
+    "error-dark": $error-dark,
+    "error-light": $error-light,
+    "error-lighter": $error-lighter,
+    "error-smoke": $error-smoke
+  ),
+  grey: (
+    "grey-darker": $grey-darker,
+    "grey-dark": $grey-dark,
+    "grey-medium": $grey-medium,
+    "grey-light": $grey-light,
+    "grey-lighter": $grey-lighter,
+    "grey-smoke": $grey-smoke
+  ),
+);
