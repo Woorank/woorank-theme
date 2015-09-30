@@ -1,0 +1,98 @@
+/*
+Keyword Tags
+
+Markup: markup/keyword-tags.hbs
+
+.keyword-tag-primary - Primary
+.keyword-tag-success - Success
+.keyword-tag-warning - Warning
+.keyword-tag-error - Error
+.keyword-tag-grey - Grey
+
+Styleguide Components.Keyword Tags
+*/
+
+.keyword-tag {
+  background-color: $white;
+  border-radius: 3px;
+  border: 1px solid $border-color;
+  color: $grey;
+  display: inline-block;
+  font-size: 13px;
+  height: 46px;
+  padding: 10px;
+  position: relative;
+  transition: border-color 150ms ease-in, background-color 150ms ease-in;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -15px;
+    display: block;
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-width: 22px 15px 22px 0;
+    border-color: transparent $border-color transparent transparent;
+    z-index: 1;
+    transition: border-color 150ms ease-in, background-color 150ms ease-in;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: -14px;
+    display: block;
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-width: 21px 14px 21px 0;
+    border-color: transparent $white transparent transparent;
+    z-index: 2;
+    transition: border-color 150ms ease-in, background-color 150ms ease-in;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $grey-smoke;
+    &:after {
+      border-right-color: $grey-smoke;
+    }
+  }
+
+  @each $color, $colorValue in $colors {
+    &.keyword-tag-#{$color} {
+      border-color: $colorValue;
+      background-color: $colorValue;
+
+      @if index($lighterColors, $color) {
+        color: get-original-color($color);
+      }
+      @else {
+        color: $white;
+      }
+
+      &:before,
+      &:after {
+        border-right-color: $colorValue;
+      }
+
+      &:focus,
+      &:hover,
+      &:active {
+        @if index($primaryColors, $color) {
+          background-color: get-variant-color($color, "dark");
+          border-color: get-variant-color($color, "dark");
+
+          &:before,
+          &:after {
+            border-right-color: get-variant-color($color, "dark");
+          }
+        }
+      }
+    }
+  }
+}

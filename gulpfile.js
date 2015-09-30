@@ -1,31 +1,31 @@
-var autoprefixer  = require('gulp-autoprefixer');
-var browserify    = require('gulp-browserify');
-var connect       = require('gulp-connect');
-var debug         = require('gulp-debug');
-var exec          = require('child_process').exec;
-var gulp          = require('gulp');
-var path          = require('path');
-var pjson         = require('./package.json');
-var s3            = require('gulp-s3');
-var sass          = require('gulp-sass');
-var svgSprite     = require('gulp-svg-sprites');
-var uglify        = require('gulp-uglify');
-var rename        = require('gulp-rename');
+var autoprefixer = require('gulp-autoprefixer');
+var browserify = require('gulp-browserify');
+var connect = require('gulp-connect');
+var debug = require('gulp-debug');
+var exec = require('child_process').exec;
+var gulp = require('gulp');
+var path = require('path');
+var pjson = require('./package.json');
+var s3 = require('gulp-s3');
+var sass = require('gulp-sass');
+var svgSprite = require('gulp-svg-sprites');
+var uglify = require('gulp-uglify');
+var rename = require('gulp-rename');
 
 var paths = {
-  sass:          'src/sass',
-  sassKss:       'src/woorank-template/sass-kss',
-  css:           'src/css',
-  svg:           'src/svg',
-  js:            'src/js',
-  img:           'src/img',
+  sass: 'src/sass',
+  sassKss: 'src/woorank-template/sass-kss',
+  css: 'src/css',
+  svg: 'src/svg',
+  js: 'src/js',
+  img: 'src/img',
   build: {
-    img:         'styleguide/assets/img',
-    css:         'styleguide/assets/style',
-    svg:         'styleguide/assets/svg',
-    js:          'styleguide/assets/script',
-    cssKss:      'src/woorank-template/public',
-    imgKss:      'src/woorank-template/puclic/img'
+    img: 'styleguide/assets/img',
+    css: 'styleguide/assets/style',
+    svg: 'styleguide/assets/svg',
+    js: 'styleguide/assets/script',
+    cssKss: 'src/woorank-template/public',
+    imgKss: 'src/woorank-template/puclic/img'
   }
 };
 
@@ -35,8 +35,15 @@ gulp.task('default', [
   'sprite',
   'sass',
   'kss',
-  'connect',
-  'watch'
+  'connect'
+]);
+
+gulp.task('dev', [
+  'move-pictures',
+  'browserify',
+  'sprite',
+  'sass',
+  'kss'
 ]);
 
 gulp.task('docker', ['connect']);
