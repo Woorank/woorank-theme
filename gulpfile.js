@@ -1,5 +1,4 @@
 var autoprefixer = require('gulp-autoprefixer');
-var browserify = require('gulp-browserify');
 var connect = require('gulp-connect');
 var debug = require('gulp-debug');
 var exec = require('child_process').exec;
@@ -9,7 +8,6 @@ var pjson = require('./package.json');
 var s3 = require('gulp-s3');
 var sass = require('gulp-sass');
 var svgSprite = require('gulp-svg-sprites');
-var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 
 var paths = {
@@ -17,7 +15,6 @@ var paths = {
   sassKss: 'src/woorank-template/sass-kss',
   css: 'src/css',
   svg: 'src/svg',
-  js: 'src/js',
   img: 'src/img',
   build: {
     img: 'styleguide/assets/img',
@@ -31,7 +28,6 @@ var paths = {
 
 gulp.task('default', [
   'move-pictures',
-  'browserify',
   'sprite',
   'sass',
   'kss',
@@ -40,7 +36,6 @@ gulp.task('default', [
 
 gulp.task('dev', [
   'move-pictures',
-  'browserify',
   'sprite',
   'sass',
   'kss'
@@ -48,7 +43,7 @@ gulp.task('dev', [
 
 gulp.task('docker', ['connect']);
 
-gulp.task('build', ['browserify-build', 'sass-build']);
+gulp.task('build', ['sass-build']);
 
 gulp.task('watch', function () {
   gulp.watch(path.join(paths.sass, '**', '*.scss'), ['sass', 'kss']);
@@ -56,14 +51,11 @@ gulp.task('watch', function () {
   gulp.watch('src/woorank-template/**/*.html', ['kss']);
   gulp.watch(path.join(paths.sassKss, '**', '*.scss'), ['sass-kss', 'kss']);
   gulp.watch(path.join(paths.svg, '**', '*.svg'), ['sprite', 'kss']);
-  gulp.watch(path.join(paths.js, '**', '*.js'), ['kss']);
-  gulp.watch(path.join(paths.build.cssKss, '**', '*.js'), ['kss']);
 });
 
 gulp.task('connect', function () {
   return connect.server({
-    root: 'styleguide',
-    livereload: true
+    root: 'styleguide'
   });
 });
 
@@ -72,7 +64,7 @@ gulp.task('move-pictures', function () {
     .pipe(gulp.dest(paths.build.img));
 });
 
-gulp.task('kss', ['sprite', 'browserify', 'sass', 'sass-kss'], function (cb) {
+gulp.task('kss', ['sprite', 'sass', 'sass-kss'], function (cb) {
   return exec('kss-node --config=kss-config.json',
     function (err, stdout, stderr) {
       console.log(stdout);
@@ -80,23 +72,6 @@ gulp.task('kss', ['sprite', 'browserify', 'sass', 'sass-kss'], function (cb) {
       cb(err);
       gulp.src('*').pipe(connect.reload());
     });
-});
-
-gulp.task('browserify', function () {
-  return gulp.src(path.join(paths.js, '*.js'))
-    .pipe(browserify({
-      debug: true
-    }))
-    .pipe(gulp.dest(paths.build.js))
-    .pipe(gulp.dest(path.join('./styleguide/build/', pjson.version)));
-});
-
-gulp.task('browserify-build', function () {
-  return gulp.src(path.join(paths.js, '*.js'))
-    .pipe(browserify())
-    .pipe(uglify())
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest(path.join('./styleguide/build/', pjson.version)));
 });
 
 gulp.task('sass', function () {
