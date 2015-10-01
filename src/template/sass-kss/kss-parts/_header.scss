@@ -1,0 +1,27 @@
+.custom-mobile-nav {
+  display: block;
+
+  #kss-node & {
+    @include breakpoint($screen-sm) {
+      display: none !important;
+    }
+  }
+}
+
+.custom-navbar-group {
+  position: absolute;
+  top: 13px;
+  display: none;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+
+  @include breakpoint($screen-sm) {
+    display: block;
+    min-width: 525px;
+  }
+
+  .btn-group {
+    display: inline-block;
+  }
+}
