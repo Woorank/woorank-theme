@@ -8,7 +8,7 @@ function checkboxes () {
     var isDisabled = $(this).hasClass('disabled');
     var isAllowed = !$(this).hasClass('not-allowed');
 
-    if (!isDisabled && !isAllowed) {
+    if (!isDisabled && isAllowed) {
       $(this).toggleClass('checked', !isChecked);
     }
   });

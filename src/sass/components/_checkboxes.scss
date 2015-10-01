@@ -109,9 +109,9 @@ Styleguide Components.Checkboxes
 
   &:disabled,
   &.disabled {
-    background-color: $grey-lighter;
-    border-color: $grey;
-    box-shadow: none;
+    background-color: $grey-smoke;
+    border-color: $grey-light;
+    box-shadow: inset 0 0 1px 1px $white;
     cursor: not-allowed;
 
     &:before,
@@ -125,7 +125,7 @@ Styleguide Components.Checkboxes
     &.focused {
       &:before,
       &:after {
-        background-color: $grey;
+        background-color: $grey-light;
         border-radius: 0;
         height: 2px;
         left: 50%;
@@ -145,14 +145,14 @@ Styleguide Components.Checkboxes
   }
 
   &.not-allowed {
-    background-color: $grey-lighter;
-    border-color: $grey;
-    box-shadow: none;
+    background-color: $grey-smoke;
+    border-color: $grey-light;
+    box-shadow: inset 0 0 1px 1px $white;
     cursor: not-allowed;
 
     &:before,
     &:after {
-      background-color: $grey;
+      background-color: $grey-light;
       border-radius: 0;
       height: 2px;
       left: 50%;
