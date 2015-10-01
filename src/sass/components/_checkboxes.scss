@@ -1,0 +1,172 @@
+/*
+Checkboxes
+
+Custom designed checkboxes
+
+Markup: markup/checkbox.hbs
+
+.checked - checked status
+.hovered - hovered status
+.focused - focused status
+.remove - remove status
+.disabled - disabled status
+.not-allowed - not-allowed status
+
+Styleguide Components.Checkboxes
+*/
+
+.checkbox {
+  background-color: $grey-smoke;
+  border-radius: 2px;
+  border: 1px solid $grey;
+  box-shadow: inset 0 0 1px 1px $white;
+  display: inline-block;
+  height: 17px;
+  margin: 0;
+  position: relative;
+  transition: all 150ms ease-in;
+  width: 17px;
+
+  &:before,
+  &:after {
+    content: "";
+    left: 50%;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    transform-origin: 0 0;
+    transform: translateY(-50%) translateX(-50%);
+    transition: all 150ms ease-in;
+  }
+
+  &:hover,
+  &.hovered {
+    background-color: $white;
+    box-shadow: inset 0 0 1px 1px $grey-smoke;
+
+    &:before,
+    &:after {
+      background-color: $primary;
+      border-radius: 5px;
+      height: 5px;
+      width: 5px;
+    }
+  }
+
+  &.remove {
+    background-color: $white;
+    box-shadow: inset 0 0 1px 1px $grey-smoke;
+
+    &:before,
+    &:after {
+      background-color: $primary;
+      border-radius: 1px;
+      height: 2px;
+      left: 50%;
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      width: 6px;
+    }
+  }
+
+  &.checked {
+    background-color: $primary;
+    border-color: $primary;
+    box-shadow: inset 0 0 1px 0 $primary;
+
+    &:focus,
+    &.focused {
+      box-shadow: inset 0 0 1px 0 $primary, 0 0 3px $grey-lighter;
+    }
+
+    &:before,
+    &:after {
+      background-color: $white;
+      border-radius: 0;
+      height: 2px;
+    }
+
+    &:before {
+      left: 3px;
+      top: 5px;
+      transform: rotate(45deg);
+      width: 5px;
+    }
+
+    &:after {
+      left: 5px;
+      top: 10px;
+      transform: rotate(-45deg);
+      width: 10px;
+    }
+  }
+
+  &:focus,
+  &.focused {
+    border-color: $primary;
+    box-shadow: inset 0 0 1px 1px $grey-smoke, 0 0 3px $grey-lighter;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: $grey-lighter;
+    border-color: $grey;
+    box-shadow: none;
+    cursor: not-allowed;
+
+    &:before,
+    &:after {
+      opacity: 0;
+    }
+
+    &:hover,
+    &.hovered,
+    &:focus,
+    &.focused {
+      &:before,
+      &:after {
+        background-color: $grey;
+        border-radius: 0;
+        height: 2px;
+        left: 50%;
+        opacity: 1;
+        top: 50%;
+        width: 16px;
+      }
+
+      &:before {
+        transform: rotate(45deg) translateX(-50%) translateY(-50%);
+      }
+
+      &:after {
+        transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+      }
+    }
+  }
+
+  &.not-allowed {
+    background-color: $grey-lighter;
+    border-color: $grey;
+    box-shadow: none;
+    cursor: not-allowed;
+
+    &:before,
+    &:after {
+      background-color: $grey;
+      border-radius: 0;
+      height: 2px;
+      left: 50%;
+      opacity: 1;
+      top: 50%;
+      width: 16px;
+    }
+
+    &:before {
+      transform: rotate(45deg) translateX(-50%) translateY(-50%);
+    }
+
+    &:after {
+      transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+    }
+  }
+}
