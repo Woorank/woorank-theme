@@ -1,55 +1,60 @@
+'use strict';
+
 var autoprefixer = require('gulp-autoprefixer');
 var connect = require('gulp-connect');
 var debug = require('gulp-debug');
+var del = require('del');
 var exec = require('child_process').exec;
 var gulp = require('gulp');
+var header = require('gulp-header');
 var path = require('path');
-var pjson = require('./package.json');
+var pkg = require('./package.json');
+var rename = require('gulp-rename');
 var s3 = require('gulp-s3');
 var sass = require('gulp-sass');
 var svgSprite = require('gulp-svg-sprites');
-var rename = require('gulp-rename');
 
 var paths = {
   sass: 'src/sass',
-  sassKss: 'src/woorank-template/sass-kss',
   css: 'src/css',
   svg: 'src/svg',
   img: 'src/img',
+  template: 'src/template',
+  sassKss: 'src/template/sass-kss',
+  public: 'src/template/public',
+  bootstrap: '/node_modules/bootstrap-sass/assets/stylesheets/',
   build: {
     img: 'styleguide/assets/img',
-    css: 'styleguide/assets/style',
+    css: 'styleguide/assets/styles',
     svg: 'styleguide/assets/svg',
-    js: 'styleguide/assets/script',
-    cssKss: 'src/woorank-template/public',
-    imgKss: 'src/woorank-template/puclic/img'
+    js: 'styleguide/assets/scripts'
   }
 };
 
-gulp.task('default', [
-  'move-pictures',
-  'sprite',
-  'sass',
-  'kss',
-  'connect'
-]);
+var banner = ['/**',
+  ' * <%= pkg.name %> - <%= pkg.description %>',
+  ' * @version v<%= pkg.version %>',
+  ' * @link <%= pkg.homepage %>',
+  ' * @license <%= pkg.license %>',
+  ' */',
+  ''].join('\n');
 
-gulp.task('dev', [
-  'move-pictures',
+gulp.task('default', [
   'sprite',
-  'sass',
+  'pictures',
+  'build',
   'kss'
 ]);
 
 gulp.task('docker', ['connect']);
 
-gulp.task('build', ['sass-build']);
+gulp.task('build', ['sass', 'sass-build']);
 
 gulp.task('watch', function () {
   gulp.watch(path.join(paths.sass, '**', '*.scss'), ['sass', 'kss']);
   gulp.watch(path.join(paths.sass, '**', '*.hbs'), ['kss']);
-  gulp.watch('src/woorank-template/**/*.html', ['kss']);
-  gulp.watch(path.join(paths.sassKss, '**', '*.scss'), ['sass-kss', 'kss']);
+  gulp.watch(path.join(paths.template, '**', '*.html'), ['kss']);
+  gulp.watch(path.join(paths.sassKss, '**', '*.scss'), ['kss']);
   gulp.watch(path.join(paths.svg, '**', '*.svg'), ['sprite', 'kss']);
 });
 
@@ -59,12 +64,17 @@ gulp.task('connect', function () {
   });
 });
 
-gulp.task('move-pictures', function () {
+gulp.task('pictures', function () {
   return gulp.src(path.join(paths.img, '**/*.*'))
     .pipe(gulp.dest(paths.build.img));
 });
 
-gulp.task('kss', ['sprite', 'sass', 'sass-kss'], function (cb) {
+gulp.task('scripts', function () {
+  return gulp.src(path.join(paths.public, '*.js'))
+    .pipe(gulp.dest(paths.build.js));
+});
+
+gulp.task('kss', ['sass-kss', 'scripts'], function (cb) {
   return exec('kss-node --config=kss-config.json',
     function (err, stdout, stderr) {
       console.log(stdout);
@@ -79,12 +89,12 @@ gulp.task('sass', function () {
     .pipe(debug())
     .pipe(sass({
       imagePath: paths.build.img,
-      outputStyle: 'expanded',
-      includePaths: '/node_modules/bootstrap-sass/assets/stylesheets/'
+      includePaths: paths.bootstrap,
+      outputStyle: 'expanded'
     }))
     .pipe(autoprefixer())
-    .pipe(gulp.dest(paths.build.css))
-    .pipe(gulp.dest(path.join('./styleguide/build/', pjson.version)));
+    .pipe(header(banner, { pkg: pkg }))
+    .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)));
 });
 
 gulp.task('sass-build', function () {
@@ -92,23 +102,28 @@ gulp.task('sass-build', function () {
     .pipe(debug())
     .pipe(sass({
       imagePath: paths.build.img,
-      outputStyle: 'compressed',
-      includePaths: '/node_modules/bootstrap-sass/assets/stylesheets/'
+      includePaths: paths.bootstrap,
+      outputStyle: 'compressed'
     }))
     .pipe(autoprefixer())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest(path.join('./styleguide/build/', pjson.version)));
+    .pipe(header(banner, { pkg: pkg }))
+    .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)));
 });
 
 gulp.task('sass-kss', function () {
-  return gulp.src(path.join(paths.sassKss, '/*.scss'))
+  return gulp.src([
+    path.join(paths.sassKss, '*.scss'),
+    path.join(paths.sass, '*.scss')
+  ])
     .pipe(debug())
     .pipe(sass({
-      imagePath: paths.build.imgKss,
+      imagePath: paths.build.img,
+      includePaths: paths.bootstrap,
       outputStyle: 'expanded'
     }))
     .pipe(autoprefixer())
-    .pipe(gulp.dest(paths.build.cssKss));
+    .pipe(gulp.dest(paths.build.css));
 });
 
 gulp.task('sprite', function () {
@@ -127,4 +142,16 @@ gulp.task('publish', ['build', 'kss'], function () {
   var awsConfig = require('./awsConfig');
   return gulp.src('./styleguide/**/*')
     .pipe(s3(awsConfig));
+});
+
+gulp.task('clean', function () {
+  return del.sync(
+    [
+      'styleguide/*.*',
+      'styleguide/assets',
+      'styleguide/public',
+      '!styleguide/build'
+    ],
+    { force: true }
+  );
 });
