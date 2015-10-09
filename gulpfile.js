@@ -8,11 +8,14 @@ var exec = require('child_process').exec;
 var gulp = require('gulp');
 var header = require('gulp-header');
 var path = require('path');
-var pkg = require('./package.json');
 var rename = require('gulp-rename');
 var s3 = require('gulp-s3');
 var sass = require('gulp-sass');
 var svgSprite = require('gulp-svg-sprites');
+var minifyHTML = require('gulp-minify-html');
+var awsConfig = require('./awsConfig');
+
+var pkg = require('./package');
 
 var paths = {
   sass: 'src/sass',
@@ -24,6 +27,7 @@ var paths = {
   public: 'src/template/public',
   bootstrap: '/node_modules/bootstrap-sass/assets/stylesheets/',
   build: {
+    assets: 'styleguide/assets/',
     img: 'styleguide/assets/img',
     css: 'styleguide/assets/styles',
     svg: 'styleguide/assets/svg',
@@ -48,14 +52,14 @@ gulp.task('default', [
 
 gulp.task('docker', ['connect']);
 
-gulp.task('build', ['sass', 'sass-build']);
+gulp.task('build', ['sass', 'sass-build', 'sprite-build']);
 
 gulp.task('watch', function () {
-  gulp.watch(path.join(paths.sass, '**', '*.scss'), ['sass', 'kss']);
+  gulp.watch(path.join(paths.sass, '**', '*.*'), ['kss']);
   gulp.watch(path.join(paths.sass, '**', '*.hbs'), ['kss']);
   gulp.watch(path.join(paths.template, '**', '*.html'), ['kss']);
   gulp.watch(path.join(paths.sassKss, '**', '*.scss'), ['kss']);
-  gulp.watch(path.join(paths.svg, '**', '*.svg'), ['sprite', 'kss']);
+  gulp.watch(path.join(paths.svg, '**', '*.svg'), ['kss']);
 });
 
 gulp.task('connect', function () {
@@ -74,7 +78,7 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest(paths.build.js));
 });
 
-gulp.task('kss', ['sass-kss', 'scripts'], function (cb) {
+gulp.task('kss', ['sprite', 'sass', 'sass-kss', 'scripts'], function (cb) {
   return exec('kss-node --config=kss-config.json',
     function (err, stdout, stderr) {
       console.log(stdout);
@@ -138,8 +142,20 @@ gulp.task('sprite', function () {
     .pipe(gulp.dest(paths.build.svg));
 });
 
+gulp.task('sprite-build', function () {
+  return gulp.src(path.join(paths.svg, '**', '*.svg'))
+    .pipe(svgSprite({
+      mode: 'symbols',
+      preview: false,
+      svg: {
+        symbols: 'symbols.svg'
+      }
+    }))
+    .pipe(minifyHTML())
+    .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)));
+});
+
 gulp.task('publish', function () {
-  var awsConfig = require('./awsConfig');
   return gulp.src('./styleguide/**/*')
     .pipe(s3(awsConfig));
 });

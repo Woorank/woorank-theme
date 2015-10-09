@@ -208,3 +208,25 @@ $colorsMap: (
     "grey-smoke": $grey-smoke
   ),
 );
+
+
+/*
+Third Party Colors
+
+Colors use by third party.
+
+Markup: markup/third-party-colors.hbs
+
+facebook #3B5998 - Facebook Color
+twitter  #2AA9E0 - Twitter Color
+
+Styleguide Colors.Third Party Colors
+*/
+
+$facebook-color: #3B5998;
+$twitter-color: #2AA9E0;
+
+$thirdPartyColors:
+  ('facebook', $facebook-color),
+  ('twitter', $twitter-color);
+

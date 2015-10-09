@@ -14,7 +14,7 @@ Styleguide Patterns.Navbar
   margin-bottom: 0;
   position: static;
   border-bottom: 1px solid $border-color;
-  
+
   &.navbar-fixed-top {
     position: fixed;
     top: 0;
@@ -90,6 +90,11 @@ Styleguide Patterns.Navbar
   height: auto;
   line-height: 20px;
   float: none;
+
+  .icon-logo {
+    height: 20px;
+    width: 110px;
+  }
 
   @include breakpoint($screen-sm) {
     max-width: 125px;

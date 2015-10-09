@@ -7,11 +7,14 @@ Styleguide Components.Dropdown
 */
 
 .dropdown {
-  .caret {
+  .icon-chevron-down {
     display: inline-block;
     float: none;
     vertical-align: middle;
     margin: 0;
+    fill: $grey;
+    height: 13px;
+    width: 13px;
   }
 
   &.open {

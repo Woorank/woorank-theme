@@ -1,4 +1,4 @@
-#section-colors {
+div[id^="section-colors"] {
   text-align: left;
 
   .modifier__wrapper {
@@ -68,6 +68,13 @@
   }
 
   @each $colorName, $colorValue in $colors {
+    &.#{$colorName} {
+      background-color: $colorValue;
+      border-color: darken($colorValue, 10%);
+    }
+  }
+
+  @each $colorName, $colorValue in $thirdPartyColors {
     &.#{$colorName} {
       background-color: $colorValue;
       border-color: darken($colorValue, 10%);

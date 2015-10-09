@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="5px" height="9px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="Icons" stroke="none" stroke-width="1" fill-rule="evenodd">
-        <g id="Mini" transform="translate(-478.000000, -472.000000)">
-            <path d="M478,472 L478,474 L481,476.5 L478,479 L478,481 L483,476.5 L478,472 Z" id="chevron-left" transform="translate(480.500000, 476.500000) scale(-1, 1) translate(-480.500000, -476.500000) "></path>
-        </g>
-    </g>
-</svg>

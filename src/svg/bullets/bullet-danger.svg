@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="16px" viewBox="0 0 20 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" title="Bullet - Danger">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M0,8 C0,12.311 3.689,16 8,16 C14.59,16 20,8 20,8 C20,8 14.59,0 8,0 C3.689,0 0,3.689 0,8 Z" fill="#D9534F"></path>
+            <path d="M11,10.0709169 L10.0709169,11 L8,8.92979943 L5.92979943,11 L5,10.0709169 L7.07091691,8 L5,5.92908309 L5.92979943,5 L8,7.07020057 L10.0709169,5 L11,5.92908309 L8.92979943,8 L11,10.0709169 L11,10.0709169 Z" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>
