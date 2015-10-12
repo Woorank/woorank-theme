@@ -13,7 +13,6 @@ var s3 = require('gulp-s3');
 var sass = require('gulp-sass');
 var svgSprite = require('gulp-svg-sprites');
 var minifyHTML = require('gulp-minify-html');
-var awsConfig = require('./awsConfig');
 
 var pkg = require('./package');
 
@@ -156,6 +155,7 @@ gulp.task('sprite-build', function () {
 });
 
 gulp.task('publish', function () {
+  var awsConfig = require('./awsConfig');
   return gulp.src('./styleguide/**/*')
     .pipe(s3(awsConfig));
 });
