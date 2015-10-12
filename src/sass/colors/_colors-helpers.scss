@@ -11,3 +11,15 @@
     background-color: $colorValue;
   }
 }
+
+@each $color, $colorValue in $thirdPartyColors {
+  .color-#{$color} {
+    color: $colorValue;
+  }
+  .fill-#{$color} {
+    fill: $colorValue;
+  }
+  .background-#{$color} {
+    background-color: $colorValue;
+  }
+}

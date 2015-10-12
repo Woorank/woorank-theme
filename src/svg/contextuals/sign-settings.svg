@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" title="Sign Settings">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle fill="#DDDDDD" cx="60" cy="60" r="60"></circle>
+        <path d="M80.814,63 L89,63 L89,55 L80.811,55 C80.296,52.891 79.422,50.719 78.282,48.85 L84.072,43.06 L76.938,35.928 L71.147,41.717 C69.278,40.577 66.125,39.406 65,39.188 L65,31 L55,31 L55,39.188 C53.703,39.469 50.718,40.577 48.851,41.717 L43.059,35.928 L35.926,43.06 L41.716,48.852 C40.576,50.719 39.484,53.766 39.184,55 L31,55 L31,63 L39.184,63 C39.593,66.047 40.576,69.281 41.716,71.148 L35.924,76.94 L43.059,84.072 L48.849,78.28 C50.718,79.423 54.03,80.285 55,80.814 L55,89 L65,89 L65,80.814 C65.969,80.285 69.281,79.423 71.147,78.283 L76.94,84.072 L84.072,76.94 L78.282,71.148 C79.422,69.281 80.284,67.97 80.814,63 L80.814,63 Z" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M71,60 C71,66.075 66.075,71 60,71 C53.924,71 49,66.075 49,60 C49,53.925 53.924,49 60,49 C66.075,49 71,53.925 71,60 L71,60 Z" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </g>
+</svg>

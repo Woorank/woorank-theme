@@ -9,8 +9,11 @@ function listWrapper (item) {
 
 function linkWrapper (item) {
   if (!item) return;
+  item.attr = item.attr || '';
   return listWrapper(
-    '<a target="_blank" href="' + item.url + '">' + item.title + '</a>'
+    '<a target="_blank" href="' + item.url + '" ' + item.attr + '>' +
+    item.title +
+    '</a>'
   );
 }
 
@@ -20,6 +23,7 @@ function fileByVersions (handlebars) {
     var version = pkg.version;
     var fileName = 'woorank-theme.css';
     var fileNameMinified = 'woorank-theme.min.css';
+    var svgSymbols = 'symbols.svg';
     var v;
     // static template :
     var versions = [
@@ -30,6 +34,11 @@ function fileByVersions (handlebars) {
       {
         url: path.join('build', version, fileNameMinified),
         title: 'Minified CSS ' + version
+      },
+      {
+        url: path.join('build', version, svgSymbols),
+        title: 'Icons (SVG Symbols) ' + version,
+        attr: 'download'
       }
     ];
 

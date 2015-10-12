@@ -39,7 +39,7 @@
 
         <button type="button" class="navbar-toggle navbar-toggle-left collapsed" data-toggle="collapse" data-target="#top-nav-collapse">
           <svg class="icon menu" role="img">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/symbols.svg#menu"></use>
+            <use xlink:href="#menu"></use>
           </svg>
         </button>
       </div>
@@ -69,7 +69,9 @@
         <div class="dropdown">
           <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="downloadSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Download
-            <span class="caret"></span>
+            <svg class="icon icon-chevron-down">
+              <use xlink:href="#chevron-down"></use>
+            </svg>
           </button>
           <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="downloadSelector">
             {{fileByVersions}}

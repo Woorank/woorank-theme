@@ -8,4 +8,5 @@ styleguide:
     - ./src:/opt/gulp/src
     - ./gulpfile.js:/opt/gulp/gulpfile.js
     - ./kss-config.json:/opt/gulp/kss-config.json
+    - ./awsConfig.json:/opt/gulp/awsConfig.json
   command: "gulp docker"
