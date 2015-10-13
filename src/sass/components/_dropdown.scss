@@ -17,6 +17,12 @@ Styleguide Components.Dropdown
     width: 13px;
   }
 
+  &:hover {
+    .icon-chevron-down {
+      fill: $grey-medium;
+    }
+  }
+
   &.open {
     .arrow {
       display: block;
