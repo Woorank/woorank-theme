@@ -37,6 +37,7 @@ link              - Link (rounded flat)
 links             - Links
 loader            - Spin loader
 local             - Localisation
+lock              - Lock
 menu              - Menu
 minus             - Minus sign
 mobile            - Mobile
@@ -99,8 +100,14 @@ Icons Third Party
 
 Markup: markup/icons.hbs
 
-facebook - Facebook
-twitter  - Twitter
+facebook         - Facebook
+foursquare       - Foursquare
+google           - Google
+google-analytics - Google Analytics
+googleplus       - Google+
+linkedin         - Linked In
+twitter          - Twitter
+yelp             - Yelp
 
 Styleguide Icons.Icons Third Party
 */
@@ -110,16 +117,16 @@ Icons Sizes
 
 Markup: markup/icon-example.hbs
 
-icon-xxs           - Xxs
-icon-xs            - Xs
-icon-small-normal  - Small Normal
-icon-favicon       - Favicon
-icon-normal        - Normal
-icon-normal-medium - Normal Medium
-icon-sm            - Sm
-icon-md            - Md
-icon-lg            - Lg
-icon-xxl           - Xxl
+icon-xxs     - Xxs
+icon-xs      - Xs
+icon-small   - Small
+icon-favicon - Favicon
+icon-normal  - Normal
+icon-medium  - Medium
+icon-sm      - Sm
+icon-md      - Md
+icon-lg      - Lg
+icon-xxl     - Xxl
 
 Styleguide Icons.Icons Sizes
 */
@@ -127,10 +134,10 @@ Styleguide Icons.Icons Sizes
 $iconsSizes:
   ('xxs', 5),
   ('xs' , 10),
-  ('small-normal', 15),
+  ('small', 13),
   ('favicon', 16),
   ('normal', 20),
-  ('normal-medium', 25),
+  ('medium', 25),
   ('sm', 30),
   ('md', 60),
   ('lg', 90),

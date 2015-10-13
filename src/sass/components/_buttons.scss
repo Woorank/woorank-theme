@@ -177,3 +177,19 @@ Markup: markup/buttons-group.hbs
 
 Styleguide Components.Buttons.Groups
 */
+
+.btn-centered {
+  display: block;
+  margin: 0 auto;
+  max-width: 100px;
+
+  &.wide {
+    max-width: 330px;
+  }
+
+  .icon {
+    margin-right: 5px;
+    fill: $white;
+    vertical-align: inherit;
+  }
+}
