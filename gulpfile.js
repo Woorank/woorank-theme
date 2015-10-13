@@ -154,7 +154,7 @@ gulp.task('sprite-build', function () {
     .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)));
 });
 
-gulp.task('publish', function () {
+gulp.task('publish', ['default', 'build'], function () {
   var awsConfig = require('./awsConfig');
   return gulp.src('./styleguide/**/*')
     .pipe(s3(awsConfig));
