@@ -1,5 +1,5 @@
 /*
-All Icons
+Commons Icons
 
 Markup: markup/icons.hbs
 
@@ -52,8 +52,9 @@ tags              - Tags
 triangle-down     - Triangle Down
 triangle-up       - Triangle Up
 
+Weight: 1
 
-Styleguide Icons.All Icons
+Styleguide Icons.Commons Icons
 */
 
 /*
@@ -70,6 +71,8 @@ social           - Social
 technologies     - Technologies
 usability        - Usability
 visitors         - visitors
+
+Weight: 2
 
 Styleguide Icons.Icons Technologies
 */
@@ -91,6 +94,8 @@ sign-stop     - Sign Stop
 sign-success  - Sign Success
 test          - Test
 
+Weight: 3
+
 Styleguide Icons.Icons Contextuals
 */
 
@@ -107,6 +112,8 @@ googleplus       - Google+
 linkedin         - Linked In
 twitter          - Twitter
 yelp             - Yelp
+
+Weight: 4
 
 Styleguide Icons.Icons Third Party
 */
@@ -126,6 +133,8 @@ icon-sm      - Sm
 icon-md      - Md
 icon-lg      - Lg
 icon-xxl     - Xxl
+
+Weight: 5
 
 Styleguide Icons.Icons Sizes
 */
@@ -167,14 +176,45 @@ $iconsSizes:
 }
 
 /*
-Logo
+Logos
 
 Markup: markup/logo.hbs
 
-logo               - Colored Woorank Logo
-logo-nocolor       - Uncolored Woorank Logo
+logo            - Woorank Logo
+woorank-blog    - Woorank Blog Logo
+woorank-experts - Woorank Expert Logo
+woorank-index   - Woorank Index Logo
+
+Weight: 6
+
+Styleguide Icons.Logos
+*/
+
+
+/*
+Logos Uni-color
+
+Markup: markup/logo.hbs
+
+logo-nocolor            - Uncolored Woorank Logo
+woorank-blog-nocolor    - Woorank Blog Logo
+woorank-experts-nocolor - Woorank Expert Logo
+woorank-index-nocolor   - Woorank Index Logo
+
+Weight: 7
+
+Styleguide Icons.Logos Uni-color
+*/
+
+/*
+Glyph Icon
+
+Markup: markup/icons.hbs
+
 logo-glyph         - Colored Woorank Logo Glyph
 logo-glyph-nocolor - Uncolored Woorank Logo Glyph
 
-Styleguide Icons.Logo
+Weight: 8
+
+Styleguide Icons.Glyph Icon
 */
