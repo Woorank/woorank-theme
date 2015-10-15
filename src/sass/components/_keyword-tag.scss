@@ -19,8 +19,9 @@ Styleguide Components.Keyword Tags
   color: $grey;
   display: inline-block;
   font-size: 13px;
-  height: 46px;
-  padding: 10px;
+  line-height: 1;
+  height: 25px;
+  padding: 5px 10px 5px 8px;
   position: relative;
   transition: border-color 150ms ease-in, background-color 150ms ease-in;
 
@@ -28,12 +29,12 @@ Styleguide Components.Keyword Tags
     content: "";
     position: absolute;
     top: 0;
-    left: -15px;
+    left: -7px;
     display: block;
     height: 0;
     width: 0;
     border-style: solid;
-    border-width: 22px 15px 22px 0;
+    border-width: 12px 7px 12px 0;
     border-color: transparent $border-color transparent transparent;
     z-index: 1;
     transition: border-color 150ms ease-in, background-color 150ms ease-in;
@@ -43,12 +44,12 @@ Styleguide Components.Keyword Tags
     content: "";
     position: absolute;
     top: 1px;
-    left: -14px;
+    left: -8px;
     display: block;
     height: 0;
     width: 0;
     border-style: solid;
-    border-width: 21px 14px 21px 0;
+    border-width: 11px 8px 11px 0;
     border-color: transparent $white transparent transparent;
     z-index: 2;
     transition: border-color 150ms ease-in, background-color 150ms ease-in;
