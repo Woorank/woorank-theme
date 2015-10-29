@@ -53,6 +53,7 @@ Styleguide Components
 @import "components/forms";
 @import "components/hero-banner";
 @import "components/hero-banner-preview";
+@import "components/inputs-flag";
 @import "components/inputs-groups";
 @import "components/keyword-tag";
 @import "components/label";
@@ -63,6 +64,7 @@ Styleguide Components
 @import "components/tables";
 @import "components/tags";
 @import "components/tooltip";
+@import "components/thumbnail";
 
 /*
 Patterns
@@ -73,6 +75,7 @@ Styleguide Patterns
 */
 @import "patterns/generation-bar";
 @import "patterns/generation-bar-small";
+@import "patterns/generation-bar-in-navbar";
 @import "patterns/navbar";
 @import "patterns/navbar-buttons";
 @import "patterns/navbar-buttons-sizes";

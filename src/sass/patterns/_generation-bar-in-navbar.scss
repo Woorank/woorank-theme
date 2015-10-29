@@ -1,0 +1,415 @@
+/*
+Generation bar in navbar (1)
+
+Pro user Logged
+
+Markup: markup/generation-bar-in-navbar-pro-logged.hbs
+
+Styleguide Patterns.Generation bar in navbar (1)
+*/
+
+/*
+Generation bar in navbar (2)
+
+Free User
+
+Markup: markup/generation-bar-in-navbar-free-user.hbs
+
+Styleguide Patterns.Generation bar in navbar (2)
+*/
+
+.generation-bar-in-header-container {
+  display: block;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: $zindex-navbar-fixed;
+  height: 100%;
+  visibility: visible;
+  padding: 0;
+  background-color: $white;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+
+  @include breakpoint($screen-sm) {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    z-index: 1;
+    padding: 0;
+    height: auto;
+    border: none;
+  }
+
+  .arrow {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    margin-top: -1px;
+    margin-right: -3px;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid $border-color;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      margin-top: 1px;
+      border-top: 10px solid transparent;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid $white;
+    }
+  }
+
+  .generation-bar {
+    padding-top: 0;
+
+    .form-control {
+      height: 40px;
+    }
+
+    .input-group {
+      position: static;
+    }
+
+    .input-group-btn {
+      position: static;
+
+      .generation-bar-btn {
+        height: 40px;
+      }
+    }
+
+    .generation-bar-options {
+      display: block;
+      visibility: visible;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      .options-btn {
+        border: none;
+      }
+    }
+
+    .options-content {
+      .input-group {
+        position: relative;
+        padding-bottom: 0;
+      }
+
+      .btn-close {
+        display: none;
+
+        @include breakpoint($screen-sm) {
+          display: block;
+        }
+      }
+
+      .arrow {
+        display: block;
+      }
+    }
+  }
+
+  .generation-bar-in-header {
+    display: block;
+    padding-top: 15px;
+    z-index: $zindex-navbar;
+    max-width: none;
+    position: relative;
+    padding-bottom: 50px;
+
+    @include breakpoint($screen-sm) {
+      position: static;
+      padding-bottom: 0;
+    }
+
+    &.error {
+      .options-btn {
+        border-color: $error !important;
+      }
+
+      .options-content {
+        .form-control {
+          border-color: $border-color !important;
+        }
+      }
+    }
+
+    &.options-open {
+      .generation-bar-options {
+        .options-btn {
+          .options-btn-text {
+            @include breakpoint($screen-sm) {
+              display: none;
+            }
+          }
+
+          .opened-icon {
+            display: inline-block;
+          }
+
+          .closed-icon {
+            display: none;
+          }
+        }
+      }
+
+      .options-content {
+        display: block;
+      }
+    }
+
+    .form-control {
+      border-radius: 3px 3px 0 0;
+      font-size: 13px;
+      height: 30px;
+      transition: none;
+
+      @include breakpoint($screen-sm) {
+        border-radius: 3px 0 0 3px;
+        border-right: none;
+      }
+    }
+
+    .input-group-btn {
+      position: relative;
+      text-align: right;
+      z-index: 2;
+
+      .generation-bar-btn {
+        border-radius: 0 0 3px 3px;
+        font-size: 13px;
+        font-weight: 600;
+        height: 30px;
+        margin-top: -1px;
+        padding: 3px 13px;
+
+        @include breakpoint($screen-sm) {
+          border-radius: 0 3px 3px 0;
+          margin-top: 0;
+        }
+      }
+    }
+
+    .generation-bar-options {
+      background-color: $white;
+      display: inline-block;
+      position: absolute;
+      right: 2px;
+      text-align: left;
+      top: -29px;
+      z-index: 2;
+
+      @include breakpoint($screen-sm) {
+        top: 0;
+        right: 101%;
+        left: auto;
+      }
+
+      &.focus {
+        .options-btn {
+          border-top-color: $primary;
+          border-bottom-color: $primary;
+        }
+      }
+
+      .options-btn {
+        border-bottom: 1px solid $border-color;
+        border-left: none;
+        border-radius: 0;
+        border-right: none;
+        border-top: 1px solid $border-color;
+        color: $primary;
+        margin: 0;
+        text-decoration: none;
+        padding: 0;
+
+        @include breakpoint($screen-sm) {
+          padding: 3px 13px;
+        }
+
+        .icon {
+          margin-left: 5px;
+        }
+
+        .opened-icon {
+          display: none;
+        }
+
+        .closed-icon {
+          display: inline-block;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .icon {
+        fill: $primary;
+      }
+    }
+
+    .btn-close {
+      background: none;
+      border-radius: 0;
+      height: auto;
+      line-height: 0;
+      margin: 0;
+      padding: 3px;
+      width: auto;
+
+      &:focus,
+      &:hover,
+      &:active {
+        .icon {
+          fill: $grey;
+        }
+      }
+
+      .icon {
+        fill: $grey-light;
+      }
+    }
+
+    .options-content {
+      background-color: $white;
+      border-radius: 3px;
+      display: none;
+      font-size: 12px;
+      margin-top: -1px;
+      min-width: 238px;
+      padding: 20px 0 0 0;
+      right: -2px;
+      top: 30px;
+      z-index: ($zindex-navbar-fixed - 1);
+      position: static;
+      border: none;
+      box-shadow: none;
+
+      @include breakpoint($screen-sm) {
+        box-shadow: 0 0 3px rgba($black, .15);
+        border: 1px solid $border-color;
+        position: absolute;
+        min-width: 290px;
+        margin-top: 10px;
+        right: auto;
+        width: 100%;
+        top: 100%;
+        padding: 25px 20px 20px 20px;
+      }
+
+      &.options-content-not-logged {
+        white-space: normal;
+        text-align: center;
+
+        a {
+          color: $primary-dark;
+          &:hover,
+          &:focus {
+            color: $primary;
+            background-color: transparent;
+          }
+        }
+
+        .btn-start-trial {
+          height: auto;
+          padding: 6px 12px;
+          border-radius: 3px;
+          margin: 0 auto;
+          color: $white;
+          box-shadow: inset 0px -2px 0px rgba($black, .2);
+        }
+      }
+
+      p {
+        a,
+        a:hover,
+        a:focus {
+          padding: 0;
+          background-color: none;
+          border: none;
+          font-size: 12px;
+          font-weight: normal;
+        }
+      }
+
+      .add-competitors-title {
+        font-weight: normal;
+      }
+
+      .btn-close {
+        padding: 10px;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .form-group {
+        position: relative;
+
+        &.third-competitor-container {
+          @include breakpoint($screen-sm, true) {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .form-control {
+        border-radius: 3px;
+        overflow: hidden;
+        position: relative;
+        border-right: 1px solid $border-color;
+
+        &:focus {
+          border-right-color: $primary;
+        }
+
+        &.error {
+          border-color: $error !important;
+        }
+      }
+
+      .corner-indicator {
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: 3;
+      }
+
+      .options-btn-text {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    .options-footer {
+      display: none;
+      clear: both;
+      border-top: 1px solid $grey-lighter;
+      margin: 0 -20px -20px -20px;
+      padding: 10px 20px;
+
+      @include breakpoint($screen-sm) {
+        display: block;
+      }
+
+      .btn {
+        margin: 0;
+      }
+
+      .btn-link {
+        margin-right: -12px;
+      }
+    }
+  }
+}

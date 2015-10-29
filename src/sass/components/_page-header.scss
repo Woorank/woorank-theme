@@ -18,6 +18,23 @@ Styleguide Components.Page Header
     }
   }
 
+  &.header-alone {
+    text-align: center;
+    padding: 80px 0 40px 0;
+
+    h1,
+    .h1 {
+      padding: 0;
+    }
+
+    a {
+      display: table;
+      margin: 0 auto;
+      padding: 5px 0;
+      text-align: center;
+    }
+  }
+
   h1,
   .h1 {
     color: $grey-darker;

@@ -1,0 +1,65 @@
+/*
+Input Flags
+
+Markup: markup/inputs-flag.hbs
+
+Styleguide Components.Input Flags
+*/
+.input-flag-container {
+  position: relative;
+}
+
+.input-flag {
+  border-radius: 3px 0 0 3px;
+  display: block;
+  position: absolute;
+  outline: 0;
+  width: 36px;
+  height: 100%;
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    max-height: 20px;
+    max-width: 30px;
+  }
+
+  & + .form-control,
+  & + .btn,
+  & + .dropdown {
+    padding-left: 42px;
+  }
+}
+
+.input-flag {
+  &.gwt-flag {
+    background-color: $primary;
+  }
+
+  &.ga-flag {
+    background-color: $google-analytics-color;
+    fill: $white;
+  }
+
+  &.fb-flag {
+    background-color: $facebook-color;
+    fill: $white;
+  }
+
+  &.tw-flag {
+    background-color: $twitter-color;
+    fill: $white;
+  }
+
+  &.li-flag {
+    background-color: $linkedin-color;
+    fill: $white;
+  }
+
+  &.gplus-flag {
+    background-color: $google-color;
+    fill: $white;
+  }
+}

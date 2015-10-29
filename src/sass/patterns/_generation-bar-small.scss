@@ -28,6 +28,10 @@ Styleguide Patterns.Generation bar small
 
 .generation-bar {
   &.generation-bar-small {
+    .form-control {
+      border-color: $border-color;
+    }
+
     .input-group-btn {
       .btn {
         box-shadow: inset 0 -2px 0 rgba($black, 0.2);
