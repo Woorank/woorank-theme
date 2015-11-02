@@ -216,3 +216,36 @@ Styleguide Patterns.Navbar
     }
   }
 }
+
+// genbar impact in navbar
+.navbar {
+  .navbar-collapse {
+    transition: none !important;
+
+    &.collapse.in,
+    &.collapsing {
+      .generation-bar-in-header-container {
+        display: none !important;
+        visibility: hidden !important;
+      }
+    }
+  }
+}
+
+// navbar in mobile view
+.navbar.genbar-mobile-style {
+  .toggle-genbar {
+    .icon-add {
+      fill: $primary;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-nav {
+    overflow: visible;
+    position: static;
+    padding: 0;
+    margin: 0;
+    width: auto;
+  }
+}

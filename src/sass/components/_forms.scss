@@ -14,3 +14,10 @@ Styleguide Components.Forms
     border-color: $primary;
   }
 }
+
+.form-centered {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 300px;
+}

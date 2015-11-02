@@ -76,4 +76,24 @@ Styleguide Patterns.Generation bar
       }
     }
   }
+
+  .generation-bar-btn {
+    .ready {
+      display: block;
+    }
+    .wait {
+      display: none;
+    }
+  }
+
+  &.waiting-for-ajax {
+    .generation-bar-btn {
+      .ready {
+        display: none;
+      }
+      .wait {
+        display: block;
+      }
+    }
+  }
 }
