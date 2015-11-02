@@ -42,8 +42,8 @@ Weight: 3
 
 Styleguide Components
 */
-@import "components/alerts";
 @import "components/alerts-dismissible";
+@import "components/alerts";
 @import "components/breadcrumb";
 @import "components/business-card";
 @import "components/buttons";
@@ -51,10 +51,8 @@ Styleguide Components
 @import "components/corner-indicators";
 @import "components/dropdown";
 @import "components/forms";
-@import "components/hero-banner";
 @import "components/hero-banner-preview";
-@import "components/inputs-flag";
-@import "components/inputs-groups";
+@import "components/hero-banner";
 @import "components/keyword-tag";
 @import "components/label";
 @import "components/modal";
@@ -63,8 +61,8 @@ Styleguide Components
 @import "components/progress-bar";
 @import "components/tables";
 @import "components/tags";
-@import "components/tooltip";
 @import "components/thumbnail";
+@import "components/tooltip";
 
 /*
 Patterns
@@ -73,12 +71,13 @@ Weight: 2
 
 Styleguide Patterns
 */
-@import "patterns/generation-bar";
-@import "patterns/generation-bar-small";
 @import "patterns/generation-bar-in-navbar";
+@import "patterns/generation-bar-small";
+@import "patterns/generation-bar";
+@import "patterns/inputs-flag";
+@import "patterns/inputs-groups";
+@import "patterns/modal";
 @import "patterns/navbar";
-@import "patterns/navbar-buttons";
-@import "patterns/navbar-buttons-sizes";
 @import "patterns/review-left-menu";
 @import "patterns/testimonials";
 
