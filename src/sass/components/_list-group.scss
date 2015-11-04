@@ -1,0 +1,19 @@
+/*
+List Group
+
+Markup: markup/list-group.hbs
+
+Styleguide Components.List Group
+*/
+
+.list-group {
+  .btn-block + .btn-block {
+    margin-top: 0;
+  }
+}
+
+button.list-group-item:hover,
+button.list-group-item:focus {
+  background-color: $list-group-hover-bg;
+  color: $list-group-link-hover-color;
+}

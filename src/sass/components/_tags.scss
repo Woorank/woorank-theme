@@ -24,7 +24,7 @@ Styleguide Components.Tags
   position: relative;
   text-overflow: ellipsis;
   vertical-align: middle;
-  width: 40px;
+  min-width: 40px;
   white-space: nowrap;
 
   @include breakpoint($screen-md) {

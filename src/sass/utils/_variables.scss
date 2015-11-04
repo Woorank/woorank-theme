@@ -409,16 +409,16 @@ $progress-bar-danger-border  : $error;
 $list-group-bg                  : $white;
 $list-group-border              : $border-color;
 $list-group-border-radius       : $border-radius-base;
-$list-group-hover-bg            : $hover-bg;
-$list-group-active-color        : $active-color;
-$list-group-active-bg           : $active-bg;
-$list-group-active-border       : $active-border;
-$list-group-active-text-color   : $active-color;
+$list-group-hover-bg            : $primary-smoke;
+$list-group-active-color        : $white;
+$list-group-active-bg           : $primary;
+$list-group-active-border       : $primary;
+$list-group-active-text-color   : $white;
 $list-group-disabled-color      : $grey-light;
 $list-group-disabled-bg         : $grey-lighter;
 $list-group-disabled-text-color : $grey-light;
-$list-group-link-color          : $primary-dark;
-$list-group-link-hover-color    : $primary;
+$list-group-link-color          : $grey-dark;
+$list-group-link-hover-color    : $primary-dark;
 $list-group-link-heading-color  : $grey-dark;
 
 // Panels
