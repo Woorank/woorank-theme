@@ -3,6 +3,7 @@
 (function () {
   var $ = window.jQuery;
   var $navbar = $('#top .header.navbar');
+  var $sidebarNav = $('.sidebar-nav');
 
   window.prettyPrint();
 
@@ -32,5 +33,10 @@
     if ($('body').hasClass('navbar-open')) {
       togglePanel(false);
     }
+  });
+
+  $(window).on('scroll', function () {
+    var mustFly = $(this).scrollTop() > 60;
+    $sidebarNav.toggleClass('fixed', mustFly);
   });
 })();
