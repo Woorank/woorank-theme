@@ -1,6 +1,34 @@
 #kss-node {
   background-color: $grey-smoke;
 
+  .sidebar-nav {
+    padding-top: 60px;
+
+    &.fixed {
+      padding-top: 0;
+      position: fixed;
+      top: 60px;
+      bottom: 30px;
+      border-radius: 0 0 5px 5px;
+      overflow: auto;
+    }
+
+    .list-group {
+      min-width: 225px;
+      display: inline-block;
+      width: auto;
+
+      .list-group-item {
+        padding: 5px 10px;
+        font-size: 13px;
+
+        &:first-child {
+          display: none;
+        }
+      }
+    }
+  }
+
   article.container {
     overflow: hidden;
     padding-bottom: 60px;

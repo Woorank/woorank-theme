@@ -7,11 +7,9 @@
 <head>
   <meta charset="utf-8">
   <title>Woorank Styleguide</title>
-
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width">
-  <!-- STYLES -->
   <link rel="stylesheet" href="assets/styles/kss.css">
   <link rel="stylesheet" href="assets/styles/woorank-theme.css">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,300italic,400italic,600italic,800italic,700italic">
@@ -21,6 +19,7 @@
   <link rel="apple-touch-icon-precomposed" href="assets/img/apple-touch-icon-precomposed.png" />
   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/ico" />
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/png" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 <body id="kss-node" class="styleguide">
 
@@ -99,44 +98,45 @@
     </div>
   {{else}}
 
-    {{#eachSection rootName}}
-      <div id="section-{{slug referenceURI}}" class="section depth-{{depth}}">
+    <div class="col-xs-12 col-md-9">
+      {{#eachSection rootName}}
+        <div id="section-{{slug referenceURI}}" class="section depth-{{depth}}">
 
-        <div class="page-header">
-          <h{{depth}}>
-            <a href="#{{referenceURI}}">
-              {{header}}
-            </a>
-          </h{{depth}}>
+          <div class="page-header">
+            <h{{depth}}>
+              <a href="#{{referenceURI}}">
+                {{header}}
+              </a>
+            </h{{depth}}>
 
-          {{#if parameters}}
-            <ul class="parameters">
-              {{#eachParameter}}
-                <li class="parameters__item">
-                  <code class="parameters__name">{{name}}</code>
-                  <div class="parameters__description">{{{description}}}</div>
-                </li>
-              {{/eachParameter}}
-            </ul>
-          {{/if}}
+            {{#if parameters}}
+              <ul class="parameters">
+                {{#eachParameter}}
+                  <li class="parameters__item">
+                    <code class="parameters__name">{{name}}</code>
+                    <div class="parameters__description">{{{description}}}</div>
+                  </li>
+                {{/eachParameter}}
+              </ul>
+            {{/if}}
 
-          {{#if description}}
-            <div class="description">
-              {{{paragraphs description 1}}}
-            </div>
-          {{/if}}
-        </div>
-
-        {{#if markup}}
-          <div class="content">
-            <div class="modifier__wrapper">
-
-              <div class="modifier__example">
-                {{{markup}}}
+            {{#if description}}
+              <div class="description">
+                {{{paragraphs description 1}}}
               </div>
+            {{/if}}
+          </div>
 
-              {{#eachModifier}}
-                {{#equal ../../../rootName "Colors"}}
+          {{#if markup}}
+            <div class="content">
+              <div class="modifier__wrapper">
+
+                <div class="modifier__example">
+                  {{{markup}}}
+                </div>
+
+                {{#eachModifier}}
+                  {{#equal ../../../rootName "Colors"}}
 
                   <!-- COLORS ITEM -->
                   <div class="modifier__item" id="{{slug ../../referenceURI}}-{{slug name}}">
@@ -151,61 +151,72 @@
                     </div>
                   </div>
 
-                {{else}}
-                  <div class="modifier__item" id="{{slug ../../referenceURI}}-{{slug name}}">
-                    <div class="modifier__example">
-                      {{{markup}}}
+                  {{else}}
+                    <div class="modifier__item" id="{{slug ../../referenceURI}}-{{slug name}}">
+                      <div class="modifier__example">
+                        {{{markup}}}
+                      </div>
+
+                      <p class="modifier__name">
+                        {{name}}
+                      </p>
+
+                      <p class="modifier__description">
+                        {{{paragraphs description 1}}}
+                      </p>
                     </div>
-
-                    <p class="modifier__name">
-                      {{name}}
-                    </p>
-
-                    <p class="modifier__description">
-                      {{{paragraphs description 1}}}
-                    </p>
-                  </div>
-                {{/equal}}
-              {{/eachModifier}}
-            </div>
-
-            <div class="footer-section">
-              <div class="footer-buttons">
-                {{#moreDesc description}}
-                  <button type="button"
-                    class="btn btn-link btn-sm collapsed info-collapser"
-                    data-toggle="collapse"
-                    data-target="#info-{{slug reference}}">
-                    Info
-                  </button>
-                {{/moreDesc}}
-
-                {{#equal ../../../rootName "Colors"}}
-                {{else}}
-                <button type="button"
-                  class="btn btn-link btn-sm collapsed markup-collapser"
-                  data-toggle="collapse"
-                  data-target="#markup-{{slug reference}}">
-                  HTML
-                </button>
-                {{/equal}}
+                  {{/equal}}
+                {{/eachModifier}}
               </div>
 
-              <div class="collapse markup" id="markup-{{slug reference}}">
-                <div class="markup">
-                  <pre class="prettyprint linenums lang-html"><code data-language="html">{{markup}}</code></pre>
+              <div class="footer-section">
+                <div class="footer-buttons">
+                  {{#moreDesc description}}
+                    <button type="button"
+                      class="btn btn-link btn-sm collapsed info-collapser"
+                      data-toggle="collapse"
+                      data-target="#info-{{slug reference}}">
+                      Info
+                    </button>
+                  {{/moreDesc}}
+
+                  {{#equal ../../../rootName "Colors"}}
+                  {{else}}
+                  <button type="button"
+                    class="btn btn-link btn-sm collapsed markup-collapser"
+                    data-toggle="collapse"
+                    data-target="#markup-{{slug reference}}">
+                    HTML
+                  </button>
+                  {{/equal}}
+                </div>
+
+                <div class="collapse markup" id="markup-{{slug reference}}">
+                  <div class="markup">
+                    <pre class="prettyprint linenums lang-html"><code data-language="html">{{markup}}</code></pre>
+                  </div>
+                </div>
+
+                <div class="collapse description" id="info-{{slug reference}}">
+                  {{{paragraphs description 2}}}
                 </div>
               </div>
 
-              <div class="collapse description" id="info-{{slug reference}}">
-                {{{paragraphs description 2}}}
-              </div>
             </div>
+          {{/if}}
+        </div>
+      {{/eachSection}}
+    </div>
 
-          </div>
-        {{/if}}
+    <div class="col-md-3 hidden-sm">
+      <div class="sidebar-nav">
+        <div class="list-group">
+          {{#eachSection rootName}}
+            <a class="list-group-item" href="#section-{{slug referenceURI}}">{{header}}</a>
+          {{/eachSection}}
+        </div>
       </div>
-    {{/eachSection}}
+    </div>
 {{/if}}
 </article>
 <!-- END MAIN -->
@@ -219,7 +230,9 @@
 </footer>
 
 <!-- SCRIPTS -->
+<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="assets/scripts/prettify.js"></script>
-{{{scripts}}}
+<script src="/assets/scripts/scripts.js"></script>
 </body>
 </html>
