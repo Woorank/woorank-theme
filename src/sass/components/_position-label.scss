@@ -1,0 +1,44 @@
+/*
+Position Label
+
+Markup: markup/position-label.hbs
+
+Styleguide Components.Position Label
+*/
+
+.position-label {
+  display: inline-block;
+  color: $text-color;
+  font-size: 15px;
+  font-weight: 400;
+  vertical-align: baseline;
+  white-space: nowrap;
+
+  .icon {
+    display: none;
+    height: 10px;
+    width: 10px;
+  }
+
+  &.important {
+    font-weight: bold;
+  }
+
+  &.up {
+    color: $success;
+
+    .icon-triangle-up {
+      display: inline-block;
+      fill: $success;
+    }
+  }
+
+  &.down {
+    color: $error;
+
+    .icon-triangle-down {
+      display: inline-block;
+      fill: $error;
+    }
+  }
+}
