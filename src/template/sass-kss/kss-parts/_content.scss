@@ -9,18 +9,23 @@
       position: fixed;
       top: 60px;
       bottom: 30px;
-      border-radius: 0 0 5px 5px;
+      border-radius: 5px;
       overflow: auto;
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+      background-color: $white;
     }
 
     .list-group {
       min-width: 225px;
       display: inline-block;
       width: auto;
+      margin: -1px auto;
 
       .list-group-item {
         padding: 5px 10px;
         font-size: 13px;
+        border-color: $grey-smoke;
 
         &:first-child {
           display: none;
