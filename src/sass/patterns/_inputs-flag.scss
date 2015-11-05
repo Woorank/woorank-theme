@@ -40,26 +40,36 @@ Styleguide Patterns.Input Flags
 
   &.ga-flag {
     background-color: $google-analytics-color;
-    fill: $white;
+    .icon {
+      fill: $white;
+    }
   }
 
   &.fb-flag {
     background-color: $facebook-color;
-    fill: $white;
+    .icon {
+      fill: $white;
+    }
   }
 
   &.tw-flag {
     background-color: $twitter-color;
-    fill: $white;
+    .icon {
+      fill: $white;
+    }
   }
 
   &.li-flag {
     background-color: $linkedin-color;
-    fill: $white;
+    .icon {
+      fill: $white;
+    }
   }
 
   &.gplus-flag {
     background-color: $google-color;
-    fill: $white;
+    .icon {
+      fill: $white;
+    }
   }
 }
