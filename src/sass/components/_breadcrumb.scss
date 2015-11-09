@@ -8,4 +8,9 @@ Styleguide Components.Breadcrumb
 
 .breadcrumb {
   font-size: 13px;
+
+  li + li:before {
+    content: "/";
+    color: $grey;
+  }
 }

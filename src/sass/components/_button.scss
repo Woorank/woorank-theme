@@ -1,0 +1,132 @@
+/*
+Buttons
+
+Use any of the available button classes to quickly create a styled button.
+
+Markup: markup/button.hbs
+
+.btn-default - Standard button
+.btn-primary - Provides extra visual weight and identifies the primary action in a set of buttons
+.btn-success - Indicates a successful or positive action
+.btn-warning - Indicates caution should be taken with this action
+.btn-error   - Indicates a dangerous or potentially negative action
+.btn-link    - Deemphasize a button by making it look like a link while maintaining button behavior
+
+Styleguide Components.Buttons
+*/
+
+.btn-container {
+  padding-top: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn {
+  font-weight: normal;
+  white-space: normal;
+
+  @include breakpoint($screen-sm) {
+    white-space: nowrap;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    @include opacity(.35);
+  }
+
+  &:focus,
+  &:hover,
+  &:active,
+  &.active {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: inset 0 0 1px 1px rgba($white, .10);
+  }
+
+  &.btn-error {
+    background-color: $error;
+    color: $white;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: $error-dark;
+    }
+  }
+
+  &.btn-link {
+    &:active,
+    &.active,
+    &:focus {
+      color: $primary-dark;
+    }
+  }
+
+  &.btn-white-space {
+    white-space: normal;
+  }
+
+  &.btn-primary,
+  &.btn-success,
+  &.btn-info,
+  &.btn-warning,
+  &.btn-error,
+  &.btn-danger {
+    border: none;
+    box-shadow: none;
+    padding: 7px 12px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.btn-default {
+    &:active,
+    &.active {
+      background-color: $primary-smoke;
+      border-color: $primary;
+      color: $primary;
+      outline: none;
+    }
+  }
+
+  &.btn-black {
+    background-color: $black;
+    color: $white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $grey-dark;
+      color: $white;
+      outline: none;
+    }
+  }
+
+  &.btn-centered {
+    display: block;
+    margin: 0 auto;
+    max-width: 100px;
+
+    &.wide {
+      max-width: 330px;
+    }
+
+    .icon {
+      margin-right: 5px;
+      fill: $white;
+      vertical-align: inherit;
+    }
+  }
+
+  &.btn-no-border {
+    border: 1px solid transparent;
+  }
+}

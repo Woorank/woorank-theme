@@ -1,0 +1,60 @@
+/*
+Direction Label
+
+Markup: markup/direction-label.hbs
+
+Styleguide Components.Direction Label
+*/
+a.direction-label,
+a.direction-label:hover {
+  text-decoration: none;
+}
+
+.direction-label {
+  display: inline-block;
+  color: $grey-medium;
+  font-size: 15px;
+  font-weight: 400;
+  vertical-align: baseline;
+  white-space: nowrap;
+
+  &:active {
+    color: $primary;
+  }
+
+  &:hover,
+  &:focus {
+    color: $primary-dark;
+  }
+
+  &:active,
+  &:hover,
+  &:focus {
+    .icon {
+      fill: $primary-dark;
+    }
+  }
+
+  .icon {
+    display: none;
+    height: 10px;
+    width: 10px;
+    fill: $grey;
+  }
+
+  &.important {
+    font-weight: bold;
+  }
+
+  &.up {
+    .icon-arrow-up {
+      display: inline-block;
+    }
+  }
+
+  &.down {
+    .icon-arrow-down {
+      display: inline-block;
+    }
+  }
+}

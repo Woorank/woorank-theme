@@ -1,21 +1,19 @@
 /*
-Checkboxes
+Custom Checkboxes
 
-Custom designed checkboxes
+Button designed as checkboxes.
 
 Markup: markup/checkbox.hbs
 
-.checked - checked status
-.hovered - hovered status
-.focused - focused status
-.remove - remove status
+.default  - default
+.checked  - checked status
+.remove   - remove status
 .disabled - disabled status
-.not-allowed - not-allowed status
 
-Styleguide Components.Checkboxes
+Styleguide Components.Custom Checkboxes
 */
 
-.checkbox {
+button.checkbox {
   background-color: $grey-smoke;
   border-radius: 2px;
   border: 1px solid $grey;
@@ -26,6 +24,10 @@ Styleguide Components.Checkboxes
   position: relative;
   transition: all 150ms ease-in;
   width: 17px;
+
+  input[type=checkbox] {
+    visibility: hidden;
+  }
 
   &:before,
   &:after {
