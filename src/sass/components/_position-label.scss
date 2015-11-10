@@ -5,6 +5,10 @@ Markup: markup/position-label.hbs
 
 Styleguide Components.Position Label
 */
+a.position-label,
+a.position-label:hover {
+  text-decoration: none;
+}
 
 .position-label {
   display: inline-block;

@@ -1,0 +1,56 @@
+/*
+Icons Sizes
+
+Markup: markup/icons-examples.hbs
+
+icon-xxs     - Xxs
+icon-xs      - Xs
+icon-small   - Small
+icon-favicon - Favicon
+icon-normal  - Normal
+icon-medium  - Medium
+icon-sm      - Sm
+icon-md      - Md
+icon-lg      - Lg
+icon-xxl     - Xxl
+
+Weight: 6
+
+Styleguide Icons.Icons Sizes
+*/
+
+$iconsSizes:
+  ('xxs', 5),
+  ('xs' , 10),
+  ('small', 13),
+  ('favicon', 16),
+  ('normal', 20),
+  ('medium', 25),
+  ('sm', 30),
+  ('md', 60),
+  ('lg', 90),
+  ('xxl', 120);
+
+.icon {
+  background-image: none;
+  display: inline-block;
+  height: 20px;
+  vertical-align: middle;
+  width: 20px;
+
+  @each $name, $size in $iconsSizes {
+    &.icon-#{$name} {
+      height: ($size + px);
+      width: ($size + px);
+    }
+  }
+
+  &.icon-hidden {
+    display: none;
+  }
+}
+
+.icon-text {
+  margin-left: 6px;
+  vertical-align: middle;
+}

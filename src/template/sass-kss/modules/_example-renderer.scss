@@ -1,0 +1,7 @@
+.modifier__example:not(:last-child) {
+  display: none;
+}
+
+.modifier__item .modifier__example {
+  display: block;
+}

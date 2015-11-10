@@ -1,0 +1,40 @@
+
+/*
+Third Party Colors
+
+Colors use by third party services/app.
+
+Use theses colors **wisely**. Available third parties:
+Facebook, Foursquare, Google, Google Analytics, Linked In, Twitter, Yelp.
+
+Markup: markup/third-party-colors.hbs
+
+facebook         #3B5998 - Facebook Color
+foursquare       #F94877 - Foursquare
+google           #DD4B39 - Google
+google-analytics #DD4B39 - Google Analytics
+linkedin         #0077B5 - Linked In
+twitter          #2AA9E0 - Twitter Color
+yelp             #AF0606 - Yelp
+
+Weight: 2
+
+Styleguide Colors.Third Party Colors
+*/
+
+$facebook-color:         #3B5998;
+$foursquare-color:       #F94877;
+$google-color:           #DD4B39;
+$google-analytics-color: #F68C06;
+$linkedin-color:         #0077B5;
+$twitter-color:          #2AA9E0;
+$yelp-color:             #AF0606;
+
+$thirdPartyColors:
+  ('facebook', $facebook-color),
+  ('foursquare', $foursquare-color),
+  ('google', $google-color),
+  ('google-analytics', $google-analytics-color),
+  ('linkedin', $linkedin-color),
+  ('twitter', $twitter-color),
+  ('yelp', $yelp-color);

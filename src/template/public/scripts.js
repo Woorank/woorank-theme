@@ -39,4 +39,8 @@
     var mustFly = $(this).scrollTop() > 60;
     $sidebarNav.toggleClass('fixed', mustFly);
   });
+
+  $('[data-toggle="popover"]').popover();
+  $('[data-toggle="tooltip"]').tooltip();
+
 })();

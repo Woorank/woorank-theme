@@ -2,11 +2,14 @@
 @import "../../sass/utils/mixins";
 @import "../../sass/utils/variables";
 
+@import "kss-parts/body";
 @import "kss-parts/header";
 @import "kss-parts/content";
+@import "kss-parts/sidebar";
+@import "kss-parts/footer";
 @import "kss-parts/markup";
 
-@import "modules/buttons-render";
+@import "modules/example-renderer";
 @import "modules/colors-render";
 @import "modules/icons-render";
 @import "modules/download-selector";

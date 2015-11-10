@@ -1,4 +1,17 @@
-// Colors helpers
+/*
+Colors helpers
+
+You can set any **available** colors using classes likes: `color-primary`, `background-primary` or `fill-primary`
+
+Use: `.background-`, `.fill-` or `.color-` + any **available** colors.
+You can force a custom color by adding a `-important` as class suffix.
+
+Markup: markup/colors-helpers.hbs
+
+Weight: 3
+
+Styleguide Colors.Colors helpers
+*/
 
 @each $color, $colorValue in $colors {
   .color-#{$color} {
@@ -9,6 +22,17 @@
   }
   .background-#{$color} {
     background-color: $colorValue;
+  }
+
+  // forced colors
+  .color-#{$color}-important {
+    color: $colorValue !important;
+  }
+  .fill-#{$color}-important {
+    fill: $colorValue !important;
+  }
+  .background-#{$color}-important {
+    background-color: $colorValue !important;
   }
 }
 
@@ -21,5 +45,16 @@
   }
   .background-#{$color} {
     background-color: $colorValue;
+  }
+
+  // forced colors
+  .color-#{$color}-important {
+    color: $colorValue !important;
+  }
+  .fill-#{$color}-important {
+    fill: $colorValue !important;
+  }
+  .background-#{$color}-important {
+    background-color: $colorValue !important;
   }
 }

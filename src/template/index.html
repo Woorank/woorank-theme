@@ -21,7 +21,7 @@
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/png" />
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
-<body id="kss-node" class="styleguide">
+<body id="kss-node" class="styleguide {{#if homepage}}homepage{{/if}}">
 
 {{include 'styleguide/assets/svg/symbols.svg'}}
 
@@ -86,19 +86,20 @@
 <!-- MAIN -->
 <article role="main" class="container">
   {{#if homepage}}
-    <div class="page-header">
-      <h1>
-        <a href="./">
-          Living Style guide
-        </a>
-      </h1>
+    <div class="page-header page-header-subtitle text-center">
+      <h1>Woorank Living Style Guide</h1>
+      <p>The central place for styles in Woorank Apps</p>
     </div>
     <div class="content styleguide-home">
       {{{homepage}}}
     </div>
   {{else}}
+    {{#equal rootName "Structures"}}
+      <div class="col-xs-12">
+    {{else}}
+      <div class="col-xs-12 col-md-9">
+    {{/equal}}
 
-    <div class="col-xs-12 col-md-9">
       {{#eachSection rootName}}
         <div id="section-{{slug referenceURI}}" class="section depth-{{depth}}">
 
@@ -208,15 +209,19 @@
       {{/eachSection}}
     </div>
 
-    <div class="col-md-3 hidden-sm">
-      <div class="sidebar-nav">
-        <div class="list-group">
-          {{#eachSection rootName}}
-            <a class="list-group-item" href="#section-{{slug referenceURI}}">{{header}}</a>
-          {{/eachSection}}
+    {{#equal rootName "Structures"}}
+    {{else}}
+      <div class="col-md-3 hidden-sm">
+        <div class="sidebar-nav">
+          <div class="list-group">
+            {{#eachSection rootName}}
+              <a class="list-group-item" href="#section-{{slug referenceURI}}">{{header}}</a>
+            {{/eachSection}}
+          </div>
         </div>
       </div>
-    </div>
+    {{/equal}}
+
 {{/if}}
 </article>
 <!-- END MAIN -->
