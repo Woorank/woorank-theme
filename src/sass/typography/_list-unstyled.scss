@@ -1,0 +1,23 @@
+/*
+Unstyled List
+
+Remove the default list-style and left margin on list items (immediate children only).
+This only applies to immediate children list items, meaning you will need to add the class for any nested lists as well.
+
+Markup:
+<ul class="ul list-unstyled">
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Consectetur adipiscing elit</li>
+</ul>
+
+weight: 20
+
+Styleguide Typography.Unstyled List
+*/
+
+.list-unstyled, .list-inline {
+  li:before {
+    padding-right: 0;
+    content: "";
+  }
+}
