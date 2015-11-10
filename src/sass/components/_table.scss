@@ -7,3 +7,7 @@ Markup: markup/table.hbs
 
 Styleguide Components.Tables
 */
+
+.table-hover > tbody > tr:hover {
+  background-color: $primary-smoke;
+}
