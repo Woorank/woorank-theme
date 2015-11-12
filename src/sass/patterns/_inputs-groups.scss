@@ -14,5 +14,12 @@ Styleguide Components.Forms.Input Groups
         background-color: $colorValue;
       }
     }
+
+    @each $color, $colorValue in $thirdPartyColors {
+      &.#{$color} {
+        border-color: $colorValue;
+        background-color: $colorValue;
+      }
+    }
   }
 }
