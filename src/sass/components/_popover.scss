@@ -9,6 +9,12 @@ Styleguide Components.Popover
 .popover {
   border: 1px solid $border-color;
 
+  &.popover-fluid {
+    width: auto;
+    max-width: none;
+    min-width: auto;
+  }
+
   &.top > .arrow {
     border-top-color: $border-color;
   }
