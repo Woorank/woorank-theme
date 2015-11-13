@@ -6,6 +6,50 @@ Markup: markup/popover.hbs
 Styleguide Components.Popover
 */
 
+.popover {
+  border: 1px solid $border-color;
+
+  &.top > .arrow {
+    border-top-color: $border-color;
+  }
+
+  &.right > .arrow {
+    border-right-color: $border-color;
+  }
+
+  &.bottom > .arrow {
+    border-bottom-color: $border-color;
+  }
+
+  &.left > .arrow {
+    border-left-color: $border-color;
+  }
+
+  .popover-title {
+    padding: 10px 40px 10px 15px;
+    border-bottom: 1px solid $grey-smoke;
+  }
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    line-height: 0;
+    outline: none;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+
+    .icon {
+      height: 13px;
+      width: 13px;
+    }
+  }
+}
+
 $popoverContext: ('marketing-checklist');
 
 @each $context in $popoverContext {
@@ -13,7 +57,6 @@ $popoverContext: ('marketing-checklist');
     border-color: $border-color;
 
     &.bottom {
-
       .arrow {
         border-bottom-color: $white;
         border-width: 0 5px 5px;
