@@ -14,3 +14,11 @@ body {
     overflow: hidden;
   }
 }
+
+.container {
+  .page-narrow {
+    max-width: 720px;
+    margin: 1px auto 0 auto;
+    padding: 40px 0;
+  }
+}
