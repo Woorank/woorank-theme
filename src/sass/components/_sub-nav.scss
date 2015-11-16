@@ -27,6 +27,7 @@ Styleguide Components.Sub Nav
     border-bottom: 2px solid $white;
     text-decoration: none;
     transition: color 300ms;
+    text-transform: uppercase;
 
     &:hover,
     &:focus {

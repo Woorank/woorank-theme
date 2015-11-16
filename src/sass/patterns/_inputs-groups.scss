@@ -7,6 +7,16 @@ Styleguide Components.Forms.Input Groups
 */
 
 .input-group {
+  &.input-group-sm {
+    .input-group-addon {
+      .icon {
+        margin-top: -5px;
+        transform: translateY(2px);
+        max-height: 22px;
+      }
+    }
+  }
+
   .input-group-addon {
     @each $color, $colorValue in $colors {
       &.#{$color} {
