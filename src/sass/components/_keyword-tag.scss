@@ -24,6 +24,9 @@ Styleguide Components.Keyword Tags
   padding: 5px 10px 5px 8px;
   position: relative;
   transition: border-color 150ms ease-in, background-color 150ms ease-in;
+  margin-left: 7px;
+  margin-right: 5px;
+  cursor: pointer;
 
   &:before {
     content: "";
@@ -95,5 +98,17 @@ Styleguide Components.Keyword Tags
         }
       }
     }
+  }
+
+  .keyword-tag-inner {
+    display: block;
+    min-height: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .icon-cross {
+    margin-right: 5px;
   }
 }
