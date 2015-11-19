@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+// Deploy the styleguide built files to aws on circleCI process.
+
 var exec = require('child_process').exec;
 var http = require('http');
 
