@@ -1,7 +1,8 @@
 /*
 Labels
 
-Markup: markup/label.hbs
+Markup:
+<span class="label {{modifier_class}}">label {{modifier_class}}</span>
 
 .label-default - default
 .label-primary - primary

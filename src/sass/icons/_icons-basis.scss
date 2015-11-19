@@ -1,7 +1,10 @@
 /*
-Commons Icons
+Basis
 
-Markup: markup/icons.hbs
+Markup:
+<svg class="icon {{modifier_class}} fill-grey-medium" data-toggle="tooltip" title="#{{modifier_class}}">
+  <use xlink:href="#{{modifier_class}}"></use>
+</svg>
 
 add-file          - Add file
 add-user          - Add user
@@ -61,5 +64,5 @@ triangle-up       - Triangle Up
 
 Weight: 1
 
-Styleguide Icons.Commons Icons
+Styleguide Icons.Basis
 */

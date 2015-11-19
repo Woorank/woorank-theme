@@ -1,9 +1,14 @@
 /*
-Circle buttons
+Button Circle
 
-Markup: markup/button-circle.hbs
+Markup:
+<button class="btn btn-circle btn-default">
+  <svg class="icon icon-plus fill-grey">
+    <use xlink:href="#plus"></use>
+  </svg>
+</button>
 
-Styleguide Components.Buttons.Circle
+Styleguide Components.Button.Button-Circle
 */
 
 $button-circle-size: 30px;

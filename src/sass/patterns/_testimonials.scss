@@ -1,7 +1,81 @@
 /*
 Testimonials
 
-Markup: markup/testimonials.hbs
+Markup:
+<div class="testimonials">
+  <div class="testimonial col-sm-6"
+    itemscope
+    itemprop="review"
+    itemtype="http://schema.org/Review">
+    <div class="testimonial-protrait">
+      <img src="http://lorempixel.com/200/200/people/" alt="" />
+    </div>
+    <blockquote class="testimonial-blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <footer class="testimonial-author"
+        itemscope
+        itemprop="author"
+        itemtype="http://schema.org/Person">
+        <span class="author-name" itemprop="name">Sarah Sanchez</span>
+        <span class="author-worksfor" itemprop="worksFor">Owner at <a href="#" rel="nofollow" target="_blank">Business</a></span>
+      </footer>
+    </blockquote>
+  </div>
+  <div class="testimonial col-sm-6"
+    itemscope
+    itemprop="review"
+    itemtype="http://schema.org/Review">
+    <div class="testimonial-protrait">
+      <img src="http://lorempixel.com/200/200/people/" alt="" />
+    </div>
+    <blockquote class="testimonial-blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <footer class="testimonial-author"
+        itemscope
+        itemprop="author"
+        itemtype="http://schema.org/Person">
+        <span class="author-name" itemprop="name">Sarah Sanchez</span>
+        <span class="author-worksfor" itemprop="worksFor">Owner at <a href="#" rel="nofollow" target="_blank">Business</a></span>
+      </footer>
+    </blockquote>
+  </div>
+  <div class="testimonial col-sm-6"
+    itemscope
+    itemprop="review"
+    itemtype="http://schema.org/Review">
+    <div class="testimonial-protrait">
+      <img src="http://lorempixel.com/200/200/people/" alt="" />
+    </div>
+    <blockquote class="testimonial-blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <footer class="testimonial-author"
+        itemscope
+        itemprop="author"
+        itemtype="http://schema.org/Person">
+        <span class="author-name" itemprop="name">Sarah Sanchez</span>
+        <span class="author-worksfor" itemprop="worksFor">Owner at <a href="#" rel="nofollow" target="_blank">Business</a></span>
+      </footer>
+    </blockquote>
+  </div>
+  <div class="testimonial col-sm-6"
+    itemscope
+    itemprop="review"
+    itemtype="http://schema.org/Review">
+    <div class="testimonial-protrait">
+      <img src="http://lorempixel.com/200/200/people/" alt="" />
+    </div>
+    <blockquote class="testimonial-blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <footer class="testimonial-author"
+        itemscope
+        itemprop="author"
+        itemtype="http://schema.org/Person">
+        <span class="author-name" itemprop="name">Sarah Sanchez</span>
+        <span class="author-worksfor" itemprop="worksFor">Owner at <a href="#" rel="nofollow" target="_blank">Business</a></span>
+      </footer>
+    </blockquote>
+  </div>
+</div>
 
 Styleguide Patterns.Testimonials
 */

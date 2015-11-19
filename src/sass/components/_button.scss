@@ -3,7 +3,8 @@ Buttons
 
 Use any of the available button classes to quickly create a styled button.
 
-Markup: markup/button.hbs
+Markup:
+<button class="btn {{modifier_class}}">Button Text</button>
 
 .btn-default - Standard button
 .btn-primary - Provides extra visual weight and identifies the primary action in a set of buttons

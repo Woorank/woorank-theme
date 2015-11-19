@@ -1,13 +1,14 @@
 
 /*
-Third Party Colors
+Third Party
 
 Colors use by third party services/app.
 
 Use theses colors **wisely**. Available third parties:
 Facebook, Foursquare, Google, Google Analytics, Linked In, Twitter, Yelp.
 
-Markup: markup/colors.hbs
+Markup:
+<div class="example-color {{modifier_class}}"></div>
 
 facebook         #3B5998 - Facebook Color
 foursquare       #F94877 - Foursquare
@@ -19,7 +20,7 @@ yelp             #AF0606 - Yelp
 
 Weight: 2
 
-Styleguide Colors.Third Party Colors
+Styleguide Colors.Third-Party
 */
 
 $facebook-color:         #3B5998;

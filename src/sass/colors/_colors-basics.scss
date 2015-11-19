@@ -8,7 +8,8 @@ You can use variant tones: `dark`, 'light', 'lighter' and `smoke`.
 Grey color got is `darker` and `medium` tone.
 Additional colors use only to describe competitors:  `competitor`, `competitor-light` and `competitor-dark`.
 
-Markup: markup/colors.hbs
+Markup:
+<div class="example-color {{modifier_class}}"></div>
 
 grey-darker      #353B48    - $grey-darker
 grey-dark        #434A54    - $grey-dark
@@ -43,7 +44,7 @@ competitor-light #29494A    - $competitor-light
 
 Weight: 1
 
-Styleguide Colors.Woorank Colors
+Styleguide Colors.Woorank-Colors
 */
 
 // Colors values

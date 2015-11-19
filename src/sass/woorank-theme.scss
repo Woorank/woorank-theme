@@ -5,7 +5,7 @@ Weight: 6
 
 Styleguide Colors
 */
-@import "colors/colors";
+@import "colors/_colors";
 
 /*
 Utils assets
@@ -27,7 +27,7 @@ Weight: 5
 
 Styleguide Typography
 */
-@import "typography/typography";
+@import "typography/_typography";
 
 /*
 Icons
@@ -36,7 +36,7 @@ Weight: 4
 
 Styleguide Icons
 */
-@import "icons/icons";
+@import "icons/_icons";
 
 /*
 Components
@@ -45,7 +45,7 @@ Weight: 3
 
 Styleguide Components
 */
-@import "components/components";
+@import "components/_components";
 
 /*
 Patterns
@@ -54,7 +54,7 @@ Weight: 2
 
 Styleguide Patterns
 */
-@import "patterns/patterns";
+@import "patterns/_patterns";
 
 /*
 Structures
@@ -65,4 +65,4 @@ Weight: 1
 
 Styleguide Structures
 */
-@import "structures/structures";
+@import "structures/_structures";

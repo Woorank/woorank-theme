@@ -5,12 +5,17 @@ div[id^="section-icons"] {
     display: none;
   }
 
+  .description,
+  .description *{
+    font-size: 25px;
+  }
+
   .modifier__item {
     display: inline-block;
     padding: 30px;
     font-size: 12px;
     text-align: center;
-    
+
     .modifier__example {
       display: inline-block;
     }

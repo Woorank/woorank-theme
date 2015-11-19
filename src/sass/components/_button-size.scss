@@ -1,10 +1,11 @@
 
 /*
-Sizes
+Button Sizes
 
 Fancy larger or smaller buttons? Add `.btn-lg`, `.btn-sm`, or `.btn-xs` for additional sizes.
 
-Markup: markup/buttons-sizes.hbs
+Markup:
+<button class="btn btn-primary {{modifier_class}}">Button Text</button>
 
 .btn-lg    - Large button
 .default   - Normal button
@@ -12,7 +13,7 @@ Markup: markup/buttons-sizes.hbs
 .btn-xs    - Extra small button
 .btn-block - Block level buttons (spanning the full width of a parent)
 
-Styleguide Components.Buttons.Sizes
+Styleguide Components.Button.Button-Sizes
 */
 
 .btn-xs,

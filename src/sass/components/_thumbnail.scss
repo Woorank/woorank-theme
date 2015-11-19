@@ -1,9 +1,36 @@
 /*
 Thumbnails
 
-Markup: markup/thumbnail.hbs
+Markup:
+<div class="col-md-4">
+  <div class="thumbnail">
+    <img class="hero-img" src="http://lorempixel.com/242/200/city/" alt="">
+    <div class="caption">
+      <h3>Thumbnail label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, debitis.</p>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="thumbnail">
+    <img class="hero-img" src="http://lorempixel.com/242/200/city/" alt="">
+    <div class="caption">
+      <h3>Thumbnail label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, debitis.</p>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="thumbnail">
+    <img class="hero-img" src="http://lorempixel.com/242/200/city/" alt="">
+    <div class="caption">
+      <h3>Thumbnail label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, debitis.</p>
+    </div>
+  </div>
+</div>
 
-Styleguide Patterns.Thumbnails
+Styleguide Components.Thumbnails
 */
 
 a.thumbnail {

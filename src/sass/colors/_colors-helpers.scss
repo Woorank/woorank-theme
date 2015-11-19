@@ -1,16 +1,24 @@
 /*
-Colors helpers
+Helpers
 
 You can set any **available** colors using classes likes: `color-primary`, `background-primary` or `fill-primary`
 
 Use: `.background-`, `.fill-` or `.color-` + any **available** colors.
 You can force a custom color by adding a `-important` as class suffix.
 
-Markup: markup/colors-helpers.hbs
+Markup:
+<div class="page-header background-primary-smoke">
+  <h1 class="color-primary-important">
+    <svg class="icon icon-conversation icon-medium fill-primary">
+      <use xlink:href="#conversation"></use>
+    </svg>
+    Title with custom icon fill, background and text color.
+  </h1>
+</div>
 
 Weight: 3
 
-Styleguide Colors.Colors helpers
+Styleguide Colors.Helpers
 */
 
 @each $color, $colorValue in $colors {

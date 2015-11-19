@@ -1,7 +1,62 @@
 /*
 Navbar
 
-Markup: markup/navbar.hbs
+Markup:
+<nav class="navbar" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle navbar-toggle-left" data-target="#header-navigation">menu<span class="caret"></span></button>
+      <a class="navbar-brand" href="https://www.woorank.com">
+        <svg class="icon icon-logo"><use xlink:href="#logo"></use></svg>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="header-navigation">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Link</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li id="logged-container">
+          <a href="#" data-toggle="dropdown" class="dropdown-toggle" role="button" aria-expanded="false">
+            info@woorank.com
+            <svg class="icon icon-xs chevron-down">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-down"></use>
+            </svg>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="#">Upgrade / Downgrade</a>
+            </li>
+            <li>
+              <a href="#">My account</a>
+            </li>
+            <li>
+              <a href="#">Edit PDF Templates</a>
+            </li>
+            <li>
+              <a href="#">Logout</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+            English  <svg class="icon icon-xs chevron-down">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-down"></use>
+            </svg>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="#">Español</a>
+              <a href="#">Français</a>
+              <a href="#">Deutsch</a>
+              <a href="#">Português</a>
+              <a href="#">Nederlands</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 Styleguide Patterns.Navbar
 */

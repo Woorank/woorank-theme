@@ -1,7 +1,15 @@
 /*
 Progress Bar
 
-Markup: markup/progress-bar.hbs
+Markup:
+<div class="progress-container progress-with-label">
+  <span class="progress-label">Progress Bar</span>
+  <div class="progress {{modifier_class}}">
+    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuenow="0" aria-valuemax="100" style="width: {{random}}%;">
+      <span class="progress-value">{{lastRandom}}%</span>
+    </div>
+  </div>
+</div>
 
 .progress-grey                       - grey
 .progress-primary                    - primary
