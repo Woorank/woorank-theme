@@ -1,9 +1,25 @@
 /*
-Business card
+Business Card
 
-Markup: markup/business-card.hbs
+Markup:
+<div class="business-card">
+  <a class="photo-wrapper" href="#">
+    <img class="photo" src="http://lorempixel.com/130/130/people/">
+  </a>
 
-Styleguide Components.Business card
+  <span class="name">
+    <a href="#">Name with link</a>
+  </span>
+
+  <address class="address">
+    <span class="locality">City</span>
+    <span class="country-name">
+      (Country)
+    </span>
+  </address>
+</div>
+
+Styleguide Components.Business-Card
 */
 
 $businessCardPhotoSize: 65px;
@@ -12,7 +28,7 @@ $businessCardPhotoSize: 65px;
   overflow: hidden;
   font-size: 12px;
   line-height: 18px;
-  
+
   .photo-wrapper {
     width: $businessCardPhotoSize;
     height: $businessCardPhotoSize;

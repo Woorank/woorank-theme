@@ -1,7 +1,12 @@
 /*
+Experts
+
 Woorank Experts icons
 
-Markup: markup/icons-contextuals.hbs
+Markup:
+<svg class="icon icon-md fill-grey {{modifier_class}}" data-toggle="tooltip" title="#{{modifier_class}}">
+  <use xlink:href="#{{modifier_class}}"></use>
+</svg>
 
 expert-book      - Book
 expert-card      - Card
@@ -12,5 +17,5 @@ expert-trophy    - Trophy
 
 Weight: 3
 
-Styleguide Icons.Woorank Experts icons
+Styleguide Icons.Experts
 */

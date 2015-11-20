@@ -1,8 +1,12 @@
 /*
-Icons Contextuals
-Icon with fixed colors.
+Contextuals
 
-Markup: markup/icons-contextuals.hbs
+Icon with fixed colors
+
+Markup:
+<svg class="icon icon-md fill-grey {{modifier_class}}" data-toggle="tooltip" title="#{{modifier_class}}">
+  <use xlink:href="#{{modifier_class}}"></use>
+</svg>
 
 checklist     - Checklist
 clipboard     - Clipboard
@@ -18,5 +22,5 @@ test          - Test
 
 Weight: 4
 
-Styleguide Icons.Icons Contextuals
+Styleguide Icons.Contextuals
 */

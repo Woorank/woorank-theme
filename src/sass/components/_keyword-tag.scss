@@ -1,7 +1,8 @@
 /*
 Keyword Tags
 
-Markup: markup/keyword-tags.hbs
+Markup:
+<div class="keyword-tag {{modifier_class}}">Keyword</div>
 
 .keyword-tag-primary - Primary
 .keyword-tag-success - Success
@@ -9,7 +10,7 @@ Markup: markup/keyword-tags.hbs
 .keyword-tag-error - Error
 .keyword-tag-grey - Grey
 
-Styleguide Components.Keyword Tags
+Styleguide Components.Keyword-Tags
 */
 
 .keyword-tag {

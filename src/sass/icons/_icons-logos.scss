@@ -1,7 +1,10 @@
 /*
 Woorank Logos
 
-Markup: markup/logo.hbs
+Markup:
+<svg class="icon icon-{{modifier_class}} icon-xxl fill-grey" data-toggle="tooltip" title="#{{modifier_class}}">
+  <use xlink:href="#{{modifier_class}}"></use>
+</svg>
 
 logo            - Woorank Logo
 woorank-blog    - Woorank Blog Logo
@@ -11,5 +14,5 @@ woorank-index   - Woorank Index Logo
 
 Weight: 7
 
-Styleguide Icons.Woorank Logos
+Styleguide Icons.Woorank-Logos
 */

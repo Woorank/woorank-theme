@@ -121,11 +121,10 @@ Markup:
   </ul>
 </nav>
 
-Styleguide Patterns.Report Navigation
+Styleguide Patterns.Report-Navigation
 */
 
-.repport-nav,
-.custom-nav {
+.repport-nav {
   border-radius: 5px;
   font-size: 13px;
   width: 170px;
@@ -244,60 +243,3 @@ Styleguide Patterns.Report Navigation
     }
   }
 }
-
-/*
-Navigaiton block
-
-Markup:
-<div class="custom-nav border-nav">
-  <ul>
-    <li>
-      <h6 class="nav-title">
-        <a href="#">Navigation</a>
-      </h6>
-    </li>
-    <li class="active">
-      <a href="#">Active link</a>
-    </li>
-    <li>
-      <a href="#">Link</a>
-    </li>
-  </ul>
-</div>
-
-Styleguide Patterns.Report Navigation.Navigaiton block
-*/
-
-/*
-Nested Navigaiton block
-
-Markup:
-<div class="custom-nav border-nav">
-  <ul>
-    <li>
-      <h6 class="nav-title">
-        <a href="#">Navigation</a>
-      </h6>
-    </li>
-    <li class="active">
-      <a href="#">Active link</a>
-      <ul>
-        <li>
-          <a href="#">First</a>
-        </li>
-        <li class="active">
-          <a href="#">Active link</a>
-        </li>
-        <li>
-          <a href="#">Last</a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">Link</a>
-    </li>
-  </ul>
-</div>
-
-Styleguide Patterns.Report Navigation.Nested Navigaiton block
-*/

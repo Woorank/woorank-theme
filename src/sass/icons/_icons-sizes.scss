@@ -1,7 +1,10 @@
 /*
 Icons Sizes
 
-Markup: markup/icons-examples.hbs
+Markup:
+<svg class="icon icon-logo-glyph {{modifier_class}}" data-toggle="tooltip" title="#{{modifier_class}}">
+  <use xlink:href="#logo-glyph"></use>
+</svg>
 
 icon-xxs     - Xxs
 icon-xs      - Xs
@@ -16,7 +19,7 @@ icon-xxl     - Xxl
 
 Weight: 6
 
-Styleguide Icons.Icons Sizes
+Styleguide Icons.Icons-Sizes
 */
 
 $iconsSizes:

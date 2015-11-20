@@ -1,16 +1,17 @@
 /*
-Custom Checkboxes
+Checkbox
 
 Button designed as checkboxes.
 
-Markup: markup/checkbox.hbs
+Markup:
+<button type="button" class="checkbox {{modifier_class}}"></button>
 
 .default  - default
 .checked  - checked status
 .remove   - remove status
 .disabled - disabled status
 
-Styleguide Components.Custom Checkboxes
+Styleguide Components.checkbox
 */
 
 button.checkbox {

@@ -1,9 +1,17 @@
 /*
 List Group
 
-Markup: markup/list-group.hbs
+Markup:
+<ul class="list-group">
+  <li class="list-group-item">Dapibus ac facilisis in <label class="badge">{{random rounded}}</label></li>
+  <li class="list-group-item active">Dapibus ac facilisis in <label class="badge">{{random rounded}}</label></li>
+  <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
+  <li class="list-group-item"><a href="#">Cras sit amet nibh libero</a></li>
+  <li class="list-group-item">Porta ac consectetur ac</li>
+  <li class="list-group-item">Vestibulum at eros</li>
+</ul>
 
-Styleguide Components.List Group
+Styleguide Components.List-Group
 */
 
 .list-group {

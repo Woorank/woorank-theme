@@ -1,7 +1,12 @@
 /*
+Index
+
 Woorank Index icons
 
-Markup: markup/icons-contextuals.hbs
+Markup:
+<svg class="icon icon-md fill-grey {{modifier_class}}" data-toggle="tooltip" title="#{{modifier_class}}">
+  <use xlink:href="#{{modifier_class}}"></use>
+</svg>
 
 index-analytics   - Analytics
 index-local       - Local
@@ -13,5 +18,5 @@ index-social      - Social
 
 Weight: 3
 
-Styleguide Icons.Woorank Index icons
+Styleguide Icons.Index
 */

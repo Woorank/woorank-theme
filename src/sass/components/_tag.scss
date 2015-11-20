@@ -3,7 +3,15 @@ Tags
 
 A tag element can be colored, contain close button and contains corner indicator element.
 
-Markup: markup/tag.hbs
+Markup:
+<div class="tag tag-dismissible">
+  <span class="tag-text">Tag</span>
+  <button class="btn btn-close">
+    <svg class="icon cross">
+      <use xlink:href="#cross"></use>
+    </svg>
+  </button>
+</div>
 
 Styleguide Components.Tags
 */

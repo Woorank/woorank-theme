@@ -1,7 +1,42 @@
 /*
 Position Label
 
-Markup: markup/position-label.hbs
+Markup:
+<div class="row">
+  <div class="col-md-4">
+    <div class="position-label">
+      <svg class="icon icon-triangle-up">
+        <use xlink:href="#triangle-up"></use>
+      </svg>
+      <svg class="icon icon-triangle-down">
+        <use xlink:href="#triangle-down"></use>
+      </svg>
+      Normal state
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="position-label down">
+      <svg class="icon icon-triangle-up">
+        <use xlink:href="#triangle-up"></use>
+      </svg>
+      <svg class="icon icon-triangle-down">
+        <use xlink:href="#triangle-down"></use>
+      </svg>
+      Down state
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="position-label up">
+      <svg class="icon icon-triangle-up">
+        <use xlink:href="#triangle-up"></use>
+      </svg>
+      <svg class="icon icon-triangle-down">
+        <use xlink:href="#triangle-down"></use>
+      </svg>
+      Up state
+    </div>
+  </div>
+</div>
 
 Styleguide Components.Position Label
 */

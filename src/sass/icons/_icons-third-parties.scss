@@ -1,7 +1,10 @@
 /*
-Icons Third Parties
+Third Parties
 
-Markup: markup/icons.hbs
+Markup:
+<svg class="icon {{modifier_class}} fill-grey-medium" data-toggle="tooltip" title="#{{modifier_class}}">
+  <use xlink:href="#{{modifier_class}}"></use>
+</svg>
 
 facebook              - Facebook
 foursquare            - Foursquare
@@ -15,5 +18,5 @@ yelp                  - Yelp
 
 Weight: 5
 
-Styleguide Icons.Icons Third Parties
+Styleguide Icons.Third-Parties
 */
