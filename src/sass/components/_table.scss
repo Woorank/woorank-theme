@@ -1,7 +1,7 @@
 /*
 Tables
 
-Tables can be `table-striped`, `table-bordered`, `table-hover` or `table-condensed`.
+Tables can be `table-striped`, `table-bordered`, `table-hover`, `table-borderless` or `table-condensed`.
 
 Markup:
 <table class="table table-striped table-hover table-bordered table-condensed">
@@ -47,6 +47,12 @@ Styleguide Components.Tables
   td {
     input[type="checkbox"] {
       margin-top: 0;
+    }
+  }
+
+  &.table-borderless {
+    td {
+      border-top: none;
     }
   }
 }

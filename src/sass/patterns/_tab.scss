@@ -1,0 +1,41 @@
+/*
+Tabs
+
+Markup:
+<ul class="nav nav-tabs">
+  <li class="active">
+    <a href="#first-pane" data-toggle="tab">
+      First
+    </a>
+  </li>
+  <li>
+    <a href="#second-pane" data-toggle="tab">
+      Second
+    </a>
+  </li>
+</ul>
+<div class="tab-content">
+  <div class="tab-pane active" id="first-pane">
+    I am the first pane.
+  </div>
+  <div class="tab-pane" id="second-pane">
+    I am the second pane.
+  </div>
+</div>
+
+Styleguide Patterns.Tabs
+*/
+
+.nav-tabs {
+  margin-bottom: 30px;
+
+  > li {
+    &.active a,
+    &.active a:hover,
+    &.active a:focus {
+      background-color: $white;
+      border: 1px solid $border-color;
+      border-bottom-color: transparent;
+    }
+  }
+}
