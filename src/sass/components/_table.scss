@@ -8,7 +8,8 @@ Markup:
   <caption>Optional Table Caption</caption>
   <thead>
     <tr>
-      <th>#</th>
+      <td class="text-center"><input type="checkbox"></td>
+      <th class="text-center">#</th>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Username</th>
@@ -16,19 +17,22 @@ Markup:
   </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td class="text-center"><input type="checkbox"></td>
+      <td class="text-center">1</td>
       <td>Mark</td>
       <td>Otto</td>
       <td>@mdo</td>
     </tr>
     <tr>
-      <td>2</td>
+      <td class="text-center"><input type="checkbox"></td>
+      <td class="text-center">2</td>
       <td>Jacob</td>
       <td>Thornton</td>
       <td>@fat</td>
     </tr>
     <tr>
-      <td>3</td>
+      <td class="text-center"><input type="checkbox"></td>
+      <td class="text-center">3</td>
       <td>Larry</td>
       <td>the Bird</td>
       <td>@twitter</td>
@@ -38,6 +42,14 @@ Markup:
 
 Styleguide Components.Tables
 */
+
+.table {
+  td {
+    input[type="checkbox"] {
+      margin-top: 0;
+    }
+  }
+}
 
 .table-hover > tbody > tr:hover {
   background-color: $primary-smoke;
