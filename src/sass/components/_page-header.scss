@@ -46,7 +46,7 @@ Styleguide Components.Page Header
     line-height: 1.2;
     margin: 0;
     padding: 0 0 20px 0;
-    font-weight: 400;
+    font-weight: $medium;
   }
 
   h2,
@@ -61,7 +61,7 @@ Styleguide Components.Page Header
   .h6 {
     color: $grey-medium;
     font-size: 24px;
-    font-weight: 300;
+    font-weight: $medium;
     line-height: 1.25;
     margin: 0;
     padding: 0;

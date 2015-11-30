@@ -14,13 +14,13 @@
       .description {
         font-size: 25px;
         color: $grey;
-        font-weight: 300;
+        font-weight: $normal;
       }
     }
 
     .content {
       background: $white;
-      border-radius: 5px;
+      border-radius: $border-radius-base;
       padding: 30px;
     }
 

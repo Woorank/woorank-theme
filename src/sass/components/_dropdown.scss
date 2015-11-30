@@ -52,7 +52,7 @@ Styleguide Components.Dropdown
 
   .dropdown-menu {
     margin-top: 5px;
-    border-radius: 3px;
+    border-radius: $border-radius-base;
 
     a {
       padding: 4px 15px;
@@ -125,7 +125,7 @@ Styleguide Components.Dropdown
   .badge {
     background-color: $grey-smoke;
     color: $grey-light;
-    font-weight: 400;
+    font-weight: $normal;
     font-size: 12px;
   }
 }

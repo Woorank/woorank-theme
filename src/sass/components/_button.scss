@@ -23,8 +23,9 @@ Styleguide Components.Buttons
 }
 
 .btn {
-  font-weight: normal;
+  font-weight: $normal;
   white-space: normal;
+  ///line-height: $line-height-base;
 
   @include breakpoint($screen-sm) {
     white-space: nowrap;

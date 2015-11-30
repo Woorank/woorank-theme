@@ -2,7 +2,9 @@
 Keyword Tags
 
 Markup:
-<div class="keyword-tag {{modifier_class}}">Keyword</div>
+<div class="keyword-tag {{modifier_class}}">
+  <div class="keyword-tag-inner">Keyword</div>
+</div>
 
 .keyword-tag-primary - Primary
 .keyword-tag-success - Success
@@ -15,13 +17,12 @@ Styleguide Components.Keyword-Tags
 
 .keyword-tag {
   background-color: $white;
-  border-radius: 3px;
+  border-radius: $border-radius-base;
   border: 1px solid $border-color;
   color: $grey;
   display: inline-block;
-  font-size: 13px;
   line-height: 1;
-  height: 25px;
+  height: 26px;
   padding: 5px 10px 5px 8px;
   position: relative;
   transition: border-color 150ms ease-in, background-color 150ms ease-in;
@@ -33,7 +34,7 @@ Styleguide Components.Keyword-Tags
     content: "";
     position: absolute;
     top: 0;
-    left: -7px;
+    left: -8px;
     display: block;
     height: 0;
     width: 0;

@@ -21,6 +21,7 @@ Markup:
 
 Styleguide Patterns.Generation-Bar
 */
+$genbar-height: 50px;
 
 .generation-bar {
   margin: 0 auto;
@@ -56,19 +57,20 @@ Styleguide Patterns.Generation-Bar
   }
 
   .form-control {
-    border-radius: 3px 3px 0 0;
+    border-radius: $border-radius-base $border-radius-base 0 0;
     height: auto;
     padding: 12px;
+    height: $genbar-height;
 
     &:first-child {
-      border-radius: 3px 3px 0 0;
+      border-radius: $border-radius-base $border-radius-base 0 0;
       @include breakpoint($screen-sm) {
-        border-radius: 3px 0 0 3px;
+        border-radius: $border-radius-base 0 0 $border-radius-base;
       }
     }
 
     @include breakpoint($screen-sm) {
-      border-radius: 3px 0 0 3px;
+      border-radius: $border-radius-base 0 0 $border-radius-base;
       display: table-cell;
       float: left;
     }
@@ -84,11 +86,11 @@ Styleguide Patterns.Generation-Bar
     }
 
     .btn {
-      border-radius: 0 0 3px 3px;
-      padding: 13px;
+      border-radius: 0 0 $border-radius-base $border-radius-base;
+      height: $genbar-height;
 
       @include breakpoint($screen-sm) {
-        border-radius: 0 3px 3px 0;
+        border-radius: 0 $border-radius-base $border-radius-base 0;
       }
     }
   }

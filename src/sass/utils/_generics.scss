@@ -8,6 +8,7 @@ body {
 
 body {
   transition: transform 350ms ease-out;
+  font-weight: $normal;
 
   &.navbar-open {
     transform: translateX($mobile-nav-size);

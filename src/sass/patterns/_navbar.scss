@@ -103,7 +103,7 @@ Styleguide Patterns.Navbar
 
     &.active {
       a {
-        font-weight: 600;
+        font-weight: $medium;
       }
     }
 
@@ -253,7 +253,7 @@ Styleguide Patterns.Navbar
         border-bottom: 1px solid darken($grey-dark, 5%);
         color: $white;
         font-size: 14px;
-        font-weight: 300;
+        font-weight: $normal;
         line-height: 1.6;
 
         &:hover,

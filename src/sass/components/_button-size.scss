@@ -5,7 +5,7 @@ Button Sizes
 Fancy larger or smaller buttons? Add `.btn-lg`, `.btn-sm`, or `.btn-xs` for additional sizes.
 
 Markup:
-<button class="btn btn-primary {{modifier_class}}">Button Text</button>
+<button class="btn btn-primary {{modifier_class}}">Button: {{modifier_class}}</button>
 
 .btn-lg    - Large button
 .default   - Normal button
@@ -23,7 +23,7 @@ Styleguide Components.Button.Button-Sizes
 
 .btn-lg,
 .btn-group-lg > .btn {
-  font-size: 15px;
+  font-size: $font-size-large;
   padding: 15px 25px;
 }
 
