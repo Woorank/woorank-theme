@@ -6,9 +6,9 @@ $mobile-nav-size        : 250px;
 $link-hover-decoration  : underline;
 
 // Typography
-$normal: 300;
-$medium: 500;
-$bold: 600;
+$font-weight-normal: 300;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
 
 $font-family-sans-serif : "Open Sans", Helvetica, Arial, sans-serif;
 $font-family-serif      : Georgia, "Times New Roman", Times, serif;
@@ -37,7 +37,7 @@ $line-height-computed   : floor($font-size-base * $line-height-base); // ~24px
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family   : inherit;
-$headings-font-weight   : $medium;
+$headings-font-weight   : $font-weight-medium;
 $headings-line-height   : 1.37;
 $headings-color         : inherit;
 
@@ -84,7 +84,7 @@ $table-bg-active              : $active-bg;
 $table-border-color           : $border-color;
 
 // Buttons
-$btn-font-weight         : $normal;
+$btn-font-weight         : $font-weight-normal;
 $btn-default-color       : $grey-dark;
 $btn-default-bg          : $white;
 $btn-default-border      : $border-color;
@@ -145,13 +145,14 @@ $dropdown-caret-color         : $grey-dark;
 // Warning: Avoid customizing these values. They're used for a bird's eye view
 // of components dependent on the z-axis and are designed to all work together.
 // Note: These variables are not generated into the Customizer.
-$zindex-navbar           : 1000;
-$zindex-dropdown         : 1000;
-$zindex-popover          : 1060;
-$zindex-tooltip          : 1070;
-$zindex-navbar-fixed     : 1030;
-$zindex-modal-background : 1040;
-$zindex-modal            : 1050;
+$zindex-flying-menu      : 1000;
+$zindex-dropdown         : 1010;
+$zindex-popover          : 1020;
+$zindex-tooltip          : 1030;
+$zindex-navbar           : 1040;
+$zindex-navbar-fixed     : 1050;
+$zindex-modal-background : 1060;
+$zindex-modal            : 1070;
 
 // Media queries breakpoints
 
@@ -382,7 +383,7 @@ $modal-sm                            : 300px;
 // Alerts
 $alert-padding          : 15px;
 $alert-border-radius    : $border-radius-base;
-$alert-link-font-weight : $medium;
+$alert-link-font-weight : $font-weight-medium;
 
 $alert-success-bg       : $state-success-bg;
 $alert-success-text     : $state-success-text;
@@ -474,7 +475,7 @@ $badge-link-hover-color : $hover-color;
 $badge-bg               : $grey-smoke;
 $badge-active-color     : $link-color;
 $badge-active-bg        : $white;
-$badge-font-weight      : $medium;
+$badge-font-weight      : $font-weight-medium;
 $badge-line-height      : 1;
 $badge-border-radius    : 10px;
 
@@ -497,7 +498,7 @@ $carousel-indicator-border-color : $white;
 $carousel-caption-color          : $white;
 
 // Close
-$close-font-weight : $normal;
+$close-font-weight : $font-weight-normal;
 $close-color       : $grey-dark;
 $close-text-shadow : none;
 

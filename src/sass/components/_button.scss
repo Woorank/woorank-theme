@@ -23,7 +23,7 @@ Styleguide Components.Buttons
 }
 
 .btn {
-  font-weight: $normal;
+  font-weight: $font-weight-normal;
   white-space: normal;
 
   @include breakpoint($screen-sm) {

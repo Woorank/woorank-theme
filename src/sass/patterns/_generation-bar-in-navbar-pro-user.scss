@@ -238,7 +238,7 @@ Styleguide Patterns.Generation-bar-in-navbar-Pro-User
       .generation-bar-btn {
         border-radius: 0 0 $border-radius-base $border-radius-base;
         font-size: 13px;
-        font-weight: $normal;
+        font-weight: $font-weight-normal;
         height: 30px;
         margin-top: -1px;
         padding: 3px 13px;
@@ -387,12 +387,12 @@ Styleguide Patterns.Generation-bar-in-navbar-Pro-User
           padding: 0;
           background-color: none;
           border: none;
-          font-weight: $normal;
+          font-weight: $font-weight-normal;
         }
       }
 
       .add-competitors-title {
-        font-weight: $normal;
+        font-weight: $font-weight-normal;
       }
 
       .btn-close {
