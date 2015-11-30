@@ -43,21 +43,20 @@ var banner = ['/**',
   ''].join('\n');
 
 gulp.task('default', [
+  'connect',
   'sprite',
   'pictures',
   'build',
-  'kss'
+  'kss',
+  'watch'
 ]);
-
-gulp.task('docker', ['connect']);
 
 gulp.task('build', ['sass', 'sass-build', 'sprite-build']);
 
 gulp.task('watch', function () {
   gulp.watch(path.join(paths.sass, '**', '*.*'), ['kss']);
-  gulp.watch(path.join(paths.sass, '**', '*.hbs'), ['kss']);
-  gulp.watch(path.join(paths.template, '**', '*.html'), ['kss']);
   gulp.watch(path.join(paths.sassKss, '**', '*.scss'), ['kss']);
+  gulp.watch(path.join(paths.template, '**', '*.html'), ['kss']);
   gulp.watch(path.join(paths.svg, '**', '*.svg'), ['kss']);
 });
 

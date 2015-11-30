@@ -10,4 +10,4 @@ styleguide:
     - ./kss-config.json:/opt/gulp/kss-config.json
     - ./awsConfig.json:/opt/gulp/awsConfig.json
     - ./package.json:/opt/gulp/package.json
-  command: "gulp docker"
+  command: "gulp"
