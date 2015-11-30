@@ -2,11 +2,17 @@
 Buttons Group
 
 Markup:
-<div class="btn-group">
-  <button class="btn btn-default">Left</button>
-  <button class="btn btn-default">Middle</button>
-  <button class="btn btn-default">Right</button>
+<div class="btn-group btn-group-justified">
+  <div class="btn-group" role="group">
+    <button class="btn btn-default">Left</button>
+  </div>
+  <div class="btn-group" role="group">
+    <button class="btn btn-default">Middle</button>
+  </div>
+  <div class="btn-group" role="group">
+    <button class="btn btn-default">Right</button>
+  </div>
 </div>
 
-Styleguide Components.Button.Buttons-Group
+Styleguide Patterns.Buttons-Group
 */

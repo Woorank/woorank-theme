@@ -98,10 +98,10 @@ $darkenEffetBorder: 5%;
   }
 
   &.corner-top-left {
-    border-radius: 3px 0 0 0;
+    border-radius: $border-radius-base 0 0 0;
 
     &:after {
-      border-radius: 3px 0 0 0;
+      border-radius: $border-radius-base 0 0 0;
       border: ($corner-size-sm - 2px) solid transparent;
       left: -($corner-size-sm - 1px);
       top: -($corner-size-sm - 1px);
@@ -120,10 +120,10 @@ $darkenEffetBorder: 5%;
   }
 
   &.corner-bottom-left {
-    border-radius: 0 0 0 3px;
+    border-radius: 0 0 0 $border-radius-base;
 
     &:after {
-      border-radius: 0 0 0 3px;
+      border-radius: 0 0 0 $border-radius-base;
       border: ($corner-size-sm - 2px) solid transparent;
       left: -($corner-size-sm - 1px);
       bottom: -($corner-size-sm - 1px);
@@ -143,10 +143,10 @@ $darkenEffetBorder: 5%;
   }
 
   &.corner-top-right {
-    border-radius: 0 3px 0 0;
+    border-radius: 0 $border-radius-base 0 0;
 
     &:after {
-      border-radius: 0 3px 0 0;
+      border-radius: 0 $border-radius-base 0 0;
       border: ($corner-size-sm - 2px) solid transparent;
       right: -($corner-size-sm - 1px);
       top: -($corner-size-sm - 1px);
@@ -166,10 +166,10 @@ $darkenEffetBorder: 5%;
   }
 
   &.corner-bottom-right {
-    border-radius: 0 0 3px 0;
+    border-radius: 0 0 $border-radius-base 0;
 
     &:after {
-      border-radius: 0 0 3px 0;
+      border-radius: 0 0 $border-radius-base 0;
       bottom: -($corner-size-sm - 1px);
       right: -($corner-size-sm - 1px);
     }

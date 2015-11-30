@@ -219,13 +219,13 @@ Styleguide Patterns.Generation-bar-in-navbar-Pro-User
     }
 
     .form-control {
-      border-radius: 3px 3px 0 0;
+      border-radius: $border-radius-base $border-radius-base 0 0;
       font-size: 13px;
       height: 30px;
       transition: none;
 
       @include breakpoint($screen-sm) {
-        border-radius: 3px 0 0 3px;
+        border-radius: $border-radius-base 0 0 $border-radius-base;
         border-right: none;
       }
     }
@@ -236,15 +236,15 @@ Styleguide Patterns.Generation-bar-in-navbar-Pro-User
       z-index: 2;
 
       .generation-bar-btn {
-        border-radius: 0 0 3px 3px;
+        border-radius: 0 0 $border-radius-base $border-radius-base;
         font-size: 13px;
-        font-weight: 600;
+        font-weight: $font-weight-normal;
         height: 30px;
         margin-top: -1px;
         padding: 3px 13px;
 
         @include breakpoint($screen-sm) {
-          border-radius: 0 3px 3px 0;
+          border-radius: 0 $border-radius-base $border-radius-base 0;
           margin-top: 0;
         }
       }
@@ -333,9 +333,8 @@ Styleguide Patterns.Generation-bar-in-navbar-Pro-User
 
     .options-content {
       background-color: $white;
-      border-radius: 3px;
+      border-radius: $border-radius-base;
       display: none;
-      font-size: 12px;
       margin-top: -1px;
       min-width: 238px;
       padding: 20px 0 0 0;
@@ -374,7 +373,7 @@ Styleguide Patterns.Generation-bar-in-navbar-Pro-User
         .btn-start-trial {
           height: auto;
           padding: 6px 12px;
-          border-radius: 3px;
+          border-radius: $border-radius-base;
           margin: 0 auto;
           color: $white;
           box-shadow: inset 0px -2px 0px rgba($black, .2);
@@ -388,13 +387,12 @@ Styleguide Patterns.Generation-bar-in-navbar-Pro-User
           padding: 0;
           background-color: none;
           border: none;
-          font-size: 12px;
-          font-weight: normal;
+          font-weight: $font-weight-normal;
         }
       }
 
       .add-competitors-title {
-        font-weight: normal;
+        font-weight: $font-weight-normal;
       }
 
       .btn-close {
@@ -415,7 +413,7 @@ Styleguide Patterns.Generation-bar-in-navbar-Pro-User
       }
 
       .form-control {
-        border-radius: 3px;
+        border-radius: $border-radius-base;
         overflow: hidden;
         position: relative;
         border-right: 1px solid $border-color;
