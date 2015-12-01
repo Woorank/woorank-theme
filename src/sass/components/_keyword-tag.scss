@@ -23,13 +23,29 @@ Styleguide Components.Keyword-Tags
   display: inline-block;
   line-height: 1;
   height: 26px;
-  padding: 5px 10px 5px 8px;
   position: relative;
   transition: border-color 150ms ease-in, background-color 150ms ease-in;
   margin-left: 7px;
   margin-right: 5px;
   cursor: pointer;
 
+  .keyword-tag-inner {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 26px;
+    padding: 5px 10px 5px 5px;
+    font-size: $font-size-base;
+    line-height: 0.8;
+  }
+
+  .icon-cross {
+    margin-right: 5px;
+  }
+}
+
+.keyword-tag {
   &:before {
     content: "";
     position: absolute;
@@ -100,17 +116,5 @@ Styleguide Components.Keyword-Tags
         }
       }
     }
-  }
-
-  .keyword-tag-inner {
-    display: block;
-    min-height: 14px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .icon-cross {
-    margin-right: 5px;
   }
 }
