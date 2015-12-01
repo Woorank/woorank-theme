@@ -65,6 +65,11 @@ $directions: 'top', 'bottom', 'left', 'right';
   }
 
   &.left {
+    .tooltip-btn-close,
+    .close {
+      margin-right: -3px;
+    }
+
     .tooltip-arrow:after {
       margin-top: -5px;
       margin-left: -6px;
@@ -94,6 +99,11 @@ $directions: 'top', 'bottom', 'left', 'right';
 
   &.bottom-left,
   &.top-left {
+    .tooltip-btn-close,
+    .close {
+      margin-right: -3px;
+    }
+
     .tooltip-arrow {
       left: 20px;
     }
