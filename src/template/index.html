@@ -46,7 +46,7 @@
       <div class="custom-navbar-group">
         <div class="btn-group btn-group-sm" id="nav-buttons">
           {{#eachRoot}}
-            <a href="section-{{referenceURI}}.html"
+            <a href="section-{{slug referenceURI}}.html"
               class="btn btn-default {{#ifReference ../rootName}}active{{/ifReference}}">
               {{header}}
             </a>
@@ -58,7 +58,7 @@
         <ul class="nav navbar-nav">
           {{#eachRoot}}
             <li class="{{#ifReference ../rootName}}active{{/ifReference}}">
-              <a href="section-{{referenceURI}}.html">{{header}}</a>
+              <a href="section-{{slug referenceURI}}.html">{{header}}</a>
             </li>
           {{/eachRoot}}
         </ul>
@@ -105,7 +105,7 @@
 
           <div class="page-header">
             <h{{depth}}>
-              <a href="#{{referenceURI}}">
+              <a href="#section-{{slug referenceURI}}">
                 {{header}}
               </a>
             </h{{depth}}>
