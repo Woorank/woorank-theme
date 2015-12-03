@@ -36,6 +36,8 @@ Styleguide Components.Alert
   }
 
   .close {
+    margin-top: -3px;
+
     &:focus {
       outline: none;
     }

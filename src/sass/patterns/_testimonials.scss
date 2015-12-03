@@ -86,7 +86,7 @@ Styleguide Patterns.Testimonials
 
   .testimonial {
     @include breakpoint($screen-sm) {
-      height: 180px;
+      min-height: 180px;
     }
   }
 
@@ -138,7 +138,7 @@ Styleguide Patterns.Testimonials
 
     p {
       font-size: 15px;
-      line-height: 1.33;
+      line-height: $line-height-base;
       color: $text-color;
     }
   }
