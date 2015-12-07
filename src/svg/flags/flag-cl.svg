@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="640px" height="480px" viewBox="0 0 640 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.3 (16618) - http://www.bohemiancoding.com/sketch -->
+    <title>Flag_of_Chile</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Flag_of_Chile" sketch:type="MSLayerGroup">
+            <path d="M213.333333,0 L0,0 L0,240 L0,480 L640,480 L640,240 L640,0 L213.333333,0 Z" id="Shape" fill="#D52B1E" sketch:type="MSShapeGroup"></path>
+            <rect id="Rectangle-path" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0" width="640" height="240"></rect>
+            <path d="M240,240 L0,240 L0,0 L240,0 L240,240 L240,240 Z" id="Shape" fill="#0039A6" sketch:type="MSShapeGroup"></path>
+            <path d="M141.677932,127.001902 L176.928879,101.39101 L133.38077,101.39101 L119.903877,59.9531616 L106.426985,101.39101 L62.8788759,101.39101 L98.129823,127.001902 L84.6529303,168.391789 L119.903877,142.780897 L155.154825,168.391789 L141.677932,127.001902 Z" id="Shape" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
