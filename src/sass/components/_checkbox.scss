@@ -4,15 +4,39 @@ Checkbox
 Button designed as checkboxes.
 
 Markup:
-<button type="button" class="checkbox {{modifier_class}}"></button>
+<div class="checkbox-container">
+  <button type="button" class="checkbox {{modifier_class}}"></button>
+  <span class="checkbox-label">Text (small checkbox)</span>
+</div>
+<div class="checkbox-container">
+  <button type="button" class="checkbox checkbox-sm {{modifier_class}}"></button>
+  <span class="checkbox-label">Text (small checkbox)</span>
+</div>
 
-.default  - default
-.checked  - checked status
-.remove   - remove status
-.disabled - disabled status
+.default     - Default
+.hovered     - Hovered
+.checked     - Checked status
+.remove      - Remove status
+.disabled    - Disabled status
+.not-allowed - Not allowed status
 
 Styleguide Components.Checkbox
 */
+
+.checkbox-container {
+  display: inline-block;
+  vertical-align: middle;
+
+  button.checkbox {
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+  .checkbox-label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
 
 button.checkbox {
   background-color: $grey-smoke;
@@ -22,9 +46,15 @@ button.checkbox {
   display: inline-block;
   height: 18px;
   margin: 0;
+  padding: 0;
   position: relative;
   transition: all 150ms ease-in;
   width: 18px;
+
+  &.checkbox-sm {
+    height: 12px;
+    width: 12px;
+  }
 
   input[type=checkbox] {
     visibility: hidden;
@@ -105,6 +135,20 @@ button.checkbox {
       transform: rotate(-45deg);
       width: 10px;
     }
+
+    &.checkbox-sm {
+      &:before {
+        left: 2px;
+        top: 3px;
+        width: 4px;
+      }
+
+      &:after {
+        left: 3px;
+        top: 7px;
+        width: 7px;
+      }
+    }
   }
 
   &:focus,
@@ -138,6 +182,7 @@ button.checkbox {
         opacity: 1;
         top: 50%;
         width: 16px;
+        padding: 0;
       }
 
       &:before {
@@ -148,6 +193,13 @@ button.checkbox {
         transform: rotate(-45deg) translateX(-50%) translateY(-50%);
       }
     }
+
+    &.checkbox-sm {
+      &:before,
+      &:after {
+        width: 9px;
+      }
+    }
   }
 
   &.not-allowed {
@@ -155,6 +207,13 @@ button.checkbox {
     border-color: $grey-light;
     box-shadow: inset 0 0 1px 1px $white;
     cursor: not-allowed;
+
+    &.checkbox-sm {
+      &:before,
+      &:after {
+        width: 9px;
+      }
+    }
 
     &:before,
     &:after {
@@ -164,7 +223,7 @@ button.checkbox {
       left: 50%;
       opacity: 1;
       top: 50%;
-      width: 16px;
+      width: 15px;
       padding: 0;
     }
 
