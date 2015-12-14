@@ -10,31 +10,66 @@ Markup:
       <span class="input-group-addon">sufix</span>
     </div>
   </div>
-  <div class="form-group">
-    <div class="input-group">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-      <input type="text" class="form-control">
-      <span class="input-group-addon primary">
-        <svg class="icon icon-gear fill-white">
-          <use xlink:href="#gear"></use>
-        </svg>
-      </span>
+  <div class="row form-group">
+    <div class="col-xs-12 col-sm-6">
+      <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Go!</button>
+        </span>
+        <input type="text" class="form-control">
+        <span class="input-group-addon primary">
+          <svg class="icon icon-gear fill-white">
+            <use xlink:href="#gear"></use>
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <button class="btn btn-default" type="button">Go!</button>
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-xs-12 col-sm-6">
+      <div class="input-group input-group-sm">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Go!</button>
+        </span>
+        <input type="text" class="form-control">
+        <span class="input-group-addon primary">
+          <svg class="icon icon-gear fill-white">
+            <use xlink:href="#gear"></use>
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <button class="btn btn-default btn-sm" type="button">Go!</button>
     </div>
   </div>
 </form>
 
-Styleguide Components.Forms.Input-Groups
+Styleguide Patterns.Input-Groups
 */
 
 .input-group {
+  .input-group-addon {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .icon {
+      min-height: 20px;
+    }
+  }
+
   &.input-group-sm {
     .input-group-addon {
+      padding-top: 0;
+      padding-bottom: 0;
+
       .icon {
         margin-top: -5px;
         transform: translateY(2px);
-        max-height: 22px;
+        max-height: 16px;
       }
     }
   }
