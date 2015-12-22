@@ -6,6 +6,9 @@ Markup:
   <div class="col-md-4">
     <a href="#" class="direction-label">
       Normal state
+      <svg class="icon icon-arrow-up-down">
+        <use xlink:href="#arrow-up-down"></use>
+      </svg>
       <svg class="icon icon-arrow-up">
         <use xlink:href="#arrow-up"></use>
       </svg>
@@ -17,6 +20,9 @@ Markup:
   <div class="col-md-4">
     <a href="#" class="direction-label down">
       Sort
+      <svg class="icon icon-arrow-up-down">
+        <use xlink:href="#arrow-up-down"></use>
+      </svg>
       <svg class="icon icon-arrow-up">
         <use xlink:href="#arrow-up"></use>
       </svg>
@@ -27,7 +33,10 @@ Markup:
   </div>
   <div class="col-md-4">
     <a href="#" class="direction-label up">
-      Sort reverse
+      Reverse sort
+      <svg class="icon icon-arrow-up-down">
+        <use xlink:href="#arrow-up-down"></use>
+      </svg>
       <svg class="icon icon-arrow-up">
         <use xlink:href="#arrow-up"></use>
       </svg>
@@ -71,10 +80,15 @@ a.direction-label:hover {
   }
 
   .icon {
-    display: none;
+    display: inline-block;
     height: 10px;
     width: 10px;
     fill: $grey;
+  }
+
+  .icon-arrow-up,
+  .icon-arrow-down {
+    display: none;
   }
 
   &.important {
@@ -82,12 +96,20 @@ a.direction-label:hover {
   }
 
   &.up {
+    .icon-arrow-up-down {
+      display: none;
+    }
+
     .icon-arrow-up {
       display: inline-block;
     }
   }
 
   &.down {
+    .icon-arrow-up-down {
+      display: none;
+    }
+
     .icon-arrow-down {
       display: inline-block;
     }
