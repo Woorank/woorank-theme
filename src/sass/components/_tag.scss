@@ -22,7 +22,7 @@ Styleguide Components.Tags
   border: 1px solid $border-color;
   color: $grey-dark;
   display: inline-block;
-  line-height: 0;
+  line-height: $line-height-base;
   margin-top: -1px;
   min-height: 22px;
   padding: 1px 5px;
@@ -31,13 +31,35 @@ Styleguide Components.Tags
   vertical-align: middle;
   min-width: 40px;
   white-space: nowrap;
+  font-size: $font-size-small;
 
   @include breakpoint($screen-md) {
     width: auto;
   }
 
+  &.tag-sm {
+    min-height: 0;
+    line-height: 0;
+    min-width: 0;
+  }
+
   &.tag-dismissible {
     padding-right: 20px;
+  }
+
+  .icon {
+    opacity: 0.5;
+    height: 10px;
+    width: 10px;
+    fill: $grey;
+    margin-top: -2px;
+  }
+
+  &:hover,
+  &:focus {
+    .icon {
+      opacity: 1;
+    }
   }
 
   @each $color, $colorValue in $basicColors {
@@ -45,6 +67,10 @@ Styleguide Components.Tags
       background-color: get-variant-color($color, "smoke");
       border-color: get-variant-color($color, "dark");
       color: get-variant-color($color, "dark");
+
+      .icon {
+        fill: get-variant-color($color, "dark");
+      }
     }
   }
 
@@ -100,18 +126,5 @@ Styleguide Components.Tags
     top: 50%;
     transform: translateY(-50%);
     width: 20px;
-
-    .icon {
-      opacity: .25;
-      height: 10px;
-      width: 10px;
-    }
-
-    &:hover,
-    &:focus {
-      .icon {
-        opacity: .5;
-      }
-    }
   }
 }

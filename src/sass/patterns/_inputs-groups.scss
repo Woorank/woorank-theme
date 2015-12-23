@@ -10,40 +10,48 @@ Markup:
       <span class="input-group-addon">sufix</span>
     </div>
   </div>
-  <div class="row form-group">
-    <div class="col-xs-12 col-sm-6">
-      <div class="input-group">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">Go!</button>
-        </span>
-        <input type="text" class="form-control">
-        <span class="input-group-addon primary">
-          <svg class="icon icon-gear fill-white">
-            <use xlink:href="#gear"></use>
+  <!-- with icon & text -->
+  <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+          <svg class="icon icon-plus icon-xs fill-grey">
+            <use xlink:href="#plus"></use>
           </svg>
-        </span>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-6">
-      <button class="btn btn-default" type="button">Go!</button>
+          <span class="icon-text">text</span>
+        </button>
+      </span>
+      <input type="text" class="form-control">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+          <svg class="icon icon-plus icon-xs fill-grey">
+            <use xlink:href="#plus"></use>
+          </svg>
+          <span class="icon-text">text</span>
+        </button>
+      </span>
     </div>
   </div>
-  <div class="row form-group">
-    <div class="col-xs-12 col-sm-6">
-      <div class="input-group input-group-sm">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">Go!</button>
-        </span>
-        <input type="text" class="form-control">
-        <span class="input-group-addon primary">
-          <svg class="icon icon-gear fill-white">
-            <use xlink:href="#gear"></use>
+  <!-- small -->
+  <div class="form-group">
+    <div class="input-group input-group-sm">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+          <svg class="icon icon-plus icon-xs fill-grey">
+            <use xlink:href="#plus"></use>
           </svg>
-        </span>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-6">
-      <button class="btn btn-default btn-sm" type="button">Go!</button>
+          <span class="icon-text">text</span>
+        </button>
+      </span>
+      <input type="text" class="form-control">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+          <svg class="icon icon-plus icon-xs fill-grey">
+            <use xlink:href="#plus"></use>
+          </svg>
+          <span class="icon-text">text</span>
+        </button>
+      </span>
     </div>
   </div>
 </form>
@@ -57,7 +65,7 @@ Styleguide Patterns.Input-Groups
     padding-bottom: 0;
 
     .icon {
-      min-height: 20px;
+      max-height: 18px;
     }
   }
 
@@ -71,6 +79,14 @@ Styleguide Patterns.Input-Groups
         transform: translateY(2px);
         max-height: 16px;
       }
+    }
+  }
+
+  .btn {
+    .icon-text,
+    .icon {
+      line-height: 0;
+      vertical-align: initial;
     }
   }
 
