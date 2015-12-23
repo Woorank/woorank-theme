@@ -20,6 +20,9 @@ body {
   &.page-narrow {
     max-width: 720px;
     margin: 1px auto 0 auto;
-    padding: 40px 0;
+    padding: 40px 15px;
+    @include breakpoint($screen-sm) {
+      padding: 40px 0;
+    }
   }
 }
