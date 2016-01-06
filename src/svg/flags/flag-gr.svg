@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="640px" height="480px" viewBox="0 0 640 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.4.3 (16618) - http://www.bohemiancoding.com/sketch -->
-    <title>Flag_of_Greece</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Flag_of_Greece" sketch:type="MSLayerGroup">
-            <rect id="Rectangle-path" fill="#0D5EAF" sketch:type="MSShapeGroup" x="0" y="0" width="640" height="480"></rect>
-            <path d="M106.666667,106.666667 L106.666667,0 L160,0 L160,106.666667 L266.666667,106.666667 L266.666667,160 L160,160 L160,266.666667 L106.666667,266.666667 L106.666667,160 L0,160 L0,106.666667 L106.666667,106.666667 L106.666667,106.666667 Z M639.50174,106.666667 L639.50174,53.3333333 L266.666667,53.3333333 L266.666667,106.666667 L639.50174,106.666667 L639.50174,106.666667 Z M266.666667,213.333333 L639.50174,213.333333 L639.50174,160 L266.666667,160 L266.666667,213.333333 L266.666667,213.333333 Z M0,320 L639.50174,320 L639.50174,266.666667 L0,266.666667 L0,320 L0,320 Z M0,426.666667 L639.50174,426.666667 L639.50174,373.333333 L0,373.333333 L0,426.666667 L0,426.666667 Z" id="Shape" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
-        </g>
+<svg width="640px" height="480px" viewBox="0 0 640 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-path" fill="#0D5EAF" x="0" y="0" width="640" height="480"></rect>
+        <path d="M106.666667,106.666667 L106.666667,0 L160,0 L160,106.666667 L266.666667,106.666667 L266.666667,160 L160,160 L160,266.666667 L106.666667,266.666667 L106.666667,160 L0,160 L0,106.666667 L106.666667,106.666667 L106.666667,106.666667 Z M639.50174,106.666667 L639.50174,53.3333333 L266.666667,53.3333333 L266.666667,106.666667 L639.50174,106.666667 L639.50174,106.666667 Z M266.666667,213.333333 L639.50174,213.333333 L639.50174,160 L266.666667,160 L266.666667,213.333333 L266.666667,213.333333 Z M0,320 L639.50174,320 L639.50174,266.666667 L0,266.666667 L0,320 L0,320 Z M0,426.666667 L639.50174,426.666667 L639.50174,373.333333 L0,373.333333 L0,426.666667 L0,426.666667 Z" id="Shape" fill="#FFFFFF"></path>
     </g>
 </svg>
