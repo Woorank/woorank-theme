@@ -12,7 +12,7 @@ var rename = require('gulp-rename');
 var s3 = require('gulp-s3');
 var sass = require('gulp-sass');
 var svgSprite = require('gulp-svg-sprites');
-var minifyHTML = require('gulp-minify-html');
+var svgmin = require('gulp-svgmin');
 
 var pkg = require('./package');
 
@@ -149,7 +149,11 @@ gulp.task('sprite-build', function () {
         symbols: 'symbols.svg'
       }
     }))
-    .pipe(minifyHTML())
+    .pipe(svgmin({
+      plugins: [{
+        cleanupIDs: false
+      }]
+    }))
     .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)));
 });
 
