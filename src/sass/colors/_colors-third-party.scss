@@ -18,6 +18,7 @@ instagram        #3F729B - Instagram
 linkedin         #0077B5 - Linked In
 twitter          #2AA9E0 - Twitter Color
 yelp             #AF0606 - Yelp
+youtube          #CD201F - Youtube
 
 Weight: 2
 
@@ -32,6 +33,7 @@ $instagram-color:        #3F729B;
 $linkedin-color:         #0077B5;
 $twitter-color:          #2AA9E0;
 $yelp-color:             #AF0606;
+$youtube-color:          #CD201F;
 
 $thirdPartyColors:
   ('facebook', $facebook-color),
@@ -41,4 +43,5 @@ $thirdPartyColors:
   ('instagram', $instagram-color),
   ('linkedin', $linkedin-color),
   ('twitter', $twitter-color),
-  ('yelp', $yelp-color);
+  ('yelp', $yelp-color),
+  ('youtube', $youtube-color);
