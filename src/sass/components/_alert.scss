@@ -17,6 +17,8 @@ Styleguide Components.Alert
 */
 
 .alert {
+  position: relative;
+
   @each $color, $colorValue in $colors {
     &.alert-#{$color} {
       background-color: get-variant-color($color, "smoke");
@@ -36,7 +38,11 @@ Styleguide Components.Alert
   }
 
   .close {
-    margin-top: -3px;
+    line-height: 0;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 
     &:focus {
       outline: none;
@@ -45,14 +51,6 @@ Styleguide Components.Alert
     .icon-cross {
       height: 10px;
       width: 10px;
-    }
-  }
-
-  &.alert-dismissable {
-    .close {
-      top: auto;
-      right: auto;
-      margin-right: -20px;
     }
   }
 }
