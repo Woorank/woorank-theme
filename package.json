@@ -18,5 +18,11 @@
     "gulp-sass": "2.0.4",
     "gulp-svg-sprites": "3.0.0",
     "gulp-svgmin": "^1.2.0"
+  },
+  "scripts": {
+    "start": "gulp",
+    "dev": "gulp watch",
+    "build": "gulp build",
+    "publish": "gulp publish"
   }
 }
