@@ -47,8 +47,7 @@ gulp.task('default', [
   'sprite',
   'pictures',
   'build',
-  'kss',
-  'watch'
+  'kss'
 ]);
 
 gulp.task('build', ['sass', 'sass-build', 'sprite-build']);
