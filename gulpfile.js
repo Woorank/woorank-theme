@@ -1,5 +1,7 @@
 'use strict';
 
+require('es6-promise').polyfill();
+
 var autoprefixer = require('gulp-autoprefixer');
 var connect = require('gulp-connect');
 var debug = require('gulp-debug');

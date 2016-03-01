@@ -2,22 +2,28 @@ general:
   branches:
     only:
       - /release\/.*/
+
 machine:
-  node:
-    version: 4.3.1
+  pre:
+    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circleci-docker.sh | bash -s -- 1.10.0
+  services:
+    - docker
+
 dependencies:
   override:
-    - sudo pip install awscli
-    - npm i
-    - npm i gulp -g
-    - gulp build
+    - sudo pip install -U docker-compose==1.6.0 awscli
+    - npm install gulp -g
+    - npm install
+    - npm run build
+
 test:
   override:
     - echo 'no tests for styleguide'
+
 deployment:
   hub:
     branch: master
     commands:
       - node deploy.js
       - echo "{\"key\":\"<AWS_STYLEGUIDE_KEY>\",\"secret\":\"<AWS_STYLEGUIDE_SECRET>\",\"bucket\":\"<AWS_STYLEGUIDE_BUCKET>\",\"region\":\"<AWS_STYLEGUIDE_ZONE>\"}" | sed "s/<AWS_STYLEGUIDE_KEY>/$AWS_STYLEGUIDE_KEY/;s/<AWS_STYLEGUIDE_SECRET>/$AWS_STYLEGUIDE_SECRET/;s/<AWS_STYLEGUIDE_BUCKET>/$AWS_STYLEGUIDE_BUCKET/;s/<AWS_STYLEGUIDE_ZONE>/$AWS_STYLEGUIDE_ZONE/" > ./awsConfig.json
-      - gulp publish
+      - npm run publish
