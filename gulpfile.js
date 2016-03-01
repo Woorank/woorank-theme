@@ -50,6 +50,11 @@ gulp.task('default', [
   'kss'
 ]);
 
+gulp.task('dev', [
+  'default',
+  'watch'
+]);
+
 gulp.task('build', ['sass', 'sass-build', 'sprite-build']);
 
 gulp.task('watch', function () {
