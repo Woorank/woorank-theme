@@ -29,15 +29,15 @@ $ docker-compose up
 
 ### Local render
 ```bash
-$ docker-compose run --rm styleguide gulp
+$ docker-compose run --rm styleguide npm dev
 ```
 
 ### Local build
 ```bash
-$ docker-compose run --rm styleguide gulp build
+$ docker-compose run --rm styleguide npm run build
 ```
 
 ### online publication
 ```bash
-$ docker-compose run --rm styleguide gulp publish
+$ docker-compose run --rm styleguide npm run publish
 ```
