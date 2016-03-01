@@ -4,7 +4,7 @@ Tags
 A tag element can be colored, contain close button and contains corner indicator element.
 
 Markup:
-<div class="tag tag-dismissible">
+<div class="tag tag-dismissible {{modifier_class}}">
   <span class="tag-text">Tag</span>
   <button class="btn btn-close">
     <svg class="icon cross">
@@ -12,6 +12,12 @@ Markup:
     </svg>
   </button>
 </div>
+<div class="tag {{modifier_class}}">
+  <span class="tag-text">Tag</span>
+  <span class="tag-number">55</span>
+</div>
+
+.tag-primary - Primary
 
 Styleguide Components.Tags
 */
@@ -22,16 +28,21 @@ Styleguide Components.Tags
   border: 1px solid $border-color;
   color: $grey-dark;
   display: inline-block;
+  font-size: 0; // remove display inline white space
   line-height: $line-height-base;
   margin-top: -1px;
-  min-height: 22px;
-  padding: 1px 5px;
+  min-height: $line-height-computed;
+  min-width: 40px;
+  overflow: hidden;
+  padding: 0;
   position: relative;
   text-overflow: ellipsis;
   vertical-align: middle;
-  min-width: 40px;
   white-space: nowrap;
-  font-size: $font-size-small;
+
+  * {
+    font-size: $font-size-small;
+  }
 
   @include breakpoint($screen-md) {
     width: auto;
@@ -44,7 +55,7 @@ Styleguide Components.Tags
   }
 
   &.tag-dismissible {
-    padding-right: 20px;
+    padding-right: 15px;
   }
 
   .icon {
@@ -52,7 +63,6 @@ Styleguide Components.Tags
     height: 10px;
     width: 10px;
     fill: $grey;
-    margin-top: -2px;
   }
 
   &:hover,
@@ -67,6 +77,11 @@ Styleguide Components.Tags
       background-color: get-variant-color($color, "smoke");
       border-color: get-variant-color($color, "dark");
       color: get-variant-color($color, "dark");
+
+      .tag-number {
+        color: $white;
+        background-color: get-variant-color($color, "dark");
+      }
 
       .icon {
         fill: get-variant-color($color, "dark");
@@ -87,10 +102,14 @@ Styleguide Components.Tags
     }
   }
 
-  .tag-text {
-    font-size: 12px;
-    line-height: $line-height-base;
-    padding: 2px 0;
+  .tag-text,
+  .tag-number {
+    white-space: nowrap;
+    padding: 3px 5px;
+  }
+
+  .tag-number {
+    background-color: $grey-light;
   }
 
   .corner-indicator {
