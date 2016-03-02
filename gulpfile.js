@@ -45,7 +45,6 @@ var banner = ['/**',
   ''].join('\n');
 
 gulp.task('default', [
-  'connect',
   'sprite',
   'pictures',
   'build',
@@ -53,6 +52,7 @@ gulp.task('default', [
 ]);
 
 gulp.task('dev', [
+  'connect',
   'default',
   'watch'
 ]);
