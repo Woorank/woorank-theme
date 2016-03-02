@@ -41,6 +41,11 @@ $progress-md : $font-size-large; // 18px
 $progress-default: 22px;
 $progress-border-radius: 6px;
 
+.progress-container {
+  clear: both;
+  padding-bottom: 5px;
+}
+
 .progress-label,
 .progress {
   border-radius: $progress-border-radius;
@@ -54,7 +59,6 @@ $progress-border-radius: 6px;
   color: $grey;
   font-size: $font-size-small;
   font-weight: $font-weight-normal;
-  padding: 0 ($progress-default / 2);
   text-align: right;
 }
 
