@@ -4,7 +4,7 @@ Progress Bar
 Markup:
 <div class="row">
   <div class="col-xs-12 col-sm-3">
-    <div class="progress-label">{{modifier_class}}</div>
+    <div class="progress-label"><span class="dot"></span>{{modifier_class}}</div>
   </div>
   <div class="col-xs-12 col-sm-9">
     <div class="progress {{modifier_class}}">
@@ -42,7 +42,6 @@ $progress-default: 22px;
 $progress-border-radius: 6px;
 
 .progress-container {
-  clear: both;
   padding-bottom: 5px;
 }
 
@@ -59,7 +58,25 @@ $progress-border-radius: 6px;
   color: $grey;
   font-size: $font-size-small;
   font-weight: $font-weight-normal;
-  text-align: right;
+  padding-left: 20px;
+  position: relative;
+
+  .dot {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  &.text-right {
+    padding-left: 0;
+    padding-right: 20px;
+
+    .dot {
+      left: auto;
+      right: 0;
+    }
+  }
 }
 
 .progress {
