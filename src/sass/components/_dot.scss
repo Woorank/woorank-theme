@@ -58,4 +58,10 @@ $large-dot-size: $font-size-large; // 18px
       border-color: $colorValue;
     }
   }
+
+  @each $color, $colorValue in $colors {
+    &.dot-border-#{$color} {
+      border-color: $colorValue;
+    }
+  }
 }
