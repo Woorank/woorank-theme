@@ -1,0 +1,49 @@
+/*
+Blog Article
+
+Markup:
+<article class="blog-article">
+  <div class="blog-article-img">
+    <img class="img-responsive" src="http://fpoimg.com/1040x430" alt="">
+  </div>
+  <h2>Article title</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur sapiente eum ea omnis harum quo, reprehenderit delectus magnam id perspiciatis, officiis assumenda voluptatum, illo tenetur, corporis nihil culpa sequi. Incidunt fugit, eligendi molestias eaque nulla quam aut commodi.</p>
+  <div class="row btn-container">
+    <div class="col-xs-12 col-sm-6 blog-article-meta">
+      <span class="blog-article-author">By <strong>Woorank</strong></span>
+      <time class="label label-default" datetime="2008-02-16 20:00">2008-02-16 @20:00</time>
+    </div>
+    <div class="col-xs-12 col-sm-6 text-right">
+      <button class="btn btn-primary">
+        <span class="icon-text">Read more</span>
+        <svg class="icon icon-chevron-right fill-white" role="img">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-right"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</article>
+
+Styleguide Patterns.Blog-Article
+*/
+
+.blog-article {
+  background-color: $white;
+  margin-bottom: 30px;
+  padding: 0 30px 30px 30px;
+  border-radius: $border-radius-base;
+  overflow: hidden;
+
+  .blog-article-img {
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+
+  .blog-article-meta {
+    padding-top: 10px;
+  }
+
+  .blog-article-author {
+    padding-right: 10px;
+  }
+}

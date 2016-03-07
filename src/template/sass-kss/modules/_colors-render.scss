@@ -1,5 +1,10 @@
+#section-colors-woorank-colors .modifier__item[id*="-darker-"] {
+  clear: left;
+}
+
 div[id^="section-colors"] {
   text-align: left;
+
 
   .modifier__wrapper {
     &:after {
@@ -59,8 +64,8 @@ div[id^="section-colors"] {
   }
 
   @include breakpoint($screen-md) {
-    height: 100px;
-    width: 100px;
+    height: 85px;
+    width: 85px;
   }
 
   @each $colorName, $colorValue in $colors {

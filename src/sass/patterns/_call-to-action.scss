@@ -1,0 +1,24 @@
+/*
+Call to Action
+
+Markup:
+<div class="call-to-action">
+  <svg class="icon icon-say-hi icon-lg" role="img">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#say-hi"></use>
+  </svg>
+  <p>Hi there!<br/>
+    In order to improve the tool, we'd like to get to know you better.
+  </p>
+  <button type="button" class="btn btn-default">Help us out!</button>
+</div>
+
+Styleguide Patterns.Call-to-Action
+*/
+
+.call-to-action {
+  padding: 30px;
+  background-color: $white;
+  margin: 0 0 30px 0;
+  border-radius: $border-radius-base;
+  text-align: center;
+}
