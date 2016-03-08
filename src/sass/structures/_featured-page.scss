@@ -1,0 +1,41 @@
+/*
+Featured Page
+
+Markup:
+<a href="/structures/featured-page.html" target="_blank" class="structures-demo" title="Open Featured Page Template Example in a new tab.">
+  <div class="browser">
+    <span class="browser-buttons one"></span>
+    <span class="browser-buttons two"></span>
+    <span class="browser-buttons three"></span>
+    <img src="/assets/img/structures/featured-page-preview.png" alt="" />
+  </div>
+</a>
+
+Weight: 4
+
+Styleguide Structures.Featured-Page
+*/
+
+body.featured-page {
+  background-color: $white;
+
+  .page-container {
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      width: auto;
+      margin: 0 auto 30px auto;
+
+      &.pull-left {
+        width: auto;
+        margin-right: 30px;
+      }
+
+      &.pull-right {
+        width: auto;
+        margin-left: 30px;
+      }
+    }
+  }
+}

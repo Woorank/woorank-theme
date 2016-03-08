@@ -25,3 +25,9 @@
     display: inline-block;
   }
 }
+
+.page-header {
+  h1 + .description {
+    margin-top: -20px;
+  }
+}

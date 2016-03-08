@@ -24,10 +24,13 @@ var paths = {
   svg: 'src/svg',
   img: 'src/img',
   template: 'src/template',
+  structures: 'src/template/structures/*.html',
   sassKss: 'src/template/sass-kss',
   public: 'src/template/public',
   bootstrap: '/node_modules/bootstrap-sass/assets/stylesheets/',
   build: {
+    styleguide: 'styleguide',
+    structures: 'styleguide/structures',
     assets: 'styleguide/assets/',
     img: 'styleguide/assets/img',
     css: 'styleguide/assets/styles',
@@ -82,7 +85,7 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest(paths.build.js));
 });
 
-gulp.task('kss', ['sprite', 'sass', 'sass-kss', 'scripts'], function (cb) {
+gulp.task('kss', ['kss:structures', 'sprite', 'sass', 'sass-kss', 'scripts'], function (cb) {
   return exec('kss-node --config=kss-config.json',
     function (err, stdout, stderr) {
       console.log(stdout);
@@ -90,6 +93,11 @@ gulp.task('kss', ['sprite', 'sass', 'sass-kss', 'scripts'], function (cb) {
       cb(err);
       gulp.src('*').pipe(connect.reload());
     });
+});
+
+gulp.task('kss:structures', function () {
+  return gulp.src(paths.structures)
+    .pipe(gulp.dest(paths.build.structures));
 });
 
 gulp.task('sass', function () {
