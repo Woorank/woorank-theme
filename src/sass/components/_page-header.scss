@@ -22,7 +22,7 @@ Styleguide Components.Page-Header
     }
   }
 
-  &.header-alone {
+  &.page-header-alone {
     text-align: center;
     padding: 80px 0 40px 0;
 
@@ -36,6 +36,19 @@ Styleguide Components.Page-Header
       margin: 0 auto;
       padding: 5px 0;
       text-align: center;
+    }
+  }
+
+  &.page-header-icon {
+    display: inline-block;
+    text-align: left;
+    min-width: 50%;
+
+    .icon {
+      height: 90px;
+      width: 90px;
+      float: left;
+      margin-right: 10px;
     }
   }
 

@@ -1,0 +1,81 @@
+/*
+Features Table
+
+Markup:
+<table class="table table-hover features-table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>
+        <span class="label label-success">Pro</span>
+      </th>
+      <th>
+        <span class="label label-primary">Premium</span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A awsome feature</td>
+      <td>10</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Another feature</td>
+      <td>
+        <svg class="icon icon-cross">
+          <use xlink:href="#cross"></use>
+        </svg>
+      </td>
+      <td>
+        <svg class="icon icon-check">
+          <use xlink:href="#check"></use>
+        </svg>
+      </td>
+    </tr>
+    <tr>
+      <td>Technical Feature</td>
+      <td>10</td>
+      <td><strong>Unlimited</strong></td>
+    </tr>
+    <tr>
+      <td>Integrated Feature</td>
+      <td>
+        <svg class="icon icon-cross">
+          <use xlink:href="#cross"></use>
+        </svg>
+      </td>
+      <td>
+        <svg class="icon icon-check">
+          <use xlink:href="#check"></use>
+        </svg>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+Styleguide Patterns.Features-Table
+*/
+
+.features-table {
+  tr {
+    th,
+    td {
+      text-align: center;
+    }
+     :first-child {
+      text-align: left;
+      font-weight: $font-weight-bold;
+    }
+  }
+  .icon {
+    height: 15px;
+    width: 15px;
+  }
+  .icon-check {
+    fill: $success;
+  }
+  .icon-cross {
+    fill: $error;
+  }
+}
