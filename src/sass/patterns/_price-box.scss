@@ -1,0 +1,100 @@
+/*
+Price Box
+
+Markup:
+<div class="row">
+  <div class="col-xs-12 col-sm-6">
+    <div class="price-box background-success">
+      <h3 class="price-box-title">Type of plan</h3>
+      <p class="price-box-subtitle">Main target</p>
+      <img src="http://fpoimg.com/400x300" alt="" class="img-responsive">
+      <div class="price-tag">
+        <span class="price-currency">$</span>
+        <span class="price-amount">00</span>
+        <span class="price-timeframe">/ duration</span>
+      </div>
+      <a href="#" class="btn btn-lg btn-black">Confirm my plan</a>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <div class="price-box background-primary">
+      <h3 class="price-box-title">Type of plan</h3>
+      <p class="price-box-subtitle">Main target</p>
+      <img src="http://fpoimg.com/400x300" alt="" class="img-responsive">
+      <div class="price-tag">
+        <span class="price-currency">$</span>
+        <span class="price-amount">00</span>
+        <span class="price-timeframe">/ duration</span>
+      </div>
+      <a href="#" class="btn btn-lg btn-black">Confirm my plan</a>
+    </div>
+  </div>
+</div>
+
+Styleguide Patterns.Price-Box
+*/
+
+
+.price-box {
+  padding: 10px;
+  color: $white;
+  text-align: center;
+  margin-bottom: 30px;
+
+  .price-box-title {
+    color: $white;
+    font-size: 32px;
+    font-weight: $font-weight-bold;
+    padding: 24px 0 0 0;
+    margin: 0;
+  }
+
+  .price-box-subtitle {
+    color: $white;
+    font-style: italic;
+    padding: 0 0 12px 0;
+    margin: 0;
+  }
+
+  .price-tag {
+    clear: both;
+    line-height: 1;
+    white-space: nowrap;
+
+    .price-currency {
+      font-size: $font-size-large;
+      line-height: 1.9;
+      vertical-align: top;
+    }
+
+    .price-amount {
+      font-size: 60px;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  img {
+    display: block;
+    margin: 15px auto;
+  }
+
+  .btn-black {
+    margin: 30px auto 20px auto;
+    box-shadow: 0 3px 0 rgba($black, 0.3);
+    width: 90%;
+  }
+
+  @each $color, $colorValue in $colors {
+    &.background-#{$color} {
+      .btn-black {
+        background-color: get-variant-color($color, "dark");
+        &:hover,
+        &:focus {
+          background-color: $colorValue;
+          border-color: get-variant-color($color, "dark");
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
