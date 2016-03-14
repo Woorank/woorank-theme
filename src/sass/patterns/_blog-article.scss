@@ -41,30 +41,4 @@ Styleguide Patterns.Blog-Article
     margin-left: -30px;
     margin-right: -30px;
   }
-
-  .blog-article-author-picture {
-    overflow: hidden;
-    float: left;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    border-radius: 25px;
-    height: 50px;
-    width: 50px;
-
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-  }
-
-  .blog-article-author {
-    padding-right: 10px;
-  }
-
-  .blog-article-author,
-  .blog-article-meta,
-  .blog-article-date {
-    display: block;
-  }
 }

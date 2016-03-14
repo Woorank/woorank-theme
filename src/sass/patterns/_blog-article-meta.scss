@@ -1,0 +1,43 @@
+/*
+Blog Article Meta
+
+Markup:
+<div class="blog-article-meta">
+  <span class="blog-article-author-picture">
+    <img src="http://fpoimg.com/100x100" alt="">
+  </span>
+  <span class="blog-article-author">By <strong>Woorank</strong></span>
+  <time class="label label-default" datetime="2008-02-16 20:00">2008-02-16 @20:00</time>
+</div>
+
+Styleguide Patterns.Blog-Article-Meta
+*/
+
+.blog-article-meta {
+  clear: both;
+
+  .blog-article-author-picture {
+    overflow: hidden;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    height: 50px;
+    width: 50px;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .blog-article-author {
+    padding-right: 10px;
+  }
+
+  .blog-article-author,
+  .blog-article-date {
+    display: block;
+  }
+}
