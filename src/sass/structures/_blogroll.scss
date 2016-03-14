@@ -18,34 +18,4 @@ Styleguide Structures.Blogroll
 
 body.blogroll {
   background-color: $grey-smoke;
-
-  .page-container {
-    blockquote,
-    ul {
-      clear: both;
-    }
-
-    ul {
-      margin-left: -10px;
-      padding-left: 30px;
-    }
-
-    img {
-      display: block;
-      width: 100%;
-      max-width: 100%;
-      width: auto;
-      margin: 0 auto 30px auto;
-
-      &.pull-left {
-        width: auto;
-        margin-right: 30px;
-      }
-
-      &.pull-right {
-        width: auto;
-        margin-left: 30px;
-      }
-    }
-  }
 }
