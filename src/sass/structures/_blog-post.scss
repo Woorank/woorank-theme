@@ -18,4 +18,47 @@ Styleguide Structures.Blog-Post
 
 body.blog-post {
   background-color: $white;
+
+  .featured-img {
+    clear: both;
+    text-align: center;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  .page-container {
+    blockquote,
+    ul {
+      clear: both;
+    }
+
+    ul {
+      margin-left: -10px;
+      padding-left: 30px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      width: auto;
+      margin: 0 auto 30px auto;
+
+      &.pull-left {
+        width: auto;
+        margin-right: 30px;
+      }
+
+      &.pull-right {
+        width: auto;
+        margin-left: 30px;
+      }
+    }
+  }
 }
