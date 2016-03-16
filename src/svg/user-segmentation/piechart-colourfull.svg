@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="64px" height="65px" viewBox="0 0 64 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#428BCA">
+            <path d="M32.001,0 C14.327,0 0,14.327 0,32.001 C0,40.116 3.046,47.505 8.026,53.147 L53.146,8.027 C47.505,3.046 40.117,0 32.001,0 L32.001,0 Z"></path>
+        </g>
+        <g transform="translate(10.000000, 34.000000)" fill="#8674B5">
+            <path d="M22.829,0 L0.854,21.975 C6.496,26.954 13.883,30.001 22,30.001 C38.998,30.001 52.861,16.736 53.898,0 L22.829,0 L22.829,0 Z"></path>
+        </g>
+        <g transform="translate(36.000000, 10.000000)" fill="#CCD1D9">
+            <path d="M19.979,0.851 L0.829,20 L27.899,20 C27.445,12.674 24.539,6.023 19.979,0.851 L19.979,0.851 Z"></path>
+        </g>
+        <circle id="Oval-2" fill="#FFFFFF" cx="32" cy="33" r="23"></circle>
+    </g>
+</svg>
