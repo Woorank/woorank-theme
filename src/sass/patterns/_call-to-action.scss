@@ -2,14 +2,30 @@
 Call to Action
 
 Markup:
-<div class="call-to-action">
-  <svg class="icon icon-say-hi icon-lg" role="img">
-    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#say-hi"></use>
-  </svg>
-  <p>Hi there!<br/>
-    In order to improve the tool, we'd like to get to know you better.
-  </p>
-  <button type="button" class="btn btn-default">Help us out!</button>
+<div class="row">
+  <div class="col-xs-12 col-sm-6">
+    <!-- As a static element -->
+    <div class="call-to-action">
+      <svg class="icon icon-say-hi icon-lg" role="img">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#say-hi"></use>
+      </svg>
+      <p>Hi there!<br/>
+        In order to improve the tool, we'd like to get to know you better.
+      </p>
+      <button type="button" class="btn btn-default">Help us out!</button>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <!-- As a button element -->
+    <button class="btn btn-default btn-block call-to-action">
+      <svg class="icon icon-life-buoy-colourfull icon-lg" role="img">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#life-buoy-colourfull"></use>
+      </svg>
+      <p>Hi there!<br/>
+        In order to improve the tool, we'd like to get to know you better.
+      </p>
+    </button>
+  </div>
 </div>
 
 Styleguide Patterns.Call-to-Action
@@ -21,4 +37,16 @@ Styleguide Patterns.Call-to-Action
   margin: 0 0 30px 0;
   border-radius: $border-radius-base;
   text-align: center;
+
+  .icon:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  &.btn {
+    white-space: normal;
+  }
 }
