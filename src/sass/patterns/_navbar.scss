@@ -210,7 +210,7 @@ Styleguide Patterns.Navbar
 }
 
 .navbar-collapse {
-  @include breakpoint($screen-sm, $reverse: true) {
+  @include breakpoint($screen-sm - 1, $reverse: true) {
 
     -webkit-backface-visibility: hidden;
     @include box-shadow(inset 0 -1px 1px $black);

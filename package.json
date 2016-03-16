@@ -21,7 +21,7 @@
     "gulp-svgmin": "1.2.2"
   },
   "scripts": {
-    "start": "gulp",
+    "start": "gulp connect",
     "dev": "gulp dev",
     "build": "gulp build",
     "publish": "gulp publish"
