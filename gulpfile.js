@@ -11,10 +11,11 @@ var gulp = require('gulp');
 var header = require('gulp-header');
 var path = require('path');
 var rename = require('gulp-rename');
+var runSequence = require('gulp-run-sequence');
 var s3 = require('gulp-s3');
 var sass = require('gulp-sass');
-var svgSprite = require('gulp-svg-sprites');
 var svgmin = require('gulp-svgmin');
+var svgSprite = require('gulp-svg-sprites');
 
 var pkg = require('./package');
 
@@ -171,10 +172,14 @@ gulp.task('sprite-build', function () {
     .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)));
 });
 
-gulp.task('publish', function () {
+gulp.task('s3', function () {
   var awsConfig = require('./awsConfig');
   return gulp.src('./styleguide/**/*')
     .pipe(s3(awsConfig));
+});
+
+gulp.task('publish', function (callback) {
+  return runSequence('clean', ['default', 'build'], 's3', callback);
 });
 
 gulp.task('clean', function () {
