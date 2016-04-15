@@ -4,10 +4,9 @@ Blog Post
 Markup:
 <a href="/structures/blog-post.html" target="_blank" class="structures-demo" title="Open Blog Post Template Example in a new tab.">
   <div class="browser">
-    <span class="browser-buttons one"></span>
-    <span class="browser-buttons two"></span>
-    <span class="browser-buttons three"></span>
-    <img src="/assets/img/structures/blog-post-preview.png" alt="" />
+    <div class="browser-inner">
+      <img src="/assets/img/structures/blog-post-preview.png" alt="" />
+    </div>
   </div>
 </a>
 
