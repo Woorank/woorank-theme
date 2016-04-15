@@ -12,7 +12,7 @@ machine:
 dependencies:
   override:
     - sudo pip install -U docker-compose==1.6.0 awscli
-    - npm install gulp -g
+    - npm install gulp kss -g
     - npm install
     - npm run build
 
