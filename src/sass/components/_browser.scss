@@ -1,0 +1,126 @@
+/*
+Browser
+
+Markup:
+<div class="row">
+  <div class="col-xs-12 col-sm-6">
+    <div class="browser">
+      <span class="browser-buttons one"></span>
+      <span class="browser-buttons two"></span>
+      <span class="browser-buttons three"></span>
+      <div class="browser-inner">
+        <img src="http://fpoimg.com/400x300" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <div class="browser browser-grey">
+      <span class="browser-buttons one"></span>
+      <span class="browser-buttons two"></span>
+      <span class="browser-buttons three"></span>
+      <div class="browser-inner">
+        <img src="http://fpoimg.com/400x300" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="browser browser-lg browser-border">
+      <span class="browser-buttons one"></span>
+      <span class="browser-buttons two"></span>
+      <span class="browser-buttons three"></span>
+      <div class="browser-inner">
+        <img src="http://fpoimg.com/800x600" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
+
+Styleguide Components.Browser
+*/
+
+.browser {
+  background-color: $grey-lighter;
+  border-radius: 5px;
+  overflow: hidden;
+  padding-top: 20px;
+  position: relative;
+  margin-bottom: 15px;
+
+  .browser-inner {
+    overflow: hidden;
+
+    img {
+      display: block;
+      height: auto;
+      margin: 0;
+      max-width: none;
+      width: 100%;
+    }
+  }
+
+  .browser-buttons {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    border-radius: 5px;
+    height: 10px;
+    width: 10px;
+    background-color: $grey;
+
+    &.two {
+      left: 25px;
+    }
+
+    &.three {
+      left: 40px;
+    }
+  }
+
+  .browser-buttons {
+    &.one {
+      background-color: $error;
+    }
+    &.two {
+      background-color: $warning;
+    }
+    &.three {
+      background-color: $success;
+    }
+  }
+
+  &.browser-border {
+    border: 1px solid $border-color;
+  }
+
+  &.browser-lg {
+    padding-top: 30px;
+
+    .browser-buttons {
+      top: 8px;
+      height: 15px;
+      width: 15px;
+      border-radius: 8px;
+
+      &.two {
+        left: 35px;
+      }
+
+      &.three {
+        left: 60px;
+      }
+    }
+  }
+
+  &.browser-grey {
+    .browser-buttons {
+      &.one,
+      &.two,
+      &.three {
+        background-color: $grey-light;
+      }
+    }
+  }
+}

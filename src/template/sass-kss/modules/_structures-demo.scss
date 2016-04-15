@@ -65,57 +65,7 @@
     transition: bottom 300ms ease-in-out;
   }
 
-  &:hover,
-  &:focus {
-    background-color: $grey-lighter;
-    transform: translateY(-10px);
-    box-shadow: 0 5px 10px $primary-dark;
-
-    &:after {
-      bottom: -10px;
-    }
-
-    .browser-buttons {
-      &.one {
-        background-color: $error;
-      }
-      &.two {
-        background-color: $warning;
-      }
-      &.three {
-        background-color: $success;
-      }
-    }
-  }
-
   img {
-    display: block;
     width: 250px;
-    border-radius: 0 0 5px 5px;
-  }
-
-  .browser {
-    padding-top: 20px;
-    position: relative;
-    overflow: hidden;
-
-    .browser-buttons {
-      display: block;
-      position: absolute;
-      top: 5px;
-      left: 10px;
-      border-radius: 5px;
-      height: 10px;
-      width: 10px;
-      background-color: $grey;
-
-      &.two {
-        left: 25px;
-      }
-
-      &.three {
-        left: 40px;
-      }
-    }
   }
 }
