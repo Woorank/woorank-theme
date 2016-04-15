@@ -1,0 +1,67 @@
+/*
+Dot
+
+Markup:
+<p><span class="dot {{modifier_class}}"></span> dot</p>
+
+.dot-grey       - Grey
+.dot-competitor - Competitor
+
+Styleguide Components.Dot
+*/
+
+$xs-dot-size: 5px;
+$small-dot-size: 10px;
+$default-dot-size: $font-size-small; // 13px
+$medium-dot-size: $font-size-base;  // 15px
+$large-dot-size: $font-size-large; // 18px
+
+.dot {
+  display: inline-block;
+  height: $default-dot-size;
+  width: $default-dot-size;
+  border-radius: ($default-dot-size / 2);
+  background-color: $white;
+  border: 1px solid $border-color;
+
+  &.dot-extra-small,
+  &.dot-xs {
+    height: $xs-dot-size;
+    width: $xs-dot-size;
+    border-radius: ($xs-dot-size / 2);
+  }
+
+  &.dot-small,
+  &.dot-sm {
+    height: $small-dot-size;
+    width: $small-dot-size;
+    border-radius: ($small-dot-size / 2);
+  }
+
+  &.dot-medium,
+  &.dot-md {
+    height: $medium-dot-size;
+    width: $medium-dot-size;
+    border-radius: ($medium-dot-size / 2);
+  }
+
+  &.dot-large,
+  &.dot-lg {
+    height: $large-dot-size;
+    width: $large-dot-size;
+    border-radius: ($large-dot-size / 2);
+  }
+
+  @each $color, $colorValue in $colors {
+    &.dot-#{$color} {
+      background-color: $colorValue;
+      border-color: $colorValue;
+    }
+  }
+
+  @each $color, $colorValue in $colors {
+    &.dot-border-#{$color} {
+      border-color: $colorValue;
+    }
+  }
+}
