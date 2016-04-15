@@ -2,12 +2,9 @@
 Browser
 
 Markup:
-<div class="row">
+<div class="row" style="margin-bottom: 30px;">
   <div class="col-xs-12 col-sm-6">
     <div class="browser">
-      <span class="browser-buttons one"></span>
-      <span class="browser-buttons two"></span>
-      <span class="browser-buttons three"></span>
       <div class="browser-inner">
         <img src="http://fpoimg.com/400x300" alt="" />
       </div>
@@ -15,9 +12,6 @@ Markup:
   </div>
   <div class="col-xs-12 col-sm-6">
     <div class="browser browser-grey">
-      <span class="browser-buttons one"></span>
-      <span class="browser-buttons two"></span>
-      <span class="browser-buttons three"></span>
       <div class="browser-inner">
         <img src="http://fpoimg.com/400x300" alt="" />
       </div>
@@ -27,9 +21,6 @@ Markup:
 <div class="row">
   <div class="col-xs-12">
     <div class="browser browser-lg browser-border">
-      <span class="browser-buttons one"></span>
-      <span class="browser-buttons two"></span>
-      <span class="browser-buttons three"></span>
       <div class="browser-inner">
         <img src="http://fpoimg.com/800x600" alt="" />
       </div>
@@ -46,10 +37,10 @@ Styleguide Components.Browser
   overflow: hidden;
   padding-top: 20px;
   position: relative;
-  margin-bottom: 15px;
 
   .browser-inner {
     overflow: hidden;
+    background-color: $white;
 
     img {
       display: block;
@@ -60,7 +51,10 @@ Styleguide Components.Browser
     }
   }
 
-  .browser-buttons {
+  .browser-inner:after,
+  &:after,
+  &:before {
+    content: ' ';
     display: block;
     position: absolute;
     top: 5px;
@@ -68,27 +62,17 @@ Styleguide Components.Browser
     border-radius: 5px;
     height: 10px;
     width: 10px;
-    background-color: $grey;
-
-    &.two {
-      left: 25px;
-    }
-
-    &.three {
-      left: 40px;
-    }
+    background-color: $success;
   }
 
-  .browser-buttons {
-    &.one {
-      background-color: $error;
-    }
-    &.two {
-      background-color: $warning;
-    }
-    &.three {
-      background-color: $success;
-    }
+  &:before {
+    left: 25px;
+    background-color: $warning;
+  }
+
+  &:after {
+    left: 40px;
+    background-color: $error;
   }
 
   &.browser-border {
@@ -98,29 +82,29 @@ Styleguide Components.Browser
   &.browser-lg {
     padding-top: 30px;
 
-    .browser-buttons {
+    .browser-inner:after,
+    &:after,
+    &:before {
       top: 8px;
       height: 15px;
       width: 15px;
       border-radius: 8px;
+    }
 
-      &.two {
-        left: 35px;
-      }
+    &:before {
+      left: 35px;
+    }
 
-      &.three {
-        left: 60px;
-      }
+    &:after {
+      left: 60px;
     }
   }
 
   &.browser-grey {
-    .browser-buttons {
-      &.one,
-      &.two,
-      &.three {
-        background-color: $grey-light;
-      }
+    .browser-inner:after,
+    &:after,
+    &:before {
+      background-color: $grey-light;
     }
   }
 }
