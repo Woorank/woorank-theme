@@ -1,0 +1,82 @@
+/*
+Tool Interactive
+
+For a help tour
+
+Markup:
+<div class="tooltip right tooltip-interactive tooltip-default" role="tooltip" style="margin-right:60px;">
+  <div class="tooltip-arrow"></div>
+  <button class="btn btn-black tooltip-right-btn">
+    <svg class="icon chevron-right data-toggle="tooltip" title="#chevron-right">
+      <use xlink:href="#chevron-right"></use>
+    </svg>
+    <span class="tooltip-info-btn">1/18</span>
+  </button>
+  <div class="tooltip-inner">
+    <h6 class="tooltip-title">Tooltip</h6>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum vero repudiandae aut officiis quaerat modi est, molestiae magni necessitatibus molestias. Tempore dignissimos nemo error rerum ut iusto quas numquam id.</p>
+  </div>
+</div>
+<div class="tooltip right tooltip-interactive tooltip-primary" role="tooltip">
+  <div class="tooltip-arrow"></div>
+  <button class="btn btn-primary tooltip-right-btn">
+    <svg class="icon chevron-right data-toggle="tooltip" title="#chevron-right">
+      <use xlink:href="#chevron-right"></use>
+    </svg>
+    <span class="tooltip-info-btn">18/20</span>
+  </button>
+  <div class="tooltip-inner">
+    <h6 class="tooltip-title">
+      <span class="dot dot-xxl dot-warning">18</span>
+      Tooltip
+    </h6>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum vero repudiandae aut officiis quaerat modi est, molestiae magni necessitatibus molestias. Tempore dignissimos nemo error rerum ut iusto quas numquam id.</p>
+  </div>
+</div>
+
+Styleguide Patterns.Tool-Interactive
+*/
+
+.tooltip-interactive {
+  opacity: 1;
+  position: relative;
+
+  .tooltip-inner {
+    padding: 15px;
+    text-align: left;
+  }
+
+  .tooltip-info-btn {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+  .tooltip-right-btn {
+    border-radius: 0 $border-radius-base $border-radius-base 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    margin-left: -6px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
+
+    .icon {
+      fill: $white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
