@@ -50,6 +50,17 @@ $directions: 'top', 'bottom', 'left', 'right';
     background-color: $grey-dark;
   }
 
+  .tooltip-title {
+    display: block;
+    clear: both;
+    border-bottom: 1px solid $border-color;
+    padding: 0 0 5px 0;
+    margin: 0 0 10px 0;
+    font-size: $font-size-h6;
+    font-weight: $font-weight-light;
+    text-transform: uppercase;
+  }
+
   .tooltip-btn-close {
     color: $grey-light;
   }
@@ -171,6 +182,11 @@ $directions: 'top', 'bottom', 'left', 'right';
         }
       }
 
+      .tooltip-title {
+        color: $colorValue;
+        border-bottom-color: get-variant-color($color, "light");
+      }
+
       &.bottom,
       &.bottom-left,
       &.bottom-right {
@@ -195,6 +211,17 @@ $directions: 'top', 'bottom', 'left', 'right';
         }
       }
 
+      &.left {
+        .tooltip-arrow {
+          border-left-color: get-variant-color($color, "light");
+
+          &:after {
+            border-left-color: get-variant-color($color, "smoke");
+          }
+        }
+      }
+
+      &.right,
       &.left-top {
         .tooltip-arrow {
           border-right-color: get-variant-color($color, "light");
