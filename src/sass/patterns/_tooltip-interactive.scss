@@ -4,32 +4,45 @@ Tool Interactive
 For a help tour
 
 Markup:
-<div class="tooltip right tooltip-interactive tooltip-default" role="tooltip" style="margin-right:60px;">
+<div class="tooltip right tooltip-interactive tooltip-with-dot tooltip-white" role="tooltip" style="margin-bottom:30px;">
   <div class="tooltip-arrow"></div>
-  <button class="btn btn-black tooltip-right-btn">
-    <svg class="icon chevron-right data-toggle="tooltip" title="#chevron-right">
-      <use xlink:href="#chevron-right"></use>
-    </svg>
-    <span class="tooltip-info-btn">1/18</span>
-  </button>
   <div class="tooltip-inner">
-    <h6 class="tooltip-title">Tooltip</h6>
+    <button class="btn btn-default tooltip-right-btn">
+      <svg class="icon chevron-right">
+        <use xlink:href="#chevron-right"></use>
+      </svg>
+      <span class="tooltip-info-btn">20/30</span>
+    </button>
+    <span class="dot dot-xxl dot-primary">20</span>
+    <h6 class="tooltip-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum vero repudiandae aut officiis quaerat modi est, molestiae magni necessitatibus molestias. Tempore dignissimos nemo error rerum ut iusto quas numquam id.</p>
   </div>
 </div>
-<div class="tooltip right tooltip-interactive tooltip-primary" role="tooltip">
+<div class="tooltip right tooltip-interactive tooltip-with-dot tooltip-default" role="tooltip" style="margin-bottom:30px;">
   <div class="tooltip-arrow"></div>
-  <button class="btn btn-primary tooltip-right-btn">
-    <svg class="icon chevron-right data-toggle="tooltip" title="#chevron-right">
-      <use xlink:href="#chevron-right"></use>
-    </svg>
-    <span class="tooltip-info-btn">18/20</span>
-  </button>
   <div class="tooltip-inner">
-    <h6 class="tooltip-title">
-      <span class="dot dot-xxl dot-warning">18</span>
-      Tooltip
-    </h6>
+    <button class="btn btn-black tooltip-right-btn">
+      <svg class="icon chevron-right">
+        <use xlink:href="#chevron-right"></use>
+      </svg>
+      <span class="tooltip-info-btn">20/30</span>
+    </button>
+    <span class="dot dot-xxl dot-error">20</span>
+    <h6 class="tooltip-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum vero repudiandae aut officiis quaerat modi est, molestiae magni necessitatibus molestias. Tempore dignissimos nemo error rerum ut iusto quas numquam id.</p>
+  </div>
+</div>
+<div class="tooltip right tooltip-interactive tooltip-with-dot tooltip-primary" role="tooltip">
+  <div class="tooltip-arrow"></div>
+  <div class="tooltip-inner">
+    <button class="btn btn-primary tooltip-right-btn">
+      <svg class="icon chevron-right">
+        <use xlink:href="#chevron-right"></use>
+      </svg>
+      <span class="tooltip-info-btn">20/30</span>
+    </button>
+    <span class="dot dot-xxl dot-warning active">20</span>
+    <h6 class="tooltip-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum vero repudiandae aut officiis quaerat modi est, molestiae magni necessitatibus molestias. Tempore dignissimos nemo error rerum ut iusto quas numquam id.</p>
   </div>
 </div>
@@ -40,15 +53,32 @@ Styleguide Patterns.Tool-Interactive
 .tooltip-interactive {
   opacity: 1;
   position: relative;
+  vertical-align: top;
+  width: 100%;
 
-  .tooltip-inner {
-    padding: 15px;
-    text-align: left;
+  &.tooltip-with-dot {
+    .tooltip-inner {
+      padding-left: 80px;
+    }
+
+    .dot {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+    }
   }
 
-  .tooltip-info-btn {
-    display: inline-block;
-    vertical-align: bottom;
+  &.tooltip-white {
+    .tooltip-title {
+      color: $grey-dark;
+    }
+  }
+
+  .tooltip-inner {
+    padding: 30px;
+    text-align: left;
+    padding-right: 12%;
+    max-width: none;
   }
 
   .tooltip-right-btn {
@@ -56,8 +86,8 @@ Styleguide Patterns.Tool-Interactive
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 100%;
-    margin-left: -6px;
+    right: 0;
+    width: 10%;
 
     &:before {
       content: "";
@@ -66,12 +96,21 @@ Styleguide Patterns.Tool-Interactive
       height: 100%;
     }
 
+    .tooltip-info-btn {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+
     .icon {
       fill: $white;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translateY(-50%) translateX(-50%);
+    }
+
+    &.btn-default .icon {
+      fill: $primary;
     }
   }
 

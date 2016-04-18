@@ -30,10 +30,6 @@ $xxl-dot-size: 30px;
   vertical-align: middle;
   width: $default-dot-size;
 
-  &.active {
-    box-shadow: 0 0 5px rgba($black, 0.20);
-  }
-
   &.dot-extra-small,
   &.dot-xs {
     height: $xs-dot-size;
@@ -74,8 +70,9 @@ $xxl-dot-size: 30px;
       border-color: $colorValue;
 
       &.active {
-        background-color: get-variant-color($color, 'dark');
-        border-color: get-variant-color($color, 'dark');
+        background-color: $white;
+        color: $colorValue;
+        box-shadow: inset 0 0 5px rgba($colorValue, 0.30);
       }
     }
   }

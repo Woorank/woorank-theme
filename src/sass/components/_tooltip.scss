@@ -55,16 +55,10 @@ $directions: 'top', 'bottom', 'left', 'right';
     clear: both;
     border-bottom: 1px solid $border-color;
     padding: 0 0 5px 0;
-    margin: 0 0 5px 0;
+    margin: 0 0 10px 0;
     font-size: $font-size-h6;
     font-weight: $font-weight-light;
     text-transform: uppercase;
-
-    .dot {
-      margin-right: 5px;
-      margin-top: -5px;
-      margin-left: -5px;
-    }
   }
 
   .tooltip-btn-close {
