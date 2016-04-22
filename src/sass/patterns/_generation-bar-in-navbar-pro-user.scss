@@ -96,7 +96,7 @@ Styleguide Patterns.Generation-bar-in-navbar-Pro-User
   .arrow {
     position: absolute;
     top: -20px;
-    right: 20px;
+    right: 35px;
     margin-top: -1px;
     margin-right: -3px;
     border-top: 10px solid transparent;
@@ -205,6 +205,7 @@ Styleguide Patterns.Generation-bar-in-navbar-Pro-User
 
           .opened-icon {
             display: inline-block;
+            vertical-align: middle;
           }
 
           .closed-icon {
@@ -297,6 +298,7 @@ Styleguide Patterns.Generation-bar-in-navbar-Pro-User
 
         .closed-icon {
           display: inline-block;
+          vertical-align: middle;
         }
 
         &:focus {

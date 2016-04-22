@@ -29,16 +29,35 @@ Styleguide Patterns.Generation-bar-small
   &.generation-bar-small {
     padding-top: 15px;
 
+    .generation-bar-options {
+      border-bottom: none;
+    }
+
     .form-control {
-      height: 30px;
-      padding-top: 0;
-      padding-bottom: 0;
+      height: auto;
+
+      @include breakpoint($screen-sm) {
+        height: 30px;
+      }
     }
 
     .input-group-btn {
       .btn {
-        padding: 3px 13px;
-        height: 30px;
+        padding: 10px;
+        height: auto;
+
+        @include breakpoint($screen-sm) {
+          padding: 3px 13px;
+          height: 30px;
+        }
+
+        &.generation-bar-btn {
+          margin-top: 30px;
+
+          @include breakpoint($screen-sm) {
+            margin-top: 0;
+          }
+        }
       }
     }
   }
