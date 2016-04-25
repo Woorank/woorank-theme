@@ -201,6 +201,10 @@ Styleguide Patterns.Navbar
       }
     }
   }
+
+  .dropdown-menu li a {
+    color: $grey-darker;
+  }
 }
 
 .navbar-btn {
