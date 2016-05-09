@@ -204,7 +204,8 @@ gulp.task('clean', function () {
       'styleguide/*.*',
       'styleguide/assets',
       'styleguide/public',
-      '!styleguide/build'
+      '!styleguide/build',
+      'styleguide/build/*'
     ],
     { force: true }
   );
