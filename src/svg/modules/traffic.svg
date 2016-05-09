@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g transform="translate(0.000000, 1.000000)">
+            <polygon points="11.9076923 1.36642834e-15 10.5538462 1.35384615 13.4307692 4.23076923 3.52307692 4.23076923 3.52307692 6.16923077 13.4153846 6.16923077 10.5384615 9.04615385 11.8923077 10.4 17.0769231 5.2"></polygon>
+            <polygon points="7.84615385 17.2923077 9.2 15.9384615 6.30769231 13.0461538 16.2 13.0461538 16.2 11.1230769 6.30769231 11.1230769 9.21538462 8.24615385 7.84615385 6.89230769 2.66153846 12.0923077"></polygon>
+            <rect x="17.1076923" y="11.1230769" width="0.892307692" height="1.92307692"></rect>
+            <rect x="18.8769231" y="11.1230769" width="0.892307692" height="1.92307692"></rect>
+            <rect transform="translate(2.215385, 5.192308) rotate(180.000000) translate(-2.215385, -5.192308) " x="1.76923077" y="4.23076923" width="0.892307692" height="1.92307692"></rect>
+            <rect transform="translate(0.446154, 5.192308) rotate(180.000000) translate(-0.446154, -5.192308) " x="-6.27703018e-16" y="4.23076923" width="0.892307692" height="1.92307692"></rect>
+        </g>
+    </g>
+</svg>
