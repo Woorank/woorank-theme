@@ -49,6 +49,7 @@ var banner = ['/**',
   ''].join('\n');
 
 gulp.task('default', [
+  'svg',
   'sprite',
   'pictures',
   'build',
@@ -61,7 +62,7 @@ gulp.task('dev', [
   'watch'
 ]);
 
-gulp.task('build', ['sass', 'sass-build', 'sprite-build']);
+gulp.task('build', ['sass', 'sass:build', 'svg:build', 'sprite:build']);
 
 gulp.task('watch', function () {
   gulp.watch(path.join(paths.sass, '**', '*.*'), ['kss']);
@@ -114,7 +115,7 @@ gulp.task('sass', function () {
     .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)));
 });
 
-gulp.task('sass-build', function () {
+gulp.task('sass:build', function () {
   return gulp.src(path.join(paths.sass, '*.scss'))
     .pipe(debug())
     .pipe(sass({
@@ -155,7 +156,22 @@ gulp.task('sprite', function () {
     .pipe(gulp.dest(paths.build.svg));
 });
 
-gulp.task('sprite-build', function () {
+gulp.task('svg', function () {
+  return gulp.src(path.join(paths.svg, '**', '*.svg'))
+    .pipe(gulp.dest(paths.build.svg));
+});
+
+gulp.task('svg:build', function () {
+  return gulp.src(path.join(paths.svg, '**', '*.svg'))
+    .pipe(svgmin({
+      plugins: [{
+        cleanupIDs: true
+      }]
+    }))
+    .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)));
+});
+
+gulp.task('sprite:build', function () {
   return gulp.src(path.join(paths.svg, '**', '*.svg'))
     .pipe(svgSprite({
       mode: 'symbols',
