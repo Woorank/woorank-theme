@@ -11,6 +11,7 @@ Markup:
 .btn-success - Indicates a successful or positive action
 .btn-warning - Indicates caution should be taken with this action
 .btn-error   - Indicates a dangerous or potentially negative action
+.btn-black   - Special black button
 .btn-link    - Deemphasize a button by making it look like a link while maintaining button behavior
 
 Styleguide Components.Buttons
@@ -89,11 +90,18 @@ Styleguide Components.Buttons
   }
 
   &.btn-default {
+    &:hover,
+    &:focus {
+      color: $primary;
+      border-color: $primary;
+      background-color: $primary-smoke;
+    }
+
     &:active,
     &.active {
-      background-color: $primary-smoke;
-      border-color: $primary;
-      color: $primary;
+      background-color: $primary-lighter;
+      border-color: $primary-dark;
+      color: $primary-dark;
       outline: none;
     }
   }
@@ -103,10 +111,16 @@ Styleguide Components.Buttons
     color: $white;
 
     &:hover,
-    &:focus,
-    &:active {
+    &:focus {
       background-color: $grey-dark;
       color: $white;
+      outline: none;
+    }
+
+    &:active,
+    &.active {
+      background-color: $grey-darker;
+      color: $grey-lighter;
       outline: none;
     }
   }
