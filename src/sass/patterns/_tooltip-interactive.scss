@@ -58,7 +58,7 @@ Styleguide Patterns.Tool-Interactive
 
   &.tooltip-with-dot {
     .tooltip-inner {
-      padding-left: 80px;
+      padding-left: 70px;
     }
 
     .dot {
@@ -75,9 +75,8 @@ Styleguide Patterns.Tool-Interactive
   }
 
   .tooltip-inner {
-    padding: 30px;
+    padding: 30px 30px 30px 20%;
     text-align: left;
-    padding-right: 12%;
     max-width: none;
   }
 
@@ -87,7 +86,7 @@ Styleguide Patterns.Tool-Interactive
     top: 0;
     bottom: 0;
     right: 0;
-    width: 10%;
+    max-width: 20%;
 
     &:before {
       content: "";
@@ -99,6 +98,8 @@ Styleguide Patterns.Tool-Interactive
     .tooltip-info-btn {
       display: inline-block;
       vertical-align: bottom;
+      font-size: $font-size-small;
+      margin: 0 -5px;
     }
 
     .icon {
