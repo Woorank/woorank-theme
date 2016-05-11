@@ -27,6 +27,10 @@ Styleguide Patterns.Modal
 */
 .modal {
   .modal-header {
+    .close {
+      z-index: 1;
+    }
+
     .icon-cross {
       height: 13px;
       width: 13px;
