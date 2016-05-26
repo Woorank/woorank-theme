@@ -3,7 +3,7 @@ Call to Action
 
 Markup:
 <div class="row">
-  <div class="col-xs-12 col-sm-6">
+  <div class="col-xs-12 col-sm-4">
     <!-- As a static element -->
     <div class="call-to-action">
       <svg class="icon icon-say-hi icon-lg" role="img">
@@ -15,9 +15,9 @@ Markup:
       <button type="button" class="btn btn-default">Help us out!</button>
     </div>
   </div>
-  <div class="col-xs-12 col-sm-6">
+  <div class="col-xs-12 col-sm-4">
     <!-- As a button element -->
-    <button class="btn btn-default btn-block call-to-action">
+    <button class="btn btn-default call-to-action">
       <svg class="icon icon-life-buoy-colourfull icon-lg" role="img">
         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#life-buoy-colourfull"></use>
       </svg>
@@ -26,12 +26,26 @@ Markup:
       </p>
     </button>
   </div>
+  <div class="col-xs-12 col-sm-4">
+    <!-- As a button element -->
+    <div class="call-to-action">
+      <h6 class="h4 call-to-action-title">Call To Action</h6>
+      <svg class="icon icon-one-website-colourfull icon-lg" role="img">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#one-website-colourfull"></use>
+      </svg>
+      <p>Hi there!<br/>
+        In order to improve the tool, we'd like to get to know you better.
+      </p>
+      <a href="#" class="btn btn-primary">Action</a>
+    </div>
+  </div>
 </div>
 
 Styleguide Patterns.Call-to-Action
 */
 
 .call-to-action {
+  display: block;
   padding: 30px;
   background-color: $white;
   margin: 0 0 30px 0;
@@ -48,5 +62,10 @@ Styleguide Patterns.Call-to-Action
 
   &.btn {
     white-space: normal;
+  }
+
+  .call-to-action-title {
+    margin-top: 0;
+    padding-top: 0;
   }
 }
