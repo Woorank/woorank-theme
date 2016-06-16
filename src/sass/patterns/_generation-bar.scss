@@ -64,6 +64,7 @@ $genbar-height: 50px;
 
     &:first-child {
       border-radius: $border-radius-base $border-radius-base 0 0;
+
       @include breakpoint($screen-sm) {
         border-radius: $border-radius-base 0 0 $border-radius-base;
       }

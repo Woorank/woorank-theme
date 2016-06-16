@@ -49,14 +49,14 @@ Styleguide Components.Hero-Banner
   &.hero-banner-preview {
     background-color: $primary;
 
-    &:after {
+    &::after {
       content: " ";
       position: absolute;
       top: 0;
       left: 0;
       bottom: 0;
       right: 0;
-      background-color: rgba($primary, 0.70);
+      background-color: rgba($primary, 0.7);
       z-index: 1;
     }
 
@@ -76,7 +76,7 @@ Styleguide Components.Hero-Banner
     width: 460px;
     z-index: 2;
 
-    &:after {
+    &::after {
       content: " ";
       position: absolute;
       bottom: 0;

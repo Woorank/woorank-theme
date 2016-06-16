@@ -7,7 +7,7 @@ div[id^="section-colors"] {
 
 
   .modifier__wrapper {
-    &:after {
+    &::after {
       content: " ";
       clear: both;
       display: block;
@@ -24,12 +24,11 @@ div[id^="section-colors"] {
     font-size: 12px;
     margin: 5px;
     position: relative;
-    vertical-align: top;
 
     &:hover {
       .modifier__color__infos {
         opacity: 1;
-        transition: opacity .5s ease;
+        transition: opacity 0.5s ease;
       }
     }
 
@@ -38,7 +37,7 @@ div[id^="section-colors"] {
     }
 
     .modifier__color__infos {
-      background: rgba($grey-darker, .5);
+      background: rgba($grey-darker, 0.5);
       bottom: 0;
       color: $white;
       height: auto;

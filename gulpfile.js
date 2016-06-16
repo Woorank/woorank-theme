@@ -16,9 +16,8 @@ var s3 = require('gulp-s3');
 var sass = require('gulp-sass');
 var svgmin = require('gulp-svgmin');
 var svgSprite = require('gulp-svg-sprites');
-
+var gulpStylelint = require('gulp-stylelint');
 var pkg = require('./package');
-
 var paths = {
   sass: 'src/sass',
   css: 'src/css',
@@ -39,7 +38,6 @@ var paths = {
     js: 'styleguide/assets/scripts'
   }
 };
-
 var banner = ['/**',
   ' * <%= pkg.name %> - <%= pkg.description %>',
   ' * @version v<%= pkg.version %>',
@@ -59,7 +57,8 @@ gulp.task('default', [
 gulp.task('dev', [
   'connect',
   'default',
-  'watch'
+  'watch',
+  'lint-css'
 ]);
 
 gulp.task('build', ['sass', 'sass:build', 'svg:build', 'sprite:build']);
@@ -100,6 +99,16 @@ gulp.task('kss', ['kss:structures', 'sprite', 'sass', 'sass-kss', 'scripts'], fu
 gulp.task('kss:structures', function () {
   return gulp.src(paths.structures)
     .pipe(gulp.dest(paths.build.structures));
+});
+
+gulp.task('lint-css', function () {
+  return gulp.src(path.join(paths.build.css, '**', '*.css'))
+    .pipe(gulpStylelint({
+      reporters: [{
+        formatter: 'verbose',
+        console: true
+      }]
+    }));
 });
 
 gulp.task('sass', function () {

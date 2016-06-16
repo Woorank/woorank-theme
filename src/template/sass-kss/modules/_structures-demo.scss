@@ -54,7 +54,7 @@
   transition: all 300ms ease-in-out;
   border: 1px solid $primary-dark;
 
-  &:after {
+  &::after {
     content: '';
     display: block;
     height: 10px;

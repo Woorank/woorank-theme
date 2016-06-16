@@ -127,7 +127,7 @@ Styleguide Patterns.Testimonials
       margin-left: 110px;
     }
 
-    &:before {
+    &::before {
       position: absolute;
       top: -2px;
       left: 0;
@@ -150,7 +150,7 @@ Styleguide Patterns.Testimonials
     border-top: none;
     width: auto;
 
-    &:before {
+    &::before {
       display: none;
     }
 

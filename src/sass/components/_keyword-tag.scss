@@ -46,7 +46,7 @@ Styleguide Components.Keyword-Tags
 }
 
 .keyword-tag {
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     top: 0;
@@ -61,7 +61,7 @@ Styleguide Components.Keyword-Tags
     transition: border-color 150ms ease-in, background-color 150ms ease-in;
   }
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     top: 1px;
@@ -80,7 +80,7 @@ Styleguide Components.Keyword-Tags
   &:hover,
   &:active {
     background-color: $grey-smoke;
-    &:after {
+    &::after {
       border-right-color: $grey-smoke;
     }
   }
@@ -97,8 +97,8 @@ Styleguide Components.Keyword-Tags
         color: $white;
       }
 
-      &:before,
-      &:after {
+      &::before,
+      &::after {
         border-right-color: $colorValue;
       }
 
@@ -109,8 +109,8 @@ Styleguide Components.Keyword-Tags
           background-color: get-variant-color($color, "dark");
           border-color: get-variant-color($color, "dark");
 
-          &:before,
-          &:after {
+          &::before,
+          &::after {
             border-right-color: get-variant-color($color, "dark");
           }
         }

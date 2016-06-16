@@ -40,7 +40,8 @@ Styleguide Components.Tags
   vertical-align: middle;
   white-space: nowrap;
 
-  * {
+  div,
+  span {
     font-size: $font-size-small;
   }
 

@@ -11,84 +11,84 @@ Additional colors use only to describe competitors:  `competitor`, `competitor-l
 Markup:
 <div class="example-color {{modifier_class}}"></div>
 
-grey-darker      #353B48    - $grey-darker
-grey-dark        #434A54    - $grey-dark
-grey-medium      #656D78    - $grey-medium
-grey             #AAB2BD    - $grey
-grey-light       #CCD1D9    - $grey-light
-grey-lighter     #E6E9ED    - $grey-lighter
-grey-smoke       #F5F7FA    - $grey-smoke
-primary-dark     #3876AC    - $primary-dark
-primary          #428BCA    - $primary
-primary-light    #A0C5E4    - $primary-light
-primary-lighter  #CFE2F2    - $primary-lighter
-primary-smoke    #ECF3FA    - $primary-smoke
-success-dark     #4E9D4E    - $success-dark
-success          #5CB85C    - $success
-success-light    #ADDBAD    - $success-light
-success-lighter  #D7EDD6    - $success-lighter
-success-smoke    #EEF8EE    - $success-smoke
-warning-dark     #D3860C    - $warning-dark
-warning          #F89D0E    - $warning
-warning-light    #FBCE86    - $warning-light
-warning-lighter  #FEE6C8    - $warning-lighter
-warning-smoke    #FEF5E6    - $warning-smoke
-error-dark       #B94743    - $error-dark
-error            #D9534F    - $error
-error-light      #ECA9A7    - $error-light
-error-lighter    #F6D4D4    - $error-lighter
-error-smoke      #FBEDED    - $error-smoke
-competitor-dark  #29494A    - $competitor-dark
+grey-darker      #353b48    - $grey-darker
+grey-dark        #434a54    - $grey-dark
+grey-medium      #656d78    - $grey-medium
+grey             #aab2bd    - $grey
+grey-light       #ccd1d9    - $grey-light
+grey-lighter     #e6e9ed    - $grey-lighter
+grey-smoke       #f5f7fa    - $grey-smoke
+primary-dark     #3876ac    - $primary-dark
+primary          #428bca    - $primary
+primary-light    #a0c5e4    - $primary-light
+primary-lighter  #cfe2f2    - $primary-lighter
+primary-smoke    #ecf3fa    - $primary-smoke
+success-dark     #4e9d4e    - $success-dark
+success          #5cb85c    - $success
+success-light    #addbad    - $success-light
+success-lighter  #d7edd6    - $success-lighter
+success-smoke    #eef8ee    - $success-smoke
+warning-dark     #d3860c    - $warning-dark
+warning          #f89d0e    - $warning
+warning-light    #fbce86    - $warning-light
+warning-lighter  #fee6c8    - $warning-lighter
+warning-smoke    #fef5e6    - $warning-smoke
+error-dark       #b94743    - $error-dark
+error            #d9534f    - $error
+error-light      #eca9a7    - $error-light
+error-lighter    #f6d4d4    - $error-lighter
+error-smoke      #fbeded    - $error-smoke
+competitor-dark  #29494a    - $competitor-dark
 competitor       #539597    - $competitor
-competitor-light #AFE5E7    - $competitor-light
+competitor-light #afe5e7    - $competitor-light
 
 Weight: 1
 
 Styleguide Colors.Woorank-Colors
 */
 
-// Colors values
-$black            : #000000;
-$white            : #ffffff;
+/* Colors values */
+$black            : #000;
+$white            : #fff;
 
-$grey-smoke       : #F5F7FA;
-$grey-lighter     : #E6E9ED;
-$grey-light       : #CCD1D9;
-$grey             : #AAB2BD;
-$grey-medium      : #656D78;
-$grey-dark        : #434A54;
-$grey-darker      : #353B48;
+$grey-smoke       : #f5f7fa;
+$grey-lighter     : #e6e9ed;
+$grey-light       : #ccd1d9;
+$grey             : #aab2bd;
+$grey-medium      : #656d78;
+$grey-dark        : #434a54;
+$grey-darker      : #353b48;
 
-$primary-dark     : #3876AC;
-$primary          : #428BCA;
-$primary-light    : #A0C5E4;
-$primary-lighter  : #CFE2F2;
-$primary-smoke    : #ECF3FA;
+$primary-dark     : #3876ac;
+$primary          : #428bca;
+$primary-light    : #a0c5e4;
+$primary-lighter  : #cfe2f2;
+$primary-smoke    : #ecf3fa;
 
-// Primary alias
+/* Primary alias */
 $info-dark        : $primary-dark;
 $info             : $primary;
 $info-light       : $primary-light;
 $info-lighter     : $primary-lighter;
 $info-smoke       : $primary-smoke;
 
-$success-dark     : #4E9D4E;
-$success          : #5CB85C;
-$success-light    : #ADDBAD;
-$success-lighter  : #D7EDD6;
-$success-smoke    : #EEF8EE;
+$success-dark     : #4e9d4e;
+$success          : #5cb85c;
+$success-light    : #addbad;
+$success-lighter  : #d7edd6;
+$success-smoke    : #eef8ee;
 
-$warning-dark     : #D3860C;
-$warning          : #F89D0E;
-$warning-light    : #FBCE86;
-$warning-lighter  : #FEE6C8;
-$warning-smoke    : #FEF5E6;
+$warning-dark     : #d3860c;
+$warning          : #f89d0e;
+$warning-light    : #fbce86;
+$warning-lighter  : #fee6c8;
+$warning-smoke    : #fef5e6;
 
-$error-dark       : #B94743;
-$error            : #D9534F;
-$error-light      : #ECA9A7;
-$error-lighter    : #F6D4D4;
-$error-smoke      : #FBEDED;
+$error-dark       : #b94743;
+$error            : #d9534f;
+$error-light      : #eca9a7;
+$error-lighter    : #f6d4d4;
+$error-smoke      : #fbeded;
 
 $danger-dark      : $error-dark;
 $danger           : $error;
@@ -96,11 +96,11 @@ $danger-light     : $error-light;
 $danger-lighter   : $error-lighter;
 $danger-smoke     : $error-smoke;
 
-$competitor-light : #AFE5E7;
+$competitor-light : #afe5e7;
 $competitor       : #539597;
-$competitor-dark  : #29494A;
+$competitor-dark  : #29494a;
 
-// Colors Links
+/* Colors Links */
 $active-bg         : $primary-smoke;
 $active-border     : $primary-lighter;
 $active-color      : $primary-dark;
@@ -117,7 +117,7 @@ $text-color        : $grey-medium;
 $text-color-light  : $grey;
 $title-color       : $grey-darker;
 
-// Colors list
+/* Colors list */
 $colors:
   ('white', $white),
   ('black', $black),
@@ -211,5 +211,5 @@ $colorsMap: (
     "grey-light": $grey-light,
     "grey-lighter": $grey-lighter,
     "grey-smoke": $grey-smoke
-  ),
+  )
 );
