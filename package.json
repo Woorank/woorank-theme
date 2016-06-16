@@ -21,7 +21,6 @@
     "gulp-stylelint": "^2.0.2",
     "gulp-svg-sprites": "3.0.0",
     "gulp-svgmin": "1.2.2",
-    "stylelint": "^6.6.0",
     "stylelint-config-standard": "^9.0.0"
   },
   "scripts": {
