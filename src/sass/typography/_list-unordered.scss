@@ -34,7 +34,7 @@ Styleguide Typography.Unodered-List
     list-style: none;
   }
 
-  li:before {
+  li::before {
     color: $grey;
     content: "•";
     font-size: 15px;
@@ -45,14 +45,15 @@ Styleguide Typography.Unodered-List
   .ol & {
     margin: 18px 0 18px 30px;
 
-    li:before {
+    li::before {
       content: "◦";
     }
   }
 }
 
 .logged {
-  ul, ol {
+  ul,
+  ol {
     li {
       font-size: 13px;
     }

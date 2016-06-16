@@ -34,7 +34,7 @@ Styleguide Components.Buttons
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
-    @include opacity(.35);
+    @include opacity(0.35);
   }
 
   &:focus,
@@ -47,7 +47,7 @@ Styleguide Components.Buttons
 
   &:focus {
     outline: none;
-    box-shadow: inset 0 0 1px 1px rgba($white, .10);
+    box-shadow: inset 0 0 1px 1px rgba($white, 0.1);
   }
 
   &.btn-error {

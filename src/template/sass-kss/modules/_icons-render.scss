@@ -17,9 +17,13 @@ div[id^="section-icons"] {
     display: none;
   }
 
-  .description,
-  .description *{
+  .description {
     font-size: 25px;
+
+    div,
+    span {
+      font-size: 25px;
+    }
   }
 
   .modifier__item {

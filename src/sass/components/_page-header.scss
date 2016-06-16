@@ -13,7 +13,7 @@ Styleguide Components.Page-Header
 .page-header {
   border-bottom: none;
   margin: 0;
-  padding: 40px 0 10px 0;
+  padding: 40px 0 10px;
 
   &.page-header-subtitle {
     h1,
@@ -24,7 +24,7 @@ Styleguide Components.Page-Header
 
   &.page-header-alone {
     text-align: center;
-    padding: 80px 0 40px 0;
+    padding: 80px 0 40px;
 
     h1,
     .h1 {
@@ -58,7 +58,7 @@ Styleguide Components.Page-Header
     font-size: 38px;
     line-height: 1.2;
     margin: 0;
-    padding: 0 0 20px 0;
+    padding: 0 0 20px;
     font-weight: $font-weight-medium;
   }
 

@@ -1,4 +1,4 @@
-// Generics
+/* Generics */
 
 html,
 body {
@@ -10,13 +10,12 @@ body {
   transition: transform 350ms ease-out;
   font-weight: $font-weight-normal;
 
-  @media
-  only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and ( min--moz-device-pixel-ratio: 2),
-  only screen and ( -o-min-device-pixel-ratio: 2/1),
-  only screen and ( min-device-pixel-ratio: 2),
-  only screen and ( min-resolution: 192dpi),
-  only screen and ( min-resolution: 2dppx) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
     font-weight: $font-weight-light;
   }
 
@@ -29,22 +28,24 @@ body {
 .container {
   &.page-narrow {
     max-width: 720px;
-    margin: 1px auto 0 auto;
+    margin: 1px auto 0;
     padding: 40px 15px;
+
     @include breakpoint($screen-sm) {
       padding: 40px 0;
     }
   }
 }
 
-// Remove Firefox dotted outline.
-a:focus, a:active,
+/* Remove Firefox dotted outline */
+a:focus,
+a:active,
 button::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,
 input[type="submit"]::-moz-focus-inner,
 select::-moz-focus-inner,
 input[type="file"] > input[type="button"]::-moz-focus-inner {
-    border: 0;
-    outline : 0;
+  border: 0;
+  outline: 0;
 }

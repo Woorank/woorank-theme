@@ -51,9 +51,9 @@ Styleguide Components.Browser
     }
   }
 
-  .browser-inner:after,
-  &:after,
-  &:before {
+  .browser-inner::after,
+  &::after,
+  &::before {
     content: ' ';
     display: block;
     position: absolute;
@@ -65,12 +65,12 @@ Styleguide Components.Browser
     background-color: $success;
   }
 
-  &:before {
+  &::before {
     left: 25px;
     background-color: $warning;
   }
 
-  &:after {
+  &::after {
     left: 40px;
     background-color: $error;
   }
@@ -82,28 +82,28 @@ Styleguide Components.Browser
   &.browser-lg {
     padding-top: 30px;
 
-    .browser-inner:after,
-    &:after,
-    &:before {
+    .browser-inner::after,
+    &::after,
+    &::before {
       top: 8px;
       height: 15px;
       width: 15px;
       border-radius: 8px;
     }
 
-    &:before {
+    &::before {
       left: 35px;
     }
 
-    &:after {
+    &::after {
       left: 60px;
     }
   }
 
   &.browser-grey {
-    .browser-inner:after,
-    &:after,
-    &:before {
+    .browser-inner::after,
+    &::after,
+    &::before {
       background-color: $grey-light;
     }
   }

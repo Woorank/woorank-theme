@@ -15,8 +15,9 @@ weight: 20
 Styleguide Typography.Unstyled-List
 */
 
-.list-unstyled, .list-inline {
-  li:before {
+.list-unstyled,
+.list-inline {
+  li::before {
     padding-right: 0;
     content: "";
   }

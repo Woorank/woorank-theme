@@ -62,10 +62,11 @@ Styleguide Patterns.Features-Table
     th,
     td {
       text-align: center;
-    }
-     :first-child {
-      text-align: left;
-      font-weight: $font-weight-bold;
+
+      &:first-child {
+        text-align: left;
+        font-weight: $font-weight-bold;
+      }
     }
   }
   .icon {

@@ -1,4 +1,4 @@
-// Animations Utils
+/* Animations Utils */
 
 .animated {
   animation-duration: 1s;
@@ -24,23 +24,43 @@
 }
 
 @keyframes bounce {
-  0%, 60%, 85%, 100% {
-    transition-timing-function: cubic-bezier(.53,.97,.35,1);
+  0% {
+    transition-timing-function: cubic-bezier(0.53, 0.97, 0.35, 1);
     transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
-  40%, 43% {
-    transition-timing-function: cubic-bezier(.74,.01,1,.13); 
-    transform: translate3d(0, 15px, 0) scale(1, .95);
+  40% {
+    transition-timing-function: cubic-bezier(0.74, 0.01, 1, 0.13);
+    transform: translate3d(0, 15px, 0) scale(1, 0.95);
+  }
+
+  43% {
+    transition-timing-function: cubic-bezier(0.74, 0.01, 1, 0.13);
+    transform: translate3d(0, 15px, 0) scale(1, 0.95);
+  }
+
+  60% {
+    transition-timing-function: cubic-bezier(0.53, 0.97, 0.35, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
   70% {
-    transition-timing-function: cubic-bezier(.755,.050,.855,.060);
+    transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
     transform: translate3d(0, 7px, 0) scale(1, 1);
+  }
+
+  85% {
+    transition-timing-function: cubic-bezier(0.53, 0.97, 0.35, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
   90% {
     transform: translate3d(0, 2px, 0) scale(1, 1);
+  }
+
+  100% {
+    transition-timing-function: cubic-bezier(0.53, 0.97, 0.35, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 }
 
@@ -48,9 +68,11 @@
   0% {
     opacity: 1;
   }
+
   99% {
     opacity: 0;
   }
+
   100% {
     opacity: 0;
     display: none;

@@ -74,7 +74,7 @@ Styleguide Components.Dropdown
       &.disabled a {
         cursor: default;
         color: $grey-light;
-        opacity: .7;
+        opacity: 0.7;
       }
 
       &.active {
@@ -93,7 +93,7 @@ Styleguide Components.Dropdown
   }
 
   .arrow,
-  .arrow:after {
+  .arrow::after {
     border-color: transparent;
     border-style: solid;
     display: block;
@@ -111,7 +111,7 @@ Styleguide Components.Dropdown
     z-index: 1001;
     margin-top: -5px;
 
-    &:after {
+    &::after {
       border-bottom-color: $white;
       border-top-width: 0;
       content: " ";

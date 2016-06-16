@@ -1,15 +1,14 @@
 $bs-base: "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-// Core variables and mixins
+/* Core variables and mixins */
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 
-// Reset and dependencies
+/* Reset and dependencies */
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
-// deacti#{$bs-base}/print";
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
 
-// Core CSS
+/* Core CSS */
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/type";
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/code";
@@ -18,7 +17,7 @@ $bs-base: "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms";
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
 
-// Components
+/* Components */
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
@@ -41,12 +40,12 @@ $bs-base: "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/wells";
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/close";
 
-// Components w/ JavaScript
+/* Components w/ JavaScript */
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/modals";
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/popovers";
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
 
-// Utility classes
+/* Utility classes */
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";

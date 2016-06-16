@@ -94,10 +94,10 @@ Styleguide Patterns.Page-Footer
   .footer-logo {
     display: block;
     width: 112px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 30px;
 
     @include breakpoint($screen-sm) {
-      margin: 0
+      margin: 0;
     }
   }
 
