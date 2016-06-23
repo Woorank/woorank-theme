@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g stroke="none" stroke-width="1" fill-rule="evenodd" transform="translate(1.000000, 1.000000)">
-    <polygon points="3.135 14.397 4.679 14.397 4.679 12.853 3.135 12.853"></polygon>
-    <polygon points="5.682 14.397 7.226 14.397 7.226 11.639 5.682 11.639"></polygon>
-    <polygon points="8.228 14.397 9.772 14.397 9.772 9.975 8.228 9.975"></polygon>
-    <polygon points="10.774 14.397 12.318 14.397 12.318 7.352 10.774 7.352"></polygon>
-    <polygon points="13.321 14.397 14.865 14.397 14.865 3.602 13.321 3.602"></polygon>
-    <path d="M2,0 C0.9,0 0,0.9 0,2 L0,16 C0,17.1 0.9,18 2,18 L16,18 C17.1,18 18,17.1 18,16 L18,2 C18,0.9 17.1,0 16,0 L2,0 L2,0 Z M16,2 L16,16 C16,15.995 15.995,16 16,16 L2,16 L2,2 L16,2 L16,2 Z"></path>
-  </g>
+    <g stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g transform="translate(1.000000, 1.000000)">
+            <g transform="translate(3.500000, 4.000000)">
+                <polygon id="Shape" points="0 10 3 10 3 8 0 8"></polygon>
+                <polygon id="Shape" points="4 10 7 10 7 4 4 4"></polygon>
+                <polygon id="Shape" points="8 10 11 10 11 -4.4408921e-16 8 -4.4408921e-16"></polygon>
+            </g>
+            <path d="M2,0 C0.9,0 0,0.9 0,2 L0,16 C0,17.1 0.9,18 2,18 L16,18 C17.1,18 18,17.1 18,16 L18,2 C18,0.9 17.1,0 16,0 L2,0 L2,0 L2,0 Z M16,2 L16,16 C16,15.995 15.995,16 16,16 L2,16 L2,2 L16,2 L16,2 L16,2 Z"></path>
+        </g>
+    </g>
 </svg>
