@@ -1,4 +1,4 @@
-FROM node:4.3.1
+FROM node:4.4.5
 
 RUN npm install -g gulp
 RUN npm install -g kss
