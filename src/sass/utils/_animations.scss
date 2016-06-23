@@ -79,3 +79,13 @@
     visibility: hidden;
   }
 }
+
+.icon-loader {
+  animation: spin 1s steps(12) infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
