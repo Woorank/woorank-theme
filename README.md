@@ -4,9 +4,7 @@ Styleguide pages built with [Kss Node](https://github.com/kss-node/kss-node).
 
 ## Development instructions
 
-+ Create a AWS config file on the root folder of the project.
-+ Name it awsConfig.json based on this template.
-+ Fill it with **sensible** data from AWS.
++ Create a AWS config file on the root folder of the project with following fields:
 
 ```json
 {
@@ -21,23 +19,56 @@ Styleguide pages built with [Kss Node](https://github.com/kss-node/kss-node).
 
 The style guide build tasks are made with [Gulp](https://github.com/gulpjs/gulp).
 
-### Local connection
+### Start the local environment
+
 ```bash
 $ docker-compose build
+$ docker-compose run --rm styleguide npm run build
 $ docker-compose up
 ```
 
-### Local render
+Styleguide should be running at the `$(docker-machine ip):3005`. You can access all the individual assets
+through the directory view or browse to `/index.html` to see the complete styleguide.
+
+### Watcher
+
+You can launch the development watch with the following command:
+
 ```bash
 $ docker-compose run --rm styleguide npm dev
 ```
 
-### Local build
+### Development flow
+
+You should develop your changes in the branches and create a pull request once you're satisfied.
+Once merged, you should bump the version number of the styleguide according to the [semantic
+versioning](http://semver.org/) and create a new tag with the version number.
+
+For example, bumping the version to v6.6.1:
+
 ```bash
-$ docker-compose run --rm styleguide npm run build
+vim package.json # Change package.json version number to 6.6.1
+git add package.json
+git commit -m 'v6.6.1'
+git tag v6.6.1
+git push
+git push --tags
 ```
 
-### online publication
+## Publication of the styleguide
+
+### Styleguide (styleguide.woorank.com)
+
+With AWS credentials in place, updating the styleguide.woorank.com is as easy as running the
+following command:
+
 ```bash
 $ docker-compose run --rm styleguide npm run publish
 ```
+
+### Minified asset (assets.woorank.com)
+
+Building minified assetfiles that are used in the applications (such as [woorank.com](https://woorank.com)) you have
+to build the project at [CircleCI](https://circleci.com/gh/Woorank/woorank-theme). Successfull build
+will be automatically pushed into the S3 with the current version number and can be used in the
+applications.
