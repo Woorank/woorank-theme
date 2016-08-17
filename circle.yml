@@ -9,7 +9,7 @@ machine:
 
 dependencies:
   override:
-    - npm install gulp kss -g
+    - npm install gulp kss@2 -g
     - npm install
     - npm run build
 
