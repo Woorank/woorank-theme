@@ -4,7 +4,7 @@ Styleguide pages built with [Kss Node](https://github.com/kss-node/kss-node).
 
 ## Development instructions
 
-+ Create a AWS config file on the root folder of the project with following fields:
++ Create a AWS config file called `awsConfig.json` on the root folder of the project with following fields:
 
 ```json
 {
