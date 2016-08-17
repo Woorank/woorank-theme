@@ -55,12 +55,12 @@ a.direction-label:hover {
 }
 
 .direction-label {
-  display: inline-block;
   color: $grey-medium;
+  display: inline-block;
   font-size: 15px;
   font-weight: $font-weight-normal;
-  vertical-align: baseline;
   text-align: center;
+  vertical-align: baseline;
   white-space: normal;
   word-break: break-all;
 
