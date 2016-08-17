@@ -60,7 +60,9 @@ a.direction-label:hover {
   font-size: 15px;
   font-weight: $font-weight-normal;
   vertical-align: baseline;
-  white-space: nowrap;
+  text-align: center;
+  white-space: normal;
+  word-break: break-all;
 
   &:active {
     color: $primary;
