@@ -59,7 +59,7 @@ var countries = {
   'flag-uk': 'United Kingdom',
   'flag-us': 'United States',
   'flag-uy': 'Uruguay',
-  'flag-ve': 'Venezuela',
+  'flag-uy': 'Venezuela',
   'flag-vn': 'Vietnam',
   'flag-za': 'South Africa'
 };
