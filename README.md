@@ -4,19 +4,6 @@ Styleguide pages built with [Kss Node](https://github.com/kss-node/kss-node).
 
 ## Development instructions
 
-Create a AWS config file called `awsConfig.json` on the root folder of the project with following fields:
-
-```json
-{
-  "key": "",
-  "secret": "",
-  "region": "",
-  "bucket": ""
-}
-```
-
-## Using Style Guide
-
 The style guide build tasks are made with [Gulp](https://github.com/gulpjs/gulp).
 
 ### Start the local environment
@@ -57,18 +44,6 @@ git push --tags
 
 ## Publication of the styleguide
 
-### Styleguide (styleguide.woorank.com)
+To publish the styleguide changes you have to build the project at [CircleCI](https://circleci.com/gh/Woorank/woorank-theme).
 
-With AWS credentials in place, updating the styleguide.woorank.com is as easy as running the
-following command:
-
-```bash
-$ docker-compose run --rm styleguide npm run publish
-```
-
-### Minified asset (assets.woorank.com)
-
-Building minified assetfiles that are used in the applications (such as [woorank.com](https://woorank.com)) you have
-to build the project at [CircleCI](https://circleci.com/gh/Woorank/woorank-theme). Successfull build
-will be automatically pushed into the S3 with the current version number and can be used in the
-applications.
+Successfull build will be automatically pushed into the S3 with the current version number and can be used in the applications.
