@@ -2,6 +2,10 @@
 
 require('es6-promise').polyfill();
 
+var browserify = require('browserify');
+var babelify = require('babelify');
+var source = require('vinyl-source-stream');
+
 var autoprefixer = require('gulp-autoprefixer');
 var connect = require('gulp-connect');
 var debug = require('gulp-debug');
@@ -24,6 +28,9 @@ var paths = {
     kss: 'src/template/sass-kss',
     wooComponents: 'woo-components/src/sass'
   },
+  js: {
+    wooComponents: 'woo-components/src'
+  },
   css: 'src/css',
   svg: 'src/svg',
   img: 'src/img',
@@ -38,7 +45,8 @@ var paths = {
     img: 'styleguide/assets/img',
     css: 'styleguide/assets/styles',
     svg: 'styleguide/assets/svg',
-    js: 'styleguide/assets/scripts'
+    js: 'styleguide/assets/scripts',
+    wooComponents: 'woo-components/dist'
   }
 };
 var banner = ['/**',
@@ -64,7 +72,7 @@ gulp.task('dev', [
   'lint-css'
 ]);
 
-gulp.task('build', ['sass', 'sass:build', 'svg:build', 'sprite:build']);
+gulp.task('build', ['scripts:woo-components', 'sass', 'sass:build', 'svg:build', 'sprite:build']);
 
 gulp.task('watch', function () {
   gulp.watch(path.join(paths.sass.styleguide, '**', '*.*'), ['kss']);
@@ -87,6 +95,29 @@ gulp.task('pictures', function () {
 gulp.task('scripts', function () {
   return gulp.src(path.join(paths.public, '*.js'))
     .pipe(gulp.dest(paths.build.js));
+});
+
+gulp.task('scripts:woo-components', function () {
+  function getBundler () {
+    var browserifySettings = {
+      extensions: [ '.jsx' ]
+    };
+
+    var b = browserify(browserifySettings);
+    b.add(path.join(paths.js.wooComponents, 'index.js'));
+    b.transform(babelify, {presets: ['es2015', 'react']});
+    return b;
+  }
+
+  function bundle (bundler) {
+    return bundler
+      .bundle()
+      .pipe(source('woo-components.js'))
+      .pipe(gulp.dest(paths.build.wooComponents));
+  }
+
+  var bundler = getBundler();
+  return bundle(bundler);
 });
 
 gulp.task('kss', ['kss:structures', 'sprite', 'sass', 'sass-kss', 'scripts'], function (cb) {

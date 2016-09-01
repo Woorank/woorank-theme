@@ -1,16 +1,7 @@
-import React, { PropTypes } from 'react';
-import classnames from 'classnames';
+const React = require('react');
+const classnames = require('classnames');
 
 class LeftNavBar extends React.Component {
-  static propTypes = {
-    links: PropTypes.arrayOf(
-      PropTypes.shape({
-        label: PropTypes.string,
-        href: PropTypes.string,
-        active: PropTypes.boolean
-      }).isRequired)
-  };
-
   render () {
     const links = this.props.links.map((item, index) => {
       const active = item.active ? 'active' : '';
@@ -30,5 +21,14 @@ class LeftNavBar extends React.Component {
     );
   }
 }
+
+LeftNavBar.propTypes = {
+  links: React.PropTypes.arrayOf(
+    React.PropTypes.shape({
+      label: React.PropTypes.string,
+      href: React.PropTypes.string,
+      active: React.PropTypes.boolean
+    }).isRequired)
+};
 
 export default LeftNavBar;

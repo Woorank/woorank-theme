@@ -21,7 +21,14 @@
     "gulp-stylelint": "2.0.2",
     "gulp-svg-sprites": "3.0.0",
     "gulp-svgmin": "1.2.2",
-    "stylelint-config-standard": "9.0.0"
+    "stylelint-config-standard": "9.0.0",
+    "react": "15.3.1",
+    "classnames": "2.2.5",
+    "babelify": "7.2.0",
+    "browserify": "12.0.1",
+    "vinyl-source-stream": "1.1.0",
+    "babel-preset-es2015": "6.14.0",
+    "babel-preset-react": "6.11.1"
   },
   "scripts": {
     "start": "gulp connect",
