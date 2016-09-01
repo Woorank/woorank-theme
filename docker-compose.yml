@@ -8,6 +8,7 @@ services:
       - "35729:35729"
     volumes:
       - ./styleguide:/opt/gulp/styleguide
+      - ./woo-components:/opt/gulp/woo-components
       - ./src:/opt/gulp/src
       - ./gulpfile.js:/opt/gulp/gulpfile.js
       - ./kss-config.json:/opt/gulp/kss-config.json

@@ -19,13 +19,16 @@ var svgSprite = require('gulp-svg-sprites');
 var gulpStylelint = require('gulp-stylelint');
 var pkg = require('./package');
 var paths = {
-  sass: 'src/sass',
+  sass: {
+    styleguide: 'src/sass',
+    kss: 'src/template/sass-kss',
+    wooComponents: 'woo-components/src/sass'
+  },
   css: 'src/css',
   svg: 'src/svg',
   img: 'src/img',
   template: 'src/template',
   structures: 'src/template/structures/*.html',
-  sassKss: 'src/template/sass-kss',
   public: 'src/template/public',
   bootstrap: '/node_modules/bootstrap-sass/assets/stylesheets/',
   build: {
@@ -64,8 +67,8 @@ gulp.task('dev', [
 gulp.task('build', ['sass', 'sass:build', 'svg:build', 'sprite:build']);
 
 gulp.task('watch', function () {
-  gulp.watch(path.join(paths.sass, '**', '*.*'), ['kss']);
-  gulp.watch(path.join(paths.sassKss, '**', '*.scss'), ['kss']);
+  gulp.watch(path.join(paths.sass.styleguide, '**', '*.*'), ['kss']);
+  gulp.watch(path.join(paths.sass.kss, '**', '*.scss'), ['kss']);
   gulp.watch(path.join(paths.template, '**', '*.html'), ['kss']);
   gulp.watch(path.join(paths.svg, '**', '*.svg'), ['kss']);
 });
@@ -112,7 +115,10 @@ gulp.task('lint-css', function () {
 });
 
 gulp.task('sass', function () {
-  return gulp.src(path.join(paths.sass, '*.scss'))
+  return gulp.src([
+    path.join(paths.sass.styleguide, '*.scss'),
+    path.join(paths.sass.wooComponents, '*.scss')
+  ])
     .pipe(debug())
     .pipe(sass({
       imagePath: paths.build.img,
@@ -125,7 +131,10 @@ gulp.task('sass', function () {
 });
 
 gulp.task('sass:build', function () {
-  return gulp.src(path.join(paths.sass, '*.scss'))
+  return gulp.src([
+    path.join(paths.sass.styleguide, '*.scss'),
+    path.join(paths.sass.wooComponents, '*.scss')
+  ])
     .pipe(debug())
     .pipe(sass({
       imagePath: paths.build.img,
@@ -140,8 +149,8 @@ gulp.task('sass:build', function () {
 
 gulp.task('sass-kss', function () {
   return gulp.src([
-    path.join(paths.sassKss, '*.scss'),
-    path.join(paths.sass, '*.scss')
+    path.join(paths.sass.kss, '*.scss'),
+    path.join(paths.sass.styleguide, '*.scss')
   ])
     .pipe(debug())
     .pipe(sass({
