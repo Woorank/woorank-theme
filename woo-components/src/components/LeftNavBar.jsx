@@ -31,4 +31,4 @@ LeftNavBar.propTypes = {
     }).isRequired)
 };
 
-export default LeftNavBar;
+module.exports = LeftNavBar;
