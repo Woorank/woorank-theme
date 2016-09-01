@@ -28,7 +28,9 @@
     "browserify": "12.0.1",
     "vinyl-source-stream": "1.1.0",
     "babel-preset-es2015": "6.14.0",
-    "babel-preset-react": "6.11.1"
+    "babel-preset-react": "6.11.1",
+    "envify": "3.4.0",
+    "minifyify": "7.1.0"
   },
   "scripts": {
     "start": "gulp connect",
