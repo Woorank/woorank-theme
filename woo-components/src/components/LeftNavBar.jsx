@@ -5,7 +5,7 @@ class LeftNavBar extends React.Component {
   render () {
     const links = this.props.links.map((item, index) => {
       const active = item.active ? 'active' : '';
-      const classes = classnames('left-nav-link', active);
+      const classes = classnames('woo-left-nav-link', active);
       return (
         <a className={classes}
           key={index}
@@ -15,7 +15,7 @@ class LeftNavBar extends React.Component {
     });
 
     return (
-      <nav className='left-nav'>
+      <nav className='woo-left-nav'>
         {links}
       </nav>
     );
