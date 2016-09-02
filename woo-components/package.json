@@ -2,7 +2,7 @@
   "name": "woo-components",
   "version": "0.1.0",
   "description": "Woo-components",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "push-to-npm": "publish"
