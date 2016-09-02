@@ -15,19 +15,22 @@ read
 VERSION=$(npm version $1)
 VERSION=$(echo $VERSION | cut -c 2-)
 
-echo "Version: $VERSION"
+if [ "$VERSION" -eq "" ]; then
+  echo "Something went wrong when setting the version"
+  exit
+fi
+
+echo "New package version: $VERSION"
 
 # Set the version of the woo-components' package.json to match the styleguide
 sed -i '' 's/"version": "\([0-9]*.\)\{2\}[0-9]"/"version": "'$VERSION'"/' woo-components/package.json
 
-echo "Bumping the version to $VERSION"
-
-# git add package.json
-# git add woo-components/package.json
-# git commit -m "v$VERSION"
-# git tag v$VERSION
-# git push
-# git push --tags
+git add package.json
+git add woo-components/package.json
+git commit -m "v$VERSION"
+git tag v$VERSION
+git push
+git push --tags
 
 echo "All done!"
 
