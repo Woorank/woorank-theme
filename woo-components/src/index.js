@@ -1,2 +1,2 @@
-module.exports.LeftNavBar = require('./components/LeftNavBar.jsx');
+module.exports.LeftNavBar = require('./components/LeftNavBar');
 

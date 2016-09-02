@@ -2,12 +2,7 @@
 
 require('es6-promise').polyfill();
 
-var browserify = require('browserify');
-var babelify = require('babelify');
-var source = require('vinyl-source-stream');
-var envify = require('envify/custom');
-var minifyify = require('minifyify');
-
+var babel = require('gulp-babel');
 var autoprefixer = require('gulp-autoprefixer');
 var connect = require('gulp-connect');
 var debug = require('gulp-debug');
@@ -100,20 +95,14 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('scripts:woo-components', function () {
-  var bundler = browserify({ extensions: [ '.jsx' ] });
-
-  bundler.add(path.join(paths.js.wooComponents, 'index.js'));
-
-  bundler.transform(babelify, {presets: ['es2015', 'react']});
-  bundler.transform({ global: true }, envify({ NODE_ENV: 'production' }));
-
-  bundler.plugin(minifyify, { map: false });
-
-  return bundler
-      .bundle()
-      .pipe(source('woo-components.js'))
-      .pipe(rename({ suffix: '.min' }))
-      .pipe(gulp.dest(paths.build.wooComponents));
+  return gulp.src([
+    path.join(paths.js.wooComponents, '**/index.js'),
+    path.join(paths.js.wooComponents, '**/*.jsx')
+  ])
+    .pipe(babel({
+      presets: ['es2015', 'react']
+    }))
+    .pipe(gulp.dest(paths.build.wooComponents));
 });
 
 gulp.task('kss', ['kss:structures', 'sprite', 'sass', 'sass-kss', 'scripts'], function (cb) {
