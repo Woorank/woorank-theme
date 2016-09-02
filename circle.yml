@@ -11,6 +11,7 @@ dependencies:
   override:
     - npm install gulp kss@2 -g
     - npm install
+    - cd woo-components && npm install && cd ..
     - npm run build
 
 test:
@@ -24,3 +25,6 @@ deployment:
       - node deploy.js
       - echo "{\"key\":\"<AWS_STYLEGUIDE_KEY>\",\"secret\":\"<AWS_STYLEGUIDE_SECRET>\",\"bucket\":\"<AWS_STYLEGUIDE_BUCKET>\",\"region\":\"<AWS_STYLEGUIDE_ZONE>\"}" | sed "s/<AWS_STYLEGUIDE_KEY>/$AWS_STYLEGUIDE_KEY/;s/<AWS_STYLEGUIDE_SECRET>/$AWS_STYLEGUIDE_SECRET/;s/<AWS_STYLEGUIDE_BUCKET>/$AWS_STYLEGUIDE_BUCKET/;s/<AWS_STYLEGUIDE_ZONE>/$AWS_STYLEGUIDE_ZONE/" > ./awsConfig.json
       - npm run publish
+      - echo -e "$NPM_USERNAME\n$NPM_PASSWORD\n$NPM_EMAIL" | npm login
+      - cd woo-components && npm run push-to-npm
+

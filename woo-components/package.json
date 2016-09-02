@@ -1,0 +1,15 @@
+{
+  "name": "woo-components",
+  "version": "0.1.0",
+  "description": "Woo-components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "push-to-npm": "publish"
+  },
+  "dependencies": {
+    "publish": "0.6.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
