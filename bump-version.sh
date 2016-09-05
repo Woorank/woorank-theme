@@ -29,8 +29,9 @@ git add package.json
 git add woo-components/package.json
 git commit -m "v$VERSION"
 git tag v$VERSION
-git push
-git push --tags
 
 echo "All done!"
+echo "To push the changes, use the following commands:"
+echo "$ git push"
+echo "$ git push --tags"
 
