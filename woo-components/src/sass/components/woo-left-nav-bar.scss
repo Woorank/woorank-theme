@@ -1,3 +1,9 @@
 .woo-left-nav-bar {
-  color: red;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+
+  .woo-left-nav-link {
+    white-space: nowrap;
+  }
 }
