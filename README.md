@@ -36,7 +36,7 @@ command with the severity of your change as an argument. This will create a tag 
 git and handle the package.json changes.
 
 ```bash
-$ ./bump-version <major|minor|patch>
+$ ./bump-version.sh <major|minor|patch>
 ```
 
 ## Publication of the styleguide
