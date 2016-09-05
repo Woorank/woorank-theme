@@ -31,15 +31,12 @@ You should develop your changes in the branches and create a pull request once y
 Once merged, you should bump the version number of the styleguide according to the [semantic
 versioning](http://semver.org/) and create a new tag with the version number.
 
-For example, bumping the version to v6.6.1:
+In the repository there is a helper script that allows you to easily do this. Just run the following
+command with the severity of your change as an argument. This will create a tag automatically to the
+git and handle the package.json changes.
 
 ```bash
-vim package.json # Change package.json version number to 6.6.1
-git add package.json
-git commit -m 'v6.6.1'
-git tag v6.6.1
-git push
-git push --tags
+$ ./bump-version.sh <major|minor|patch>
 ```
 
 ## Publication of the styleguide
