@@ -1,5 +1,6 @@
 const React = require('react');
 const classnames = require('classnames');
+const { PropTypes } = React;
 
 class Icon extends React.Component {
   render () {
