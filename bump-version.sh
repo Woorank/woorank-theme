@@ -12,10 +12,10 @@ echo "Press <Enter> to continue or <Ctrl-C> to cancel"
 
 read
 
-VERSION=$(npm version $1)
+VERSION=$(npm version --no-git-tag-version $1)
 VERSION=$(echo $VERSION | cut -c 2-)
 
-if [ "$VERSION" -eq "" ]; then
+if [ "$VERSION" = "" ]; then
   echo "Something went wrong when setting the version"
   exit
 fi
