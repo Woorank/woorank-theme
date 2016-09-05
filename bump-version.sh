@@ -15,7 +15,7 @@ read
 VERSION=$(npm version $1)
 VERSION=$(echo $VERSION | cut -c 2-)
 
-if [ "$VERSION" -eq "" ]; then
+if [ "$VERSION" = "" ]; then
   echo "Something went wrong when setting the version"
   exit
 fi
@@ -28,6 +28,7 @@ sed -i '' 's/"version": "\([0-9]*.\)\{2\}[0-9]"/"version": "'$VERSION'"/' woo-co
 git add package.json
 git add woo-components/package.json
 git commit -m "v$VERSION"
+git tag -d v$VERSION
 git tag v$VERSION
 
 echo "All done!"
