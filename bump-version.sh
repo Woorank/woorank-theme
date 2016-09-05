@@ -12,7 +12,7 @@ echo "Press <Enter> to continue or <Ctrl-C> to cancel"
 
 read
 
-VERSION=$(npm version $1)
+VERSION=$(npm version --no-git-tag-version $1)
 VERSION=$(echo $VERSION | cut -c 2-)
 
 if [ "$VERSION" = "" ]; then
@@ -28,7 +28,6 @@ sed -i '' 's/"version": "\([0-9]*.\)\{2\}[0-9]"/"version": "'$VERSION'"/' woo-co
 git add package.json
 git add woo-components/package.json
 git commit -m "v$VERSION"
-git tag -d v$VERSION
 git tag v$VERSION
 
 echo "All done!"
