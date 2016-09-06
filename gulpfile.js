@@ -222,10 +222,20 @@ gulp.task('sprite:build', function () {
     .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)));
 });
 
-gulp.task('s3', function () {
-  var awsConfig = require('./awsConfig');
-  return gulp.src('./styleguide/**/*')
-    .pipe(s3(awsConfig));
+gulp.task('s3', function (callback) {
+  var testVersion = require('./testIfVersionExists');
+  var version = require('./package').version;
+  testVersion(version, function (exists) {
+    var awsConfig = require('./awsConfig');
+
+    if (exists) {
+      return callback()
+    }
+    
+    gulp.src('./styleguide/**/*')
+      .pipe(s3(awsConfig))
+      .on('end', callback);
+    });
 });
 
 gulp.task('publish', function (callback) {
