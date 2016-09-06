@@ -35,7 +35,7 @@ http.get({
       }
     });
   } else {
-    console.error('Version already exists on S3!');
-    process.exit(1);
+    console.error('Version already exists on S3 - not uploading!');
+    process.exit(0);
   }
 });
