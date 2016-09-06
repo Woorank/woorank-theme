@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 var http = require('http');
 
 module.exports = function (version, callback) {
