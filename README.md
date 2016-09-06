@@ -27,23 +27,21 @@ $ docker-compose run --rm styleguide npm dev
 
 ### Development flow
 
-You should develop your changes in the branches and create a pull request once you're satisfied.
-Once merged, you should bump the version number of the styleguide according to the [semantic
-versioning](http://semver.org/) and create a new tag with the version number.
+You should develop your changes in the branches and create a pull request where the last commit is
+setting the new version number according to the [semantic versioning](http://semver.org/).
 
-For example, bumping the version to v6.6.1:
+You can find a helper script in the repository that allows you to easily do this. Just run the following
+command with the severity of your change as an argument. This will create a tag automatically to the
+git and handle all the necessary package.json changes.
 
 ```bash
-vim package.json # Change package.json version number to 6.6.1
-git add package.json
-git commit -m 'v6.6.1'
-git tag v6.6.1
-git push
-git push --tags
+$ ./bump-version.sh <major|minor|patch>
 ```
 
 ## Publication of the styleguide
 
 To publish the styleguide changes you have to build the project at [CircleCI](https://circleci.com/gh/Woorank/woorank-theme).
 
-Successfull build will be automatically pushed into the S3 with the current version number and can be used in the applications.
+Successfull build will automatically push the woorank-theme assets into the S3 with the current version number and can be used
+in the applications. It also will upgrade woo-components package in the npm and the related style
+sheet with the same version number than the woorank-theme.
