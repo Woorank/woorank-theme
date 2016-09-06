@@ -223,13 +223,14 @@ gulp.task('sprite:build', function () {
 });
 
 gulp.task('s3', function (callback) {
-  var testVersion = require('./testIfVersionExists');
+  var testVersion = require('./testVersion');
   var version = require('./package').version;
   testVersion(version, function (exists) {
     var awsConfig = require('./awsConfig');
 
     if (exists) {
-      return callback()
+      console.log('The version already exists in S3, returning gracefully...');
+      return callback();
     }
     
     gulp.src('./styleguide/**/*')

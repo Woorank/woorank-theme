@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var exec = require('child_process').exec;
-var testVersion = require('./testIfVersionExists');
+var testVersion = require('./testVersion');
 
 var pkg = require('./package');
 var deployingVersion = pkg.version;
