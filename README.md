@@ -53,14 +53,27 @@ This repository also holds the new React component styleguide, made with
 
 ## Running the styleguide locally
 
+You can find the styleguide at `./woo-components`. To run it locally run the following commands:
+
+```bash
+$ cd ./woo-components
+$ npm install
+$ npm run styleguide-server
+```
+
+The styleguide with hot reload should now be running at `http://localhost:3000`
+
+## Running the styleguide in the docker container
+
+*Note*: The hot reloading doesn't work properly with docker-toolbox. It should work on Docker for
+Mac, though (please remove the _should_ and _though_ here if you have tested this :).
+
 ```bash
 $ docker-compose build components
 $ docker-compose run --rm --service-ports components
 ```
 
-Styleguide runs by default at $(docker-machine ip):3006. The styleguide has a hot reload - property,
-so you can modify any of the components and you'll see the changes in the styleguide without
-refreshing the page.
+Styleguide runs by default at $(docker-machine ip):3006.
 
 ## Deploying the styleguide
 
