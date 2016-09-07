@@ -235,6 +235,22 @@ gulp.task('s3', function () {
   var awsConfig = require('./awsConfig');
   return gulp.src('./styleguide/**/*')
     .pipe(s3(awsConfig));
+
+gulp.task('s3', function (callback) {
+  var testVersion = require('./testVersion');
+  var version = require('./package').version;
+  testVersion(version, function (exists) {
+    var awsConfig = require('./awsConfig');
+
+    if (exists) {
+      console.log('The version already exists in S3, returning gracefully...');
+      return callback();
+    }
+
+    gulp.src('./styleguide/**/*')
+      .pipe(s3(awsConfig))
+      .on('end', callback);
+    });
 });
 
 gulp.task('publish', function (callback) {

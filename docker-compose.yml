@@ -10,6 +10,7 @@ services:
       - ./styleguide:/opt/gulp/styleguide
       - ./woo-components:/opt/gulp/woo-components
       - ./src:/opt/gulp/src
+      - ./testVersion.js:/opt/gulp/testVersion.js
       - ./gulpfile.js:/opt/gulp/gulpfile.js
       - ./kss-config.json:/opt/gulp/kss-config.json
       - ./awsConfig.json:/opt/gulp/awsConfig.json
