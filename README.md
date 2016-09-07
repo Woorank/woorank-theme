@@ -11,7 +11,7 @@ The style guide build tasks are made with [Gulp](https://github.com/gulpjs/gulp)
 ```bash
 $ docker-compose build
 $ docker-compose run --rm styleguide npm run build
-$ docker-compose up
+$ docker-compose run --rm --service-ports styleguide
 ```
 
 Styleguide should be running at the `$(docker-machine ip):3005`. You can access all the individual assets
@@ -45,3 +45,23 @@ To publish the styleguide changes you have to build the project at [CircleCI](ht
 Successfull build will automatically push the woorank-theme assets into the S3 with the current version number and can be used
 in the applications. It also will upgrade woo-components package in the npm and the related style
 sheet with the same version number than the woorank-theme.
+
+# Woorank React Component Styleguide
+
+This repository also holds the new React component styleguide, made with
+[react-styleguidist](https://github.com/sapegin/react-styleguidist).
+
+## Running the styleguide locally
+
+```bash
+$ docker-compose build components
+$ docker-compose run --rm --service-ports components
+```
+
+Styleguide runs by default at $(docker-machine ip):3006. The styleguide has a hot reload - property,
+so you can modify any of the components and you'll see the changes in the styleguide without
+refreshing the page.
+
+## Deploying the styleguide
+
+Follow the instructions for the old styleguide development flow and publication above.
