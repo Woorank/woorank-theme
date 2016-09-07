@@ -231,11 +231,6 @@ gulp.task('svg2png', function () {
     .pipe(gulp.dest(path.join(paths.build.png)));
 });
 
-gulp.task('s3', function () {
-  var awsConfig = require('./awsConfig');
-  return gulp.src('./styleguide/**/*')
-    .pipe(s3(awsConfig));
-
 gulp.task('s3', function (callback) {
   var testVersion = require('./testVersion');
   var version = require('./package').version;
@@ -248,9 +243,9 @@ gulp.task('s3', function (callback) {
     }
 
     gulp.src('./styleguide/**/*')
-      .pipe(s3(awsConfig))
-      .on('end', callback);
-    });
+    .pipe(s3(awsConfig))
+    .on('end', callback);
+  });
 });
 
 gulp.task('publish', function (callback) {
