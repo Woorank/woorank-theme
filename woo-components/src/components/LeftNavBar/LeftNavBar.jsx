@@ -1,7 +1,7 @@
 const React = require('react');
 const classnames = require('classnames');
 
-const Icon = require('./Icon');
+const Icon = require('../Icon');
 
 class LeftNavBar extends React.Component {
   render () {

@@ -1,0 +1,12 @@
+FROM node:6
+
+RUN mkdir -p /opt/styleguidist
+WORKDIR /opt/styleguidist
+
+COPY woo-components/package.json /opt/styleguidist/
+RUN npm install
+
+COPY woo-components/.babelrc /opt/styleguidist/
+COPY woo-components/styleguide.config.js /opt/styleguidist
+
+CMD [ "npm", "run", "styleguide-server" ]
