@@ -4,7 +4,9 @@
   "description": "Woo-components",
   "main": "dist/index.js",
   "scripts": {
-    "push-to-npm": "publish"
+    "push-to-npm": "publish",
+    "styleguide-server": "styleguidist server",
+    "styleguide-build": "styleguidist build"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -12,5 +14,16 @@
     "react": "^15.3.1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-react-hmre": "^1.1.1",
+    "bootstrap-sass": "^3.3.7",
+    "file-loader": "^0.9.0",
+    "node-sass": "^3.9.3",
+    "react-styleguidist": "^3.1.1",
+    "sass-loader": "^4.0.1",
+    "url-loader": "^0.5.7"
+  }
 }
