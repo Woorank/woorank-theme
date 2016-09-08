@@ -9,7 +9,11 @@ module.exports = {
       {
         test: /\.jsx?$/,
         include: dir,
-        loader: 'babel'
+        loader: 'babel',
+        query: {
+          babelrc: false,
+          presets: ['es2015', 'react', 'react-hmre'],
+        },
       },
       {
         test: /\.scss$/,
