@@ -3,7 +3,7 @@
 Generic example:
 
     const links = [
-      { label: 'First', href: '#', active: false },
-      { label: 'Second', href: '#', active: false }
+      { label: 'First', href: '#', active: false, icon: 'logo-glyph' },
+      { label: 'Second', href: '#', active: false, icon: 'monitoring' }
     ];
     <LeftNavBar links={links} />

@@ -4,6 +4,10 @@
   padding: 25px;
 
   .woo-left-nav-link {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
     white-space: nowrap;
   }
 }

@@ -14,7 +14,7 @@ class LeftNavBar extends React.Component {
           key={index}
           href={item.href || '#'}
           onClick={item.action}>
-            <Icon type={item.icon} size='normal' />
+            <Icon type={item.icon} size='md' />
             {item.label}
           </a>
       );
@@ -31,6 +31,7 @@ class LeftNavBar extends React.Component {
 LeftNavBar.propTypes = {
   links: React.PropTypes.arrayOf(
     React.PropTypes.shape({
+      icon: React.PropTypes.string,
       label: React.PropTypes.string,
       href: React.PropTypes.string,
       active: React.PropTypes.boolean
