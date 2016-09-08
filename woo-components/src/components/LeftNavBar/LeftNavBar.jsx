@@ -14,8 +14,10 @@ class LeftNavBar extends React.Component {
           key={index}
           href={item.href || '#'}
           onClick={item.action}>
-            <Icon type={item.icon} size='md' />
-            {item.label}
+            <Icon type={item.icon} size='sm' />
+            <span className='woo-left-nav-link-label'>
+              {item.label}
+            </span>
           </a>
       );
     });

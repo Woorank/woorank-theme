@@ -1,13 +1,21 @@
 .woo-left-nav-bar {
   display: flex;
   flex-direction: column;
-  padding: 25px;
+
+  @include breakpoint($screen-xs, true) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   .woo-left-nav-link {
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding-bottom: 15px;
+    padding: 15px 25px;
     white-space: nowrap;
+
+    &.active, &:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
   }
 }
