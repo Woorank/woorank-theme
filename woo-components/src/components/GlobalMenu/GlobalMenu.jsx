@@ -3,11 +3,11 @@ const classnames = require('classnames');
 
 const Icon = require('../Icon');
 
-class LeftNavBar extends React.Component {
+class GlobalMenu extends React.Component {
   render () {
     const links = this.props.links.map((item, index) => {
       const active = item.active ? 'active' : '';
-      const classes = classnames('woo-left-nav-link', active);
+      const classes = classnames('woo-global-menu-link', active);
 
       return (
         <a className={classes}
@@ -15,7 +15,7 @@ class LeftNavBar extends React.Component {
           href={item.href || '#'}
           onClick={item.action}>
             <Icon type={item.icon} size='sm' />
-            <span className='woo-left-nav-link-label'>
+            <span className='woo-global-menu-link-label'>
               {item.label}
             </span>
           </a>
@@ -23,14 +23,14 @@ class LeftNavBar extends React.Component {
     });
 
     return (
-      <nav className='woo-left-nav-bar'>
+      <nav className='woo-global-menu'>
         {links}
       </nav>
     );
   }
 }
 
-LeftNavBar.propTypes = {
+GlobalMenu.propTypes = {
   links: React.PropTypes.arrayOf(
     React.PropTypes.shape({
       icon: React.PropTypes.string,
@@ -40,4 +40,4 @@ LeftNavBar.propTypes = {
     }).isRequired)
 };
 
-module.exports = LeftNavBar;
+module.exports = GlobalMenu;

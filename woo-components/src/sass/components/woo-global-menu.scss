@@ -1,4 +1,4 @@
-.woo-left-nav-bar {
+.woo-global-menu {
   background: $white;
   border-right: 1px solid #ccd1d9;
   display: flex;
@@ -18,10 +18,10 @@
   }
 
   @include breakpoint($screen-md, true) {
-    .woo-left-nav-link {
+    .woo-global-menu-link {
       padding: 8px 15px;
 
-      .woo-left-nav-link-label {
+      .woo-global-menu-link-label {
         display: none;
       }
     }
@@ -36,12 +36,12 @@
     right: 0;
     top: initial;
 
-    .woo-left-nav-link {
+    .woo-global-menu-link {
       flex-grow: 1;
     }
   }
 
-  .woo-left-nav-link {
+  .woo-global-menu-link {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -55,6 +55,6 @@
 }
 
 // Workaround for the react styleguide preview
-.ReactStyleguidist-Playground__preview .woo-left-nav-bar {
+.ReactStyleguidist-Playground__preview .woo-global-menu {
   position: relative;
 }
