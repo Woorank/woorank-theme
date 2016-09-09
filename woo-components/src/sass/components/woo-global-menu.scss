@@ -1,6 +1,6 @@
 .woo-global-menu {
   background: $white;
-  border-right: 1px solid #ccd1d9;
+  border-right: 1px solid $border-color;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -29,7 +29,7 @@
 
   @include breakpoint($screen-xs, true) {
     border-right: none;
-    border-top: 1px solid #ccd1d9;
+    border-top: 1px solid $border-color;
     flex-direction: row;
     justify-content: space-around;
     padding: 0;
