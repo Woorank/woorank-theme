@@ -1,10 +1,40 @@
 .woo-left-nav-bar {
+  background: $white;
+  border-right: 1px solid #ccd1d9;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 75px 0;
+  position: fixed;
+
+  bottom: 0;
+  left: 0;
+  top: 0;
+
+  z-index: ($zindex-navbar-fixed - 1);
+
+  @include breakpoint($screen-md) {
+    width: 120px;
+  }
+
+  @include breakpoint($screen-md, true) {
+    .woo-left-nav-link {
+      padding: 8px 15px;
+
+      .woo-left-nav-link-label {
+        display: none;
+      }
+    }
+  }
 
   @include breakpoint($screen-xs, true) {
+    border-right: none;
+    border-top: 1px solid #ccd1d9;
     flex-direction: row;
     justify-content: space-around;
+    padding: 0;
+    right: 0;
+    top: initial;
 
     .woo-left-nav-link {
       flex-grow: 1;
@@ -22,4 +52,9 @@
       background: rgba(0, 0, 0, 0.05);
     }
   }
+}
+
+// Workaround for the react styleguide preview
+.ReactStyleguidist-Playground__preview .woo-left-nav-bar {
+  position: relative;
 }
