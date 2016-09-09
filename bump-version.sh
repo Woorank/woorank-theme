@@ -1,9 +1,9 @@
 #!/bin/bash
 
-allowed_versions=(major minor patch)
+allowed_versions=(major minor patch prerelease)
 
 if [ $# -ne 1 ] || ! [[ " ${allowed_versions[@]} " =~ " $1 " ]]; then
-  echo "Usage: $0 <major|minor|patch>"
+  echo "Usage: $0 <major|minor|patch|prerelease>"
   exit
 fi
 
