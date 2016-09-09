@@ -1,9 +1,7 @@
-// Bootstrap-sass imports
-@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
-
 // Imports from the original styleguide
-@import '../../../src/sass/utils/_mixins.scss';
 @import '../../../src/sass/colors/_colors.scss';
+@import '../../../src/sass/utils/_variables.scss';
+@import '../../../src/sass/utils/_mixins.scss';
 
 // Components
 @import 'components/woo-global-menu';
