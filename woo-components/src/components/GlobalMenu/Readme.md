@@ -1,4 +1,4 @@
-# Left navigation bar
+# Global menu
 
 Generic example:
 
@@ -6,4 +6,4 @@ Generic example:
       { label: 'First', href: '#', active: false, icon: 'logo-glyph' },
       { label: 'Second', href: '#', active: false, icon: 'monitoring' }
     ];
-    <LeftNavBar links={links} />
+    <GlobalMenu links={links} />
