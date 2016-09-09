@@ -23,7 +23,7 @@ fi
 echo "New package version: $VERSION"
 
 # Set the version of the woo-components' package.json to match the styleguide
-sed -i '' 's/"version": "\([0-9]*.\)\{2\}[0-9]"/"version": "'$VERSION'"/' woo-components/package.json
+sed -i '' 's/"version": "\([0-9]*.\)\{2\}[0-9]\(-[0-9]*\)*"/"version": "'$VERSION'"/' woo-components/package.json
 
 git add package.json
 git add woo-components/package.json
