@@ -4,7 +4,11 @@
 
   @include breakpoint($screen-xs, true) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+
+    .woo-left-nav-link {
+      flex-grow: 1;
+    }
   }
 
   .woo-left-nav-link {
