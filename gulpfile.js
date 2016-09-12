@@ -72,7 +72,14 @@ gulp.task('dev', [
   'lint-css'
 ]);
 
-gulp.task('build', ['scripts:woo-components', 'sass', 'sass:build', 'svg:build', 'sprite:build', 'svg2png']);
+gulp.task('build', [
+  'scripts:woo-components',
+  'sass',
+  'sass:build',
+  'svg:build',
+  'sprite:build',
+  'svg2png'
+]);
 
 gulp.task('watch', function () {
   gulp.watch(path.join(paths.sass.styleguide, '**', '*.*'), ['kss']);

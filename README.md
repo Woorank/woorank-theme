@@ -22,7 +22,7 @@ through the directory view or browse to `/index.html` to see the complete styleg
 You can launch the development watch with the following command:
 
 ```bash
-$ docker-compose run --rm styleguide npm dev
+$ docker-compose run --rm styleguide npm run dev
 ```
 
 ### Development flow
