@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<g stroke-linecap="square" stroke-linejoin="round" fill="none" stroke="#000" stroke-width="0.75" stroke-miterlimit="10">
-		<circle cx="10.5" cy="10.5" r="10"/>
-		<path d="M10.5 6.43v5.9M15.1 12.75V9.5H5.9v3.25"/>
-		<path d="M9.15 3.54h2.7v2.7h-2.7zM9.15 12.75h2.7v2.7h-2.7zM4.54 12.75h2.7v2.7h-2.7zM13.75 12.75h2.7v2.7h-2.7z"/>
-	</g>
-</svg>
