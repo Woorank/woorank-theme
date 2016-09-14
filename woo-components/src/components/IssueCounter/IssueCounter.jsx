@@ -1,8 +1,7 @@
 const React = require('react');
-const { OverlayTrigger, Tooltip } = require('react-bootstrap');
 const classnames = require('classnames');
 
-const Icon = require('../Icon');
+const HelpIcon = require('../HelpIcon');
 
 class IssueCounter extends React.Component {
 
@@ -10,27 +9,6 @@ class IssueCounter extends React.Component {
     return props.active
       ? props.children
       : <a href={props.link} className='woo-issue-link'>{props.children}</a>;
-  }
-
-  HelpIcon (props) {
-    if (!props.tooltip) {
-      return null;
-    }
-
-    const tooltipComponent = (
-      <Tooltip style={{ position: 'absolute' }} id='tooltip'>{props.tooltip}</Tooltip>
-    );
-
-    return (
-      <div className='woo-issue-counter-icon'>
-        <OverlayTrigger placement='top' overlay={tooltipComponent} delayShow={500}>
-          <div>
-            <Icon type='help' size='favicon' />
-            <span>{/* This span is needed for the tooltip positioning */}</span>
-          </div>
-        </OverlayTrigger>
-      </div>
-    );
   }
 
   render () {
@@ -41,7 +19,7 @@ class IssueCounter extends React.Component {
         <div className={classes}>
           <span className='woo-issue-counter-amount'>{this.props.amount}</span>
           <span className='woo-issue-counter-label'>{this.props.label}</span>
-          <this.HelpIcon tooltip={this.props.tooltip} />
+          <HelpIcon tooltip={this.props.tooltip} />
         </div>
       </this.LinkMaybe>
     );
