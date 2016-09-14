@@ -6,7 +6,6 @@ WORKDIR /opt/styleguidist
 COPY woo-components/package.json /opt/styleguidist/
 RUN npm install
 
-COPY woo-components/.babelrc /opt/styleguidist/
 COPY woo-components/styleguide.config.js.docker /opt/styleguidist/styleguide.config.js
 
 CMD [ "npm", "run", "styleguide-server" ]
