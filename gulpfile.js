@@ -77,8 +77,7 @@ gulp.task('build', [
   'sass',
   'sass:build',
   'svg:build',
-  'sprite:build',
-  'svg2png'
+  'sprite:build'
 ]);
 
 gulp.task('watch', function () {
