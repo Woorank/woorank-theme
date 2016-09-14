@@ -6,3 +6,4 @@ styleguide
 build
 woo-components/dist
 npm-debug.log
+.lvimrc
