@@ -9,6 +9,18 @@ Example:
     }
     </div>
 
+Different sizes
+
+    <div style={{ display: 'flex', alignItems: 'center' }}>
+      <Badge value='10px' style={{ margin: '5px', fontSize: '10px' }} />
+      <Badge value='12px' style={{ margin: '5px', fontSize: '12px' }} />
+      <Badge value='14px' style={{ margin: '5px', fontSize: '14px' }} />
+      <Badge value='16px' style={{ margin: '5px', fontSize: '16px' }} />
+      <Badge value='18px' style={{ margin: '5px', fontSize: '18px' }} />
+      <Badge value='20px' style={{ margin: '5px', fontSize: '20px' }} />
+      <Badge value='32px' style={{ margin: '5px', fontSize: '32px' }} />
+    </div>
+
 Within label
 
     <div style={{ width: '250px', margin: 'auto' }}>
