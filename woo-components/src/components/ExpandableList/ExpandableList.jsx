@@ -1,5 +1,4 @@
 const React = require('react');
-// const classnames = require('classnames');
 const { PropTypes } = React;
 
 class ExpandableList extends React.Component {
@@ -11,8 +10,8 @@ class ExpandableList extends React.Component {
     };
   }
 
-  toArray (list) {
-    return Array.isArray(list) ? list : [list];
+  toArray (any) {
+    return Array.isArray(any) ? any : [any];
   }
 
   render () {
