@@ -1,4 +1,5 @@
 const React = require('react');
+const classnames = require('classnames');
 const { PropTypes } = React;
 
 class ExpandableList extends React.Component {
@@ -19,6 +20,7 @@ class ExpandableList extends React.Component {
     const visibleItems = this.state.expanded ? items : items.slice(0, this.props.itemsVisible);
 
     const setExpanded = newState => () => this.setState({ expanded: newState });
+    const buttonStyles = classnames('btn', 'btn-default');
 
     return (
       <div className='woo-expandable-list-container'>
@@ -27,8 +29,8 @@ class ExpandableList extends React.Component {
         </div>
         {
           this.state.expanded
-            ? <button onClick={setExpanded(false)}>{'show-less'}</button>
-            : <button onClick={setExpanded(true)}>{'show-more'}</button>
+            ? <button className={buttonStyles} onClick={setExpanded(false)}>{'show-less'}</button>
+            : <button className={buttonStyles} onClick={setExpanded(true)}>{'show-more'}</button>
         }
       </div>
     );
