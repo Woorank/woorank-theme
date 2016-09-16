@@ -20,10 +20,10 @@ class ExpandableList extends React.Component {
     const canBeExpanded = items.length > this.props.itemsVisible;
     const visibleItems = this.state.expanded ? items : items.slice(0, this.props.itemsVisible);
 
-    const setExpanded = newState => () => this.setState({ expanded: newState });
-    const buttonStyles = classnames('btn', 'btn-default');
-
     const ExpandButton = () => {
+      const buttonStyles = classnames('btn', 'btn-default');
+      const setExpanded = newState => () => this.setState({ expanded: newState });
+
       return (
         this.state.expanded
           ? <button className={buttonStyles} onClick={setExpanded(false)}>{'show-less'}</button>
