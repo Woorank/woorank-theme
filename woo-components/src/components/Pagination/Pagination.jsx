@@ -9,10 +9,12 @@ class Pagination extends React.Component {
         <div>
           {
             Array(amount).fill().map((_, i) => {
-              return <button className='btn btn-default' key={i}
-                onClick={() => this.props.onPagination(i * this.props.step, this.props.step)}>
-                {i + 1}
-              </button>;
+              return (
+                <button className='btn btn-default' key={i}
+                  onClick={() => this.props.onPagination(i * this.props.step, this.props.step)}>
+                  {i + 1}
+                </button>
+              );
             })
           }
         </div>);
