@@ -291,6 +291,32 @@ $nav-pills-active-link-hover-bg    : $component-active-bg;
 $nav-pills-active-link-hover-color : $component-active-color;
 
 // Pagination
+$line-height-lg:         (4 / 3) !default;
+$line-height-sm:         1.5 !default;
+
+$border-radius:          .25rem !default;
+$border-radius-lg:       .3rem !default;
+$border-radius-sm:       .2rem !default;
+
+$font-size-lg               : 1.25rem !default;
+$font-size-sm               : .875rem !default;
+$enable-hover-media-query   : true;
+$spacer                     : 1rem !default;
+$spacer-x                   : $spacer !default;
+$spacer-y                   : $spacer !default;
+$pagination-padding-x       : .75rem !default;
+$pagination-padding-y       : .5rem !default;
+$pagination-padding-x-sm    : .75rem !default;
+$pagination-padding-y-sm    : .275rem !default;
+$pagination-padding-x-lg    : 1.5rem !default;
+$pagination-padding-y-lg    : .75rem !default;
+
+$pagination-color           : $link-color !default;
+$pagination-bg              : #fff !default;
+$border-width               : 1px !default;
+$pagination-border-width    : $border-width !default;
+$pagination-border-color    : #ddd !default;
+
 $pagination-color           : $grey-darker;
 $pagination-bg              : $white;
 $pagination-border          : $border-color;
