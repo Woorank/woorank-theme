@@ -17,6 +17,7 @@ var s3 = require('gulp-s3');
 var sass = require('gulp-sass');
 var svgmin = require('gulp-svgmin');
 var svgSprite = require('gulp-svg-sprites');
+var svg2png = require('gulp-svg2png');
 var gulpStylelint = require('gulp-stylelint');
 var pkg = require('./package');
 
@@ -43,10 +44,12 @@ var paths = {
     img: 'styleguide/assets/img',
     css: 'styleguide/assets/styles',
     svg: 'styleguide/assets/svg',
+    png: 'styleguide/assets/png',
     js: 'styleguide/assets/scripts',
     wooComponents: 'woo-components/dist'
   }
 };
+
 var banner = ['/**',
   ' * <%= pkg.name %> - <%= pkg.description %>',
   ' * @version v<%= pkg.version %>',
@@ -75,6 +78,7 @@ gulp.task('build', [
   'sass',
   'sass:build',
   'svg:build',
+  'svg2png',
   'sprite:build'
 ]);
 
@@ -227,6 +231,12 @@ gulp.task('sprite:build', function () {
       }]
     }))
     .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)));
+});
+
+gulp.task('svg2png', function () {
+  gulp.src(path.join(paths.svg, '**', '*.svg'))
+  .pipe(svg2png())
+  .pipe(gulp.dest(paths.build.png));
 });
 
 gulp.task('s3', function (callback) {
