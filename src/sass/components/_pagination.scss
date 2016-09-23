@@ -2,7 +2,25 @@
 Pagination
 
 Markup:
-
+<nav aria-label="Page navigation">
+  <ul class="pagination pagination-lg">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
 <nav aria-label="Page navigation">
   <ul class="pagination">
     <li>
@@ -22,8 +40,27 @@ Markup:
     </li>
   </ul>
 </nav>
+<nav aria-label="Page navigation">
+  <ul class="pagination pagination-sm">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
 
-Styleguide Patterns.Pagination
+Styleguide Components.Pagination
 */
 
 .pagination {
@@ -64,23 +101,23 @@ Styleguide Patterns.Pagination
   }
 
   &.active .page-link {
-    // @include plain-hover-focus {
-    //   z-index: 2;
-    //   color: $pagination-active-color;
-    //   cursor: default;
-    //   background-color: $pagination-active-bg;
-    //   border-color: $pagination-active-border;
-    // }
+    @include plain-hover-focus {
+      z-index: 2;
+      color: $pagination-active-color;
+      cursor: default;
+      background-color: $pagination-active-bg;
+      border-color: $pagination-active-border;
+    }
   }
 
   &.disabled .page-link {
-    // @include plain-hover-focus {
-    //   color: $pagination-disabled-color;
-    //   pointer-events: none;
-    //   cursor: $cursor-disabled;
-    //   background-color: $pagination-disabled-bg;
-    //   border-color: $pagination-disabled-border;
-    // }
+    @include plain-hover-focus {
+      color: $pagination-disabled-color;
+      pointer-events: none;
+      cursor: $cursor-disabled;
+      background-color: $pagination-disabled-bg;
+      border-color: $pagination-disabled-border;
+    }
   }
 }
 
@@ -104,11 +141,9 @@ Styleguide Patterns.Pagination
 // Sizing
 //
 .pagination-lg {
-  // @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg);
   @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg);
 }
 
 .pagination-sm {
-  // @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $border-radius-sm);
   @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm);
 }
