@@ -78,7 +78,7 @@ gulp.task('build', [
   'sass',
   'sass:build',
   'svg:build',
-  'svg2png',
+  // 'svg2png',
   'sprite:build'
 ]);
 
