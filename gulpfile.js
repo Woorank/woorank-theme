@@ -211,7 +211,6 @@ gulp.task('svg:build', function () {
 });
 
 gulp.task('svg-sprite:build', function () {
-  console.log('gulp-svg-sprite magic');
   return gulp.src(path.join(paths.svg, '**', '*.svg'))
   .pipe(gulpSvgSprite({
     shape: {
@@ -238,7 +237,7 @@ gulp.task('svg-sprite:build', function () {
       }
     }
   }))
-  .pipe(gulp.dest(path.join(path.build.svg)))
+  .pipe(gulp.dest(path.join(paths.build.svg)))
   .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)));
 });
 
