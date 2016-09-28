@@ -22,10 +22,9 @@
     "gulp-s3": "0.3.0",
     "gulp-sass": "2.2.0",
     "gulp-stylelint": "2.0.2",
-    "gulp-svg-sprites": "4.0.2",
+    "gulp-svg-sprite": "1.3.6",
     "gulp-svg2png": "1.0.2",
     "gulp-svgmin": "1.2.2",
-    "svg-sprite-data": "git://github.com/mklinga/svg-sprite-data.git",
     "stylelint-config-standard": "9.0.0"
   },
   "scripts": {
