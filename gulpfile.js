@@ -60,7 +60,6 @@ var banner = ['/**',
 
 gulp.task('default', [
   'svg',
-  // 'sprite',
   'pictures',
   'build',
   'kss'
@@ -77,8 +76,8 @@ gulp.task('build', [
   'scripts:woo-components',
   'sass',
   'sass:build',
-  'svg:build',
   'svg-sprite:build',
+  'svg:build',
   'kss'
 ]);
 
@@ -218,12 +217,6 @@ gulp.task('svg-sprite:build', function () {
         generator: function (name) {
           return name.replace(/.svg/g, '').replace(/^.+?[/]/g, '');
         }
-      },
-      dimension: {
-        maxWidth: 0,
-        maxHeight: 0,
-        precision: 2,
-        attributes: false
       }
     },
     svg: {
