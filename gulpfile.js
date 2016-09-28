@@ -238,7 +238,7 @@ gulp.task('svg-sprite:build', function () {
       }
     }
   }))
-  .pipe(gulp.dest(path.join('./styleguide/assets/svg/')))
+  .pipe(gulp.dest(path.join(path.build.svg)))
   .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)));
 });
 
