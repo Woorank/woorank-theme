@@ -16,7 +16,7 @@ var runSequence = require('gulp-run-sequence');
 var s3 = require('gulp-s3');
 var sass = require('gulp-sass');
 var svgmin = require('gulp-svgmin');
-var svgSprite = require('gulp-svg-sprites');
+var gulpSvgSprite = require('gulp-svg-sprite');
 var svg2png = require('gulp-svg2png');
 var gulpStylelint = require('gulp-stylelint');
 var pkg = require('./package');
@@ -60,7 +60,6 @@ var banner = ['/**',
 
 gulp.task('default', [
   'svg',
-  'sprite',
   'pictures',
   'build',
   'kss'
@@ -78,8 +77,8 @@ gulp.task('build', [
   'sass',
   'sass:build',
   'svg:build',
-  // 'svg2png',
-  'sprite:build'
+  'svg-sprite:build',
+  'kss'
 ]);
 
 gulp.task('watch', function () {
@@ -116,15 +115,22 @@ gulp.task('scripts:woo-components', function () {
     .pipe(gulp.dest(paths.build.wooComponents));
 });
 
-gulp.task('kss', ['kss:structures', 'sprite', 'sass', 'sass-kss', 'scripts'], function (cb) {
-  return exec('kss-node --config=kss-config.json',
+gulp.task('kss',
+  [
+    'svg-sprite:build',
+    'kss:structures',
+    'sass',
+    'sass-kss',
+    'scripts'
+  ], function (cb) {
+    return exec('npm run kss',
     function (err, stdout, stderr) {
       console.log(stdout);
       console.log(stderr);
       cb(err);
       gulp.src('*').pipe(connect.reload());
     });
-});
+  });
 
 gulp.task('kss:structures', function () {
   return gulp.src(paths.structures)
@@ -189,18 +195,6 @@ gulp.task('sass-kss', function () {
     .pipe(gulp.dest(paths.build.css));
 });
 
-gulp.task('sprite', function () {
-  return gulp.src(path.join(paths.svg, '**', '*.svg'))
-    .pipe(svgSprite({
-      mode: 'symbols',
-      preview: false,
-      svg: {
-        symbols: 'symbols.svg'
-      }
-    }))
-    .pipe(gulp.dest(paths.build.svg));
-});
-
 gulp.task('svg', function () {
   return gulp.src(path.join(paths.svg, '**', '*.svg'))
     .pipe(gulp.dest(paths.build.svg));
@@ -216,21 +210,29 @@ gulp.task('svg:build', function () {
     .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)));
 });
 
-gulp.task('sprite:build', function () {
+gulp.task('svg-sprite:build', function () {
   return gulp.src(path.join(paths.svg, '**', '*.svg'))
-    .pipe(svgSprite({
-      mode: 'symbols',
-      preview: false,
-      svg: {
-        symbols: 'symbols.svg'
+  .pipe(gulpSvgSprite({
+    shape: {
+      id: {
+        generator: function (name) {
+          return name.replace(/.svg/g, '').replace(/^.+?[/]/g, '');
+        }
       }
-    }))
-    .pipe(svgmin({
-      plugins: [{
-        cleanupIDs: false
-      }]
-    }))
-    .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)));
+    },
+    svg: {
+      xmlDeclaration: false,
+      doctypeDeclaration: false
+    },
+    mode: {
+      symbol: {
+        dest: '.',
+        sprite: 'symbols.svg'
+      }
+    }
+  }))
+  .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)))
+  .pipe(gulp.dest(paths.build.svg));
 });
 
 gulp.task('svg2png', function () {

@@ -4,7 +4,6 @@ machine:
 
 dependencies:
   override:
-    - npm install gulp kss@2 -g
     - npm install
     - cd woo-components && npm install && cd ..
     - npm run build
@@ -30,4 +29,3 @@ deployment:
       - npm run publish
       - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > woo-components/.npmrc
       - cd woo-components && npm run push-to-npm
-
