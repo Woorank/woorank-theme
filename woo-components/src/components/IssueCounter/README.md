@@ -21,3 +21,14 @@ Full row:
       <IssueCounter label='H1 Tag issues' amount={12} />
       <IssueCounter label='Body content issues' amount={93} />
     </div>
+
+Linking to counters
+
+IssueCounter offers a premade link styling, that you can use. Just wrap the counter you want inside
+a link with the class `woo-issue-link`. 
+
+    <div style={{ width: '200px', margin: 'auto' }}>
+      <a href='#' className='woo-issue-link'>
+        <IssueCounter label='Meta title issues' amount={20} />
+      </a>
+    </div>
