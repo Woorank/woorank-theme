@@ -117,12 +117,13 @@ gulp.task('scripts:woo-components', function () {
 
 gulp.task('kss',
   [
+    'svg-sprite:build',
     'kss:structures',
     'sass',
     'sass-kss',
     'scripts'
   ], function (cb) {
-    return exec('kss-node --config=kss-config.json',
+    return exec('npm run kss',
     function (err, stdout, stderr) {
       console.log(stdout);
       console.log(stderr);
