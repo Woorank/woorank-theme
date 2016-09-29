@@ -76,8 +76,8 @@ gulp.task('build', [
   'scripts:woo-components',
   'sass',
   'sass:build',
-  'svg-sprite:build',
   'svg:build',
+  'svg-sprite:build',
   'kss'
 ]);
 
