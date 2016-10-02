@@ -2,7 +2,7 @@
 Pagination
 
 Markup:
-<nav aria-label="Page navigation">
+<nav aria-label="Page navigation" class="text-center">
   <ul class="pagination pagination-lg">
     <li>
       <a href="#" aria-label="Previous">
@@ -14,6 +14,8 @@ Markup:
     <li><a href="#">3</a></li>
     <li><a href="#">4</a></li>
     <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li><a href="#">7</a></li>
     <li>
       <a href="#" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
@@ -21,7 +23,7 @@ Markup:
     </li>
   </ul>
 </nav>
-<nav aria-label="Page navigation">
+<nav aria-label="Page navigation"class="text-center">
   <ul class="pagination">
     <li>
       <a href="#" aria-label="Previous">
@@ -31,8 +33,6 @@ Markup:
     <li><a href="#">1</a></li>
     <li><a href="#">2</a></li>
     <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
     <li>
       <a href="#" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
@@ -40,7 +40,7 @@ Markup:
     </li>
   </ul>
 </nav>
-<nav aria-label="Page navigation">
+<div aria-label="Page navigation" class="text-center">
   <ul class="pagination pagination-sm">
     <li>
       <a href="#" aria-label="Previous">
@@ -51,14 +51,13 @@ Markup:
     <li><a href="#">2</a></li>
     <li><a href="#">3</a></li>
     <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
     <li>
       <a href="#" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
       </a>
     </li>
   </ul>
-</nav>
+</div>
 
 Styleguide Components.Pagination
 */
@@ -136,14 +135,6 @@ Styleguide Components.Pagination
     background-color: $pagination-hover-bg;
     border-color: $pagination-hover-border;
   }
-}
-//
-// Position
-//
-.centered {
-  display: block;
-  margin: auto;
-  width: 40%;
 }
 //
 // Sizing
