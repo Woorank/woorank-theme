@@ -2,7 +2,10 @@
 Pagination
 
 Markup:
-<nav aria-label="Page navigation" class="text-center">
+<p class="muted-text">
+For large buttons, use <span class="label label-primary">pagination-lg</span> class modifier.
+</p>
+<nav aria-label="Page navigation">
   <ul class="pagination pagination-lg">
     <li>
       <a href="#" aria-label="Previous">
@@ -23,7 +26,10 @@ Markup:
     </li>
   </ul>
 </nav>
-<nav aria-label="Page navigation"class="text-center">
+<p class="muted-text">
+For centered buttons, use <span class="label label-primary">text-center</span> class modifier.
+</p>
+<nav aria-label="Page navigation" class="text-center">
   <ul class="pagination">
     <li>
       <a href="#" aria-label="Previous">
@@ -40,7 +46,10 @@ Markup:
     </li>
   </ul>
 </nav>
-<div aria-label="Page navigation" class="text-center">
+<p class="muted-text">
+For small buttons, use <span class="label label-primary">pagination-sm</span> class modifier.
+</p>
+<nav aria-label="Page navigation">
   <ul class="pagination pagination-sm">
     <li>
       <a href="#" aria-label="Previous">
@@ -57,7 +66,7 @@ Markup:
       </a>
     </li>
   </ul>
-</div>
+</nav>
 
 Styleguide Components.Pagination
 */
@@ -134,6 +143,7 @@ Styleguide Components.Pagination
     color: $pagination-hover-color;
     background-color: $pagination-hover-bg;
     border-color: $pagination-hover-border;
+    z-index: 1;
   }
 }
 //
