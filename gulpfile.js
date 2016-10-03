@@ -222,7 +222,12 @@ gulp.task('svg-sprite:build', function () {
     },
     svg: {
       xmlDeclaration: false,
-      doctypeDeclaration: false
+      doctypeDeclaration: false,
+      rootAttributes: {
+        width: 0,
+        height: 0,
+        style: 'position:absolute'
+      }
     },
     mode: {
       symbol: {
