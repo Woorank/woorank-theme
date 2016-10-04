@@ -213,6 +213,12 @@ gulp.task('svg:build', function () {
 gulp.task('svg-sprite:build', function () {
   return gulp.src(path.join(paths.svg, '**', '*.svg'))
   .pipe(gulpSvgSprite({
+    mode: {
+      symbol: {
+        dest: '.',
+        sprite: 'symbols.svg'
+      }
+    },
     shape: {
       id: {
         generator: function (name) {
@@ -220,14 +226,24 @@ gulp.task('svg-sprite:build', function () {
         }
       }
     },
+    transform: [
+        {svgo: {
+          plugins: [
+            { removeViewBox: false },
+            { removeUselessStrokeAndFill: false },
+            { cleanupIDs: false },
+            { mergePaths: false },
+            { removeUnknownsAndDefaults: false }
+          ]
+        }}
+    ],
     svg: {
       xmlDeclaration: false,
-      doctypeDeclaration: false
-    },
-    mode: {
-      symbol: {
-        dest: '.',
-        sprite: 'symbols.svg'
+      doctypeDeclaration: false,
+      rootAttributes: {
+        width: 0,
+        height: 0,
+        style: 'position:absolute'
       }
     }
   }))
