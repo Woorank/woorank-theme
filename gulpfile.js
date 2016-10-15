@@ -76,7 +76,8 @@ gulp.task('build', [
   'scripts:woo-components',
   'sass',
   'sass:build',
-  'svg:build',
+  'svg2png',
+  // 'svg:build',
   'svg-sprite:build',
   'kss'
 ]);
@@ -207,7 +208,7 @@ gulp.task('svg:build', function () {
         cleanupIDs: true
       }]
     }))
-    .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)));
+    .pipe(gulp.dest(path.join(paths.build.svg)));
 });
 
 gulp.task('svg-sprite:build', function () {
@@ -232,7 +233,7 @@ gulp.task('svg-sprite:build', function () {
             { removeViewBox: false },
             { removeUselessStrokeAndFill: true },
             { cleanupIDs: false },
-            { mergePaths: false },
+            { mergePaths: true },
             { removeUnknownsAndDefaults: false }
           ]
         }}
