@@ -27,6 +27,7 @@ Styleguide Colors.Helpers
   }
   .fill-#{$color} {
     fill: $colorValue;
+    stroke: $colorValue;
   }
   .background-#{$color} {
     background-color: $colorValue;

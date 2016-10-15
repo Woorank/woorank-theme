@@ -230,7 +230,7 @@ gulp.task('svg-sprite:build', function () {
         {svgo: {
           plugins: [
             { removeViewBox: false },
-            { removeUselessStrokeAndFill: false },
+            { removeUselessStrokeAndFill: true },
             { cleanupIDs: false },
             { mergePaths: false },
             { removeUnknownsAndDefaults: false }
