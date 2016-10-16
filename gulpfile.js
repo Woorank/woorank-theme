@@ -59,7 +59,6 @@ var banner = ['/**',
   ''].join('\n');
 
 gulp.task('default', [
-  'svg',
   'pictures',
   'build',
   'kss'
@@ -77,8 +76,7 @@ gulp.task('build', [
   'sass',
   'sass:build',
   'svg2png',
-  // 'svg:build',
-  'svg-sprite:build',
+  'svg:build',
   'kss'
 ]);
 
@@ -194,11 +192,6 @@ gulp.task('sass-kss', function () {
     }))
     .pipe(autoprefixer())
     .pipe(gulp.dest(paths.build.css));
-});
-
-gulp.task('svg', function () {
-  return gulp.src(path.join(paths.svg, '**', '*.svg'))
-    .pipe(gulp.dest(paths.build.svg));
 });
 
 gulp.task('svg:build', function () {

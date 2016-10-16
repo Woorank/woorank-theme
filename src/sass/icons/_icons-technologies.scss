@@ -3,7 +3,7 @@ Technologies
 
 Markup:
 <svg class="icon {{modifier_class}} fill-grey-medium" data-toggle="tooltip" title="#{{modifier_class}}">
-  <use xlink:href="#{{modifier_class}}"></use>
+  <use xlink:href="{{{iconPath}}}#{{modifier_class}}"></use>
 </svg>
 
 backlinks        - Backlinks

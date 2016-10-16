@@ -23,8 +23,6 @@
 </head>
 <body id="kss-node" class="styleguide {{#if homepage}}homepage{{/if}}">
 
-{{include 'styleguide/assets/svg/symbols.svg'}}
-
 <!-- HEADER -->
 <div id="top">
   <div class="header navbar">
@@ -32,13 +30,13 @@
       <div class="navbar-header">
         <a href="./" class="navbar-brand">
           <svg class="icon">
-            <use xlink:href="#logo-glyph"></use>
+            <use xlink:href="{{iconPath}}#logo-glyph"></use>
           </svg>
         </a>
 
         <button type="button" class="navbar-toggle navbar-toggle-left collapsed" data-toggle="collapse" data-target="#top-nav-collapse">
           <svg class="icon menu" role="img">
-            <use xlink:href="#menu"></use>
+            <use xlink:href="{{iconPath}}#menu"></use>
           </svg>
         </button>
       </div>
@@ -69,7 +67,7 @@
           <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="downloadSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Download
             <svg class="icon icon-chevron-down">
-              <use xlink:href="#chevron-down"></use>
+              <use xlink:href="{{iconPath}}#chevron-down"></use>
             </svg>
           </button>
           <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="downloadSelector">
@@ -229,14 +227,14 @@
 <footer class="footer text-center">
   <a href="https://www.woorank.com" title="woorank.com">
     <svg class="icon icon-logo-nocolor icon-xxl fill-grey">
-      <use xlink:href="#logo-nocolor"></use>
+      <use xlink:href="{{iconPath}}#logo-nocolor"></use>
     </svg>
   </a>
 </footer>
 
 <!-- SCRIPTS -->
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="assets/scripts/prettify.js"></script>
 <script src="/assets/scripts/scripts.js"></script>
 </body>

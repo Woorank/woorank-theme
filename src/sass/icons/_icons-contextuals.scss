@@ -5,7 +5,7 @@ Icon with fixed colors
 
 Markup:
 <svg class="icon icon-md fill-grey {{modifier_class}}" data-toggle="tooltip" title="#{{modifier_class}}">
-  <use xlink:href="#{{modifier_class}}"></use>
+  <use xlink:href="{{{iconPath}}}#{{modifier_class}}"></use>
 </svg>
 
 checklist                - Checklist (colorfull)
