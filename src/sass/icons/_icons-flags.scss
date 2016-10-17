@@ -3,7 +3,7 @@ Flags
 
 Markup:
 <svg class="icon {{modifier_class}}" data-toggle="tooltip" title="{{flag modifier_class}}">
-  <use xlink:href="#{{modifier_class}}"></use>
+  <use xlink:href="{{{iconPath}}}#{{modifier_class}}"></use>
 </svg>
 
 flag-int - Global (Google.com)

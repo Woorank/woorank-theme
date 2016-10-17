@@ -3,7 +3,7 @@ Icons Sizes
 
 Markup:
 <svg class="icon icon-logo-glyph {{modifier_class}}" data-toggle="tooltip" title="#{{modifier_class}}">
-  <use xlink:href="#logo-glyph"></use>
+  <use xlink:href="{{{iconPath}}}#logo-glyph"></use>
 </svg>
 
 icon-xxs     - Xxs
