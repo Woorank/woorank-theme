@@ -59,7 +59,6 @@ var banner = ['/**',
   ''].join('\n');
 
 gulp.task('default', [
-  'svg',
   'pictures',
   'build',
   'kss'
@@ -76,8 +75,8 @@ gulp.task('build', [
   'scripts:woo-components',
   'sass',
   'sass:build',
+  'svg2png',
   'svg:build',
-  'svg-sprite:build',
   'kss'
 ]);
 
@@ -195,11 +194,6 @@ gulp.task('sass-kss', function () {
     .pipe(gulp.dest(paths.build.css));
 });
 
-gulp.task('svg', function () {
-  return gulp.src(path.join(paths.svg, '**', '*.svg'))
-    .pipe(gulp.dest(paths.build.svg));
-});
-
 gulp.task('svg:build', function () {
   return gulp.src(path.join(paths.svg, '**', '*.svg'))
     .pipe(svgmin({
@@ -207,7 +201,7 @@ gulp.task('svg:build', function () {
         cleanupIDs: true
       }]
     }))
-    .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)));
+    .pipe(gulp.dest(path.join(paths.build.svg)));
 });
 
 gulp.task('svg-sprite:build', function () {
@@ -230,9 +224,9 @@ gulp.task('svg-sprite:build', function () {
         {svgo: {
           plugins: [
             { removeViewBox: false },
-            { removeUselessStrokeAndFill: false },
+            { removeUselessStrokeAndFill: true },
             { cleanupIDs: false },
-            { mergePaths: false },
+            { mergePaths: true },
             { removeUnknownsAndDefaults: false }
           ]
         }}

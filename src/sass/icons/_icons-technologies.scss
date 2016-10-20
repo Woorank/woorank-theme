@@ -3,7 +3,7 @@ Technologies
 
 Markup:
 <svg class="icon {{modifier_class}} fill-grey-medium" data-toggle="tooltip" title="#{{modifier_class}}">
-  <use xlink:href="#{{modifier_class}}"></use>
+  <use xlink:href="{{{iconPath}}}#{{modifier_class}}"></use>
 </svg>
 
 backlinks        - Backlinks
@@ -23,6 +23,7 @@ visitors         - Visitors
 asset-css        - CRAWLER CSS
 asset-img        - CRAWLER IMG
 asset-js         - CRAWLER JS
+asset-pdf         - CRAWLER PDF
 broken-redirect  - CRAWLER Broken Redirect
 canonical        - CRAWLER Section Canonical
 http-status      - CRAWLER HTTP Status
