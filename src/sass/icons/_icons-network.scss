@@ -2,7 +2,7 @@
 Network
 
 Markup:
-<svg class="icon {{modifier_class}} fill-grey-medium" data-toggle="tooltip" title="#{{modifier_class}}">
+<svg class="icon icon-sm {{modifier_class}} fill-grey-medium" data-toggle="tooltip" title="#{{modifier_class}}">
   <use xlink:href="{{{iconPath}}}#{{modifier_class}}"></use>
 </svg>
 
@@ -14,7 +14,7 @@ indexation       - CRAWLER Indexation
 redirect-chain   - CRAWLER Redirect Chain
 redirect-loop    - CRAWLER Redirect Loop
 simple-redirect  - CRAWLER Simple Redire
-tech-hreflang    - CRAWLER HREF Language
+hreflang    - CRAWLER HREF Language
 traffic          - Traffic
 
 Weight: 2

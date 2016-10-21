@@ -2,7 +2,7 @@
 Navigation
 
 Markup:
-<svg class="icon fill-grey {{modifier_class}}" data-toggle="tooltip" title="#{{modifier_class}}">
+<svg class="icon icon-sm fill-grey {{modifier_class}}" data-toggle="tooltip" title="#{{modifier_class}}">
   <use xlink:href="{{{iconPath}}}#{{modifier_class}}"></use>
 </svg>
 

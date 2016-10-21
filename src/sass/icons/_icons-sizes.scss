@@ -57,3 +57,14 @@ $iconsSizes:
   margin-left: 6px;
   vertical-align: middle;
 }
+
+.icon-hover {
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
+  &:hover{
+    fill: $primary;
+    stroke: $primary;
+  }
+}
