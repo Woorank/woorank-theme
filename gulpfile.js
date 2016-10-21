@@ -75,7 +75,7 @@ gulp.task('build', [
   'scripts:woo-components',
   'sass',
   'sass:build',
-  'svg2png',
+  // 'svg2png',
   'svg:build',
   'kss'
 ]);
@@ -227,7 +227,9 @@ gulp.task('svg-sprite:build', function () {
             { removeUselessStrokeAndFill: true },
             { cleanupIDs: false },
             { mergePaths: true },
-            { removeUnknownsAndDefaults: false }
+            { removeUnknownsAndDefaults: false },
+            { cleanupEnableBackground: true },
+            { removeStyleElement: true }
           ]
         }}
     ],
