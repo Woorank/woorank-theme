@@ -75,7 +75,7 @@ gulp.task('build', [
   'scripts:woo-components',
   'sass',
   'sass:build',
-  // 'svg2png',
+  'svg2png',
   'svg:build',
   'kss'
 ]);
@@ -198,7 +198,11 @@ gulp.task('svg:build', function () {
   return gulp.src(path.join(paths.svg, '**', '*.svg'))
     .pipe(svgmin({
       plugins: [{
-        cleanupIDs: true
+        cleanupIDs: true,
+        removeUselessStrokeAndFill: true,
+        mergePaths: true,
+        removeUnknownsAndDefaults: false,
+        cleanupEnableBackground: true
       }]
     }))
     .pipe(gulp.dest(path.join(paths.build.svg)));
