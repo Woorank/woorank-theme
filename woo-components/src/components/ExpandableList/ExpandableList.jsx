@@ -26,8 +26,8 @@ class ExpandableList extends React.Component {
 
       return (
         this.state.expanded
-          ? <button className={buttonStyles} onClick={setExpanded(false)}>{'show-less'}</button>
-          : <button className={buttonStyles} onClick={setExpanded(true)}>{'show-more'}</button>
+          ? <button className={buttonStyles} onClick={setExpanded(false)}>{this.props.labels.showLess}</button>
+          : <button className={buttonStyles} onClick={setExpanded(true)}>{this.props.labels.showAll}</button>
       );
     };
 
@@ -45,11 +45,19 @@ class ExpandableList extends React.Component {
 }
 
 ExpandableList.defaultProps = {
-  itemsVisible: 5
+  itemsVisible: 5,
+  labels: {
+    showAll: 'Show all',
+    showLess: 'Show less'
+  }
 };
 
 ExpandableList.propTypes = {
-  itemsVisible: PropTypes.number
+  itemsVisible: PropTypes.number,
+  labels: PropTypes.shape({
+    showAll: PropTypes.string,
+    showLess: PropTypes.string
+  })
 };
 
 module.exports = ExpandableList;
