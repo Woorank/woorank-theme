@@ -78,6 +78,7 @@ Styleguide Patterns.Navbar
   .icon-chevron-down {
     margin-left: 5px;
     fill: $grey-medium;
+    stroke: $grey-medium;
   }
 
   .icon-email {
@@ -113,9 +114,11 @@ Styleguide Patterns.Navbar
 
       .icon {
         fill: $grey;
+        stroke: $grey;
 
         &.icon-email {
           fill: $grey-smoke;
+          stroke: $grey-smoke;
         }
       }
 
@@ -123,9 +126,11 @@ Styleguide Patterns.Navbar
       &:focus {
         .icon {
           fill: $grey;
+          stroke: $grey;
 
           &.icon-email {
             fill: $white;
+            stroke: $white;
           }
         }
       }
@@ -195,6 +200,7 @@ Styleguide Patterns.Navbar
       &:focus {
         .navbar-icon-email {
           fill: $white;
+          stroke: $white;
         }
       }
     }
@@ -266,6 +272,7 @@ Styleguide Patterns.Navbar
 
           .icon {
             fill: $white;
+            stroke: $white;
           }
         }
       }
@@ -293,6 +300,7 @@ Styleguide Patterns.Navbar
   .toggle-genbar {
     .icon-add {
       fill: $primary;
+      stroke: $primary;
     }
   }
 
