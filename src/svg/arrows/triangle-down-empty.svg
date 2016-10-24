@@ -4,7 +4,8 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
 	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g id="Outline_Icons">
-	<polygon stroke-linejoin="round" stroke-miterlimit="10" points="
-		23.501,21.5 0.501,21.5 12.001,2.5 	"/>
+	<polygon fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="0.501,2.5
+		23.501,2.5 12.001,21.5 	"/>
 </g>
+
 </svg>
