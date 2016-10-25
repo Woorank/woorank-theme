@@ -1,0 +1,23 @@
+/*
+Network
+
+Markup:
+<svg class="icon {{modifier_class}} fill-grey-medium" data-toggle="tooltip" title="#{{modifier_class}}">
+  <use xlink:href="{{{iconPath}}}#{{modifier_class}}"></use>
+</svg>
+
+backlinks        - Backlinks
+broken-redirect  - CRAWLER Broken Redirect
+crawl_errors     - Crawl Errors
+http-status      - CRAWLER HTTP Status
+indexation       - CRAWLER Indexation
+redirect-chain   - CRAWLER Redirect Chain
+redirect-loop    - CRAWLER Redirect Loop
+simple-redirect  - CRAWLER Simple Redire
+hreflang         - CRAWLER HREF Language
+traffic          - Traffic
+
+Weight: 2
+
+Styleguide Icons.Network
+*/
