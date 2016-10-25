@@ -6,6 +6,7 @@
   var $sidebarNav = $('.sidebar-nav');
 
   window.prettyPrint();
+  window.svg4everybody();
 
   function togglePanel (status) {
     if (status) {

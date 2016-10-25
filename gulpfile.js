@@ -198,7 +198,11 @@ gulp.task('svg:build', function () {
   return gulp.src(path.join(paths.svg, '**', '*.svg'))
     .pipe(svgmin({
       plugins: [{
-        cleanupIDs: true
+        cleanupIDs: true,
+        removeUselessStrokeAndFill: true,
+        mergePaths: true,
+        removeUnknownsAndDefaults: false,
+        cleanupEnableBackground: true
       }]
     }))
     .pipe(gulp.dest(path.join(paths.build.svg)));
@@ -227,7 +231,9 @@ gulp.task('svg-sprite:build', function () {
             { removeUselessStrokeAndFill: true },
             { cleanupIDs: false },
             { mergePaths: true },
-            { removeUnknownsAndDefaults: false }
+            { removeUnknownsAndDefaults: false },
+            { cleanupEnableBackground: true },
+            { removeStyleElement: true }
           ]
         }}
     ],

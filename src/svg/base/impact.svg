@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-  <svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-    <g stroke="none" fill-rule="evenodd">
-      <path d="M4 0C1.79 0 0 1.79 0 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4m0 6.5C2.62 6.5 1.5 5.38 1.5 4S2.62 1.5 4 1.5 6.5 2.62 6.5 4 5.38 6.5 4 6.5"/>
-      <circle cx="4" cy="4" r="1.375"/>
-    </g>
-  </svg>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
+	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g id="Outline_Icons_1_">
+	<g id="Outline_Icons">
+		<g>
+			<path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M23.5,17.912
+				c0,0.877-0.671,1.588-1.5,1.588H2c-0.828,0-1.5-0.711-1.5-1.588V3.088C0.5,2.211,1.172,1.5,2,1.5h20c0.829,0,1.5,0.711,1.5,1.588
+				V17.912z"/>
+
+				<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="5" y1="21.5" x2="19" y2="21.5"/>
+
+				<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="12" y1="19.5" x2="12" y2="21.5"/>
+			<circle fill="none"  stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="17.5" r="0.5"/>
+			<line fill="none"  stroke-linejoin="round" stroke-miterlimit="10" x1="0.5" y1="15.5" x2="23.5" y2="15.5"/>
+
+      <polyline fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="0.5,9.5
+			4.5,9.5 6.5,6.5 8.5,9.5 10.5,5 13.5,13 16,3 18,9.5 23.5,9.5"/>
+		</g>
+	</g>
+</g>
+</svg>
