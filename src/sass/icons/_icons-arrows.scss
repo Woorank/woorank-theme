@@ -2,7 +2,7 @@
 Arrows
 
 Markup:
-<svg class="icon icon-sm {{modifier_class}} fill-grey-medium" data-toggle="tooltip" title="#{{modifier_class}}">
+<svg class="icon {{modifier_class}} fill-grey-medium" data-toggle="tooltip" title="#{{modifier_class}}">
   <use xlink:href="{{{iconPath}}}#{{modifier_class}}"></use>
 </svg>
 
