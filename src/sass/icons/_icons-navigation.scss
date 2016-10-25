@@ -2,7 +2,7 @@
 Navigation
 
 Markup:
-<svg class="icon icon-sm fill-grey-medium {{modifier_class}}" data-toggle="tooltip" title="#{{modifier_class}}">
+<svg class="icon fill-grey-medium {{modifier_class}}" data-toggle="tooltip" title="#{{modifier_class}}">
   <use xlink:href="{{{iconPath}}}#{{modifier_class}}"></use>
 </svg>
 
@@ -30,7 +30,7 @@ reload             - Reload
 save-settings      - Save settings
 search             - Search
 tools              - Tools
-Trash              - Trash bin
+trash              - Trash bin
 
 Weight: 2
 
