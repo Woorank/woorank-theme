@@ -5,6 +5,7 @@ machine:
 dependencies:
   override:
     - npm install
+    - npm install webpack@1.13.2 # Workaround for the issue https://github.com/npm/npm/issues/10057
     - cd woo-components && npm install && cd ..
     - npm run build
 
