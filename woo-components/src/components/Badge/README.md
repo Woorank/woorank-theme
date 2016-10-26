@@ -5,7 +5,7 @@ Example:
     <div>
     {
       [0,1,2,3,10,11,100,110,'abc','and something different'].map(i =>
-        <Badge key={i} value={i.toString()} style={{ margin: '5px' }}>
+        <Badge key={i} style={{ margin: '5px' }}>
           {i.toString()}
         </Badge>)
     }
@@ -66,10 +66,10 @@ With an Icon
 Badge supports icons right out of the box, just wrap them inside!
 
     <div style={{ display: 'flex', alignItems: 'center' }}>
-      <Badge style={{ margin: '5px', fontSize: '32px', color: '#d3860c' }}>
+      <Badge style={{ margin: '5px', color: '#d3860c' }}>
         <Icon type='reload' />
       </Badge>
-      <Badge style={{ margin: '5px', fontSize: '32px' }}>
+      <Badge style={{ margin: '5px' }}>
         <Icon type='gear' />
       </Badge>
     </div>
