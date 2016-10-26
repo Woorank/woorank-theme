@@ -1,6 +1,7 @@
 var path = require('path');
 module.exports = {
   title: 'Woo-components',
+  template: './src/index.html',
   components: './src/components/**/*.jsx',
   updateWebpackConfig: function (webpackConfig, env) {
     const dir = path.join(__dirname, 'src');
@@ -12,8 +13,8 @@ module.exports = {
         loader: 'babel',
         query: {
           babelrc: false,
-          presets: ['es2015', 'react', 'react-hmre'],
-        },
+          presets: ['es2015', 'react', 'react-hmre']
+        }
       },
       {
         test: /\.scss$/,
