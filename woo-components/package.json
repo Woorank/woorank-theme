@@ -1,6 +1,6 @@
 {
   "name": "woo-components",
-  "version": "7.12.0",
+  "version": "7.13.0",
   "description": "Woo-components",
   "main": "dist/index.js",
   "scripts": {
@@ -25,6 +25,7 @@
     "node-sass": "^3.9.3",
     "react-styleguidist": "^3.1.1",
     "sass-loader": "^4.0.1",
-    "url-loader": "^0.5.7"
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2"
   }
 }
