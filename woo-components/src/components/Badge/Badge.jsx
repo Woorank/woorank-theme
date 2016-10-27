@@ -6,13 +6,12 @@ class Badge extends React.Component {
     const customStyles = this.props.style || {};
 
     return (
-      <span style={customStyles} className='woo-badge'>{this.props.value}</span>
+      <span style={customStyles} className='woo-badge'>{this.props.children}</span>
     );
   }
 }
 
 Badge.propTypes = {
-  value: PropTypes.string.isRequired,
   style: PropTypes.object
 };
 
