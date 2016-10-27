@@ -6,23 +6,23 @@ Markup:
   <ul class="nav-section">
     <li class="active">
       <a href="#">
-        <svg class="icon icon-xs"><use xlink:href="#arrow-up"></use></svg>
+        <svg class="icon icon-xs"><use xlink:href="{{{iconPath}}}#arrow-up"></use></svg>
         Dashboard
-        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="#chevron-right"></use></svg>
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="{{{iconPath}}}#chevron-right"></use></svg>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon icon-xs"><use xlink:href="#time"></use></svg>
+        <svg class="icon icon-xs"><use xlink:href="{{{iconPath}}}#time"></use></svg>
         Latest Changes
-        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="#chevron-right"></use></svg>
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="{{{iconPath}}}#chevron-right"></use></svg>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon icon-xs"><use xlink:href="#checked"></use></svg>
+        <svg class="icon icon-xs"><use xlink:href="{{{iconPath}}}#checked"></use></svg>
         Marketing Plan
-        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="#chevron-right"></use></svg>
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="{{{iconPath}}}#chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -34,30 +34,30 @@ Markup:
     </li>
     <li>
       <a href="#">
-        <svg class="icon icon-xs"><use xlink:href="#search"></use></svg>
+        <svg class="icon icon-xs"><use xlink:href="{{{iconPath}}}#search"></use></svg>
         SEO
-        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="#chevron-right"></use></svg>
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="{{{iconPath}}}#chevron-right"></use></svg>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon icon-xs"><use xlink:href="#mobile"></use></svg>
+        <svg class="icon icon-xs"><use xlink:href="{{{iconPath}}}#mobile"></use></svg>
         Mobile
-        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="#chevron-right"></use></svg>
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="{{{iconPath}}}#chevron-right"></use></svg>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon icon-xs"><use xlink:href="#usability"></use></svg>
+        <svg class="icon icon-xs"><use xlink:href="{{{iconPath}}}#usability"></use></svg>
         Usability
-        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="#chevron-right"></use></svg>
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="{{{iconPath}}}#chevron-right"></use></svg>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon icon-xs"><use xlink:href="#technologies"></use></svg>
+        <svg class="icon icon-xs"><use xlink:href="{{{iconPath}}}#technologies"></use></svg>
         Technologies
-        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="#chevron-right"></use></svg>
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="{{{iconPath}}}#chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -69,23 +69,23 @@ Markup:
     </li>
     <li>
       <a href="#">
-        <svg class="icon icon-xs"><use xlink:href="#links"></use></svg>
+        <svg class="icon icon-xs"><use xlink:href="{{{iconPath}}}#links"></use></svg>
         Backlinks
-        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="#chevron-right"></use></svg>
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="{{{iconPath}}}#chevron-right"></use></svg>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon icon-xs"><use xlink:href="#social"></use></svg>
+        <svg class="icon icon-xs"><use xlink:href="{{{iconPath}}}#social"></use></svg>
         Social
-        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="#chevron-right"></use></svg>
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="{{{iconPath}}}#chevron-right"></use></svg>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon icon-xs"><use xlink:href="#local"></use></svg>
+        <svg class="icon icon-xs"><use xlink:href="{{{iconPath}}}#local"></use></svg>
         Local
-        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="#chevron-right"></use></svg>
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="{{{iconPath}}}#chevron-right"></use></svg>
       </a>
     </li>
   </ul>
@@ -97,25 +97,25 @@ Markup:
     </li>
     <li>
       <a href="#">
-        <svg class="icon icon-xs"><use xlink:href="#hashtag"></use></svg>
+        <svg class="icon icon-xs"><use xlink:href="{{{iconPath}}}#hashtag"></use></svg>
         Search Ranking
-        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="#chevron-right"></use></svg>
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="{{{iconPath}}}#chevron-right"></use></svg>
       </a>
     </li>
     <li>
       <a href="#">
-        <svg class="icon icon-xs"><use xlink:href="#visitors"></use></svg>
+        <svg class="icon icon-xs"><use xlink:href="{{{iconPath}}}#visitors"></use></svg>
         Visitors
-        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="#chevron-right"></use></svg>
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="{{{iconPath}}}#chevron-right"></use></svg>
       </a>
     </li>
   </ul>
   <ul>
     <li>
       <a href="#">
-        <svg class="icon icon-xs"><use xlink:href="#folder"></use></svg>
+        <svg class="icon icon-xs"><use xlink:href="{{{iconPath}}}#folder"></use></svg>
         Internal Pages
-        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="#chevron-right"></use></svg>
+        <svg class="icon icon-xs icon-hidden pull-right"><use xlink:href="{{{iconPath}}}#chevron-right"></use></svg>
       </a>
     </li>
   </ul>

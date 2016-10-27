@@ -6,8 +6,8 @@ Markup:
   <div class="col-xs-12 col-sm-4">
     <!-- As a static element -->
     <div class="call-to-action">
-      <svg class="icon icon-say-hi icon-lg" role="img">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#say-hi"></use>
+      <svg class="icon icon-say-hi icon-2x" role="img">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{{iconPath}}}#say-hi"></use>
       </svg>
       <p>Hi there!<br/>
         In order to improve the tool, we'd like to get to know you better.
@@ -18,8 +18,8 @@ Markup:
   <div class="col-xs-12 col-sm-4">
     <!-- As a button element -->
     <button class="btn btn-default call-to-action">
-      <svg class="icon icon-life-buoy-colourfull icon-lg" role="img">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#life-buoy-colourfull"></use>
+      <svg class="icon icon-life-buoy-colourfull icon-2x" role="img">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{{iconPath}}}#life-buoy-colourfull"></use>
       </svg>
       <p>Hi there!<br/>
         In order to improve the tool, we'd like to get to know you better.
@@ -30,8 +30,8 @@ Markup:
     <!-- As a button element -->
     <div class="call-to-action">
       <h6 class="h4 call-to-action-title">Call To Action</h6>
-      <svg class="icon icon-one-website-colourfull icon-lg" role="img">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#one-website-colourfull"></use>
+      <svg class="icon icon-one-website-colourfull icon-2x" role="img">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{{iconPath}}}#one-website-colourfull"></use>
       </svg>
       <p>Hi there!<br/>
         In order to improve the tool, we'd like to get to know you better.

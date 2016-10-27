@@ -8,7 +8,7 @@ Markup:
     <div class="modal-header">
       <span class="close" data-dismiss="modal" aria-hidden="true">
         <svg class="icon icon-cross">
-          <use xlink:href="#cross"></use>
+          <use xlink:href="{{{iconPath}}}#cross"></use>
         </svg>
       </span>
       <p class="modal-title">Modal title</p>

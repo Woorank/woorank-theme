@@ -13,6 +13,7 @@ icon-normal  - Normal
 icon-lg      - Lg
 icon-2x      - 2x
 icon-3x      - 3x
+icon-4x      - 4x
 
 Weight: 6
 
@@ -20,13 +21,14 @@ Styleguide Icons.Icons-Sizes
 */
 
 $iconsSizes:
-  ('xs', 16),
-  ('sm', 20),
-  ('md', 24),
-  ('normal', 32),
-  ('lg', 48),
-  ('2x', 64),
-  ('3x', 128);
+  ('xs', 13),
+  ('sm', 16),
+  ('md', 20),
+  ('normal', 24),
+  ('lg', 32),
+  ('2x', 48),
+  ('3x', 64),
+  ('4x', 128);
 
 .icon {
   background-image: none;
@@ -34,6 +36,8 @@ $iconsSizes:
   height: 24px;
   vertical-align: middle;
   width: 24px;
+  fill: $grey-medium;
+  stroke: $grey-medium;
 
   @each $name, $size in $iconsSizes {
     &.icon-#{$name} {
