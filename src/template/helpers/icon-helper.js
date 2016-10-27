@@ -4,7 +4,7 @@ module.exports.register = function (handlebars) {
       return 'assets/svg/symbols.svg';
     },
     iconSize: function () {
-      return 'icon-sm';
+      return 'icon-normal';
     },
     iconColor: function () {
       return 'grey-medium';

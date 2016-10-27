@@ -3,7 +3,10 @@ Glyph
 
 Woorank Logo Glyph Icon
 
-Markup: ../sections/icon-markup.hbs
+Markup:
+<svg class="icon icon-2x fill-grey {{modifier_class}}" data-toggle="tooltip" title="#{{modifier_class}}">
+  <use xlink:href="{{{iconPath}}}#{{modifier_class}}"></use>
+</svg>
 
 logo-glyph         - Colored Woorank Logo Glyph
 logo-glyph-nocolor - Uncolored Woorank Logo Glyph
