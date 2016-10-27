@@ -1,10 +1,7 @@
 /*
 Technology
 
-Markup:
-<svg class="icon {{modifier_class}} fill-grey-medium" data-toggle="tooltip" title="#{{modifier_class}}">
-  <use xlink:href="{{{iconPath}}}#{{modifier_class}}"></use>
-</svg>
+Markup: ../sections/icon-markup.hbs
 
 asset-css        - CRAWLER CSS
 asset-img        - CRAWLER IMG
@@ -13,6 +10,7 @@ asset-misc       - CRAWLER MISCELANEOUS
 asset-pdf        - CRAWLER PDF
 asset-php        - CRAWLER PHP
 asset-settings   - CRAWLER SETTINGS
+asset-slides     - Asset slides
 canonical        - CRAWLER Canonical
 link             - link
 links            - links

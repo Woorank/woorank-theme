@@ -1,10 +1,7 @@
 /*
 Basics
 
-Markup:
-<svg class="icon {{modifier_class}} fill-grey-medium" data-toggle="tooltip" title="#{{modifier_class}}">
-  <use xlink:href="{{{iconPath}}}#{{modifier_class}}"></use>
-</svg>
+Markup: ../sections/icon-markup.hbs
 
 add-user           - Add user
 add-file           - Add file
