@@ -4,7 +4,7 @@ Button Circle
 Markup:
 <button class="btn btn-circle btn-default">
   <svg class="icon icon-plus fill-grey">
-    <use xlink:href="#plus"></use>
+    <use xlink:href="{{{iconPath}}}#plus"></use>
   </svg>
 </button>
 
