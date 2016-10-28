@@ -6,14 +6,13 @@ Markup:
   <use xlink:href="{{{iconPath}}}#logo-glyph"></use>
 </svg>
 
-icon-xs      - Xs
-icon-sm      - Sm
-icon-md      - Md
-icon-normal  - Normal
-icon-lg      - Lg
-icon-2x      - 2x
-icon-3x      - 3x
-icon-4x      - 4x
+icon-xs      - Extra Small
+icon-sm      - Small
+icon-md      - Medium
+icon-lg      - Large
+icon-2x      - 2x large
+icon-3x      - 3x large
+icon-4x      - 4x large
 
 Weight: 13
 
@@ -24,7 +23,6 @@ $iconsSizes:
   ('xs', 13),
   ('sm', 16),
   ('md', 20),
-  ('normal', 24),
   ('lg', 32),
   ('2x', 48),
   ('3x', 64),
@@ -65,7 +63,7 @@ $iconsSizes:
   backface-visibility: hidden;
   &:hover{
     transform: scale(2, 2) translatey(20%);
-    fill: $primary !important;
-    stroke: $primary !important;
+    fill: $primary !important; // Override fill color for further detail
+    stroke: $primary !important; // Override stroke color for further detail
   }
 }
