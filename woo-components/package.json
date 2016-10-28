@@ -1,6 +1,6 @@
 {
   "name": "woo-components",
-  "version": "7.13.1",
+  "version": "7.13.2",
   "description": "Woo-components",
   "main": "dist/index.js",
   "scripts": {
