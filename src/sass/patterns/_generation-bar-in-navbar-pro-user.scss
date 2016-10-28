@@ -15,10 +15,10 @@ Markup:
           <button type="button" class="btn btn-link btn-xs options-btn js-options-btn">
             <span class="options-btn-text">Options</span>
             <svg class="icon icon-chevron-down icon-xs closed-icon" role="img">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-down"></use>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{{iconPath}}}#chevron-down"></use>
             </svg>
             <svg class="icon icon-chevron-up icon-xs opened-icon" role="img">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-up"></use>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{{iconPath}}}#chevron-up"></use>
             </svg>
           </button>
         </div>
@@ -32,7 +32,7 @@ Markup:
     <div class="options-content js-options-content" id="gen-inputs-container" style="display:block;position:relative;">
       <button type="button" class="btn btn-close" title="Close" tabindex="7">
         <svg class="icon icon-cross icon-xs" role="img">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cross"></use>
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{{iconPath}}}#cross"></use>
         </svg>
       </button>
       <label class="add-competitors-title">Add competitors</label>

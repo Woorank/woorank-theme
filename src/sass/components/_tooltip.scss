@@ -13,7 +13,7 @@ Markup:
     Tooltip
     <button class="close">
       <svg class="icon icon-cross">
-        <use xlink:href="#cross"></use>
+        <use xlink:href="{{{iconPath}}}#cross"></use>
       </svg>
     </button>
   </div>

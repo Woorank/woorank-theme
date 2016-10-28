@@ -24,12 +24,12 @@ Markup:
       <td>Another feature</td>
       <td>
         <svg class="icon icon-cross">
-          <use xlink:href="#cross"></use>
+          <use xlink:href="{{{iconPath}}}#cross" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
         </svg>
       </td>
       <td>
         <svg class="icon icon-check">
-          <use xlink:href="#check"></use>
+          <use xlink:href="{{{iconPath}}}#check" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
         </svg>
       </td>
     </tr>
@@ -42,12 +42,12 @@ Markup:
       <td>Integrated Feature</td>
       <td>
         <svg class="icon icon-cross">
-          <use xlink:href="#cross"></use>
+          <use xlink:href="{{{iconPath}}}#cross" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
         </svg>
       </td>
       <td>
         <svg class="icon icon-check">
-          <use xlink:href="#check"></use>
+          <use xlink:href="{{{iconPath}}}#check" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
         </svg>
       </td>
     </tr>

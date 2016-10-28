@@ -7,13 +7,13 @@ Markup:
     <a href="#" class="direction-label">
       Normal state
       <svg class="icon icon-arrow-up-down">
-        <use xlink:href="#arrow-up-down"></use>
+        <use xlink:href="{{{iconPath}}}#arrow-up-down"></use>
       </svg>
       <svg class="icon icon-arrow-up">
-        <use xlink:href="#arrow-up"></use>
+        <use xlink:href="{{{iconPath}}}#arrow-up"></use>
       </svg>
       <svg class="icon icon-arrow-down">
-        <use xlink:href="#arrow-down"></use>
+        <use xlink:href="{{{iconPath}}}#arrow-down"></use>
       </svg>
     </a>
   </div>
@@ -21,13 +21,13 @@ Markup:
     <a href="#" class="direction-label down">
       Sort
       <svg class="icon icon-arrow-up-down">
-        <use xlink:href="#arrow-up-down"></use>
+        <use xlink:href="{{{iconPath}}}#arrow-up-down"></use>
       </svg>
       <svg class="icon icon-arrow-up">
-        <use xlink:href="#arrow-up"></use>
+        <use xlink:href="{{{iconPath}}}#arrow-up"></use>
       </svg>
       <svg class="icon icon-arrow-down">
-        <use xlink:href="#arrow-down"></use>
+        <use xlink:href="{{{iconPath}}}#arrow-down"></use>
       </svg>
     </a>
   </div>
@@ -35,13 +35,13 @@ Markup:
     <a href="#" class="direction-label up">
       Reverse sort
       <svg class="icon icon-arrow-up-down">
-        <use xlink:href="#arrow-up-down"></use>
+        <use xlink:href="{{{iconPath}}}#arrow-up-down"></use>
       </svg>
       <svg class="icon icon-arrow-up">
-        <use xlink:href="#arrow-up"></use>
+        <use xlink:href="{{{iconPath}}}#arrow-up"></use>
       </svg>
       <svg class="icon icon-arrow-down">
-        <use xlink:href="#arrow-down"></use>
+        <use xlink:href="{{{iconPath}}}#arrow-down"></use>
       </svg>
     </a>
   </div>

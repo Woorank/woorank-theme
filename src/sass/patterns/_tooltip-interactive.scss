@@ -9,7 +9,7 @@ Markup:
   <div class="tooltip-inner">
     <button class="btn btn-default tooltip-right-btn">
       <svg class="icon chevron-right">
-        <use xlink:href="#chevron-right"></use>
+        <use xlink:href="{{{iconPath}}}#chevron-right"></use>
       </svg>
       <span class="tooltip-info-btn">20/30</span>
     </button>
@@ -23,7 +23,7 @@ Markup:
   <div class="tooltip-inner">
     <button class="btn btn-black tooltip-right-btn">
       <svg class="icon chevron-right">
-        <use xlink:href="#chevron-right"></use>
+        <use xlink:href="{{{iconPath}}}#chevron-right"></use>
       </svg>
       <span class="tooltip-info-btn">20/30</span>
     </button>
@@ -37,7 +37,7 @@ Markup:
   <div class="tooltip-inner">
     <button class="btn btn-primary tooltip-right-btn">
       <svg class="icon chevron-right">
-        <use xlink:href="#chevron-right"></use>
+        <use xlink:href="{{{iconPath}}}#chevron-right"></use>
       </svg>
       <span class="tooltip-info-btn">20/30</span>
     </button>
