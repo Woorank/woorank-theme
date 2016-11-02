@@ -3,6 +3,7 @@ module.exports = {
   title: 'Woo-components',
   template: './src/index.html',
   components: './src/components/**/*.jsx',
+  assetsDir: './public',
   updateWebpackConfig: function (webpackConfig, env) {
     const dir = path.join(__dirname, 'src');
 

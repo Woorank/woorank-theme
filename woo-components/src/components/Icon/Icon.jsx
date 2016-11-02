@@ -15,7 +15,7 @@ class Icon extends React.Component {
     return (
       <svg
         className={classnames('woo-icon icon', iconClasses, extraClass)}
-        dangerouslySetInnerHTML={{ __html: `<use xlink:href="#${type}" />` }} />
+        dangerouslySetInnerHTML={{ __html: `<use xlink:href="assets/symbols.svg#${type}" />` }} />
     );
   }
 }
