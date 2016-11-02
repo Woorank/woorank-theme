@@ -6,38 +6,36 @@ Markup:
   <use xlink:href="{{{iconPath}}}#logo-glyph"></use>
 </svg>
 
-icon-xs      - Xs
-icon-small   - Small
-icon-favicon - Favicon
-icon-normal  - Normal
-icon-medium  - Medium
-icon-sm      - Sm
-icon-md      - Md
-icon-lg      - Lg
-icon-xxl     - Xxl
+icon-xs      - Extra Small
+icon-sm      - Small
+icon-md      - Medium
+icon-lg      - Large
+icon-2x      - 2x large
+icon-3x      - 3x large
+icon-4x      - 4x large
 
-Weight: 6
+Weight: 13
 
 Styleguide Icons.Icons-Sizes
 */
 
 $iconsSizes:
-  ('xs' , 10),
-  ('small', 13),
-  ('favicon', 16),
-  ('normal', 24),
-  ('medium', 25),
-  ('sm', 30),
-  ('md', 60),
-  ('lg', 90),
-  ('xxl', 120);
+  ('xs', 13),
+  ('sm', 16),
+  ('md', 20),
+  ('lg', 32),
+  ('2x', 48),
+  ('3x', 64),
+  ('4x', 128);
 
 .icon {
   background-image: none;
   display: inline-block;
-  height: 20px;
+  height: 24px;
   vertical-align: middle;
-  width: 20px;
+  width: 24px;
+  fill: $grey-medium;
+  stroke: $grey-medium;
 
   @each $name, $size in $iconsSizes {
     &.icon-#{$name} {
@@ -58,11 +56,14 @@ $iconsSizes:
 
 .icon-hover {
   transition: 200ms;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in;
   -webkit-transition: 200ms;
-  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   &:hover{
-    fill: $primary;
-    stroke: $primary;
+    transform: scale(2, 2) translatey(20%);
+    fill: $primary !important; // Override fill color for further detail
+    stroke: $primary !important; // Override stroke color for further detail
   }
 }

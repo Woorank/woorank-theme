@@ -8,7 +8,7 @@ Markup:
   <span class="tag-text">Tag</span>
   <button class="btn btn-close">
     <svg class="icon cross">
-      <use xlink:href="#cross"></use>
+      <use xlink:href="{{{iconPath}}}#cross"></use>
     </svg>
   </button>
 </div>

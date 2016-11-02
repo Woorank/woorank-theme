@@ -7,7 +7,7 @@ Markup:
     <div class="navbar-header">
       <button type="button" class="navbar-toggle navbar-toggle-left" data-target="#header-navigation">menu<span class="caret"></span></button>
       <a class="navbar-brand" href="https://www.woorank.com">
-        <svg class="icon icon-logo"><use xlink:href="#logo"></use></svg>
+        <svg class="icon icon-logo"><use xlink:href="{{{iconPath}}}#logo"></use></svg>
       </a>
     </div>
     <div class="collapse navbar-collapse" id="header-navigation">
@@ -19,7 +19,7 @@ Markup:
           <a href="#" data-toggle="dropdown" class="dropdown-toggle" role="button" aria-expanded="false">
             info@woorank.com
             <svg class="icon icon-xs chevron-down">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-down"></use>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{{iconPath}}}#chevron-down"></use>
             </svg>
           </a>
           <ul class="dropdown-menu" role="menu">
@@ -40,7 +40,7 @@ Markup:
         <li>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
             English  <svg class="icon icon-xs chevron-down">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-down"></use>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{{iconPath}}}#chevron-down"></use>
             </svg>
           </a>
           <ul class="dropdown-menu" role="menu">

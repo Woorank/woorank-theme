@@ -3,10 +3,7 @@ Contextuals
 
 Icon with fixed colors
 
-Markup:
-<svg class="icon icon-md fill-grey {{modifier_class}}" data-toggle="tooltip" title="#{{modifier_class}}">
-  <use xlink:href="{{{iconPath}}}#{{modifier_class}}"></use>
-</svg>
+Markup: ../sections/icon-lg-markup.hbs
 
 checklist                - Checklist (colorfull)
 clipboard                - Clipboard (colorfull)
@@ -26,7 +23,7 @@ sign-success             - Sign Success (colorfull)
 test                     - Test (colorfull)
 wrench-colourfull        - Wrench (colorfull)
 
-Weight: 4
+Weight: 10
 
 Styleguide Icons.Contextuals
 */

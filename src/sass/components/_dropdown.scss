@@ -6,7 +6,7 @@ Markup:
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
     Dropdown
     <svg class="icon icon-chevron-down">
-      <use xlink:href="#chevron-down"></use>
+      <use xlink:href="{{{iconPath}}}#chevron-down"></use>
     </svg>
   </button>
   <ul class="dropdown-menu">
