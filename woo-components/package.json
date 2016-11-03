@@ -24,6 +24,7 @@
     "babel-preset-react-hmre": "^1.1.1",
     "bootstrap-sass": "^3.3.7",
     "file-loader": "^0.9.0",
+    "json-loader": "^0.5.4",
     "node-sass": "^3.9.3",
     "react-styleguidist": "^4.1.0",
     "sass-loader": "^4.0.1",

@@ -33,6 +33,11 @@ module.exports = {
         loader: require.resolve('file-loader') + '?name=../[path][name].[ext]'
       },
       {
+        test: /\.json/,
+        include: path.join(__dirname, './package.json'),
+        loader: 'json'
+      },
+      {
         test: /\.woff$/,
         include: path.join(__dirname, '../src'),
         loader: require.resolve('file-loader') + '?name=../[path][name].[ext]'
