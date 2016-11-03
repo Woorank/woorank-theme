@@ -1,6 +1,6 @@
 {
   "name": "woo-components",
-  "version": "8.0.1-0",
+  "version": "8.1.0",
   "description": "Woo-components",
   "main": "dist/index.js",
   "scripts": {
@@ -12,7 +12,9 @@
     "classnames": "^2.2.5",
     "publish": "0.6.0",
     "react": "^15.3.1",
-    "react-bootstrap": "^0.30.3"
+    "react-bootstrap": "^0.30.3",
+    "react-dom": "^15.3.2",
+    "webpack": "^1.13.3"
   },
   "author": "",
   "license": "ISC",
@@ -22,10 +24,10 @@
     "babel-preset-react-hmre": "^1.1.1",
     "bootstrap-sass": "^3.3.7",
     "file-loader": "^0.9.0",
+    "json-loader": "^0.5.4",
     "node-sass": "^3.9.3",
-    "react-styleguidist": "^3.1.1",
+    "react-styleguidist": "^4.1.0",
     "sass-loader": "^4.0.1",
-    "url-loader": "^0.5.7",
-    "webpack": "^1.13.2"
+    "url-loader": "^0.5.7"
   }
 }
