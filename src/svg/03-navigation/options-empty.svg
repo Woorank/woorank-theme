@@ -7,11 +7,11 @@
 	<g id="Outline_Icons">
 		<g>
 
-				<circle stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="3" r="2.5"/>
+				<circle fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="3" r="2.5"/>
 
-				<circle stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="12" r="2.5"/>
+				<circle fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="12" r="2.5"/>
 
-				<circle stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="21" r="2.5"/>
+				<circle fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="21" r="2.5"/>
 		</g>
 	</g>
 </g>
