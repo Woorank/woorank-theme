@@ -6,28 +6,12 @@
 <g id="Outline_Icons_1_">
 	<g id="Outline_Icons">
 		<g>
-			<g>
-				<path fill="none"  stroke-linejoin="round" stroke-miterlimit="10" d="M18.5,6.976
-					c0,3.604-2.918,6.524-6.518,6.524S5.5,10.462,5.5,6.858c0-3.509,2.753-6.213,6.221-6.353C11.814,0.502,11.908,0.5,12.003,0.5
-					C15.603,0.5,18.5,3.372,18.5,6.976z"/>
-				<path fill="none"  stroke-linejoin="round" stroke-miterlimit="10" d="M11.721,0.506
-					c-3.392,3.674-3.392,8.467,0,12.989"/>
-				<path fill="none"  stroke-linejoin="round" stroke-miterlimit="10" d="M12.285,0.506
-					c3.392,3.674,3.392,8.466,0,12.987"/>
-
-					<line fill="none"  stroke-linejoin="round" stroke-miterlimit="10" x1="6.574" y1="10.5" x2="17.468" y2="10.5"/>
-				<line fill="none"  stroke-linejoin="round" stroke-miterlimit="10" x1="6.453" y1="3.5" x2="17.496" y2="3.5"/>
-				<line fill="none"  stroke-linejoin="round" stroke-miterlimit="10" x1="5.5" y1="7" x2="18.5" y2="7"/>
-			</g>
-
-				<circle fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="4.5" cy="17.015" r="2.5"/>
-
-				<circle fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="17.015" r="2.5"/>
-
-				<circle fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="19.5" cy="17.015" r="2.5"/>
-			<path fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M19.5,19.507
-				c-1.733,0-3.194,1.112-3.75,2.654c-0.556-1.542-2.017-2.648-3.75-2.648s-3.194,1.109-3.75,2.65
-				c-0.556-1.541-2.017-2.656-3.75-2.656c-2.21,0-4,1.993-4,3.993h23C23.5,21.5,21.71,19.507,19.5,19.507z"/>
+			<path fill="none" stroke-linejoin="round" stroke-miterlimit="10" d="M7.919,21.5H15.5c0,0,0-3,0-4.5
+				c0-0.5-3-2-5.5-3v-2c0,0,1-0.35,1-2.5c0.695,0,1-2,0.032-2c0-0.212,0.766-1.308,0.468-2.5C11,3,6,3,5.5,5
+				C3.395,4.569,5,7.212,5,7.5c-1,0-0.696,2,0,2C5,11.65,6,12,6,12v2c-2.5,1-5.5,2.5-5.5,3c0,1,0,4.5,0,4.5H7.919z"/>
+			<path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M18,21.5h5.5
+				c0,0,0-3.301,0-4.5c0-0.5-2.5-1.2-4.5-2v-1.5c0,0,1-0.28,1-2c0.557,0,0.774-2,0-2c0-0.169,0.811-1.067,0.5-2C20,6,16,6,15.5,7.5
+				c-1.685-0.345-0.5,1.77-0.5,2c-0.8,0-0.557,2,0,2c0,1.72,1,2,1,2v1"/>
 		</g>
 	</g>
 </g>

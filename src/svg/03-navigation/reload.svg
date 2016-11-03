@@ -6,11 +6,10 @@
 <g id="Outline_Icons_1_">
 	<g id="Outline_Icons">
 		<g>
-			<polyline fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+			<polyline fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
 				1.5,8.994 4.5,13.494 8,9.494 			"/>
-			<path fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M4.531,13.432
-				C3.78,7.217,8.406,2.694,13.649,2.5c5.243-0.191,9.65,3.902,9.844,9.145c0.192,5.244-3.901,9.65-9.145,9.844
-				c-3.942,0.145-7.41-2.133-8.973-5.502"/>
+			<path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M14,21.5
+				c5.247,0,9.5-4.252,9.5-9.5c0-5.246-4.253-9.5-9.5-9.5S4.5,6.754,4.5,12v1.494"/>
 		</g>
 	</g>
 </g>
