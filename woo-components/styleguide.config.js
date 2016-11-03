@@ -3,6 +3,7 @@ module.exports = {
   title: 'Woo-components',
   template: './src/index.html',
   components: './src/components/**/*.jsx',
+  assetsDir: './public',
   updateWebpackConfig: function (webpackConfig, env) {
     const dir = path.join(__dirname, 'src');
 
@@ -30,6 +31,11 @@ module.exports = {
         test: /\.svg$/,
         include: path.join(__dirname, '../src'),
         loader: require.resolve('file-loader') + '?name=../[path][name].[ext]'
+      },
+      {
+        test: /\.json/,
+        include: path.join(__dirname, './package.json'),
+        loader: 'json'
       },
       {
         test: /\.woff$/,
