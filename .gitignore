@@ -7,3 +7,4 @@ build
 woo-components/dist
 npm-debug.log
 .lvimrc
+yarn.lock
