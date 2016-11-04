@@ -5,10 +5,11 @@ var testVersion = require('./testVersion');
 
 var pkg = require('./package');
 var deployingVersion = pkg.version;
+var testPath = '/woorank-theme/' + deployingVersion + '/woorank-theme.min.css';
 
 var deployCmd = 'aws s3 sync --acl public-read ./styleguide/build s3://' + process.env.BUCKET_NAME;
 
-testVersion(deployingVersion, function (alreadyExists) {
+testVersion(process.env.CDN_HOST, testPath, function (alreadyExists) {
   if (!alreadyExists) {
     exec(deployCmd, function (error) {
       if (error) {
