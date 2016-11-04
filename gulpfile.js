@@ -260,7 +260,11 @@ gulp.task('svg2png', function () {
 gulp.task('s3', function (callback) {
   var testVersion = require('./testVersion');
   var version = require('./package').version;
-  testVersion(version, function (exists) {
+
+  var host = 'styleguide.woorank.com';
+  var testPath = `/build/${version}/woorank-theme.min.css`;
+
+  testVersion(host, testPath, function (exists) {
     var awsConfig = require('./awsConfig');
 
     if (exists) {
