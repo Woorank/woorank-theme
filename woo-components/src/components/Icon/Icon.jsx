@@ -27,16 +27,13 @@ Icon.propTypes = {
   assetPath: PropTypes.string,
   type: PropTypes.string.isRequired,
   size: PropTypes.oneOf([
-    'xxs',
-    'xs',
-    'small',
-    'favicon',
-    'normal',
-    'medium',
-    'sm',
-    'md',
-    'lg',
-    'xxl'
+    'xs', // 13px
+    'sm', // 16px
+    'md', // 20px
+    'lg', // 32px
+    '2x', // 48px
+    '3x', // 64px
+    '4x'  // 128px
   ]),
   fill: PropTypes.string,
   extraClass: PropTypes.string
