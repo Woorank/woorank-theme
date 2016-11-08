@@ -6,6 +6,7 @@ Markup:
   <use xlink:href="{{{iconPath}}}#logo-glyph"></use>
 </svg>
 
+icon-xxs     - 2x Small
 icon-xs      - Extra Small
 icon-sm      - Small
 icon-md      - Medium
@@ -20,6 +21,7 @@ Styleguide Icons.Icons-Sizes
 */
 
 $iconsSizes:
+  ('xxs', 10),
   ('xs', 13),
   ('sm', 16),
   ('md', 20),
