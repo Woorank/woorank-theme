@@ -1,0 +1,33 @@
+/*
+Pager
+
+Markup:
+<h4>Add <span class="label label-primary">woopager</label>.</h4>
+<nav aria-label="...">
+  <ul class="woopager">
+    <li><a href="#">Previous</a></li>
+    <li><a href="#">Next</a></li>
+  </ul>
+</nav>
+<h4>Add <span class="label label-primary">previous</span> and <span class="label label-primary">previous</span> to align each link to the sides.</h4>
+<nav aria-label="...">
+  <ul class="woopager">
+    <li class="previous"><a href="#">Previous</a></li>
+    <li class="next"><a href="#">Next</a></li>
+  </ul>
+
+</nav>
+
+Styleguide Components.pager
+*/
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_pager.scss';
+
+.woopager {
+  @extend .pager;
+  li{
+    >a,
+    >span{
+      border-radius: 0;
+    }
+  }
+}
