@@ -1,8 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
-	 height="24px" viewBox="0 0 24 24">
-	<g>
-		<polyline fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-	23.5,0.5 7,23.5 0.5,17"/>
-	</g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <path stroke-width="0" d="M23.576.183c-.452-.318-1.075-.21-1.393.242L7.367 21.452l-5.66-5.66c-.39-.39-1.024-.39-1.414 0-.39.393-.39 1.026 0 1.414l6.5 6.5c.188.19.443.294.707.294.318 0 .627-.153.817-.424l15.5-22c.318-.453.21-1.076-.24-1.393z"/>
 </svg>
