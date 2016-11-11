@@ -28,5 +28,9 @@
     background-color: $error-smoke;
     color: $error-dark;
   }
+
+  &.no-background {
+    background-color: transparent;
+  }
 }
 
