@@ -11,7 +11,7 @@ class Label extends React.Component {
       `woo-label-${this.props.style}`,
       this.props.noBackground ? 'no-background' : ''
     );
-    return <span {...omit(this.props, 'style')} className={classes} />;
+    return <span {...omit(this.props, ['style', 'noBackground'])} className={classes} />;
   }
 }
 
