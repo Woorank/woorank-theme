@@ -36,8 +36,6 @@ $iconsSizes:
   height: 24px;
   vertical-align: middle;
   width: 24px;
-  fill: $grey-medium;
-  stroke: $grey-medium;
 
   @each $name, $size in $iconsSizes {
     &.icon-#{$name} {
@@ -65,7 +63,5 @@ $iconsSizes:
   backface-visibility: hidden;
   &:hover{
     transform: scale(2, 2) translatey(20%);
-    fill: $primary !important; // Override fill color for further detail
-    stroke: $primary !important; // Override stroke color for further detail
   }
 }
