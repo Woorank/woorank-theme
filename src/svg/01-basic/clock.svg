@@ -6,11 +6,17 @@
 <g id="Outline_Icons_1_">
 	<g id="Outline_Icons">
 		<g>
-
-				<circle fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="12" r="11.5"/>
-			<polyline fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-				11.5,6.5 11.5,12 17.5,17.5 			"/>
+			<g>
+				<path d="M12,24C5.383,24,0,18.617,0,12S5.383,0,12,0s12,5.383,12,12S18.617,24,12,24z M12,1C5.935,1,1,5.935,1,12
+					c0,6.066,4.935,11,11,11s11-4.934,11-11C23,5.935,18.065,1,12,1z"/>
+			</g>
+			<g>
+				<path d="M17.162,17.869l-6-5.5C11.059,12.274,11,12.14,11,12V6.5C11,6.224,11.224,6,11.5,6S12,6.224,12,6.5v5.28l5.838,5.351
+					c0.204,0.187,0.217,0.503,0.031,0.707C17.681,18.042,17.366,18.055,17.162,17.869z"/>
+			</g>
 		</g>
+	</g>
+	<g id="New_icons_1_">
 	</g>
 </g>
 </svg>

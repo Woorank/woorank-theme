@@ -4,12 +4,12 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
 	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g id="Outline_Icons_1_">
-	<g id="Outline_Icons">
-		<g>
-			<polygon fill="none"  stroke-linejoin="round" stroke-miterlimit="10" points="23.5,15.016 15.015,23.5
-				0.508,8.994 0.5,0.5 8.992,0.5 			"/>
-			<circle fill="none"  stroke-linejoin="round" stroke-miterlimit="10" cx="5.5" cy="5.5" r="2"/>
-		</g>
+	<g>
+		<path d="M23.854,14.662L9.346,0.146C9.252,0.053,9.125,0,8.992,0H0.5C0.223,0,0,0.226,0,0.5l0.008,8.494
+			c0,0.133,0.053,0.26,0.146,0.354l14.507,14.506c0.195,0.195,0.512,0.195,0.707,0l8.485-8.484
+			C24.049,15.174,24.049,14.857,23.854,14.662z M15.015,22.793L1.008,8.787L1,1h7.785l14.008,14.016L15.015,22.793z"/>
+		<path d="M5.5,3C4.121,3,3,4.121,3,5.5S4.121,8,5.5,8S8,6.879,8,5.5S6.879,3,5.5,3z M5.5,7C4.673,7,4,6.327,4,5.5S4.673,4,5.5,4
+			S7,4.673,7,5.5S6.327,7,5.5,7z"/>
 	</g>
 </g>
 </svg>

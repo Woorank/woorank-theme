@@ -5,29 +5,14 @@
 	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g id="Outline_Icons">
 	<g>
-		<g>
-			<circle fill="none"  stroke-linejoin="round" stroke-miterlimit="10" cx="17.5" cy="17.5" r="6"/>
-
-				<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="15" y1="17.5" x2="20" y2="17.5"/>
-
-				<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="17.5" y1="20" x2="17.5" y2="15"/>
-		</g>
-		<g>
-
-				<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="3.5" y1="6.5" x2="8" y2="6.5"/>
-
-				<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="3.5" y1="9.5" x2="11.5" y2="9.5"/>
-
-				<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="3.5" y1="12.5" x2="9.5" y2="12.5"/>
-
-				<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="3.5" y1="15.5" x2="8.5" y2="15.5"/>
-			<g>
-				<polyline fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-					10.5,21.5 0.5,21.5 0.5,0.5 11.5,0.5 16.5,5.5 16.5,9.5 				"/>
-				<polyline fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-					11.5,0.5 11.5,5.5 16.5,5.5 				"/>
-			</g>
-		</g>
+		<path d="M17.5,11c-3.584,0-6.5,2.916-6.5,6.5c0,3.584,2.916,6.5,6.5,6.5s6.5-2.916,6.5-6.5C24,13.916,21.084,11,17.5,11z M17.5,23
+			c-3.033,0-5.5-2.467-5.5-5.5s2.467-5.5,5.5-5.5s5.5,2.467,5.5,5.5S20.533,23,17.5,23z"/>
+		<path d="M20,17h-2v-2c0-0.276-0.224-0.5-0.5-0.5S17,14.724,17,15v2h-2c-0.276,0-0.5,0.224-0.5,0.5S14.724,18,15,18h2v2
+			c0,0.276,0.224,0.5,0.5,0.5S18,20.276,18,20v-2h2c0.276,0,0.5-0.224,0.5-0.5S20.276,17,20,17z"/>
+		<path d="M10.5,21H1V1h10v4.5C11,5.776,11.224,6,11.5,6H16v3.5c0,0.276,0.224,0.5,0.5,0.5S17,9.776,17,9.5v-4
+			c0-0.067-0.014-0.132-0.039-0.192c-0.025-0.061-0.062-0.116-0.108-0.162l-4.999-4.999c-0.046-0.045-0.101-0.083-0.162-0.107
+			C11.632,0.014,11.567,0,11.5,0h-11C0.224,0,0,0.224,0,0.5v21C0,21.776,0.224,22,0.5,22h10c0.276,0,0.5-0.224,0.5-0.5
+			S10.776,21,10.5,21z M12,1.707L15.293,5H12V1.707z"/>
 	</g>
 </g>
 </svg>
