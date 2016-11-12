@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g fill="none" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M19 19H1V1M19 24l5-5-5-5"/>
-		<path d="M6 19V1"/>
-  </g>
+
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Woorank-Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(1.000000, 1.000000)" fill="#D8D8D8">
+            <path d="M6,17.027027 L14,17.027027 L14,18 L5.75671198e-17,18 L0,0 L1.03703704,0 L1.03703704,17.027027 L5,17.027027 L5,0 L6,0 L6,17.027027 Z M11,22.2735503 L11.7000295,23 L17,17.5 L11.7000295,12 L11,12.7264497 L15.5999411,17.5 L11,22.2735503 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
 </svg>

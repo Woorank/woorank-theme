@@ -1,10 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-    <path d="M19.5 23.5H.5V.5h13l6 6z"/>
-    <path d="M13.5.5v6h6"/>
-  </g>
-  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-    <path d="M8.5 18.5v-5M11.5 18.5v-5M8.5 16.5h3"/>
-  </g>
-  <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M3.5 18.5v-5h1.25c.69 0 1.25.56 1.25 1.25S5.44 16 4.75 16H3.5M13.5 18.5v-5h1.25c.69 0 1.25.56 1.25 1.25S15.44 16 14.75 16H13.5"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
+	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g id="Outline_Icons">
+	<g>
+		<path d="M19.961,6.308c-0.025-0.062-0.062-0.115-0.108-0.162l-5.998-5.999c-0.046-0.045-0.101-0.082-0.162-0.107
+			C13.632,0.014,13.566,0,13.5,0h-13C0.224,0,0,0.224,0,0.5v23C0,23.776,0.224,24,0.5,24h19c0.276,0,0.5-0.224,0.5-0.5v-17
+			C20,6.434,19.986,6.368,19.961,6.308z M14,1.707L18.293,6H14V1.707z M1,23V1h12v5.5C13,6.776,13.224,7,13.5,7H19v16H1z"/>
+		<path d="M11.5,13c-0.276,0-0.5,0.224-0.5,0.5V16H9v-2.5C9,13.224,8.776,13,8.5,13S8,13.224,8,13.5v5C8,18.776,8.224,19,8.5,19
+			S9,18.776,9,18.5V17h2v1.5c0,0.276,0.224,0.5,0.5,0.5s0.5-0.224,0.5-0.5v-5C12,13.224,11.776,13,11.5,13z"/>
+		<path d="M4.75,13H3.5C3.224,13,3,13.224,3,13.5v5C3,18.776,3.224,19,3.5,19S4,18.776,4,18.5v-2h0.75c0.965,0,1.75-0.785,1.75-1.75
+			S5.715,13,4.75,13z M4.75,15.5H4V14h0.75c0.413,0,0.75,0.337,0.75,0.75S5.163,15.5,4.75,15.5z"/>
+		<path d="M14.75,13H13.5c-0.276,0-0.5,0.224-0.5,0.5v5c0,0.276,0.224,0.5,0.5,0.5s0.5-0.224,0.5-0.5v-2h0.75
+			c0.965,0,1.75-0.785,1.75-1.75S15.715,13,14.75,13z M14.75,15.5H14V14h0.75c0.413,0,0.75,0.337,0.75,0.75S15.163,15.5,14.75,15.5z
+			"/>
+	</g>
+</g>
 </svg>

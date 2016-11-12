@@ -2,9 +2,13 @@
 <!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
-	 height="24px" viewBox="0 0 24 24">
-	<g  stroke-width="2">
-		<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="0.5" y1="0.5" x2="23.5" y2="23.5"/>
-		<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="23.5" y1="0.5" x2="0.5" y2="23.5"/>
+	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g id="Outline_Icons_1_">
+	<g id="Outline_Icons">
+		<path d="M12.707,12L23.854,0.854c0.195-0.195,0.195-0.512,0-0.707s-0.512-0.195-0.707,0L12,11.293L0.854,0.146
+			c-0.195-0.195-0.512-0.195-0.707,0s-0.195,0.512,0,0.707L11.293,12L0.146,23.146c-0.195,0.195-0.195,0.512,0,0.707
+			c0.195,0.195,0.512,0.195,0.707,0L12,12.707l11.146,11.147c0.195,0.195,0.512,0.195,0.707,0c0.195-0.195,0.195-0.512,0-0.707
+			L12.707,12z"/>
 	</g>
+</g>
 </svg>

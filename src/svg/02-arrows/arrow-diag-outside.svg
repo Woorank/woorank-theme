@@ -4,19 +4,11 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
 	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g id="Outline_Icons_1_">
-	<g id="Outline_Icons">
-		<g>
-
-				<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="23.5" y1="0.5" x2="14" y2="10"/>
-
-				<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="10" y1="14" x2="0.5" y2="23.5"/>
-			<polyline fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="17,0.5
-				23.5,0.5 23.5,7 			"/>
-			<polyline fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="0.5,17
-				0.5,23.5 7,23.5 			"/>
-		</g>
+	<g>
+		<path d="M9.646,13.646L1,22.293V17c0-0.276-0.224-0.5-0.5-0.5S0,16.724,0,17v6.5C0,23.776,0.224,24,0.5,24H7
+			c0.276,0,0.5-0.224,0.5-0.5S7.276,23,7,23H1.707l8.646-8.646c0.195-0.195,0.195-0.512,0-0.707S9.842,13.451,9.646,13.646z"/>
+		<path d="M23.5,0H17c-0.276,0-0.5,0.224-0.5,0.5S16.724,1,17,1h5.293l-8.646,8.646c-0.195,0.195-0.195,0.512,0,0.707
+			s0.512,0.195,0.707,0L23,1.707V7c0,0.276,0.224,0.5,0.5,0.5S24,7.276,24,7V0.5C24,0.224,23.776,0,23.5,0z"/>
 	</g>
-
 </g>
-
 </svg>

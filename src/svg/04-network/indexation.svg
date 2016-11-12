@@ -1,20 +1,31 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <g fill="none" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M.5 5.5h23v6H.5zm0 0l6-5h11l6 5"/>
-    <circle cx="14" cy="8.5" r=".5"/>
-    <circle cx="17" cy="8.5" r=".5"/>
-    <circle cx="20" cy="8.5" r=".5"/>
-    <circle cx="3.5" cy="8.5" r="1"/>
-    <path d="M.5 11.5v6h23v-6"/>
-    <circle cx="14" cy="14.5" r=".5"/>
-    <circle cx="17" cy="14.5" r=".5"/>
-    <circle cx="20" cy="14.5" r=".5"/>
-    <circle cx="3.5" cy="14.5" r="1"/>
-    <path d="M23.5 17.5v4c0 1.1-.9 2-2 2h-19c-1.1 0-2-.9-2-2v-4"/>
-    <circle cx="14" cy="20.5" r=".5"/>
-    <circle cx="17" cy="20.5" r=".5"/>
-    <circle cx="20" cy="20.5" r=".5"/>
-    <circle cx="3.5" cy="20.5" r="1"/>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
+	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g id="Outline_Icons_1_">
+	<g id="Outline_Icons">
+		<g>
+			<path d="M23.82,5.116l-6-5C17.73,0.041,17.617,0,17.5,0h-11C6.383,0,6.27,0.041,6.18,0.116l-6,5C0.065,5.211,0,5.352,0,5.5v6v6v4
+				C0,22.879,1.121,24,2.5,24h19c1.379,0,2.5-1.121,2.5-2.5v-4v-6v-6C24,5.352,23.935,5.211,23.82,5.116z M23,6v5H1V6H23z M1,12h22
+				v5H1V12z M6.681,1h10.639l4.8,4H1.881L6.681,1z M21.5,23h-19C1.673,23,1,22.327,1,21.5V18h22v3.5C23,22.327,22.327,23,21.5,23z"
+				/>
+			<circle cx="14" cy="8.5" r="1"/>
+			<circle cx="17" cy="8.5" r="1"/>
+			<circle cx="20" cy="8.5" r="1"/>
+			<path d="M3.5,10C4.327,10,5,9.327,5,8.5S4.327,7,3.5,7S2,7.673,2,8.5S2.673,10,3.5,10z M3.5,8C3.775,8,4,8.225,4,8.5
+				S3.775,9,3.5,9S3,8.775,3,8.5S3.225,8,3.5,8z"/>
+			<circle cx="14" cy="14.5" r="1"/>
+			<circle cx="17" cy="14.5" r="1"/>
+			<circle cx="20" cy="14.5" r="1"/>
+			<path d="M3.5,13C2.673,13,2,13.673,2,14.5S2.673,16,3.5,16S5,15.327,5,14.5S4.327,13,3.5,13z M3.5,15C3.225,15,3,14.775,3,14.5
+				S3.225,14,3.5,14S4,14.225,4,14.5S3.775,15,3.5,15z"/>
+			<circle cx="14" cy="20.5" r="1"/>
+			<circle cx="17" cy="20.5" r="1"/>
+			<circle cx="20" cy="20.5" r="1"/>
+			<path d="M3.5,19C2.673,19,2,19.673,2,20.5S2.673,22,3.5,22S5,21.327,5,20.5S4.327,19,3.5,19z M3.5,21C3.225,21,3,20.775,3,20.5
+				S3.225,20,3.5,20S4,20.225,4,20.5S3.775,21,3.5,21z"/>
+		</g>
+	</g>
+</g>
 </svg>

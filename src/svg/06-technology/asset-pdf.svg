@@ -4,19 +4,16 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
 	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g id="Outline_Icons">
-	<polyline fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15.5,0.5
-		15.5,6.5 21.5,6.5 	"/>
 	<g>
-		<polygon fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="21.5,23.5
-			2.5,23.5 2.5,0.5 15.5,0.5 21.5,6.5 		"/>
-		<path fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M11.5,18.5v-5h1
-			c1.152,0,2,1.068,2,2.5s-0.848,2.5-2,2.5H11.5z"/>
-		<polyline fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-			16.5,18.5 16.5,13.5 19,13.5 		"/>
-
-			<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="16.5" y1="15.5" x2="18" y2="15.5"/>
-		<path fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M6.5,18.499V13.5
-			h1.25C8.44,13.5,9,14.059,9,14.75C9,15.439,8.44,16,7.75,16H6.5"/>
+		<path d="M21.961,6.308c-0.025-0.062-0.062-0.116-0.108-0.161l-5.999-6c-0.046-0.045-0.101-0.082-0.162-0.107
+			C15.632,0.014,15.567,0,15.5,0h-13C2.224,0,2,0.224,2,0.5v23C2,23.776,2.224,24,2.5,24h19c0.276,0,0.5-0.224,0.5-0.5v-17
+			C22,6.434,21.986,6.368,21.961,6.308z M16,1.707L20.293,6H16V1.707z M3,23V1h12v5.5C15,6.776,15.224,7,15.5,7H21v16H3z"/>
+		<path d="M12.5,13h-1c-0.276,0-0.5,0.224-0.5,0.5v5c0,0.276,0.224,0.5,0.5,0.5h1c1.425,0,2.5-1.29,2.5-3S13.925,13,12.5,13z
+			 M12.5,18H12v-4h0.5c0.869,0,1.5,0.841,1.5,2S13.369,18,12.5,18z"/>
+		<path d="M19,13h-2.5c-0.276,0-0.5,0.224-0.5,0.5v5c0,0.276,0.224,0.5,0.5,0.5s0.5-0.224,0.5-0.5V16h1c0.276,0,0.5-0.224,0.5-0.5
+			S18.276,15,18,15h-1v-1h2c0.276,0,0.5-0.224,0.5-0.5S19.276,13,19,13z"/>
+		<path d="M7.75,13H6.5C6.224,13,6,13.224,6,13.5v4.999c0,0.276,0.224,0.5,0.5,0.5s0.5-0.224,0.5-0.5V16.5h0.75
+			c0.965,0,1.75-0.785,1.75-1.75S8.715,13,7.75,13z M7.75,15.5H7V14h0.75c0.414,0,0.75,0.337,0.75,0.75S8.164,15.5,7.75,15.5z"/>
 	</g>
 </g>
 </svg>

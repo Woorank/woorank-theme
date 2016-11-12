@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
+	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g id="Outline_Icons_1_">
 	<g id="Outline_Icons">
-		<g>
-			<line fill="none"  stroke-linecap="square" stroke-linejoin="round" stroke-miterlimit="10" x1="11.5" y1="5.501" x2="11.5" y2="18.501"/>
-			<rect x="4.5" y="1.501" fill="none"  stroke-linejoin="round" stroke-miterlimit="10" width="15" height="4"/>
-			<rect x="9.5" y="18.501" fill="none"  stroke-linejoin="round" stroke-miterlimit="10" width="5" height="5"/>
-			<rect x="0.5" y="18.501" fill="none"  stroke-linejoin="round" stroke-miterlimit="10" width="5" height="5"/>
-			<rect x="18.5" y="18.501" fill="none"  stroke-linejoin="round" stroke-miterlimit="10" width="5" height="5"/>
-			<polyline fill="none"  stroke-linecap="square" stroke-linejoin="round" stroke-miterlimit="10" points="
-				20.5,18.501 20.5,12.501 3.5,12.501 3.5,18.501"/>
-		</g>
+		<path d="M23.5,18.001H21v-5.5c0-0.276-0.224-0.5-0.5-0.5h-8v-6h7c0.276,0,0.5-0.224,0.5-0.5v-4c0-0.276-0.224-0.5-0.5-0.5h-15
+			c-0.276,0-0.5,0.224-0.5,0.5v4c0,0.276,0.224,0.5,0.5,0.5h7v6h-8c-0.276,0-0.5,0.224-0.5,0.5v5.5H0.5c-0.276,0-0.5,0.224-0.5,0.5
+			v5c0,0.276,0.224,0.5,0.5,0.5h5c0.276,0,0.5-0.224,0.5-0.5v-5c0-0.276-0.224-0.5-0.5-0.5H4v-5h7.5v5h-2
+			c-0.276,0-0.5,0.224-0.5,0.5v5c0,0.276,0.224,0.5,0.5,0.5h5c0.276,0,0.5-0.224,0.5-0.5v-5c0-0.276-0.224-0.5-0.5-0.5h-2v-5H20v5
+			h-1.5c-0.276,0-0.5,0.224-0.5,0.5v5c0,0.276,0.224,0.5,0.5,0.5h5c0.276,0,0.5-0.224,0.5-0.5v-5
+			C24,18.225,23.776,18.001,23.5,18.001z M5,5.001v-3h14v3h-6.5V5h-1v0.001H5z M5,19.001v4H1v-4h2h1H5z M14,23.001h-4v-4h4V23.001z
+			 M23,23.001h-4v-4h1h1h2V23.001z"/>
 	</g>
+</g>
 </svg>
