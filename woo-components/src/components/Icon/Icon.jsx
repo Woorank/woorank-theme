@@ -27,6 +27,7 @@ Icon.propTypes = {
   assetPath: PropTypes.string,
   type: PropTypes.string.isRequired,
   size: PropTypes.oneOf([
+    'xxs',// 10px
     'xs', // 13px
     'sm', // 16px
     'md', // 20px
