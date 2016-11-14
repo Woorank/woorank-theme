@@ -5,24 +5,17 @@
 	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g id="Outline_Icons">
 	<g>
-		<polyline fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-			7.219,13.5 0.5,13.5 0.5,10.5 7.203,10.5 		"/>
-		<polyline fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-			13.5,16.766 13.5,23.5 10.5,23.5 10.5,16.766 		"/>
-		<polyline fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-			16.766,10.5 23.5,10.5 23.5,13.5 16.75,13.5 		"/>
-		<polyline fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-			10.5,7.219 10.5,0.5 13.5,0.5 13.5,7.234 		"/>
-
-			<circle fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="12" r="5"/>
-		<path fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M13.5,1.607
-			c4.598,0.659,8.235,4.294,8.893,8.893"/>
-		<path fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M1.605,10.5
-			C2.264,5.901,5.9,2.266,10.5,1.607"/>
-		<path fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M10.5,22.394
-			C5.9,21.737,2.264,18.1,1.605,13.5"/>
-		<path fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M22.393,13.5
-			c-0.657,4.6-4.295,8.237-8.893,8.894"/>
+		<path d="M23.5,10h-0.692C21.987,5.548,18.453,2.015,14,1.191V0.5C14,0.224,13.776,0,13.5,0h-3C10.224,0,10,0.224,10,0.5v0.691
+			C5.547,2.014,2.012,5.548,1.19,10H0.5C0.224,10,0,10.224,0,10.5v3C0,13.776,0.224,14,0.5,14h0.69
+			c0.822,4.454,4.356,7.988,8.81,8.809V23.5c0,0.276,0.224,0.5,0.5,0.5h3c0.276,0,0.5-0.224,0.5-0.5v-0.691
+			c4.453-0.821,7.986-4.356,8.808-8.809H23.5c0.276,0,0.5-0.224,0.5-0.5v-3C24,10.224,23.776,10,23.5,10z M21.791,10h-4.673
+			C16.559,8.575,15.425,7.441,14,6.882V2.208C17.903,3.005,20.997,6.099,21.791,10z M12,16.5c-2.481,0-4.5-2.018-4.5-4.5
+			c0-2.481,2.019-4.5,4.5-4.5s4.5,2.019,4.5,4.5C16.5,14.482,14.481,16.5,12,16.5z M13,1v5.596C12.675,6.536,12.342,6.5,12,6.5
+			s-0.675,0.036-1,0.096V1H13z M10,2.208v4.674C8.575,7.441,7.441,8.575,6.882,10H2.207C3.002,6.099,6.097,3.004,10,2.208z M1,11
+			h5.596C6.535,11.325,6.5,11.659,6.5,12c0,0.342,0.035,0.675,0.096,1H1V11z M2.207,14h4.675c0.56,1.425,1.693,2.559,3.118,3.119
+			v4.674C6.098,20.998,3.002,17.904,2.207,14z M11,23v-5.596c0.325,0.06,0.658,0.096,1,0.096s0.675-0.036,1-0.096V23H11z M14,21.792
+			v-4.674c1.425-0.56,2.559-1.694,3.118-3.119h4.673C20.997,17.903,17.902,20.998,14,21.792z M23,13h-5.596
+			c0.061-0.325,0.096-0.658,0.096-1c0-0.341-0.035-0.675-0.096-1H23V13z"/>
 	</g>
 </g>
 </svg>

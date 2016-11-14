@@ -85,6 +85,7 @@ gulp.task('watch', function () {
   gulp.watch(path.join(paths.sass.kss, '**', '*.scss'), ['kss']);
   gulp.watch(path.join(paths.template, '**', '*.html'), ['kss']);
   gulp.watch(path.join(paths.svg, '**', '*.svg'), ['kss']);
+  gulp.watch(path.join(paths.svg, '**', '*.svg'), ['svg:build']);
 });
 
 gulp.task('connect', function () {

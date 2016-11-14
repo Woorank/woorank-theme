@@ -5,15 +5,13 @@
 	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g id="Outline_Icons">
 	<g>
-		<path fill="none"  stroke-linejoin="round" stroke-miterlimit="10" d="M23.5,19.5c0,2.209-1.791,4-4,4h-15
-			c-2.209,0-4-1.791-4-4v-15c0-2.209,1.791-4,4-4h15c2.209,0,4,1.791,4,4V19.5z"/>
-		<line fill="none"  stroke-linejoin="round" stroke-miterlimit="10" x1="0.5" y1="8.5" x2="7.705" y2="8.5"/>
-		<line fill="none"  stroke-linejoin="round" stroke-miterlimit="10" x1="16.27" y1="8.5" x2="23.524" y2="8.5"/>
-		<circle fill="none"  stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="12" r="5.5"/>
-		<rect x="18.5" y="3.5" fill="none"  stroke-linejoin="round" stroke-miterlimit="10" width="3" height="3"/>
-		<line fill="none"  stroke-linejoin="round" stroke-miterlimit="10" x1="2.5" y1="1" x2="2.5" y2="8.5"/>
-		<line fill="none"  stroke-linejoin="round" stroke-miterlimit="10" x1="4.5" y1="0.5" x2="4.5" y2="8.5"/>
-		<line fill="none"  stroke-linejoin="round" stroke-miterlimit="10" x1="6.5" y1="0.5" x2="6.5" y2="8.5"/>
+		<path d="M19.5,0h-15C2.019,0,0,2.019,0,4.5v15C0,21.982,2.019,24,4.5,24h15c2.481,0,4.5-2.018,4.5-4.5v-15
+			C24,2.019,21.981,0,19.5,0z M23,4.5V8h-6.541C15.36,6.776,13.771,6,12,6S8.64,6.776,7.541,8H7V1h12.5C21.43,1,23,2.57,23,4.5z
+			 M12,7c2.757,0,5,2.243,5,5s-2.243,5-5,5s-5-2.243-5-5S9.243,7,12,7z M3,1.352c0.312-0.149,0.646-0.25,1-0.301V8H3V1.352z M5,1h1
+			v7H5V1z M2,2.058V8H1V4.5C1,3.55,1.383,2.69,2,2.058z M19.5,23h-15C2.57,23,1,21.43,1,19.5V9h5.812C6.299,9.884,6,10.907,6,12
+			c0,3.309,2.691,6,6,6s6-2.691,6-6c0-1.093-0.299-2.116-0.812-3H23v10.5C23,21.43,21.43,23,19.5,23z"/>
+		<path d="M18.5,7h3C21.776,7,22,6.776,22,6.5v-3C22,3.224,21.776,3,21.5,3h-3C18.224,3,18,3.224,18,3.5v3C18,6.776,18.224,7,18.5,7
+			z M19,4h2v2h-2V4z"/>
 	</g>
 </g>
 </svg>

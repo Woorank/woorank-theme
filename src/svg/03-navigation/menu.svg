@@ -6,22 +6,10 @@
 <g id="Outline_Icons_1_">
 	<g id="Outline_Icons">
 		<g>
-			<g>
-
-					<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="19" y1="5.5" x2="4.043" y2="5.5"/>
-			</g>
-			<g>
-
-					<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="19" y1="9.5" x2="4.043" y2="9.5"/>
-			</g>
-			<g>
-
-					<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="19" y1="13.5" x2="4.043" y2="13.5"/>
-			</g>
-			<g>
-
-					<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="19" y1="17.5" x2="4.043" y2="17.5"/>
-			</g>
+			<path d="M4.043,6H19c0.276,0,0.5-0.224,0.5-0.5S19.276,5,19,5H4.043c-0.276,0-0.5,0.224-0.5,0.5S3.767,6,4.043,6z"/>
+			<path d="M19,9H4.043c-0.276,0-0.5,0.224-0.5,0.5s0.224,0.5,0.5,0.5H19c0.276,0,0.5-0.224,0.5-0.5S19.276,9,19,9z"/>
+			<path d="M19,13H4.043c-0.276,0-0.5,0.224-0.5,0.5s0.224,0.5,0.5,0.5H19c0.276,0,0.5-0.224,0.5-0.5S19.276,13,19,13z"/>
+			<path d="M19,17H4.043c-0.276,0-0.5,0.224-0.5,0.5s0.224,0.5,0.5,0.5H19c0.276,0,0.5-0.224,0.5-0.5S19.276,17,19,17z"/>
 		</g>
 	</g>
 </g>

@@ -26,8 +26,7 @@ Styleguide Colors.Helpers
     color: $colorValue;
   }
   .fill-#{$color} {
-    fill: $colorValue !important; // Force default to avoid fill override on SVG.
-    stroke: $colorValue !important; // Force default to avoid stroke override on SVG.
+    fill: $colorValue;
   }
   .background-#{$color} {
     background-color: $colorValue;

@@ -4,12 +4,9 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
 	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g id="Outline_Icons">
-	<g>
-		<polyline fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="5.5,5.5
-			10.5,0.5 15.5,5.5 		"/>
-
-			<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="10.5" y1="0.5" x2="10.5" y2="23.5"/>
-	</g>
+	<path d="M22.875,12.674l-11-12.5c-0.003-0.004-0.008-0.005-0.012-0.008c-0.091-0.099-0.219-0.162-0.364-0.162
+		s-0.272,0.063-0.364,0.162c-0.003,0.003-0.008,0.004-0.011,0.008l-11,12.5c-0.182,0.207-0.162,0.523,0.045,0.705
+		c0.207,0.183,0.522,0.163,0.706-0.045L11,1.829v21.675c0,0.276,0.224,0.5,0.5,0.5s0.5-0.224,0.5-0.5V1.829l10.125,11.505
+		c0.099,0.112,0.237,0.17,0.375,0.17c0.118,0,0.235-0.041,0.33-0.125C23.038,13.197,23.058,12.881,22.875,12.674z"/>
 </g>
-
 </svg>

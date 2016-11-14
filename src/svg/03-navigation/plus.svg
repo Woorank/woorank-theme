@@ -3,14 +3,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
 	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<g id="Outline_Icons_1_">
-	<g id="Outline_Icons">
-		<g>
-
-				<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="11.5" y1="0.5" x2="11.5" y2="22.5"/>
-
-				<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="22.5" y1="11.5" x2="0.5" y2="11.5"/>
-		</g>
-	</g>
+<g id="Outline_Icons">
+	<path d="M22.5,11H12V0.5C12,0.224,11.776,0,11.5,0S11,0.224,11,0.5V11H0.5C0.224,11,0,11.224,0,11.5S0.224,12,0.5,12H11v10.5
+		c0,0.276,0.224,0.5,0.5,0.5s0.5-0.224,0.5-0.5V12h10.5c0.276,0,0.5-0.224,0.5-0.5S22.776,11,22.5,11z"/>
 </g>
 </svg>

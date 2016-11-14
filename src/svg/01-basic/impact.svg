@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-  <g fill="none" stroke-width="2">
-    <circle cx="11.5" cy="11.5" r="10.5"/>
-    <circle cx="11.5" cy="11.5" r="4.5"/>
-  </g>
+
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Woorank-Icon" stroke="none" fill-rule="evenodd">
+        <path d="M12,23.5 C18.3512746,23.5 23.5,18.3512746 23.5,12 C23.5,5.64872538 18.3512746,0.5 12,0.5 C5.64872538,0.5 0.5,5.64872538 0.5,12 C0.5,18.3512746 5.64872538,23.5 12,23.5 Z M12,22.5 C6.20101013,22.5 1.5,17.7989899 1.5,12 C1.5,6.20101013 6.20101013,1.5 12,1.5 C17.7989899,1.5 22.5,6.20101013 22.5,12 C22.5,17.7989899 17.7989899,22.5 12,22.5 Z" id="Oval"></path>
+        <path d="M12,17.5 C15.0375661,17.5 17.5,15.0375661 17.5,12 C17.5,8.96243388 15.0375661,6.5 12,6.5 C8.96243388,6.5 6.5,8.96243388 6.5,12 C6.5,15.0375661 8.96243388,17.5 12,17.5 Z M12,16.5 C9.51471863,16.5 7.5,14.4852814 7.5,12 C7.5,9.51471863 9.51471863,7.5 12,7.5 C14.4852814,7.5 16.5,9.51471863 16.5,12 C16.5,14.4852814 14.4852814,16.5 12,16.5 Z" id="Oval-Copy"></path>
+    </g>
 </svg>

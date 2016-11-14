@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
 	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g id="Outline_Icons_1_">
 	<g id="Outline_Icons">
 		<g>
-			<path fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M13.5,14.5
-				c0,1.104,0.896,2,2,2h5c1.65,0,3-1.35,3-3v-2c0-1.65-1.35-3-3-3h-5c-1.104,0-2,0.896-2,2"/>
-			<path fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M10.5,14.5
-				c0,1.104-0.896,2-2,2h-5c-1.65,0-3-1.35-3-3v-2c0-1.65,1.35-3,3-3h5c1.104,0,2,0.896,2,2"/>
-
-				<line fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="6.5" y1="12.5" x2="17.5" y2="12.5"/>
+			<path d="M20.5,8h-5C14.122,8,13,9.122,13,10.5c0,0.276,0.224,0.5,0.5,0.5s0.5-0.224,0.5-0.5C14,9.673,14.673,9,15.5,9h5
+				c1.378,0,2.5,1.122,2.5,2.5v2c0,1.378-1.122,2.5-2.5,2.5h-5c-0.827,0-1.5-0.673-1.5-1.5c0-0.276-0.224-0.5-0.5-0.5
+				S13,14.224,13,14.5c0,1.378,1.122,2.5,2.5,2.5h5c1.93,0,3.5-1.57,3.5-3.5v-2C24,9.57,22.43,8,20.5,8z"/>
+			<path d="M10.5,14c-0.276,0-0.5,0.224-0.5,0.5c0,0.827-0.673,1.5-1.5,1.5h-5C2.122,16,1,14.878,1,13.5v-2C1,10.122,2.122,9,3.5,9
+				h5C9.327,9,10,9.673,10,10.5c0,0.276,0.224,0.5,0.5,0.5s0.5-0.224,0.5-0.5C11,9.122,9.878,8,8.5,8h-5C1.57,8,0,9.57,0,11.5v2
+				C0,15.43,1.57,17,3.5,17h5c1.378,0,2.5-1.122,2.5-2.5C11,14.224,10.776,14,10.5,14z"/>
+			<path d="M6,12.5C6,12.776,6.224,13,6.5,13h11c0.276,0,0.5-0.224,0.5-0.5S17.776,12,17.5,12h-11C6.224,12,6,12.224,6,12.5z"/>
 		</g>
 	</g>
 </g>

@@ -4,9 +4,8 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
 	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g id="Outline_Icons">
-	<g>
-		<path fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M23.499,19.5
-			c0,2.2-1.8,4-4,4h-15c-2.2,0-4-1.8-4-4v-15c0-2.2,1.8-4,4-4h15c2.2,0,4,1.8,4,4V19.5z"/>
-	</g>
+	<path d="M19.499,0h-15c-2.481,0-4.5,2.019-4.5,4.5v15c0,2.481,2.019,4.5,4.5,4.5h15c2.481,0,4.5-2.019,4.5-4.5v-15
+		C23.999,2.019,21.98,0,19.499,0z M22.999,19.5c0,1.93-1.57,3.5-3.5,3.5h-15c-1.93,0-3.5-1.57-3.5-3.5v-15c0-1.93,1.57-3.5,3.5-3.5
+		h15c1.93,0,3.5,1.57,3.5,3.5V19.5z"/>
 </g>
 </svg>

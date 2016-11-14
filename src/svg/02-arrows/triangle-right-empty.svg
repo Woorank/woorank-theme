@@ -4,7 +4,8 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
 	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g id="Outline_Icons">
-	<polygon fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-		2.527,23.505 2.527,0.505 21.5,12.005 	"/>
+	<path d="M21.759,11.577L2.787,0.077C2.631-0.017,2.439-0.02,2.282,0.069S2.027,0.324,2.027,0.505v23
+		c0,0.181,0.097,0.347,0.254,0.436c0.077,0.043,0.161,0.064,0.246,0.064c0.09,0,0.18-0.024,0.259-0.072l18.973-11.5
+		C21.909,12.342,22,12.18,22,12.005S21.909,11.668,21.759,11.577z M3.027,22.617V1.393l17.508,10.612L3.027,22.617z"/>
 </g>
 </svg>
