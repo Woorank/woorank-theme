@@ -65,10 +65,10 @@ gulp.task('default', [
 ]);
 
 gulp.task('dev', [
-  // 'connect',
-  // 'default',
-  'watch'
-  // 'lint-css'
+  'connect',
+  'default',
+  'watch',
+  'lint-css'
 ]);
 
 gulp.task('build', [
@@ -81,10 +81,10 @@ gulp.task('build', [
 ]);
 
 gulp.task('watch', function () {
-  // gulp.watch(path.join(paths.sass.styleguide, '**', '*.*'), ['kss']);
-  // gulp.watch(path.join(paths.sass.kss, '**', '*.scss'), ['kss']);
-  // gulp.watch(path.join(paths.template, '**', '*.html'), ['kss']);
-  // gulp.watch(path.join(paths.svg, '**', '*.svg'), ['kss']);
+  gulp.watch(path.join(paths.sass.styleguide, '**', '*.*'), ['kss']);
+  gulp.watch(path.join(paths.sass.kss, '**', '*.scss'), ['kss']);
+  gulp.watch(path.join(paths.template, '**', '*.html'), ['kss']);
+  gulp.watch(path.join(paths.svg, '**', '*.svg'), ['kss']);
   gulp.watch(path.join(paths.svg, '**', '*.svg'), ['svg:build']);
 });
 
