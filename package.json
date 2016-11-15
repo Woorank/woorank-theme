@@ -35,6 +35,7 @@
     "build": "gulp build",
     "publish": "gulp publish",
     "gulp": "gulp",
+    "postversion": "cd ./woo-components && npm version --no-git-tag-version $(node -e \"console.log(require('../package.json').version)\")",
     "kss": "kss-node --config=kss-config.json"
   },
   "stylelint": {
