@@ -223,7 +223,8 @@ gulp.task('svg-sprite:build', function () {
         generator: function (name) {
           return name.replace(/.svg/g, '').replace(/^.+?[/]/g, '');
         }
-      }
+      },
+      dest: 'icons'
     },
     transform: [
         {svgo: {

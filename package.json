@@ -34,6 +34,7 @@
     "dev": "gulp dev",
     "build": "gulp build",
     "publish": "gulp publish",
+    "gulp": "gulp",
     "kss": "kss-node --config=kss-config.json"
   },
   "stylelint": {
