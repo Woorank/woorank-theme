@@ -8,7 +8,7 @@ class Label extends React.Component {
   render () {
     const classes = classnames(
       'woo-label',
-      `woo-label-${this.props.style}`,
+      this.props.style && `woo-label-${this.props.style}`,
       this.props.noBackground ? 'no-background' : ''
     );
     return <span {...omit(this.props, ['style', 'noBackground'])} className={classes} />;
@@ -27,7 +27,6 @@ Label.propTypes = {
 };
 
 Label.defaultProps = {
-  style: 'default',
   noBackground: false
 };
 
