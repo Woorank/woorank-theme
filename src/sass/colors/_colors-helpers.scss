@@ -16,7 +16,7 @@ Markup:
   </h1>
 </div>
 
-Weight: 3
+Weight: 4
 
 Styleguide Colors.Helpers
 */
@@ -45,6 +45,29 @@ Styleguide Colors.Helpers
 }
 
 @each $color, $colorValue in $thirdPartyColors {
+  .color-#{$color} {
+    color: $colorValue;
+  }
+  .fill-#{$color} {
+    fill: $colorValue;
+  }
+  .background-#{$color} {
+    background-color: $colorValue;
+  }
+
+  // forced colors
+  .color-#{$color}-important {
+    color: $colorValue !important;
+  }
+  .fill-#{$color}-important {
+    fill: $colorValue !important;
+  }
+  .background-#{$color}-important {
+    background-color: $colorValue !important;
+  }
+}
+
+@each $color, $colorValue in $flatColors {
   .color-#{$color} {
     color: $colorValue;
   }

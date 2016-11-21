@@ -1,0 +1,80 @@
+
+/*
+Flat Colors
+
+Flat Design inspired colors
+
+Color pallete based on https://flatuicolors.com/
+
+
+Markup:
+<div class="example-color {{modifier_class}}"></div>
+
+turquoise       #1abc9c - Turquoise
+emerald         #2ecc71 - Emerald
+peter-river     #3498db - Peter River
+amethyst        #9b59b6 - Amethyst
+wet-asphalt     #34495e - Wwet Asphalt
+green-sea       #16a085 - Green Sea
+nephritis       #27ae60 - Nephritis
+belize-hole     #2980b9 - Belize Hole
+wisteria        #8e44ad - $wisteria
+midnight-blue   #2c3e50 - Midnight Blue
+sunflower       #f1c40f - Sunflower
+carrot          #e67e22 - Carrot
+alizarin        #e74c3c - Alizarin
+clouds          #ecf0f1 - Clouds
+concrete        #95a5a6 - Concrete
+orange          #f39c12 - Orange
+pumpkin         #d35400 - Pumpkin
+pomegranate     #c0392b - Pomegranate
+silver          #bdc3c7 - Silver
+asbestos        #7f8c8d - Asbestos
+
+Weight: 2
+
+Styleguide Colors.Flat-Colors
+*/
+
+$turquoise:       #1abc9c;
+$emerald:         #2ecc71;
+$peter-river:     #3498db;
+$amethyst:        #9b59b6;
+$wet-asphalt:     #34495e;
+$green-sea:       #16a085;
+$nephritis:       #27ae60;
+$belize-hole:     #2980b9;
+$wisteria:        #8e44ad;
+$midnight-blue:   #2c3e50;
+$sunflower:       #f1c40f;
+$carrot:          #e67e22;
+$alizarin:        #e74c3c;
+$clouds:          #ecf0f1;
+$concrete:        #95a5a6;
+$orange:          #f39c12;
+$pumpkin:         #d35400;
+$pomegranate:     #c0392b;
+$silver:          #bdc3c7;
+$asbestos:        #7f8c8d;
+
+$flatColors:
+    ('turquoise', $turquoise),
+    ('emerald', $emerald),
+    ('peter-river', $peter-river),
+    ('amethyst', $amethyst),
+    ('wet-asphalt', $wet-asphalt),
+    ('green-sea', $green-sea),
+    ('nephritis', $nephritis),
+    ('belize-hole', $belize-hole),
+    ('wisteria', $wisteria),
+    ('midnight-blue', $midnight-blue),
+    ('sunflower', $sunflower),
+    ('carrot', $carrot),
+    ('alizarin', $alizarin),
+    ('clouds', $clouds),
+    ('concrete', $concrete),
+    ('orange', $orange),
+    ('pumpkin', $pumpkin),
+    ('pomegranate', $pomegranate),
+    ('silver', $silver),
+    ('asbestos', $asbestos);

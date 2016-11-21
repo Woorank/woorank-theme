@@ -104,5 +104,12 @@ Styleguide Patterns.Input-Groups
         background-color: $colorValue;
       }
     }
+
+    @each $color, $colorValue in $flatColors {
+      &.#{$color} {
+        border-color: $colorValue;
+        background-color: $colorValue;
+      }
+    }
   }
 }
