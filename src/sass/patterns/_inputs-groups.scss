@@ -105,7 +105,7 @@ Styleguide Patterns.Input-Groups
       }
     }
 
-    @each $color, $colorValue in $marketingColors {
+    @each $color, $colorValue in $flatColors {
       &.#{$color} {
         border-color: $colorValue;
         background-color: $colorValue;

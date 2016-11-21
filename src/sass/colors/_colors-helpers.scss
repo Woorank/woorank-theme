@@ -16,7 +16,7 @@ Markup:
   </h1>
 </div>
 
-Weight: 3
+Weight: 4
 
 Styleguide Colors.Helpers
 */
@@ -67,7 +67,7 @@ Styleguide Colors.Helpers
   }
 }
 
-@each $color, $colorValue in $marketingColors {
+@each $color, $colorValue in $flatColors {
   .color-#{$color} {
     color: $colorValue;
   }

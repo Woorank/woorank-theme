@@ -81,7 +81,7 @@ div[id^="section-colors"] {
     }
   }
 
-  @each $colorName, $colorValue in $marketingColors {
+  @each $colorName, $colorValue in $flatColors {
     &.#{$colorName} {
       background-color: $colorValue;
       border-color: darken($colorValue, 10%);
