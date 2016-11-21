@@ -66,3 +66,26 @@ Styleguide Colors.Helpers
     background-color: $colorValue !important;
   }
 }
+
+@each $color, $colorValue in $marketingColors {
+  .color-#{$color} {
+    color: $colorValue;
+  }
+  .fill-#{$color} {
+    fill: $colorValue;
+  }
+  .background-#{$color} {
+    background-color: $colorValue;
+  }
+
+  // forced colors
+  .color-#{$color}-important {
+    color: $colorValue !important;
+  }
+  .fill-#{$color}-important {
+    fill: $colorValue !important;
+  }
+  .background-#{$color}-important {
+    background-color: $colorValue !important;
+  }
+}
