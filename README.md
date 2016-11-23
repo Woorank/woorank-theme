@@ -30,12 +30,10 @@ $ docker-compose run --rm styleguide npm run dev
 You should develop your changes in the branches and create a pull request where the last commit is
 setting the new version number according to the [semantic versioning](http://semver.org/).
 
-You can find a helper script in the repository that allows you to easily do this. Just run the following
-command with the severity of your change as an argument. This will create a tag automatically to the
-git and handle all the necessary package.json changes.
+Always use the `npm version` command to update the package:
 
 ```bash
-$ ./bump-version.sh <major|minor|patch>
+$ npm version <major|minor|patch>
 ```
 
 ## Publication of the styleguide
