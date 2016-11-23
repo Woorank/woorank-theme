@@ -2,7 +2,7 @@ const React = require('react');
 const { PropTypes } = React;
 
 const classnames = require('classnames');
-const { omit } = require('lodash');
+const omit = require('lodash/omit');
 
 class Label extends React.Component {
   render () {
