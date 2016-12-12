@@ -19,8 +19,12 @@ body {
     font-weight: $font-weight-light;
   }
 
-  &.navbar-open {
+  &.navbar-open, &.navbar-open-left {
     transform: translateX($mobile-nav-size);
+    overflow: hidden;
+  }
+  &.navbar-open-right {
+    transform: translateX(-$mobile-nav-size);
     overflow: hidden;
   }
 }

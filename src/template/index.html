@@ -36,7 +36,7 @@
           </svg>
         </a>
 
-        <button type="button" class="navbar-toggle navbar-toggle-left collapsed" data-toggle="collapse" data-target="#top-nav-collapse">
+        <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#top-nav-collapse">
           <svg class="icon menu" role="img">
             <use xlink:href="{{iconPath}}#menu"></use>
           </svg>
@@ -54,7 +54,7 @@
         </div>
       </div>
 
-      <div class="navbar-collapse collapse custom-mobile-nav" id="top-nav-collapse" aria-expanded="false">
+      <div class="navbar-collapse collapse-right collapse custom-mobile-nav" id="top-nav-collapse" aria-expanded="false">
         <ul class="nav navbar-nav">
           {{#eachRoot}}
             <li class="{{#ifReference ../rootName}}active{{/ifReference}}">
