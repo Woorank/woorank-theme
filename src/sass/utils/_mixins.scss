@@ -55,3 +55,7 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+@mixin radius($radius) {
+  border-radius: $radius;
+}
