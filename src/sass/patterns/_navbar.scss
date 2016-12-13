@@ -218,6 +218,19 @@ Styleguide Patterns.Navbar
 }
 
 .navbar-collapse {
+  &.collapse-left {
+    @include breakpoint($screen-sm - 1, $reverse: true) {
+      left: -($mobile-nav-size);
+      right: auto;
+    }
+  }
+  &.collapse-right {
+    @include breakpoint($screen-sm - 1, $reverse: true) {
+      right: -($mobile-nav-size);
+      left: auto;
+    }
+  }
+
   @include breakpoint($screen-sm - 1, $reverse: true) {
     -webkit-backface-visibility: hidden;
     @include box-shadow(inset 0 -1px 1px $black);
