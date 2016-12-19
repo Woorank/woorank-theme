@@ -12,14 +12,17 @@ Markup:
     <svg class="icon icon-conversation icon-medium fill-primary">
       <use xlink:href="#conversation"></use>
     </svg>
-    Title with custom icon fill, background and text color.
+    Title with custom icon fill, background, text color
   </h1>
+  <button class="btn btn-turquoise">And Buttons</button>
 </div>
 
 Weight: 4
 
 Styleguide Colors.Helpers
 */
+
+$all-colors: ($colors, $thirdPartyColors, $flatColors);
 
 @each $color, $colorValue in $colors {
   .color-#{$color} {
@@ -29,6 +32,10 @@ Styleguide Colors.Helpers
     fill: $colorValue;
   }
   .background-#{$color} {
+    background-color: $colorValue;
+  }
+  .btn-#{$color} {
+    color: $white;
     background-color: $colorValue;
   }
 
@@ -41,6 +48,10 @@ Styleguide Colors.Helpers
   }
   .background-#{$color}-important {
     background-color: $colorValue !important;
+  }
+  .btn-#{$color}-important {
+    color: $white;
+    background-color: $colorValue;
   }
 }
 
@@ -54,6 +65,10 @@ Styleguide Colors.Helpers
   .background-#{$color} {
     background-color: $colorValue;
   }
+  .btn-#{$color} {
+    color: $white;
+    background-color: $colorValue;
+  }
 
   // forced colors
   .color-#{$color}-important {
@@ -64,6 +79,10 @@ Styleguide Colors.Helpers
   }
   .background-#{$color}-important {
     background-color: $colorValue !important;
+  }
+  .btn-#{$color}-important {
+    color: $white;
+    background-color: $colorValue;
   }
 }
 
@@ -77,6 +96,10 @@ Styleguide Colors.Helpers
   .background-#{$color} {
     background-color: $colorValue;
   }
+  .btn-#{$color} {
+    color: $white;
+    background-color: $colorValue;
+  }
 
   // forced colors
   .color-#{$color}-important {
@@ -87,5 +110,9 @@ Styleguide Colors.Helpers
   }
   .background-#{$color}-important {
     background-color: $colorValue !important;
+  }
+  .btn-#{$color}-important {
+    color: $white;
+    background-color: $colorValue;
   }
 }
