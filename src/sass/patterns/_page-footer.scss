@@ -55,7 +55,7 @@ Styleguide Patterns.Footer-Container
   margin: 40px auto;
   padding: 40px 0;
   @include breakpoint ($screen-sm) {
-    border-top: 1px solid $primary;
+    border-top: 1px solid $grey-light;
   }
 
   ul {
@@ -92,7 +92,7 @@ Styleguide Patterns.Footer-Container
         width: 90%;
         margin: 0 auto 30px auto;
         padding-bottom: 30px;
-        border-bottom: 1px solid $primary;
+        border-bottom: 1px solid $grey-light;
       }
       .icon-logo-nocolor {
         width: 112px;
