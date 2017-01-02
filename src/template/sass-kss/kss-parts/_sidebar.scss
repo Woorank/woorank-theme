@@ -6,7 +6,7 @@
       padding-top: 0;
       position: fixed;
       top: 60px;
-      bottom: 350px;
+      bottom: 250px;
       border-radius: $border-radius-base;
       overflow: auto;
       border-top: 1px solid $border-color;
@@ -16,7 +16,7 @@
     }
 
     .list-group {
-      min-width: 225px;
+      min-width: 235px;
       display: inline-block;
       width: auto;
       margin: -1px auto;
