@@ -27,12 +27,12 @@
 
 <!-- HEADER -->
 <div id="top">
-  <div class="header navbar">
+  <div class="header navbar navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <a href="./" class="navbar-brand">
-          <svg class="icon">
-            <use xlink:href="{{iconPath}}#logo-glyph"></use>
+          <svg class="icon icon-logo">
+            <use xlink:href="{{iconPath}}#logo"></use>
           </svg>
         </a>
 
@@ -225,15 +225,7 @@
 {{/if}}
 </article>
 <!-- END MAIN -->
-
-<footer class="footer text-center">
-  <a href="https://www.woorank.com" title="woorank.com">
-    <svg class="icon icon-logo-glyph-nocolor icon-2x fill-grey">
-      <use xlink:href="{{iconPath}}#logo-glyph-nocolor"></use>
-    </svg>
-  </a>
-</footer>
-
+{{include 'styleguide/structures/footer.html'}}
 <!-- SCRIPTS -->
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
