@@ -1,7 +1,10 @@
 #kss-node {
   article.container {
     overflow: hidden;
-    padding-bottom: 60px;
+    padding: 60px 15px;
+    .left-container {
+      padding-left: 0px;
+    }
 
     .page-header {
       text-align: center;

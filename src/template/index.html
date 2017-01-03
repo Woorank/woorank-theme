@@ -27,12 +27,12 @@
 
 <!-- HEADER -->
 <div id="top">
-  <div class="header navbar">
+  <div class="header navbar navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <a href="./" class="navbar-brand">
-          <svg class="icon">
-            <use xlink:href="{{iconPath}}#logo-glyph"></use>
+          <svg class="icon icon-logo">
+            <use xlink:href="{{iconPath}}#logo"></use>
           </svg>
         </a>
 
@@ -97,7 +97,7 @@
     {{#equal rootName "Structures"}}
       <div class="col-xs-12 structures-container">
     {{else}}
-      <div class="col-xs-12 col-md-9">
+      <div class="col-xs-12 col-md-9 left-container">
     {{/equal}}
 
       {{#eachSection rootName}}
@@ -211,7 +211,7 @@
 
     {{#equal rootName "Structures"}}
     {{else}}
-      <div class="col-md-3 visible-md visible-lg">
+      <div class="col-md-3 visible-md visible-lg right-container">
         <div class="sidebar-nav">
           <div class="list-group">
             {{#eachSection rootName}}
@@ -225,13 +225,144 @@
 {{/if}}
 </article>
 <!-- END MAIN -->
-
-<footer class="footer text-center">
-  <a href="https://www.woorank.com" title="woorank.com">
-    <svg class="icon icon-logo-glyph-nocolor icon-2x fill-grey">
-      <use xlink:href="{{iconPath}}#logo-glyph-nocolor"></use>
-    </svg>
-  </a>
+<footer class="footer-container" id="footer">
+  <ul class="footer-columns">
+    <li class="footer-logo-container">
+      <a class="footer-logo" href="/" title="WooRank | SEO Checker - Website Review">
+        <svg class="icon icon-logo-nocolor fill-grey" role="img">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#logo-nocolor"></use>
+        </svg>
+      </a>
+      <span class="sr-only">Copyright © 2017</span>
+    </li>
+    <li class="footer-menu-container">
+      <div class="footer-menu-columns">
+        <div class="mobile-menu-column">
+          <ul class="footer-menu-column">
+            <li class="footer-menu-title">Company</li>
+            <li>
+              <a href="https://www.woorank.com/en/p/about" target="_blank">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="https://www.woorank.com/en/jobs" target="_blank">
+                Jobs
+              </a>
+            </li>
+            <li>
+              <a href="https://www.woorank.com/en/p/privacy" target="_blank">
+                Privacy
+              </a>
+            </li>
+            <li>
+              <a href="https://www.woorank.com/en/p/tos" target="_blank">
+                Terms of Service
+              </a>
+            </li>
+          </ul>
+          <ul class="footer-menu-column">
+            <li class="footer-menu-title">WooRank</li>
+            <li class="">
+              <a href="https://www.woorank.com/en/p/pricing" target="_blank">
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a href="https://experts.woorank.com/en/experts" target="_blank">
+                Experts
+              </a>
+            </li>
+            <li>
+                <a href="https://index.woorank.com/" target="_blank">
+                  Review Index
+                </a>
+            </li>
+            <li class="hidden">
+              <a href="https://chrome.google.com/webstore/detail/seo-website-analysis/hlngmmdolgbdnnimbmblfhhndibdipaf" class="extension-link" data-url-firefox="https://addons.mozilla.org/en-us/firefox/addon/seo-website-analysis/" data-url-chrome="https://chrome.google.com/webstore/detail/seo-website-analysis/hlngmmdolgbdnnimbmblfhhndibdipaf" target="_blank">
+                Extension
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mobile-menu-column">
+          <ul class="footer-menu-column">
+            <li class="footer-menu-title">Resources</li>
+            <li>
+              <a href="https://www.woorank.com/en/blog" target="_blank">
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="https://www.woorank.com/en/edu/seo-guides" target="_blank">
+                SEO Guides
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/user/WooRankTV" target="_blank">
+                Videos
+              </a>
+            </li>
+          </ul>
+          <ul class="footer-menu-column">
+            <li class="footer-menu-title">Support</li>
+            <!-- Help -->
+            <li>
+              <a href="https://help.woorank.com/hc/en-us" target="_blank">
+                Need Help?
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li class="footer-social-container">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/woorank/" target="_blank" title="Facebook">
+            <svg class="icon icon-facebook icon-xs fill-white" role="img" style="">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/woorank?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" title="Twitter">
+            <svg class="icon icon-twitter icon-xs fill-white" role="img" style="">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/woorank" target="_blank" title="Linked In">
+            <svg class="icon icon-linkedin icon-xs fill-white" role="img" style="">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/user/WooRankTV" target="_blank" title="YouTube">
+            <svg class="icon icon-youtube icon-xs fill-white" role="img" style="">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#youtube"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/woorank/?hl=en" target="_blank" title="Instagram">
+            <svg class="icon icon-instagram icon-xs fill-white" role="img" style="">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://plus.google.com/+woorank" target="_blank" title="Google Plus">
+            <svg class="icon icon-googleplus icon-xs fill-white" role="img" style="">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#googleplus"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </footer>
 
 <!-- SCRIPTS -->

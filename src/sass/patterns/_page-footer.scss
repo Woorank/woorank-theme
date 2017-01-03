@@ -3,61 +3,154 @@ Footer Container
 
 Markup:
 <footer class="footer-container" id="footer">
-    <ul class="footer-columns">
-      <li class="footer-logo-container">
-        <a class="footer-logo" href="#">
-          <svg class="icon icon-logo-nocolor fill-grey" role="img">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{{iconPath}}}#logo-nocolor"></use>
-          </svg>
-        </a>
-        <span class="sr-only">Copyright © 2017</span>
-      </li>
-      <li class="footer-menu-container">
-        <div class="footer-menu-columns">
+  <ul class="footer-columns">
+    <li class="footer-logo-container">
+      <a class="footer-logo" href="/" title="WooRank | SEO Checker - Website Review">
+        <svg class="icon icon-logo-nocolor fill-grey" role="img">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#logo-nocolor"></use>
+        </svg>
+      </a>
+      <span class="sr-only">Copyright © 2017</span>
+    </li>
+    <li class="footer-menu-container">
+      <div class="footer-menu-columns">
+        <div class="mobile-menu-column">
           <ul class="footer-menu-column">
-            <li class="footer-menu-title">Title 1</li>
-            <li><a href="#">Link 1</a></li>
+            <li class="footer-menu-title">Company</li>
+            <li>
+              <a href="https://www.woorank.com/en/p/about" target="_blank">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="https://www.woorank.com/en/jobs" target="_blank">
+                Jobs
+              </a>
+            </li>
+            <li>
+              <a href="https://www.woorank.com/en/p/privacy" target="_blank">
+                Privacy
+              </a>
+            </li>
+            <li>
+              <a href="https://www.woorank.com/en/p/tos" target="_blank">
+                Terms of Service
+              </a>
+            </li>
           </ul>
           <ul class="footer-menu-column">
-            <li class="footer-menu-title">Title 2</li>
-            <li><a href="#">Link 1</a></li>
-          </ul>
-          <ul class="footer-menu-column">
-            <li class="footer-menu-title">Title 3</li>
-            <li><a href="#">Link 1</a></li>
-          </ul>
-          <ul class="footer-menu-column">
-            <li class="footer-menu-title">Title 4</li>
-            <li><a href="#">Link 1</a></li>
+            <li class="footer-menu-title">WooRank</li>
+            <li class="">
+              <a href="https://www.woorank.com/en/p/pricing" target="_blank">
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a href="https://experts.woorank.com/en/experts" target="_blank">
+                Experts
+              </a>
+            </li>
+            <li>
+                <a href="https://index.woorank.com/" target="_blank">
+                  Review Index
+                </a>
+            </li>
+            <li class="hidden">
+              <a href="https://chrome.google.com/webstore/detail/seo-website-analysis/hlngmmdolgbdnnimbmblfhhndibdipaf" class="extension-link" data-url-firefox="https://addons.mozilla.org/en-us/firefox/addon/seo-website-analysis/" data-url-chrome="https://chrome.google.com/webstore/detail/seo-website-analysis/hlngmmdolgbdnnimbmblfhhndibdipaf" target="_blank">
+                Extension
+              </a>
+            </li>
           </ul>
         </div>
-      </li>
-      <li class="footer-social-container">
-        <ul>
-          <li>
-            <a href="https://www.facebook.com/woorank/" target="_blank">
-            FB
-            </a>
-          </li>
-        </ul>
-      </li>
-    </ul>
+        <div class="mobile-menu-column">
+          <ul class="footer-menu-column">
+            <li class="footer-menu-title">Resources</li>
+            <li>
+              <a href="https://www.woorank.com/en/blog" target="_blank">
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="https://www.woorank.com/en/edu/seo-guides" target="_blank">
+                SEO Guides
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/user/WooRankTV" target="_blank">
+                Videos
+              </a>
+            </li>
+          </ul>
+          <ul class="footer-menu-column">
+            <li class="footer-menu-title">Support</li>
+            <!-- Help -->
+            <li>
+              <a href="https://help.woorank.com/hc/en-us" target="_blank">
+                Need Help?
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <li class="footer-social-container">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/woorank/" target="_blank" title="Facebook">
+            <svg class="icon icon-facebook icon-xs fill-white" role="img" style="">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/woorank?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" title="Twitter">
+            <svg class="icon icon-twitter icon-xs fill-white" role="img" style="">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/woorank" target="_blank" title="Linked In">
+            <svg class="icon icon-linkedin icon-xs fill-white" role="img" style="">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/user/WooRankTV" target="_blank" title="YouTube">
+            <svg class="icon icon-youtube icon-xs fill-white" role="img" style="">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#youtube"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/woorank/?hl=en" target="_blank" title="Instagram">
+            <svg class="icon icon-instagram icon-xs fill-white" role="img" style="">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://plus.google.com/+woorank" target="_blank" title="Google Plus">
+            <svg class="icon icon-googleplus icon-xs fill-white" role="img" style="">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#googleplus"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </footer>
 
 Styleguide Patterns.Footer-Container
 */
 
 .footer-container {
+  @extend .container;
   overflow: hidden;
   clear: both;
   font-size: $font-size-small;
   color: $grey;
-  margin: 40px auto;
-  padding: 40px 0;
-  @include breakpoint ($screen-sm) {
-    border-top: 1px solid $primary;
-  }
-
   ul {
     display: block;
     margin-bottom: 0;
@@ -81,18 +174,32 @@ Styleguide Patterns.Footer-Container
   }
 
   .footer-columns {
-    @extend .row;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 40px;
+    @include breakpoint ($screen-sm) {
+      border-top: 1px solid $grey-light;
+    }
+  }
+  .footer-logo-container,
+  .footer-social-container {
+      @extend .col-xs-12, .col-sm-3;
+      padding-left: 0;
+      padding-right: 0;
   }
 
   .footer-logo-container {
-    @extend .col-xs-12, .col-sm-3;
+    @include breakpoint($screen-sm - 1, true) {
+      text-align: center;
+    }
     .footer-logo {
       display: block;
       @include breakpoint($screen-sm - 1, true) {
-        width: 90%;
         margin: 0 auto 30px auto;
         padding-bottom: 30px;
-        border-bottom: 1px solid $primary;
+        border-bottom: 1px solid $grey-light;
       }
       .icon-logo-nocolor {
         width: 112px;
@@ -109,8 +216,18 @@ Styleguide Patterns.Footer-Container
     @extend .col-xs-10, .col-xs-offset-1, .col-sm-6, .col-sm-offset-0;
     .footer-menu-columns {
       @extend .row;
+      .mobile-menu-column {
+        @extend .col-xs-12, .col-sm-6;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 20px;
+        @include breakpoint($screen-sm) {
+          padding-bottom: 0px;
+        }
+      }
+
       .footer-menu-column {
-        @extend .col-xs-3;
+        @extend .col-xs-6, .col-sm-6,.text-center;
         .footer-menu-title {
           cursor: default;
           font-weight: bolder;
@@ -120,7 +237,6 @@ Styleguide Patterns.Footer-Container
   }
 
   .footer-social-container {
-    @extend .col-xs-12, .col-sm-3;
     text-align: center;
     ul {
       @include breakpoint($screen-sm){
