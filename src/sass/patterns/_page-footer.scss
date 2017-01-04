@@ -228,6 +228,9 @@ Styleguide Patterns.Page-Footer
       }
 
       .footer-menu-column {
+        @include breakpoint ($screen-sm) {
+          text-align: left;
+        }
         @extend .col-xs-6, .col-sm-6,.text-center;
         .footer-menu-title {
           cursor: default;
