@@ -1,8 +1,8 @@
 /*
-Footer Container
+Page Footer
 
 Markup:
-<footer class="footer-container" id="footer">
+<footer class="page-footer" id="footer">
   <ul class="footer-columns">
     <li class="footer-logo-container">
       <a class="footer-logo" href="/" title="WooRank | SEO Checker - Website Review">
@@ -142,10 +142,10 @@ Markup:
   </ul>
 </footer>
 
-Styleguide Patterns.Footer-Container
+Styleguide Patterns.Page-Footer
 */
 
-.footer-container {
+.page-footer {
   @extend .container;
   overflow: hidden;
   clear: both;
@@ -179,6 +179,7 @@ Styleguide Patterns.Footer-Container
     margin-left: 0;
     margin-right: 0;
     padding-top: 40px;
+    padding-bottom: 40px;
     @include breakpoint ($screen-sm) {
       border-top: 1px solid $grey-light;
     }
@@ -246,14 +247,27 @@ Styleguide Patterns.Footer-Container
         display:inline-block;
         a {
           display: block;
-          width: 24px;
-          height: 24px;
+          position: relative;
+          width: 40px;
+          height: 40px;
+          @include breakpoint($screen-sm) {
+            width: 24px;
+            height:24px;
+          }
           background-color: $grey;
           transition: background-color 300ms linear;
           @include radius(50%);
           &:focus,
           &:hover {
             background-color: $primary;
+          }
+          .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 60%;
+            height: 60%;
           }
         }
       }
