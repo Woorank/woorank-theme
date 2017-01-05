@@ -2,20 +2,20 @@
 Keyword Default Tags
 
 Markup:
-<div class="keyword-default {{modifier_class}}">
-  <div class="keyword-default-inner">keyword-default</div>
+<div class="keyword-tag-default {{modifier_class}}">
+  <div class="keyword-tag-default-inner">keyword-tag-default</div>
 </div>
 
-.keyword-default-primary - Primary
-.keyword-default-success - Success
-.keyword-default-warning - Warning
-.keyword-default-error - Error
-.keyword-default-grey - Grey
+.keyword-tag-default-primary - Primary
+.keyword-tag-default-success - Success
+.keyword-tag-default-warning - Warning
+.keyword-tag-default-error - Error
+.keyword-tag-default-grey - Grey
 
-Styleguide Components.keyword-defaults
+Styleguide Components.keyword-tag-defaults
 */
 
-.keyword-default {
+.keyword-tag-default {
   background-color: $white;
   border-radius: $border-radius-base;
   border: 1px solid $border-color;
@@ -29,7 +29,7 @@ Styleguide Components.keyword-defaults
   margin-right: 5px;
   cursor: pointer;
 
-  .keyword-default-inner {
+  .keyword-tag-default-inner {
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -45,7 +45,7 @@ Styleguide Components.keyword-defaults
   }
 }
 
-.keyword-default {
+.keyword-tag-default {
   &::before {
     content: "";
     position: absolute;
@@ -86,7 +86,7 @@ Styleguide Components.keyword-defaults
   }
 
   @each $color, $colorValue in $colors {
-    &.keyword-default-#{$color} {
+    &.keyword-tag-default-#{$color} {
       border-color: $colorValue;
       background-color: $colorValue;
 
