@@ -227,17 +227,17 @@ gulp.task('svg-sprite:build', function () {
       dest: 'icons'
     },
     transform: [
-        {svgo: {
-          plugins: [
-            { removeViewBox: false },
-            { removeUselessStrokeAndFill: true },
-            { cleanupIDs: false },
-            { mergePaths: true },
-            { removeUnknownsAndDefaults: false },
-            { cleanupEnableBackground: true },
-            { removeStyleElement: true }
-          ]
-        }}
+      {svgo: {
+        plugins: [
+          { removeViewBox: false },
+          { removeUselessStrokeAndFill: true },
+          { cleanupIDs: false },
+          { mergePaths: true },
+          { removeUnknownsAndDefaults: false },
+          { cleanupEnableBackground: true },
+          { removeStyleElement: true }
+        ]
+      }}
     ],
     svg: {
       xmlDeclaration: false,
