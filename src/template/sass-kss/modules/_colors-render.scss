@@ -80,11 +80,4 @@ div[id^="section-colors"] {
       border-color: darken($colorValue, 10%);
     }
   }
-
-  @each $colorName, $colorValue in $flatColors {
-    &.#{$colorName} {
-      background-color: $colorValue;
-      border-color: darken($colorValue, 10%);
-    }
-  }
 }

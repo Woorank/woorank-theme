@@ -41,6 +41,12 @@ error-smoke      #fbeded    - $error-smoke
 competitor-dark  #29494a    - $competitor-dark
 competitor       #539597    - $competitor
 competitor-light #afe5e7    - $competitor-light
+turquoise        #4FCEB9    - $turquoise
+turquoise-dark   #34AD99    - $turquoise-dark
+emerald          #2ECC71    - $emerald
+emerald-dark     #27AE60    - $emerald-dark
+amethyst         #9476A3    - $amethyst
+amethyst-dark    #836990    - $amethyst-dark
 
 Weight: 1
 
@@ -99,6 +105,16 @@ $danger-smoke     : $error-smoke;
 $competitor-light : #afe5e7;
 $competitor       : #539597;
 $competitor-dark  : #29494a;
+
+/* Flat Colors */
+$turquoise        : #4FCEB9;
+$turquoise-dark   : #34AD99;
+
+$emerald          : #2ECC71;
+$emerald-dark     : #27AE60;
+
+$amethyst         : #9476A3;
+$amethyst-dark    : #836990;
 
 /* Colors Links */
 $active-bg         : $primary-smoke;
@@ -160,7 +176,14 @@ $colors:
   ('grey', $grey),
   ('grey-light', $grey-light),
   ('grey-lighter', $grey-lighter),
-  ('grey-smoke', $grey-smoke);
+  ('grey-smoke', $grey-smoke),
+  ('turquoise',$turquoise),
+  ('turquoise-dark',$turquoise-dark),
+  ('emerald',$emerald),
+  ('emerald-dark',$emerald-dark),
+  ('amethyst',$amethyst),
+  ('amethyst-dark',$amethyst-dark)
+  ;
 
 $basicColors:
   ('primary', $primary),
