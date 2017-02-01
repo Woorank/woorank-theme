@@ -62,11 +62,6 @@ div[id^="section-colors"] {
     width: 75px;
   }
 
-  @include breakpoint($screen-md) {
-    height: 85px;
-    width: 85px;
-  }
-
   @each $colorName, $colorValue in $colors {
     &.#{$colorName} {
       background-color: $colorValue;
@@ -75,13 +70,6 @@ div[id^="section-colors"] {
   }
 
   @each $colorName, $colorValue in $thirdPartyColors {
-    &.#{$colorName} {
-      background-color: $colorValue;
-      border-color: darken($colorValue, 10%);
-    }
-  }
-
-  @each $colorName, $colorValue in $flatColors {
     &.#{$colorName} {
       background-color: $colorValue;
       border-color: darken($colorValue, 10%);

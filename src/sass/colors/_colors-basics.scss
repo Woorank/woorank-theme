@@ -38,6 +38,12 @@ error            #d9534f    - $error
 error-light      #eca9a7    - $error-light
 error-lighter    #f6d4d4    - $error-lighter
 error-smoke      #fbeded    - $error-smoke
+turquoise-dark   #34AD99    - $turquoise-dark
+turquoise        #4FCEB9    - $turquoise
+emerald-dark     #27AE60    - $emerald-dark
+emerald          #2ECC71    - $emerald
+amethyst-dark    #836990    - $amethyst-dark
+amethyst         #9476A3    - $amethyst
 competitor-dark  #29494a    - $competitor-dark
 competitor       #539597    - $competitor
 competitor-light #afe5e7    - $competitor-light
@@ -100,6 +106,16 @@ $competitor-light : #afe5e7;
 $competitor       : #539597;
 $competitor-dark  : #29494a;
 
+/* Flat Colors */
+$turquoise        : #4FCEB9;
+$turquoise-dark   : #34AD99;
+
+$emerald          : #2ECC71;
+$emerald-dark     : #27AE60;
+
+$amethyst         : #9476A3;
+$amethyst-dark    : #836990;
+
 /* Colors Links */
 $active-bg         : $primary-smoke;
 $active-border     : $primary-lighter;
@@ -160,13 +176,22 @@ $colors:
   ('grey', $grey),
   ('grey-light', $grey-light),
   ('grey-lighter', $grey-lighter),
-  ('grey-smoke', $grey-smoke);
+  ('grey-smoke', $grey-smoke),
+  ('turquoise',$turquoise),
+  ('turquoise-dark',$turquoise-dark),
+  ('emerald',$emerald),
+  ('emerald-dark',$emerald-dark),
+  ('amethyst',$amethyst),
+  ('amethyst-dark',$amethyst-dark);
 
 $basicColors:
   ('primary', $primary),
   ('success', $success),
   ('warning', $warning),
-  ('error', $error);
+  ('error', $error),
+  ('turquoise', $turquoise),
+  ('emerald', $emerald),
+  ('amethyst', $amethyst);
 
 $lighterColors: (
   'primary-lighter', 'primary-smoke',
@@ -181,7 +206,10 @@ $primaryColors: (
   'success',
   'warning',
   'error',
-  'grey'
+  'grey',
+  'turquoise',
+  'emerald',
+  'amethyst'
 );
 
 $colorsMap: (
@@ -216,5 +244,14 @@ $colorsMap: (
     "grey-light": $grey-light,
     "grey-lighter": $grey-lighter,
     "grey-smoke": $grey-smoke
+  ),
+  turquoise: (
+    "turquoise-dark": $turquoise-dark,
+  ),
+  emerald: (
+    "emerald-dark": $emerald-dark,
+  ),
+  amethyst: (
+    "amethyst-dark": $amethyst-dark,
   )
 );

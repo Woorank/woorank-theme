@@ -39,6 +39,27 @@ Markup:
     </tr>
   </tbody>
 </table>
+<table class="table table-thinhead table-striped table-hover table-bordered table-condensed">
+  <caption>Table header without thick borders using "table-thinhead" decorator</caption>
+  <thead>
+    <tr>
+      <td class="text-center"><input type="checkbox"></td>
+      <th class="text-center">#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="text-center"><input type="checkbox"></td>
+      <td class="text-center">1</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+  <tbody>
+</table>
 
 Styleguide Components.Tables
 */
@@ -59,4 +80,8 @@ Styleguide Components.Tables
 
 .table-hover > tbody > tr:hover {
   background-color: $primary-smoke;
+}
+
+.table-thinhead > thead > tr > th {
+  border-bottom-width: 1px;
 }
