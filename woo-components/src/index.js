@@ -4,4 +4,5 @@ module.exports.HelpIcon = require('./components/HelpIcon');
 module.exports.Icon = require('./components/Icon');
 module.exports.Label = require('./components/Label');
 module.exports.LeftNavBar = require('./components/LeftNavBar');
+module.exports.Notification = require('./components/Notification');
 
