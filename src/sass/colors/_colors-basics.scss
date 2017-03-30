@@ -18,6 +18,7 @@ grey             #aab2bd    - $grey
 grey-light       #ccd1d9    - $grey-light
 grey-lighter     #e6e9ed    - $grey-lighter
 grey-smoke       #f5f7fa    - $grey-smoke
+primary-darker   #2B5C86    - $primary-darker
 primary-dark     #3876ac    - $primary-dark
 primary          #428bca    - $primary
 primary-light    #a0c5e4    - $primary-light
@@ -65,6 +66,7 @@ $grey-medium      : #656d78;
 $grey-dark        : #434a54;
 $grey-darker      : #353b48;
 
+$primary-darker   : #2B5C86;
 $primary-dark     : #3876ac;
 $primary          : #428bca;
 $primary-light    : #a0c5e4;
@@ -165,6 +167,7 @@ $colors:
   ('primary-light', $primary-light),
   ('primary', $primary),
   ('primary-dark', $primary-dark),
+  ('primary-darker', $primary-darker),
   ('info-smoke', $info-smoke),
   ('info-light', $info-light),
   ('info-lighter', $info-lighter),
@@ -217,7 +220,8 @@ $colorsMap: (
     "primary-dark": $primary-dark,
     "primary-light": $primary-light,
     "primary-lighter": $primary-lighter,
-    "primary-smoke": $primary-smoke
+    "primary-smoke": $primary-smoke,
+    "primary-darker": $primary-darker,
   ),
   success: (
     "success-dark": $success-dark,
