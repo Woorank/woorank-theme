@@ -3,120 +3,149 @@ Basic Colors
 
 ~
 
-Main colors: `grey`, `primary`, `success`, `warning`, `error` (or `danger`).
-You can use variant tones: `dark`, 'light', 'lighter' and `smoke`.
-Grey color got is `darker` and `medium` tone.
-Additional colors use only to describe competitors:  `competitor`, `competitor-light` and `competitor-dark`.
-
 Markup:
 <div class="example-color {{modifier_class}}"></div>
 
-grey-darker      #353b48    - $grey-darker
-grey-dark        #434a54    - $grey-dark
-grey-medium      #656d78    - $grey-medium
-grey             #aab2bd    - $grey
-grey-light       #ccd1d9    - $grey-light
-grey-lighter     #e6e9ed    - $grey-lighter
-grey-smoke       #f5f7fa    - $grey-smoke
-primary-darker   #2B5C86    - $primary-darker
-primary-dark     #3876ac    - $primary-dark
-primary          #428bca    - $primary
-primary-light    #a0c5e4    - $primary-light
-primary-lighter  #cfe2f2    - $primary-lighter
-primary-smoke    #ecf3fa    - $primary-smoke
-success-dark     #4e9d4e    - $success-dark
-success          #5cb85c    - $success
-success-light    #addbad    - $success-light
-success-lighter  #d7edd6    - $success-lighter
-success-smoke    #eef8ee    - $success-smoke
-warning-dark     #d3860c    - $warning-dark
-warning          #f89d0e    - $warning
-warning-light    #fbce86    - $warning-light
-warning-lighter  #fee6c8    - $warning-lighter
-warning-smoke    #fef5e6    - $warning-smoke
-error-dark       #b94743    - $error-dark
-error            #d9534f    - $error
-error-light      #eca9a7    - $error-light
-error-lighter    #f6d4d4    - $error-lighter
-error-smoke      #fbeded    - $error-smoke
-turquoise-dark   #34AD99    - $turquoise-dark
-turquoise        #4FCEB9    - $turquoise
-emerald-dark     #27AE60    - $emerald-dark
-emerald          #2ECC71    - $emerald
-amethyst-dark    #836990    - $amethyst-dark
-amethyst         #9476A3    - $amethyst
-competitor-dark  #29494a    - $competitor-dark
-competitor       #539597    - $competitor
-competitor-light #afe5e7    - $competitor-light
+grey-darker       #353b48    - $grey-darker
+grey-dark         #434a54    - $grey-dark
+grey-medium       #656d78    - $grey-medium
+grey              #aab2bd    - $grey
+grey-light        #ccd1d9    - $grey-light
+grey-lighter      #e6e9ed    - $grey-lighter
+grey-smoke        #f5f7fa    - $grey-smoke
+primary-darker    #2B5C86    - $primary-darker
+primary-dark      #3876ac    - $primary-dark
+primary           #428bca    - $primary
+primary-light     #a0c5e4    - $primary-light
+primary-lighter   #cfe2f2    - $primary-lighter
+primary-smoke     #ecf3fa    - $primary-smoke
+success-darker    #357935    - $success-darker
+success-dark      #4e9d4e    - $success-dark
+success           #5cb85c    - $success
+success-light     #addbad    - $success-light
+success-lighter   #d7edd6    - $success-lighter
+success-smoke     #eef8ee    - $success-smoke
+warning-darker    #9b6105    - $warning-darker
+warning-dark      #d3860c    - $warning-dark
+warning           #f89d0e    - $warning
+warning-light     #fbce86    - $warning-light
+warning-lighter   #fee6c8    - $warning-lighter
+warning-smoke     #fef5e6    - $warning-smoke
+error-darker      #a02622    - $error-darker
+error-dark        #b94743    - $error-dark
+error             #d9534f    - $error
+error-light       #eca9a7    - $error-light
+error-lighter     #f6d4d4    - $error-lighter
+error-smoke       #fbeded    - $error-smoke
+turquoise-darker  #288f7e    - $turquoise-darker
+turquoise-dark    #34AD99    - $turquoise-dark
+turquoise         #4FCEB9    - $turquoise
+turquoise-light   #9fe4d9    - $turquoise-light
+turquoise-lighter #effaf8    - $turquoise-lighter
+emerald-darker    #1b7943    - $emerald-darker
+emerald-dark      #27AE60    - $emerald-dark
+emerald           #2ECC71    - $emerald
+emerald-light     #7ee2a8    - $emerald-light
+emerald-lighter   #d1f5e0    - $emerald-lighter
+amethyst-darker   #5f486b    - $amethyst-darker
+amethyst-dark     #836990    - $amethyst-dark
+amethyst          #9476A3    - $amethyst
+amethyst-light    #c4b3cc    - $amethyst-light
+amethyst-lighter  #f3f0f5    - $amethyst-lighter
+competitor-darker #2f5455    - $competitor-darker
+competitor-dark   #29494a    - $competitor-dark
+competitor        #539597    - $competitor
+competitor-light  #afe5e7    - $competitor-light
 
 Weight: 1
 
 Styleguide Colors.Woorank-Colors
 */
 
+/* Percentile modifiers */
+$lighter  : 40%;
+$light    : 20%;
+$dark     : 10%;
+$darker   : 20%;
+
 /* Colors values */
 $black            : #000;
 $white            : #fff;
 
+$grey             : #aab2bd;
 $grey-smoke       : #f5f7fa;
 $grey-lighter     : #e6e9ed;
 $grey-light       : #ccd1d9;
-$grey             : #aab2bd;
 $grey-medium      : #656d78;
 $grey-dark        : #434a54;
 $grey-darker      : #353b48;
 
-$primary-darker   : #2B5C86;
-$primary-dark     : #3876ac;
 $primary          : #428bca;
-$primary-light    : #a0c5e4;
-$primary-lighter  : #cfe2f2;
 $primary-smoke    : #ecf3fa;
+$primary-lighter  : #cfe2f2;
+$primary-light    : #a0c5e4;
+$primary-dark     : #3876ac;
+$primary-darker   : #2B5C86;
 
 /* Primary alias */
-$info-dark        : $primary-dark;
 $info             : $primary;
-$info-light       : $primary-light;
-$info-lighter     : $primary-lighter;
 $info-smoke       : $primary-smoke;
+$info-lighter     : $primary-lighter;
+$info-light       : $primary-light;
+$info-dark        : $primary-dark;
+$info-darker      : $primary-darker;
 
-$success-dark     : #4e9d4e;
 $success          : #5cb85c;
-$success-light    : #addbad;
-$success-lighter  : #d7edd6;
 $success-smoke    : #eef8ee;
+$success-lighter  : #d7edd6;
+$success-light    : #addbad;
+$success-dark     : #4e9d4e;
+$success-darker   : darken($success, $darker);
 
-$warning-dark     : #d3860c;
 $warning          : #f89d0e;
-$warning-light    : #fbce86;
-$warning-lighter  : #fee6c8;
 $warning-smoke    : #fef5e6;
+$warning-lighter  : #fee6c8;
+$warning-light    : #fbce86;
+$warning-dark     : #d3860c;
+$warning-darker   : darken($warning, $darker);
 
-$error-dark       : #b94743;
 $error            : #d9534f;
-$error-light      : #eca9a7;
-$error-lighter    : #f6d4d4;
 $error-smoke      : #fbeded;
+$error-lighter    : #f6d4d4;
+$error-light      : #eca9a7;
+$error-dark       : #b94743;
+$error-darker     : darken($error, $darker);
 
-$danger-dark      : $error-dark;
 $danger           : $error;
-$danger-light     : $error-light;
-$danger-lighter   : $error-lighter;
 $danger-smoke     : $error-smoke;
+$danger-lighter   : $error-lighter;
+$danger-light     : $error-light;
+$danger-dark      : $error-dark;
+$danger-darker    : darken($danger, $darker);
 
-$competitor-light : #afe5e7;
 $competitor       : #539597;
+$competitor-light : #afe5e7;
 $competitor-dark  : #29494a;
+$competitor-darker: darken($competitor, $darker);
 
 /* Flat Colors */
 $turquoise        : #4FCEB9;
+$turquoise-light  : lighten($turquoise, $light);
+$turquoise-lighter: lighten($turquoise, $lighter);
 $turquoise-dark   : #34AD99;
+$turquoise-darker : darken($turquoise, $darker);
 
 $emerald          : #2ECC71;
+$emerald-light    : lighten($emerald, $light);
+$emerald-lighter  : lighten($emerald, $lighter);
 $emerald-dark     : #27AE60;
+$emerald-darker   : darken($emerald, $darker);
 
 $amethyst         : #9476A3;
+$amethyst-light   : lighten($amethyst, $light);
+$amethyst-lighter : lighten($amethyst, $lighter);
 $amethyst-dark    : #836990;
+$amethyst-darker  : darken($amethyst, $darker);
 
 /* Colors Links */
 $active-bg         : $primary-smoke;
@@ -139,6 +168,7 @@ $title-color       : $grey-darker;
 $colors:
   ('white', $white),
   ('black', $black),
+  ('competitor-darker', $competitor-darker),
   ('competitor-dark', $competitor-dark),
   ('competitor', $competitor),
   ('competitor-light', $competitor-light),
@@ -147,21 +177,25 @@ $colors:
   ('danger-light', $danger-light),
   ('danger', $danger),
   ('danger-dark', $danger-dark),
+  ('danger-darker', $danger-darker),
   ('error-smoke', $error-smoke),
   ('error-lighter', $error-lighter),
   ('error-light', $error-light),
   ('error', $error),
   ('error-dark', $error-dark),
+  ('error-darker', $error-darker),
   ('warning-smoke', $warning-smoke),
   ('warning-lighter', $warning-lighter),
   ('warning-light', $warning-light),
   ('warning', $warning),
   ('warning-dark', $warning-dark),
+  ('warning-darker', $warning-darker),
   ('success-smoke', $success-smoke),
   ('success-lighter', $success-lighter),
   ('success-light', $success-light),
   ('success', $success),
   ('success-dark', $success-dark),
+  ('success-darker', $success-darker),
   ('primary-smoke', $primary-smoke),
   ('primary-lighter', $primary-lighter),
   ('primary-light', $primary-light),
@@ -173,6 +207,7 @@ $colors:
   ('info-lighter', $info-lighter),
   ('info', $info),
   ('info-dark', $info-dark),
+  ('info-darker', $info-darker),
   ('grey-darker', $grey-darker),
   ('grey-dark', $grey-dark),
   ('grey-medium', $grey-medium),
@@ -180,12 +215,21 @@ $colors:
   ('grey-light', $grey-light),
   ('grey-lighter', $grey-lighter),
   ('grey-smoke', $grey-smoke),
+  ('turquoise-light', $turquoise-light),
+  ('turquoise-lighter', $turquoise-lighter),
   ('turquoise',$turquoise),
   ('turquoise-dark',$turquoise-dark),
+  ('turquoise-darker',$turquoise-darker),
+  ('emerald-light', $emerald-light),
+  ('emerald-lighter', $emerald-lighter),
   ('emerald',$emerald),
   ('emerald-dark',$emerald-dark),
+  ('emerald-darker',$emerald-darker),
+  ('amethyst-light', $amethyst-light),
+  ('amethyst-lighter', $amethyst-lighter),
   ('amethyst',$amethyst),
-  ('amethyst-dark',$amethyst-dark);
+  ('amethyst-dark',$amethyst-dark),
+  ('amethyst-darker',$amethyst-darker);
 
 $basicColors:
   ('primary', $primary),
@@ -201,7 +245,10 @@ $lighterColors: (
   'success-lighter', 'success-smoke',
   'warning-lighter', 'warning-smoke',
   'error-lighter', 'error-smoke',
-  'grey-lighter', 'grey-smoke'
+  'grey-lighter', 'grey-smoke',
+  'turquoise-lighter', 'turquoise-smoke',
+  'emerald-lighter', 'emerald-smoke',
+  'amethyst-lighter', 'amethyst-smoke'
 );
 
 $primaryColors: (
@@ -217,25 +264,28 @@ $primaryColors: (
 
 $colorsMap: (
   primary: (
+    "primary-darker": $primary-darker,
     "primary-dark": $primary-dark,
     "primary-light": $primary-light,
     "primary-lighter": $primary-lighter,
-    "primary-smoke": $primary-smoke,
-    "primary-darker": $primary-darker,
+    "primary-smoke": $primary-smoke
   ),
   success: (
+    "success-darker": $success-darker,
     "success-dark": $success-dark,
     "success-light": $success-light,
     "success-lighter": $success-lighter,
     "success-smoke": $success-smoke
   ),
   warning: (
+    "warning-darker": $warning-darker,
     "warning-dark": $warning-dark,
     "warning-light": $warning-light,
     "warning-lighter": $warning-lighter,
     "warning-smoke": $warning-smoke
   ),
   error: (
+    "error-darker": $error-darker,
     "error-dark": $error-dark,
     "error-light": $error-light,
     "error-lighter": $error-lighter,
@@ -250,12 +300,24 @@ $colorsMap: (
     "grey-smoke": $grey-smoke
   ),
   turquoise: (
+    "turquoise-darker": $turquoise-darker,
     "turquoise-dark": $turquoise-dark,
+    "turquoise": $turquoise,
+    "turquoise-light": $turquoise-light,
+    "turquoise-lighter": $turquoise-lighter
   ),
   emerald: (
+    "emerald-darker": $emerald-darker,
     "emerald-dark": $emerald-dark,
+    "emerald": $emerald,
+    "emerald-light": $emerald-light,
+    "emerald-lighter": $emerald-lighter
   ),
   amethyst: (
+    "amethyst-darker": $amethyst-darker,
     "amethyst-dark": $amethyst-dark,
+    "amethyst": $amethyst,
+    "amethyst-light": $amethyst-light,
+    "amethyst-lighter": $amethyst-lighter
   )
 );
