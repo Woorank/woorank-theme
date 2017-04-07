@@ -148,7 +148,8 @@ Styleguide Patterns.Page-Footer
   overflow: hidden;
   clear: both;
   font-size: $font-size-small;
-  color: $grey;
+  color: $grey-medium;
+  margin-top: 60px;
   ul {
     display: block;
     margin-bottom: 0;
