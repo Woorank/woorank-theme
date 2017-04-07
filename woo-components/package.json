@@ -1,6 +1,6 @@
 {
   "name": "woo-components",
-  "version": "8.9.2",
+  "version": "8.9.3",
   "description": "Woo-components",
   "main": "dist/index.js",
   "scripts": {
