@@ -37,8 +37,11 @@
   });
 
   $(window).on('scroll', function () {
-    var mustFly = $(this).scrollTop() > 60;
+    var scrolled = $(this).scrollTop();
+    var mustFly = scrolled > parseInt($sidebarNav.css('padding-top'));
+    var isAtBottom = (scrolled + $(this).height()) === $(document).height();
     $sidebarNav.toggleClass('fixed', mustFly);
+    $sidebarNav.toggleClass('fixed-bottom', isAtBottom);
   });
 
   $('[data-toggle="popover"]').popover();
