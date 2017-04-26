@@ -25,10 +25,6 @@ const paths = {
   sass: {
     styleguide: 'src/sass',
     kss: 'src/template/sass-kss',
-    wooComponents: 'woo-components/src/sass'
-  },
-  js: {
-    wooComponents: 'woo-components/src'
   },
   css: 'src/css',
   svg: 'src/svg',
@@ -45,8 +41,7 @@ const paths = {
     css: 'styleguide/assets/styles',
     svg: 'styleguide/assets/svg',
     png: 'styleguide/assets/png',
-    js: 'styleguide/assets/scripts',
-    wooComponents: 'woo-components/dist'
+    js: 'styleguide/assets/scripts'
   }
 };
 
@@ -80,17 +75,6 @@ gulp.task('pictures', function () {
 gulp.task('scripts', function () {
   return gulp.src(path.join(paths.public, '*.js'))
     .pipe(gulp.dest(paths.build.js));
-});
-
-gulp.task('scripts:woo-components', function () {
-  return gulp.src([
-    path.join(paths.js.wooComponents, '**/index.js'),
-    path.join(paths.js.wooComponents, '**/*.jsx')
-  ])
-    .pipe(babel({
-      presets: ['es2015', 'react']
-    }))
-    .pipe(gulp.dest(paths.build.wooComponents));
 });
 
 gulp.task('kss',
@@ -127,8 +111,7 @@ gulp.task('lint-css', function () {
 
 gulp.task('sass', function () {
   return gulp.src([
-    path.join(paths.sass.styleguide, '*.scss'),
-    path.join(paths.sass.wooComponents, '*.scss')
+    path.join(paths.sass.styleguide, '*.scss')
   ])
     .pipe(debug())
     .pipe(sass({
@@ -143,8 +126,7 @@ gulp.task('sass', function () {
 
 gulp.task('sass:build', function () {
   return gulp.src([
-    path.join(paths.sass.styleguide, '*.scss'),
-    path.join(paths.sass.wooComponents, '*.scss')
+    path.join(paths.sass.styleguide, '*.scss')
   ])
     .pipe(debug())
     .pipe(sass({
@@ -232,8 +214,12 @@ gulp.task('svg-sprite:build', function () {
 });
 
 gulp.task('svg2png', function () {
-  gulp.src(path.join(paths.svg, '**', '*.svg'))
-  .pipe(svg2png())
+  const scale = 1;
+  const verbose = true;
+  const concurrency = undefined;
+
+  return gulp.src(path.join(paths.svg, '**', '*.svg'))
+  .pipe(svg2png(scale, verbose, concurrency))
   .pipe(gulp.dest(paths.build.png));
 });
 
