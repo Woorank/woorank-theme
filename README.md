@@ -43,36 +43,3 @@ To publish the styleguide changes you have to build the project at [CircleCI](ht
 Successfull build will automatically push the woorank-theme assets into the S3 with the current version number and can be used
 in the applications. It also will upgrade woo-components package in the npm and the related style
 sheet with the same version number than the woorank-theme.
-
-# Woorank React Component Styleguide
-
-This repository also holds the new React component styleguide, made with
-[react-styleguidist](https://github.com/sapegin/react-styleguidist).
-
-## Running the styleguide locally
-
-You can find the styleguide at `./woo-components`. To run it locally run the following commands:
-
-```bash
-$ cd ./woo-components
-$ npm install
-$ npm run styleguide-server
-```
-
-The styleguide with hot reload should now be running at `http://localhost:3000`
-
-## Running the styleguide in the docker container
-
-*Note*: The hot reloading doesn't work properly with docker-toolbox. It should work on Docker for
-Mac, though (please remove the _should_ and _though_ here if you have tested this :).
-
-```bash
-$ docker-compose build components
-$ docker-compose run --rm --service-ports components
-```
-
-Styleguide runs by default at $(docker-machine ip):3006.
-
-## Deploying the styleguide
-
-Follow the instructions for the old styleguide development flow and publication above.

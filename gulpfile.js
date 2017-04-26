@@ -216,7 +216,7 @@ gulp.task('svg-sprite:build', function () {
 gulp.task('svg2png', function () {
   const scale = 1;
   const verbose = true;
-  const concurrency = undefined;
+  const concurrency = 1;
 
   return gulp.src(path.join(paths.svg, '**', '*.svg'))
   .pipe(svg2png(scale, verbose, concurrency))
