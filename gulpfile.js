@@ -214,12 +214,15 @@ gulp.task('svg-sprite:build', function () {
 });
 
 gulp.task('svg2png', function () {
-  const scale = 1;
+  const options = {
+    width: 24,
+    height: 24
+  };
   const verbose = true;
   const concurrency = 1;
 
   return gulp.src(path.join(paths.svg, '**', '*.svg'))
-  .pipe(svg2png(scale, verbose, concurrency))
+  .pipe(svg2png(options, verbose, concurrency))
   .pipe(gulp.dest(paths.build.png));
 });
 

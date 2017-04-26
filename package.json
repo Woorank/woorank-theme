@@ -23,7 +23,7 @@
     "gulp-sass": "2.2.0",
     "gulp-stylelint": "2.0.2",
     "gulp-svg-sprite": "1.3.6",
-    "gulp-svg2png": "1.0.2",
+    "gulp-svg2png": "^2.0.0",
     "gulp-svgmin": "1.2.2",
     "kss": "^2.4.0",
     "run-sequence": "^1.2.2",
