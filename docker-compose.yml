@@ -1,24 +1,20 @@
-styleguide:
-  build: .
-  ports:
-    - "3005:8080"
-    - "35729:35729"
-  volumes:
-    - ./styleguide:/opt/gulp/styleguide
-    - ./woo-components:/opt/gulp/woo-components
-    - ./src:/opt/gulp/src
-    - ./testVersion.js:/opt/gulp/testVersion.js
-    - ./gulpfile.js:/opt/gulp/gulpfile.js
-    - ./kss-config.json:/opt/gulp/kss-config.json
-    - ./awsConfig.json:/opt/gulp/awsConfig.json
-    - ./package.json:/opt/gulp/package.json
-  command: "npm start"
-components:
-  build: .
-  dockerfile: Dockerfile-components
-  ports:
-    - "3006:3000"
-  volumes:
-    - ./woo-components:/opt/styleguidist/woo-components
-    - ./src:/opt/styleguidist/woo-theme/src
-    - ./node_modules/bootstrap-sass/assets/fonts:/opt/styleguidist/woo-theme/src/fonts
+version: "2"
+
+services:
+  styleguide:
+    build: .
+    ports:
+      - "3005:8080"
+    environment:
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+    volumes:
+      - ./build:/opt/gulp/build
+      - ./styleguide:/opt/gulp/styleguide
+      - ./src:/opt/gulp/src
+      - ./existsInS3.js:/opt/gulp/existsInS3.js
+      - ./gulpfile.js:/opt/gulp/gulpfile.js
+      - ./kss-config.json:/opt/gulp/kss-config.json
+      - ./awsConfig.json:/opt/gulp/awsConfig.json
+      - ./package.json:/opt/gulp/package.json
+    command: "npm start"
