@@ -9,7 +9,7 @@ services:
       - ./build:/opt/gulp/build
       - ./styleguide:/opt/gulp/styleguide
       - ./src:/opt/gulp/src
-      - ./testVersion.js:/opt/gulp/testVersion.js
+      - ./existsInS3.js:/opt/gulp/existsInS3.js
       - ./gulpfile.js:/opt/gulp/gulpfile.js
       - ./kss-config.json:/opt/gulp/kss-config.json
       - ./awsConfig.json:/opt/gulp/awsConfig.json

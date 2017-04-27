@@ -19,7 +19,7 @@ const svg2png = require('gulp-svg2png');
 const svgmin = require('gulp-svgmin');
 
 const pkg = require('./package');
-const testIfFileExistsInS3 = require('./build/existsInS3');
+const testIfFileExistsInS3 = require('./existsInS3');
 
 const paths = {
   sass: {
