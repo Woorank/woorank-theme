@@ -13,7 +13,6 @@ dependencies:
   override:
     - docker --version
     - docker-compose --version
-    - echo "{\"https://index.docker.io/v1/\":{\"auth\":\"<AUTH>\",\"email\":\"<EMAIL>\"}}" | sed "s/<EMAIL>/$HUB_EMAIL/;s/<AUTH>/$HUB_AUTH/" > ~/.dockercfg
     - docker-compose build
     - docker-compose run styleguide npm run build
 

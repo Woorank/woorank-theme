@@ -18,9 +18,8 @@ const sass = require('gulp-sass');
 const svg2png = require('gulp-svg2png');
 const svgmin = require('gulp-svgmin');
 
-const awsConfig = require('./awsConfig');
 const pkg = require('./package');
-const testIfFileExistsInS3 = require('./testVersion');
+const testIfFileExistsInS3 = require('./existsInS3');
 
 const paths = {
   sass: {
@@ -240,10 +239,12 @@ gulp.task('svg2png', function () {
 });
 
 gulp.task('s3-styleguide', function (callback) {
-  const host = 'styleguide.woorank.com';
+  const testHost = 'styleguide.woorank.com';
   const testPath = `/build/${pkg.version}/woorank-theme.min.css`;
 
-  testIfFileExistsInS3(host, testPath).then(styleExistsInS3 => {
+  const awsConfig = require('./awsConfig');
+
+  testIfFileExistsInS3(testHost, testPath).then(styleExistsInS3 => {
     if (styleExistsInS3) {
       console.warn(`s3://${host}${testPath} already exists in S3, returning gracefully...`);
       return callback();
@@ -256,8 +257,9 @@ gulp.task('s3-styleguide', function (callback) {
 });
 
 gulp.task('s3-assets', function (callback) {
-  const host = 'assets.woorank.com';
+  const testHost = process.env.CDN_HOST || 'https://dz17jvmxa7kn9.cloudfront.net';
   const testPath = `/woorank-theme/${pkg.version}/woorank-theme.min.css`;
+
   const awsOptions = {
     uploadPath: 'woorank-theme',
     headers: {
@@ -265,7 +267,13 @@ gulp.task('s3-assets', function (callback) {
     } 
   };
 
-  testIfFileExistsInS3(host, testPath).then(styleExistsInS3 => {
+  const awsConfig = Object.assign(
+    {},
+    require('./awsConfig.json'),
+    bucket: 'assets.woorank.com'
+  );
+
+  testIfFileExistsInS3(host, testPath, { https: true }).then(styleExistsInS3 => {
     if (styleExistsInS3) {
       console.warn(`s3://${host}${testPath} already exists in S3, returning gracefully...`);
       return callback();
