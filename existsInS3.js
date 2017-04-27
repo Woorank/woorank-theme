@@ -6,7 +6,7 @@ module.exports = (host, path, options = {}) => {
     const protocol = options.https ? https : http;
 
     protocol
-      .get({ host, path }, ({ statusCode }) => resolve(statusCode))
+      .get({ host, path }, ({ statusCode }) => resolve(statusCode === 200))
       .on('error', reject);
   });
 };
