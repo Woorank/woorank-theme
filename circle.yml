@@ -1,13 +1,24 @@
 machine:
-  node:
-    version: 4.4.5
+  pre:
+    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circleci-docker.sh | bash -s -- 1.10.0
+    - sudo pip install docker-compose==1.9.0
+  environment:
+    COMPOSE_PROJECT_NAME: wooranktheme
+    NODE_ENV: production
+
+  services:
+    - docker
 
 dependencies:
+  cache_directories:
+    - ".npm"
+
   override:
-    - npm install
-    # Workaround for the issue https://github.com/npm/npm/issues/10057
-    - cd woo-components && npm install webpack@1.13.2 && npm install && cd ..
-    - npm run build
+    - docker --version
+    - docker-compose --version
+    - echo "{\"https://index.docker.io/v1/\":{\"auth\":\"<AUTH>\",\"email\":\"<EMAIL>\"}}" | sed "s/<EMAIL>/$HUB_EMAIL/;s/<AUTH>/$HUB_AUTH/" > ~/.dockercfg
+    - docker-compose build
+    - docker-compose run styleguide npm run build
 
 test:
   override:
@@ -18,15 +29,11 @@ deployment:
     branch: master
     commands:
       - echo "{\"key\":\"<AWS_STYLEGUIDE_KEY>\",\"secret\":\"<AWS_STYLEGUIDE_SECRET>\",\"bucket\":\"<AWS_STYLEGUIDE_BUCKET>\",\"region\":\"<AWS_STYLEGUIDE_ZONE>\"}" | sed "s/<AWS_STYLEGUIDE_KEY>/$AWS_STYLEGUIDE_KEY/;s/<AWS_STYLEGUIDE_SECRET>/$AWS_STYLEGUIDE_SECRET/;s/<AWS_STYLEGUIDE_BUCKET>/$AWS_STYLEGUIDE_BUCKET/;s/<AWS_STYLEGUIDE_ZONE>/$AWS_STYLEGUIDE_ZONE/" > ./awsConfig.json
-      - npm run publish
-      - node deploy.js
-      - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > woo-components/.npmrc
-      - cd woo-components && npm run push-to-npm
+      - docker-compose run styleguide npm run publish
+      - docker-compose run styleguide node deploy.js
   dryrun:
     branch: /dryrun_.*/
     commands:
       - echo "{\"key\":\"<AWS_STYLEGUIDE_KEY>\",\"secret\":\"<AWS_STYLEGUIDE_SECRET>\",\"bucket\":\"<AWS_STYLEGUIDE_BUCKET>\",\"region\":\"<AWS_STYLEGUIDE_ZONE>\"}" | sed "s/<AWS_STYLEGUIDE_KEY>/$AWS_STYLEGUIDE_KEY/;s/<AWS_STYLEGUIDE_SECRET>/$AWS_STYLEGUIDE_SECRET/;s/<AWS_STYLEGUIDE_BUCKET>/$AWS_STYLEGUIDE_BUCKET/;s/<AWS_STYLEGUIDE_ZONE>/$AWS_STYLEGUIDE_ZONE/" > ./awsConfig.json
-      - npm run publish
-      - node deploy.js
-      - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > woo-components/.npmrc
-      - cd woo-components && npm run push-to-npm
+      - docker-compose run styleguide npm run publish
+      - docker-compose run styleguide node deploy.js

@@ -9,6 +9,10 @@ var testPath = '/woorank-theme/' + deployingVersion + '/woorank-theme.min.css';
 
 var deployCmd = 'aws s3 sync --acl public-read ./styleguide/build s3://' + process.env.BUCKET_NAME;
 
+if (!process.env.BUCKET_NAME) {
+  throw new Error('BUCKET_NAME is not set');
+}
+
 testVersion(process.env.CDN_HOST, testPath, function (alreadyExists) {
   if (!alreadyExists) {
     exec(deployCmd, function (error) {

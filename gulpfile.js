@@ -211,46 +211,46 @@ gulp.task('svg:build', function () {
 
 gulp.task('svg-sprite:build', function () {
   return gulp.src(path.join(paths.svg, '**', '*.svg'))
-  .pipe(gulpSvgSprite({
-    mode: {
-      symbol: {
-        dest: '.',
-        sprite: 'symbols.svg'
-      }
-    },
-    shape: {
-      id: {
-        generator: function (name) {
-          return name.replace(/.svg/g, '').replace(/^.+?[/]/g, '');
+    .pipe(gulpSvgSprite({
+      mode: {
+        symbol: {
+          dest: '.',
+          sprite: 'symbols.svg'
         }
       },
-      dest: 'icons'
-    },
-    transform: [
-      {svgo: {
-        plugins: [
-          { removeViewBox: false },
-          { removeUselessStrokeAndFill: true },
-          { cleanupIDs: false },
-          { mergePaths: true },
-          { removeUnknownsAndDefaults: false },
-          { cleanupEnableBackground: true },
-          { removeStyleElement: true }
-        ]
-      }}
-    ],
-    svg: {
-      xmlDeclaration: false,
-      doctypeDeclaration: false,
-      rootAttributes: {
-        width: 0,
-        height: 0,
-        style: 'position:absolute'
+      shape: {
+        id: {
+          generator: function (name) {
+            return name.replace(/.svg/g, '').replace(/^.+?[/]/g, '');
+          }
+        },
+        dest: 'icons'
+      },
+      transform: [
+        {svgo: {
+          plugins: [
+            { removeViewBox: false },
+            { removeUselessStrokeAndFill: true },
+            { cleanupIDs: false },
+            { mergePaths: true },
+            { removeUnknownsAndDefaults: false },
+            { cleanupEnableBackground: true },
+            { removeStyleElement: true }
+          ]
+        }}
+      ],
+      svg: {
+        xmlDeclaration: false,
+        doctypeDeclaration: false,
+        rootAttributes: {
+          width: 0,
+          height: 0,
+          style: 'position:absolute'
+        }
       }
-    }
-  }))
-  .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)))
-  .pipe(gulp.dest(paths.build.svg));
+    }))
+    .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)))
+    .pipe(gulp.dest(paths.build.svg));
 });
 
 gulp.task('svg2png', function () {
@@ -275,8 +275,8 @@ gulp.task('s3', function (callback) {
     }
 
     gulp.src('./styleguide/**/*')
-    .pipe(s3(awsConfig))
-    .on('end', callback);
+      .pipe(s3(awsConfig))
+      .on('end', callback);
   });
 });
 
