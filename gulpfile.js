@@ -263,7 +263,7 @@ gulp.task('s3-assets', function (callback) {
   };
 
   const awsOptions = {
-    uploadPath: 'woorank-theme/'
+    uploadPath: `woorank-theme/${pkg.version}/`
   };
 
   const awsConfig = Object.assign(
