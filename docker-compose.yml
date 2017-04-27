@@ -6,6 +6,7 @@ services:
     ports:
       - "3005:8080"
     volumes:
+      - ./build:/opt/gulp/build
       - ./styleguide:/opt/gulp/styleguide
       - ./src:/opt/gulp/src
       - ./testVersion.js:/opt/gulp/testVersion.js
