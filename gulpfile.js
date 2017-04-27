@@ -24,7 +24,7 @@ const testIfFileExistsInS3 = require('./existsInS3');
 const paths = {
   sass: {
     styleguide: 'src/sass',
-    kss: 'src/template/sass-kss',
+    kss: 'src/template/sass-kss'
   },
   css: 'src/css',
   svg: 'src/svg',
@@ -312,7 +312,6 @@ gulp.task('dev', [
 ]);
 
 gulp.task('build', [
-  'scripts:woo-components',
   'sass',
   'sass:build',
   'svg2png',
