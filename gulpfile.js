@@ -266,11 +266,18 @@ gulp.task('s3-assets', function (callback) {
     uploadPath: `woorank-theme/${pkg.version}/`
   };
 
-  const awsConfig = Object.assign(
-    {},
-    require('./awsConfig.json'),
-    { bucket: 'assets.woorank.com' }
-  );
+  const { AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY } = process.env;
+
+  if (!AWS_ACCESS_KEY_ID || !AWS_SECRET_ACCESS_KEY) {
+    console.error('No AWS access/secret key set!');
+    return callback();
+  }
+  const awsConfig = {
+    'key': AWS_ACCESS_KEY_ID,
+    'secret': AWS_SECRET_ACCESS_KEY,
+    'region': 'us-east-1',
+    'bucket': 'assets.woorank.com'
+  };
 
   testIfFileExistsInS3(testHost, testPath, testOptions).then(styleExistsInS3 => {
     if (styleExistsInS3) {
