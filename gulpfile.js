@@ -241,13 +241,14 @@ gulp.task('s3-styleguide', function (callback) {
   const testHost = 'styleguide.woorank.com';
   const testPath = `/build/${pkg.version}/woorank-theme.min.css`;
 
-  const awsConfig = require('./awsConfig');
-
   testIfFileExistsInS3(testHost, testPath).then(styleExistsInS3 => {
     if (styleExistsInS3) {
       console.warn(`s3://${testHost}${testPath} already exists in S3, returning gracefully...`);
       return callback();
     }
+
+    // awsConfig for the styleguide is generated on the circleci before publish
+    const awsConfig = require('./awsConfig');
 
     gulp.src('./styleguide/**/*')
       .pipe(s3(awsConfig))
@@ -256,27 +257,27 @@ gulp.task('s3-styleguide', function (callback) {
 });
 
 gulp.task('s3-assets', function (callback) {
-  const testHost = 'dz17jvmxa7kn9.cloudfront.net';
+  const testHost = process.env.CDN_URL || 'dz17jvmxa7kn9.cloudfront.net';
   const testPath = `/woorank-theme/${pkg.version}/woorank-theme.min.css`;
   const testOptions = {
     https: true
   };
 
-  const awsOptions = {
-    uploadPath: `woorank-theme/${pkg.version}/`
-  };
-
   const { AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY } = process.env;
-
   if (!AWS_ACCESS_KEY_ID || !AWS_SECRET_ACCESS_KEY) {
-    console.error('No AWS access/secret key set!');
+    console.error('No AWS access/secret key set, not trying to upload.');
     return callback();
   }
+
   const awsConfig = {
     'key': AWS_ACCESS_KEY_ID,
     'secret': AWS_SECRET_ACCESS_KEY,
     'region': 'us-east-1',
     'bucket': 'assets.woorank.com'
+  };
+
+  const awsOptions = {
+    uploadPath: `woorank-theme/${pkg.version}/`
   };
 
   testIfFileExistsInS3(testHost, testPath, testOptions).then(styleExistsInS3 => {
