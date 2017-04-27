@@ -23,9 +23,10 @@
     "gulp-sass": "2.2.0",
     "gulp-stylelint": "2.0.2",
     "gulp-svg-sprite": "1.3.6",
-    "gulp-svg2png": "1.0.2",
+    "gulp-svg2png": "^2.0.0",
     "gulp-svgmin": "1.2.2",
     "kss": "^2.4.0",
+    "run-sequence": "^1.2.2",
     "stylelint-config-standard": "9.0.0",
     "svg4everybody": "^2.1.0"
   },
@@ -35,7 +36,6 @@
     "build": "gulp build",
     "publish": "gulp publish",
     "gulp": "gulp",
-    "postversion": "cd ./woo-components && npm version --no-git-tag-version $(node -e \"console.log(require('../package.json').version)\")",
     "kss": "kss-node --config=kss-config.json"
   },
   "stylelint": {
