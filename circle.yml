@@ -13,6 +13,7 @@ dependencies:
   override:
     - docker --version
     - docker-compose --version
+    - touch ./awsConfig.json
     - docker-compose build
     - docker-compose run styleguide npm run build
 
