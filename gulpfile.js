@@ -58,7 +58,6 @@ const banner = ['/**',
   ' */',
   ''].join('\n');
 
-
 gulp.task('watch', function () {
   gulp.watch(path.join(paths.sass.styleguide, '**', '*.*'), ['kss']);
   gulp.watch(path.join(paths.sass.kss, '**', '*.scss'), ['kss']);
@@ -246,7 +245,7 @@ gulp.task('s3-styleguide', function (callback) {
 
   testIfFileExistsInS3(testHost, testPath).then(styleExistsInS3 => {
     if (styleExistsInS3) {
-      console.warn(`s3://${host}${testPath} already exists in S3, returning gracefully...`);
+      console.warn(`s3://${testHost}${testPath} already exists in S3, returning gracefully...`);
       return callback();
     }
 
@@ -263,22 +262,22 @@ gulp.task('s3-assets', function (callback) {
   const awsOptions = {
     uploadPath: 'woorank-theme',
     headers: {
-    'x-amz-acl': 'public-read'
-    } 
+      'x-amz-acl': 'public-read'
+    }
   };
 
   const awsConfig = Object.assign(
     {},
     require('./awsConfig.json'),
-    bucket: 'assets.woorank.com'
+    { bucket: 'assets.woorank.com' }
   );
 
-  testIfFileExistsInS3(host, testPath, { https: true }).then(styleExistsInS3 => {
+  testIfFileExistsInS3(testHost, testPath, { https: true }).then(styleExistsInS3 => {
     if (styleExistsInS3) {
-      console.warn(`s3://${host}${testPath} already exists in S3, returning gracefully...`);
+      console.warn(`s3://${testHost}${testPath} already exists in S3, returning gracefully...`);
       return callback();
     }
-    
+
     gulp.src(`./styleguide/build/${pkg.version}`)
       .pipe(s3(awsConfig, awsOptions))
       .on('end', callback);
@@ -301,7 +300,6 @@ gulp.task('clean', function () {
     { force: true }
   );
 });
-
 
 gulp.task('default', [
   'pictures',
