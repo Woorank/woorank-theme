@@ -1,27 +1,28 @@
 'use strict';
 
-require('es6-promise').polyfill();
+const autoprefixer = require('gulp-autoprefixer');
+const babel = require('gulp-babel');
+const connect = require('gulp-connect');
+const debug = require('gulp-debug');
+const del = require('del');
+const exec = require('child_process').exec;
+const gulp = require('gulp');
+const gulpStylelint = require('gulp-stylelint');
+const gulpSvgSprite = require('gulp-svg-sprite');
+const header = require('gulp-header');
+const path = require('path');
+const rename = require('gulp-rename');
+const runSequence = require('gulp-run-sequence');
+const s3 = require('gulp-s3');
+const sass = require('gulp-sass');
+const svg2png = require('gulp-svg2png');
+const svgmin = require('gulp-svgmin');
 
-var babel = require('gulp-babel');
-var autoprefixer = require('gulp-autoprefixer');
-var connect = require('gulp-connect');
-var debug = require('gulp-debug');
-var del = require('del');
-var exec = require('child_process').exec;
-var gulp = require('gulp');
-var header = require('gulp-header');
-var path = require('path');
-var rename = require('gulp-rename');
-var runSequence = require('gulp-run-sequence');
-var s3 = require('gulp-s3');
-var sass = require('gulp-sass');
-var svgmin = require('gulp-svgmin');
-var gulpSvgSprite = require('gulp-svg-sprite');
-var svg2png = require('gulp-svg2png');
-var gulpStylelint = require('gulp-stylelint');
-var pkg = require('./package');
+const awsConfig = require('./awsConfig');
+const pkg = require('./package');
+const testIfFileExistsInS3 = require('./testVersion');
 
-var paths = {
+const paths = {
   sass: {
     styleguide: 'src/sass',
     kss: 'src/template/sass-kss',
@@ -50,7 +51,7 @@ var paths = {
   }
 };
 
-var banner = ['/**',
+const banner = ['/**',
   ' * <%= pkg.name %> - <%= pkg.description %>',
   ' * @version v<%= pkg.version %>',
   ' * @link <%= pkg.homepage %>',
@@ -58,27 +59,6 @@ var banner = ['/**',
   ' */',
   ''].join('\n');
 
-gulp.task('default', [
-  'pictures',
-  'build',
-  'kss'
-]);
-
-gulp.task('dev', [
-  'connect',
-  'default',
-  'watch',
-  'lint-css'
-]);
-
-gulp.task('build', [
-  'scripts:woo-components',
-  'sass',
-  'sass:build',
-  'svg2png',
-  'svg:build',
-  'kss'
-]);
 
 gulp.task('watch', function () {
   gulp.watch(path.join(paths.sass.styleguide, '**', '*.*'), ['kss']);
@@ -124,12 +104,12 @@ gulp.task('kss',
     'scripts'
   ], function (cb) {
     return exec('npm run kss',
-    function (err, stdout, stderr) {
-      console.log(stdout);
-      console.log(stderr);
-      cb(err);
-      gulp.src('*').pipe(connect.reload());
-    });
+      function (err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
+        gulp.src('*').pipe(connect.reload());
+      });
   });
 
 gulp.task('kss:structures', function () {
@@ -259,18 +239,13 @@ gulp.task('svg2png', function () {
   .pipe(gulp.dest(paths.build.png));
 });
 
-gulp.task('s3', function (callback) {
-  var testVersion = require('./testVersion');
-  var version = require('./package').version;
+gulp.task('s3-styleguide', function (callback) {
+  const host = 'styleguide.woorank.com';
+  const testPath = `/build/${pkg.version}/woorank-theme.min.css`;
 
-  var host = 'styleguide.woorank.com';
-  var testPath = `/build/${version}/woorank-theme.min.css`;
-
-  testVersion(host, testPath, function (exists) {
-    var awsConfig = require('./awsConfig');
-
-    if (exists) {
-      console.log('The version already exists in S3, returning gracefully...');
+  testIfFileExistsInS3(host, testPath).then(styleExistsInS3 => {
+    if (styleExistsInS3) {
+      console.warn(`s3://${host}${testPath} already exists in S3, returning gracefully...`);
       return callback();
     }
 
@@ -280,8 +255,30 @@ gulp.task('s3', function (callback) {
   });
 });
 
+gulp.task('s3-assets', function (callback) {
+  const host = 'assets.woorank.com';
+  const testPath = `/woorank-theme/${pkg.version}/woorank-theme.min.css`;
+  const awsOptions = {
+    uploadPath: 'woorank-theme',
+    headers: {
+    'x-amz-acl': 'public-read'
+    } 
+  };
+
+  testIfFileExistsInS3(host, testPath).then(styleExistsInS3 => {
+    if (styleExistsInS3) {
+      console.warn(`s3://${host}${testPath} already exists in S3, returning gracefully...`);
+      return callback();
+    }
+    
+    gulp.src(`./styleguide/build/${pkg.version}`)
+      .pipe(s3(awsConfig, awsOptions))
+      .on('end', callback);
+  });
+});
+
 gulp.task('publish', function (callback) {
-  return runSequence('clean', ['default', 'build'], 's3', callback);
+  return runSequence('clean', ['default', 'build'], 's3-styleguide', 's3-assets', callback);
 });
 
 gulp.task('clean', function () {
@@ -296,3 +293,26 @@ gulp.task('clean', function () {
     { force: true }
   );
 });
+
+
+gulp.task('default', [
+  'pictures',
+  'build',
+  'kss'
+]);
+
+gulp.task('dev', [
+  'connect',
+  'default',
+  'watch',
+  'lint-css'
+]);
+
+gulp.task('build', [
+  'scripts:woo-components',
+  'sass',
+  'sass:build',
+  'svg2png',
+  'svg:build',
+  'kss'
+]);
