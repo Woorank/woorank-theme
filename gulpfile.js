@@ -263,10 +263,7 @@ gulp.task('s3-assets', function (callback) {
   };
 
   const awsOptions = {
-    uploadPath: 'woorank-theme',
-    headers: {
-      'x-amz-acl': 'public-read'
-    }
+    uploadPath: 'woorank-theme/'
   };
 
   const awsConfig = Object.assign(
@@ -281,9 +278,9 @@ gulp.task('s3-assets', function (callback) {
       return callback();
     }
 
-    gulp.src(`./styleguide/build/${pkg.version}`)
+    gulp.src(`./styleguide/build/${pkg.version}/**`)
       .pipe(s3(awsConfig, awsOptions))
-      .on('end', callback);
+      .on('end', function () { console.log('Calling cb') || callback(); });
   });
 });
 
