@@ -256,8 +256,11 @@ gulp.task('s3-styleguide', function (callback) {
 });
 
 gulp.task('s3-assets', function (callback) {
-  const testHost = process.env.CDN_HOST || 'https://dz17jvmxa7kn9.cloudfront.net';
+  const testHost = 'dz17jvmxa7kn9.cloudfront.net';
   const testPath = `/woorank-theme/${pkg.version}/woorank-theme.min.css`;
+  const testOptions = {
+    https: true
+  };
 
   const awsOptions = {
     uploadPath: 'woorank-theme',
@@ -272,7 +275,7 @@ gulp.task('s3-assets', function (callback) {
     { bucket: 'assets.woorank.com' }
   );
 
-  testIfFileExistsInS3(testHost, testPath, { https: true }).then(styleExistsInS3 => {
+  testIfFileExistsInS3(testHost, testPath, testOptions).then(styleExistsInS3 => {
     if (styleExistsInS3) {
       console.warn(`s3://${testHost}${testPath} already exists in S3, returning gracefully...`);
       return callback();
