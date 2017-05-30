@@ -9,6 +9,12 @@ body {
 body {
   transition: transform 350ms ease-out;
   font-weight: $font-weight-normal;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min--moz-device-pixel-ratio: 2),
@@ -17,15 +23,6 @@ body {
     only screen and (min-resolution: 192dpi),
     only screen and (min-resolution: 2dppx) {
     font-weight: $font-weight-light;
-  }
-
-  &.navbar-open, &.navbar-open-left {
-    transform: translateX($mobile-nav-size);
-    overflow: hidden;
-  }
-  &.navbar-open-right {
-    transform: translateX(-$mobile-nav-size);
-    overflow: hidden;
   }
 }
 

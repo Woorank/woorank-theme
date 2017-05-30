@@ -20,15 +20,14 @@
   <link rel="apple-touch-icon-precomposed" href="assets/img/apple-touch-icon-precomposed.png" />
   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/ico" />
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/png" />
-  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
 </head>
 <body id="kss-node" class="styleguide {{#if homepage}}homepage{{/if}}">
-
+<div class="overlay"></div>
 <!-- HEADER -->
 <div id="top">
-  <div class="header navbar navbar-fixed-top">
-    <div class="container">
+  <header class="navbar navbar-fixed-top">
+    <div class="container-fluid">
       <div class="navbar-header">
         <a href="./" class="navbar-brand">
           <svg class="icon icon-logo">
@@ -36,50 +35,37 @@
           </svg>
         </a>
 
-        <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#top-nav-collapse">
-          <svg class="icon menu" role="img">
+        <button type="button" class="navbar-toggle navbar-toggle collapsed" data-toggle="collapse" data-target="#top-nav-collapse">
+          <svg class="icon icon-menu" role="img">
             <use xlink:href="{{iconPath}}#menu"></use>
           </svg>
         </button>
       </div>
 
-      <div class="custom-navbar-group">
-        <div class="btn-group btn-group-sm" id="nav-buttons">
-          {{#eachRoot}}
-            <a href="section-{{slug referenceURI}}.html"
-              class="btn btn-default {{#ifReference ../rootName}}active{{/ifReference}}">
-              {{header}}
-            </a>
-          {{/eachRoot}}
-        </div>
-      </div>
-
-      <div class="navbar-collapse collapse-right collapse custom-mobile-nav" id="top-nav-collapse" aria-expanded="false">
+      <div class="navbar-collapse collapse" id="top-nav-collapse" aria-expanded="false">
         <ul class="nav navbar-nav">
           {{#eachRoot}}
             <li class="{{#ifReference ../rootName}}active{{/ifReference}}">
-              <a href="section-{{slug referenceURI}}.html">{{header}}</a>
+              <a role="button" href="section-{{slug referenceURI}}.html">{{header}}</a>
             </li>
           {{/eachRoot}}
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" role="button" id="downloadSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Download
+              <svg class="icon icon-chevron-down">
+                <use xlink:href="{{iconPath}}#chevron-down"></use>
+              </svg>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="downloadSelector">
+              {{fileByVersions}}
+            </ul>
+          </li>
+        </ul>
       </div>
-
-      <div class="download-selector pull-right hidden-xs">
-        <div class="dropdown">
-          <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="downloadSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Download
-            <svg class="icon icon-chevron-down">
-              <use xlink:href="{{iconPath}}#chevron-down"></use>
-            </svg>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="downloadSelector">
-            {{fileByVersions}}
-          </ul>
-        </div>
-      </div>
-
     </div>
-  </div>
+  </header>
 </div>
 <!-- END HEADER -->
 
