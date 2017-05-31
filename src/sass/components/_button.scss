@@ -28,7 +28,7 @@ Styleguide Components.Buttons
   white-space: normal;
 
   &.btn-shadow {
-    box-shadow: inset 0 -2px 0 0 rgba($black, 0.3);
+    @include box-shadow(inset 0 -2px 0 0 rgba($black, 0.3));
   }
 
   @include breakpoint($screen-sm) {
@@ -126,23 +126,6 @@ Styleguide Components.Buttons
     &.active {
       background-color: $grey-darker;
       color: $grey-lighter;
-      outline: none;
-    }
-  }
-
-  &.btn-white {
-    background-color: $white;
-    color: $grey-darker;
-    border-color: $grey-medium;
-
-    &:hover,
-    &:focus {
-      background-color: $grey-smoke;
-      outline: none;
-    }
-
-    &:active,
-    &.active {
       outline: none;
     }
   }

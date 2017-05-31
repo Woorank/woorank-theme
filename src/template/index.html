@@ -9,7 +9,7 @@
   <title>Woorank Styleguide</title>
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <link rel="stylesheet" href="assets/styles/kss.css">
   <link rel="stylesheet" href="assets/styles/woorank-theme.css">
@@ -49,11 +49,8 @@
               <a role="button" href="section-{{slug referenceURI}}.html">{{header}}</a>
             </li>
           {{/eachRoot}}
-          <li>
-            <a class="navbar-btn btn-primary" role="button">
-              button
-            </a>
-          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
           <li>
             <a class="navbar-btn btn-white" role="button">
               button
@@ -64,13 +61,10 @@
               button
             </a>
           </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
             <a class="dropdown-toggle" role="button" id="downloadSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Download
-              <svg class="icon icon-chevron-down">
-                <use xlink:href="{{iconPath}}#chevron-down"></use>
+              <svg class="icon icon-user fill-grey-medium">
+                <use xlink:href="{{iconPath}}#user"></use>
               </svg>
             </a>
             <ul class="dropdown-menu" aria-labelledby="downloadSelector">

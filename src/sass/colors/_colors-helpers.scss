@@ -32,9 +32,32 @@ Styleguide Colors.Helpers
   .background-#{$color} {
     background-color: $colorValue;
   }
-  .btn-#{$color} {
-    color: $white;
-    background-color: $colorValue;
+  .btn-#{$color} { // Respect button contrast
+    @if (str-index($color, 'white') or str-index($color, 'light') or str-index($color, 'lighter') or str-index($color, 'smoke') ) {
+      color: $grey-darker !important;
+      background-color: $colorValue !important;
+      &:hover,
+      &:active,
+      &:focus {
+        color: $grey-darker !important;
+        background-color: darken($colorValue, 5%) !important;
+      }
+      .icon {
+        fill: $grey-darker !important;
+      }
+    } @else {
+      color: $white !important;
+      background-color: $colorValue !important;
+      &:hover,
+      &:active,
+      &:focus {
+        color: $white !important;
+        background-color: darken($colorValue, 5%) !important;
+      }
+      .icon {
+        color: $white !important;
+      }
+    }
   }
 
   // forced colors

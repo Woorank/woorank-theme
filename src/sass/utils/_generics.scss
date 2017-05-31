@@ -7,14 +7,9 @@ body {
 }
 
 body {
-  transition: transform 350ms ease-out;
+  transition: transform .2s linear;
   font-weight: $font-weight-normal;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  min-width: 320px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  min-width:320px;
 
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min--moz-device-pixel-ratio: 2),

@@ -83,6 +83,11 @@ body.navbar-open {
 }
 
 .navbar {
+  .navbar-header {
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+  }
   background-color: $white;
   border-radius: 0;
   box-shadow: none;
@@ -160,12 +165,6 @@ body.navbar-open {
       }
     }
   }
-}
-
-.navbar-header {
-  text-align: center;
-  position: relative;
-  vertical-align: middle;
 }
 
 .navbar-brand {
@@ -264,6 +263,7 @@ body.navbar-open {
 
       a,
       .dropdown a {
+        background-color: transparent;
         border-bottom: 1px solid darken($grey-dark, 5%);
         color: $white;
         font-size: 14px;
