@@ -1,6 +1,7 @@
 'use strict';
 
-(function () {
+(function (H) {
+  H.className = H.className.replace(/\bno-js\b/, 'js'); // Why modernizr anymore, right?
   var $ = window.jQuery;
   var $navbar = $('#top .navbar');
   var $sidebarNav = $('.sidebar-nav');
@@ -99,4 +100,4 @@
     }
     return $btn.attr('class', baseClasses + btnAsync.loader);
   });
-})();
+})(document.documentElement);

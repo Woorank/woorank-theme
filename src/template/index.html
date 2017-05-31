@@ -4,6 +4,19 @@
 <!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<!--[if lt IE 9]>
+    <html xml:lang="en" lang="en"
+        xmlns:fb="http://ogp.me/ns/fb#" class="no-js lt-ie9" lang="en">
+<![endif]-->
+<!--[if lt IE 10]>
+    <html xml:lang="en" lang="en"
+        xmlns:fb="http://ogp.me/ns/fb#" class="no-js lt-ie10" lang="en">
+<![endif]-->
+<!--[if (gte IE 9)]><!-->
+    <html xml:lang="en" lang="en"
+        xmlns:fb="http://ogp.me/ns/fb#" class="no-js" lang="en">
+<!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <title>Woorank Styleguide</title>
@@ -63,8 +76,9 @@
           </li>
           <li class="dropdown">
             <a class="dropdown-toggle" role="button" id="downloadSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <svg class="icon icon-user fill-grey-medium">
-                <use xlink:href="{{iconPath}}#user"></use>
+              Download
+              <svg class="icon icon-chevron-down">
+                <use xlink:href="{{iconPath}}#chevron-down"></use>
               </svg>
             </a>
             <ul class="dropdown-menu" aria-labelledby="downloadSelector">
