@@ -136,6 +136,22 @@ body.navbar-open {
     a {
       color: $grey-darker;
       font-size: $font-size-small;
+      &.navbar-btn {
+        @extend .btn;
+        color: $white;
+        margin-left: 10px;
+        box-shadow: none; // Avoid navbar-btn shadow
+        @include breakpoint($screen-sm, $reverse: true) {
+          width: 92%;
+          margin: 10px 10px 0 10px;
+        }
+        &.btn-white {
+          @include breakpoint($screen-sm) {
+            padding-top: 5px;
+            padding-bottom: 5px;
+          }
+        }
+      }
     }
 
     &.active {
@@ -207,12 +223,6 @@ body.navbar-open {
   }
 }
 
-.navbar-btn {
-  @include breakpoint($screen-sm, $reverse: true) {
-    width: 95%;
-  }
-}
-
 .navbar-collapse {
   @include breakpoint($screen-sm - 1, $reverse: true) {
     @include box-shadow(inset 0 -1px 1px $black);
@@ -254,7 +264,6 @@ body.navbar-open {
 
       a,
       .dropdown a {
-        background-color: transparent;
         border-bottom: 1px solid darken($grey-dark, 5%);
         color: $white;
         font-size: 14px;
