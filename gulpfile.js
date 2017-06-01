@@ -313,6 +313,7 @@ gulp.task('dev', [
 gulp.task('build', [
   'sass',
   'sass:build',
+  'pictures',
   // 'svg2png',
   'svg:build',
   'kss'

@@ -33,14 +33,13 @@
   <link rel="apple-touch-icon-precomposed" href="assets/img/apple-touch-icon-precomposed.png" />
   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/ico" />
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/png" />
-
 </head>
 <body id="kss-node" class="styleguide {{#if homepage}}homepage{{/if}}">
 <div class="overlay"></div>
 <!-- HEADER -->
 <div id="top">
   <header class="navbar navbar-fixed-top">
-    <div class="container-fluid">
+    <div class="container">
       <div class="navbar-header">
         <a href="./" class="navbar-brand">
           <svg class="icon icon-logo-glyph">
@@ -83,16 +82,46 @@
 <!-- END HEADER -->
 
 <!-- MAIN -->
-<article role="main" class="container">
-  {{#if homepage}}
-    <div class="page-header page-header-subtitle text-center">
-      <h1>Woorank Living Style Guide</h1>
-      <p>The central place for styles in Woorank Apps</p>
+{{#if homepage}}
+  <article role="main">
+    <div class="page-hero page-hero-full background-primary">
+      <div class="page-hero-content container">
+        <h1 class="title"><strong>Woorank</strong> Living Style Guide</h1>
+        <h2 class="subtitle">The central place for styles in Woorank Apps</h2>
+      </div>
+      <img class="page-hero-bottom-margin" src="assets/img/home/background-mask.png">
     </div>
-    <div class="content styleguide-home">
+    <div class="page-hero-footer">
+        <a href="#styleguide-home" class="btn btn-link" role="button">
+          <svg class="icon icon-chevron-down icon-md fill-primary">
+            <use xlink:href="{{iconPath}}#chevron-down"></use>
+          </svg>
+        </a>
+    </div>
+
+    <div id="styleguide-home" class="container styleguide-home">
       {{{homepage}}}
     </div>
-  {{else}}
+
+    <div class="page-prefooter background-primary-smoke background-full">
+      <div class="container">
+        <img src="assets/img/home/landing-1.svg" alt="WooRank.com">
+        <div class="text-center">
+          <span class="msg msg-mobile">
+            Get free, unlimited access to WooRank for 14 days!
+          </span>
+            <a class="btn btn-lg btn-warning btn-shadow" href="<?=$this->register->url();?>">
+              Start Free Trial
+            </a>
+          <span class="prefooter-msg">
+            Get free, unlimited access to WooRank for 14 days!
+          </span>
+        </div>
+      </div>
+    </div>
+  </article>
+{{else}}
+  <article role="main" class="container">
     {{#equal rootName "Structures"}}
       <div class="col-xs-12 structures-container">
     {{else}}
@@ -220,9 +249,8 @@
         </div>
       </div>
     {{/equal}}
-
-{{/if}}
 </article>
+{{/if}}
 <!-- END MAIN -->
 <footer class="page-footer" id="footer">
   <ul class="footer-columns">

@@ -1,0 +1,63 @@
+/*
+Page Prefooter
+
+Markup:
+<div class="page-prefooter background-primary-smoke background-wrap">
+  <div class="container">
+    <img src="assets/img/home/landing-1.svg" alt="WooRank.com">
+    <div class="text-center">
+      <a class="btn btn-lg btn-warning btn-shadow" href="<?=$this->register->url();?>">
+        Start Free Trial
+      </a>
+    </div>
+  </div>
+</div>
+
+Styleguide Patterns.Page-Prefooter
+*/
+
+.page-prefooter {
+  position: relative;
+  padding-top: 66px;
+  padding-bottom: 66px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  img {
+    position: absolute;
+    bottom: 0px;
+    height: 220px;
+    display: none;
+    @include breakpoint($screen-sm) {
+      display: block;
+    }
+  }
+
+  .msg {
+    display: none;
+    text-align: left;
+    width: 200px;
+    margin-left: 30px;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1;
+    color: $grey-dark;
+    @include breakpoint ($screen-sm) {
+      display: inline-block;
+    }
+    &.msg-mobile {
+      display: block;
+      position: relative;
+      width: 200px;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 1;
+      @include breakpoint ($screen-sm) {
+        display: none;
+      }
+    }
+  }
+}
