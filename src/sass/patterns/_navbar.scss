@@ -5,51 +5,80 @@ Markup:
 <nav class="navbar" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle navbar-toggle-left" data-target="#header-navigation">menu<span class="caret"></span></button>
-      <a class="navbar-brand" href="https://www.woorank.com">
-        <svg class="icon icon-logo"><use xlink:href="{{{iconPath}}}#logo"></use></svg>
+      <a class="navbar-brand">
+        <svg class="icon icon-logo">
+          <use xlink:href="{{{iconPath}}}#logo"></use>
+        </svg>
       </a>
+      <button
+        type="button"
+        class="navbar-toggle navbar-toggle collapsed"
+        data-toggle="collapse"
+        data-target="#top-nav-collapse">
+        <svg class="icon icon-menu" role="img">
+          <use xlink:href="{{iconPath}}#menu"></use>
+        </svg>
+      </button>
     </div>
-    <div class="collapse navbar-collapse" id="header-navigation">
+    <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="#">Link</a></li>
+        <li>
+          <a role="button">
+            Link
+          </a>
+        </li>
+        <li>
+          <a class="navbar-btn btn-primary">
+            navbar-btn btn-primary
+          </a>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li id="logged-container">
-          <a href="#" data-toggle="dropdown" class="dropdown-toggle" role="button" aria-expanded="false">
-            info@woorank.com
-            <svg class="icon icon-xs chevron-down">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{{iconPath}}}#chevron-down"></use>
+        <li class="dropdown">
+          <a data-toggle="dropdown" class="dropdown-toggle" role="button" aria-expanded="false">
+            <svg class="icon icon-user fill-grey-medium">
+              <use
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="{{{iconPath}}}#user"></use>
+            </svg>
+            <svg class="icon icon-chevron-down">
+              <use
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="{{{iconPath}}}#chevron-down">
+              </use>
             </svg>
           </a>
           <ul class="dropdown-menu" role="menu">
             <li>
-              <a href="#">Upgrade / Downgrade</a>
+              <a>
+                User Action 1
+              </a>
             </li>
             <li>
-              <a href="#">My account</a>
-            </li>
-            <li>
-              <a href="#">Edit PDF Templates</a>
-            </li>
-            <li>
-              <a href="#">Logout</a>
+              <a>
+                User Action 2
+              </a>
             </li>
           </ul>
         </li>
-        <li>
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
-            English  <svg class="icon icon-xs chevron-down">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{{iconPath}}}#chevron-down"></use>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button">
+            Dropdown
+            <svg class="icon icon-chevron-down">
+              <use
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="{{{iconPath}}}#chevron-down">
+              </use>
             </svg>
           </a>
           <ul class="dropdown-menu" role="menu">
             <li>
-              <a href="#">Español</a>
-              <a href="#">Français</a>
-              <a href="#">Deutsch</a>
-              <a href="#">Português</a>
-              <a href="#">Nederlands</a>
+              <a>
+                Dropdown 1
+              </a>
+              <a>
+                Dropdown 2
+              </a>
             </li>
           </ul>
         </li>
@@ -143,17 +172,19 @@ body.navbar-open {
       font-size: $font-size-small;
       &.navbar-btn {
         @extend .btn;
-        color: $white;
+        padding-top: 5px;
+        padding-bottom: 5px;
         margin-left: 10px;
         box-shadow: none; // Avoid navbar-btn shadow
         @include breakpoint($screen-sm, $reverse: true) {
           width: 92%;
           margin: 10px 10px 0 10px;
         }
-        &.btn-white {
+        &.btn-default {
           @include breakpoint($screen-sm) {
-            padding-top: 5px;
-            padding-bottom: 5px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border-color: $grey;
           }
         }
       }
