@@ -1,7 +1,6 @@
 'use strict';
 
 const autoprefixer = require('gulp-autoprefixer');
-const babel = require('gulp-babel');
 const connect = require('gulp-connect');
 const debug = require('gulp-debug');
 const del = require('del');
@@ -314,6 +313,7 @@ gulp.task('dev', [
 gulp.task('build', [
   'sass',
   'sass:build',
+  'pictures',
   'svg2png',
   'svg:build',
   'kss'

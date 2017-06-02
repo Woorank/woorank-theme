@@ -1,8 +1,9 @@
 'use strict';
 
-(function () {
+(function (H) {
+  H.className = H.className.replace(/\bno-js\b/, 'js'); // Why modernizr anymore, right?
   var $ = window.jQuery;
-  var $navbar = $('#top .header.navbar');
+  var $navbar = $('#top .navbar');
   var $sidebarNav = $('.sidebar-nav');
 
   window.prettyPrint();
@@ -13,25 +14,25 @@
       $(window).scrollTop(0);
     }
     $navbar.find('.navbar-collapse').collapse(status ? 'show' : 'hide');
-    $('body').toggleClass('navbar-open-right', status);
+    $('body').toggleClass('navbar-open', status);
   }
 
   $(document).on('click', function (event) {
     if (
       !$(event.target).parents('.navbar-header').length &&
       !$(event.target).parents('*[class^="js-"],*[class*=" js-"]').length &&
-      $('body').hasClass('navbar-open-right')
+      $('body').hasClass('navbar-open')
     ) {
       togglePanel(false);
     }
   });
 
   $navbar.find('.navbar-toggle').on('click', function (event) {
-    togglePanel(!$('body').hasClass('navbar-open-right'));
+    togglePanel(!$('body').hasClass('navbar-open'));
   });
 
   $(window).on('resize', function () {
-    if ($('body').hasClass('navbar-open-right')) {
+    if ($('body').hasClass('navbar-open')) {
       togglePanel(false);
     }
   });
@@ -99,4 +100,4 @@
     }
     return $btn.attr('class', baseClasses + btnAsync.loader);
   });
-})();
+})(document.documentElement);

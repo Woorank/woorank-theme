@@ -5,51 +5,80 @@ Markup:
 <nav class="navbar" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle navbar-toggle-left" data-target="#header-navigation">menu<span class="caret"></span></button>
-      <a class="navbar-brand" href="https://www.woorank.com">
-        <svg class="icon icon-logo"><use xlink:href="{{{iconPath}}}#logo"></use></svg>
+      <a class="navbar-brand">
+        <svg class="icon icon-logo">
+          <use xlink:href="{{{iconPath}}}#logo"></use>
+        </svg>
       </a>
+      <button
+        type="button"
+        class="navbar-toggle navbar-toggle collapsed"
+        data-toggle="collapse"
+        data-target="#top-nav-collapse">
+        <svg class="icon icon-menu" role="img">
+          <use xlink:href="{{iconPath}}#menu"></use>
+        </svg>
+      </button>
     </div>
-    <div class="collapse navbar-collapse" id="header-navigation">
+    <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="#">Link</a></li>
+        <li>
+          <a role="button">
+            Link
+          </a>
+        </li>
+        <li>
+          <a class="navbar-btn btn-primary">
+            navbar-btn btn-primary
+          </a>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li id="logged-container">
-          <a href="#" data-toggle="dropdown" class="dropdown-toggle" role="button" aria-expanded="false">
-            info@woorank.com
-            <svg class="icon icon-xs chevron-down">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{{iconPath}}}#chevron-down"></use>
+        <li class="dropdown">
+          <a data-toggle="dropdown" class="dropdown-toggle" role="button" aria-expanded="false">
+            <svg class="icon icon-user fill-grey-medium">
+              <use
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="{{{iconPath}}}#user"></use>
+            </svg>
+            <svg class="icon icon-chevron-down">
+              <use
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="{{{iconPath}}}#chevron-down">
+              </use>
             </svg>
           </a>
           <ul class="dropdown-menu" role="menu">
             <li>
-              <a href="#">Upgrade / Downgrade</a>
+              <a>
+                User Action 1
+              </a>
             </li>
             <li>
-              <a href="#">My account</a>
-            </li>
-            <li>
-              <a href="#">Edit PDF Templates</a>
-            </li>
-            <li>
-              <a href="#">Logout</a>
+              <a>
+                User Action 2
+              </a>
             </li>
           </ul>
         </li>
-        <li>
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
-            English  <svg class="icon icon-xs chevron-down">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{{iconPath}}}#chevron-down"></use>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button">
+            Dropdown
+            <svg class="icon icon-chevron-down">
+              <use
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="{{{iconPath}}}#chevron-down">
+              </use>
             </svg>
           </a>
           <ul class="dropdown-menu" role="menu">
             <li>
-              <a href="#">Español</a>
-              <a href="#">Français</a>
-              <a href="#">Deutsch</a>
-              <a href="#">Português</a>
-              <a href="#">Nederlands</a>
+              <a>
+                Dropdown 1
+              </a>
+              <a>
+                Dropdown 2
+              </a>
             </li>
           </ul>
         </li>
@@ -61,87 +90,113 @@ Markup:
 Styleguide Patterns.Navbar
 */
 
+body.navbar-open {
+  transform: translateX($mobile-nav-size);
+  overflow: hidden;
+  .overlay {
+    display: block;
+    background-color: rgba(0,0,0,.1);
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: $zindex-navbar-fixed - 1;
+  display: none;
+  background-color: $black;
+  @include transition(background-color .15s ease-out 0s);
+}
+
 .navbar {
+  .navbar-header {
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+  }
   background-color: $white;
   border-radius: 0;
-  border: none;
   box-shadow: none;
   margin-bottom: 0;
   position: static;
-  border-bottom: 1px solid $border-color;
+  @include transition(all .5s linear);
+  max-height: 60px;
+  &:after {
+    content: '';
+    display: table;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: -5px;
+    width: 100%;
+    height: 5px;
+    @include box-shadow(inset 0px 2px 6px -3px rgba(0, 0, 0, 0.4));
+  }
 
   &.navbar-fixed-top {
     position: fixed;
     top: 0;
-  }
-
-  .icon-chevron-down {
-    margin-left: 5px;
-    fill: $grey-medium;
-    stroke: $grey-medium;
-  }
-
-  .icon-email {
-    margin-bottom: -5px;
-    margin-top: -3px;
+    z-index: $zindex-navbar-fixed;
   }
 
   .dropdown-menu {
-    font-size: 13px;
+    font-size: $font-size-small;
     min-width: 190px;
     max-height: none;
+    li a {
+      color: $grey-darker;
+    }
   }
+}
 
-  .menu {
-    position: relative;
-    top: 5px;
+.dropdown {
+  .icon-chevron-down {
+    margin-left: 5px;
+    @include transition(all .1s linear);
+    transform: rotate(0deg);
+  }
+  &.open {
+    .icon-chevron-down {
+      transform: rotate(180deg);
+    }
   }
 }
 
 .navbar-nav {
   li {
     margin-bottom: 0;
+    a {
+      color: $grey-darker;
+      font-size: $font-size-small;
+      &.navbar-btn {
+        @extend .btn;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-left: 10px;
+        box-shadow: none; // Avoid navbar-btn shadow
+        @include breakpoint($screen-sm, $reverse: true) {
+          width: 92%;
+          margin: 10px 10px 0 10px;
+        }
+        &.btn-default {
+          @include breakpoint($screen-sm) {
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border-color: $grey;
+          }
+        }
+      }
+    }
 
     &.active {
       a {
         font-weight: $font-weight-medium;
       }
     }
-
-    a {
-      color: $grey-medium;
-      font-size: 13px;
-
-      .icon {
-        fill: $grey;
-        stroke: $grey;
-
-        &.icon-email {
-          fill: $grey-smoke;
-          stroke: $grey-smoke;
-        }
-      }
-
-      &:hover,
-      &:focus {
-        .icon {
-          fill: $grey;
-          stroke: $grey;
-
-          &.icon-email {
-            fill: $white;
-            stroke: $white;
-          }
-        }
-      }
-    }
   }
-}
-
-.navbar-header {
-  text-align: center;
-  position: relative;
-  vertical-align: middle;
 }
 
 .navbar-brand {
@@ -151,82 +206,58 @@ Styleguide Patterns.Navbar
   line-height: 20px;
   float: none;
 
-  .icon-logo {
-    height: 20px;
-    width: 110px;
-  }
-
   @include breakpoint($screen-sm) {
     max-width: 125px;
     margin-right: 1em;
     float: left;
   }
+
+  .icon-logo {
+    height: 20px;
+    width: 110px;
+  }
 }
 
 .navbar-toggle,
 .navbar-toggle-like {
-  border: none;
-  background: none;
-  margin: 0;
-  line-height: 0;
-  padding: 10px 15px;
   position: absolute;
   top: 50%;
+  left: 0;
+  right: auto;
   transform: translateY(-50%);
-  right: 0;
+  backface-visibility: hidden;
 
-  &.navbar-toggle-left {
-    left: 0;
+  line-height: 0;
+  margin: 0 0 0 15px;
+  overflow: hidden;
+
+  background: none;
+  border: none;
+  border-radius: 50%;
+
+  .icon-menu {
+    @include transition(all .1s linear);
+    transform: rotate(-90deg);
   }
-}
 
-.navbar-nav {
-  li {
-    margin-bottom: 0;
-
-    a {
-      color: $grey-medium;
-      font-size: 13px;
-
-      &:hover,
-      &:focus {
-        .navbar-icon-email {
-          fill: $white;
-          stroke: $white;
-        }
-      }
+  &.collapsed {
+    .icon-menu {
+      transform: rotate(0deg);
     }
   }
 
-  .dropdown-menu li a {
-    color: $grey-darker;
-  }
-}
-
-.navbar-btn {
-  @include breakpoint($screen-sm, $reverse: true) {
-    width: 95%;
+  &:hover,
+  &:focus,
+  &:active {
+    background: $grey-smoke;
   }
 }
 
 .navbar-collapse {
-  &.collapse-left {
-    @include breakpoint($screen-sm - 1, $reverse: true) {
-      left: -($mobile-nav-size);
-      right: auto;
-    }
-  }
-  &.collapse-right {
-    @include breakpoint($screen-sm - 1, $reverse: true) {
-      right: -($mobile-nav-size);
-      left: auto;
-    }
-  }
-
   @include breakpoint($screen-sm - 1, $reverse: true) {
-    -webkit-backface-visibility: hidden;
     @include box-shadow(inset 0 -1px 1px $black);
     @include transition(all 350ms ease-out);
+    backface-visibility: hidden;
     background-color: $grey-dark;
     bottom: 0;
     display: block;
@@ -239,7 +270,7 @@ Styleguide Patterns.Navbar
     top: 0;
     visibility: hidden;
     width: $mobile-nav-size;
-    z-index: 10000;
+    z-index: $zindex-navbar-fixed;
 
     &.in,
     &.collapsing {
@@ -247,8 +278,7 @@ Styleguide Patterns.Navbar
     }
 
     .navbar-nav {
-      margin: 0 0 -20px 0;
-      padding: 13px 0;
+      margin: 0;
 
       .dropdown-menu {
         padding: 0;
@@ -256,7 +286,10 @@ Styleguide Patterns.Navbar
 
       .dropdown-menu li a,
       li a {
-        padding: 15px;
+        padding: 18px;
+        .icon {
+          fill: $white;
+        }
       }
 
       a,
@@ -274,11 +307,6 @@ Styleguide Patterns.Navbar
           background-color: darken($grey-dark, 5%);
           border-color: darken($grey-dark, 5%);
           color: $white;
-
-          .icon {
-            fill: $white;
-            stroke: $white;
-          }
         }
       }
     }
@@ -288,7 +316,7 @@ Styleguide Patterns.Navbar
 /* genbar impact in navbar */
 .navbar {
   .navbar-collapse {
-    transition: none !important;
+    @include transition(none !important);
 
     &.collapse.in,
     &.collapsing {
@@ -317,18 +345,4 @@ Styleguide Patterns.Navbar
     margin: 0 -15px;
     width: auto;
   }
-}
-
-.navbar {
-  .navbar-collapse {
-    .btn-sm {
-      margin-left: 5px;
-      margin-right: 5px;
-    }
-  }
-}
-
-.navbar-text.small {
-  margin-bottom: 20px;
-  margin-top: 20px;
 }

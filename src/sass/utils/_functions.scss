@@ -1,0 +1,32 @@
+// BASES MIXINS
+
+@function get-variant-color($base, $arg) {
+  @for $i from 1 through length($colors) {
+    $color: nth($colors, $i);
+    @if "#{$base}-#{$arg}" == nth($color, 1) {
+      @return nth($color, 2);
+    }
+  }
+  @return null;
+}
+
+@function get-color-value($name) {
+  @for $i from 1 through length($colors) {
+    $color: nth($colors, $i);
+    @if nth($color, 1) == $name {
+      @return nth($color, 2);
+    }
+  }
+  @return null;
+}
+
+@function get-original-color($variant) {
+  @each $primaryColor, $variantsMap in $colorsMap {
+    @each $name, $value in $variantsMap {
+      @if $name == $variant {
+        @return get-color-value($primaryColor);
+      }
+    }
+  }
+  @return null;
+}

@@ -4,12 +4,25 @@
 <!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<!--[if lt IE 9]>
+    <html xml:lang="en" lang="en"
+        xmlns:fb="http://ogp.me/ns/fb#" class="no-js lt-ie9" lang="en">
+<![endif]-->
+<!--[if lt IE 10]>
+    <html xml:lang="en" lang="en"
+        xmlns:fb="http://ogp.me/ns/fb#" class="no-js lt-ie10" lang="en">
+<![endif]-->
+<!--[if (gte IE 9)]><!-->
+    <html xml:lang="en" lang="en"
+        xmlns:fb="http://ogp.me/ns/fb#" class="no-js" lang="en">
+<!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <title>Woorank Styleguide</title>
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <link rel="stylesheet" href="assets/styles/kss.css">
   <link rel="stylesheet" href="assets/styles/woorank-theme.css">
@@ -20,80 +33,95 @@
   <link rel="apple-touch-icon-precomposed" href="assets/img/apple-touch-icon-precomposed.png" />
   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/ico" />
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/png" />
-  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-
 </head>
 <body id="kss-node" class="styleguide {{#if homepage}}homepage{{/if}}">
-
+<div class="overlay"></div>
 <!-- HEADER -->
 <div id="top">
-  <div class="header navbar navbar-fixed-top">
+  <header class="navbar navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <a href="./" class="navbar-brand">
-          <svg class="icon icon-logo">
-            <use xlink:href="{{iconPath}}#logo"></use>
+          <svg class="icon icon-logo-glyph">
+            <use xlink:href="{{iconPath}}#logo-glyph"></use>
           </svg>
         </a>
 
-        <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#top-nav-collapse">
-          <svg class="icon menu" role="img">
+        <button type="button" class="navbar-toggle navbar-toggle collapsed" data-toggle="collapse" data-target="#top-nav-collapse">
+          <svg class="icon icon-menu" role="img">
             <use xlink:href="{{iconPath}}#menu"></use>
           </svg>
         </button>
       </div>
 
-      <div class="custom-navbar-group">
-        <div class="btn-group btn-group-sm" id="nav-buttons">
-          {{#eachRoot}}
-            <a href="section-{{slug referenceURI}}.html"
-              class="btn btn-default {{#ifReference ../rootName}}active{{/ifReference}}">
-              {{header}}
-            </a>
-          {{/eachRoot}}
-        </div>
-      </div>
-
-      <div class="navbar-collapse collapse-right collapse custom-mobile-nav" id="top-nav-collapse" aria-expanded="false">
+      <div class="navbar-collapse collapse" id="top-nav-collapse" aria-expanded="false">
         <ul class="nav navbar-nav">
           {{#eachRoot}}
             <li class="{{#ifReference ../rootName}}active{{/ifReference}}">
-              <a href="section-{{slug referenceURI}}.html">{{header}}</a>
+              <a role="button" href="section-{{slug referenceURI}}.html">{{header}}</a>
             </li>
           {{/eachRoot}}
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" role="button" id="downloadSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Download
+              <svg class="icon icon-chevron-down">
+                <use xlink:href="{{iconPath}}#chevron-down"></use>
+              </svg>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="downloadSelector">
+              {{fileByVersions}}
+            </ul>
+          </li>
+        </ul>
       </div>
-
-      <div class="download-selector pull-right hidden-xs">
-        <div class="dropdown">
-          <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="downloadSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Download
-            <svg class="icon icon-chevron-down">
-              <use xlink:href="{{iconPath}}#chevron-down"></use>
-            </svg>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="downloadSelector">
-            {{fileByVersions}}
-          </ul>
-        </div>
-      </div>
-
     </div>
-  </div>
+  </header>
 </div>
 <!-- END HEADER -->
 
 <!-- MAIN -->
-<article role="main" class="container">
-  {{#if homepage}}
-    <div class="page-header page-header-subtitle text-center">
-      <h1>Woorank Living Style Guide</h1>
-      <p>The central place for styles in Woorank Apps</p>
+{{#if homepage}}
+  <article role="main">
+    <div class="page-hero background-primary">
+      <div class="page-hero-content container">
+        <h1 class="title"><strong>Woorank</strong> Living Style Guide</h1>
+        <h2 class="subtitle">The central place for styles in Woorank Apps</h2>
+      </div>
+      <img class="page-hero-bottom-margin" src="assets/img/home/background-mask.png">
     </div>
-    <div class="content styleguide-home">
+    <div class="page-hero-footer">
+        <a href="#styleguide-home" class="btn btn-link" role="button">
+          <svg class="icon icon-chevron-down icon-md fill-primary">
+            <use xlink:href="{{iconPath}}#chevron-down"></use>
+          </svg>
+        </a>
+    </div>
+
+    <div id="styleguide-home" class="container styleguide-home">
       {{{homepage}}}
     </div>
-  {{else}}
+
+    <div class="page-prefooter background-primary-smoke background-full">
+      <div class="container">
+        <img src="assets/img/home/landing-1.svg" alt="WooRank.com">
+        <div class="text-center">
+          <span class="msg msg-mobile">
+            Get free, unlimited access to WooRank for 14 days!
+          </span>
+            <a class="btn btn-lg btn-warning btn-shadow" href="https://www.woorank.com">
+              Start Free Trial
+            </a>
+          <span class="msg">
+            Get free, unlimited access to WooRank for 14 days!
+          </span>
+        </div>
+      </div>
+    </div>
+  </article>
+{{else}}
+  <article role="main" class="container">
     {{#equal rootName "Structures"}}
       <div class="col-xs-12 structures-container">
     {{else}}
@@ -221,9 +249,8 @@
         </div>
       </div>
     {{/equal}}
-
+  </article>
 {{/if}}
-</article>
 <!-- END MAIN -->
 <footer class="page-footer" id="footer">
   <ul class="footer-columns">
