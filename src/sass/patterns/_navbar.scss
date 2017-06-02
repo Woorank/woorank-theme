@@ -105,7 +105,7 @@ body.navbar-open {
   left: 0;
   bottom: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: $zindex-navbar-fixed - 1;
   display: none;
   background-color: $black;
   @include transition(background-color .15s ease-out 0s);
@@ -139,6 +139,7 @@ body.navbar-open {
   &.navbar-fixed-top {
     position: fixed;
     top: 0;
+    z-index: $zindex-navbar-fixed;
   }
 
   .dropdown-menu {
@@ -220,7 +221,6 @@ body.navbar-open {
 .navbar-toggle,
 .navbar-toggle-like {
   position: absolute;
-  float: left;
   top: 50%;
   left: 0;
   right: auto;
@@ -270,7 +270,7 @@ body.navbar-open {
     top: 0;
     visibility: hidden;
     width: $mobile-nav-size;
-    z-index: 10000;
+    z-index: $zindex-navbar-fixed;
 
     &.in,
     &.collapsing {
