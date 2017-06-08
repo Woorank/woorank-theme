@@ -1,13 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
-	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<g id="Outline_Icons">
-	<path d="M23.83,10.629c-0.206-0.183-0.523-0.162-0.706,0.045L13,22.179V0.504c0-0.276-0.224-0.5-0.5-0.5S12,0.228,12,0.504v21.675
-		L1.875,10.674c-0.183-0.207-0.5-0.228-0.706-0.045c-0.208,0.182-0.228,0.498-0.045,0.705l11,12.5
-		c0.003,0.004,0.008,0.006,0.012,0.009c0.034,0.037,0.076,0.064,0.12,0.089c0.015,0.01,0.027,0.022,0.043,0.029
-		c0.062,0.027,0.129,0.043,0.2,0.043s0.139-0.016,0.2-0.043c0.016-0.007,0.028-0.02,0.043-0.029c0.044-0.024,0.086-0.052,0.12-0.089
-		c0.004-0.003,0.009-0.005,0.012-0.009l11-12.5C24.058,11.127,24.038,10.811,23.83,10.629z"/>
-</g>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10.5 0h3v18.255l8.385-8.37L24 12 12 24 0 12l2.115-2.13 8.385 8.385" stroke="none" fill-rule="evenodd"/>
 </svg>
