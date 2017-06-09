@@ -106,7 +106,7 @@ Markup:
 Styleguide Patterns.Generation-bar-in-navbar-Pro-User
 */
 
-.generation-bar-toggle {
+.-genbar-container {
 
 }
 
@@ -120,7 +120,7 @@ Styleguide Patterns.Generation-bar-in-navbar-Pro-User
   height: 100%;
   visibility: visible;
   padding: 0;
-  background-color: $white;
+  background-color: transparent;
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
 
@@ -161,9 +161,6 @@ Styleguide Patterns.Generation-bar-in-navbar-Pro-User
 
   .generation-bar {
     transition: all .2s linear;
-    &.open {
-      
-    }
     padding-top: 0;
 
     .form-control {
@@ -217,9 +214,8 @@ Styleguide Patterns.Generation-bar-in-navbar-Pro-User
 
   .generation-bar-in-header {
     display: block;
-    padding-top: 15px;
     z-index: $zindex-navbar;
-    max-width: none;
+    // max-width: none;
     position: relative;
     padding-bottom: 50px;
 
