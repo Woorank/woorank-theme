@@ -2,8 +2,8 @@
 Modal
 
 Markup:
-<!-- style="display:block;position:relative;" for this example -->
-<div class="modal js-modal-genbar" id="modal-example" tabindex="-1" role="dialog" aria-hidden="true" style="display:block;position:relative;">
+<!-- style="display:block;position:relative;z-index:1000;" for this example -->
+<div class="modal js-modal-genbar" id="modal-example" tabindex="-1" role="dialog" aria-hidden="true" style="display:block;position:relative;z-index:1000;">
   <div class="modal-content">
     <div class="modal-header">
       <span class="close" data-dismiss="modal" aria-hidden="true">

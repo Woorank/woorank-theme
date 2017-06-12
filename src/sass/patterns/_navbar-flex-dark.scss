@@ -1,0 +1,63 @@
+/*
+Navbar Flex Dark
+
+Markup:
+<!-- style="width:690px;min-width: 0;" for this example -->
+<header class="-header -dark" role="navigation" style="width:690px;min-width:0;">
+  <div class="container-fluid">
+    <div class="-main">
+      <a class="-logo" role="button">
+        <svg class="icon icon-logo">
+          <use xlink:href="{{{iconPath}}}#logo"></use>
+        </svg>
+      </a>
+      <nav class="-navigation">
+        <ul class="-list">
+          <li class="-item">
+            <a class="-link" role="button">
+              Features
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="-navigation -right">
+        <ul class="-list">
+          <li class="-item dropdown">
+            <a class="-btn dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <svg class="icon icon-user fill-grey-medium">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="assets/svg/symbols.svg#user"></use>
+              </svg>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a>
+                  User Action 1
+                </a>
+              </li>
+              <li>
+                <a>
+                  User Action 2
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="-actions -right">
+        <div class="-ctas">
+          <a class="btn btn-default" role="button">
+            Login
+          </a>
+          <a class="-link btn btn-warning" role="button">
+            Free Trial
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+Styleguide Patterns.NavbarFlexDark
+*/

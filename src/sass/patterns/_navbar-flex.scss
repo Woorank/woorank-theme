@@ -119,10 +119,6 @@ Markup:
   </div>
 </header>
 
-<svg class="icon icon-logo">
-  <use xlink:href="{{{iconPath}}}#logo"></use>
-</svg>
-
 Styleguide Patterns.NavbarFlex
 */
 
@@ -135,14 +131,17 @@ Styleguide Patterns.NavbarFlex
   vertical-align: baseline;
   max-height: 60px;
   transition: all .35s cubic-bezier(.165, .84, .44, 1);
+
   .icon {
     transition: all .35s cubic-bezier(.165, .84, .44, 1);
   }
 
   ul{ // Reset
     padding-left: 12px;
+
     li {
       list-style-type: none;
+
       a {
         text-decoration: none;
       }
@@ -153,10 +152,12 @@ Styleguide Patterns.NavbarFlex
 .-logo {
   height: 32px; // Extra pixels from the K in WooRank
   padding: 0 12px;
+
   .icon {
     height: 20px;
     width: 110px;
   }
+
   &:focus,
   &:active,
   &:hover {
@@ -166,11 +167,13 @@ Styleguide Patterns.NavbarFlex
   }
 }
 
-.-actions,
 .-navigation {
   display: flex;
   align-items: center;
   flex: 1 0 auto;
+  max-width: 100%;
+  opacity: 1;
+  transition: opacity .35s cubic-bezier(.165, .84, .44, 1),max-width .5s cubic-bezier(.165, .84, .44, 1);
 }
 
 .-right {
@@ -183,34 +186,30 @@ Styleguide Patterns.NavbarFlex
   margin-right: 24px;
 }
 
-.-main {
-  .-circle {
-    width: 40px;
-    height: 40px;
-    justify-content: center;
-    display: inline-flex;
-    align-items: center;
-    background-color: transparent;
-    transition: all .35s cubic-bezier(.165, .84, .44, 1);
-    padding: 8px;
-    border-radius: 50%;
+.-circle { // Single icon usage only
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  transition: all .35s cubic-bezier(.165, .84, .44, 1);
+  padding: 8px;
+  border-radius: 50%;
 
-    &:focus,
-    &:active,
-    &:hover {
-      background-color: $grey-lighter;
-    }
+  &:focus,
+  &:active,
+  &:hover {
+    background-color: $grey-lighter;
   }
+}
+
+.-main {
   height: 60px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: flex-start;
-  .-navigation {
-    max-width: 100%;
-    opacity: 1;
-    transition: opacity .35s cubic-bezier(.165, .84, .44, 1),max-width .5s cubic-bezier(.165, .84, .44, 1);
-  }
 
   .-list {
     list-style: none;
@@ -218,19 +217,23 @@ Styleguide Patterns.NavbarFlex
     flex-flow: row nowrap;
     justify-content: flex-end;
     margin-bottom: 0px;
+
     .-item {
+      align-items: center;
+      line-height: 60px;
+      transition: all .35s cubic-bezier(.165, .84, .44, 1);
+
       a {
         text-decoration: none;
         color: $grey-darker;
       }
-      align-items: center;
-      line-height: 60px;
-      transition: all .35s cubic-bezier(.165, .84, .44, 1);
+
       .-link {
         display: inline-block;
         padding: 0 12px;
         line-height: 60px;
         background-color: transparent;
+
         &:hover,
         &:active,
         &:focus {
@@ -239,6 +242,7 @@ Styleguide Patterns.NavbarFlex
           color: $grey-darker;
         }
       }
+
       .-btn {
         position: relative;
         display: block;
@@ -251,40 +255,25 @@ Styleguide Patterns.NavbarFlex
 }
 
 .-header {
-  &.-fixed {
-    position: fixed;
-    min-width: auto;
-  }
   box-shadow: 0 1px 0 rgba(12,13,14,0.15), 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent;
   position: static;
+  z-index: $zindex-navbar-fixed;
   top: 0;
   left: 0;
   width: 100%;
   min-width: 1090px;
-  z-index: 1050;
-  background-color: #fafafb;
-  transition: box-shadow cubic-bezier(.165, .84, .44, 1) .25s;
   height: 60px;
+  background-color: transparent;
+  transition: box-shadow cubic-bezier(.165, .84, .44, 1) .25s;
   box-sizing: border-box;
-  .-container {
-    max-width: 1060px;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    position: relative;
-    padding: 0 15px;
-    box-sizing: content-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    -webkit-align-items: center;
-    align-items: center;
+
+  &.-fixed {
+    position: fixed;
+    min-width: auto;
   }
 }
 
+// Theme color handling
 .-header {
   &.-classic {
     background-color: $white;
@@ -298,6 +287,7 @@ Styleguide Patterns.NavbarFlex
         color: $white;
       }
     }
+
     .icon {
       fill: $white;
     }
