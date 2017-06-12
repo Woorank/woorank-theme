@@ -74,12 +74,18 @@ Styleguide Components.Alert
       background-color: get-variant-color($color, "smoke");
       border-color: get-variant-color($color, "dark");
       color: get-variant-color($color, "dark");
+      .icon {
+        fill: get-variant-color($color, "dark");
+      }
     }
   }
 
   &:not([class*="alert-"]) {
     background-color: $grey-smoke;
     border-color: $border-color;
+    .icon {
+      fill: $grey-darker;
+    }
   }
 
   .alert-link {
@@ -92,11 +98,11 @@ Styleguide Components.Alert
     position: absolute;
     right: 10px;
     top: 10px;
+    opacity: 1; // override bootstrap opacity
 
     .icon {
       height: 10px;
       width: 10px;
-      fill: $grey-darker;
     }
   }
 }
