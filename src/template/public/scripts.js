@@ -25,7 +25,27 @@
     ) {
       togglePanel(false);
     }
+
+    // Hide the Header Generation bar
+    if (
+      !$(event.target).parents('.-header-genbar').length &&
+      !$(event.target).parents('*[class^="js-"],*[class*=" js-"]').length &&
+      $('.-header').hasClass('_genbar-open')
+    ) {
+      toggleGenbar(false);
+    }
   });
+
+  $('[data-toggle="header-genbar"]').on('click', function (e) {
+    e.preventDefault();
+    toggleGenbar(!$('.-header').hasClass('_genbar-open'));
+  });
+
+  function toggleGenbar (status) {
+    var $header = $('.-header');
+    $header.find('[data-toggle="header-genbar"]').attr('aria-expanded', status);
+    $header.toggleClass('_genbar-open', status);
+  }
 
   $navbar.find('.navbar-toggle').on('click', function (event) {
     togglePanel(!$('body').hasClass('navbar-open'));

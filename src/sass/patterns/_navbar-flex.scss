@@ -2,17 +2,13 @@
 Navbar Flex
 
 Markup:
-<header class="-header -fixed -classic" role="navigation">
+<!-- style="width:690px;min-width: 0;" for this example -->
+<header class="-header" role="navigation" style="width:100%;min-width:0;">
   <div class="container-fluid">
     <div class="-main">
-      <a class="-back -circle" role="button">
+      <a class="-circle" role="button">
         <svg class="icon">
           <use xlink:href="{{{iconPath}}}#arrow-left"></use>
-        </svg>
-      </a>
-      <a class="-logo" role="button">
-        <svg class="icon icon-logo">
-          <use xlink:href="{{{iconPath}}}#logo"></use>
         </svg>
       </a>
       <a class="-circle" role="button">
@@ -20,21 +16,12 @@ Markup:
           <use xlink:href="{{{iconPath}}}#logo-glyph"></use>
         </svg>
       </a>
-      <nav class="-navigation">
-        <ul class="-list">
-          <li class="-item">
-            <a class="-link" role="button">
-              Features
-            </a>
-          </li>
-          <li class="-item">
-            <a class="-link" role="button">
-              Pricing
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="-navigation">
+      <a class="-logo" role="button">
+        <svg class="icon icon-logo">
+          <use xlink:href="{{{iconPath}}}#logo"></use>
+        </svg>
+      </a>
+      <nav class="-navigation -right">
         <ul class="-list">
           <li class="-item">
             <a class="-btn" role="button">
@@ -65,56 +52,7 @@ Markup:
             </ul>
           </li>
         </ul>
-        <div class="generation-bar-in-header-container">
-          <form class="generation-bar ajax-generate-report generate-form generation-bar-in-header js-generation-bar-in-header" id="generation-bar-in-header" action="/en/report/generate" method="post" novalidate="">
-            <div class="input-group">
-              <div class="input-container">
-                <input type="url" class="form-control required js-validate-review-url" name="url" value="" placeholder="Website URL to review" id="generation-bar-in-header-input" tabindex="1">
-              </div>
-              <div class="input-group-btn">
-                <button class="btn generation-bar-btn btn-primary"
-                  id="generation-bar-in-header-submit"
-                  name="generate"
-                  value="premium"
-                  type="submit"
-                  tabindex="2">
-                  <span class="ready">Review</span>
-                  <span class="wait">Reviewing...</span>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
       </nav>
-      <div class="-actions -right">
-        <div class="-ctas">
-          <a class="btn btn-default" role="button">
-            Login
-          </a>
-          <a class="-link btn btn-warning" role="button">
-            Free Trial
-          </a>
-          <ul class="-list">
-            <li class="-item dropdown">
-              <a class="-btn dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                English
-                <svg class="icon icon-chevron-down">
-                  <use
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="assets/svg/symbols.svg#chevron-down"></use>
-                </svg>
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a>Español</a></li>
-                <li><a>Français</a></li>
-                <li><a>Deutsch</a></li>
-                <li><a>Português</a></li>
-                <li><a>Nederlands</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
   </div>
 </header>
@@ -123,15 +61,17 @@ Styleguide Patterns.NavbarFlex
 */
 
 .-header {
-  display: block;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  max-height: 60px;
-  transition: all .35s cubic-bezier(.165, .84, .44, 1);
 
+  &._genbar-open {
+    .-navigation {
+      display: none;
+      max-width: 0;
+      opacity: 0;
+    }
+  }
+}
+
+.-header {
   .icon {
     transition: all .35s cubic-bezier(.165, .84, .44, 1);
   }
@@ -201,6 +141,9 @@ Styleguide Patterns.NavbarFlex
   &:active,
   &:hover {
     background-color: $grey-lighter;
+    .icon {
+      fill: $grey-darker;
+    }
   }
 }
 
@@ -209,7 +152,6 @@ Styleguide Patterns.NavbarFlex
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: flex-start;
 
   .-list {
     list-style: none;
@@ -249,12 +191,33 @@ Styleguide Patterns.NavbarFlex
         padding: 0 12px;
         overflow: hidden;
         transition: all .1s linear;
+
+        &:hover,
+        &:active,
+        &:focus {
+          text-decoration: none;
+          background-color: $grey-smoke;
+          color: $grey-darker;
+          .icon {
+            fill: $grey-darker;
+          }
+        }
       }
     }
   }
 }
 
 .-header {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  max-height: 60px;
+  transition: all .35s cubic-bezier(.165, .84, .44, 1);
+
+  background-color: $white;
   box-shadow: 0 1px 0 rgba(12,13,14,0.15), 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent;
   position: static;
   z-index: $zindex-navbar-fixed;
@@ -263,7 +226,6 @@ Styleguide Patterns.NavbarFlex
   width: 100%;
   min-width: 1090px;
   height: 60px;
-  background-color: transparent;
   transition: box-shadow cubic-bezier(.165, .84, .44, 1) .25s;
   box-sizing: border-box;
 
@@ -275,21 +237,26 @@ Styleguide Patterns.NavbarFlex
 
 // Theme color handling
 .-header {
-  &.-classic {
-    background-color: $white;
-  }
   &.-dark {
     background-color: $grey-darker;
-
-    .-item {
-      a {
-        text-decoration: none;
-        color: $white;
+    .main {
+      .-list {
+        .-item {
+          .-link,
+          a {
+            text-decoration: none;
+            color: $white;
+          }
+        }
       }
     }
-
-    .icon {
-      fill: $white;
+    .-circle,
+    .-btn,
+    .-logo,
+    .-link {
+      .icon {
+        fill: $white;
+      }
     }
   }
 }
