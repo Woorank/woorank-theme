@@ -1,0 +1,294 @@
+/*
+Navbar Flex
+
+Markup:
+<!-- style="width:690px;min-width: 0;" for this example -->
+<header class="-header" role="navigation" style="width:100%;min-width:0;">
+  <div class="container-fluid">
+    <div class="-main">
+      <a class="-circle" role="button">
+        <svg class="icon">
+          <use xlink:href="{{{iconPath}}}#arrow-left"></use>
+        </svg>
+      </a>
+      <a class="-logo" role="button">
+        <svg class="icon icon-logo">
+          <use xlink:href="{{{iconPath}}}#logo"></use>
+        </svg>
+      </a>
+      <nav class="-navigation">
+        <ul class="-list">
+          <li class="-item">
+            <a class="-link" role="button">
+              Link
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="-navigation">
+        <ul class="-list">
+          <li class="-item dropdown">
+            <a class="-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              English
+              <svg class="icon icon-chevron-down">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="assets/svg/symbols.svg#chevron-down"></use>
+              </svg>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a>
+                  User Action 1
+                </a>
+              </li>
+              <li>
+                <a>
+                  User Action 2
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <nav class="-navigation -right">
+        <ul class="-list">
+          <li class="-item dropdown">
+            <a class="-btn dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <svg class="icon icon-user fill-grey-medium">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="assets/svg/symbols.svg#user"></use>
+              </svg>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a>
+                  User Action 1
+                </a>
+              </li>
+              <li>
+                <a>
+                  User Action 2
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="-actions -right">
+        <div class="-ctas">
+          <a class="btn btn-default" role="button">
+            Login
+          </a>
+          <a class="-link btn btn-warning" role="button">
+            Free Trial
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+Styleguide Patterns.NavbarFlex
+*/
+
+.-header {
+
+  &._genbar-open {
+    .-navigation {
+      display: none;
+      max-width: 0;
+      opacity: 0;
+    }
+  }
+}
+
+.-header {
+  .icon {
+    transition: all .35s cubic-bezier(.165, .84, .44, 1);
+  }
+
+  ul{ // Reset
+    padding-left: 12px;
+
+    li {
+      list-style-type: none;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.-logo {
+  height: 32px; // Extra pixels from the K in WooRank
+  padding: 0 12px;
+
+  .icon {
+    height: 20px;
+    width: 110px;
+  }
+
+  &:focus,
+  &:active,
+  &:hover {
+    .icon {
+      fill: $primary;
+    }
+  }
+}
+
+.-navigation {
+  display: flex;
+  align-items: center;
+  flex: 1 0 auto;
+  max-width: 100%;
+  opacity: 1;
+  transition: opacity .35s cubic-bezier(.165, .84, .44, 1),max-width .5s cubic-bezier(.165, .84, .44, 1);
+}
+
+.-right {
+  justify-content: flex-end;
+  margin-left: 24px;
+}
+
+.-left {
+  justify-content: flex-start;
+  margin-right: 24px;
+}
+
+.-circle { // Single icon usage only
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  transition: all .35s cubic-bezier(.165, .84, .44, 1);
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.-main {
+  height: 60px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  .-list {
+    list-style: none;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    margin-bottom: 0px;
+
+    .-item {
+      align-items: center;
+      line-height: 60px;
+      transition: all .35s cubic-bezier(.165, .84, .44, 1);
+
+      .-link {
+        display: inline-block;
+        padding: 0 12px;
+        line-height: 60px;
+      }
+
+      .-btn {
+        position: relative;
+        display: block;
+        padding: 0 12px;
+        overflow: hidden;
+        transition: all .1s linear;
+      }
+    }
+  }
+}
+
+.-circle,
+.-btn,
+.-link {
+  color: $grey-darker;
+
+  .icon {
+    fill: $grey-darker;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $grey-lighter;
+    color: $grey-darker;
+
+    .icon {
+      fill: $grey-darker;
+    }
+  }
+}
+
+.-header {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  max-height: 60px;
+  transition: all .35s cubic-bezier(.165, .84, .44, 1);
+  background-color: $white;
+  box-shadow: 0 1px 0 rgba(12,13,14,0.15), 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent;
+  position: static;
+  z-index: $zindex-navbar-fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1090px;
+  height: 60px;
+  transition: box-shadow cubic-bezier(.165, .84, .44, 1) .25s;
+  box-sizing: border-box;
+
+  &.-fixed {
+    position: fixed;
+    min-width: auto;
+  }
+}
+
+// Theme color handling
+.-header {
+  &.-dark {
+    background-color: $grey-darker;
+    .-circle,
+    .-btn,
+    .-link {
+      color: $white;
+
+      .icon {
+        fill: $white;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+
+        background-color: $grey-lighter;
+        color: $grey-darker;
+
+        .icon {
+          fill: $grey-darker;
+        }
+      }
+    }
+    .-logo {
+      .icon {
+        fill: $white;
+      }
+      &:focus,
+      &:active,
+      &:hover {
+        .icon {
+          fill: $primary;
+        }
+      }
+    }
+  }
+}

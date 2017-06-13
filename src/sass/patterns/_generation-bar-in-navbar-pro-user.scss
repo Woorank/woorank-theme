@@ -37,26 +37,56 @@ Markup:
       </button>
       <label class="add-competitors-title">Add competitors</label>
         <div class="form-group first-competitor-container">
-          <div class="js-add-competitors input-group" id="add-first-competitor">
+          <div
+            class="js-add-competitors input-group"
+            id="add-first-competitor">
             <span class="corner-indicator corner-top-left corner-competitor-light"></span>
-            <input type="text" class="form-control input-sm" name="competitors[1]" id="inp-comp-1" placeholder="Competitor-1.com" tabindex="3">
+            <input
+              type="text"
+              class="form-control input-sm"
+              name="competitors[1]"
+              id="inp-comp-1"
+              placeholder="Competitor-1.com"
+              tabindex="3">
           </div>
         </div>
         <div class="form-group second-competitor-container">
-          <div class="js-add-competitors input-group" id="add-second-competitor">
+          <div
+            class="js-add-competitors input-group"
+            id="add-second-competitor">
             <span class="corner-indicator corner-top-left corner-competitor"></span>
-            <input type="text" class="form-control input-sm" name="competitors[2]" id="inp-comp-2" placeholder="Competitor-2.net" tabindex="4">
+            <input
+              type="text"
+              class="form-control input-sm"
+              name="competitors[2]"
+              id="inp-comp-2"
+              placeholder="Competitor-2.net"
+              tabindex="4">
           </div>
         </div>
         <div class="form-group third-competitor-container">
-          <div class="js-add-competitors input-group" id="add-third-competitor">
+          <div
+            class="js-add-competitors input-group"
+            id="add-third-competitor">
             <span class="corner-indicator corner-top-left corner-competitor-dark"></span>
-            <input type="text" class="form-control input-sm" name="competitors[3]" id="inp-comp-3" placeholder="Competitor-3.org" tabindex="5">
+            <input
+              type="text"
+              class="form-control input-sm"
+              name="competitors[3]"
+              id="inp-comp-3"
+              placeholder="Competitor-3.org"
+              tabindex="5">
           </div>
         </div>
         <div class="options-footer">
           <!-- NEW GENERATION BUTTON -->
-          <button class="btn btn-sm btn-primary generation-bar-btn" id="generation-bar-in-header-submit-footer" name="generate" value="premium" type="submit" tabindex="6">
+          <button
+            class="btn btn-sm btn-primary generation-bar-btn"
+            id="generation-bar-in-header-submit-footer"
+            name="generate"
+            value="premium"
+            type="submit"
+            tabindex="6">
             <span class="ready">Review</span>
             <span class="wait">Reviewing...</span>
           </button>
@@ -78,7 +108,7 @@ Styleguide Patterns.Generation-bar-in-navbar-Pro-User
   height: 100%;
   visibility: visible;
   padding: 0;
-  background-color: $white;
+  background-color: transparent;
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
 
@@ -118,6 +148,7 @@ Styleguide Patterns.Generation-bar-in-navbar-Pro-User
   }
 
   .generation-bar {
+    transition: all .2s linear;
     padding-top: 0;
 
     .form-control {
@@ -171,9 +202,8 @@ Styleguide Patterns.Generation-bar-in-navbar-Pro-User
 
   .generation-bar-in-header {
     display: block;
-    padding-top: 15px;
     z-index: $zindex-navbar;
-    max-width: none;
+    // max-width: none;
     position: relative;
     padding-bottom: 50px;
 
