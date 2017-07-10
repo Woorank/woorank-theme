@@ -204,7 +204,7 @@ Styleguide Patterns.Page-Footer
       display: block;
 
       @include breakpoint($screen-sm - 1, true) {
-        margin: 0 auto 30px auto;
+        margin: 0 auto 30px;
         padding-bottom: 30px;
         border-bottom: 1px solid $grey-light;
       }

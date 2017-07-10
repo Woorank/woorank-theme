@@ -103,7 +103,7 @@ gulp.task('lint-css', function () {
     .pipe(gulpStylelint({
       syntax: 'scss',
       reporters: [{
-        formatter: 'verbose',
+        formatter: 'string',
         console: true
       }]
     }));

@@ -192,7 +192,7 @@ body.navbar-open {
         box-shadow: none; // Avoid navbar-btn shadow
 
         @include breakpoint($screen-sm, $reverse: true) {
-          margin: 10px 10px 0 10px;
+          margin: 10px 10px 0;
           width: 92%;
         }
 

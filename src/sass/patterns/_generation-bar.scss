@@ -58,7 +58,6 @@ $genbar-height: 50px;
 
   .form-control {
     border-radius: $border-radius-base $border-radius-base 0 0;
-    height: auto;
     padding: 12px;
     height: $genbar-height;
 
@@ -100,6 +99,7 @@ $genbar-height: 50px;
     .ready {
       display: block;
     }
+
     .wait {
       display: none;
     }
@@ -110,6 +110,7 @@ $genbar-height: 50px;
       .ready {
         display: none;
       }
+
       .wait {
         display: block;
       }
