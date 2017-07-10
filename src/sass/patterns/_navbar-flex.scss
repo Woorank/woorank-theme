@@ -16,6 +16,9 @@ Markup:
           <use xlink:href="{{{iconPath}}}#logo"></use>
         </svg>
       </a>
+      <a class="-link -site" role="button">
+        WOORANK.COM
+      </a>
       <nav class="-navigation">
         <ul class="-list">
           <li class="-item">
@@ -94,23 +97,13 @@ Styleguide Patterns.NavbarFlex
 */
 
 .-header {
-
-  &._genbar-open {
-    .-navigation {
-      display: none;
-      max-width: 0;
-      opacity: 0;
-    }
-  }
-}
-
-.-header {
   .icon {
-    transition: all .35s cubic-bezier(.165, .84, .44, 1);
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 
-  ul{ // Reset
-    padding-left: 12px;
+  // Reset
+  ul {
+    padding-left: 0;
 
     li {
       list-style-type: none;
@@ -119,6 +112,26 @@ Styleguide Patterns.NavbarFlex
         text-decoration: none;
       }
     }
+  }
+
+  .-navigation {
+    display: block;
+    font-size: 13px;
+    opacity: 1;
+    transform-origin: left center;
+    transition: opacity 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), max-width 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .-site {
+    display: block;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: transparent;
+    padding: 0 12px;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: hidden;
   }
 }
 
@@ -140,23 +153,12 @@ Styleguide Patterns.NavbarFlex
   }
 }
 
-.-navigation {
-  display: flex;
-  align-items: center;
-  flex: 1 0 auto;
-  max-width: 100%;
-  opacity: 1;
-  transition: opacity .35s cubic-bezier(.165, .84, .44, 1),max-width .5s cubic-bezier(.165, .84, .44, 1);
-}
-
 .-right {
   justify-content: flex-end;
-  margin-left: 24px;
 }
 
 .-left {
   justify-content: flex-start;
-  margin-right: 24px;
 }
 
 .-circle { // Single icon usage only
@@ -166,7 +168,7 @@ Styleguide Patterns.NavbarFlex
   display: inline-flex;
   align-items: center;
   background-color: transparent;
-  transition: all .35s cubic-bezier(.165, .84, .44, 1);
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
   padding: 8px;
   border-radius: 50%;
 }
@@ -182,12 +184,12 @@ Styleguide Patterns.NavbarFlex
     display: inline-flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 
     .-item {
       align-items: center;
       line-height: 60px;
-      transition: all .35s cubic-bezier(.165, .84, .44, 1);
+      transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
 
       .-link {
         display: inline-block;
@@ -200,7 +202,7 @@ Styleguide Patterns.NavbarFlex
         display: block;
         padding: 0 12px;
         overflow: hidden;
-        transition: all .1s linear;
+        transition: all 0.1s linear;
       }
     }
   }
@@ -235,22 +237,24 @@ Styleguide Patterns.NavbarFlex
   font-size: 100%;
   vertical-align: baseline;
   max-height: 60px;
-  transition: all .35s cubic-bezier(.165, .84, .44, 1);
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow cubic-bezier(0.165, 0.84, 0.44, 1) 0.25s;
   background-color: $white;
-  box-shadow: 0 1px 0 rgba(12,13,14,0.15), 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent;
+  box-shadow: 0 1px 0 rgba(12, 13, 14, 0.15), 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent;
   position: static;
   z-index: $zindex-navbar-fixed;
   top: 0;
   left: 0;
   width: 100%;
-  min-width: 1090px;
+  min-width: 100%;
   height: 60px;
-  transition: box-shadow cubic-bezier(.165, .84, .44, 1) .25s;
   box-sizing: border-box;
 
   &.-fixed {
     position: fixed;
     min-width: auto;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 }
 
@@ -258,6 +262,7 @@ Styleguide Patterns.NavbarFlex
 .-header {
   &.-dark {
     background-color: $grey-darker;
+
     .-circle,
     .-btn,
     .-link {
@@ -266,10 +271,10 @@ Styleguide Patterns.NavbarFlex
       .icon {
         fill: $white;
       }
+
       &:hover,
       &:active,
       &:focus {
-
         background-color: $grey-lighter;
         color: $grey-darker;
 
@@ -278,10 +283,12 @@ Styleguide Patterns.NavbarFlex
         }
       }
     }
+
     .-logo {
       .icon {
         fill: $white;
       }
+
       &:focus,
       &:active,
       &:hover {

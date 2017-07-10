@@ -99,8 +99,9 @@ gulp.task('kss:structures', function () {
 });
 
 gulp.task('lint-css', function () {
-  return gulp.src(path.join(paths.build.css, '**', '*.css'))
+  return gulp.src(path.join(paths.sass.styleguide, '**', '*.scss'))
     .pipe(gulpStylelint({
+      syntax: 'scss',
       reporters: [{
         formatter: 'verbose',
         console: true

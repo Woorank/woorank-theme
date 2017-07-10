@@ -22,7 +22,7 @@ $font-size-base         : $font-size-int * 1px;
 $font-size-large        : 18px;
 $font-size-small        : 13px;
 
-$font-size-xs           : ceil($font-size-base * 0.70);
+$font-size-xs           : ceil($font-size-base * 0.7);
 $font-size-h1           : floor($font-size-base * 2.54);
 $font-size-h2           : floor($font-size-base * 2.15);
 $font-size-h3           : ceil($font-size-base * 1.6);
@@ -127,7 +127,7 @@ $cursor-disabled                : not-allowed;
 
 // Dropdowns
 $dropdown-bg                  : $white;
-$dropdown-border              : rgba(0,0,0,.15);
+$dropdown-border              : rgba(0, 0, 0, 0.15);
 $dropdown-fallback-border     : $border-color;
 $dropdown-divider-bg          : $grey-lighter;
 
@@ -374,7 +374,7 @@ $tooltip-arrow-color : $grey-dark;
 // Popovers
 $popover-bg                         : $white;
 $popover-max-width                  : 276px;
-$popover-border-color               : rgba(0,0,0,.2);
+$popover-border-color               : rgba(0, 0, 0, 0.2);
 $popover-fallback-border-color      : $border-color;
 $popover-title-bg                   : $white;
 $popover-arrow-width                : 10px;

@@ -21,16 +21,16 @@ Styleguide Patterns.Page-Prefooter
   padding-top: 66px;
   padding-bottom: 66px;
   margin-top: 40px;
-
   background-position: left top;
   background-repeat: no-repeat;
   background-size: contain;
 
   img {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     height: 220px;
     display: none;
+
     @include breakpoint($screen-sm) {
       display: block;
     }
@@ -47,9 +47,11 @@ Styleguide Patterns.Page-Prefooter
     transform: translateY(-50%);
     line-height: 1;
     color: $grey-dark;
+
     @include breakpoint ($screen-sm) {
       display: inline-block;
     }
+
     &.msg-mobile {
       display: block;
       position: relative;
@@ -58,6 +60,7 @@ Styleguide Patterns.Page-Prefooter
       margin: 0 auto;
       font-size: 16px;
       line-height: 1;
+
       @include breakpoint ($screen-sm) {
         display: none;
       }

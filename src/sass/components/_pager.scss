@@ -23,9 +23,10 @@ Styleguide Components.pager
 
 .pager {
   @extend .pager;
-  li{
-    >a,
-    >span{
+
+  li {
+    > a,
+    > span {
       border-radius: 0;
     }
   }

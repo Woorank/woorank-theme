@@ -26,34 +26,43 @@ Styleguide Colors.Helpers
   .color-#{$color} {
     color: $colorValue;
   }
+
   .fill-#{$color} {
     fill: $colorValue;
   }
+
   .background-#{$color} {
     background-color: $colorValue;
   }
+
   .btn-#{$color} { // Respect button contrast
     @if (str-index($color, 'white') or str-index($color, 'light') or str-index($color, 'lighter') or str-index($color, 'smoke') ) {
       color: $grey-darker !important;
       background-color: $colorValue !important;
+
       &:hover,
       &:active,
       &:focus {
         color: $grey-darker !important;
         background-color: darken($colorValue, 5%) !important;
       }
+
       .icon {
         fill: $grey-darker !important;
       }
-    } @else {
+    }
+
+    @else {
       color: $white !important;
       background-color: $colorValue !important;
+
       &:hover,
       &:active,
       &:focus {
         color: $white !important;
         background-color: darken($colorValue, 5%) !important;
       }
+
       .icon {
         fill: $white !important;
       }
@@ -64,12 +73,15 @@ Styleguide Colors.Helpers
   .color-#{$color}-important {
     color: $colorValue !important;
   }
+
   .fill-#{$color}-important {
     fill: $colorValue !important;
   }
+
   .background-#{$color}-important {
     background-color: $colorValue !important;
   }
+
   .btn-#{$color}-important {
     color: $white;
     background-color: $colorValue;
@@ -80,12 +92,15 @@ Styleguide Colors.Helpers
   .color-#{$color} {
     color: $colorValue;
   }
+
   .fill-#{$color} {
     fill: $colorValue;
   }
+
   .background-#{$color} {
     background-color: $colorValue;
   }
+
   .btn-#{$color} {
     color: $white;
     background-color: $colorValue;
@@ -95,12 +110,15 @@ Styleguide Colors.Helpers
   .color-#{$color}-important {
     color: $colorValue !important;
   }
+
   .fill-#{$color}-important {
     fill: $colorValue !important;
   }
+
   .background-#{$color}-important {
     background-color: $colorValue !important;
   }
+
   .btn-#{$color}-important {
     color: $white;
     background-color: $colorValue;

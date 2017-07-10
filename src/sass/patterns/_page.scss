@@ -17,7 +17,8 @@ Styleguide Patterns.Page
     content: " ";
     display: table;
   }
-  &::after{
+
+  &::after {
     clear: both;
   }
 }
@@ -26,38 +27,48 @@ Styleguide Patterns.Page
   position: relative;
   clear: both;
   overflow: hidden;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 0;
+  padding-right: 0;
   transition: all 0.3s linear;
+
   &.page-hero-full {
     min-height: $screen-xs;
+
     @include vh-polyfill(height, 70);
+
     @include breakpoint($screen-sm) {
       @include vh-polyfill(height, 100, -120px);
     }
+
     .page-hero-content {
       position: absolute;
       top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
-      margin-top: 0px;
+      margin-top: 0;
       width: 90%;
+
       .title {
-        margin-top: 0px;
-        @include breakpoint($screen-sm){
+        margin-top: 0;
+
+        @include breakpoint($screen-sm) {
           font-size: 40px;
         }
+
         @include breakpoint($screen-md) {
           font-size: 52px;
         }
+
         @include breakpoint($screen-lg) {
           font-size: 58px;
         }
       }
+
       .subtitle {
         @include breakpoint($screen-md) {
           font-size: 24px;
         }
+
         @include breakpoint($screen-lg) {
           font-size: 30px;
         }
@@ -69,37 +80,45 @@ Styleguide Patterns.Page
     display: block;
     position: relative;
     margin-top: 20px;
+
     @include breakpoint($screen-sm) {
       margin-top: 50px;
     }
+
     z-index: $zindex-flying-menu;
+
     .title {
-    	font-size: 28px;
-    	line-height: 1;
-    	letter-spacing: -1.5px;
-    	text-align: center;
-    	color: $white;
-    	text-shadow: 0 2px 0 rgba(52, 58, 72, 0.5);
+      font-size: 28px;
+      line-height: 1;
+      letter-spacing: -1.5px;
+      text-align: center;
+      color: $white;
+      text-shadow: 0 2px 0 rgba(52, 58, 72, 0.5);
       margin-bottom: 28px;
+
       @include breakpoint($screen-md) {
         font-size: 38px;
       }
+
       @include breakpoint($screen-lg) {
         font-size: 48px;
       }
     }
+
     .subtitle {
-    	font-size: 20px;
-    	line-height: 1;
-    	text-align: center;
+      font-size: 20px;
+      line-height: 1;
+      text-align: center;
       color: $white;
       text-shadow: 0 2px 0 rgba(52, 58, 72, 0.5);
       margin-bottom: 52px;
+
       @include breakpoint($screen-lg) {
         font-size: 24px;
       }
     }
   }
+
   .page-hero-bottom-margin {
     pointer-events: none;
     min-width: 768px;
@@ -107,18 +126,22 @@ Styleguide Patterns.Page
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+
     @include breakpoint($screen-md) {
       min-width: 1050px;
     }
+
     @include breakpoint($screen-lg) {
       width: 100%;
       height: auto;
     }
+
     &.banner-fixed {
       max-width: $screen-lg;
     }
   }
 }
+
 .page-hero-footer {
   position: relative;
   display: block;

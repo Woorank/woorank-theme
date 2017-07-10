@@ -93,9 +93,10 @@ Styleguide Patterns.Navbar
 body.navbar-open {
   transform: translateX($mobile-nav-size);
   overflow: hidden;
+
   .overlay {
     display: block;
-    background-color: rgba(0,0,0,.1);
+    background-color: rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -108,7 +109,8 @@ body.navbar-open {
   z-index: $zindex-navbar-fixed - 1;
   display: none;
   background-color: $black;
-  @include transition(background-color .15s ease-out 0s);
+
+  @include transition(background-color 0.15s ease-out 0s);
 }
 
 .navbar {
@@ -117,23 +119,28 @@ body.navbar-open {
     position: relative;
     vertical-align: middle;
   }
+
   background-color: $white;
   border-radius: 0;
   box-shadow: none;
   margin-bottom: 0;
   position: static;
-  @include transition(all .5s linear);
+
+  @include transition(all 0.5s linear);
+
   max-height: 60px;
-  &:after {
+
+  &::after {
     content: '';
     display: table;
     position: absolute;
-    left: 0px;
-    right: 0px;
+    left: 0;
+    right: 0;
     bottom: -5px;
     width: 100%;
     height: 5px;
-    @include box-shadow(inset 0px 2px 6px -3px rgba(0, 0, 0, 0.4));
+
+    @include box-shadow(inset 0 2px 6px -3px rgba(0, 0, 0, 0.4));
   }
 
   &.navbar-fixed-top {
@@ -146,6 +153,7 @@ body.navbar-open {
     font-size: $font-size-small;
     min-width: 190px;
     max-height: none;
+
     li a {
       color: $grey-darker;
     }
@@ -155,9 +163,11 @@ body.navbar-open {
 .dropdown {
   .icon-chevron-down {
     margin-left: 5px;
-    @include transition(all .1s linear);
     transform: rotate(0deg);
+
+    @include transition(all 0.1s linear);
   }
+
   &.open {
     .icon-chevron-down {
       transform: rotate(180deg);
@@ -168,19 +178,24 @@ body.navbar-open {
 .navbar-nav {
   li {
     margin-bottom: 0;
+
     a {
       color: $grey-darker;
       font-size: $font-size-small;
+
       &.navbar-btn {
         @extend .btn;
+
         padding-top: 5px;
         padding-bottom: 5px;
         margin-left: 10px;
         box-shadow: none; // Avoid navbar-btn shadow
+
         @include breakpoint($screen-sm, $reverse: true) {
-          width: 92%;
           margin: 10px 10px 0 10px;
+          width: 92%;
         }
+
         &.btn-default {
           @include breakpoint($screen-sm) {
             padding-top: 4px;
@@ -226,17 +241,16 @@ body.navbar-open {
   right: auto;
   transform: translateY(-50%);
   backface-visibility: hidden;
-
   line-height: 0;
   margin: 0 0 0 15px;
   overflow: hidden;
-
   background: none;
   border: none;
   border-radius: 50%;
 
   .icon-menu {
-    @include transition(all .1s linear);
+    @include transition(all 0.1s linear);
+
     transform: rotate(-90deg);
   }
 
@@ -257,6 +271,7 @@ body.navbar-open {
   @include breakpoint($screen-sm - 1, $reverse: true) {
     @include box-shadow(inset 0 -1px 1px $black);
     @include transition(all 350ms ease-out);
+
     backface-visibility: hidden;
     background-color: $grey-dark;
     bottom: 0;
@@ -287,6 +302,7 @@ body.navbar-open {
       .dropdown-menu li a,
       li a {
         padding: 18px;
+
         .icon {
           fill: $white;
         }

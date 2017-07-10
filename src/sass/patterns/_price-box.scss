@@ -34,7 +34,6 @@ Markup:
 Styleguide Patterns.Price-Box
 */
 
-
 .price-box {
   padding: 10px;
   color: $white;
@@ -88,6 +87,7 @@ Styleguide Patterns.Price-Box
     &.background-#{$color} {
       .btn-black {
         background-color: get-variant-color($color, "dark");
+
         &:hover,
         &:focus {
           background-color: $colorValue;

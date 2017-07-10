@@ -87,7 +87,7 @@ $popoverContext: ('marketing-checklist');
         margin-left: -5px;
         top: -5px;
 
-        &:after {
+        &::after {
           border-bottom-color: $border-color;
           border-width: 0 5px 5px;
           left: 0;

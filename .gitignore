@@ -8,3 +8,5 @@ woo-components/dist
 npm-debug.log
 .lvimrc
 yarn.lock
+
+package-lock.json

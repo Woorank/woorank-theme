@@ -74,6 +74,7 @@ Styleguide Components.Alert
       background-color: get-variant-color($color, "smoke");
       border-color: get-variant-color($color, "dark");
       color: get-variant-color($color, "dark");
+
       .icon {
         fill: get-variant-color($color, "dark");
       }
@@ -83,6 +84,7 @@ Styleguide Components.Alert
   &:not([class*="alert-"]) {
     background-color: $grey-smoke;
     border-color: $border-color;
+
     .icon {
       fill: $grey-darker;
     }
