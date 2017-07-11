@@ -61,7 +61,8 @@ $iconsSizes:
   -webkit-transition-timing-function: ease-in;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  &:hover{
-    transform: scale(2, 2) translatey(20%);
+
+  &:hover {
+    transform: scale(2, 2) translateY(20%);
   }
 }

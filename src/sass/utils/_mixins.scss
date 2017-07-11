@@ -1,11 +1,13 @@
 // BASES MIXINS
 
 @mixin breakpoint($size: $screen-lg, $reverse: false) {
-  @if($reverse) {
+  @if ($reverse) {
     @media screen and (max-width: #{$size}) {
       @content;
     }
-  } @else {
+  }
+
+  @else {
     @media screen and (min-width: #{$size}) {
       @content;
     }
@@ -39,6 +41,7 @@
   $heights: 1024px, 768px, 500px, 480px;
 
   $i: 1;
+
   @if $add == null {
     #{$property}: $vh * 1vh;
 
@@ -49,10 +52,12 @@
       $i: $i + 1;
     }
   }
+
   @else {
     @if $add > 0 {
       #{$property}: calc(#{$vh * 1vh} + #{$add});
     }
+
     @else {
       #{$property}: calc(#{$vh * 1vh} - #{$add * -1});
     }

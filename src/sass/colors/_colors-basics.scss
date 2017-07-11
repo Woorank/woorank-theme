@@ -85,7 +85,7 @@ $primary-smoke    : #ecf3fa;
 $primary-lighter  : #cfe2f2;
 $primary-light    : #a0c5e4;
 $primary-dark     : #3876ac;
-$primary-darker   : #2B5C86;
+$primary-darker   : #2b5c86;
 
 /* Primary alias */
 $info             : $primary;
@@ -129,19 +129,19 @@ $competitor-dark  : #29494a;
 $competitor-darker: darken($competitor, $darker);
 
 /* Flat Colors */
-$turquoise        : #4FCEB9;
+$turquoise        : #4fceb9;
 $turquoise-light  : lighten($turquoise, $light);
 $turquoise-lighter: lighten($turquoise, $lighter);
-$turquoise-dark   : #34AD99;
+$turquoise-dark   : #34ad99;
 $turquoise-darker : darken($turquoise, $darker);
 
-$emerald          : #2ECC71;
+$emerald          : #2ecc71;
 $emerald-light    : lighten($emerald, $light);
 $emerald-lighter  : lighten($emerald, $lighter);
-$emerald-dark     : #27AE60;
+$emerald-dark     : #27ae60;
 $emerald-darker   : darken($emerald, $darker);
 
-$amethyst         : #9476A3;
+$amethyst         : #9476a3;
 $amethyst-light   : lighten($amethyst, $light);
 $amethyst-lighter : lighten($amethyst, $lighter);
 $amethyst-dark    : #836990;

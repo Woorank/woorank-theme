@@ -145,11 +145,13 @@ Styleguide Patterns.Page-Footer
 
 .page-footer {
   @extend .container;
+
   overflow: hidden;
   clear: both;
   font-size: $font-size-small;
   color: $grey-medium;
   margin-top: 60px;
+
   ul {
     display: block;
     margin-bottom: 0;
@@ -179,31 +181,38 @@ Styleguide Patterns.Page-Footer
     margin-right: 0;
     padding-top: 40px;
     padding-bottom: 40px;
+
     @include breakpoint ($screen-sm) {
       border-top: 1px solid $grey-light;
     }
   }
+
   .footer-logo-container,
   .footer-social-container {
-      @extend .col-xs-12, .col-sm-3;
-      padding-left: 0;
-      padding-right: 0;
+    @extend .col-xs-12, .col-sm-3;
+
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .footer-logo-container {
     @include breakpoint($screen-sm - 1, true) {
       text-align: center;
     }
+
     .footer-logo {
       display: block;
+
       @include breakpoint($screen-sm - 1, true) {
-        margin: 0 auto 30px auto;
+        margin: 0 auto 30px;
         padding-bottom: 30px;
         border-bottom: 1px solid $grey-light;
       }
+
       .icon-logo-nocolor {
         width: 112px;
         transition: fill 300ms linear;
+
         &:focus,
         &:hover {
           fill: $primary;
@@ -214,15 +223,19 @@ Styleguide Patterns.Page-Footer
 
   .footer-menu-container {
     @extend .col-xs-10, .col-xs-offset-1, .col-sm-6, .col-sm-offset-0;
+
     .footer-menu-columns {
       @extend .row;
+
       .mobile-menu-column {
         @extend .col-xs-12, .col-sm-6;
-        padding-left: 0px;
-        padding-right: 0px;
+
+        padding-left: 0;
+        padding-right: 0;
         padding-bottom: 20px;
+
         @include breakpoint($screen-sm) {
-          padding-bottom: 0px;
+          padding-bottom: 0;
         }
       }
 
@@ -230,7 +243,9 @@ Styleguide Patterns.Page-Footer
         @include breakpoint ($screen-sm) {
           text-align: left;
         }
+
         @extend .col-xs-6, .col-sm-6,.text-center;
+
         .footer-menu-title {
           cursor: default;
           font-weight: bolder;
@@ -241,34 +256,42 @@ Styleguide Patterns.Page-Footer
 
   .footer-social-container {
     text-align: center;
+
     ul {
-      @include breakpoint($screen-sm){
+      @include breakpoint($screen-sm) {
         float: right;
-      };
+      }
+
       li {
-        display:inline-block;
+        display: inline-block;
         margin: 0 1px;
+
         a {
           display: block;
           position: relative;
           width: 40px;
           height: 40px;
+
           @include breakpoint($screen-sm) {
             width: 24px;
-            height:24px;
+            height: 24px;
           }
+
           background-color: $grey;
           transition: background-color 300ms linear;
+
           @include radius(50%);
+
           &:focus,
           &:hover {
             background-color: $primary;
           }
+
           .icon {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             width: 60%;
             height: 60%;
           }

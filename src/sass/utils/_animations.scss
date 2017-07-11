@@ -1,5 +1,7 @@
 /* Animations Utils */
 
+$animationCurve: cubic-bezier(0.165, 0.84, 0.44, 1);
+
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;

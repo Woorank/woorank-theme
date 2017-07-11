@@ -148,7 +148,7 @@ Styleguide Patterns.Generation-bar-in-navbar-Pro-User
   }
 
   .generation-bar {
-    transition: all .2s linear;
+    transition: all 0.2s linear;
     padding-top: 0;
 
     .form-control {
@@ -393,6 +393,7 @@ Styleguide Patterns.Generation-bar-in-navbar-Pro-User
 
         a {
           color: $primary-dark;
+
           &:hover,
           &:focus {
             color: $primary;

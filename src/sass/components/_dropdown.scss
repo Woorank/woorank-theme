@@ -25,7 +25,6 @@ Styleguide Components.Dropdown
 .dropdown {
   .icon-chevron-down {
     display: inline-block;
-    float: none;
     vertical-align: middle;
     margin: 0;
     fill: $grey;
@@ -51,7 +50,7 @@ Styleguide Components.Dropdown
   }
 
   .dropdown-menu {
-    margin-top: 0px;
+    margin-top: 0;
     border-radius: $border-radius-base;
 
     a {

@@ -16,45 +16,10 @@ Markup:
           <use xlink:href="{{{iconPath}}}#logo"></use>
         </svg>
       </a>
-      <nav class="-navigation">
-        <ul class="-list">
-          <li class="-item">
-            <a class="-link" role="button">
-              Link
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="-navigation">
+      <nav>
         <ul class="-list">
           <li class="-item dropdown">
-            <a class="-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-            English
-              <svg class="icon icon-chevron-down">
-                <use
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  xlink:href="assets/svg/symbols.svg#chevron-down"></use>
-              </svg>
-            </a>
-            <ul class="dropdown-menu" role="menu">
-              <li>
-                <a>
-                  User Action 1
-                </a>
-              </li>
-              <li>
-                <a>
-                  User Action 2
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <nav class="-navigation -right">
-        <ul class="-list">
-          <li class="-item dropdown">
-            <a class="-btn dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+            <a class="-link -icon dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
               <svg class="icon icon-user fill-grey-medium">
                 <use
                   xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -76,16 +41,12 @@ Markup:
           </li>
         </ul>
       </nav>
-      <div class="-actions -right">
-        <div class="-ctas">
-          <a class="btn btn-default" role="button">
-            Login
-          </a>
-          <a class="-link btn btn-warning" role="button">
-            Free Trial
-          </a>
-        </div>
-      </div>
+      <a class="btn btn-default" role="button">
+        Login
+      </a>
+      <a class="-link btn btn-warning" role="button">
+        Free Trial
+      </a>
     </div>
   </div>
 </header>
