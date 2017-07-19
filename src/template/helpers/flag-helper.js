@@ -27,6 +27,7 @@ var countries = {
   'flag-gt': 'Guatemala',
   'flag-hk': 'Hong Kong',
   'flag-hr': 'Croatia',
+  'flag-hu': 'Hungary',
   'flag-id': 'Indonesia',
   'flag-ie': 'Ireland',
   'flag-il': 'Israel',
