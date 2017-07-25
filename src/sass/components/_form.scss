@@ -4,6 +4,32 @@ Form
 Markup:
 <form role="form">
   <div class="form-group">
+    <label class="control-label">Label</label>
+    <span class="control-feedback">Feedback</span>
+    <div class="input-addon addon-left addon-right">
+      <span class="addon">
+        <span class="dot dot-primary"></span>
+      </span>
+      <input class="form-control" type="text" placeholder="Click to focus" value>
+      <span class="addon">
+        <a class="btn btn-link">X</a>
+      </span>
+    </div>
+  </div>
+  <div class="form-group has-error">
+    <label class="control-label">Label</label>
+    <span class="control-feedback">Feedback</span>
+    <div class="input-addon addon-left addon-right">
+      <span class="addon">
+        <span class="dot dot-primary"></span>
+      </span>
+      <input class="form-control" type="text" placeholder="Click to focus" value>
+      <span class="addon">
+        <a class="btn btn-link">X</a>
+      </span>
+    </div>
+  </div>
+  <div class="form-group">
     <label for="demo-text">Input text</label>
     <input type="text" class="form-control" placeholder="Text" name="demo-text" id="demo-text" />
   </div>
@@ -48,6 +74,57 @@ Styleguide Components.Form
   &:focus {
     box-shadow: 0 0 5px rgba($primary, 0.4);
     border-color: $primary;
+  }
+}
+
+.form-group {
+  &.has-error {
+    .control-feedback {
+      color: $error;
+    }
+  }
+
+  .control-feedback {
+    float: right;
+    cursor: default;
+    text-align: right;
+  }
+
+  .input-addon {
+    position: relative;
+
+    .addon {
+      position: absolute;
+      top: 0;
+      line-height: 34px;
+      z-index: $zindex-input-addon;
+      padding: 0 $padding-small-horizontal;
+
+      .btn {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      &:first-child {
+        left: 0;
+      }
+
+      &:last-child {
+        right: 0;
+      }
+    }
+
+    &.addon-left {
+      input {
+        padding-left: 30px;
+      }
+    }
+
+    &.addon-right {
+      input {
+        padding-right: 30px;
+      }
+    }
   }
 }
 
