@@ -2,7 +2,7 @@
 Button Async
 
 Markup:
-<button class="btn btn-sm btn-primary btn-async" data-demo="js-btn-async-demo">
+<button class="btn btn-primary btn-async" data-demo="js-btn-async-demo">
   <svg class="icon icon-loader" role="img">
     <use xlink:href="{{iconPath}}#loader"></use>
   </svg>
@@ -14,8 +14,7 @@ Markup:
   </svg>
   <span class="icon-text">Click me to see the different states</span>
 </button>
-<hr>
-<a class="btn btn-async btn-primary busy" role="button">
+<a class="btn btn-async btn-success busy" role="button">
   <svg class="icon icon-loader">
     <use xlink:href="{{iconPath}}#loader"></use>
   </svg>
