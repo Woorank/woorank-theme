@@ -1,66 +1,41 @@
 /*
 Alert
 
-Alerts can be dismissable with a close button.
 Alerts can be default, `alert-primary`, `alert-success`, `alert-warning` or `alert-error`.
+Alerts can be dismissable with a close button and using `alert alert-dismissible` class.
 
 Markup:
 <div class="alert">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <svg class="icon icon-cross">
-      <use xlink:href="{{{iconPath}}}#cross"></use>
-    </svg>
-  </button>
-  <strong>Lorem ipsum</strong> dolor <a href="#" class="alert-link">sit amet</a>,
-  consectetur adipisicing elit. Doloremque, hic.
+  <strong>Plain</strong> alert block with class="alert".
 </div>
 <div class="alert alert-primary">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <svg class="icon icon-cross icon-lg">
-      <use xlink:href="{{{iconPath}}}#cross"></use>
-    </svg>
-  </button>
-  alert alert-primary <strong>Lorem ipsum</strong> dolor <a href="#" class="alert-link">sit amet</a>,
-  consectetur adipisicing elit. Doloremque, hic.
+  <strong>Plain</strong> alert block with class="alert".
 </div>
 <div class="alert alert-success">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <svg class="icon icon-cross">
-      <use xlink:href="{{{iconPath}}}#cross"></use>
-    </svg>
-  </button>
-  alert alert-success <strong>Lorem ipsum</strong> dolor <a href="#" class="alert-link">sit amet</a>,
-  consectetur adipisicing elit. Doloremque, hic.
+  <strong>Plain</strong> alert block with class="alert".
 </div>
 <div class="alert alert-warning">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <svg class="icon icon-cross">
-      <use xlink:href="{{{iconPath}}}#cross"></use>
-    </svg>
-  </button>
-  <div class="row">
-    <div class="col-xs-3">
-      <button class="btn btn-link">
-        <svg class="icon icon-cross">
-          <use xlink:href="{{{iconPath}}}#conversation"></use>
-        </svg>
-      </button>
-      col-xs-3
-    </div>
-    <div class="col-xs-9">
-      <strong>col-xs-8</strong> alert alert-warning <strong>Lorem ipsum</strong> dolor <a href="#" class="alert-link">sit amet</a>,
-      consectetur adipisicing elit. Doloremque, hic.
-    </div>
-  </div>
+  <strong>Plain</strong> alert block with class="alert".
 </div>
 <div class="alert alert-error">
+  <strong>Plain</strong> alert block with class="alert".
+</div>
+<div class="alert alert-primary alert-dismissible">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <svg class="icon icon-cross icon-lg">
       <use xlink:href="{{{iconPath}}}#cross"></use>
     </svg>
   </button>
-  alert alert-error <strong>Lorem ipsum</strong> dolor <a href="#" class="alert-link">sit amet</a>,
-  consectetur adipisicing elit. Doloremque, hic.
+  <strong>Dismissible</strong> alert block with class="alert alert-dismissible".
+</div>
+<div class="alert alert-warning">
+  <div>
+    <svg class="icon icon-cross">
+      <use xlink:href="{{{iconPath}}}#conversation"></use>
+    </svg>
+    <strong>col-xs-8</strong> alert alert-warning <strong>Lorem ipsum</strong> dolor <a href="#" class="alert-link">sit amet</a>,
+    consectetur adipisicing elit. Doloremque, hic.
+  </div>
 </div>
 
 Styleguide Components.Alert
@@ -97,10 +72,7 @@ Styleguide Components.Alert
 
   .close {
     line-height: 0;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    opacity: 1; // override bootstrap opacity
+    opacity: 1;
 
     .icon {
       height: 10px;
