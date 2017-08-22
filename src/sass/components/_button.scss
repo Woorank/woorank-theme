@@ -38,7 +38,15 @@ Styleguide Components.Buttons
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
+    pointer-events: none;
+
     @include opacity(0.35);
+  }
+
+  &.busy,
+  &[busy],
+  fieldset[busy] & {
+    @extend .disabled;
   }
 
   &:focus,

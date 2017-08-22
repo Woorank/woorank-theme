@@ -2,68 +2,53 @@
 Button Async
 
 Markup:
-<button class="btn btn-lg btn-primary btn-async" data-demo="js-btn-async-demo">
+<button class="btn btn-sm btn-primary btn-async" data-demo="js-btn-async-demo">
   <svg class="icon icon-loader" role="img">
-    <use xlink:href="#loader"></use>
+    <use xlink:href="{{iconPath}}#loader"></use>
   </svg>
   <svg class="icon icon-check" role="img">
-    <use xlink:href="#check"></use>
+    <use xlink:href="{{iconPath}}#check"></use>
   </svg>
   <svg class="icon icon-cross" role="img">
-    <use xlink:href="#cross"></use>
+    <use xlink:href="{{iconPath}}#cross"></use>
   </svg>
   <span class="icon-text">Click me to see the different states</span>
 </button>
 <hr>
-<button class="btn btn-default btn-async" data-demo="js-btn-async-demo">
-  <svg class="icon icon-loader" role="img">
-    <use xlink:href="#loader"></use>
+<a class="btn btn-async btn-primary busy" role="button">
+  <svg class="icon icon-loader">
+    <use xlink:href="{{iconPath}}#loader"></use>
   </svg>
-  <svg class="icon icon-check" role="img">
-    <use xlink:href="#check"></use>
+  <span class="icon-text">Busy async button</span>
+</a>
+<a class="btn btn-async btn-primary disabled" role="button">
+  <svg class="icon icon-loader">
+    <use xlink:href="{{iconPath}}#loader"></use>
   </svg>
-  <svg class="icon icon-cross" role="img">
-    <use xlink:href="#cross"></use>
-  </svg>
-  <span class="icon-text">Click me to see the different states</span>
-</button>
-<hr>
-<button class="btn btn-sm btn-warning btn-async" data-demo="js-btn-async-demo">
-  <svg class="icon icon-loader" role="img">
-    <use xlink:href="#loader"></use>
-  </svg>
-  <svg class="icon icon-check" role="img">
-    <use xlink:href="#check"></use>
-  </svg>
-  <svg class="icon icon-cross" role="img">
-    <use xlink:href="#cross"></use>
-  </svg>
-  <span class="icon-text">Click me to see the different states</span>
-</button>
-<hr>
-<button class="btn btn-xs btn-link btn-async" data-demo="js-btn-async-demo">
-  <svg class="icon icon-loader" role="img">
-    <use xlink:href="#loader"></use>
-  </svg>
-  <svg class="icon icon-check" role="img">
-    <use xlink:href="#check"></use>
-  </svg>
-  <svg class="icon icon-cross" role="img">
-    <use xlink:href="#cross"></use>
-  </svg>
-  <span class="icon-text">Click me to see the different states</span>
-</button>
+  <span class="icon-text">Disabled async button</span>
+</a>
 
 Styleguide Components.Button-Async
 */
 
 .btn {
+  .icon-loader {
+    height: 13px;
+    width: 13px;
+  }
+
   &.btn-async {
     .icon {
       display: none;
       height: 20px;
       width: 20px;
       fill: $white;
+    }
+
+    &.busy {
+      .icon {
+        display: inline-block;
+      }
     }
 
     .icon-text {
