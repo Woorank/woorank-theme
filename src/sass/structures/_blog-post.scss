@@ -13,6 +13,7 @@ Markup:
 Weight: 2
 
 Styleguide Structures.Blog-Post
+
 */
 
 body.blog-post {
@@ -32,31 +33,45 @@ body.blog-post {
   }
 
   .page-container {
-    blockquote,
-    ul {
-      clear: both;
+    main {
+      padding: 30px 0;
+      font-weight: 400;
+      font-size: 1.2em;
+      display: block;
+    }
+
+    h2 {
+      font-weight: bolder;
     }
 
     ul {
-      margin-left: -10px;
-      padding-left: 30px;
+      padding-left: 0;
+
+      li {
+        list-style: none;
+      }
+
+      li::before {
+        color: $grey;
+        content: "•";
+        font-size: 15px;
+        padding-right: 30px;
+      }
+
+      ul {
+        margin: 18px 0 18px 30px;
+
+        li::before {
+          content: "◦";
+        }
+      }
     }
 
     img {
       display: block;
       width: 100%;
       max-width: 100%;
-      margin: 0 auto 30px;
-
-      &.pull-left {
-        width: auto;
-        margin-right: 30px;
-      }
-
-      &.pull-right {
-        width: auto;
-        margin-left: 30px;
-      }
+      margin: 30px auto;
     }
   }
 }
