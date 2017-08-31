@@ -116,4 +116,8 @@ $genbar-height: 50px;
       }
     }
   }
+
+  &.generation-bar-fluid {
+    max-width: none;
+  }
 }
