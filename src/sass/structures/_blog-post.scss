@@ -45,17 +45,21 @@ body.blog-post {
     }
 
     ul {
+      position: relative;
       padding-left: 0;
 
       li {
         list-style: none;
+        display: block;
+        margin: 0 0 0 30px;
       }
 
       li::before {
+        position: absolute;
         color: $grey;
         content: "•";
         font-size: 15px;
-        padding-right: 30px;
+        left: 10px;
       }
 
       ul {

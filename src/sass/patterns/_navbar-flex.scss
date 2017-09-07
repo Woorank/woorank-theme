@@ -206,10 +206,11 @@ Styleguide Patterns.NavbarFlex
 
 .-circle,
 .-btn,
-.-link{
+.-link {
   &.-icon {
     border: 1px solid $grey;
   }
+  
   color: $grey-darker;
 
   .icon {
