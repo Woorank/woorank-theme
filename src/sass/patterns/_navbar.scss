@@ -160,21 +160,6 @@ body.navbar-open {
   }
 }
 
-.dropdown {
-  .icon-chevron-down {
-    margin-left: 5px;
-    transform: rotate(0deg);
-
-    @include transition(all 0.1s linear);
-  }
-
-  &.open {
-    .icon-chevron-down {
-      transform: rotate(180deg);
-    }
-  }
-}
-
 .navbar-nav {
   li {
     margin-bottom: 0;

@@ -22,8 +22,28 @@ Markup:
 Styleguide Components.Dropdown
 */
 
-.dropdown {
-  .icon-chevron-down {
+.dropdown,
+.dropup {
+  .icon-chevron-down,
+  .icon-chevron-up {
+    margin-left: 5px;
+    transform: rotate(0deg);
+
+    @include transition(all 0.1s linear);
+  }
+
+  &.open {
+    .icon-chevron-down,
+    .icon-chevron-up {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.dropdown,
+.dropup {
+  .icon-chevron-down,
+  .icon-chevron-up {
     display: inline-block;
     vertical-align: middle;
     margin: 0;
@@ -33,7 +53,8 @@ Styleguide Components.Dropdown
   }
 
   &:hover {
-    .icon-chevron-down {
+    .icon-chevron-down,
+    .icon-chevron-up {
       fill: $grey-medium;
     }
   }

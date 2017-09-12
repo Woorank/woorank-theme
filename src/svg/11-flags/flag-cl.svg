@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="640px" height="480px" viewBox="0 0 640 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M213.333333,0 L0,0 L0,240 L0,480 L640,480 L640,240 L640,0 L213.333333,0 Z" id="Shape" fill="#D52B1E"></path>
-        <rect id="Rectangle-path" fill="#FFFFFF" x="0" y="0" width="640" height="240"></rect>
-        <path d="M240,240 L0,240 L0,0 L240,0 L240,240 L240,240 Z" id="Shape" fill="#0039A6"></path>
-        <path d="M141.677932,127.001902 L176.928879,101.39101 L133.38077,101.39101 L119.903877,59.9531616 L106.426985,101.39101 L62.8788759,101.39101 L98.129823,127.001902 L84.6529303,168.391789 L119.903877,142.780897 L155.154825,168.391789 L141.677932,127.001902 Z" id="Shape" fill="#FFFFFF"></path>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480"><g fill="none" fill-rule="evenodd"><path fill="#D52B1E" d="M213.333 0H0v480h640V0H213.333z"/><path fill="#FFF" d="M0 0h640v240H0z"/><path fill="#0039A6" d="M240 240H0V0h240v240z"/><path fill="#FFF" d="M141.678 127.002l35.25-25.61H133.38l-13.475-41.44-13.477 41.44H62.88L98.13 127l-13.477 41.39 35.25-25.61 35.252 25.61L141.678 127z"/></g></svg>

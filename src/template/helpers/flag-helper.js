@@ -1,6 +1,7 @@
 var countries = {
   'flag-int': 'Global (Google.com)',
   'flag-ae': 'United Arab Emirates (English)',
+  'flag-aq': 'Antarctica',
   'flag-ar': 'Argentina',
   'flag-at': 'Austria',
   'flag-au': 'Australia',
