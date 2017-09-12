@@ -1,8 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="640px" height="480px" viewBox="0 0 640 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect id="red" fill="#C60C30" x="0" y="0" width="640" height="480"></rect>
-        <rect id="white" fill="#FFFFFF" x="207.567568" y="0" width="69.1891892" height="480"></rect>
-        <rect id="white" fill="#FFFFFF" x="0" y="205.714286" width="640" height="68.5714286"></rect>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480"><g fill="none" fill-rule="evenodd"><path fill="#C60C30" d="M0 0h640v480H0z"/><path fill="#FFF" d="M207.568 0h69.19v480h-69.19z"/><path fill="#FFF" d="M0 205.714h640v68.57H0z"/></g></svg>
