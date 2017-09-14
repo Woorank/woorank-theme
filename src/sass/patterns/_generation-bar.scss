@@ -177,10 +177,6 @@ $genbar-font-size-small: $font-size-small;
 
   &.generation-bar-fluid {
     max-width: none !important;
-
-    button {
-      @extend .hidden-xs;
-    }
   }
 }
 
