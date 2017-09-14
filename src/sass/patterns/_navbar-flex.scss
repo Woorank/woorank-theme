@@ -2,8 +2,85 @@
 Navbar Flex
 
 Markup:
-<!-- style="width:690px;min-width: 0;" for this example -->
-<header class="-header" role="navigation" style="width:100%;min-width:0;">
+<!-- style="width:690px;min-width: 0;margin-bottom: 30px;" for this example -->
+<header class="-header" role="navigation" style="width:100%;min-width:0;margin-bottom: 30px;">
+  <div class="container-fluid">
+    <div class="-main">
+      <a class="-circle" role="button">
+        <svg class="icon">
+          <use xlink:href="{{{iconPath}}}#arrow-left"></use>
+        </svg>
+      </a>
+      <a class="-circle" role="button">
+        <svg class="icon icon-logo-glyph">
+          <use xlink:href="{{{iconPath}}}#logo-glyph"></use>
+        </svg>
+      </a>
+      <a class="-link -site" role="button">
+        WOORANK.COM
+      </a>
+      <nav>
+        <ul class="-list">
+          <li class="-item">
+            <a class="-link" role="button">
+              Link
+            </a>
+          </li>
+          <li class="-item dropdown">
+            <a class="-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              English
+              <svg class="icon icon-chevron-down">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="assets/svg/symbols.svg#chevron-down"></use>
+              </svg>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a>
+                  User Action 1
+                </a>
+              </li>
+              <li>
+                <a>
+                  User Action 2
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="-item dropdown">
+            <a class="-link -icon dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <svg class="icon icon-user fill-grey-medium">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="assets/svg/symbols.svg#user"></use>
+              </svg>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a>
+                  User Action 1
+                </a>
+              </li>
+              <li>
+                <a>
+                  User Action 2
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <a class="btn btn-default" role="button">
+        Login
+      </a>
+      <a class="-link btn btn-warning" role="button">
+        Free Trial
+      </a>
+    </div>
+  </div>
+</header>
+<header class="-header -dark" role="navigation" style="width:100%;min-width:0;margin-bottom: 30px;">
   <div class="container-fluid">
     <div class="-main">
       <a class="-circle" role="button">
@@ -210,7 +287,7 @@ Styleguide Patterns.NavbarFlex
   &.-icon {
     border: 1px solid $grey;
   }
-  
+
   color: $grey-darker;
 
   .icon {

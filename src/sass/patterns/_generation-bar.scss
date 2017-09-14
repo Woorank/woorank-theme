@@ -3,121 +3,238 @@ Generation Bar
 
 Markup:
 <form class="generation-bar" style="margin-bottom: 30px;">
-    <div class="input-group">
-        <input type="text" class="form-control" placeholder="Website URL to review">
-        <span class="input-group-btn">
-            <button class="btn btn-primary" type="button">Try it for Free</button>
-        </span>
-    </div>
+  <span class='addon'>
+    <svg class="icon icon-loader" role="img">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#loader"></use>
+    </svg>
+  </span>
+  <input type="url" name="url" value="" placeholder="generation-bar">
+  <button type="submit" class="btn btn-primary">
+    Create Review
+  </button>
 </form>
-<form class="generation-bar error">
-    <div class="input-group">
-        <input type="text" class="form-control" placeholder="Website URL to review" value="Error inside">
-        <span class="input-group-btn">
-            <button class="btn btn-primary" type="button">Try it for Free</button>
-        </span>
-    </div>
+<form class="generation-bar busy" style="margin-bottom: 30px;">
+  <span class='addon'>
+    <svg class="icon icon-loader" role="img">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#loader"></use>
+    </svg>
+  </span>
+  <input type="url" name="url" value="" placeholder="generation-bar">
+  <button type="submit" class="btn btn-primary">
+    Create Review
+  </button>
+</form>
+<form class="generation-bar error" style="margin-bottom: 30px;">
+  <span class='addon'>
+    <svg class="icon icon-loader" role="img">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#loader"></use>
+    </svg>
+  </span>
+  <input type="url" name="url" value="Invalid URL" placeholder="generation-bar">
+  <button type="submit" class="btn btn-primary">
+    Create Review
+  </button>
+</form>
+<form class="generation-bar generation-bar-small" style="margin-bottom: 30px;">
+  <span class='addon'>
+    <svg class="icon icon-loader" role="img">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#loader"></use>
+    </svg>
+  </span>
+  <input type="url" name="url" value="" placeholder="generation-bar-small">
+  <button type="submit" class="btn btn-primary">
+    Create Review
+  </button>
+</form>
+<form class="generation-bar generation-bar-small busy" style="margin-bottom: 30px;">
+  <span class='addon'>
+    <svg class="icon icon-loader" role="img">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#loader"></use>
+    </svg>
+  </span>
+  <input type="url" name="url" value="" placeholder="generation-bar-small">
+  <button type="submit" class="btn btn-primary">
+    Create Review
+  </button>
+</form>
+<form class="generation-bar generation-bar-small error" style="margin-bottom: 30px;">
+  <span class='addon'>
+    <svg class="icon icon-loader" role="img">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#loader"></use>
+    </svg>
+  </span>
+  <input type="url" name="url" value="Invalid URL" placeholder="generation-bar-small">
+  <button type="submit" class="btn btn-primary">
+    Create Review
+  </button>
+</form>
+<form class="generation-bar disabled" style="margin-bottom: 30px;">
+  <span class='addon'>
+    <svg class="icon icon-loader" role="img">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#loader"></use>
+    </svg>
+  </span>
+  <input type="url" name="url" value="disabled" placeholder="generat">
+  <button type="submit" class="btn btn-primary">
+    Create Review
+  </button>
 </form>
 
 Styleguide Patterns.Generation-Bar
 */
 $genbar-height: 50px;
+$genbar-height-small: 30px;
+
+$genbar-height-loader: 20px;
+$genbar-height-loader-small: 13px;
+
+$genbar-input-padding: $genbar-height-loader * 2;
+$genbar-input-padding-small: $genbar-height-loader-small * 2;
+
+$genbar-focus-background-color: $grey-smoke;
+$genbar-busy-background-color: $warning-smoke;
+
+$genbar-error-color: $error;
+
+$genbar-busy-btn-background-color: $primary-lighter;
+
+$genbar-font-size: $font-size-base;
+$genbar-font-size-small: $font-size-small;
 
 .generation-bar {
-  margin: 0 auto;
-  max-width: 640px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
 
-  &.error {
-    .form-control {
-      border-color: $error !important;
-      color: $error !important;
-    }
-  }
-
-  .form-control,
-  .input-group,
-  .input-group-btn,
-  .input-group-btn .btn {
-    display: block;
-    float: none;
-    margin: 0;
-    width: 100%;
-  }
-
-  .input-group-btn .btn {
-    @include breakpoint($screen-sm) {
-      width: auto;
-    }
-  }
-
-  .input-group {
-    @include breakpoint($screen-sm) {
-      display: table;
-    }
-  }
-
-  .form-control {
-    border-radius: $border-radius-base $border-radius-base 0 0;
-    padding: 12px;
+// Generation Bar Inner primitives
+.generation-bar {
+  input,
+  button {
     height: $genbar-height;
+    font-size: $genbar-font-size;
+  }
 
-    &:first-child {
-      border-radius: $border-radius-base $border-radius-base 0 0;
+  input {
+    @extend .form-control;
 
-      @include breakpoint($screen-sm) {
-        border-radius: $border-radius-base 0 0 $border-radius-base;
-      }
-    }
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 
-    @include breakpoint($screen-sm) {
-      border-radius: $border-radius-base 0 0 $border-radius-base;
-      display: table-cell;
-      float: left;
+    &:focus {
+      background-color: $genbar-focus-background-color;
     }
   }
 
-  .input-group-btn {
-    text-align: center;
-
-    @include breakpoint($screen-sm) {
-      display: table-cell;
-      text-align: left;
-      width: 1%;
-    }
-
-    .btn {
-      border-radius: 0 0 $border-radius-base $border-radius-base;
-      height: $genbar-height;
-
-      @include breakpoint($screen-sm) {
-        border-radius: 0 $border-radius-base $border-radius-base 0;
-      }
-    }
+  button {
+    border: 1px solid transparent !important; // gracefully override removing border on "btn" class
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
-  .generation-bar-btn {
-    .ready {
-      display: block;
-    }
-
-    .wait {
-      display: none;
+  .addon {
+    .icon-loader {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
     }
   }
+}
 
-  &.waiting-for-ajax {
-    .generation-bar-btn {
-      .ready {
-        display: none;
+// Generation-bar sizes
+.generation-bar {
+  &.generation-bar-small {
+    input,
+    button {
+      height: $genbar-height-small;
+      font-size: $genbar-font-size-small;
+    }
+
+    input {
+      background-color: $genbar-focus-background-color;
+    }
+
+    button {
+      font-size: $font-size-small;
+      padding: 3px 12px;
+    }
+
+    .addon {
+      padding: 0 8px;
+
+      & + input {
+        padding-left: 26px;
       }
 
-      .wait {
-        display: block;
+      .icon-loader {
+        width: 13px;
+        height: 13px;
       }
     }
   }
 
   &.generation-bar-fluid {
-    max-width: none;
+    max-width: none !important;
+  }
+}
+
+.generation-bar {
+  position: relative;
+  margin: 0 auto;
+  max-width: 640px;
+
+  .addon {
+    position: absolute;
+    z-index: 99;
+    padding: 0 10px;
+    left: 0;
+
+    & + input {
+      padding-left: $genbar-input-padding;
+    }
+
+    .icon-loader {
+      display: none;
+    }
+  }
+}
+
+// Generation-bar states
+.generation-bar {
+  &.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.7;
+
+    button {
+      background-color: $genbar-busy-btn-background-color !important;
+    }
+  }
+
+  &.busy {
+    pointer-events: none;
+
+    input {
+      background-color: $genbar-busy-background-color !important;
+    }
+
+    button {
+      background-color: $genbar-busy-btn-background-color !important;
+    }
+
+    .addon {
+      .icon-loader {
+        display: inline-block !important;
+      }
+    }
+  }
+
+  &.error {
+    input {
+      border-color: $genbar-error-color !important;
+      color: $genbar-error-color !important;
+    }
   }
 }
