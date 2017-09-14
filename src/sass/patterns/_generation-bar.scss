@@ -120,7 +120,6 @@ $genbar-font-size-small: $font-size-small;
   input {
     @extend .form-control;
 
-    border-right: transparent;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 
