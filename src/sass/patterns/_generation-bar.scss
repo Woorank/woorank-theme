@@ -115,7 +115,6 @@ $genbar-font-size-small: $font-size-small;
   button {
     height: $genbar-height;
     font-size: $genbar-font-size;
-    flex-shrink: 0;
   }
 
   input {
@@ -130,6 +129,7 @@ $genbar-font-size-small: $font-size-small;
   }
 
   button {
+    flex-shrink: 0;
     border: 1px solid transparent !important; // gracefully override removing border on "btn" class
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
