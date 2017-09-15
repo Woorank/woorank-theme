@@ -115,6 +115,7 @@ $genbar-font-size-small: $font-size-small;
   button {
     height: $genbar-height;
     font-size: $genbar-font-size;
+    flex-shrink: 0;
   }
 
   input {
