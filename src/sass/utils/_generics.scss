@@ -1,12 +1,11 @@
 /* Generics */
 
-html,
-body {
-  min-height: 100%;
+html {
   height: 100%;
 }
 
 body {
+  min-height: 100%;
   transition: transform 0.2s linear;
   font-weight: $font-weight-normal;
   min-width: 320px;
