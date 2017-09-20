@@ -200,14 +200,6 @@ Styleguide Patterns.NavbarFlex
     height: 20px;
     width: 110px;
   }
-
-  &:focus,
-  &:active,
-  &:hover {
-    .icon {
-      fill: $primary;
-    }
-  }
 }
 
 .-right {
@@ -218,7 +210,7 @@ Styleguide Patterns.NavbarFlex
   justify-content: flex-start;
 }
 
-.-circle { // Single icon usage only
+.-circle {
   width: 40px;
   height: 40px;
   justify-content: center;
