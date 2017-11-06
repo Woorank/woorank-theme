@@ -222,8 +222,8 @@ gulp.task('svg2png', function () {
   const concurrency = 1;
 
   return gulp.src(path.join(paths.svg, '**', '*.svg'))
-  .pipe(svg2png(options, verbose, concurrency))
-  .pipe(gulp.dest(paths.build.png));
+    .pipe(svg2png(options, verbose, concurrency))
+    .pipe(gulp.dest(paths.build.png));
 });
 
 gulp.task('s3-styleguide', function (callback) {
