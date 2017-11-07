@@ -35,7 +35,7 @@
     "start": "gulp connect",
     "dev": "gulp dev",
     "build": "gulp build",
-    "publish": "gulp publish",
+    "deploy": "gulp publish",
     "gulp": "gulp",
     "kss": "kss-node --config=kss-config.json",
     "updates": "npm-check"

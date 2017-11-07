@@ -2,6 +2,7 @@
 Generation Bar
 
 Markup:
+<h3>Generation Bar</h3>
 <form class="generation-bar" style="margin-bottom: 30px;">
   <span class='addon'>
     <svg class="icon icon-loader" role="img">
@@ -13,28 +14,8 @@ Markup:
     Create Review
   </button>
 </form>
-<form class="generation-bar busy" style="margin-bottom: 30px;">
-  <span class='addon'>
-    <svg class="icon icon-loader" role="img">
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#loader"></use>
-    </svg>
-  </span>
-  <input type="url" name="url" value="" placeholder="generation-bar">
-  <button type="submit" class="btn btn-primary">
-    Create Review
-  </button>
-</form>
-<form class="generation-bar error" style="margin-bottom: 30px;">
-  <span class='addon'>
-    <svg class="icon icon-loader" role="img">
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#loader"></use>
-    </svg>
-  </span>
-  <input type="url" name="url" value="Invalid URL" placeholder="generation-bar">
-  <button type="submit" class="btn btn-primary">
-    Create Review
-  </button>
-</form>
+<br/>
+<h3>Generation Bar Small</h3>
 <form class="generation-bar generation-bar-small" style="margin-bottom: 30px;">
   <span class='addon'>
     <svg class="icon icon-loader" role="img">
@@ -46,13 +27,39 @@ Markup:
     Create Review
   </button>
 </form>
+<br/>
+<h3>Generation Bar Busy</h3>
+<form class="generation-bar busy" style="margin-bottom: 30px;">
+  <span class='addon'>
+    <svg class="icon icon-loader" role="img">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#loader"></use>
+    </svg>
+  </span>
+  <input type="url" name="url" value="" placeholder="generation-bar busy">
+  <button type="submit" class="btn btn-primary">
+    Create Review
+  </button>
+</form>
 <form class="generation-bar generation-bar-small busy" style="margin-bottom: 30px;">
   <span class='addon'>
     <svg class="icon icon-loader" role="img">
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#loader"></use>
     </svg>
   </span>
-  <input type="url" name="url" value="" placeholder="generation-bar-small">
+  <input type="url" name="url" value="" placeholder="generation-bar-small busy">
+  <button type="submit" class="btn btn-primary">
+    Create Review
+  </button>
+</form>
+<br/>
+<h3>Generation Bar With Error</h3>
+<form class="generation-bar error" style="margin-bottom: 30px;">
+  <span class='addon'>
+    <svg class="icon icon-loader" role="img">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#loader"></use>
+    </svg>
+  </span>
+  <input type="url" name="url" value="Invalid URL" placeholder="generation-bar error">
   <button type="submit" class="btn btn-primary">
     Create Review
   </button>
@@ -63,21 +70,108 @@ Markup:
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#loader"></use>
     </svg>
   </span>
-  <input type="url" name="url" value="Invalid URL" placeholder="generation-bar-small">
+  <input type="url" name="url" value="Invalid URL" placeholder="generation-bar-small error">
   <button type="submit" class="btn btn-primary">
     Create Review
   </button>
 </form>
+<br/>
+<h3>Generation Bar Disabled</h3>
 <form class="generation-bar disabled" style="margin-bottom: 30px;">
   <span class='addon'>
     <svg class="icon icon-loader" role="img">
       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#loader"></use>
     </svg>
   </span>
-  <input type="url" name="url" value="disabled" placeholder="generat">
+  <input type="url" name="url" value="" placeholder="generation-bar disabled">
   <button type="submit" class="btn btn-primary">
     Create Review
   </button>
+</form>
+<form class="generation-bar generation-bar-small disabled" style="margin-bottom: 30px;">
+  <span class='addon'>
+    <svg class="icon icon-loader" role="img">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#loader"></use>
+    </svg>
+  </span>
+  <input type="url" name="url" value="" placeholder="generation-bar-small disabled">
+  <button type="submit" class="btn btn-primary">
+    Create Review
+  </button>
+</form>
+<br/>
+<h3>Generation Bar For Inside Pages</h3>
+<form class="generation-bar" style="margin-bottom: 30px;">
+  <span class='addon'>
+    <svg class="icon icon-loader" role="img">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#loader"></use>
+    </svg>
+  </span>
+  <div class="input-group">
+    <div class="input-group-addon">
+      woorank.com/
+    </div>
+    <input type="url" name="url" value="" placeholder="inside">
+    <div class="input-group-btn">
+      <button type="submit" class="btn btn-primary">
+        Create Review
+      </button>
+    </div>
+  </div>
+</form>
+<form class="generation-bar generation-bar-small" style="margin-bottom: 30px;">
+  <span class='addon'>
+    <svg class="icon icon-loader" role="img">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#loader"></use>
+    </svg>
+  </span>
+  <div class="input-group">
+    <div class="input-group-addon">
+      woorank.com/
+    </div>
+    <input type="url" name="url" value="" placeholder="generation-bar-small inside busy">
+    <div class="input-group-btn">
+      <button type="submit" class="btn btn-primary">
+        Create Review
+      </button>
+    </div>
+  </div>
+</form>
+<form class="generation-bar busy" style="margin-bottom: 30px;">
+  <span class='addon'>
+    <svg class="icon icon-loader" role="img">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#loader"></use>
+    </svg>
+  </span>
+  <div class="input-group">
+    <div class="input-group-addon">
+      woorank.com/
+    </div>
+    <input type="url" name="url" value="" placeholder="inside">
+    <div class="input-group-btn">
+      <button type="submit" class="btn btn-primary">
+        Create Review
+      </button>
+    </div>
+  </div>
+</form>
+<form class="generation-bar generation-bar-small busy" style="margin-bottom: 30px;">
+  <span class='addon'>
+    <svg class="icon icon-loader" role="img">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#loader"></use>
+    </svg>
+  </span>
+  <div class="input-group">
+    <div class="input-group-addon">
+      woorank.com/
+    </div>
+    <input type="url" name="url" value="" placeholder="generation-bar-small inside-page busy">
+    <div class="input-group-btn">
+      <button type="submit" class="btn btn-primary">
+        Create Review
+      </button>
+    </div>
+  </div>
 </form>
 
 Styleguide Patterns.Generation-Bar
@@ -87,9 +181,6 @@ $genbar-height-small: 30px;
 
 $genbar-height-loader: 20px;
 $genbar-height-loader-small: 13px;
-
-$genbar-input-padding: $genbar-height-loader * 2;
-$genbar-input-padding-small: $genbar-height-loader-small * 2;
 
 $genbar-focus-background-color: $grey-smoke;
 $genbar-busy-background-color: $warning-smoke;
@@ -111,6 +202,10 @@ $genbar-font-size-small: $font-size-small;
 
 // Generation Bar Inner primitives
 .generation-bar {
+  .input-group {
+    width: 100%;
+  }
+
   input,
   button {
     height: $genbar-height;
@@ -137,10 +232,14 @@ $genbar-font-size-small: $font-size-small;
 
   .addon {
     .icon-loader {
-      width: 20px;
-      height: 20px;
+      width: 1em;
+      height: 1em;
       display: inline-block;
     }
+  }
+
+  .input-group-addon {
+    padding: 0.5em 0.5em 0.5em 2em;
   }
 }
 
@@ -161,19 +260,6 @@ $genbar-font-size-small: $font-size-small;
       font-size: $font-size-small;
       padding: 3px 12px;
     }
-
-    .addon {
-      padding: 0 8px;
-
-      & + input {
-        padding-left: 26px;
-      }
-
-      .icon-loader {
-        width: 13px;
-        height: 13px;
-      }
-    }
   }
 
   &.generation-bar-fluid {
@@ -189,11 +275,12 @@ $genbar-font-size-small: $font-size-small;
   .addon {
     position: absolute;
     z-index: 99;
-    padding: 0 10px;
+    padding: 0 0.5em;
     left: 0;
+    line-height: 1em;
 
     & + input {
-      padding-left: $genbar-input-padding;
+      padding-left: 2em;
     }
 
     .icon-loader {
