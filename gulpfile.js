@@ -242,9 +242,6 @@ gulp.task('s3-styleguide', function (callback) {
       return callback();
     }
 
-    // awsConfig for the styleguide is generated on the circleci before publish
-    const awsConfig = require('./awsConfig');
-
     gulp.src('./styleguide/**/*')
       .pipe(s3({
         key: AWS_ACCESS_KEY_ID,
