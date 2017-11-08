@@ -25,10 +25,8 @@ deployment:
   hub:
     branch: master
     commands:
-      - echo "{\"key\":\"<AWS_STYLEGUIDE_KEY>\",\"secret\":\"<AWS_STYLEGUIDE_SECRET>\",\"bucket\":\"<AWS_STYLEGUIDE_BUCKET>\",\"region\":\"<AWS_STYLEGUIDE_ZONE>\"}" | sed "s/<AWS_STYLEGUIDE_KEY>/$AWS_STYLEGUIDE_KEY/;s/<AWS_STYLEGUIDE_SECRET>/$AWS_STYLEGUIDE_SECRET/;s/<AWS_STYLEGUIDE_BUCKET>/$AWS_STYLEGUIDE_BUCKET/;s/<AWS_STYLEGUIDE_ZONE>/$AWS_STYLEGUIDE_ZONE/" > ./awsConfig.json
       - docker-compose run styleguide npm run deploy
   dryrun:
     branch: /dryrun_.*/
     commands:
-      - echo "{\"key\":\"<AWS_STYLEGUIDE_KEY>\",\"secret\":\"<AWS_STYLEGUIDE_SECRET>\",\"bucket\":\"<AWS_STYLEGUIDE_BUCKET>\",\"region\":\"<AWS_STYLEGUIDE_ZONE>\"}" | sed "s/<AWS_STYLEGUIDE_KEY>/$AWS_STYLEGUIDE_KEY/;s/<AWS_STYLEGUIDE_SECRET>/$AWS_STYLEGUIDE_SECRET/;s/<AWS_STYLEGUIDE_BUCKET>/$AWS_STYLEGUIDE_BUCKET/;s/<AWS_STYLEGUIDE_ZONE>/$AWS_STYLEGUIDE_ZONE/" > ./awsConfig.json
       - docker-compose run styleguide npm run deploy
