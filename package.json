@@ -3,7 +3,7 @@
   "version": "10.3.0",
   "description": "Woorank Living Style guide",
   "author": "@woorank",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "styleguide.woorank.com",
   "devDependencies": {
     "babel-preset-es2015": "6.14.0",
@@ -35,7 +35,7 @@
     "start": "gulp connect",
     "dev": "gulp dev",
     "build": "gulp build",
-    "publish": "gulp publish",
+    "deploy": "gulp publish",
     "gulp": "gulp",
     "kss": "kss-node --config=kss-config.json",
     "updates": "npm-check"
