@@ -15,6 +15,5 @@ services:
       - ./existsInS3.js:/opt/gulp/existsInS3.js
       - ./gulpfile.js:/opt/gulp/gulpfile.js
       - ./kss-config.json:/opt/gulp/kss-config.json
-      - ./awsConfig.json:/opt/gulp/awsConfig.json
       - ./package.json:/opt/gulp/package.json
     command: "npm start"
