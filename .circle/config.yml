@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  build:
+    machine:
+       docker_layer_caching: false
+    steps:
+      - checkout
+      - run: docker-compose build
+      - run: docker-compose run styleguide npm run build
+
+      - deploy:
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ] || [[ "${CIRCLE_BRANCH}" =~ dryrun_.* ]]; then
+              docker-compose run styleguide npm run deploy
+            fi
+
+      - deploy:
+          command: |
+            if [ "${CIRCLE_BRANCH}" =~ dryrun_.* ] && [ ! npm info woorank-theme@$(npm run -s version) ]; then
+              echo "publishing"
+            fi
