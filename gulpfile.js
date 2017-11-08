@@ -230,6 +230,12 @@ gulp.task('s3-styleguide', function (callback) {
   const testHost = 'styleguide.woorank.com';
   const testPath = `/build/${pkg.version}/woorank-theme.min.css`;
 
+  const { AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY } = process.env;
+  if (!AWS_ACCESS_KEY_ID || !AWS_SECRET_ACCESS_KEY) {
+    console.error('No AWS access/secret key set, not trying to upload.');
+    return callback();
+  }
+
   testIfFileExistsInS3(testHost, testPath).then(styleExistsInS3 => {
     if (styleExistsInS3) {
       console.warn(`s3://${testHost}${testPath} already exists in S3, returning gracefully...`);
@@ -240,7 +246,12 @@ gulp.task('s3-styleguide', function (callback) {
     const awsConfig = require('./awsConfig');
 
     gulp.src('./styleguide/**/*')
-      .pipe(s3(awsConfig))
+      .pipe(s3({
+        key: AWS_ACCESS_KEY_ID,
+        secret: AWS_SECRET_ACCESS_KEY,
+        region: 'us-east-1',
+        bucket: 'styleguide.woorank.com'
+      }))
       .on('end', callback);
   });
 });
@@ -281,7 +292,7 @@ gulp.task('s3-assets', function (callback) {
   });
 });
 
-gulp.task('publish', function (callback) {
+gulp.task('deploy', function (callback) {
   return runSequence('clean', ['default', 'build'], 's3-styleguide', 's3-assets', callback);
 });
 
