@@ -16,7 +16,8 @@ jobs:
 
       - deploy:
           command: |
-            if [[ "${CIRCLE_BRANCH}" =~ dryrun_.* ]] && [ ! npm info woorank-theme@$(npm run -s version) ]; then
+            export PACKAGE_EXISTS="$(npm info woorank-theme@$(npm run -s version) version)"
+            if [[ "${CIRCLE_BRANCH}" =~ dryrun_.* ]] && [ ! "$PACKAGE_EXISTS" ]; then
               echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
               npm publish
             fi
