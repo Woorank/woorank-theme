@@ -35,7 +35,8 @@ Styleguide Colors.Helpers
     background-color: $colorValue;
   }
 
-  .btn-#{$color} { // Respect button contrast
+  // Respect button contrast
+  .btn-#{$color} {
     @if (str-index($color, 'white') or str-index($color, 'light') or str-index($color, 'lighter') or str-index($color, 'smoke') ) {
       color: $grey-darker !important;
       background-color: $colorValue !important;

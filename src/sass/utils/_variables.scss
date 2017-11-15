@@ -43,6 +43,12 @@ $headings-font-weight   : $font-weight-medium;
 $headings-line-height   : 20 / $font-size-int;
 $headings-color         : inherit;
 
+// Footer vars
+$footer-font-size: $font-size-small;
+$footer-font-color: $grey-dark;
+$footer-font-color-hover: $primary;
+$footer-border-color: $grey-light;
+
 // [converter] Asset helpers such as Sprockets and Node.js Mincer do not resolve relative paths
 $icon-font-path         : if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/");
 

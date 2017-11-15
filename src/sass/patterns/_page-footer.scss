@@ -2,138 +2,36 @@
 Page Footer
 
 Markup:
-  <footer class="page-footer" id="footer">
-    <ul class="footer-columns">
-      <li class="footer-logo-container">
-        <a class="footer-logo" href="/" title="WooRank | SEO Checker - Website Review">
-          <svg class="icon icon-logo-nocolor fill-grey" role="img">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#logo-nocolor"></use>
-          </svg>
-        </a>
-        <span class="sr-only">Copyright © 2017</span>
-      </li>
-      <li class="footer-menu-container">
-        <div class="footer-menu-columns">
-          <div class="mobile-menu-column">
-            <ul class="footer-menu-column">
-              <li class="footer-menu-title">Company</li>
-              <li>
-                <a href="https://www.woorank.com/en/p/about" target="_blank">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="https://www.woorank.com/en/jobs" target="_blank">
-                  Jobs
-                </a>
-              </li>
-              <li>
-                <a href="https://www.woorank.com/en/p/privacy" target="_blank">
-                  Privacy
-                </a>
-              </li>
-              <li>
-                <a href="https://www.woorank.com/en/p/tos" target="_blank">
-                  Terms of Service
-                </a>
-              </li>
-            </ul>
-            <ul class="footer-menu-column">
-              <li class="footer-menu-title">WooRank</li>
-              <li class="">
-                <a href="https://www.woorank.com/en/p/pricing" target="_blank">
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a href="https://experts.woorank.com/en/experts" target="_blank">
-                  Experts
-                </a>
-              </li>
-              <li>
-                  <a href="https://index.woorank.com/" target="_blank">
-                    Review Index
-                  </a>
-              </li>
-              <li class="hidden">
-                <a href="https://chrome.google.com/webstore/detail/seo-website-analysis/hlngmmdolgbdnnimbmblfhhndibdipaf" class="extension-link" data-url-firefox="https://addons.mozilla.org/en-us/firefox/addon/seo-website-analysis/" data-url-chrome="https://chrome.google.com/webstore/detail/seo-website-analysis/hlngmmdolgbdnnimbmblfhhndibdipaf" target="_blank">
-                  Extension
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="mobile-menu-column">
-            <ul class="footer-menu-column">
-              <li class="footer-menu-title">Resources</li>
-              <li>
-                <a href="https://www.woorank.com/en/blog" target="_blank">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="https://www.woorank.com/en/edu/seo-guides" target="_blank">
-                  SEO Guides
-                </a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/user/WooRankTV" target="_blank">
-                  Videos
-                </a>
-              </li>
-            </ul>
-            <ul class="footer-menu-column">
-              <li class="footer-menu-title">Support</li>
-              <!-- Help -->
-              <li>
-                <a href="https://help.woorank.com/hc/en-us" target="_blank">
-                  Need Help?
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-      <li class="footer-social-container">
-        <ul>
-          <li>
-            <a href="https://www.facebook.com/woorank/" target="_blank" title="Facebook">
-              <svg class="icon icon-facebook icon-xs fill-white" role="img" style="">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/woorank?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" title="Twitter">
-              <svg class="icon icon-twitter icon-xs fill-white" role="img" style="">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#twitter"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/company/woorank" target="_blank" title="Linked In">
-              <svg class="icon icon-linkedin icon-xs fill-white" role="img" style="">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#linkedin"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/user/WooRankTV" target="_blank" title="YouTube">
-              <svg class="icon icon-youtube icon-xs fill-white" role="img" style="">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#youtube"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/woorank/?hl=en" target="_blank" title="Instagram">
-              <svg class="icon icon-instagram icon-xs fill-white" role="img" style="">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#instagram"></use>
-              </svg>
-            </a>
-          </li>
+<footer class="-footer" id="footer">
+  <!-- remove "Container" class for the example -->
+  <div class="">
+    <div class="footer-menu">
+      <div class="-menu">
+        <nav class="-nav">
+          <h5 class="-title"><span class="">Resources</span></h5>
+          <ul class="-list">
+            <li class="-item"><a href="https://www.woorank.com/en/blog" target="_blank"><span class="">Blog</span></a></li>
+            <li class="-item"><a href="https://www.woorank.com/en/edu/seo-guides" target="_blank"><span class="">SEO Guides</span></a></li>
+            <li class="-item"><a href="https://www.youtube.com/user/WooRankTV" target="_blank"><span class="">Videos</span></a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="-social">
+        <ul class="-list">
+          <li class="-item"><a class="-circle" href="https://www.facebook.com/woorank/" target="_blank" title="Facebook"><svg class=" icon icon-facebook"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#facebook-nocolor"></use></svg></a></li>
+          <li class="-item"><a class="-circle" href="https://twitter.com/woorank?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" title="Twitter"><svg class=" icon icon-twitter"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#twitter-nocolor"></use></svg></a></li>
+          <li class="-item"><a class="-circle" href="https://www.linkedin.com/company/woorank" target="_blank" title="Linked In"><svg class=" icon icon-linkedin"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#linkedin-nocolor"></use></svg></a></li>
+          <li class="-item"><a class="-circle" href="https://www.youtube.com/user/WooRankTV" target="_blank" title="YouTube"><svg class=" icon icon-youtube"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#youtube-nocolor"></use></svg></a></li>
+          <li class="-item"><a class="-circle" href="https://www.instagram.com/woorank/?hl=en" target="_blank" title="Instagram"><svg class=" icon icon-instagram"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#instagram-nocolor"></use></svg></a></li>
+          <li class="-item"><a class="-circle" href="https://plus.google.com/+woorank" target="_blank" title="Google Plus"><svg class=" icon icon-googleplus"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#googleplus-nocolor"></use></svg></a></li>
         </ul>
-      </li>
-    </ul>
-  </footer>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="brand"><a class="-logo" href="/" title="Woorank | WooRank.com | SEO Checker - Website Review"><svg class=" icon icon-logo"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#logo"></use></svg></a><span class="sr-only">Copyright © 2017</span></div>
+    </div>
+  </div>
+</footer>
 
 Styleguide Patterns.Page-Footer
 */
@@ -143,159 +41,162 @@ Styleguide Patterns.Page-Footer
   }
 }
 
-.page-footer {
-  @extend .container;
-
-  overflow: hidden;
-  clear: both;
-  font-size: $font-size-small;
-  color: $grey-medium;
+.-footer {
+  display: flex;
+  flex: 0 0 auto; // footer flex
+  flex-direction: column;
   margin-top: 60px;
 
-  ul {
-    display: block;
-    margin-bottom: 0;
-    padding: 0;
-
-    li {
-      display: block;
-      padding-bottom: 5px;
-    }
-
-    a {
-      color: $grey-medium;
-      text-decoration: none;
-      transition: fill 300ms linear;
-
-      &:focus,
-      &:hover {
-        color: $primary;
-      }
-    }
-  }
-
-  .footer-columns {
+  .footer-menu {
     display: flex;
-    flex-wrap: wrap;
-    margin-left: 0;
-    margin-right: 0;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    flex-direction: column;
+    position: relative;
+    flex: 1 auto;
+    padding: 15px 0;
+    border-top: 1px solid $footer-border-color;
 
     @include breakpoint ($screen-sm) {
-      border-top: 1px solid $grey-light;
+      flex-direction: row;
     }
-  }
 
-  .footer-logo-container,
-  .footer-social-container {
-    @extend .col-xs-12, .col-sm-3;
-
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .footer-logo-container {
-    @include breakpoint($screen-sm - 1, true) {
+    .-menu {
+      flex: 1 auto;
       text-align: center;
-    }
 
-    .footer-logo {
-      display: block;
-
-      @include breakpoint($screen-sm - 1, true) {
-        margin: 0 auto 30px;
-        padding-bottom: 30px;
-        border-bottom: 1px solid $grey-light;
-      }
-
-      .icon-logo-nocolor {
-        width: 112px;
-        transition: fill 300ms linear;
-
-        &:focus,
-        &:hover {
-          fill: $primary;
-        }
-      }
-    }
-  }
-
-  .footer-menu-container {
-    @extend .col-xs-10, .col-xs-offset-1, .col-sm-6, .col-sm-offset-0;
-
-    .footer-menu-columns {
-      @extend .row;
-
-      .mobile-menu-column {
-        @extend .col-xs-12, .col-sm-6;
-
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 20px;
-
-        @include breakpoint($screen-sm) {
-          padding-bottom: 0;
-        }
-      }
-
-      .footer-menu-column {
-        @include breakpoint ($screen-sm) {
-          text-align: left;
-        }
-
-        @extend .col-xs-6, .col-sm-6,.text-center;
-
-        .footer-menu-title {
-          cursor: default;
-          font-weight: bolder;
-        }
-      }
-    }
-  }
-
-  .footer-social-container {
-    text-align: center;
-
-    ul {
       @include breakpoint($screen-sm) {
-        float: right;
+        text-align: left;
       }
+    }
 
-      li {
-        display: inline-block;
-        margin: 0 1px;
+    .-language {
+      .dropup,
+      .dropdown {
+        color: $footer-font-color;
+        display: inline-flex;
+        padding: 0 15px;
+
+        .icon-chevron-down,
+        .icon-chevron-up {
+          margin: 0 5px;
+        }
 
         a {
-          display: block;
-          position: relative;
-          width: 40px;
-          height: 40px;
+          text-decoration: none;
+          color: $footer-font-color;
+          font-size: $footer-font-size;
+        }
+      }
+    }
+  }
 
-          @include breakpoint($screen-sm) {
-            width: 24px;
-            height: 24px;
-          }
+  .footer-copyright {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex: 1 auto;
+    padding: 15px 0;
+    border-top: 1px solid $footer-border-color;
 
-          background-color: $grey;
-          transition: background-color 300ms linear;
+    .brand {
+      display: flex;
+      max-width: 200px;
+      padding: 0;
+      height: auto;
+      padding-right: 30px;
+      align-items: center;
+    }
 
-          @include radius(50%);
+    .-language {
+      .dropup,
+      .dropdown {
+        color: $footer-font-color;
+        display: inline-flex;
+        padding: 0 15px;
 
-          &:focus,
+        .icon-chevron-down,
+        .icon-chevron-up {
+          margin: 0 5px;
+        }
+
+        a {
+          text-decoration: none;
+          color: $footer-font-color;
+          font-size: $footer-font-size;
+        }
+      }
+    }
+  }
+
+  .-nav {
+    display: inline-flex;
+    color: $footer-font-color;
+    flex: 1 1 auto;
+    flex-flow: column nowrap;
+    min-width: 100px;
+
+    @include breakpoint ($screen-md) {
+      min-width: 150px;
+    }
+
+    .-title {
+      pointer-events: none;
+      cursor: default;
+      color: $footer-font-color;
+      font-weight: $font-weight-bold;
+      font-size: $footer-font-size;
+      margin-top: 5px;
+      max-width: 100px;
+    }
+
+    .-list {
+      padding-left: 0;
+
+      .-item {
+        list-style-type: none;
+        font-size: $footer-font-size;
+        margin-bottom: 5px;
+        max-width: 100px;
+        word-break: break-word;
+
+        a {
+          color: $footer-font-color;
+          font-weight: $font-weight-normal;
+          text-decoration: none;
+
           &:hover {
-            background-color: $primary;
-          }
-
-          .icon {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60%;
-            height: 60%;
+            color: $footer-font-color-hover;
           }
         }
+      }
+    }
+  }
+
+  .-social {
+    display: flex;
+    overflow: hidden;
+    cursor: default;
+
+    .-list {
+      padding-left: 0;
+      margin: 0 auto;
+
+      .-item {
+        display: inline-block;
+        list-style-type: none;
+        font-size: 13px;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .-circle {
+      .icon {
+        fill: $grey-medium;
+        width: 20px;
+        height: 20px;
       }
     }
   }
