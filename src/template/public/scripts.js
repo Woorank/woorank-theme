@@ -4,7 +4,6 @@
   H.className = H.className.replace(/\bno-js\b/, 'js'); // Why modernizr anymore, right?
   var $ = window.jQuery;
   var $navbar = $('#top .navbar');
-  var $sidebarNav = $('.sidebar-nav');
 
   window.prettyPrint();
   window.svg4everybody();
@@ -55,14 +54,6 @@
     if ($('body').hasClass('navbar-open')) {
       togglePanel(false);
     }
-  });
-
-  $(window).on('scroll', function () {
-    var scrolled = $(this).scrollTop();
-    var mustFly = scrolled > parseInt($sidebarNav.css('padding-top'));
-    var isAtBottom = (scrolled + $(this).height()) === $(document).height();
-    $sidebarNav.toggleClass('fixed', mustFly);
-    $sidebarNav.toggleClass('fixed-bottom', isAtBottom);
   });
 
   $('[data-toggle="popover"]').popover();

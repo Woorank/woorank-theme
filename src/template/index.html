@@ -37,7 +37,7 @@
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/png" />
 </head>
 
-<body id="kss-node" class="styleguide {{#if homepage}}homepage{{/if}}">
+<body id="kss-node" class="styleguide {{#if homepage}}homepage{{/if}}" data-spy="scroll" data-target=".sidebar-nav" data-offset="0">
   <div class="overlay"></div>
   <!-- HEADER -->
   <div id="top">
@@ -225,7 +225,7 @@
 
       {{#equal rootName "Structures"}} {{else}}
       <div class="col-md-3 visible-md visible-lg right-container">
-        <div class="sidebar-nav">
+        <div class="sidebar-nav" data-spy="affix" data-offset-top="0">
           <div class="list-group">
             {{#eachSection rootName}}
             <a class="list-group-item" href="#section-{{slug referenceURI}}">{{header}}</a> {{/eachSection}}
