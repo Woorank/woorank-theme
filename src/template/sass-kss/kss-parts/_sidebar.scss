@@ -2,6 +2,10 @@
   .sidebar-nav {
     padding-top: 60px;
 
+    &.affix {
+      position: fixed !important;
+    }
+
     .list-group {
       min-width: 240px;
       display: inline-block;
