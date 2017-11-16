@@ -70,3 +70,43 @@
     }
   }
 }
+
+@mixin hide-table-column ($column-list, $size) {
+  @if $column-list != null {
+    thead > tr th,
+    tbody > tr td {
+      @each $current-column in $column-list {
+        &:nth-child(#{$current-column}) {
+          display: none;
+
+          @media screen and (min-width: #{$size}) {
+            display: table-cell;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin retina() {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (-min-moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (-min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin pretty-text-overflow($max-width: null) {
+  @if $max-width != null {
+    max-width: $max-width;
+    display: inline-block;
+  }
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}

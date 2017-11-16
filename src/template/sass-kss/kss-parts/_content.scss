@@ -1,9 +1,10 @@
 #kss-node {
   article.container {
     overflow: hidden;
-    padding: 60px 15px;
+    padding: 0 15px;
+
     .left-container {
-      padding-left: 0px;
+      padding-left: 0;
     }
 
     .page-header {

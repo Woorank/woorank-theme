@@ -3,7 +3,9 @@
 <!--[if IEMobile 7]>          <html class="no-js iem7" lang="en"> <![endif]-->
 <!--[if (IE 7)&(!IEMobile)]>  <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>                <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 
 <!--[if lt IE 9]>
     <html xml:lang="en" lang="en"
@@ -14,16 +16,16 @@
         xmlns:fb="http://ogp.me/ns/fb#" class="no-js lt-ie10" lang="en">
 <![endif]-->
 <!--[if (gte IE 9)]><!-->
-    <html xml:lang="en" lang="en"
-        xmlns:fb="http://ogp.me/ns/fb#" class="no-js" lang="en">
+<html xml:lang="en" lang="en" xmlns:fb="http://ogp.me/ns/fb#" class="no-js" lang="en">
 <!--<![endif]-->
+
 <head>
   <meta charset="utf-8">
   <title>Woorank Styleguide</title>
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <link rel="stylesheet" href="assets/styles/kss.css">
   <link rel="stylesheet" href="assets/styles/woorank-theme.css">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,300italic,400italic,600italic,800italic,700italic">
@@ -34,55 +36,56 @@
   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/ico" />
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/png" />
 </head>
-<body id="kss-node" class="styleguide {{#if homepage}}homepage{{/if}}">
-<div class="overlay"></div>
-<!-- HEADER -->
-<div id="top">
-  <header class="navbar navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <a href="./" class="navbar-brand">
+
+<body id="kss-node" class="styleguide {{#if homepage}}homepage{{/if}}" data-spy="scroll" data-target=".sidebar-nav" data-offset="0">
+  <div class="overlay"></div>
+  <!-- HEADER -->
+  <div id="top">
+    <header class="navbar navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="./" class="navbar-brand">
           <svg class="icon icon-logo-glyph">
             <use xlink:href="{{iconPath}}#logo-glyph"></use>
           </svg>
         </a>
 
-        <button type="button" class="navbar-toggle navbar-toggle collapsed" data-toggle="collapse" data-target="#top-nav-collapse">
+          <button type="button" class="navbar-toggle navbar-toggle collapsed" data-toggle="collapse" data-target="#top-nav-collapse">
           <svg class="icon icon-menu" role="img">
             <use xlink:href="{{iconPath}}#menu"></use>
           </svg>
         </button>
-      </div>
+        </div>
 
-      <div class="navbar-collapse collapse" id="top-nav-collapse" aria-expanded="false">
-        <ul class="nav navbar-nav">
-          {{#eachRoot}}
+        <div class="navbar-collapse collapse" id="top-nav-collapse" aria-expanded="false">
+          <ul class="nav navbar-nav">
+            {{#eachRoot}}
             <li class="{{#ifReference ../rootName}}active{{/ifReference}}">
               <a role="button" href="section-{{slug referenceURI}}.html">{{header}}</a>
             </li>
-          {{/eachRoot}}
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a class="dropdown-toggle" role="button" id="downloadSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{/eachRoot}}
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" role="button" id="downloadSelector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Download
               <svg class="icon icon-chevron-down">
                 <use xlink:href="{{iconPath}}#chevron-down"></use>
               </svg>
             </a>
-            <ul class="dropdown-menu" aria-labelledby="downloadSelector">
-              {{fileByVersions}}
-            </ul>
-          </li>
-        </ul>
+              <ul class="dropdown-menu" aria-labelledby="downloadSelector">
+                {{fileByVersions}}
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </header>
-</div>
-<!-- END HEADER -->
+    </header>
+  </div>
+  <!-- END HEADER -->
 
-<!-- MAIN -->
-{{#if homepage}}
+  <!-- MAIN -->
+  {{#if homepage}}
   <article role="main">
     <div class="page-hero background-primary">
       <div class="page-hero-content container">
@@ -92,7 +95,7 @@
       <img class="page-hero-bottom-margin" src="assets/img/home/background-mask.png">
     </div>
     <div class="page-hero-footer">
-        <a href="#styleguide-home" class="btn btn-link" role="button">
+      <a href="#styleguide-home" class="btn btn-link" role="button">
           <svg class="icon icon-chevron-down icon-md fill-primary">
             <use xlink:href="{{iconPath}}#chevron-down"></use>
           </svg>
@@ -110,7 +113,7 @@
           <span class="msg msg-mobile">
             Get free, unlimited access to WooRank for 14 days!
           </span>
-            <a class="btn btn-lg btn-warning btn-shadow" href="https://www.woorank.com">
+          <a class="btn btn-lg btn-warning btn-shadow" href="https://www.woorank.com">
               Start Free Trial
             </a>
           <span class="msg">
@@ -120,15 +123,13 @@
       </div>
     </div>
   </article>
-{{else}}
+  {{else}}
   <article role="main" class="container">
     {{#equal rootName "Structures"}}
-      <div class="col-xs-12 structures-container">
-    {{else}}
+    <div class="col-xs-12 structures-container">
+      {{else}}
       <div class="col-xs-12 col-md-9 left-container">
-    {{/equal}}
-
-      {{#eachSection rootName}}
+        {{/equal}} {{#eachSection rootName}}
         <div id="section-{{slug referenceURI}}" class="section depth-{{depth}}">
 
           <div class="page-header">
@@ -139,264 +140,164 @@
             </h{{depth}}>
 
             {{#if parameters}}
-              <ul class="parameters">
-                {{#eachParameter}}
-                  <li class="parameters__item">
-                    <code class="parameters__name">{{name}}</code>
-                    <div class="parameters__description">{{{description}}}</div>
-                  </li>
-                {{/eachParameter}}
-              </ul>
-            {{/if}}
-
-            {{#if description}}
-              <div class="description">
-                {{{paragraphs description 1}}}
-              </div>
+            <ul class="parameters">
+              {{#eachParameter}}
+              <li class="parameters__item">
+                <code class="parameters__name">{{name}}</code>
+                <div class="parameters__description">{{{description}}}</div>
+              </li>
+              {{/eachParameter}}
+            </ul>
+            {{/if}} {{#if description}}
+            <div class="description">
+              {{{paragraphs description 1}}}
+            </div>
             {{/if}}
           </div>
 
           {{#if markup}}
-            <div class="content">
-              <div class="modifier__wrapper">
+          <div class="content">
+            <div class="modifier__wrapper">
 
+              <div class="modifier__example">
+                {{{markup}}}
+              </div>
+
+              {{#eachModifier}} {{#equal ../../../rootName "Colors"}}
+
+              <!-- COLORS ITEM -->
+              <div class="modifier__item" id="{{slug ../../referenceURI}}-{{slug name}}">
                 <div class="modifier__example">
                   {{{markup}}}
                 </div>
 
-                {{#eachModifier}}
-                  {{#equal ../../../rootName "Colors"}}
-
-                  <!-- COLORS ITEM -->
-                  <div class="modifier__item" id="{{slug ../../referenceURI}}-{{slug name}}">
-                    <div class="modifier__example">
-                      {{{markup}}}
-                    </div>
-
-                    <div class="modifier__color__infos">
-                      <div class="modifier__name">
-                        {{name}}
-                      </div>
-                    </div>
+                <div class="modifier__color__infos">
+                  <div class="modifier__name">
+                    {{name}}
                   </div>
-
-                  {{else}}
-                    <div class="modifier__item" id="{{slug ../../referenceURI}}-{{slug name}}">
-                      <div class="modifier__example">
-                        {{{markup}}}
-                      </div>
-
-                      <p class="modifier__name">
-                        {{name}}
-                      </p>
-
-                      <p class="modifier__description">
-                        {{{paragraphs description 1}}}
-                      </p>
-                    </div>
-                  {{/equal}}
-                {{/eachModifier}}
-              </div>
-
-              <div class="footer-section">
-                <div class="footer-buttons">
-                  {{#moreDesc description}}
-                    <button type="button"
-                      class="btn btn-link btn-sm collapsed info-collapser"
-                      data-toggle="collapse"
-                      data-target="#info-{{slug reference}}">
-                      Info
-                    </button>
-                  {{/moreDesc}}
-
-                  {{#equal ../../../rootName "Colors"}}
-                  {{else}}
-                  <button type="button"
-                    class="btn btn-link btn-sm collapsed markup-collapser"
-                    data-toggle="collapse"
-                    data-target="#markup-{{slug reference}}">
-                    HTML
-                  </button>
-                  {{/equal}}
-                </div>
-
-                <div class="collapse markup" id="markup-{{slug reference}}">
-                  <div class="markup">
-                    <pre class="prettyprint linenums lang-html"><code data-language="html">{{markup}}</code></pre>
-                  </div>
-                </div>
-
-                <div class="collapse description" id="info-{{slug reference}}">
-                  {{{paragraphs description 2}}}
                 </div>
               </div>
 
+              {{else}}
+              <div class="modifier__item" id="{{slug ../../referenceURI}}-{{slug name}}">
+                <div class="modifier__example">
+                  {{{markup}}}
+                </div>
+
+                <p class="modifier__name">
+                  {{name}}
+                </p>
+
+                <p class="modifier__description">
+                  {{{paragraphs description 1}}}
+                </p>
+              </div>
+              {{/equal}} {{/eachModifier}}
             </div>
+
+            <div class="footer-section">
+              <div class="footer-buttons">
+                {{#moreDesc description}}
+                <button type="button" class="btn btn-link btn-sm collapsed info-collapser" data-toggle="collapse" data-target="#info-{{slug reference}}">
+                      Info
+                    </button> {{/moreDesc}} {{#equal ../../../rootName "Colors"}} {{else}}
+                <button type="button" class="btn btn-link btn-sm collapsed markup-collapser" data-toggle="collapse" data-target="#markup-{{slug reference}}">
+                    HTML
+                  </button> {{/equal}}
+              </div>
+
+              <div class="collapse markup" id="markup-{{slug reference}}">
+                <div class="markup">
+                  <pre class="prettyprint linenums lang-html"><code data-language="html">{{markup}}</code></pre>
+                </div>
+              </div>
+
+              <div class="collapse description" id="info-{{slug reference}}">
+                {{{paragraphs description 2}}}
+              </div>
+            </div>
+
+          </div>
           {{/if}}
         </div>
-      {{/eachSection}}
-    </div>
+        {{/eachSection}}
+      </div>
 
-    {{#equal rootName "Structures"}}
-    {{else}}
+      {{#equal rootName "Structures"}} {{else}}
       <div class="col-md-3 visible-md visible-lg right-container">
-        <div class="sidebar-nav">
+        <div class="sidebar-nav" data-spy="affix" data-offset-top="0" data-offset-bottom="320">
           <div class="list-group">
             {{#eachSection rootName}}
-              <a class="list-group-item" href="#section-{{slug referenceURI}}">{{header}}</a>
-            {{/eachSection}}
+            <a class="list-group-item" href="#section-{{slug referenceURI}}">{{header}}</a> {{/eachSection}}
           </div>
         </div>
       </div>
-    {{/equal}}
+      {{/equal}}
   </article>
-{{/if}}
-<!-- END MAIN -->
-<footer class="page-footer" id="footer">
-  <ul class="footer-columns">
-    <li class="footer-logo-container">
-      <a class="footer-logo" href="/" title="WooRank | SEO Checker - Website Review">
-        <svg class="icon icon-logo-nocolor fill-grey" role="img">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#logo-nocolor"></use>
-        </svg>
-      </a>
-      <span class="sr-only">Copyright © 2017</span>
-    </li>
-    <li class="footer-menu-container">
-      <div class="footer-menu-columns">
-        <div class="mobile-menu-column">
-          <ul class="footer-menu-column">
-            <li class="footer-menu-title">Company</li>
-            <li>
-              <a href="https://www.woorank.com/en/p/about" target="_blank">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="https://www.woorank.com/en/jobs" target="_blank">
-                Jobs
-              </a>
-            </li>
-            <li>
-              <a href="https://www.woorank.com/en/p/privacy" target="_blank">
-                Privacy
-              </a>
-            </li>
-            <li>
-              <a href="https://www.woorank.com/en/p/tos" target="_blank">
-                Terms of Service
-              </a>
-            </li>
-          </ul>
-          <ul class="footer-menu-column">
-            <li class="footer-menu-title">WooRank</li>
-            <li class="">
-              <a href="https://www.woorank.com/en/p/pricing" target="_blank">
-                Pricing
-              </a>
-            </li>
-            <li>
-              <a href="https://experts.woorank.com/en/experts" target="_blank">
-                Experts
-              </a>
-            </li>
-            <li>
-                <a href="https://index.woorank.com/" target="_blank">
-                  Review Index
-                </a>
-            </li>
-            <li class="hidden">
-              <a href="https://chrome.google.com/webstore/detail/seo-website-analysis/hlngmmdolgbdnnimbmblfhhndibdipaf" class="extension-link" data-url-firefox="https://addons.mozilla.org/en-us/firefox/addon/seo-website-analysis/" data-url-chrome="https://chrome.google.com/webstore/detail/seo-website-analysis/hlngmmdolgbdnnimbmblfhhndibdipaf" target="_blank">
-                Extension
-              </a>
-            </li>
-          </ul>
+  {{/if}}
+  <!-- END MAIN -->
+  <footer class="-footer" id="footer">
+    <div class="container">
+      <div class="footer-menu">
+        <div class="-menu">
+          <nav class="-nav">
+            <h5 class="-title"><span class="">Resources</span></h5>
+            <ul class="-list">
+              <li class="-item"><a href="https://www.woorank.com/en/blog" target="_blank"><span class="">Blog</span></a></li>
+              <li class="-item"><a href="https://www.woorank.com/en/edu/seo-guides" target="_blank"><span class="">SEO Guides</span></a></li>
+              <li class="-item"><a href="https://www.youtube.com/user/WooRankTV" target="_blank"><span class="">Videos</span></a></li>
+            </ul>
+          </nav>
+          <nav class="-nav">
+            <h5 class="-title"><span class="">WooRank</span></h5>
+            <ul class="-list">
+              <li class="-item"><a href="https://experts.woorank.com/en/experts" target="_blank"><span class="">Experts</span></a></li>
+              <li class="-item"><a href="https://index.woorank.com/" target="_blank"><span class="">Review Index</span></a></li>
+              <li class="-item"><a href="https://chrome.google.com/webstore/detail/seo-website-analysis/hlngmmdolgbdnnimbmblfhhndibdipaf" class="extension-link" target="_blank"><span class="">Extension</span></a></li>
+            </ul>
+          </nav>
+          <nav class="-nav">
+            <h5 class="-title"><span class="">Company</span></h5>
+            <ul class="-list">
+              <li class="-item"><a href="https://www.woorank.com/en/p/about" target="_blank"><span class="">About Us</span></a></li>
+              <li class="-item"><a href="https://www.woorank.com/en/jobs" target="_blank"><span class="">Jobs</span></a></li>
+              <li class="-item"><a href="https://www.woorank.com/en/p/privacy" target="_blank"><span class="">Privacy</span></a></li>
+              <li class="-item"><a href="https://www.woorank.com/en/p/tos" target="_blank"><span class="">Terms of Service</span></a></li>
+            </ul>
+          </nav>
+          <nav class="-nav">
+            <h5 class="-title"><span class="">Support</span></h5>
+            <ul class="-list">
+              <li class="-item"><a href="https://www.woorank.com/en/p/about" target="_blank"><span class="">About Us</span></a></li>
+              <li class="-item"><a href="https://www.woorank.com/en/jobs" target="_blank"><span class="">Jobs</span></a></li>
+              <li class="-item"><a href="https://www.woorank.com/en/p/privacy" target="_blank"><span class="">Privacy</span></a></li>
+              <li class="-item"><a href="https://help.woorank.com/hc/en-us" target="_blank"><span class="">Need Help?</span></a></li>
+            </ul>
+          </nav>
         </div>
-        <div class="mobile-menu-column">
-          <ul class="footer-menu-column">
-            <li class="footer-menu-title">Resources</li>
-            <li>
-              <a href="https://www.woorank.com/en/blog" target="_blank">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a href="https://www.woorank.com/en/edu/seo-guides" target="_blank">
-                SEO Guides
-              </a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/user/WooRankTV" target="_blank">
-                Videos
-              </a>
-            </li>
-          </ul>
-          <ul class="footer-menu-column">
-            <li class="footer-menu-title">Support</li>
-            <!-- Help -->
-            <li>
-              <a href="https://help.woorank.com/hc/en-us" target="_blank">
-                Need Help?
-              </a>
-            </li>
+        <div class="-social">
+          <ul class="-list">
+            <li class="-item"><a class="-circle" href="https://www.facebook.com/woorank/" target="_blank" title="Facebook"><svg class=" icon icon-facebook"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#facebook-nocolor"></use></svg></a></li>
+            <li class="-item"><a class="-circle" href="https://twitter.com/woorank?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" title="Twitter"><svg class=" icon icon-twitter"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#twitter-nocolor"></use></svg></a></li>
+            <li class="-item"><a class="-circle" href="https://www.linkedin.com/company/woorank" target="_blank" title="Linked In"><svg class=" icon icon-linkedin"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#linkedin-nocolor"></use></svg></a></li>
+            <li class="-item"><a class="-circle" href="https://www.youtube.com/user/WooRankTV" target="_blank" title="YouTube"><svg class=" icon icon-youtube"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#youtube-nocolor"></use></svg></a></li>
+            <li class="-item"><a class="-circle" href="https://www.instagram.com/woorank/?hl=en" target="_blank" title="Instagram"><svg class=" icon icon-instagram"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#instagram-nocolor"></use></svg></a></li>
+            <li class="-item"><a class="-circle" href="https://plus.google.com/+woorank" target="_blank" title="Google Plus"><svg class=" icon icon-googleplus"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#googleplus-nocolor"></use></svg></a></li>
           </ul>
         </div>
       </div>
-    </li>
-    <li class="footer-social-container">
-      <ul>
-        <li>
-          <a href="https://www.facebook.com/woorank/" target="_blank" title="Facebook">
-            <svg class="icon icon-facebook icon-xs fill-white" role="img" style="">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://twitter.com/woorank?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" title="Twitter">
-            <svg class="icon icon-twitter icon-xs fill-white" role="img" style="">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#twitter"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/company/woorank" target="_blank" title="Linked In">
-            <svg class="icon icon-linkedin icon-xs fill-white" role="img" style="">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#linkedin"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/user/WooRankTV" target="_blank" title="YouTube">
-            <svg class="icon icon-youtube icon-xs fill-white" role="img" style="">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#youtube"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/woorank/?hl=en" target="_blank" title="Instagram">
-            <svg class="icon icon-instagram icon-xs fill-white" role="img" style="">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#instagram"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://plus.google.com/+woorank" target="_blank" title="Google Plus">
-            <svg class="icon icon-googleplus icon-xs fill-white" role="img" style="">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#googleplus"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</footer>
+      <div class="footer-copyright">
+        <div class="brand"><a class="-logo" href="/" title="Woorank | WooRank.com | SEO Checker - Website Review"><svg class=" icon icon-logo"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{iconPath}}#logo"></use></svg></a><span class="sr-only">Copyright © 2017</span></div>
+      </div>
+    </div>
+  </footer>
 
-<!-- SCRIPTS -->
-<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="/assets/scripts/svg4everybody.min.js"></script>
-<script src="/assets/scripts/prettify.js"></script>
-<script src="/assets/scripts/scripts.js"></script>
+  <!-- SCRIPTS -->
+  <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="/assets/scripts/svg4everybody.min.js"></script>
+  <script src="/assets/scripts/prettify.js"></script>
+  <script src="/assets/scripts/scripts.js"></script>
 </body>
+
 </html>
