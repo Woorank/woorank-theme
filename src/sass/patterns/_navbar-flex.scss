@@ -80,7 +80,7 @@ Markup:
     </div>
   </div>
 </header>
-<header class="-header -dark" role="navigation" style="width:100%;min-width:0;margin-bottom: 30px;">
+<header class="-header -header-grey" role="navigation" style="width:100%;min-width:0;margin-bottom: 30px;">
   <div class="container-fluid">
     <div class="-main">
       <a class="-circle" role="button">
@@ -89,8 +89,8 @@ Markup:
         </svg>
       </a>
       <a class="-circle" role="button">
-        <svg class="icon icon-logo-glyph">
-          <use xlink:href="{{{iconPath}}}#logo-glyph"></use>
+        <svg class="icon icon-logo-glyph-nocolor">
+          <use xlink:href="{{{iconPath}}}#logo-glyph-nocolor"></use>
         </svg>
       </a>
       <a class="-link -site" role="button">
@@ -157,9 +157,319 @@ Markup:
     </div>
   </div>
 </header>
+<header class="-header -header-primary" role="navigation" style="width:100%;min-width:0;margin-bottom: 30px;">
+  <div class="container-fluid">
+    <div class="-main">
+      <a class="-circle" role="button">
+        <svg class="icon">
+          <use xlink:href="{{{iconPath}}}#arrow-left"></use>
+        </svg>
+      </a>
+      <a class="-circle" role="button">
+        <svg class="icon icon-logo-glyph-nocolor">
+          <use xlink:href="{{{iconPath}}}#logo-glyph-nocolor"></use>
+        </svg>
+      </a>
+      <a class="-link -site" role="button">
+        WOORANK.COM
+      </a>
+      <nav>
+        <ul class="-list">
+          <li class="-item">
+            <a class="-link" role="button">
+              Link
+            </a>
+          </li>
+          <li class="-item dropdown">
+            <a class="-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              English
+              <svg class="icon icon-chevron-down">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="assets/svg/symbols.svg#chevron-down"></use>
+              </svg>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a>
+                  User Action 1
+                </a>
+              </li>
+              <li>
+                <a>
+                  User Action 2
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="-item dropdown">
+            <a class="-link -icon dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <svg class="icon icon-user fill-grey-medium">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="assets/svg/symbols.svg#user"></use>
+              </svg>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a>
+                  User Action 1
+                </a>
+              </li>
+              <li>
+                <a>
+                  User Action 2
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <a class="btn btn-default" role="button">
+        Login
+      </a>
+      <a class="-link btn btn-warning" role="button">
+        Free Trial
+      </a>
+    </div>
+  </div>
+</header>
+<header class="-header -header-success" role="navigation" style="width:100%;min-width:0;margin-bottom: 30px;">
+  <div class="container-fluid">
+    <div class="-main">
+      <a class="-circle" role="button">
+        <svg class="icon">
+          <use xlink:href="{{{iconPath}}}#arrow-left"></use>
+        </svg>
+      </a>
+      <a class="-circle" role="button">
+        <svg class="icon icon-logo-glyph-nocolor">
+          <use xlink:href="{{{iconPath}}}#logo-glyph-nocolor"></use>
+        </svg>
+      </a>
+      <a class="-link -site" role="button">
+        WOORANK.COM
+      </a>
+      <nav>
+        <ul class="-list">
+          <li class="-item">
+            <a class="-link" role="button">
+              Link
+            </a>
+          </li>
+          <li class="-item dropdown">
+            <a class="-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              English
+              <svg class="icon icon-chevron-down">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="assets/svg/symbols.svg#chevron-down"></use>
+              </svg>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a>
+                  User Action 1
+                </a>
+              </li>
+              <li>
+                <a>
+                  User Action 2
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="-item dropdown">
+            <a class="-link -icon dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <svg class="icon icon-user fill-grey-medium">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="assets/svg/symbols.svg#user"></use>
+              </svg>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a>
+                  User Action 1
+                </a>
+              </li>
+              <li>
+                <a>
+                  User Action 2
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <a class="btn btn-default" role="button">
+        Login
+      </a>
+      <a class="-link btn btn-warning" role="button">
+        Free Trial
+      </a>
+    </div>
+  </div>
+</header>
+<header class="-header -header-error" role="navigation" style="width:100%;min-width:0;margin-bottom: 30px;">
+  <div class="container-fluid">
+    <div class="-main">
+      <a class="-circle" role="button">
+        <svg class="icon">
+          <use xlink:href="{{{iconPath}}}#arrow-left"></use>
+        </svg>
+      </a>
+      <a class="-circle" role="button">
+        <svg class="icon icon-logo-glyph-nocolor">
+          <use xlink:href="{{{iconPath}}}#logo-glyph-nocolor"></use>
+        </svg>
+      </a>
+      <a class="-link -site" role="button">
+        WOORANK.COM
+      </a>
+      <nav>
+        <ul class="-list">
+          <li class="-item">
+            <a class="-link" role="button">
+              Link
+            </a>
+          </li>
+          <li class="-item dropdown">
+            <a class="-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              English
+              <svg class="icon icon-chevron-down">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="assets/svg/symbols.svg#chevron-down"></use>
+              </svg>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a>
+                  User Action 1
+                </a>
+              </li>
+              <li>
+                <a>
+                  User Action 2
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="-item dropdown">
+            <a class="-link -icon dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <svg class="icon icon-user fill-grey-medium">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="assets/svg/symbols.svg#user"></use>
+              </svg>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a>
+                  User Action 1
+                </a>
+              </li>
+              <li>
+                <a>
+                  User Action 2
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <a class="btn btn-default" role="button">
+        Login
+      </a>
+      <a class="-link btn btn-warning" role="button">
+        Free Trial
+      </a>
+    </div>
+  </div>
+</header>
+<header class="-header -header-warning" role="navigation" style="width:100%;min-width:0;margin-bottom: 30px;">
+  <div class="container-fluid">
+    <div class="-main">
+      <a class="-circle" role="button">
+        <svg class="icon">
+          <use xlink:href="{{{iconPath}}}#arrow-left"></use>
+        </svg>
+      </a>
+      <a class="-circle" role="button">
+        <svg class="icon icon-logo-glyph-nocolor">
+          <use xlink:href="{{{iconPath}}}#logo-glyph-nocolor"></use>
+        </svg>
+      </a>
+      <a class="-link -site" role="button">
+        WOORANK.COM
+      </a>
+      <nav>
+        <ul class="-list">
+          <li class="-item">
+            <a class="-link" role="button">
+              Link
+            </a>
+          </li>
+          <li class="-item dropdown">
+            <a class="-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              English
+              <svg class="icon icon-chevron-down">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="assets/svg/symbols.svg#chevron-down"></use>
+              </svg>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a>
+                  User Action 1
+                </a>
+              </li>
+              <li>
+                <a>
+                  User Action 2
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="-item dropdown">
+            <a class="-link -icon dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <svg class="icon icon-user fill-grey-medium">
+                <use
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="assets/svg/symbols.svg#user"></use>
+              </svg>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a>
+                  User Action 1
+                </a>
+              </li>
+              <li>
+                <a>
+                  User Action 2
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <a class="btn btn-default" role="button">
+        Login
+      </a>
+      <a class="-link btn btn-warning" role="button">
+        Free Trial
+      </a>
+    </div>
+  </div>
+</>
 
 Styleguide Patterns.NavbarFlex
 */
+
+$item-link-icon-size: 40px;
 
 .-header {
   .icon {
@@ -184,7 +494,7 @@ Styleguide Patterns.NavbarFlex
     text-transform: uppercase;
     font-weight: $font-weight-bold;
     text-decoration: none;
-    border-radius: 15px;
+    border-radius: $item-link-icon-size / 2;
     background-color: transparent;
     padding: 0 12px;
     transition: all 0.5s $animationCurve;
@@ -246,20 +556,15 @@ Styleguide Patterns.NavbarFlex
       .-link {
         display: inline-block;
         padding: 0 8px;
-        border-radius: 15px;
-        line-height: 1.8em;
+        border-radius: $item-link-icon-size / 2;
+        line-height: $item-link-icon-size;
 
         &.-icon {
           display: inline-block;
           text-align: center;
-          width: 30px;
-          height: 30px;
+          width: $item-link-icon-size;
+          height: $item-link-icon-size;
           padding: 0;
-
-          .icon {
-            width: 16px;
-            height: 16px;
-          }
         }
       }
 
@@ -276,10 +581,6 @@ Styleguide Patterns.NavbarFlex
 .-circle,
 .-btn,
 .-link {
-  &.-icon {
-    border: 1px solid $grey;
-  }
-
   color: $grey-darker;
 
   .icon {
@@ -329,47 +630,71 @@ Styleguide Patterns.NavbarFlex
 
 // Theme color handling
 .-header {
-  &.-dark {
-    background-color: $grey-darker;
+  @each $color in $primaryColors {
+    &.-header-#{$color} {
+      background-color: get-variant-color($color, 'darker');
 
-    .-circle,
-    .-btn,
-    .-link {
-      color: $white;
-
-      &.-icon {
-        border-color: transparent;
-        background-color: $grey-medium;
-      }
-
-      .icon {
-        fill: $white;
-      }
-
-      &:hover,
-      &:active,
-      &:focus {
-        background-color: $grey-lighter;
-        color: $grey-darker;
+      .-circle,
+      .-btn,
+      .-link {
+        color: $white;
 
         .icon {
-          fill: $grey-darker;
+          fill: $white;
         }
-      }
-    }
 
-    .-logo {
-      .icon {
-        fill: $white;
-      }
+        &:hover,
+        &:active,
+        &:focus {
+          @if ($color == 'grey' ) {
+            background-color: get-variant-color($color, 'medium');
+          }
 
-      &:focus,
-      &:active,
-      &:hover {
-        .icon {
-          fill: $primary;
+          @else {
+            background-color: get-variant-color($color, 'dark');
+          }
         }
       }
     }
   }
+
+  // &.-dark {
+  //   background-color: $grey-darker;
+  //
+  //   .-circle,
+  //   .-btn,
+  //   .-link {
+  //     color: $white;
+  //
+  //     .icon {
+  //       fill: $white;
+  //     }
+  //
+  //     &:hover,
+  //     &:active,
+  //     &:focus {
+  //       background-color: $grey-medium;
+  //     }
+  //   }
+  // }
+
+  // &.-primary {
+  //   background-color: $primary-darker;
+  //
+  //   .-circle,
+  //   .-btn,
+  //   .-link {
+  //     color: $white;
+  //
+  //     .icon {
+  //       fill: $white;
+  //     }
+  //
+  //     &:hover,
+  //     &:active,
+  //     &:focus {
+  //       background-color: $primary-dark;
+  //     }
+  //   }
+  // }
 }
