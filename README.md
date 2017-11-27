@@ -14,9 +14,6 @@ $ docker-compose run --rm styleguide npm run build
 $ docker-compose run --rm --service-ports styleguide
 ```
 
-Styleguide should be running at the `$(docker-machine ip):3005`. You can access all the individual assets
-through the directory view or browse to `/index.html` to see the complete styleguide.
-
 ### Watcher
 
 You can launch the development watch with the following command:
@@ -41,5 +38,4 @@ $ npm version <major|minor|patch>
 To publish the styleguide changes you have to build the project at [CircleCI](https://circleci.com/gh/Woorank/woorank-theme).
 
 Successfull build will automatically push the woorank-theme assets into the S3 with the current version number and can be used
-in the applications. It also will upgrade woo-components package in the npm and the related style
-sheet with the same version number than the woorank-theme.
+in the applications.

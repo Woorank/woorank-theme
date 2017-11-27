@@ -7,7 +7,7 @@ This style guide is built on a nuclear way of thinking. The **Structures** are m
 
 ---
 
-### Based on [Bootstrap](http://getbootstrap.com/) 3.3.5.
+### Based on [Bootstrap](http://getbootstrap.com/) 3.3.7.
 
 Use the HTML from Bootstrap website or the tags given by the component description in your code. All **Bootstrap** elements and a lot of new elements are available in this library.
 

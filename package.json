@@ -28,6 +28,7 @@
     "kss": "^2.4.0",
     "npm-check": "^5.4.4",
     "run-sequence": "^1.2.2",
+    "sass-module-importer": "^1.4.0",
     "stylelint-config-standard": "^16.0.0",
     "svg4everybody": "^2.1.0"
   },
