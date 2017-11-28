@@ -472,6 +472,8 @@ Styleguide Patterns.NavbarFlex
 $item-link-icon-size: 40px;
 
 .-header {
+  transition: background-color 0.35s $animationCurve;
+
   .icon {
     transition: all 0.35s $animationCurve;
   }
@@ -657,44 +659,4 @@ $item-link-icon-size: 40px;
       }
     }
   }
-
-  // &.-dark {
-  //   background-color: $grey-darker;
-  //
-  //   .-circle,
-  //   .-btn,
-  //   .-link {
-  //     color: $white;
-  //
-  //     .icon {
-  //       fill: $white;
-  //     }
-  //
-  //     &:hover,
-  //     &:active,
-  //     &:focus {
-  //       background-color: $grey-medium;
-  //     }
-  //   }
-  // }
-
-  // &.-primary {
-  //   background-color: $primary-darker;
-  //
-  //   .-circle,
-  //   .-btn,
-  //   .-link {
-  //     color: $white;
-  //
-  //     .icon {
-  //       fill: $white;
-  //     }
-  //
-  //     &:hover,
-  //     &:active,
-  //     &:focus {
-  //       background-color: $primary-dark;
-  //     }
-  //   }
-  // }
 }

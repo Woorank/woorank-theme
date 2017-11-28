@@ -30,6 +30,7 @@ Styleguide Patterns.Page
   padding-left: 0;
   padding-right: 0;
   transition: all 0.3s linear;
+  cursor: default;
 
   &.page-hero-full {
     min-height: $screen-xs;
