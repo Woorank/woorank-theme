@@ -53,16 +53,3 @@ $iconsSizes:
   margin-left: 6px;
   vertical-align: middle;
 }
-
-.icon-hover {
-  transition: 200ms;
-  transition-timing-function: ease-in;
-  -webkit-transition: 200ms;
-  -webkit-transition-timing-function: ease-in;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-
-  &:hover {
-    transform: scale(2, 2) translateY(20%);
-  }
-}

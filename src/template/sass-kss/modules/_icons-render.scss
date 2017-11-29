@@ -28,9 +28,23 @@ div[id^="section-icons"] {
 
   .modifier__item {
     display: inline-block;
-    padding: 30px;
+    padding: 16px 0 0;
+    border-radius: 6px;
     font-size: 12px;
     text-align: center;
+    transition: background-color 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    .caption {
+      color: $grey-dark;
+      font-size: 13px;
+      margin-top: 10px;
+      overflow: hidden;
+      text-align: center;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100px;
+      z-index: 1;
+    }
 
     .modifier__example {
       display: inline-block;
@@ -38,6 +52,10 @@ div[id^="section-icons"] {
 
     .modifier__name {
       padding-top: 10px;
+    }
+
+    &:hover {
+      background-color: $grey-lighter;
     }
   }
 }
