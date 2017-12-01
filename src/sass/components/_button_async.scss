@@ -49,21 +49,54 @@ Styleguide Components.Button-Async
     .icon-cross {
       display: none;
     }
-    
+
+    &.busy,
+    &.success,
+    &.error {
+      .icon-text {
+        margin-left: 6px;
+      }
+
+      &.btn-sm,
+      &.btn-xs {
+        .icon-text {
+          margin-left: 3px;
+        }
+      }
+
+      &.btn-link {
+        background-color: transparent;
+        border-color: transparent;
+        color: $primary;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $primary-dark;
+        }
+      }
+    }
+
     &.busy {
       .icon {
         display: inline-block;
       }
-
       .icon:not(.icon-loader) {
-       display: none;
-     }
-
-     .icon-loader {
-       display: inline-block !important;
-     }
+        display: none;
+      }
     }
-  }
+
+    &.success {
+      .icon-check {
+        display: inline-block;
+      }
+    }
+
+    &.error {
+      .icon-cross {
+        display: inline-block;
+      }
+    }
 
     .icon-text {
       margin-left: 0;
