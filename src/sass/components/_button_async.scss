@@ -44,11 +44,26 @@ Styleguide Components.Button-Async
       fill: $white;
     }
 
+    .icon-loader,
+    .icon-check,
+    .icon-cross {
+      display: none;
+    }
+    
     &.busy {
       .icon {
         display: inline-block;
       }
+
+      .icon:not(.icon-loader) {
+       display: none;
+     }
+
+     .icon-loader {
+       display: inline-block !important;
+     }
     }
+  }
 
     .icon-text {
       margin-left: 0;
