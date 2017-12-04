@@ -4,7 +4,7 @@ Woorank Logos
 Woorank Logo and glyph Icons
 
 Markup:
-<svg class="icon icon-4x icon-{{modifier_class}} fill-black" data-toggle="tooltip" title="#{{modifier_class}}">
+<svg class="icon icon-4x logo-showcase icon-{{modifier_class}} fill-black" title="#{{modifier_class}}">
   <use xlink:href="{{{iconPath}}}#{{modifier_class}}"></use>
 </svg>
 

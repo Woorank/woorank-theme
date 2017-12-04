@@ -464,7 +464,7 @@ Markup:
       </a>
     </div>
   </div>
-</>
+</header>
 
 Styleguide Patterns.NavbarFlex
 */
@@ -476,6 +476,12 @@ $item-link-icon-size: 40px;
 
   .icon {
     transition: all 0.35s $animationCurve;
+  }
+
+  .generation-bar {
+    input {
+      border: 0;
+    }
   }
 
   // Reset
