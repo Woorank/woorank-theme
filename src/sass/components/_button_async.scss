@@ -78,7 +78,7 @@ Styleguide Components.Button-Async
     }
 
     &.busy {
-      .icon {
+      .icon-loader {
         display: inline-block;
       }
       .icon:not(.icon-loader) {
