@@ -38,15 +38,68 @@ Styleguide Components.Button-Async
 
   &.btn-async {
     .icon {
-      display: none;
       height: 20px;
       width: 20px;
       fill: $white;
     }
 
+    .icon-loader,
+    .icon-check,
+    .icon-cross {
+      display: none;
+    }
+
+    &.busy,
+    &.success,
+    &.error {
+      .icon-text {
+        margin-left: 6px;
+      }
+
+      &.btn-sm,
+      &.btn-xs {
+        .icon-text {
+          margin-left: 3px;
+        }
+      }
+
+      &.btn-link {
+        background-color: transparent;
+        border-color: transparent;
+        color: $primary;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $primary-dark;
+        }
+      }
+    }
+
     &.busy {
-      .icon {
+      .icon-loader {
         display: inline-block;
+      }
+      .icon:not(.icon-loader) {
+        display: none;
+      }
+    }
+
+    &.success {
+      .icon-check {
+        display: inline-block;
+      }
+      .icon:not(.icon-check) {
+        display: none;
+      }
+    }
+
+    &.error {
+      .icon-cross {
+        display: inline-block;
+      }
+      .icon:not(.icon-cross) {
+        display: none;
       }
     }
 
