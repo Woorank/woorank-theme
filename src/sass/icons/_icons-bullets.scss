@@ -3,10 +3,7 @@ Bullets
 
 Woorank Bullets icons
 
-Markup:
-<svg class="icon fill-grey {{modifier_class}}" data-toggle="tooltip" title="#{{modifier_class}}">
-  <use xlink:href="{{{iconPath}}}#{{modifier_class}}"></use>
-</svg>
+Markup: ../sections/icon-markup.hbs
 
 bullet             - bullet
 bullet-danger      - bullet-danger

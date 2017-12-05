@@ -1,3 +1,1 @@
-<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <path d="M0 13.5v-3h18.255l-8.37-8.385L12 0l12 12-12 12-2.13-2.115 8.385-8.385" stroke="none" fill-rule="evenodd"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill-rule="evenodd" d="M1 13h18l-8.504 8.508L12 23l11-11L12 1l-1.504 1.492L19 11H1"/></svg>

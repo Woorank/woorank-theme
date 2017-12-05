@@ -1,10 +1,7 @@
 /*
 Flags
 
-Markup:
-<svg class="icon icon-sm {{modifier_class}}" data-toggle="tooltip" title="{{flag modifier_class}}">
-  <use xlink:href="{{{iconPath}}}#{{modifier_class}}"></use>
-</svg>
+Markup: ../sections/icon-markup.hbs
 
 flag-int - Global (Google.com)
 flag-ae - United Arab Emirates (English)

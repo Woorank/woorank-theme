@@ -1,18 +1,1 @@
-
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Woorank-Icon" stroke="none" stroke-width="1" fill-rule="evenodd">
-        <polygon id="Shape" points="21 23 4 23 4 3 5.5 3 5.5 2 3 2 3 24 22 24 22 2 19.5 2 19.5 3 21 3"></polygon>
-        <path d="M12.5,0 C11.2910773,0 10.2818639,0.859235199 10.0500651,2 L7,2 L7,5 L18,5 L18,2 L14.9499807,2 C14.7183385,0.859043791 13.7095609,0 12.5,0 Z M17,4 L8,4 L8,3 L11,3 L11,2.5 C11,1.67214237 11.6721424,1 12.5,1 C13.3284737,1 14,1.6717583 14,2.5 L14,3 L17,3 L17,4 Z" id="Shape" ></path>
-        <polygon id="Shape" points="11 18 17 18 17 17 11 17"></polygon>
-        <polygon id="Shape" points="8 18 8.5 18 8.5 17 8 17"></polygon>
-        <polygon id="Shape" points="11 15 17 15 17 14 11 14"></polygon>
-        <polygon id="Shape" points="8 15 8.5 15 8.5 14 8 14"></polygon>
-        <polygon id="Shape" points="11 12 17 12 17 11 11 11"></polygon>
-        <polygon id="Shape" points="8 12 8.5 12 8.5 11 8 11"></polygon>
-        <polygon id="Shape" points="11 9 17 9 17 8 11 8"></polygon>
-        <polygon id="Shape" points="8 9 8.5 9 8.5 8 8 8"></polygon>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><g fill-rule="evenodd"><path d="M11 16.586l-2.293-2.293-1.414 1.414L11 19.415l5.707-5.708-1.414-1.414"/><path d="M19 6h-2V4h-1.142c-.447-1.719-2-3-3.858-3S8.589 2.281 8.142 4H7v2H5c-1.103 0-2 .898-2 2v13c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V8c0-1.102-.897-2-2-2zm-7-3c.739 0 1.385.402 1.731 1h-3.463c.347-.598.993-1 1.732-1zM9 6h6v2H9V6zm10 15H5V8h2v2h10V8h2v13z"/></g></svg>

@@ -2,9 +2,12 @@
 Icons Sizes
 
 Markup:
-<svg class="icon icon-logo-glyph {{modifier_class}}" data-toggle="tooltip" title="#{{modifier_class}}">
+<svg class="icon icon-logo-glyph {{modifier_class}}" title="#{{modifier_class}}">
   <use xlink:href="{{{iconPath}}}#logo-glyph"></use>
 </svg>
+<div class="caption">
+  {{modifier_class}}
+</div>
 
 icon-xxs     - 2x Small
 icon-xs      - Extra Small
@@ -52,17 +55,4 @@ $iconsSizes:
 .icon-text {
   margin-left: 6px;
   vertical-align: middle;
-}
-
-.icon-hover {
-  transition: 200ms;
-  transition-timing-function: ease-in;
-  -webkit-transition: 200ms;
-  -webkit-transition-timing-function: ease-in;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-
-  &:hover {
-    transform: scale(2, 2) translateY(20%);
-  }
 }

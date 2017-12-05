@@ -40,7 +40,6 @@ Styleguide Components.Button-Async
     .icon {
       height: 20px;
       width: 20px;
-      fill: $white;
     }
 
     .icon-loader,
@@ -80,6 +79,7 @@ Styleguide Components.Button-Async
       .icon-loader {
         display: inline-block;
       }
+
       .icon:not(.icon-loader) {
         display: none;
       }
@@ -89,6 +89,7 @@ Styleguide Components.Button-Async
       .icon-check {
         display: inline-block;
       }
+
       .icon:not(.icon-check) {
         display: none;
       }
@@ -98,6 +99,7 @@ Styleguide Components.Button-Async
       .icon-cross {
         display: inline-block;
       }
+
       .icon:not(.icon-cross) {
         display: none;
       }

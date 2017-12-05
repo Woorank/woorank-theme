@@ -16,6 +16,7 @@ const s3 = require('gulp-s3');
 const sass = require('gulp-sass');
 const svg2png = require('gulp-svg2png');
 const svgmin = require('gulp-svgmin');
+const moduleImporter = require('sass-module-importer');
 
 const pkg = require('./package');
 const testIfFileExistsInS3 = require('./existsInS3');
@@ -31,7 +32,6 @@ const paths = {
   template: 'src/template',
   structures: 'src/template/structures/*.html',
   public: 'src/template/public',
-  bootstrap: '/node_modules/bootstrap-sass/assets/stylesheets/',
   build: {
     styleguide: 'styleguide',
     structures: 'styleguide/structures',
@@ -115,8 +115,10 @@ gulp.task('sass', function () {
   ])
     .pipe(debug())
     .pipe(sass({
+      importer: moduleImporter({
+        extensions: [ '.css', '.scss' ]
+      }),
       imagePath: paths.build.img,
-      includePaths: paths.bootstrap,
       outputStyle: 'expanded'
     }))
     .pipe(autoprefixer())
@@ -130,8 +132,10 @@ gulp.task('sass:build', function () {
   ])
     .pipe(debug())
     .pipe(sass({
+      importer: moduleImporter({
+        extensions: [ '.css', '.scss' ]
+      }),
       imagePath: paths.build.img,
-      includePaths: paths.bootstrap,
       outputStyle: 'compressed'
     }))
     .pipe(autoprefixer())
@@ -147,8 +151,10 @@ gulp.task('sass-kss', function () {
   ])
     .pipe(debug())
     .pipe(sass({
+      importer: moduleImporter({
+        extensions: [ '.css', '.scss' ]
+      }),
       imagePath: paths.build.img,
-      includePaths: paths.bootstrap,
       outputStyle: 'expanded'
     }))
     .pipe(autoprefixer())
