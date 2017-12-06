@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
-	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<g id="Outline_Icons">
-	<g>
-		<path d="M21.5,2h-19C1.121,2,0,3.121,0,4.5v14C0,19.879,1.121,21,2.5,21h19c1.379,0,2.5-1.121,2.5-2.5v-14
-			C24,3.121,22.879,2,21.5,2z M2.5,3h19C22.327,3,23,3.673,23,4.5V7H1V4.5C1,3.673,1.673,3,2.5,3z M21.5,20h-19
-			C1.673,20,1,19.327,1,18.5V8h22v10.5C23,19.327,22.327,20,21.5,20z"/>
-		<circle cx="4" cy="5" r="1"/>
-		<circle cx="7" cy="5" r="1"/>
-		<circle cx="10" cy="5" r="1"/>
-	</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g ><path fill-rule="evenodd" d="M21,2 L3,2 C1.897,2 1,2.897 1,4 L1,20 C1,21.103 1.897,22 3,22 L21,22 C22.103,22 23,21.103 23,20 L23,4 C23,2.897 22.103,2 21,2 Z M21,6 L13,6 L13,4 L21,4 L21,6 Z M8,6 L8,4 L11,4 L11,6 L8,6 Z M6,4 L6,6 L3,6 L3,4 L6,4 Z M3,20 L3,8 L20.999,8 L20.997,20 L3,20 Z"/></g></svg>

@@ -1,13 +1,1 @@
-
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Woorank-Icon" stroke="none" stroke-width="1" fill-rule="evenodd">
-        <g id="slideshow">
-            <polygon id="Shape" points="1 23 1 5 3.5 5 3.5 4 0 4 0 24 20 24 20 20.5 19 20.5 19 23"></polygon>
-            <path d="M23,1 L23,20 L4,20 L4,1 L23,1 Z M24,0 L3,0 L3,21 L24,21 L24,0 Z" id="Rectangle-path"></path>
-            <path d="M16.9368652,10.2037624 L11,13.6336873 L11,7.30103108 L16.9368652,10.2037624 Z M19.0631348,10.1302376 L10,5.69896892 L10,15.3663127 L19.0631348,10.1302376 Z" id="Shape"></path>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g ><path d="M7,2 L21,2 C22.1045695,2 23,2.8954305 23,4 L23,18 C23,19.1045695 22.1045695,20 21,20 L7,20 C5.8954305,20 5,19.1045695 5,18 L5,4 C5,2.8954305 5.8954305,2 7,2 Z M7,4 L7,18 L21,18 L21,4 L7,4 Z"/><polygon fill-rule="evenodd" points="12 14 17 11 12 8"/><path d="M20,7 L4,7 L4,23 C2.8954305,23 2,22.1045695 2,21 L2,7 C2,5.8954305 2.8954305,5 4,5 L18,5 C19.1045695,5 20,5.8954305 20,7 Z" transform="matrix(1 0 0 -1 0 28)"/></g></svg>

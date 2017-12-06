@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
-	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<g id="Outline_Icons_1_">
-	<g id="Outline_Icons">
-		<g>
-
-				<circle stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="3" r="2.5"/>
-
-				<circle stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="12" r="2.5"/>
-
-				<circle stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="12" cy="21" r="2.5"/>
-		</g>
-	</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g><path fill-rule="evenodd" d="M13.414217 3.58678849C14.1952653 4.3678368 14.1952653 5.6341667 13.414217 6.41521601 12.6331687 7.19626433 11.3668388 7.19626433 10.5857895 6.41521601 9.80474117 5.6341677 9.80474117 4.3678378 10.5857895 3.58678849 11.3668378 2.80574017 12.6331677 2.80574017 13.414217 3.58678849M13.414217 10.5867885C14.1952653 11.3678368 14.1952653 12.6341667 13.414217 13.415216 12.6331687 14.1962643 11.3668388 14.1962643 10.5857895 13.415216 9.80474117 12.6341677 9.80474117 11.3678378 10.5857895 10.5867885 11.3668378 9.80574017 12.6331677 9.80574017 13.414217 10.5867885M13.414217 17.5867485C14.1952653 18.3677968 14.1952653 19.6341267 13.414217 20.415176 12.6331687 21.1962243 11.3668388 21.1962243 10.5857895 20.415176 9.80474117 19.6341277 9.80474117 18.3677978 10.5857895 17.5867485 11.3668378 16.8057002 12.6331677 16.8057002 13.414217 17.5867485"/></g></svg>

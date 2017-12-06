@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
-	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<g id="Outline_Icons">
-	<path d="M23.479,9h-6.943l1.467-8.414c0.048-0.272-0.134-0.531-0.406-0.578c-0.268-0.059-0.531,0.133-0.578,0.406L15.521,9H9.536
-		l1.467-8.414c0.048-0.272-0.134-0.531-0.406-0.578c-0.27-0.059-0.531,0.133-0.578,0.406L8.521,9H2.511c-0.276,0-0.5,0.224-0.5,0.5
-		s0.224,0.5,0.5,0.5h5.836l-0.872,5H0.511c-0.276,0-0.5,0.224-0.5,0.5s0.224,0.5,0.5,0.5h6.79l-1.293,7.414
-		c-0.048,0.272,0.134,0.531,0.406,0.578C6.443,23.998,6.472,24,6.501,24c0.238,0,0.449-0.171,0.491-0.414L8.315,16h5.985
-		l-1.293,7.414c-0.048,0.272,0.134,0.531,0.406,0.578C13.443,23.998,13.472,24,13.501,24c0.238,0,0.449-0.171,0.491-0.414L15.315,16
-		h6.164c0.276,0,0.5-0.224,0.5-0.5s-0.224-0.5-0.5-0.5h-5.99l0.872-5h7.118c0.276,0,0.5-0.224,0.5-0.5S23.756,9,23.479,9z
-		 M14.475,15H8.489l0.872-5h5.985L14.475,15z"/>
-</g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/dark/hashtag</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" >
+        <g id="icon/dark/hashtag">
+            <g id="Group-3">
+                
+                <path d="M19.721,4 L17.613,4 L16.28,8 L11.388,8 L12.721,4 L10.613,4 L9.279,8 L5,8 L5,10 L8.612,10 L7.279,14 L3,14 L3,16 L6.612,16 L5.279,20 L7.387,20 L8.72,16 L13.612,16 L12.279,20 L14.387,20 L15.72,16 L20,16 L20,14 L16.388,14 L17.721,10 L22,10 L22,8 L18.388,8 L19.721,4 Z M14.279,14 L9.388,14 L10.721,10 L15.613,10 L14.279,14 Z" id="Shape" ></path>
+            </g>
+        </g>
+    </g>
 </svg>
