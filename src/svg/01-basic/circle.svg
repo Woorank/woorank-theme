@@ -1,14 +1,2 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
-	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<g id="Outline_Icons_1_">
-	<g>
-		<g>
-			<path d="M11.5,23.001c-6.341,0-11.5-5.159-11.5-11.5s5.159-11.5,11.5-11.5S23,5.16,23,11.501S17.841,23.001,11.5,23.001z
-				 M11.5,1.001c-5.79,0-10.5,4.71-10.5,10.5s4.71,10.5,10.5,10.5s10.5-4.71,10.5-10.5S17.29,1.001,11.5,1.001z"/>
-		</g>
-	</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g stroke="none" fill-rule="evenodd"><path fill-rule="evenodd" d="M12,2 C6.487,2 2,6.486 2,12 C2,17.514 6.486,22 12,22 C17.514,22 22,17.514 22,12 C22,6.486 17.514,2 12,2 Z M12,20 C7.589,20 4,16.411 4,12 C4,7.589 7.589,4 12,4 C16.411,4 20,7.589 20,12 C20,16.411 16.412,20 12,20 Z"/></g></svg>

@@ -1,10 +1,1 @@
-
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Woorank-Icon" stroke="none" stroke-width="1" fill-rule="evenodd">
-        <polygon id="Shape" points="10 3.85355339 9.26039962 3.14644661 0 12 9.26039962 20.8535534 10 20.1464466 1.47920074 12"></polygon>
-        <polygon id="Shape" points="14 20.1464466 14.7396004 20.8535534 24 12 14.7396004 3.14644661 14 3.85355339 22.5207992 12"></polygon>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g ><polygon fill-rule="evenodd" points="9.347 15.96 5.394 12 9.347 8.04 7.99 6.667 2.667 12 7.99 17.333"/><polygon fill-rule="evenodd" points="15.763 17.333 21.086 12 15.763 6.667 14.4 8.04 18.359 12 14.4 15.96"/></g></svg>

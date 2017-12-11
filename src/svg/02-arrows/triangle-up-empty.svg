@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
-	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<g id="Outline_Icons">
-	<path d="M23.866,21.139L12.428,2.241c-0.181-0.299-0.675-0.299-0.855,0l-11.5,19c-0.093,0.154-0.097,0.347-0.008,0.504
-		C0.153,21.902,0.32,22,0.5,22h23c0.007-0.001,0.013-0.001,0.02,0c0.276,0,0.5-0.224,0.5-0.5
-		C24.021,21.358,23.961,21.23,23.866,21.139z M1.388,21L12,3.466L22.613,21H1.388z"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g><path fill-rule="evenodd" d="M6.29289322,9.70710678 C5.66292836,9.07714192 6.10909515,8 7,8 L17,8 C17.8909049,8 18.3370716,9.07714192 17.7071068,9.70710678 L12.7071068,14.7071068 C12.3165825,15.0976311 11.6834175,15.0976311 11.2928932,14.7071068 L6.29289322,9.70710678 Z M12,12.5857864 L14.5857864,10 L9.41421356,10 L12,12.5857864 Z" transform="matrix(1 0 0 -1 0 23)"/></g></svg>

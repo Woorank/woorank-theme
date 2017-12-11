@@ -1,8 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
-	 height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<g id="Outline_Icons">
-	<polygon stroke-width="0" stroke-linejoin="round" stroke-miterlimit="10" points="
-		2.527,23.505 2.527,0.505 21.5,12.005 	"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g ><path  fill-rule="evenodd" d="M6.79289322,10.2091115 C6.16292836,9.57914667 6.60909515,8.50200475 7.5,8.50200475 L17.5,8.50200475 C18.3909049,8.50200475 18.8370716,9.57914667 18.2071068,10.2091115 L13.2071068,15.2091115 C12.8165825,15.5996358 12.1834175,15.5996358 11.7928932,15.2091115 L6.79289322,10.2091115 Z" transform="matrix(0 1 1 0 .498 -.498)"/></g></svg>
