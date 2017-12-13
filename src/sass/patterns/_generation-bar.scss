@@ -33,6 +33,10 @@ $genbar-font-size-small: $font-size-small;
 .generation-bar {
   .input-group {
     width: 100%;
+
+    input {
+      border-radius: 2px 0 0 2px !important; // override bootstrap input-group logic
+    }
   }
 
   input,
@@ -100,8 +104,11 @@ $genbar-font-size-small: $font-size-small;
       display: table-cell;
     }
 
-    input {
-      padding-left: 6px;
+    .input-group {
+      input {
+        padding-left: 6px;
+        border-radius: 0 !important;
+      }
     }
   }
 }
