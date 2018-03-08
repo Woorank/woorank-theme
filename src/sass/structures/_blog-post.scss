@@ -75,6 +75,16 @@ body.blog-post {
       display: block;
       max-width: 100%;
       margin: 30px auto;
+
+      &.image-right {
+        float: right !important; // pull-right class
+        margin: 12px 0 0 12px;
+      }
+
+      &.image-left {
+        float: left !important; // pull-left class
+        margin: 12px 12px 0 0;
+      }
     }
 
     .blog-article-author-picture {
