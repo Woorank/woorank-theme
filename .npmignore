@@ -1,0 +1,11 @@
+.DS_Store
+node_modules
+awsConfig.*
+assets
+build
+woo-components/dist
+npm-debug.log
+.lvimrc
+yarn.lock
+
+package-lock.json

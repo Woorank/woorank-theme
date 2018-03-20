@@ -1,6 +1,6 @@
 {
   "name": "woorank-theme",
-  "version": "10.5.11",
+  "version": "10.5.12",
   "description": "Woorank Living Style guide",
   "author": "@woorank",
   "license": "MIT",
@@ -43,8 +43,5 @@
   "stylelint": {
     "extends": "stylelint-config-standard",
     "rules": {}
-  },
-  "files": [
-    "styleguide/assets/svg/symbols.svg"
-  ]
+  }
 }
