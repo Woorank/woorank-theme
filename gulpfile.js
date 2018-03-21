@@ -123,7 +123,8 @@ gulp.task('sass', function () {
     }))
     .pipe(autoprefixer())
     .pipe(header(banner, { pkg: pkg }))
-    .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)));
+    .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)))
+    .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('sass:build', function () {
@@ -141,7 +142,8 @@ gulp.task('sass:build', function () {
     .pipe(autoprefixer())
     .pipe(rename({ suffix: '.min' }))
     .pipe(header(banner, { pkg: pkg }))
-    .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)));
+    .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)))
+    .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('sass-kss', function () {
@@ -216,7 +218,8 @@ gulp.task('svg-sprite:build', function () {
       }
     }))
     .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)))
-    .pipe(gulp.dest(paths.build.svg));
+    .pipe(gulp.dest(paths.build.svg))
+    .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('svg2png', function () {
