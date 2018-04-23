@@ -19,8 +19,12 @@ body.featured-page {
   background-color: $white;
 
   .page-container {
-    font-weight: 400;
-    font-size: 1.2em;
+    main {
+      padding: 30px 0;
+      font-weight: 400;
+      font-size: 1.2em;
+      display: block;
+    }
 
     blockquote {
       font-size: 1.2em;
@@ -28,6 +32,33 @@ body.featured-page {
 
     h2 {
       font-weight: $font-weight-bold;
+    }
+
+    ul {
+      position: relative;
+      padding-left: 0;
+
+      li {
+        list-style: none;
+        display: block;
+        margin: 0 0 0 30px;
+      }
+
+      li::before {
+        position: absolute;
+        color: $grey;
+        content: "•";
+        font-size: 15px;
+        left: 10px;
+      }
+
+      ul {
+        margin: 18px 0 18px 30px;
+
+        li::before {
+          content: "◦";
+        }
+      }
     }
 
     img {
