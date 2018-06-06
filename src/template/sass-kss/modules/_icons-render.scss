@@ -1,18 +1,6 @@
 div[id^="section-icons"] {
   font-size: 0;
 
-  [id^='icons-flags-flag-'] {
-    svg {
-      box-shadow: 0 0 3px $grey;
-      height: 24px;
-      width: 32px;
-    }
-  }
-
-  #icons-flags-flag-int svg {
-    box-shadow: none;
-  }
-
   .modifier__example {
     display: none;
   }
