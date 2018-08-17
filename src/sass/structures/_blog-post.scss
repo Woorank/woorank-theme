@@ -85,6 +85,14 @@ body.blog-post {
         float: left !important; // pull-left class
         margin: 12px 12px 0 0;
       }
+
+      &.image-full {
+        position: relative;
+        width: 100vw;
+        min-width: 100vw;
+        margin-left: -50vw;
+        left: 50%;
+      }
     }
 
     .blog-article-author-picture {
