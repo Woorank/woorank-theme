@@ -283,6 +283,9 @@ gulp.task('s3-assets', function (callback) {
   };
 
   const awsOptions = {
+    headers: {
+      'Cache-Control': 'max-age=315360000'
+    },
     uploadPath: `woorank-theme/${pkg.version}/`
   };
 
