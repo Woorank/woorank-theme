@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="20px" height="16px" viewBox="0 0 20 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" title="Bullet - Success">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M0,8 C0,12.311 3.689,16 8,16 C14.59,16 20,8 20,8 C20,8 14.59,0 8,0 C3.689,0 0,3.689 0,8 Z" fill="#5CB85C"></path>
-        <path d="M4,8.16653636 L5.0384,7.151681 L6.8992,8.97107115 L10.9624,5 L12,6.01485536 L6.8992,11 L4,8.16653636 Z" fill="#FFFFFF"></path>
-    </g>
+<svg width="20" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8c0 4.3 3.7 8 8 8 6.6 0 12-8 12-8S14.6 0 8 0C3.7 0 0 3.7 0 8z" fill="#4CD763"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M4 8.2l1-1L6.9 9 11 5l1 1-5.1 5L4 8.2z" fill="#fff"/>
 </svg>
