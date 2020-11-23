@@ -2,9 +2,9 @@
 <svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" title="Sign Flag">
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <circle fill="#CFE2F2" cx="60" cy="60" r="60"></circle>
-        <path d="M34,54.5 L47,41.5 L52,46.5 L68,30.5 L89,51.5 L67,73.5 C62.989,69.488 68,62.5 68,62.5 L55,75.5 L34,54.5 L34,54.5 Z" stroke="#428BCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M52,46.5 L68,62.5" stroke="#428BCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M62,68.5 L67,73.5" stroke="#428BCA" stroke-width="2"></path>
-        <path d="M31.0732,58.2393 L61.3342,88.5003" stroke="#428BCA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M34,54.5 L47,41.5 L52,46.5 L68,30.5 L89,51.5 L67,73.5 C62.989,69.488 68,62.5 68,62.5 L55,75.5 L34,54.5 L34,54.5 Z" stroke="#2286E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M52,46.5 L68,62.5" stroke="#2286E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M62,68.5 L67,73.5" stroke="#2286E6" stroke-width="2"></path>
+        <path d="M31.0732,58.2393 L61.3342,88.5003" stroke="#2286E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
     </g>
 </svg>
