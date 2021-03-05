@@ -517,6 +517,10 @@ $item-link-icon-size: 40px;
   .icon {
     height: 20px;
     width: 110px;
+
+    &.icon-woorank-bridgeline {
+      height: 32px;
+    }
   }
 }
 
