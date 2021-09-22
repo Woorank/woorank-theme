@@ -1,13 +1,7 @@
 /*
 Icons Sizes
 
-Markup:
-<svg class="icon icon-logo-glyph {{modifier_class}}" title="#{{modifier_class}}">
-  <use xlink:href="{{{iconPath}}}#logo-glyph"></use>
-</svg>
-<div class="caption">
-  {{modifier_class}}
-</div>
+Markup: ../sections/icon-sizes.hbs
 
 icon-xxs     - 2x Small
 icon-xs      - Extra Small

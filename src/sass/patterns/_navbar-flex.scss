@@ -469,6 +469,8 @@ Markup:
 Styleguide Patterns.NavbarFlex
 */
 
+@use "sass:math";
+
 $item-link-icon-size: 40px;
 
 .-header {

@@ -20,6 +20,7 @@
     "gulp-s3": "^0.11.0",
     "gulp-sass": "^5.0.0",
     "gulp-stylelint": "^3.9.0",
+    "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^2.2.0",
     "kss": "^2.4.0",
     "npm-check": "^5.4.4",
