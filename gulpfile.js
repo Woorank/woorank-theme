@@ -7,7 +7,7 @@ const del = require('del');
 const exec = require('child_process').exec;
 const gulp = require('gulp');
 const gulpStylelint = require('gulp-stylelint');
-// const gulpSvgSprite = require('gulp-svg-sprite');
+const gulpSvgStore = require('gulp-svgstore');
 const header = require('gulp-header');
 const path = require('path');
 const rename = require('gulp-rename');
@@ -20,6 +20,16 @@ const moduleImporter = require('sass-module-importer');
 
 const pkg = require('./package');
 const testIfFileExistsInS3 = require('./existsInS3');
+
+const svgMinOptions = {
+  plugins: [{
+    cleanupIDs: true,
+    removeUselessStrokeAndFill: true,
+    mergePaths: true,
+    removeUnknownsAndDefaults: false,
+    cleanupEnableBackground: true
+  }]
+};
 
 const paths = {
   sass: {
@@ -78,7 +88,6 @@ gulp.task('scripts', function () {
 
 gulp.task('kss',
   [
-    // 'svg-sprite:build',
     'kss:structures',
     'sass',
     'sass-kss',
@@ -165,16 +174,19 @@ gulp.task('sass-kss', function () {
 
 gulp.task('svg:build', function () {
   return gulp.src(path.join(paths.svg, '**', '*.svg'))
-    .pipe(svgmin({
-      plugins: [{
-        cleanupIDs: true,
-        removeUselessStrokeAndFill: true,
-        mergePaths: true,
-        removeUnknownsAndDefaults: false,
-        cleanupEnableBackground: true
-      }]
-    }))
+    .pipe(svgmin(svgMinOptions))
     .pipe(gulp.dest(path.join(paths.build.svg)));
+});
+
+gulp.task('svgstore', function () {
+  return gulp
+    .src(path.join(paths.svg, '**', '*.svg'))
+    .pipe(svgmin(svgMinOptions))
+    .pipe(gulpSvgStore())
+    .pipe(rename({ basename: 'symbols' }))
+    .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)))
+    .pipe(gulp.dest(paths.build.svg))
+    .pipe(gulp.dest('./build/'));
 });
 
 // gulp.task('svg-sprite:build', function () {
@@ -217,9 +229,9 @@ gulp.task('svg:build', function () {
 //         }
 //       }
 //     }))
-//     .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)))
-//     .pipe(gulp.dest(paths.build.svg))
-//     .pipe(gulp.dest('./build/'));
+    // .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)))
+    // .pipe(gulp.dest(paths.build.svg))
+    // .pipe(gulp.dest('./build/'));
 // });
 
 // gulp.task('svg2png', function () {
@@ -336,5 +348,6 @@ gulp.task('build', [
   'sass:build',
   // 'svg2png',
   'svg:build',
+  'svgstore',
   'kss'
 ]);

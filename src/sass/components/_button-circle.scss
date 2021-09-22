@@ -10,7 +10,6 @@ Markup:
 
 Styleguide Components.Button.Button-Circle
 */
-@use "sass:math";
 
 $button-circle-size: 30px;
 
@@ -18,7 +17,7 @@ $button-circle-size: 30px;
   &.btn-circle {
     height: $button-circle-size;
     width: $button-circle-size;
-    border-radius: math.div($button-circle-size, 2);
+    border-radius: $button-circle-size / 2;
     border: 1px solid $border-color;
     text-align: center;
     vertical-align: middle;

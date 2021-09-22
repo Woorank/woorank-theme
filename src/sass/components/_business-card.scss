@@ -19,7 +19,6 @@ Markup:
 
 Styleguide Components.Business-Card
 */
-@use "sass:math";
 
 $businessCardPhotoSize: 65px;
 
@@ -32,7 +31,7 @@ $businessCardPhotoSize: 65px;
     width: $businessCardPhotoSize;
     height: $businessCardPhotoSize;
     float: left;
-    border-radius: math.div($businessCardPhotoSize, 2);
+    border-radius: $businessCardPhotoSize / 2;
     overflow: hidden;
     margin-right: 15px;
 

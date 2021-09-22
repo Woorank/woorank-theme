@@ -21,10 +21,11 @@
     "gulp-sass": "^5.0.0",
     "gulp-stylelint": "^3.9.0",
     "gulp-svgmin": "^2.2.0",
+    "gulp-svgstore": "^8.0.0",
     "kss": "^2.4.0",
     "npm-check": "^5.4.4",
     "run-sequence": "^1.2.2",
-    "sass": "^1.42.0",
+    "sass": "1.32.13",
     "sass-module-importer": "^1.4.0",
     "stylelint-config-standard": "^16.0.0",
     "svg4everybody": "^2.1.0"

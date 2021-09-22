@@ -469,8 +469,6 @@ Markup:
 Styleguide Patterns.NavbarFlex
 */
 
-@use "sass:math";
-
 $item-link-icon-size: 40px;
 
 .-header {
@@ -504,7 +502,7 @@ $item-link-icon-size: 40px;
     text-transform: uppercase;
     font-weight: $font-weight-bold;
     text-decoration: none;
-    border-radius: math.div($item-link-icon-size, 2);
+    border-radius: $item-link-icon-size / 2;
     background-color: transparent;
     padding: 0 12px;
     transition: all 0.5s $animationCurve;
@@ -570,7 +568,7 @@ $item-link-icon-size: 40px;
       .-link {
         display: inline-block;
         padding: 0 8px;
-        border-radius: math.div($item-link-icon-size, 2);
+        border-radius: $item-link-icon-size / 2;
         line-height: $item-link-icon-size;
 
         &.-icon {

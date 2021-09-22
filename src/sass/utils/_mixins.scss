@@ -1,5 +1,4 @@
 // BASES MIXINS
-@use "sass:math";
 
 @mixin breakpoint($size: $screen-lg, $reverse: false) {
   @if ($reverse) {
@@ -48,7 +47,7 @@
 
     @each $media-query in $media-queries {
       @media #{$media-query} {
-        #{$property}: round(math.div(nth($heights, $i) * $vh, 100));
+        #{$property}: round(nth($heights, $i) * $vh / 100);
       }
       $i: $i + 1;
     }
@@ -65,7 +64,7 @@
 
     @each $media-query in $media-queries {
       @media #{$media-query} {
-        #{$property}: #{round(math.div(nth($heights, $i) * $vh, 100)) + $add};
+        #{$property}: #{round(nth($heights, $i) * $vh / 100) + $add};
       }
       $i: $i + 1;
     }
