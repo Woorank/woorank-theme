@@ -7,14 +7,14 @@ const del = require('del');
 const exec = require('child_process').exec;
 const gulp = require('gulp');
 const gulpStylelint = require('gulp-stylelint');
-const gulpSvgSprite = require('gulp-svg-sprite');
+// const gulpSvgSprite = require('gulp-svg-sprite');
 const header = require('gulp-header');
 const path = require('path');
 const rename = require('gulp-rename');
 const runSequence = require('run-sequence');
 const s3 = require('gulp-s3');
-const sass = require('gulp-sass');
-const svg2png = require('gulp-svg2png');
+const sass = require('gulp-sass')(require('sass'));
+// const svg2png = require('gulp-svg2png-update');
 const svgmin = require('gulp-svgmin');
 const moduleImporter = require('sass-module-importer');
 
@@ -78,7 +78,7 @@ gulp.task('scripts', function () {
 
 gulp.task('kss',
   [
-    'svg-sprite:build',
+    // 'svg-sprite:build',
     'kss:structures',
     'sass',
     'sass-kss',
@@ -177,63 +177,63 @@ gulp.task('svg:build', function () {
     .pipe(gulp.dest(path.join(paths.build.svg)));
 });
 
-gulp.task('svg-sprite:build', function () {
-  return gulp.src(path.join(paths.svg, '**', '*.svg'))
-    .pipe(gulpSvgSprite({
-      mode: {
-        symbol: {
-          dest: '.',
-          sprite: 'symbols.svg'
-        }
-      },
-      shape: {
-        id: {
-          generator: function (name) {
-            return name.replace(/.svg/g, '').replace(/^.+?[/]/g, '');
-          }
-        },
-        dest: 'icons'
-      },
-      transform: [
-        {svgo: {
-          plugins: [
-            { removeViewBox: false },
-            { removeUselessStrokeAndFill: true },
-            { cleanupIDs: false },
-            { mergePaths: true },
-            { removeUnknownsAndDefaults: false },
-            { cleanupEnableBackground: true },
-            { removeStyleElement: true }
-          ]
-        }}
-      ],
-      svg: {
-        xmlDeclaration: false,
-        doctypeDeclaration: false,
-        rootAttributes: {
-          width: 0,
-          height: 0,
-          style: 'position:absolute'
-        }
-      }
-    }))
-    .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)))
-    .pipe(gulp.dest(paths.build.svg))
-    .pipe(gulp.dest('./build/'));
-});
+// gulp.task('svg-sprite:build', function () {
+//   return gulp.src(path.join(paths.svg, '**', '*.svg'))
+//     .pipe(gulpSvgSprite({
+//       mode: {
+//         symbol: {
+//           dest: '.',
+//           sprite: 'symbols.svg'
+//         }
+//       },
+//       shape: {
+//         id: {
+//           generator: function (name) {
+//             return name.replace(/.svg/g, '').replace(/^.+?[/]/g, '');
+//           }
+//         },
+//         dest: 'icons'
+//       },
+//       transform: [
+//         {svgo: {
+//           plugins: [
+//             { removeViewBox: false },
+//             { removeUselessStrokeAndFill: true },
+//             { cleanupIDs: false },
+//             { mergePaths: true },
+//             { removeUnknownsAndDefaults: false },
+//             { cleanupEnableBackground: true },
+//             { removeStyleElement: true }
+//           ]
+//         }}
+//       ],
+//       svg: {
+//         xmlDeclaration: false,
+//         doctypeDeclaration: false,
+//         rootAttributes: {
+//           width: 0,
+//           height: 0,
+//           style: 'position:absolute'
+//         }
+//       }
+//     }))
+//     .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)))
+//     .pipe(gulp.dest(paths.build.svg))
+//     .pipe(gulp.dest('./build/'));
+// });
 
-gulp.task('svg2png', function () {
-  const options = {
-    width: 24,
-    height: 24
-  };
-  const verbose = true;
-  const concurrency = 1;
+// gulp.task('svg2png', function () {
+//   const options = {
+//     width: 24,
+//     height: 24
+//   };
+//   const verbose = true;
+//   const concurrency = 1;
 
-  return gulp.src(path.join(paths.svg, '**', '*.svg'))
-    .pipe(svg2png(options, verbose, concurrency))
-    .pipe(gulp.dest(paths.build.png));
-});
+//   return gulp.src(path.join(paths.svg, '**', '*.svg'))
+//     .pipe(svg2png(options, verbose, concurrency))
+//     .pipe(gulp.dest(paths.build.png));
+// });
 
 gulp.task('s3-styleguide', function (callback) {
   const testHost = 'styleguide.woorank.com';
@@ -334,7 +334,7 @@ gulp.task('dev', [
 gulp.task('build', [
   'sass',
   'sass:build',
-  'svg2png',
+  // 'svg2png',
   'svg:build',
   'kss'
 ]);
