@@ -23,6 +23,7 @@ const testIfFileExistsInS3 = require('./existsInS3');
 
 const svgMinOptions = {
   plugins: [{
+    removeViewBox: false,
     cleanupIDs: true,
     removeUselessStrokeAndFill: true,
     mergePaths: true,
