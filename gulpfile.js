@@ -14,23 +14,12 @@ const rename = require('gulp-rename');
 const runSequence = require('run-sequence');
 const s3 = require('gulp-s3');
 const sass = require('gulp-sass')(require('sass'));
-// const svg2png = require('gulp-svg2png');
+const gulpCheerio = require('gulp-cheerio');
 const svgmin = require('gulp-svgmin');
 const moduleImporter = require('sass-module-importer');
 
 const pkg = require('./package');
 const testIfFileExistsInS3 = require('./existsInS3');
-
-const svgMinOptions = {
-  plugins: [{
-    removeViewBox: false,
-    cleanupIDs: true,
-    removeUselessStrokeAndFill: true,
-    mergePaths: true,
-    removeUnknownsAndDefaults: false,
-    cleanupEnableBackground: true
-  }]
-};
 
 const paths = {
   sass: {
@@ -175,78 +164,47 @@ gulp.task('sass-kss', function () {
 
 gulp.task('svg:build', function () {
   return gulp.src(path.join(paths.svg, '**', '*.svg'))
-    .pipe(svgmin(svgMinOptions))
+    .pipe(svgmin({
+      plugins: [{
+        cleanupIDs: true,
+        removeUselessStrokeAndFill: true,
+        mergePaths: true,
+        removeUnknownsAndDefaults: false,
+        cleanupEnableBackground: true
+      }]
+    }))
     .pipe(gulp.dest(path.join(paths.build.svg)));
 });
 
 gulp.task('svgstore', function () {
   return gulp
     .src(path.join(paths.svg, '**', '*.svg'))
-    .pipe(svgmin(svgMinOptions))
-    .pipe(gulpSvgStore())
+    .pipe(svgmin({
+      plugins: [{
+        removeViewBox: false,
+        cleanupIDs: false,
+        removeUselessStrokeAndFill: true,
+        mergePaths: true,
+        removeUnknownsAndDefaults: false,
+        cleanupEnableBackground: true,
+        removeStyleElement: true
+      }]
+    }))
+    .pipe(gulpSvgStore({ inlineSvg: true }))
+    .pipe(gulpCheerio({
+      run: ($) => {
+        $('svg')
+          .attr('style', 'position: absolute')
+          .attr('width', '0')
+          .attr('height', '0');
+      },
+      parserOptions: { xmlMode: true }
+    }))
     .pipe(rename({ basename: 'symbols' }))
     .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)))
     .pipe(gulp.dest(paths.build.svg))
     .pipe(gulp.dest('./build/'));
 });
-
-// gulp.task('svg-sprite:build', function () {
-//   return gulp.src(path.join(paths.svg, '**', '*.svg'))
-//     .pipe(gulpSvgSprite({
-//       mode: {
-//         symbol: {
-//           dest: '.',
-//           sprite: 'symbols.svg'
-//         }
-//       },
-//       shape: {
-//         id: {
-//           generator: function (name) {
-//             return name.replace(/.svg/g, '').replace(/^.+?[/]/g, '');
-//           }
-//         },
-//         dest: 'icons'
-//       },
-//       transform: [
-//         {svgo: {
-//           plugins: [
-//             { removeViewBox: false },
-//             { removeUselessStrokeAndFill: true },
-//             { cleanupIDs: false },
-//             { mergePaths: true },
-//             { removeUnknownsAndDefaults: false },
-//             { cleanupEnableBackground: true },
-//             { removeStyleElement: true }
-//           ]
-//         }}
-//       ],
-//       svg: {
-//         xmlDeclaration: false,
-//         doctypeDeclaration: false,
-//         rootAttributes: {
-//           width: 0,
-//           height: 0,
-//           style: 'position:absolute'
-//         }
-//       }
-//     }))
-    // .pipe(gulp.dest(path.join('./styleguide/build/', pkg.version)))
-    // .pipe(gulp.dest(paths.build.svg))
-    // .pipe(gulp.dest('./build/'));
-// });
-
-// gulp.task('svg2png', function () {
-//   const options = {
-//     width: 24,
-//     height: 24
-//   };
-//   const verbose = true;
-//   const concurrency = 1;
-
-//   return gulp.src(path.join(paths.svg, '**', '*.svg'))
-//     .pipe(svg2png(options, verbose, concurrency))
-//     .pipe(gulp.dest(paths.build.png));
-// });
 
 gulp.task('s3-styleguide', function (callback) {
   const testHost = 'styleguide.woorank.com';
@@ -347,7 +305,6 @@ gulp.task('dev', [
 gulp.task('build', [
   'sass',
   'sass:build',
-  // 'svg2png',
   'svg:build',
   'svgstore',
   'kss'
