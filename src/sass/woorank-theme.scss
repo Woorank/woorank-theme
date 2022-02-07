@@ -3,17 +3,7 @@ Font: Google Open Sans
 */
 @import "base/font";
 
-/*
-Colors
-
-Use Woorank colors in your designs
-
-Weight: 6
-
-Styleguide Colors
-*/
-@import "colors/_colors";
-
+@import "../common/colors/_colors";
 /*
 Utils assets
 */
@@ -29,56 +19,14 @@ Bootstrap assets
 @import "utils/bootstrap";
 
 /*
-Typography
-
-Create dynamic content template with typography options
-
-Weight: 5
-
-Styleguide Typography
-*/
-@import "typography/_typography";
-
-/*
 Icons
 
 Use Woorank icons as SVG
 
-Weight: 4
+Weight: 2
 
 Styleguide Icons
 */
 @import "icons/_icons";
 
-/*
-Components
-
-Use components to create awesome apps
-
-Weight: 3
-
-Styleguide Components
-*/
-@import "components/_components";
-
-/*
-Patterns
-
-Combine components to create even better apps
-
-Weight: 2
-
-Styleguide Patterns
-*/
-@import "patterns/_patterns";
-
-/*
-Structures
-
-A simple overview of what can be achived using this styleguide
-
-Weight: 1
-
-Styleguide Structures
-*/
-@import "structures/_structures";
+@import "../common/patterns/_patterns";
