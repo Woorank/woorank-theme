@@ -3,6 +3,9 @@ Font: Google Open Sans
 */
 @import "base/font";
 
+/*
+Colors
+*/
 @import "../common/colors/_colors";
 /*
 Utils assets
@@ -23,10 +26,13 @@ Icons
 
 Use Woorank icons as SVG
 
-Weight: 2
+Weight: 1
 
 Styleguide Icons
 */
 @import "icons/_icons";
 
+/*
+Patterns
+*/
 @import "../common/patterns/_patterns";
