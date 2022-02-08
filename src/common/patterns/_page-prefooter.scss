@@ -4,7 +4,6 @@ Page Prefooter
 Markup:
 <div class="page-prefooter background-primary-smoke background-wrap">
   <div class="container">
-    <img src="assets/img/home/landing-1.svg" alt="WooRank.com">
     <div class="text-center">
       <a class="btn btn-lg btn-warning btn-shadow">
         Start Free Trial
@@ -24,17 +23,6 @@ Styleguide Patterns.Page-Prefooter
   background-position: left top;
   background-repeat: no-repeat;
   background-size: contain;
-
-  img {
-    position: absolute;
-    bottom: 0;
-    height: 220px;
-    display: none;
-
-    @include breakpoint($screen-sm) {
-      display: block;
-    }
-  }
 
   .msg {
     display: none;
