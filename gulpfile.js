@@ -39,7 +39,6 @@ const paths = {
     img: 'styleguide/assets/img',
     css: 'styleguide/assets/styles',
     svg: 'styleguide/assets/svg',
-    svgDump: 'styleguide/assets/svgDump',
     png: 'styleguide/assets/png',
     js: 'styleguide/assets/scripts'
   }
