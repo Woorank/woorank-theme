@@ -115,7 +115,7 @@ gulp.task('sass', function () {
     .pipe(debug())
     .pipe(sass({
       importer: moduleImporter({
-        extensions: [ '.css', '.scss' ]
+        extensions: ['.css', '.scss']
       }),
       imagePath: paths.build.img,
       outputStyle: 'expanded'
@@ -133,7 +133,7 @@ gulp.task('sass:build', function () {
     .pipe(debug())
     .pipe(sass({
       importer: moduleImporter({
-        extensions: [ '.css', '.scss' ]
+        extensions: ['.css', '.scss']
       }),
       imagePath: paths.build.img,
       outputStyle: 'compressed'
@@ -153,7 +153,7 @@ gulp.task('sass-kss', function () {
     .pipe(debug())
     .pipe(sass({
       importer: moduleImporter({
-        extensions: [ '.css', '.scss' ]
+        extensions: ['.css', '.scss']
       }),
       imagePath: paths.build.img,
       outputStyle: 'expanded'
@@ -174,6 +174,34 @@ gulp.task('svg:build', function () {
       }]
     }))
     .pipe(gulp.dest(path.join(paths.build.svg)));
+});
+gulp.task('svg:dump', function () {
+  let svgSrcPaths = [
+    '/01-basic',
+    '/02-arrows',
+    '/03-navigation',
+    '/04-network',
+    '/05-social',
+    '/06-technology',
+    '/07-application',
+    '/08-bullets',
+    '/09-logo',
+    '/10-contextuals',
+    '/11-third-party'
+  ];
+  svgSrcPaths.map(function (file) {
+    return gulp.src(path.join(paths.svg + file, '**', '*.svg'))
+      .pipe(svgmin({
+        plugins: [{
+          cleanupIDs: true,
+          removeUselessStrokeAndFill: true,
+          mergePaths: true,
+          removeUnknownsAndDefaults: false,
+          cleanupEnableBackground: true
+        }]
+      }))
+      .pipe(gulp.dest(path.join(paths.build.svg)));
+  })
 });
 
 gulp.task('svgstore', function () {
@@ -306,6 +334,7 @@ gulp.task('build', [
   'sass',
   'sass:build',
   'svg:build',
+  'svg:dump',
   'svgstore',
   'kss'
 ]);
