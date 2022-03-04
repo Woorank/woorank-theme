@@ -200,7 +200,7 @@ gulp.task('svg:dump', function () {
           cleanupEnableBackground: true
         }]
       }))
-      .pipe(gulp.dest(path.join(paths.build.svg)));
+      .pipe(gulp.dest('./build/icons'));
   })
 });
 

@@ -47,7 +47,7 @@
 
     @each $media-query in $media-queries {
       @media #{$media-query} {
-        #{$property}: round(nth($heights, $i) * $vh / 100);
+        #{$property}: round(nth($heights, $i) * $vh * 0.01);
       }
       $i: $i + 1;
     }
@@ -64,7 +64,7 @@
 
     @each $media-query in $media-queries {
       @media #{$media-query} {
-        #{$property}: #{round(nth($heights, $i) * $vh / 100) + $add};
+        #{$property}: #{round(nth($heights, $i) * $vh * 0.01) + $add};
       }
       $i: $i + 1;
     }
