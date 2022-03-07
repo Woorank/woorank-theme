@@ -193,11 +193,13 @@ gulp.task('svg:dump', function () {
     return gulp.src(path.join(paths.svg + file, '**', '*.svg'))
       .pipe(svgmin({
         plugins: [{
-          cleanupIDs: true,
+          removeViewBox: false,
+          cleanupIDs: false,
           removeUselessStrokeAndFill: true,
           mergePaths: true,
           removeUnknownsAndDefaults: false,
-          cleanupEnableBackground: true
+          cleanupEnableBackground: true,
+          removeStyleElement: true
         }]
       }))
       .pipe(gulp.dest('./build/icons'));
