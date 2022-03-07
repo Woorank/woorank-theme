@@ -1,5 +1,7 @@
 // Variables
 
+@use "sass:math";
+
 $bootstrap-sass-asset-helper: function-exists(twbs-font-path);
 
 $mobile-nav-size        : 250px;
@@ -32,7 +34,7 @@ $font-size-h5           : $font-size-base;
 $font-size-h6           : ceil($font-size-base * 0.8);
 
 //** Unit-less `line-height` for use in components like buttons.
-$line-height-base       : 24 / $font-size-int;
+$line-height-base       : math.div(24, $font-size-int);
 
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 $line-height-computed   : floor($font-size-base * $line-height-base);
@@ -40,7 +42,7 @@ $line-height-computed   : floor($font-size-base * $line-height-base);
 //** By default, this inherits from the `<body>`.
 $headings-font-family   : inherit;
 $headings-font-weight   : $font-weight-medium;
-$headings-line-height   : 20 / $font-size-int;
+$headings-line-height   : math.div(20, $font-size-int);
 $headings-color         : inherit;
 
 // Footer vars
@@ -226,8 +228,8 @@ $container-lg            : $container-large-desktop;
 $navbar-height              : 60px;
 $navbar-margin-bottom       : $line-height-computed;
 $navbar-border-radius       : 4px;
-$navbar-padding-horizontal  : floor($grid-gutter-width / 2);
-$navbar-padding-vertical    : (($navbar-height - $line-height-computed) / 2);
+$navbar-padding-horizontal  : floor($grid-gutter-width * 0.5);
+$navbar-padding-vertical    : (($navbar-height - $line-height-computed) * 0.5);
 $navbar-collapse-max-height : none;
 
 $navbar-default-color       : $grey-dark;
@@ -299,7 +301,7 @@ $nav-pills-active-link-hover-bg    : $component-active-bg;
 $nav-pills-active-link-hover-color : $component-active-color;
 
 // Pagination
-$line-height-lg:         (4 / 3) !default;
+$line-height-lg:         math.div(4, 3) !default;
 $line-height-sm:         1.5 !default;
 
 $border-radius:          0.25rem !default;
