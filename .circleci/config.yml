@@ -2,7 +2,8 @@ version: 2
 jobs:
   build:
     machine:
-       docker_layer_caching: false
+      image: ubuntu-2004:202107-02
+      docker_layer_caching: false
     steps:
       - checkout
       - run: docker-compose build
