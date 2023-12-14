@@ -9,13 +9,13 @@ jobs:
       - run: docker-compose build
       - run: docker-compose run styleguide npm run build
 
-      - deploy:
+      - run:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ] || [[ "${CIRCLE_BRANCH}" =~ dryrun_.* ]]; then
               docker-compose run styleguide npm run deploy
             fi
 
-      - deploy:
+      - run:
           command: |
             export PACKAGE_EXISTS="$(npm info woorank-theme@$(npm run -s version) version)"
             echo "Existing version: ${PACKAGE_EXISTS}"
